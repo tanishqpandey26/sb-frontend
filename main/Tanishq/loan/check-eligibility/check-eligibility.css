@@ -1,0 +1,883 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans';
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 32px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    height: 70px;
+}
+
+.navbar-right {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar-right li {
+    position: relative;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #424242;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-style: bold;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    min-width: 240px;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 12px 18px;
+    color: #424242;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+    background-color: #59898E33;
+    color: #287781;
+}
+
+.dropdown-content li a.selected {
+    color: #287781;
+    font-weight: 700;
+    background-color: #59898E33;
+}
+
+
+.contact-btn {
+    background-color: #287781;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    background-color: #1d5e65;
+}
+
+/* responsive  */
+@media (max-width: 768px) {
+
+    .navbar-right {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin-top: 10px;
+        background: #fff !important;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+}
+
+
+/* nav: mobile */
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        padding: 16px 24px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        color: #424242;
+    }
+
+    .navbar-right {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin-top: 10px;
+        display: none;
+        background: #fff !important;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .navbar-right.active {
+        display: flex;
+    }
+}
+
+
+/* hero */
+
+
+.hero {
+  background: url('../../images/loan/check-eligibility/loan-eligib.png') no-repeat center/cover;
+  padding: 4rem 2rem;
+  height: auto;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LEFT COLUMN (Detail Box) */
+.hero-detailbox {
+  flex: 1;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 50%;
+  height: 100%;
+}
+
+.hero-route {
+  font-size: 14px;
+  margin-bottom: 10%;
+  color: #287781;
+}
+
+
+.hero-mini-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color:  #287781;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top:10%;
+}
+
+.hero-heading {
+  font-size: 55px;
+  font-weight: 700;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-heading .lowhead {
+  color: #287781; /* your desired color */
+}
+
+.hero-para {
+  font-size: 1rem;
+  color: #333;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top:5%;
+  margin-bottom:5%;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-btns .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
+  color: #fff;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 1px solid #59898E;
+  color: #59898E;
+}
+
+/* RIGHT COLUMN (Info Card) */
+.hero-infocard {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image {
+  width: 100%;
+}
+
+.info-box {
+  position: absolute;
+  background:#E4F7FA;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;             
+  align-items: center;       
+  gap: 0.5rem;               
+}
+
+.info-box img {
+  width: 24px;               
+  height: 24px;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #001f3f;
+}
+
+.info1 {
+  flex: 1;
+  right: 0%;
+}
+
+.info2 {
+    flex:1;
+    top: 200px;
+    left: 10px !important;
+  }
+
+.hero-image{
+  display: none;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+  .hero {
+    background: #f5f9ff;
+    padding: 2rem 1rem;
+    width: auto;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .hero-detailbox {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .hero-route {
+  display: none;
+}
+
+  .hero-mini-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color:  #287781;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+  .hero-heading {
+  font-size: 24px;
+  font-weight: 700;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: #424242;
+}
+
+.hero-para {
+  font-size:12px;
+  font-weight: 400;
+  color: #333;
+  margin-top:5%;
+  margin-bottom:5%;
+}
+
+.hero-btns .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+  .hero-infocard {
+    /* margin-top: 1%; */
+    width: 100%;
+  }
+
+  .hero-image {
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+
+  .info1 {
+    top: 5%;
+    right: 1%;
+  }
+
+  .info2 {
+    flex:1;
+    top: 350px;
+    left: 10px !important;
+  }
+}
+
+
+/* service-section */
+
+.services {
+  margin-top: 2.5%;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.service-heading{
+  font-weight: 700;
+  font-weight: bold;
+  font-size: 34px;
+}
+
+.service-para{
+  margin-top: 2%;
+font-weight: 400;
+font-size: 24px;
+}
+
+.services-container {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+
+
+.service-card {
+  min-width: 100%;
+  display: flex;
+  background: #FAFAFA;
+  border: 2px solid #287781;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+
+.service-card:nth-child(1) {
+  border-color: #287781; 
+}
+
+.service-card:nth-child(2) {
+  border-color: #C7A926; 
+}
+
+.service-card:nth-child(3) {
+  border-color: #C7A926; 
+}
+
+.service-card:nth-child(4) {
+  border-color: #287781; 
+}
+
+
+
+.left-col {
+  flex: 1;
+}
+
+.left-col img {
+  width: 100%;
+  height: 100%;
+  padding: 5% 5%;
+}
+
+.right-col {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-icon {
+  width: 60px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  font-size: 34px;
+  font-weight: 700;
+  font-weight: bold;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: #222;
+}
+
+.card-desc {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 5%;
+  color: #555;
+}
+
+.card-btn {
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  font-weight: 700;
+  font-weight: bold;
+  font-size: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* .card-btn:hover {
+  background: #005ec2;
+} */
+
+/* ===== CAROUSEL DOTS ===== */
+.carousel-controls {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.circle {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.circle.active {
+  width: 24px;        
+  height: 12px;
+  background: #287781;
+  border-radius: 50px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+
+  .services {
+  margin-top: 5%;
+}
+
+.service-heading{
+  font-weight: 700;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.service-para{
+  margin-top: 4%;
+font-weight: 400;
+font-size: 12px;
+}
+
+  .service-card {
+    flex-direction: column;
+  }
+  .left-col img {
+    height: auto;
+  padding: 2.5% 2.5%;
+  }
+
+  .card-icon {
+    margin-top: 1%;
+}
+
+  .card-header {
+  font-size: 16px;
+  font-weight: 700;
+  font-weight: bold;
+    margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.card-desc {
+  font-size: 12px;
+  font-weight: 400;
+    margin-bottom: 2.5%;
+}
+
+}
+
+
+/* loan-process-section */
+
+.loan-process {
+  padding: 2rem 1rem;
+  background: #092A2E;
+  font-family: 'Plus Jakarta Sans';
+}
+
+.loan-process-header {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.loan-service-heading {
+  font-size: 24px;
+  font-weight: 700;
+  font-weight: bold;
+   padding: 5% 5%;
+   color:#fff;
+}
+
+.loan-service-desc {
+    font-size: 16px;
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto;
+  color:#fff;
+}
+
+
+.loan-process-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-content: space-between;
+}
+
+ .loan-card {
+   height: 282px;
+  background-color: #092A2E;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 3rem 2rem;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  animation: flashAnim 2.5s infinite linear;
+  color: #fff;
+}
+
+.loan-card:hover {
+  transform: scale(1.02);
+}
+
+.loan-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.loan-card:hover::before {
+  animation: fullFlash 0.7s ease forwards;
+}
+
+@keyframes fullFlash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.card-number {
+ font-weight: bold;
+  font-size: 1.2rem;
+   background-image: linear-gradient(to bottom,#FFFFFF,rgba(153, 153, 153, 0.11) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline;
+   margin-top: auto;
+  margin-bottom: auto;
+  width: 269px;
+height: 43px;
+opacity: 1;
+ font-family: Plus Jakarta Sans;
+font-weight: 700;
+font-size: 34px;
+line-height: 100%;
+letter-spacing: 0%;
+}
+
+.loan-service-card-header {
+    margin-top: 10%;
+  width: 269px;
+height: 30px;
+opacity: 1;
+  font-size: 24px;
+  font-weight: bold;
+  font-weight: 700;
+  margin-bottom: 10%;
+  color: #fff;
+}
+
+.loan-service-card-desc {
+font-size: 0.95rem;
+  color: #fff;
+  width: 269px;
+height: 75px;
+opacity: 1;
+margin-top: 5%;
+font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .loan-process-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .loan-card {
+   height: 250px;
+}
+
+  .loan-service-card-header {
+    margin-top: 5%;
+  margin-bottom: 5%;
+}
+} 
+
+
+/* footer */
+
+.footer {
+    background-color: #092A2E;
+    padding: 60px 2% 30px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1320px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-about {
+    flex: 2.5;
+    max-width: none;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+
+.footer-about p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-col h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 22px;
+    color: #ffffff;
+}
+
+.footer-col p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-col.contact-col {
+    min-width: 300px;
+    max-width: 350px;
+}
+
+.footer-col:not(.footer-about) {
+    margin-left: -5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Divider line */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ffffff44;
+    margin: 40px auto 20px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Bottom copyright text */
+.footer-bottom {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+.footer-right-columns {
+    display: flex;
+    gap: 40px;
+    margin-left: 30px;
+    /* You can increase this to shift more */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-right-columns {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .footer-col {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.footer-col ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 100%;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #4ED0E1;
+    /* Optional: subtle hover color */
+}

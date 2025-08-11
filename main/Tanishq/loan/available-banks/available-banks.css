@@ -1,0 +1,998 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans';
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 32px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    height: 70px;
+}
+
+.navbar-right {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar-right li {
+    position: relative;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #424242;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-style: bold;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    min-width: 240px;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 12px 18px;
+    color: #424242;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+    background-color: #59898E33;
+    color: #287781;
+}
+
+.dropdown-content li a.selected {
+    color: #287781;
+    font-weight: 700;
+    background-color: #59898E33;
+}
+
+
+.contact-btn {
+    background-color: #287781;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    background-color: #1d5e65;
+}
+
+/* responsive  */
+@media (max-width: 768px) {
+
+    .navbar-right {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin-top: 10px;
+        background: #fff !important;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+}
+
+
+/* nav: mobile */
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        padding: 16px 24px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        color: #424242;
+    }
+
+    .navbar-right {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin-top: 10px;
+        display: none;
+        background: #fff !important;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .navbar-right.active {
+        display: flex;
+    }
+}
+
+
+/* hero  */
+
+.hero {
+  background-image: url('../../images/loan/available-banks/ielts.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  height: 766px;
+}
+
+/* left half blur overlay */
+.hero-left-half {
+  width: 50%;
+  height: 766px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+ background: linear-gradient(89.07deg, rgba(0, 0, 0, 0.71) 36.56%, rgba(102, 102, 102, 0) 99.23%);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+
+.hero-box {
+  width: 578px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-route {
+  font-size: 14px;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+
+.hero-mini-heading {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FAFAFA;
+  background-color: #FFFFFF1A;
+  border-radius: 6px;
+  width: 385px;
+}
+
+.hero-mini-heading img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+
+.hero-heading {
+  font-size: 55px;
+  font-weight: 700;
+  font-weight: bold;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+
+.hero-para {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #FAFAFA;
+  margin-bottom: 10%;
+  font-weight: 400;
+}
+
+
+.hero-btn {
+  background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 700;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hero-btn img{
+   width: 10px;
+  height: 10px;
+  margin-left: 8px;
+}
+
+
+.hero-facts {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap; /* keep in row */
+  margin-top: 2rem;
+  margin-bottom: 5%;
+}
+
+.fact-item {
+  text-align: left;
+  min-width: 120px;
+}
+
+.fact-top {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.fact-top img {
+  width: 20px;
+  height: 20px;
+}
+
+.fact-bottom {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.desktop-only {
+  display: block;
+}
+.mobile-only {
+  display: none;
+}
+
+/* 
+@media (max-width: 768px) {
+
+  .hero {
+  background-image: url('../../images/loan/available-banks/ielts.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  display: flex;
+  height: 766px;
+}
+
+.hero-left-half {
+  width: 100%;
+  height: 766px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+ background: linear-gradient(89.07deg, rgba(0, 0, 0, 0.71) 36.56%, rgba(102, 102, 102, 0) 99.23%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+  .hero-box {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-route{
+  margin-top: 1%;
+  margin-bottom:1%;
+}
+
+.hero-mini-heading {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 500;
+  color: #FAFAFA;
+  background-color: #FFFFFF1A;
+  border-radius: 5px;
+  width: 185px;
+}
+
+  .hero-heading {
+    font-size: 24px;
+    font-weight: 700;
+    font-weight: bold;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  }
+
+   .hero-heading span {
+    font-size: 24px;
+    font-weight: 700;
+    font-weight: bold;
+
+  }
+
+ .hero-para {
+  width:100%;
+  font-size: 12px;
+  line-height: 1.0;
+  font-weight: 400;
+  margin-bottom: 10%;
+}
+
+  .hero-btn {
+    width: 50%;
+    font-weight: 500;
+    font-size: 10px;
+  }
+
+  .hero-facts {
+    gap: 4px;
+    padding: 2.5% 2.5%;
+  }
+
+  .fact-item {
+    width: auto;
+  }
+
+  .fact-top {
+  font-size: 16px;
+  font-weight: bold;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fact-bottom {
+  font-size: 14px;
+  color: #ccc;
+}
+
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+} */
+
+@media (max-width: 768px) {
+  .hero {
+    background-image: url('../../images/loan/available-banks/ielts.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+     position: relative; 
+  }
+
+  /* Left half overlay for readability */
+  .hero-left-half {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background: linear-gradient(
+      89.07deg,
+      rgba(0, 0, 0, 0.71) 36.56%,
+      rgba(102, 102, 102, 0) 99.23%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+  }
+
+  .hero-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .hero-route{
+    font-size: 10px;
+    font-weight: 600;
+    padding-top: 5%;
+  }
+
+  .hero-mini-heading {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fafafa;
+    background-color: #ffffff1a;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: fit-content;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .hero-mini-heading img {
+    height: 14px;
+    width: auto;
+  }
+
+  .hero-heading {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .hero-heading span {
+     font-weight: bold;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .hero-para {
+    width: 100%;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .hero-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .hero-btn img {
+    height: 12px;
+    width: auto;
+  }
+
+   .hero-facts {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 1px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 6px;
+    flex-wrap: nowrap; 
+  }
+
+  .fact-item {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .fact-top {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .fact-top img {
+    height: 16px;
+    width: auto;
+  }
+
+  .fact-bottom {
+    margin-top: 4px; 
+    font-weight: bold;
+    font-weight: 600;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+}
+
+
+
+/* nbfc-section */
+
+.nbfc-section {
+  padding: 5% 5%;
+  background-color: #fff;
+}
+
+.nbfc-heading {
+  font-size: 34px;
+  font-weight: bold;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+/* GRID LAYOUT */
+.nbfc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* NBFC CARD */
+.nbfc-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+   box-shadow: 
+    0 8px 15px rgba(0, 0, 0, 0.2),  
+    0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* TOP LABEL */
+.nbfc-top-label-container{
+background-color: #287781;
+border-bottom: 1px solid #287781;
+padding: 1.5rem;
+}
+
+.nbfc-top-label {
+  color:#fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+}
+
+.nbfc-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nbfc-name {
+  font-size: 24px;
+  font-weight: 700;
+  font-weight: bold;
+}
+
+.nbfc-amt {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nbfc-amt img {
+  width: 19px;
+  height: 15.2px;
+}
+
+.nbfc-amt .nbfc-value-label{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.nbfc-amt .nbfc-value{
+  font-size: 16px;
+  font-weight: bold;
+  font-weight: 700;
+}
+
+.nbfc-right-col img {
+  width: 77px;
+  height: 32px;
+}
+
+/* FEE & TIME */
+.nbfc-fee-time-label {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top:2%;
+  margin-left:10%;
+  margin-right:10%;
+  padding: 12px 17px 12px 17px;
+  width:auto;
+  height: auto;
+}
+
+.nbfc-fee {
+  background-color: #F6F6F6;
+  flex: 1;
+  margin-right: 2.5%;
+  padding: 0.75rem 0.75rem;
+}
+
+.nbfc-tenure{
+  background-color: #F6F6F6;
+ flex: 1;
+  margin-right: 2.5%;
+  padding: 0.75rem 0.75rem;
+}
+
+.nbfc-fee-label,
+.nbfc-tenure-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #555;
+  
+}
+
+.nbfc-fee-value,
+.nbfc-tenure-value {
+  margin-top: 0.5rem;
+  margin-bottom: 2.5%;
+  font-size: 24px;
+  font-weight: 700;
+  font-weight: bold;
+  margin-top: 0.25rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* features */
+.nbfc-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  gap:29px;
+}
+
+.nbfc-feature-heading {
+  font-size: 24px;
+  font-weight: 700;
+  font-weight: bold;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.nbfc-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 5%;
+}
+
+.nbfc-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.nbfc-feature-list img {
+  width: 24px;
+  height: 16px;
+}
+
+/* BUTTON */
+.nbfc-btn {
+  width: 90%;
+  margin: 5% auto;
+  background-color: #287781;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  font-weight: bold;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  height: 53px;
+}
+
+.nbfc-btn:hover {
+  transform: scale(1.02);
+}
+
+
+@media (max-width: 768px) {
+  .nbfc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nbfc-name {
+  font-size: 16px;
+}
+
+.nbfc-amt .nbfc-value-label{
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.nbfc-amt .nbfc-value{
+  font-size: 12px;
+}
+
+  .nbfc-fee-value,
+.nbfc-tenure-value {
+  margin-top: 5%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nbfc-feature-list li {
+  font-size: 12px;
+}
+
+}
+
+
+/* intl-bank-section */
+
+.intl-top-label-container{
+background-color:#A12456;
+border-bottom: 1px solid #A12456;
+padding: 1.5rem;
+}
+
+.intl-right-col img {
+  width: 182px;
+  height: 32px;
+}
+
+.intl-btn {
+  width: 90%;
+  margin: 5% auto;
+  background-color: #A12456;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  font-weight: bold;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  height: 53px;
+}
+
+.intl-btn:hover {
+  transform: scale(1.02);
+}
+
+
+/* footer */
+
+.footer {
+    background-color: #092A2E;
+    padding: 60px 2% 30px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1320px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-about {
+    flex: 2.5;
+    max-width: none;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+
+.footer-about p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-col h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 22px;
+    color: #ffffff;
+}
+
+.footer-col p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-col.contact-col {
+    min-width: 300px;
+    max-width: 350px;
+}
+
+.footer-col:not(.footer-about) {
+    margin-left: -5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Divider line */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ffffff44;
+    margin: 40px auto 20px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Bottom copyright text */
+.footer-bottom {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+.footer-right-columns {
+    display: flex;
+    gap: 40px;
+    margin-left: 30px;
+    /* You can increase this to shift more */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-right-columns {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .footer-col {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.footer-col ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 100%;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #4ED0E1;
+    /* Optional: subtle hover color */
+}

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>check-eligibility</title>
+    <link rel="stylesheet" href="check-eligibility.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+     <nav class="navbar">
+        <div class="navbar-left">
+            <img src="../../images/study-befikar1.png" alt="Logo" class="logo">
+        </div>
+    <ul class="navbar-right" id="mobileNav">
+            <li><a href="#">About</a></li>
+
+            <li class="dropdown">
+                <a href="#">Countries</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">USA</a></li>
+                    <li><a href="#">UK</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">Germany</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Loan</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Check Eligibility</a></li>
+                    <li><a href="#">Available Banks</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Admission Counselling</a>
+                <ul class="dropdown-content">
+                    <li style="background-color: #59898E33;">
+                        <a href="#" class="selected">Admission Counselling</a>
+                    </li>
+                    <li><a href="#">Book Consultation</a></li>
+                    <li><a href="#">Application Deadline</a></li>
+                    <li><a href="#">University Finder</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Test Preparation</a></li>
+            <li><a href="#">All Exams</a></li>
+            <li><a href="#" class="contact-btn">Contact Us</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </nav>
+
+      <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('mobileNav');
+
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+
+    <script>
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(dropdown => {
+            const trigger = dropdown.querySelector('a');
+            const menu = dropdown.querySelector('.dropdown-content');
+
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Close all other open dropdowns
+                dropdowns.forEach(d => {
+                    if (d !== dropdown) {
+                        d.querySelector('.dropdown-content').style.display = 'none';
+                    }
+                });
+
+                // Toggle current dropdown
+                if (menu.style.display === 'block') {
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block';
+                }
+            });
+        });
+
+        // optional: close dropdown when clicking outside
+        document.addEventListener('click', function (e) {
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.querySelector('.dropdown-content').style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+     <br/><br/>
+     <br/><br/>
+
+
+     <!-- hero-section -->
+
+    <section class="hero">
+  <div class="hero-content">
+    <!-- LEFT COLUMN (Desktop) / DETAIL BOX (Mobile) -->
+
+    <div class="hero-detailbox">
+
+       <div class="hero-route">Home &gt; Loan &gt; Available Banks</div>
+      <div class="hero-mini-heading">
+        <img src="../../images/loan/check-eligibility/blue-star.png" alt="Star" />
+        <span>Loan Eligibility</span>
+      </div>
+      <h1 class="hero-heading">
+        <span class="tophead">Study abroad with</span> <br />
+        <span class="lowhead">Financial Confidence</span>
+      </h1>
+      <p class="hero-para">
+        <span>Check your loan eligibility and discover exclusive</span> <br/> benefits customized specifically for your needs.
+      </p>
+      <div class="hero-btns">
+        <a href="#" class="btn primary">
+          Check Eligibility Now <img src="../../images/loan/check-eligibility/right-arrow.png" alt="Arrow" />
+        </a>
+        <a href="#" class="btn secondary">
+          <img src="../../images/loan/check-eligibility/videocam.png" alt="Arrow" /> Book Consultation
+        </a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN (Desktop) / INFO CARD (Mobile) -->
+    <div class="hero-infocard">
+      <img src="../../images/loan/check-eligibility/lady.png" alt="Lady" class="hero-image" />
+
+      <div class="info-box info1">
+        <img src="../../images/loan/check-eligibility/head.png" alt="head" />
+        <p>Fast Approval Process</p>
+      </div>
+      <div class="info-box info2">
+        <img src="../../images/loan/check-eligibility/head.png" alt="head" />
+        <p>Low-Interest Rates</p>
+      </div>
+    </div>
+
+  </div>
+    </section>
+
+
+    <!-- service-section -->
+
+    <section class="services">
+  <div class="services-header">
+    <h2 class="service-heading">How Study Befikar Helps You Find the Best Loan Partner
+</h2>
+    <p class="service-para">
+      Explore personalized loan options, multiple lenders, and expert guidance, all in one place!
+    </p>
+  </div>
+
+
+  <div class="services-container">
+
+    <div class="service-card">
+
+      <div class="left-col">
+        <img src="../../images/loan/check-eligibility/doctor.jpg" alt="Service 1" />
+      </div>
+
+      <div class="right-col">
+        <img src="../../images/loan/check-eligibility/two-ppl-vector.png" alt="Icon" class="card-icon" />
+        <h3 class="card-header">Multiple Lenders</h3>
+        <p class="card-desc">Managing tuition and living costs can be tough as a student. A Multiple Lenders Loan offers flexibility by letting you borrow from several lenders, giving you more funding options.</p>
+        <button class="card-btn">Check Eligibility Now</button>
+      </div>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <div class="left-col">
+        <img src="../../images/loan/check-eligibility/calculator.jpg" alt="Service 1" />
+      </div>
+
+      <div class="right-col">
+        <img src="../../images/loan/check-eligibility/cash-vector.png" alt="Icon" class="card-icon" />
+        <h3 class="card-header">Multi-Currency Loan</h3>
+        <p class="card-desc">In a global economy, managing cross-border finances demands adaptable solutions. A Multi-Currency Loan lets you borrow in the currency that suits your needs.</p>
+        <button class="card-btn">Check Eligibility Now</button>
+      </div>
+
+    </div>
+
+
+   <div class="service-card">
+
+      <div class="left-col">
+        <img src="../../images/loan/check-eligibility/cross-man.jpg" alt="Service 1" />
+      </div>
+
+      <div class="right-col">
+        <img src="../../images/loan/check-eligibility/doc-vector.png" alt="Icon" class="card-icon" />
+        <h3 class="card-header">Multi-Currency Loan</h3>
+        <p class="card-desc">In a global economy, managing cross-border finances demands adaptable solutions. A Multi-Currency Loan lets you borrow in the currency that suits your needs.</p>
+        <button class="card-btn">Check Eligibility Now</button>
+      </div>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <div class="left-col">
+        <img src="../../images/loan/check-eligibility/chatting-ppl.jpg" alt="Service 1" />
+      </div>
+
+      <div class="right-col">
+        <img src="../../images/loan/check-eligibility/one-ppl-vector.png" alt="Icon" class="card-icon" />
+        <h3 class="card-header">Expert Advice</h3>
+        <p class="card-desc">Financial experts can explain different loan options, like federal and private student loans, so you can choose the best one for your needs. They can also help you apply for scholarships, and lower how much you need to borrow.</p>
+        <button class="card-btn">Check Eligibility Now</button>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <!-- Carousel Buttons -->
+  <div class="carousel-controls">
+    <span class="circle active" data-index="0"></span>
+    <span class="circle" data-index="1"></span>
+    <span class="circle" data-index="2"></span>
+    <span class="circle" data-index="3"></span>
+  </div>
+    </section>
+
+<script>
+const serviceContainer = document.querySelector('.services-container');
+const circles = document.querySelectorAll('.circle');
+let currentIndex = 0;
+
+circles.forEach(circle => {
+  circle.addEventListener('click', () => {
+    currentIndex = parseInt(circle.dataset.index);
+    updateCarousel();
+  });
+});
+
+function updateCarousel() {
+  const offset = -currentIndex * 100;
+  serviceContainer.style.transform = `translateX(${offset}%)`;
+  circles.forEach(c => c.classList.remove('active'));
+  circles[currentIndex].classList.add('active');
+}
+
+// Initialize
+updateCarousel();
+</script>
+
+<!-- loan-process section -->
+
+<section class="loan-process">
+  <div class="loan-process-header">
+    <h2 class="loan-service-heading">Our Loan Process</h2>
+    <p class="loan-service-desc">
+      Step-by-step guidance to help you secure the best loan option for your needs.
+    </p>
+  </div>
+
+  <div class="loan-process-cards">
+
+    <div class="loan-card">
+      <div class="card-number">1</div>
+      <h3 class="loan-service-card-header">Apply Online</h3>
+      <p class="loan-service-card-desc">Fill out our simple application form with your basic details and study preferences</p>
+    </div>
+
+    <div class="loan-card">
+      <div class="card-number">2</div>
+      <h3 class="loan-service-card-header">Document Upload</h3>
+      <p class="loan-service-card-desc">Upload required documents securely through our encrypted portal</p>
+    </div>
+
+    <div class="loan-card">
+      <div class="card-number">3</div>
+      <h3 class="loan-service-card-header">Loan Assessment</h3>
+      <p class="loan-service-card-desc">Our experts evaluate your application and match you with the best loan options</p>
+    </div>
+
+    <div class="loan-card">
+      <div class="card-number">4</div>
+      <h3 class="loan-service-card-header">Loan Approval</h3>
+      <p class="loan-service-card-desc">Receive approval notification and funds disbursed directly to your institution</p>
+    </div>
+  </div>
+</section>
+
+
+<p>hello</p>
+<p>hello</p><p>hello</p><p>hello</p><p>hello</p><p>hello</p>
+
+    <!-- footer -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1: Logo + About + Social Icons -->
+            <div class="footer-col footer-about">
+                <img src="../../images/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="../../images/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="../../images/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="../../images/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="../../images/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- Column 2: Services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="#">Education Loans</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 3: Study Destinations -->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="#">USA</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">UK</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 4: Contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>info@studybefikar.com</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
