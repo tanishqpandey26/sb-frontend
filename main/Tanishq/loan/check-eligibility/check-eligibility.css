@@ -1337,6 +1337,9 @@ margin-right: 7.5%;
 
 }
 
+
+/* loan-option-section */
+
 .loanOptions {
   padding: 2rem;
   font-family: Arial, sans-serif;
@@ -1344,104 +1347,141 @@ margin-right: 7.5%;
 }
 
 .loanOptionHeader {
-  font-size: 2rem;
+  font-size: 34px;
+  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 0.5rem;
+  color:#424242;
 }
 
 .loanOptionSubHeader {
-  font-size: 1rem;
-  color: #555;
+  font-size: 24px;
+  font-weight: 400;
   margin-bottom: 2rem;
+  color:#424242;
 }
 
 .loanOptionCards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 24px;
+  text-align: left;
 }
 
 .loanOptionCard {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 1.5rem;
-  /* text-align: center; */
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   transition: transform 0.2s ease;
+  padding: 48px 38px 48px 38px;
 }
 
 .loanOptionCard:nth-child(1){
   background-color: #F2FBFC;
+  border: 1px solid #287781;
 }
 
 .loanOptionCard:nth-child(3){
   background-color: #F2FBFC;
+  border: 1px solid #287781;
 }
 
 .loanOptionCard:nth-child(2){
   background-color: #FDF0F4;
+  border: 1px solid #A12456;
 }
 
 .loanOptionCard:nth-child(4){
   background-color: #FDF0F4;
-}
-
-.loanOptionCard:hover {
-  transform: translateY(-5px);
+  border: 1px solid #A12456;
 }
 
 .loanOptionIcon {
   width: 37px;
   height: 25px;
-  margin-bottom: 1rem;
 }
 
 .loanOptionCardHeader {
-  font-size: 1.25rem;
+    font-size: 24px;
   font-weight: bold;
+  font-weight: 700;
   margin-bottom: 0.25rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .loanOptionCardSubHeader {
-  font-size: 0.9rem;
-  color: #777;
+   font-size: 16px;
+  font-weight: bold;
+  font-weight: 700;
+  color:#287781;
   margin-bottom: 1rem;
 }
 
 .loanOptionCardImg {
   width: 100%;
-  height: 160px;
+  height: 328px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 20px;
   margin-bottom: 1rem;
 }
 
 .loanOptionCardDesc {
-  font-size: 0.95rem;
-  color: #555;
+    font-size: 16px;
+  font-weight: 400;
+  color:#424242;
   margin-bottom: 1.25rem;
 }
 
 .loanOptionBtn {
   padding: 0.5rem 1.25rem;
-  background: #0077cc;
   color: #fff;
   border: none;
-  border-radius: 25px;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 12px;
+  font-weight: bold;
+  font-weight: 700;
   transition: background 0.3s ease;
+  background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
+  gap:10px;
+  padding: 10px;
+  width: 143px;
+  height: 33px;
 }
 
-.loanOptionBtn:hover {
-  background: #005fa3;
-}
 
-/* Responsive: mobile view */
 @media (max-width: 768px) {
-  .loanOptionCards {
-    grid-template-columns: 1fr; /* single column */
+
+  .loanOptionHeader {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.loanOptionSubHeader {
+  font-size: 12px;
+  margin-bottom: 2rem;
+}
+
+.loanOptionCards {
+    grid-template-columns: 1fr; 
   }
+
+.loanOptionCardHeader {
+    font-size: 16px;
+}
+
+.loanOptionCardSubHeader {
+   font-size: 12px;
+}
+
+.loanOptionCardImg {
+  width: 100%;
+  height: 187px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
 }
 
 
