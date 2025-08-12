@@ -155,9 +155,9 @@
     </section>
 
 
-    <!-- service-section -->
+<!-- service-section -->
 
-    <section class="services">
+    <!-- <section class="services">
   <div class="services-header">
     <h2 class="service-heading">How Study Befikar Helps You Find the Best Loan Partner
 </h2>
@@ -235,16 +235,16 @@
 
   </div>
 
-  <!-- Carousel Buttons -->
   <div class="carousel-controls">
     <span class="circle active" data-index="0"></span>
     <span class="circle" data-index="1"></span>
     <span class="circle" data-index="2"></span>
     <span class="circle" data-index="3"></span>
   </div>
-    </section>
 
-<script>
+    </section> -->
+
+    <!-- <script>
 const serviceContainer = document.querySelector('.services-container');
 const circles = document.querySelectorAll('.circle');
 let currentIndex = 0;
@@ -263,17 +263,121 @@ function updateCarousel() {
   circles[currentIndex].classList.add('active');
 }
 
-// Initialize
+
 updateCarousel();
-</script>
+</script> -->
+
+  <section class="services">
+  <div class="services-header">
+    <h2 class="service-heading">How Study Befikar Helps You Find the Best Loan Partner
+</h2>
+    <p class="service-para">
+      Explore personalized loan options, multiple lenders, and expert guidance, all in one place!
+    </p>
+  </div>
+
+
+  <div class="services-container">
+
+    <div class="service-card">
+
+      <div class="left-col">
+        <img src="../../images/loan/check-eligibility/doctor.jpg" alt="Service 1" />
+      </div>
+
+      <div class="right-col">
+        <img src="../../images/loan/check-eligibility/two-ppl-vector.png" alt="Icon" class="card-icon" />
+        <h3 class="card-header">Multiple Lenders</h3>
+        <p class="card-desc">Managing tuition and living costs can be tough as a student. A Multiple Lenders Loan offers flexibility by letting you borrow from several lenders, giving you more funding options.</p>
+        <button class="card-btn">Check Eligibility Now</button>
+      </div>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <div class="left-col">
+        <img src="../../images/loan/check-eligibility/calculator.jpg" alt="Service 1" />
+      </div>
+
+      <div class="right-col">
+        <img src="../../images/loan/check-eligibility/cash-vector.png" alt="Icon" class="card-icon" />
+        <h3 class="card-header">Multi-Currency Loan</h3>
+        <p class="card-desc">In a global economy, managing cross-border finances demands adaptable solutions. A Multi-Currency Loan lets you borrow in the currency that suits your needs.</p>
+        <button class="card-btn">Check Eligibility Now</button>
+      </div>
+
+    </div>
+
+
+   <div class="service-card">
+
+      <div class="left-col">
+        <img src="../../images/loan/check-eligibility/cross-man.jpg" alt="Service 1" />
+      </div>
+
+      <div class="right-col">
+        <img src="../../images/loan/check-eligibility/doc-vector.png" alt="Icon" class="card-icon" />
+        <h3 class="card-header">Multi-Currency Loan</h3>
+        <p class="card-desc">In a global economy, managing cross-border finances demands adaptable solutions. A Multi-Currency Loan lets you borrow in the currency that suits your needs.</p>
+        <button class="card-btn">Check Eligibility Now</button>
+      </div>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <div class="left-col">
+        <img src="../../images/loan/check-eligibility/chatting-ppl.jpg" alt="Service 1" />
+      </div>
+
+      <div class="right-col">
+        <img src="../../images/loan/check-eligibility/one-ppl-vector.png" alt="Icon" class="card-icon" />
+        <h3 class="card-header">Expert Advice</h3>
+        <p class="card-desc">Financial experts can explain different loan options, like federal and private student loans, so you can choose the best one for your needs. They can also help you apply for scholarships, and lower how much you need to borrow.</p>
+        <button class="card-btn">Check Eligibility Now</button>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  </section>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.querySelector(".services-container");
+
+  let scrollTimeout;
+
+  container.addEventListener("scroll", function() {
+    // total scrollable width
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+    // if at the end
+    if (Math.ceil(container.scrollLeft) >= maxScrollLeft) {
+      clearTimeout(scrollTimeout);
+
+      scrollTimeout = setTimeout(() => {
+        container.scrollTo({ left: 0, behavior: "smooth" });
+      }, 5000); // 5 seconds
+    }
+  });
+});
+  </script>
+
+
 
 <!-- loan-process section -->
 
 <section class="loan-process">
   <div class="loan-process-header">
-    <h2 class="loan-service-heading">Our Loan Process</h2>
+    <h2 class="loan-service-heading">How Our Loan Process Works</h2>
     <p class="loan-service-desc">
-      Step-by-step guidance to help you secure the best loan option for your needs.
+      We’ve made our loan process simple and straightforward. Here’s a quick overview of each step, so you know what’s ahead.
     </p>
   </div>
 
@@ -363,7 +467,7 @@ updateCarousel();
 
 <section class="loan-partner-section">
   <h2 class="loanPartnerHeader">Our Trusted Loan Partners</h2>
-  <p class="loanPartnerPara">We’ve partnered with top banks to bring you the best student loan options. Compare and choose the one that fits your needs.</p>
+  <p class="loanPartnerPara">We’ve partnered with top banks to bring you the best student loan options. <span>Compare and choose the one that fits your needs.</span></p>
 
   <div class="loanPartnerCards">
 
@@ -371,48 +475,56 @@ updateCarousel();
       <img src="../../images/loan/check-eligibility/icici-banner.png" alt="Partner 1" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">ICICI Bank</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 10.5% APR </span></p>
+       <button class="loanPartnerBtn">Explore</button>
     </div>
 
     <div class="loanPartnerCard">
       <img src="../../images/loan/check-eligibility/axis-banner.png" alt="Partner 2" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">Axis Bank</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 11.0% APR </span></p>
+      <button class="loanPartnerBtn">Explore</button>
     </div>
 
     <div class="loanPartnerCard">
       <img src="../../images/loan/check-eligibility/idfc-banner.png" alt="Partner 3" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">IDFC</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 10.8% APR </span></p>
+      <button class="loanPartnerBtn">Explore</button>
     </div>
 
     <div class="loanPartnerCard">
       <img src="../../images/loan/check-eligibility/union-bank-banner.png" alt="Partner 4" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">Union Bank</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 9.9% APR </span></p>
+      <button class="loanPartnerBtn">Explore</button>
     </div>
 
     <div class="loanPartnerCard">
       <img src="../../images/loan/check-eligibility/avanse-banner.png" alt="Partner 5" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">Avanse</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 11.3% APR </span></p>
+      <button class="loanPartnerBtn">Explore</button>
     </div>
 
     <div class="loanPartnerCard">
       <img src="../../images/loan/check-eligibility/credila-banner.png" alt="Partner 6" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">Credila</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 10.2% APR </span></p>
+      <button class="loanPartnerBtn">Explore</button>
     </div>
 
     <div class="loanPartnerCard">
       <img src="../../images/loan/check-eligibility/incred-banner.png" alt="Partner 7" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">Incread</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 10.5% APR </span></p>
+      <button class="loanPartnerBtn">Explore</button>
     </div>
 
     <div class="loanPartnerCard">
       <img src="../../images/loan/check-eligibility/auxilo-banner.png" alt="Partner 8" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">Auxilo</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 11.0% APR </span></p>
+      <button class="loanPartnerBtn">Explore</button>
     </div>
 
   </div>
@@ -423,6 +535,526 @@ updateCarousel();
     </p>
   </div>
 
+</section>
+
+
+<!-- country-specific-loan-section -->
+
+<section class="countrySpecLoan">
+  <h2 class="countrySpecLoanHeader">Country-Specific Loan Requirements</h2>
+  <p class="countrySpecLoanPara">Learn what it takes to qualify for an education loan in different countries and find the best option for your study abroad journey.</p>
+
+  <!-- country tabbar -->
+  <div class="countryTabContainer">
+    <div class="countryTabs">
+      <div class="countryTab active" data-country="usa">USA</div>
+      <div class="countryTab" data-country="uk">UK</div>
+      <div class="countryTab" data-country="nz">New Zealand</div>
+      <div class="countryTab" data-country="germany">Germany</div>
+      <div class="countryTab" data-country="france">France</div>
+      <div class="countryTab" data-country="ireland">Ireland</div>
+      <div class="countryTab" data-country="canada">Canada</div>
+      <div class="countryTab" data-country="singapore">Singapore</div>
+    </div>
+  </div>
+
+  <!-- mobile carousel controls -->
+  <!-- <div class="countryCarouselControls">
+    <button class="countryTabNav left">&#8249;</button>
+    <button class="countryTabNav right">&#8250;</button>
+  </div> -->
+
+  <!-- country cards -->
+ <div class="countrySpecLoanCard" id="usa">
+    <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../../images/loan/check-eligibility/usa.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">USA</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      The USA offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="uk" style="display:none;">
+    <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../../images/loan/check-eligibility/uk.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">UK</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      The UK offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="nz" style="display:none;">
+     <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../../images/loan/check-eligibility/nz.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">New Zealand</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      New Zealand offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="germany" style="display:none;">
+     <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../../images/loan/check-eligibility/germany.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">Germany</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      Germany offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="france" style="display:none;">
+     <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../../images/loan/check-eligibility/france.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">France</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      France offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="ireland" style="display:none;">
+     <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../../images/loan/check-eligibility/ireland.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">Ireland</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      Ireland offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="canada" style="display:none;">
+     <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../../images/loan/check-eligibility/canada.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">Canada</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      Canada offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="singapore" style="display:none;">
+     <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../../images/loan/check-eligibility/singapore.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">Singapore</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      Singapore offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../../images/loan/check-eligibility/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".countryTab");
+  const tabContainer = document.querySelector(".countryTabs");
+  const cards = document.querySelectorAll(".countrySpecLoanCard");
+  // const leftBtn = document.querySelector(".countryTabNav.left");
+  // const rightBtn = document.querySelector(".countryTabNav.right");
+  let activeIndex = 0;
+
+  function setActiveTab(index) {
+    tabs.forEach(tab => tab.classList.remove("active"));
+    cards.forEach(card => (card.style.display = "none"));
+
+    tabs[index].classList.add("active");
+    const countryId = tabs[index].dataset.country;
+    document.getElementById(countryId).style.display = "block";
+    activeIndex = index;
+
+    tabs[index].scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest"
+    });
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      setActiveTab(index);
+    });
+  });
+
+  // leftBtn.addEventListener("click", () => {
+  //   const newIndex = (activeIndex - 1 + tabs.length) % tabs.length;
+  //   setActiveTab(newIndex);
+  // });
+
+  // rightBtn.addEventListener("click", () => {
+  //   const newIndex = (activeIndex + 1) % tabs.length;
+  //   setActiveTab(newIndex);
+  // });
+
+  setActiveTab(0);
+});
+
+</script>
+
+<!-- loan-option-section -->
+
+<section class="loanOptions">
+  <h2 class="loanOptionHeader">Explore Your Loan Options</h2>
+  <p class="loanOptionSubHeader">Choose the best loan type that fits your needs</p>
+
+  <div class="loanOptionCards">
+
+    <!-- Card 1 -->
+    <div class="loanOptionCard">
+      <img src="../../images/loan/check-eligibility/blue-two-head.png" alt="Icon" class="loanOptionIcon">
+      <h3 class="loanOptionCardHeader">Student Loan</h3>
+      <p class="loanOptionCardSubHeader">For education abroad</p>
+      <img src="../../images/loan/check-eligibility/co-signer.jpg" alt="Loan Type" class="loanOptionCardImg">
+      <p class="loanOptionCardDesc">Covers tuition, living costs, and more for your overseas education.</p>
+      <button class="loanOptionBtn">Apply Now</button>
+    </div>
+
+    <!-- card 2 -->
+    <div class="loanOptionCard">
+      <img src="../../images/loan/check-eligibility/pink-two-head.png" alt="Icon" class="loanOptionIcon">
+      <h3 class="loanOptionCardHeader">Home Loan</h3>
+      <p class="loanOptionCardSubHeader">For your dream home</p>
+      <img src="../../images/loan/check-eligibility/no-co-signer.jpg" alt="Loan Type" class="loanOptionCardImg">
+      <p class="loanOptionCardDesc">Flexible repayment options with competitive interest rates.</p>
+      <button class="loanOptionBtn">Apply Now</button>
+    </div>
+
+    <!-- card 3 -->
+    <div class="loanOptionCard">
+      <img src="../../images/loan/check-eligibility/blue-two-head.png" alt="Icon" class="loanOptionIcon">
+      <h3 class="loanOptionCardHeader">Car Loan</h3>
+      <p class="loanOptionCardSubHeader">For your next vehicle</p>
+      <img src="../../images/loan/check-eligibility/co-signer.jpg" alt="Loan Type" class="loanOptionCardImg">
+      <p class="loanOptionCardDesc">Quick approvals and easy EMIs for new or used cars.</p>
+      <button class="loanOptionBtn">Apply Now</button>
+    </div>
+
+    <!-- card 4 -->
+    <div class="loanOptionCard">
+      <img src="../../images/loan/check-eligibility/pink-two-head.png" alt="Icon" class="loanOptionIcon">
+      <h3 class="loanOptionCardHeader">Business Loan</h3>
+      <p class="loanOptionCardSubHeader">Fuel your growth</p>
+      <img src="../../images/loan/check-eligibility/non-collateral.jpg" alt="Loan Type" class="loanOptionCardImg">
+      <p class="loanOptionCardDesc">Funding solutions to expand your business operations.</p>
+      <button class="loanOptionBtn">Apply Now</button>
+    </div>
+  </div>
 </section>
 
 
