@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Navbar</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Study Befikar</title>
+    <link rel="stylesheet" href="home.css" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
         rel="stylesheet">
 </head>
@@ -16,7 +16,7 @@
 
      <nav class="navbar">
         <div class="navbar-left">
-            <img src="../images/study-befikar1.png" alt="Logo" class="logo">
+            <img src="./images/home/study-befikar1.png" alt="Logo" class="logo">
         </div>
     <ul class="navbar-right" id="mobileNav">
             <li><a href="#">About</a></li>
@@ -34,8 +34,8 @@
             <li class="dropdown">
                 <a href="#">Loan</a>
                 <ul class="dropdown-content">
-                    <li><a href="#">Check Eligibility</a></li>
-                    <li><a href="#">Available Banks</a></li>
+                    <li><a href="check-eligibility.html">Check Eligibility</a></li>
+                    <li><a href="available-banks.html">Available Banks</a></li>
                 </ul>
             </li>
 
@@ -58,6 +58,50 @@
         <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
     </nav>
 
+      <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('mobileNav');
+
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+
+    <script>
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(dropdown => {
+            const trigger = dropdown.querySelector('a');
+            const menu = dropdown.querySelector('.dropdown-content');
+
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                dropdowns.forEach(d => {
+                    if (d !== dropdown) {
+                        d.querySelector('.dropdown-content').style.display = 'none';
+                    }
+                });
+
+                
+                if (menu.style.display === 'block') {
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block';
+                }
+            });
+        });
+
+      
+        document.addEventListener('click', function (e) {
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.querySelector('.dropdown-content').style.display = 'none';
+                }
+            });
+        });
+    </script>
+
     <br/><br/>
     <br/><br/>
 
@@ -66,23 +110,23 @@
  <section class="heroSection">
       <div class="heroContent">
         <div class="imageColumn">
-          <img src="../images/heroimg.png" alt="Hero Image" class="heroImage" />
+          <img src="./images/home/heroimg.png" alt="Hero Image" class="heroImage" />
 
           <!-- Overlapping Boxes -->
           <div class="infoBox consultantsBox">
-            <img src="../images/heads.png" alt="Icon" />
+            <img src="./images/home/heads.png" alt="Icon" />
             <span>500+ Verified Consultants</span>
           </div>
 
           <div class="infoBox countriesBox">
-            <img src="../images/heads.png" alt="Icon" />
+            <img src="./images/home/heads.png" alt="Icon" />
             <span>18+ Countries Covered</span>
           </div>
         </div>
 
         <div class="textColumn">
           <div class="trustBadge">
-            <img src="../images/star.png" alt="Icon" /> Trusted by 10,000+ Students
+            <img src="./images/home/star.png" alt="Icon" /> Trusted by 10,000+ Students
           </div>
           <h1>Welcome to <span class="highlight">Study Befikar</span></h1>
           <p>
@@ -98,7 +142,7 @@
           <div class="hero-divider"></div>
 
           <div class="testimonial">
-            <img src="../images/group-ppl.png" alt="Students" />
+            <img src="./images/home/group-ppl.png" alt="Students" />
             <span>We've served over 500+ students across 18 countries!</span>
           </div>
         </div>
@@ -142,28 +186,28 @@
   <script>
     const cardData = [
       {
-        icon: "../images/frame18-ppl.png",
+        icon: "./images/home/frame18-ppl.png",
         title: "All Consultants in One Place",
         desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
       },
       {
-        icon: "../images/frame18-star.png",
+        icon: "./images/home/frame18-star.png",
         title: "Top Profile Evaluators in India",
         desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
       },
       {
-        icon: "../images/frame18-building.png",
+        icon: "./images/home/frame18-building.png",
         title: "Find Best Banks & Low Interest Rates",
         desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
       },
       {
-        icon: "../images/frame18-docs.png",
+        icon: "./images/home/frame18-docs.png",
         title: "Send Documents in One Click",
         desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
       }
     ];
 
-    const arrowIcon = "../images/right-arrow.png";
+    const arrowIcon = "./images/home/right-arrow.png";
 
     const cardGrid = document.getElementById("cardGrid");
 
@@ -224,9 +268,9 @@
     heading: "Test Preparation",
     text: `Preparing for standardized tests like TOEFL, IELTS, GRE, or GMAT? Study Befikar provides expert guidance, study materials, and mock tests to help you ace your exams and reach your dream university. Our personalized approach ensures you get the right prep at the right time.`,
     images: [
-      { src: "../images/toefl.jpg", alt: "TOEFL" },
-      { src: "../images/ielts.png", alt: "IELTS" },
-      { src: "../images/gmat.png", alt: "GMAT" },
+      { src: "./images/home/toefl.jpg", alt: "TOEFL" },
+      { src: "./images/home/ielts.png", alt: "IELTS" },
+      { src: "./images/home/gmat.png", alt: "GMAT" },
     ]
   },
 
@@ -238,57 +282,57 @@
     {
       name: "United States of America",
       desc: "Top universities and career opportunities.",
-      countryImg: "../images/country/usa.png",
-      countrySpecificImg: "../images/country/usa1.png"
+      countryImg: "./images/home/country/usa.png",
+      countrySpecificImg: "./images/home/country/usa1.png"
     },
 
     {
       name: "United Kingdom",
       desc: "Shorter programs and globally ranked schools.",
-      countryImg: "../images/country/uk.png",
-      countrySpecificImg: "../images/country/uk1.jpg"
+      countryImg: "./images/home/country/uk.png",
+      countrySpecificImg: "./images/home/country/uk1.jpg"
     },
 
     {
       name: "New Zealand",
       desc: "High-quality education with natural beauty.",
-      countryImg: "../images/country/nz.png",
-      countrySpecificImg: "../images/country/nz1.jpg"
+      countryImg: "./images/home/country/nz.png",
+      countrySpecificImg: "./images/home/country/nz1.jpg"
     },
 
     {
       name: "Germany",
       desc: "Free or low-tuition education.",
-      countryImg: "../images/country/germany.png",
-      countrySpecificImg: "../images/country/germany1.jpg"
+      countryImg: "./images/home/country/germany.png",
+      countrySpecificImg: "./images/home/country/germany1.jpg"
     },
 
     {
       name: "France",
       desc: "Quality education and lifestyle.",
-      countryImg: "../images/country/france.png",
-      countrySpecificImg: "../images/country/france1.png"
+      countryImg: "./images/home/country/france.png",
+      countrySpecificImg: "./images/home/country/france1.png"
     },
 
     {
       name: "Canada",
       desc: "Affordable education with great PR prospects.",
-      countryImg: "../images/country/canada.png",
-      countrySpecificImg: "../images/country/canada1.png"
+      countryImg: "./images/home/country/canada.png",
+      countrySpecificImg: "./images/home/country/canada1.png"
     },
 
     {
       name: "Ireland",
       desc: "Post-study work and job-rich economy.",
-      countryImg: "../images/country/ireland.png",
-      countrySpecificImg: "../images/country/ireland1.png"
+      countryImg: "./images/home/country/ireland.png",
+      countrySpecificImg: "./images/home/country/ireland1.png"
     },
 
     {
       name: "Singapore",
       desc: "Top student cities with vibrant culture.",
-      countryImg: "../images/country/singapore.png",
-      countrySpecificImg: "../images/country/singapore1.png"
+      countryImg: "./images/home/country/singapore.png",
+      countrySpecificImg: "./images/home/country/singapore1.png"
     },
   ],
 
@@ -329,7 +373,7 @@
       bg: "#FDF0F4",
       heading: "Affordable Study Abroad Loans With No Hidden Costs",
       subheading: "At Study Befikar, we believe students should never be burdened by hidden costs or complicated loan processes. That’s why we offer a transparent, student-first approach to education financing.",
-      doublet:"../images/double-tick-pink.png" ,
+      doublet:"./images/home/double-tick-pink.png" ,
       points: [
         "100% transparent process, no hidden charges or surprise fees",
         "Absolutely free for students, no service charges or consultation fees",
@@ -337,14 +381,14 @@
         "Focus on your future, we handle the details so you can focus on your education",
         "Trusted by thousands, a platform built on trust, reliability, and student-first values"
       ],
-      image: "../images/loan1.png"
+      image: "./images/home/loan1.png"
     },
 
     {
       bg: "#FFF6E1",
       heading: "Hassle-Free Loan Application For Study Abroad",
       subheading: "Eliminate the stress of complicated loan applications with our hassle-free process. We make financing your study abroad journey smooth and worry-free:",
-      doublet:"../images/double-tick-yellow.png" ,
+      doublet:"./images/home/double-tick-yellow.png" ,
       points: [
         "Simple and fast loan application process",
         "Customized loan offers tailored to your needs",
@@ -352,14 +396,14 @@
         "We handle the paperwork and follow-ups for you",
         "Focus on your education while we manage the rest"
       ],
-      image: "../images/loan2.png"
+      image: "./images/home/loan2.png"
     },
 
     {
       bg: "#E4F7FA",
       heading: "Best Interest Rates For Study Abroad Loans",
       subheading: "Access the best study abroad loan rates with Study Befikar, where we connect you with leading public and private lenders around the world. Our goal is to make your education more affordable and stress-free",
-      doublet:"../images/double-tick-blue.png" ,
+      doublet:"./images/home/double-tick-blue.png" ,
       points: [
         "Best interest rates tailored to your profile",
         "Wide network of top public and private lenders",
@@ -367,14 +411,14 @@
         "Personalized loan matching for maximum savings",
         "Affordable financing that makes studying abroad accessible"
       ],
-      image: "../images/loan3.png"
+      image: "./images/home/loan3.png"
     },
 
     {
       bg: "#E9EDFF",
       heading: "Transparency with Study Befikar: No Gimmicks, Just Clarity",
       subheading: "At Study Befikar, we prioritize transparency at every step of your study abroad loan journey. No gimmicks, just clear, honest support to help you make confident decisions",
-      doublet:"../images/double-tick-dblue.png" ,
+      doublet:"./images/home/double-tick-dblue.png" ,
       points: [
         "View real, pre-qualified loan rates tailored to your profile",
         "No misleading offers or hidden conditions",
@@ -382,7 +426,7 @@
         "Empowering you with honest information to choose the best loan",
         "Confidence and control throughout your financial planning"
       ],
-      image: "../images/loan4.png"
+      image: "./images/home/loan4.png"
     }
   ],
 
@@ -439,7 +483,7 @@
                   <h4>${country.name}</h4>
                   <p>${country.desc}</p>
                   <button class="visitCountry">
-                    Explore <img src="../images/right-arrow.png" alt="Arrow" />
+                    Explore <img src="./images/home/right-arrow.png" alt="Arrow" />
                   </button>
                 </div>
               </div>
@@ -500,7 +544,7 @@
           <div class="scrollingBankBanner">
             <div class="scrollBankWrapper">
               <div class="scrollImg">
-                ${Array(6).fill('<span><img src="../images/bank.png" alt="Bank Partners Banner" /></span>').join('    ')}
+                ${Array(6).fill('<span><img src="./images/home/bank.png" alt="Bank Partners Banner" /></span>').join('    ')}
               </div>
             </div>
           </div>
@@ -619,14 +663,14 @@
             <div class="testimonialCarousel" id="testimonialCarousel">
                 <div class="testimonialCard">
                     <div class="topRow">
-                       <img src="../images/quote.png" alt="Quote" class="quoteImg" />
-                       <img src="../images/fivestar.png" alt="Rating" class="starImg" />
+                       <img src="./images/home/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="./images/home/fivestar.png" alt="Rating" class="starImg" />
                     </div>
                     <p class="feedback">
                         "This platform transformed the way I approach web development. The guidance was exceptional and helped me secure admission to my dream university."
                     </p>
                     <div class="userInfo">
-                        <img src="../images/customer.png" alt="Customer" class="customerImg" />
+                        <img src="./images/home/customer.png" alt="Customer" class="customerImg" />
                         <div class="userDetails">
                             <p class="userName">Avirush Kr</p>
                             <p class="userTitle">Co-Founder at XYZ</p>
@@ -636,14 +680,14 @@
 
                 <div class="testimonialCard">
                     <div class="topRow">
-                       <img src="../images/quote.png" alt="Quote" class="quoteImg" />
-                        <img src="../images/fivestar.png" alt="Rating" class="starImg" />
+                       <img src="./images/home/quote.png" alt="Quote" class="quoteImg" />
+                        <img src="./images/home/fivestar.png" alt="Rating" class="starImg" />
                     </div>
                     <p class="feedback">
                         "Absolutely amazing experience. My study abroad dream is now a reality! The counselors were so supportive throughout the entire process."
                     </p>
                     <div class="userInfo">
-                       <img src="../images/customer.png" alt="Customer" class="customerImg" />
+                       <img src="./images/home/customer.png" alt="Customer" class="customerImg" />
                         <div class="userDetails">
                             <p class="userName">Priya Mehta</p>
                             <p class="userTitle">Student, USA</p>
@@ -653,14 +697,14 @@
 
                 <div class="testimonialCard">
                     <div class="topRow">
-                       <img src="../images/quote.png" alt="Quote" class="quoteImg" />
-                       <img src="../images/fivestar.png" alt="Rating" class="starImg" />
+                       <img src="./images/home/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="./images/home/fivestar.png" alt="Rating" class="starImg" />
                     </div>
                     <p class="feedback">
                         "The visa process seemed so complicated, but Study Befikar made it incredibly simple. I got my visa approved on the first try!"
                     </p>
                     <div class="userInfo">
-                        <img src="../images/customer.png" alt="Customer" class="customerImg" />
+                        <img src="./images/home/customer.png" alt="Customer" class="customerImg" />
                         <div class="userDetails">
                             <p class="userName">Samira Singh</p>
                             <p class="userTitle">Student, Canada</p>
@@ -670,14 +714,14 @@
 
                 <div class="testimonialCard">
                   <div class="topRow">
-                     <img src="../images/quote.png" alt="Quote" class="quoteImg" />
-                     <img src="../images/fivestar.png" alt="Rating" class="starImg" />
+                     <img src="./images/home/quote.png" alt="Quote" class="quoteImg" />
+                     <img src="./images/home/fivestar.png" alt="Rating" class="starImg" />
                   </div>
                   <p class="feedback">
                       "The visa process seemed so complicated, but Study Befikar made it incredibly simple. I got my visa approved on the first try!"
                   </p>
                   <div class="userInfo">
-                      <img src="../images/customer.png" alt="Customer" class="customerImg" />
+                      <img src="./images/home/customer.png" alt="Customer" class="customerImg" />
                       <div class="userDetails">
                           <p class="userName">Samira Singh</p>
                           <p class="userTitle">Student, Canada</p>
@@ -687,14 +731,14 @@
 
                 <div class="testimonialCard">
                     <div class="topRow">
-                       <img src="../images/quote.png" alt="Quote" class="quoteImg" />
-                        <img src="../images/fivestar.png" alt="Rating" class="starImg" />
+                       <img src="./images/home/quote.png" alt="Quote" class="quoteImg" />
+                        <img src="./images/home/fivestar.png" alt="Rating" class="starImg" />
                     </div>
                     <p class="feedback">
                         "Thanks to Study Befikar, I got into my dream university with a scholarship! The test preparation was top-notch."
                     </p>
                     <div class="userInfo">
-                      <img src="../images/customer.png" alt="Customer" class="customerImg" />
+                      <img src="./images/home/customer.png" alt="Customer" class="customerImg" />
                         <div class="userDetails">
                             <p class="userName">Rohan Das</p>
                             <p class="userTitle">MBA Student, UK</p>
@@ -704,14 +748,14 @@
 
                 <div class="testimonialCard">
                     <div class="topRow">
-                       <img src="../images/quote.png" alt="Quote" class="quoteImg" />
-                        <img src="../images/fivestar.png" alt="Rating" class="starImg" />
+                       <img src="./images/home/quote.png" alt="Quote" class="quoteImg" />
+                        <img src="./images/home/fivestar.png" alt="Rating" class="starImg" />
                     </div>
                     <p class="feedback">
                         "From university selection to loan assistance, everything was handled professionally. Highly recommend Study Befikar!"
                     </p>
                     <div class="userInfo">
-                       <img src="../images/customer.png" alt="Customer" class="customerImg" />
+                       <img src="./images/home/customer.png" alt="Customer" class="customerImg" />
                         <div class="userDetails">
                             <p class="userName">Neha Kumar</p>
                             <p class="userTitle">Student, Australia</p>
@@ -847,14 +891,14 @@
         <div class="footer-container">
             <!-- Column 1: Logo + About + Social Icons -->
             <div class="footer-col footer-about">
-                <img src="../images/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <img src="./images/home/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
                 <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
                     achieve their academic dreams abroad.</p>
                 <div class="footer-socials">
-                    <a href="#"><img src="../images/9.png" alt="Instagram"></a>
-                    <a href="#"><img src="../images/10.png" alt="Facebook"></a>
-                    <a href="#"><img src="../images/11.png" alt="LinkedIn"></a>
-                    <a href="#"><img src="../images/12.png" alt="X"></a>
+                    <a href="#"><img src="./images/home/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="./images/home/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="./images/home/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="./images/home/12.png" alt="X"></a>
                 </div>
             </div>
             <div class="footer-right-columns">
@@ -899,50 +943,6 @@
             © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
         </p>
     </footer>
-
-    <script>
-        const btn = document.getElementById('mobileMenuBtn');
-        const nav = document.getElementById('mobileNav');
-
-        btn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-    </script>
-
-    <script>
-        const dropdowns = document.querySelectorAll('.dropdown');
-
-        dropdowns.forEach(dropdown => {
-            const trigger = dropdown.querySelector('a');
-            const menu = dropdown.querySelector('.dropdown-content');
-
-            trigger.addEventListener('click', (e) => {
-                e.preventDefault();
-                // Close all other open dropdowns
-                dropdowns.forEach(d => {
-                    if (d !== dropdown) {
-                        d.querySelector('.dropdown-content').style.display = 'none';
-                    }
-                });
-
-                // Toggle current dropdown
-                if (menu.style.display === 'block') {
-                    menu.style.display = 'none';
-                } else {
-                    menu.style.display = 'block';
-                }
-            });
-        });
-
-        // Optional: Close dropdown when clicking outside
-        document.addEventListener('click', function (e) {
-            dropdowns.forEach(dropdown => {
-                if (!dropdown.contains(e.target)) {
-                    dropdown.querySelector('.dropdown-content').style.display = 'none';
-                }
-            });
-        });
-    </script>
 
 </body>
 

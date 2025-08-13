@@ -160,7 +160,7 @@ body {
 /* hero  */
 
 .hero {
-  background-image: url('../../images/loan/available-banks/hero-avail-banks.jpg');
+  background-image: url('./images/loan/available-banks/hero-avail-banks.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -305,7 +305,7 @@ body {
 @media (max-width: 768px) {
    .hero {
     position: relative; 
-    background-image: url('../../images/loan/available-banks/ielts.jpeg');
+   background-image: url('./images/loan/available-banks/hero-avail-banks.jpg');
     background-size: cover;
     background-position: center;
     color: white;
