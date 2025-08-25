@@ -42,7 +42,7 @@
 
 
        <div class="dropdownNav">
-        <a href="/Palak/DashBoard/vendorDashboard/bankwiseDashboard.html" 
+        <a href="/Palak/DashBoard/vendorDashboard/loanDashboard.html" 
            class="dropdownTrigger" data-page="loans">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path fill="currentColor" d="M8.63 20q-1.928 0-3.279-1.351T4 15.363q0-.808.277-1.574t.8-1.395l3.512-4.217L7.1 5.162q-.211-.404.018-.783q.23-.379.69-.379h8.384q.46 0 .69.379t.018.783l-1.489 3.015l3.512 4.217q.523.629.8 1.395q.277.765.277 1.574q0 1.935-1.35 3.286T15.37 20zm3.367-4.52q-.668 0-1.14-.475t-.472-1.143t.475-1.14t1.144-.472t1.14.476t.472 1.143t-.476 1.14t-1.143.472M9.51 7.75h5L15.875 5h-7.75zM8.63 19h6.74q1.521 0 2.576-1.064Q19 16.87 19 15.365q0-.634-.213-1.235t-.625-1.09l-3.58-4.29h-5.14l-3.584 4.285q-.414.488-.636 1.095Q5 14.736 5 15.369q0 1.502 1.065 2.567Q7.129 19 8.63 19"/>
@@ -51,12 +51,8 @@
         </a>
 
         <!-- Dropdown Items -->
-        <div class="dropdownMenu">
-          <span class="hierarchyLine"></span>
-          <a href="/Palak/DashBoard/vendorDashboard/bankwiseDashboard.html" data-subpage="bankwise">Bankwise</a>
-          <a href="/Palak/DashBoard/vendorDashboard/misReport.html" data-subpage="mis">MIS Report</a>
-          <a href="/Palak/DashBoard/vendorDashboard/loanSettings.html" data-subpage="settings">Loan Settings</a>
-        </div>
+        <div class="dropdownMenu"> <a href="/Palak/DashBoard/vendorDashboard/bankwiseDashboard.html" data-subpage="bankwise">Bank-wise Disbursement</a> <a href="/Palak/DashBoard/vendorDashboard/studentDetailDashboard.html" data-subpage="student">Student Details</a> <a href="/Palak/DashBoard/vendorDashboard/misDashboard.html" data-subpage="mis">MIS Report</a> <a href="/Palak/DashBoard/vendorDashboard/loanSettingsDashboard.html" data-subpage="settings">Loans Settings</a> </div>
+
       </div>
       
 
@@ -68,20 +64,20 @@
 
  <script>
 function getCurrentPage() {
- 
-    const cleanPath = window.location.pathname;
-    const filename = cleanPath.split('/').pop().split('.')[0];
-    
-    const pageMap = {
-    'dashboard': 'dashboard',
-    'bankwiseDashboard': 'bankwise',
-    'misReport': 'mis',
-    'loanSettings': 'settings'
-    };
-    
-    return pageMap[filename] || 'dashboard'; 
-}
+  const cleanPath = window.location.pathname;
+  const filename = cleanPath.split('/').pop().split('.')[0];
 
+  const pageMap = {
+    'vendorDashboard': 'dashboard',
+    'loanDashboard': 'loans',    // ✅ add loanDashboard mapping
+    'bankwiseDashboard': 'bankwise',
+    'studentDetailDashboard': 'student',
+    'misDashboard': 'mis',
+    'loanSettingsDashboard': 'settings'
+  };
+
+  return pageMap[filename] || 'dashboard';
+}
 
 function setActiveNav() {
   const currentPage = getCurrentPage();
@@ -90,30 +86,37 @@ function setActiveNav() {
 
   navLinks.forEach(link => link.classList.remove('active'));
 
-  // handle subpages inside loans
-  if (['bankwise','mis','settings'].includes(currentPage)) {
-    dropdownNav.classList.add('open'); // keep loans dropdown open
+  // ✅ If on loanDashboard → open dropdown, but don’t mark children active
+  if (currentPage === 'loans') {
+    dropdownNav.classList.add('open');
+    document.querySelector('.dropdownTrigger').classList.add('active');
+  }
+  // ✅ If inside subpages → open dropdown, highlight correct child
+  else if (['bankwise', 'student', 'mis', 'settings'].includes(currentPage)) {
+    dropdownNav.classList.add('open');
     document.querySelector(`.dropdownMenu a[data-subpage="${currentPage}"]`)?.classList.add('active');
     document.querySelector('.dropdownTrigger').classList.add('active');
-  } else {
+  } 
+  // ✅ Otherwise → just normal nav highlight
+  else {
     dropdownNav.classList.remove('open');
     document.querySelector(`.sideBarNavs a[data-page="${currentPage}"]`)?.classList.add('active');
   }
 }
 
-
 function handleDropdownToggle() {
   const trigger = document.querySelector('.dropdownTrigger');
   const parent = document.querySelector('.dropdownNav');
   trigger.addEventListener('click', function(e) {
-    // Default goes to Bankwise
+    // If dropdown not open → redirect to Loan Dashboard
     if (!parent.classList.contains('open')) {
       e.preventDefault();
       parent.classList.add('open');
-      window.location.href = "/Palak/DashBoard/vendorDashboard/bankwiseDashboard.html";
+      window.location.href = "/Palak/DashBoard/vendorDashboard/loanDashboard.html";
     }
   });
 }
+
 
 function cleanURL() {
     if (window.location.hash) {
@@ -216,85 +219,7 @@ window.addEventListener('popstate', () => {
     <button class="logoutBtn">Logout</button>
   </header>
 
-  <!-- loanDashboardSection -->
-
-   <section class="loanDashboardSection">
-
-  <div class="loanDashboardHeader">
-    <h2>Loan Dashboard</h2>
-    <p class="loanDashboardSubHeader">Welcome to the Loan Management Panel, Below is an overview of the loan statistics.</p>
-  </div>
-
-  <div class="loanDashboardCardContainer">
-
-    <!-- card 1 -->
-    <div class="loanDashboardCard">
-      <img src="../../images/dashboard/vendorDashboard/loanDashboard/docs.png" alt="Loan Type" class="loanDashboardCardImg">
-      <p class="loanDashboardCardCount">3</p>
-      <h3 class="loanDashboardCardSubHeader">Total Loan Applications</h3>
-      <button class="loanDashboardCardViewMoreBtn">View More</button>
-    </div>
-
-    <!-- card 2 -->
-    <div class="loanDashboardCard">
-      <img src="../../images/dashboard/vendorDashboard/loanDashboard/dollar.png" alt="Loan Type" class="loanDashboardCardImg">
-      <p class="loanDashboardCardCount">₹0.0</p>
-      <h3 class="loanDashboardCardSubHeader">Total Loan Disbursed</h3>
-      <button class="loanDashboardCardViewMoreBtn">View More</button>
-    </div>
-
-    <!-- card 3 -->
-    <div class="loanDashboardCard">
-      <img src="../../images/dashboard/vendorDashboard/loanDashboard/dollar.png" alt="Loan Type" class="loanDashboardCardImg">
-      <p class="loanDashboardCardCount">₹0.0</p>
-      <h3 class="loanDashboardCardSubHeader">Total Loan Sactioned</h3>
-      <button class="loanDashboardCardViewMoreBtn">View More</button>
-    </div>
-
-    <!-- card 4 -->
-    <div class="loanDashboardCard">
-      <img src="../../images/dashboard/vendorDashboard/loanDashboard/pfpaid.png" alt="Loan Type" class="loanDashboardCardImg">
-      <p class="loanDashboardCardCount">₹0.0</p>
-      <h3 class="loanDashboardCardSubHeader">PF Paid</h3>
-      <button class="loanDashboardCardViewMoreBtn">Coming Soon</button>
-    </div>
-
-    <!-- card 5 -->
-    <div class="loanDashboardCard">
-      <img src="../../images/dashboard/vendorDashboard/loanDashboard/mis.png" alt="Loan Type" class="loanDashboardCardImg">
-      <p class="loanDashboardCardCount">3</p>
-      <h3 class="loanDashboardCardSubHeader">MIS Uploaded</h3>
-      <button class="loanDashboardCardViewMoreBtn">View More</button>
-    </div>
-
-    <!-- card 6 -->
-    <div class="loanDashboardCard">
-      <img src="../../images/dashboard/vendorDashboard/loanDashboard/docs.png" alt="Loan Type" class="loanDashboardCardImg">
-      <p class="loanDashboardCardCount">1</p>
-      <h3 class="loanDashboardCardSubHeader">Total Students Applied</h3>
-      <button class="loanDashboardCardViewMoreBtn">View More</button>
-    </div>
-
-     <!-- card 7 -->
-    <div class="loanDashboardCard">
-      <img src="../../images/dashboard/vendorDashboard/loanDashboard/newstudent.png" alt="Loan Type" class="loanDashboardCardImg">
-      <p class="loanDashboardCardCount">1</p>
-      <h3 class="loanDashboardCardSubHeader">Add New Student</h3>
-      <button class="loanDashboardCardViewMoreBtn">View More</button>
-    </div>
-
-     <!-- card 8 -->
-    <div class="loanDashboardCard">
-      <img src="../../images/dashboard/vendorDashboard/loanDashboard/settings.png" alt="Loan Type" class="loanDashboardCardImg">
-      <p class="loanDashboardCardCount">NIL</p>
-      <h3 class="loanDashboardCardSubHeader">Loan Settings</h3>
-      <button class="loanDashboardCardViewMoreBtn">View More</button>
-    </div>
-
-  </div>
-</section>
-
-
+ 
 
 
   </div>
