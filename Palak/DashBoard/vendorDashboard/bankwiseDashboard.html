@@ -327,6 +327,341 @@ window.addEventListener('popstate', () => {
 </script>
 
 
+<!-- bankOverviewTableSection  -->
+
+<div class="bankOverviewTableSection">
+  
+  <div class="bankOverviewTopLabel">
+    
+    <!-- filter tabs -->
+    <div class="filterTabSection">
+      <span class="filterLabel">Filter by</span>
+
+      <div class="filterTabsWrapper">
+        <div class="filterTabs">
+
+          <div class="filterTab">
+            <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/calendar.png" alt="">
+            <span>Intake</span>
+          </div>
+
+          <div class="filterTab">
+            <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/sort.png" alt="">
+            <span>Intake</span>
+          </div>
+
+          <div class="filterTab">
+            <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/sort.png" alt="">
+            <span>Intake</span>
+          </div>
+
+          <div class="filterTab">
+            <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/sort.png" alt="">
+            <span>Country</span>
+          </div>
+
+          <div class="filterTab">
+            <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/sort.png" alt="">
+            <span>Year</span>
+          </div>
+
+          <button class="applyFilterBtn">Apply Filter</button>
+          <button class="clearFilterBtn">Clear Filter</button>
+
+        </div>
+
+      </div>
+      
+    </div>
+
+    <div class="searchBox">
+      <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/search.png" alt="search">
+      <input type="text" placeholder="Search...">
+    </div>
+
+  </div>
+
+   <div class="bankOverviewTableWrapper">
+    <table class="bankOverviewTable">
+      <thead>
+        <tr>
+          <th>STUDENT ID</th>
+          <th>Name</th>
+          <th>EMAIL</th>
+          <th>BANK NAME</th>
+          <th>LOAN AMOUNT</th>
+          <th>DISBURSED AMOUNT</th>
+          <th>FUTURE INTAKE</th>
+          <th>SANCTION STATUS</th>
+          <th>PF PAID</th>
+          <th>DISBURSEMENT OPTED</th>
+          <th>COURSE</th>
+          <th>UNIVERSITY</th>
+          <th>COUNTRY</th>
+          <th>PENDENCY</th>
+        </tr>
+      </thead>
+
+      <tbody id="bankTableBody">
+        
+      </tbody>
+
+    </table>
+  </div>
+
+</div>
+
+
+<script>
+const syntheticData = [
+  {
+    id: "809",
+    name: "Shaun Suhaas",
+    email: "Shaunsuhaasa.edu2025@gmail.com",
+    bank: "Axis Bank",
+    loanAmount: "₹3800000.0",
+    disbursed: "₹",
+    intake: "Fall 2025",
+    status: "Pending",
+    pfPaid: "No",
+    disOpted: "Non-Collateral",
+    course: "Others",
+    university: "NIL",
+    country: "USA",
+    prendency: "NIL"
+  },
+  {
+    id: "809",
+    name: "Shaun Suhaas",
+    email: "Shaunsuhaasa.edu2025@gmail.com",
+    bank: "Axis Bank",
+    loanAmount: "₹3800000.0",
+    disbursed: "₹",
+    intake: "Fall 2025",
+    status: "Pending",
+    pfPaid: "No",
+    disOpted: "Non-Collateral",
+    course: "Others",
+    university: "NIL",
+    country: "USA",
+    prendency: "NIL"
+  },
+  {
+    id: "809",
+    name: "Shaun Suhaas",
+    email: "Shaunsuhaasa.edu2025@gmail.com",
+    bank: "Axis Bank",
+    loanAmount: "₹3800000.0",
+    disbursed: "₹",
+    intake: "Fall 2025",
+    status: "Pending",
+    pfPaid: "No",
+    disOpted: "Non-Collateral",
+    course: "Others",
+    university: "NIL",
+    country: "USA",
+    prendency: "NIL"
+  },
+   {
+    id: "809",
+    name: "Shaun Suhaas",
+    email: "Shaunsuhaasa.edu2025@gmail.com",
+    bank: "Axis Bank",
+    loanAmount: "₹3800000.0",
+    disbursed: "₹",
+    intake: "Fall 2025",
+    status: "Pending",
+    pfPaid: "No",
+    disOpted: "Non-Collateral",
+    course: "Others",
+    university: "NIL",
+    country: "USA",
+    prendency: "NIL"
+  },
+  {
+    id: "809",
+    name: "Shaun Suhaas",
+    email: "Shaunsuhaasa.edu2025@gmail.com",
+    bank: "Axis Bank",
+    loanAmount: "₹3800000.0",
+    disbursed: "₹",
+    intake: "Fall 2025",
+    status: "Pending",
+    pfPaid: "No",
+    disOpted: "Non-Collateral",
+    course: "Others",
+    university: "NIL",
+    country: "USA",
+    prendency: "NIL"
+  },
+  {
+    id: "809",
+    name: "Shaun Suhaas",
+    email: "Shaunsuhaasa.edu2025@gmail.com",
+    bank: "Axis Bank",
+    loanAmount: "₹3800000.0",
+    disbursed: "₹",
+    intake: "Fall 2025",
+    status: "Pending",
+    pfPaid: "No",
+    disOpted: "Non-Collateral",
+    course: "Others",
+    university: "NIL",
+    country: "USA",
+    prendency: "NIL"
+  },
+   {
+    id: "809",
+    name: "Shaun Suhaas",
+    email: "Shaunsuhaasa.edu2025@gmail.com",
+    bank: "Axis Bank",
+    loanAmount: "₹3800000.0",
+    disbursed: "₹",
+    intake: "Fall 2025",
+    status: "Pending",
+    pfPaid: "No",
+    disOpted: "Non-Collateral",
+    course: "Others",
+    university: "NIL",
+    country: "USA",
+    prendency: "NIL"
+  },
+  {
+    id: "809",
+    name: "Shaun Suhaas",
+    email: "Shaunsuhaasa.edu2025@gmail.com",
+    bank: "Axis Bank",
+    loanAmount: "₹3800000.0",
+    disbursed: "₹",
+    intake: "Fall 2025",
+    status: "Pending",
+    pfPaid: "No",
+    disOpted: "Non-Collateral",
+    course: "Others",
+    university: "NIL",
+    country: "USA",
+    prendency: "NIL"
+  },
+  {
+    id: "809",
+    name: "Shaun Suhaas",
+    email: "Shaunsuhaasa.edu2025@gmail.com",
+    bank: "Axis Bank",
+    loanAmount: "₹3800000.0",
+    disbursed: "₹",
+    intake: "Fall 2025",
+    status: "Pending",
+    pfPaid: "No",
+    disOpted: "Non-Collateral",
+    course: "Others",
+    university: "NIL",
+    country: "USA",
+    prendency: "NIL"
+  },
+   {
+    id: "809",
+    name: "Shaun Suhaas",
+    email: "Shaunsuhaasa.edu2025@gmail.com",
+    bank: "Axis Bank",
+    loanAmount: "₹3800000.0",
+    disbursed: "₹",
+    intake: "Fall 2025",
+    status: "Pending",
+    pfPaid: "No",
+    disOpted: "Non-Collateral",
+    course: "Others",
+    university: "NIL",
+    country: "USA",
+    prendency: "NIL"
+  },
+  {
+    id: "809",
+    name: "Shaun Suhaas",
+    email: "Shaunsuhaasa.edu2025@gmail.com",
+    bank: "Axis Bank",
+    loanAmount: "₹3800000.0",
+    disbursed: "₹",
+    intake: "Fall 2025",
+    status: "Pending",
+    pfPaid: "No",
+    disOpted: "Non-Collateral",
+    course: "Others",
+    university: "NIL",
+    country: "USA",
+    prendency: "NIL"
+  },
+  {
+    id: "809",
+    name: "Shaun Suhaas",
+    email: "Shaunsuhaasa.edu2025@gmail.com",
+    bank: "Axis Bank",
+    loanAmount: "₹3800000.0",
+    disbursed: "₹",
+    intake: "Fall 2025",
+    status: "Pending",
+    pfPaid: "No",
+    disOpted: "Non-Collateral",
+    course: "Others",
+    university: "NIL",
+    country: "USA",
+    prendency: "NIL"
+  },
+];
+
+// Render data into table
+const tbody = document.getElementById("bankTableBody");
+
+syntheticData.forEach(item => {
+  const tr = document.createElement("tr");
+
+  const statusClass =
+    item.status === "Pending"
+      ? "status-pending"
+      : item.status === "Active"
+      ? "status-active"
+      : "status-completed";
+
+  tr.innerHTML = `
+    <td>${item.id}</td>
+    <td>${item.name}</td>
+    <td>${item.email}</td>
+    <td>${item.bank}</td>
+    <td>${item.loanAmount}</td>
+    <td>${item.disbursed}</td>
+    <td>${item.intake}</td>
+    <td><span class="status-badge ${statusClass}">${item.status}</span></td>
+    <td>${item.pfPaid}</td>
+    <td>${item.disOpted}</td>
+    <td>${item.course}</td>
+    <td>${item.university}</td>
+    <td>${item.country}</td>
+    <td>${item.prendency}</td>
+  `;
+
+  tbody.appendChild(tr);
+});
+</script>
+
+
+<script>
+  // filter tab 
+  const filterTabs = document.querySelectorAll(".filterTab");
+  filterTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tab.classList.toggle("active");
+    });
+  });
+
+  document.querySelector(".applyFilterBtn").addEventListener("click", () => {
+    alert("Filters applied!");
+  });
+
+  document.querySelector(".clearFilterBtn").addEventListener("click", () => {
+    filterTabs.forEach(tab => tab.classList.remove("active"));
+    alert("Filters cleared!");
+  });
+</script>
+
     
   </div>
 
