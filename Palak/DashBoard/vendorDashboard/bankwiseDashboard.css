@@ -291,7 +291,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -307,6 +308,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-right: 2%;
 }
 
 
@@ -331,8 +333,8 @@ body {
   background: #fff;
   color: #424242;
   border: 0.5px solid #287781;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 8px;
+  padding: 9px 28px;
   cursor: pointer;
    font-size: 12px;
   font-weight: 600;
@@ -345,7 +347,7 @@ body {
   right: 0;
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   display: none;
   flex-direction: column;
@@ -361,7 +363,7 @@ body {
   color: #424242;
   text-decoration: none;
   transition: background 0.2s ease;
-  height: 47px;
+  height: 40px;
 }
 .viewAllMenu a:hover {
   background: #59898E33;
@@ -376,6 +378,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  max-width: 98%;
 }
 
 .bankwiseCard {
@@ -387,7 +390,7 @@ body {
   transition: transform 0.3s ease;
   box-shadow: 0px 4px 4px 0px #0000001A;
   border: 0.1px solid #59898E;
-  width: 357px;
+  width: 300px;
   height: 174px;
 }
 
@@ -423,13 +426,18 @@ body {
   .bankwiseCard {
   width: auto;
 }
+ 
 
-  .bankwiseHeader {
-    font-size: 1.25rem;
-  }
+.bankwiseHeader {
+  font-size: 14px;
+  font-weight: 700;
+  color:#424242;
+  margin: 0;
+}
+
   .bankSelectBtn,
   .viewAllBtn {
-    font-size: 0.9rem;
+    font-size: 12px;
     padding: 6px 12px;
   }
 }
