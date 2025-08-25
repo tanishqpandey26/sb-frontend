@@ -69,7 +69,7 @@ function getCurrentPage() {
 
   const pageMap = {
     'vendorDashboard': 'dashboard',
-    'loanDashboard': 'loans',    // ✅ add loanDashboard mapping
+    'loanDashboard': 'loans',    
     'bankwiseDashboard': 'bankwise',
     'studentDetailDashboard': 'student',
     'misDashboard': 'mis',
@@ -224,7 +224,7 @@ window.addEventListener('popstate', () => {
   <section class="bankwiseContainer">
   <!-- Top Label -->
   <div class="bankwiseTopLabel">
-    <h2 class="bankwiseHeader">Bankwise Overview</h2>
+    <h2 class="bankwiseHeader">Bank-Wise Overview</h2>
     <div class="bankwiseActions">
       <!-- Button -->
       <button class="bankSelectBtn">Select Bank</button>
@@ -233,13 +233,21 @@ window.addEventListener('popstate', () => {
       <div class="viewAllDropdown">
         <button class="viewAllBtn">View All ▾</button>
         <div class="viewAllMenu">
-          <a href="#">All Banks</a>
-          <a href="#">Top Banks</a>
-          <a href="#">Recently Added</a>
+          <a href="#" data-bank="View All">View All</a>
+          <a href="#" data-bank="HDFC">HDFC</a>
+          <a href="#" data-bank="Avanse">Avanse</a>
+          <a href="#" data-bank="Incred">Incred</a>
+          <a href="#" data-bank="ICICI">ICICI</a>
+          <a href="#" data-bank="Axis Bank">Axis Bank</a>
+          <a href="#" data-bank="Yes Bank">Yes Bank</a>
+          <a href="#" data-bank="AUXILO">AUXILO</a>
+          <a href="#" data-bank="HSBC">HSBC</a>
+          <a href="#" data-bank="IDFC">IDFC</a>
         </div>
       </div>
     </div>
   </div>
+
 
   <!-- Card Container -->
   <div class="bankwiseCardContainer">
@@ -247,43 +255,43 @@ window.addEventListener('popstate', () => {
     <!-- card 1 -->
     <div class="bankwiseCard">
       <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/docs.png" alt="Bank Logo" class="bankwiseCardImg">
-      <p class="bankwiseCount">120</p>
-      <h3 class="bankwiseCardSubHeader">HDFC Bank</h3>
+      <p class="bankwiseCount">3</p>
+      <h3 class="bankwiseCardSubHeader">Total Applications</h3>
     </div>
 
     <!-- card 2 -->
     <div class="bankwiseCard">
       <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/approved.png" alt="Bank Logo" class="bankwiseCardImg">
-      <p class="bankwiseCount">85</p>
-      <h3 class="bankwiseCardSubHeader">ICICI Bank</h3>
+      <p class="bankwiseCount">0</p>
+      <h3 class="bankwiseCardSubHeader">Approved</h3>
     </div>
 
     <!-- card 3 -->
     <div class="bankwiseCard">
       <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/rejected.png" alt="Bank Logo" class="bankwiseCardImg">
-      <p class="bankwiseCount">200</p>
-      <h3 class="bankwiseCardSubHeader">SBI</h3>
+      <p class="bankwiseCount">0</p>
+      <h3 class="bankwiseCardSubHeader">Rejected</h3>
     </div>
 
-     <!-- card 1 -->
+     <!-- card 4 -->
     <div class="bankwiseCard">
       <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/pending.png" alt="Bank Logo" class="bankwiseCardImg">
-      <p class="bankwiseCount">120</p>
-      <h3 class="bankwiseCardSubHeader">HDFC Bank</h3>
+      <p class="bankwiseCount">3</p>
+      <h3 class="bankwiseCardSubHeader">Pending</h3>
     </div>
 
-    <!-- card 2 -->
+    <!-- card 5 -->
     <div class="bankwiseCard">
       <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/amount.png" alt="Bank Logo" class="bankwiseCardImg">
-      <p class="bankwiseCount">85</p>
-      <h3 class="bankwiseCardSubHeader">ICICI Bank</h3>
+      <p class="bankwiseCount">Rs 0.0</p>
+      <h3 class="bankwiseCardSubHeader">Sanctioned Amount</h3>
     </div>
 
-    <!-- card 3 -->
+    <!-- card 6 -->
     <div class="bankwiseCard">
       <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/amount.png" alt="Bank Logo" class="bankwiseCardImg">
-      <p class="bankwiseCount">200</p>
-      <h3 class="bankwiseCardSubHeader">SBI</h3>
+      <p class="bankwiseCount">Rs 0.0</p>
+      <h3 class="bankwiseCardSubHeader">Disbursed amount</h3>
     </div>
 
   </div>
@@ -291,23 +299,30 @@ window.addEventListener('popstate', () => {
 
 
 <script>
-
   const viewAllDropdown = document.querySelector(".viewAllDropdown");
   const viewAllBtn = document.querySelector(".viewAllBtn");
+  const menuLinks = document.querySelectorAll(".viewAllMenu a");
 
+  // toggle dropdown
   viewAllBtn.addEventListener("click", () => {
     viewAllDropdown.classList.toggle("open");
   });
- 
+
+  // close dropdown 
   document.addEventListener("click", (e) => {
     if (!viewAllDropdown.contains(e.target)) {
       viewAllDropdown.classList.remove("open");
     }
   });
 
-  document.querySelector(".bankSelectBtn").addEventListener("click", () => {
-    alert("Select Bank button clicked!");
-    // Add modal or redirect logic here
+  // update btn text 
+  menuLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault(); 
+      const selectedBank = link.getAttribute("data-bank");
+      viewAllBtn.textContent = selectedBank + " ▾"; 
+      viewAllDropdown.classList.remove("open"); 
+    });
   });
 </script>
 
