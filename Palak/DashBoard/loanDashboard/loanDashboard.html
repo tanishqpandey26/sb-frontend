@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Befikar</title>
+    <link rel="stylesheet" href="loanDashboard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://sets.hugeicons.com/dashboard.css" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <!-- sidebar + container -->
+
+  <div class="dashboardContainer">
+
+  <!-- sidebar -->
+
+  <div class="sideBar" id="sideBar">
+  <div class="sideBarContent">
+    <img
+      class="sideBarImg"
+      src="../../images/dashboard/sideBar/study-befikar1.png"
+      alt="Profile"
+    />
+
+    <div class="sideBarNavs">
+      <a href="/Palak/DashBoard/homeDashboard/dashboard.html" data-page="dashboard">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M13.5 8.183V4.817q0-.357.234-.587t.58-.23h4.88q.347 0 .576.23t.23.587v3.366q0 .358-.234.587q-.234.23-.58.23h-4.88q-.346 0-.576-.23t-.23-.587M4 11.2V4.8q0-.34.234-.57t.58-.23h4.88q.347 0 .576.23t.23.57v6.4q0 .34-.234.57t-.58.23h-4.88q-.346 0-.576-.23T4 11.2m9.5 8v-6.4q0-.34.234-.57t.58-.23h4.88q.347 0 .576.23t.23.57v6.4q0 .34-.234.57t-.58.23h-4.88q-.346 0-.576-.23t-.23-.57M4 19.183v-3.366q0-.357.234-.587t.58-.23h4.88q.347 0 .576.23t.23.587v3.366q0 .358-.234.587q-.234.23-.58.23h-4.88q-.346 0-.576-.23T4 19.183M5 11h4.5V5H5zm9.5 8H19v-6h-4.5zm0-11H19V5h-4.5zM5 19h4.5v-3H5zm4.5-3"/>
+        </svg> 
+        Dashboard
+      </a>
+
+      <a href="/Palak/DashBoard/testPreparation/testPreparation.html" data-page="test-preparation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M6.5 14.5h8.289l1-1H6.5zm0-4h5v-1h-5zM4 7v10h8.289l-1 1H3V6h18v3.289h-1V7zm17.554 4.954q.106.105.106.236t-.106.237l-.785.785l-.788-.789l.784-.785q.106-.105.237-.105t.237.105zm-8.246 7.969v-.788l6.111-6.112l.789.789l-6.112 6.111zM4 7v10z"/>
+        </svg> 
+        Test Preparation
+      </a>
+
+      <a href="/Palak/DashBoard/admissionCounselling/admissionCounselling.html" data-page="admission-counselling">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M3 20.077V3h18v14H6.077zM5.65 16H20V4H4v13.644zM4 16V4zm2.5-2.5h7v-1h-7zm0-3h11v-1h-11zm0-3h11v-1h-11z"/>
+        </svg>
+        Admission Counselling
+      </a>
+
+      <a href="/Palak/DashBoard/loanDashboard/loanDashboard.html" data-page="loans">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M8.63 20q-1.928 0-3.279-1.351T4 15.363q0-.808.277-1.574t.8-1.395l3.512-4.217L7.1 5.162q-.211-.404.018-.783q.23-.379.69-.379h8.384q.46 0 .69.379t.018.783l-1.489 3.015l3.512 4.217q.523.629.8 1.395q.277.765.277 1.574q0 1.935-1.35 3.286T15.37 20zm3.367-4.52q-.668 0-1.14-.475t-.472-1.143t.475-1.14t1.144-.472t1.14.476t.472 1.143t-.476 1.14t-1.143.472M9.51 7.75h5L15.875 5h-7.75zM8.63 19h6.74q1.521 0 2.576-1.064Q19 16.87 19 15.365q0-.634-.213-1.235t-.625-1.09l-3.58-4.29h-5.14l-3.584 4.285q-.414.488-.636 1.095Q5 14.736 5 15.369q0 1.502 1.065 2.567Q7.129 19 8.63 19"/>
+        </svg>
+        Loans
+      </a>
+    </div>
+  </div>
+</div>
+
+
+ <script>
+function getCurrentPage() {
+ 
+    const cleanPath = window.location.pathname;
+    const filename = cleanPath.split('/').pop().split('.')[0];
+    
+    const pageMap = {
+        'dashboard': 'dashboard',
+        'testPreparation': 'test-preparation',
+        'admissionCounselling': 'admission-counselling',
+        'loanDashboard': 'loans'
+    };
+    
+    return pageMap[filename] || 'dashboard'; 
+}
+
+
+function setActiveNav() {
+    const currentPage = getCurrentPage();
+    const navLinks = document.querySelectorAll('.sideBarNavs a');
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.dataset.page === currentPage) {
+            link.classList.add('active');
+        }
+    });
+}
+
+function cleanURL() {
+    if (window.location.hash) {
+        history.replaceState(null, null, window.location.pathname + window.location.search);
+    }
+}
+
+
+function handleNavigation() {
+    const navLinks = document.querySelectorAll('.sideBarNavs a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            cleanURL();
+            
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+            
+            
+        });
+    });
+}
+
+
+function preventHashEvents() {
+   
+    window.addEventListener('hashchange', (e) => {
+        e.preventDefault();
+        cleanURL();
+    });
+    
+    setInterval(cleanURL, 1000);
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    cleanURL();
+    
+    setActiveNav();
+    
+    handleNavigation();
+  
+    preventHashEvents();
+});
+
+document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) {
+        cleanURL();
+        setActiveNav();
+    }
+});
+
+window.addEventListener('focus', () => {
+    cleanURL();
+    setActiveNav();
+});
+
+window.addEventListener('popstate', () => {
+    cleanURL();
+    setActiveNav();
+});
+</script>
+
+
+  <!-- mobile topbar -->
+ <div class="mobileTopBar">
+  
+  <img src="../../images/dashboard/sideBar/study-befikar1.png" alt="Profile">
+  
+  <div class="mobileImgBtnWrapper">
+
+  <div class="userDropdown">
+    <img src="../../images/dashboard/homeDashboard/userImg.jpg" alt="User" class="userImg" />
+    <div class="dropdownMenu">
+      <a href="#">Dashboard</a>
+        <a href="#">Basic Info</a>
+        <a href="#">Academic Info</a>
+        <a href="#">Test Score</a>
+        <a href="#">Work Experience</a>
+        <a href="#">Parents/Guardians</a>
+        <a href="#">Billings</a>
+        <a href="#">Settings</a>
+        <a href="#">Help & Supports</a>
+        <a href="#">Logout</a>
+    </div>
+  </div>
+
+  <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+
+  </div>
+
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const userDropdowns = document.querySelectorAll(".userDropdown");
+
+    userDropdowns.forEach(dropdown => {
+      const userImg = dropdown.querySelector(".userImg");
+
+      userImg.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+      });
+    });
+  });
+</script>
+
+
+
+  <!-- dashboard elements -->
+  <div class="dashboardElements">
+
+    <header class="dashboardHeader">
+  <div class="dashboardHeader-right">
+    <a href="#" class="contactUs">Contact Us</a>
+    <div class="userDropdown">
+      <img src="../../images/dashboard/homeDashboard/userImg.jpg" alt="User" class="userImg" />
+      <div class="dropdownMenu">
+        <a href="#">Dashboard</a>
+        <a href="#">Basic Info</a>
+        <a href="#">Academic Info</a>
+        <a href="#">Test Score</a>
+        <a href="#">Work Experience</a>
+        <a href="#">Parents/Guardians</a>
+        <a href="#">Billings</a>
+        <a href="#">Settings</a>
+        <a href="#">Help & Supports</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </div>
+</header>
+   
+  <div class="tabsContainer">
+
+  <!-- tab bar -->
+  <div class="tabBar">
+    <button class="tabBtn active" data-target="loanDashboardContainer">Loan Dashboard</button>
+    <button class="tabBtn" data-target="financialContainer">Financial Documents</button>
+  </div>
+
+  <!-- tab contents -->
+
+
+  <!-- loanDashboardContainer -->
+  <div class="loanDashboardContainer tabContent active">
+    <hr class="tabBarDivider" />
+
+   
+  <div class="loanDashboardTopSection">
+  <h2 class="loanDashboardHeader">Your Loan Dashboard</h2>
+  <p class="loanDashboardSubHeader">Find all the details about the applicants you send here</p>
+
+  <div class="loanTableWrapper">
+    <table class="loanTable">
+      <thead>
+        <tr>
+          <th class="bankName">BANK NAME</th>
+          <th class="interestRate">INTEREST RATE</th>
+          <th class="applicationStatus">APPLICATION STATUS</th>
+          <th class="loanAmount">LOAN AMOUNT</th>
+          <th class="loanCurrency">CURRENCY</th>
+          <th class="sanctionedStatus">SANCTION STATUS</th>
+          <th class="documentSection">DOCUMENTS SECTION</th>
+        </tr>
+      </thead>
+
+      <tbody id="loanTableBody">
+      </tbody>
+
+    </table>
+    <p id="noDataMsg" class="noDataMsg">No banks available</p>
+    
+  </div>
+
+  <div class="dollarOptions">
+    <button class="dollarOptionsBtn">Click Here for Dollar Options →</button>
+  </div>
+
+
+  <section class="exploreBankSection">
+  
+  <h2 class="exploreBankHeader">Explore More Indian Banks
+</h2>
+  <p class="exploreBankSubHeader">These are Indian banks with the best options for savings, loans, and other financial services across the country.
+</p>
+
+
+  <!--  nbfc -->
+    <div class="exploreNbfcSection">
+
+      <h2 class="exploreNbfcHeader">NBFC (Non-Banking Financial Company)</h2>
+      
+  <div class="exploreNbfcContainer">
+
+    
+
+    <div class="exploreNbfcCard">
+      <img src="../../images/dashboard/loanDashboard/auxilo.png" alt="auxilo" class="exploreNbfcImg">
+      <h3 class="exploreNbfcSubHeader">Flexible educational loans tailored for students.</h3>
+      <p class="exploreNbfcInterestRate">Interest Rate: Starting from 9.5%</p>
+      <div class="exploreNbfcBtnContainer">
+        <button class="exploreNbfcKnowMoreBtn">Know More</button>
+        <button class="exploreNbfcApplyNowBtn">Apply Now</button>
+      </div>
+    </div>
+
+
+      <div class="exploreNbfcCard">
+      <img src="../../images/dashboard/loanDashboard/avanse.png" alt="avanse" class="exploreNbfcImg">
+      <h3 class="exploreNbfcSubHeader">Quick approval with minimal documentation.</h3>
+      <p class="exploreNbfcInterestRate">Interest Rate: Starting from 10%</p>
+      <div class="exploreNbfcBtnContainer">
+        <button class="exploreNbfcKnowMoreBtn">Know More</button>
+        <button class="exploreNbfcApplyNowBtn">Apply Now</button>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+
+
+  <!--  pvt bank -->
+    <div class="explorePvtBankSection">
+
+      <h2 class="explorePvtBankHeader">Private Banks</h2>
+
+  <div class="explorePvtBankContainer">
+
+    <div class="explorePvtBankCard">
+      <img src="../../images/dashboard/loanDashboard/icici.png" alt="Private Bank Logo" class="explorePvtBankImg">
+      <h3 class="explorePvtBankSubHeader">Flexible educational loans tailored for students.</h3>
+      <p class="explorePvtBankInterestRate">Interest Rate: Starting from 9.5%</p>
+      <div class="explorePvtBankBtnContainer">
+        <button class="explorePvtBankKnowMoreBtn">Know More</button>
+        <button class="explorePvtBankApplyNowBtn">Apply Now</button>
+      </div>
+    </div>
+
+
+     <div class="explorePvtBankCard">
+      <img src="../../images/dashboard/loanDashboard/axis.png" alt="Private Bank Logo" class="explorePvtBankImg">
+      <h3 class="explorePvtBankSubHeader">Flexible educational loans tailored for students.</h3>
+      <p class="explorePvtBankInterestRate">Interest Rate: Starting from 9.5%</p>
+      <div class="explorePvtBankBtnContainer">
+        <button class="explorePvtBankKnowMoreBtn">Know More</button>
+        <button class="explorePvtBankApplyNowBtn">Apply Now</button>
+      </div>
+    </div>
+
+
+  </div>
+
+   </div>
+
+
+</section>
+
+
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const loanTableBody = document.getElementById("loanTableBody");
+  const noDataMsg = document.getElementById("noDataMsg");
+
+  // synthetic data
+  const loans = [
+    {
+      bankName: "HSBC",
+      interestRate: "Up to 10%",
+      applicationStatus: "pending",
+      loanAmount: "5,000,000.0",
+      loanCurrency: "INR",
+      sanctionedStatus: "pending"
+    },
+     {
+      bankName: "Axis Bank",
+      interestRate: "Up to 10%",
+      applicationStatus: "pending",
+      loanAmount: "5,000,000.0",
+      loanCurrency: "INR",
+      sanctionedStatus: "pending"
+    },
+    {
+      bankName: "ICICI",
+      interestRate: "Up to 10%",
+      applicationStatus: "pending",
+      loanAmount: "5,000,000.0",
+      loanCurrency: "INR",
+      sanctionedStatus: "pending"
+    },
+  ];
+
+  // check if data exists
+  if (loans.length === 0) {
+    noDataMsg.style.display = "block";
+  } else {
+    noDataMsg.style.display = "none";
+
+    loans.forEach(loan => {
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+        <td class="bankName">${loan.bankName}</td>
+        <td class="interestRate">${loan.interestRate}</td>
+        <td class="applicationStatus"><span class="badge ${loan.applicationStatus}">${loan.applicationStatus}</span></td>
+        <td class="loanAmount">${loan.loanAmount}</td>
+        <td class="loanCurrency">${loan.loanCurrency}</td>
+        <td class="sanctionedStatus"><span class="badge ${loan.sanctionedStatus}">${loan.sanctionedStatus}</span></td>
+        <td class="documentSection"><button class="uploadBtn">Upload Docs</button></td>
+      `;
+
+      loanTableBody.appendChild(row);
+    });
+  }
+});
+
+</script>
+
+  </div>
+
+
+  <!-- financialContainer -->
+
+  <div class="financialContainer tabContent">
+    <hr class="tabBarDivider" />
+  </div>
+
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll(".tabBtn");
+  const tabContents = document.querySelectorAll(".tabContent");
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // remove active classes
+      tabButtons.forEach(b => b.classList.remove("active"));
+      tabContents.forEach(c => c.classList.remove("active"));
+
+      // add active to clicked
+      btn.classList.add("active");
+      const targetId = btn.getAttribute("data-target");
+      document.querySelector(`.${targetId}`).classList.add("active");
+    });
+  });
+});
+
+</script>
+
+
+  </div>
+  
+</div>
+
+
+ <script>
+        
+// highlight nav link
+  const linkColor = document.querySelectorAll('.nav__link');
+  function colorLink() {
+    linkColor.forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+  }
+  linkColor.forEach(l => l.addEventListener('click', colorLink));
+
+  // dropdown toggle 
+  document.addEventListener("DOMContentLoaded", function () {
+    const userCards = document.querySelectorAll(".userCard");
+
+    userCards.forEach(card => {
+      card.addEventListener("click", function (e) {
+        // stop toggle 
+        if (e.target.tagName === "BUTTON") {
+          e.stopPropagation();
+          return;
+        }
+
+        const details = this.querySelector(".details");
+        const dropdown = this.querySelector(".dropdown");
+        const isOpen = details.style.display === "block";
+
+        // close other cards
+        document.querySelectorAll(".userCard .details").forEach(d => {
+          d.style.display = "none";
+        });
+        document.querySelectorAll(".userCard .dropdown").forEach(dr => {
+          dr.textContent = "▼";
+        });
+
+        // toggle current
+        if (!isOpen) {
+          details.style.display = "block";
+          dropdown.textContent = "▲";
+        } else {
+          details.style.display = "none";
+          dropdown.textContent = "▼";
+        }
+      });
+
+      // tab btns
+      const tabButtons = card.querySelectorAll(".details .buttons button");
+      tabButtons.forEach(btn => {
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation(); 
+
+          // remove active only from buttons in THIS card
+          tabButtons.forEach(b => b.classList.remove("active"));
+
+          // add active to clicked button
+          this.classList.add("active");
+        });
+      });
+    });
+  });
+
+  // populate table
+  document.addEventListener('DOMContentLoaded', () => {
+    const applications = JSON.parse(localStorage.getItem('applications')) || [];
+    const tableBody = document.querySelector('.userCard .details tbody');
+    const applicationCount = document.querySelector('.userCard .application-count');
+
+    if (tableBody) {
+      tableBody.innerHTML = '';
+      applications.forEach(application => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${application.name}</td>
+          <td>${application.date}</td>
+          <td>
+            <button class="withdraw-btn" onclick="sendCancelRequest(this)">Send Request to Cancel</button>
+          </td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+
+    if (applicationCount) {
+      applicationCount.textContent = applications.length;
+    }
+  }
+);
+
+
+// function to handle cancel requests
+function sendCancelRequest(button) {
+  const row = button.closest('tr');
+  const name = row.children[0].textContent;
+
+  let applications = JSON.parse(localStorage.getItem('applications')) || [];
+  applications = applications.filter(app => app.name !== name);
+  localStorage.setItem('applications', JSON.stringify(applications));
+
+  // remove the row from the table
+  row.remove();
+
+  // update application count
+  document.querySelector('.card .application-count').textContent = applications.length;
+}
+
+// function to count visible applications and update the counter
+function updateApplicationCount() {
+  const visibleRows = document.querySelectorAll('.details table tbody tr:not([style="display: none;"])').length;
+  const countDisplay = document.querySelector('.card .application-count'); 
+  countDisplay.textContent = visibleRows; 
+}
+
+// function to filter the table based on button clicks
+function filterTable(category) {
+  const rows = document.querySelectorAll('.details table tbody tr');
+  rows.forEach(row => {
+      if (row.classList.contains(category)) {
+          row.style.display = ''; // show row
+      } else {
+          row.style.display = 'none'; // hide row
+      }
+  });
+
+  // after filtering, update the application count
+  updateApplicationCount();
+}
+
+// function to handle request cancel action
+function sendCancelRequest(button) {
+  const confirmation = confirm("Are you sure you want to send the request to cancel?");
+  if (confirmation) {
+    // change button state
+    button.textContent = 'Request Sent';
+    button.disabled = true;
+    button.style.backgroundColor = '#28a745';
+    button.style.cursor = 'not-allowed';
+
+    // prepare the message details
+    const row = button.closest('tr');
+    const name = row.children[0].textContent;
+    const date = row.children[1].textContent;
+
+    const requestMessage = {
+      name: name,
+      date: date,
+      message: `Cancellation request for ${name} on ${date} has been sent.`,
+      timestamp: new Date().toISOString()
+    };
+
+    // save to localStorage
+    let messages = JSON.parse(localStorage.getItem('messages')) || [];
+    messages.push(requestMessage);
+    localStorage.setItem('messages', JSON.stringify(messages));
+
+    // update notification count
+    updateNotificationCount();
+
+    alert('Your request has been sent successfully!');
+  }
+}
+
+function updateNotificationCount() {
+  const messages = JSON.parse(localStorage.getItem('messages')) || [];
+  const notificationCountElement = document.getElementById('notificationCount');
+  notificationCountElement.textContent = messages.length;
+}
+
+function showNotifications() {
+  const messages = JSON.parse(localStorage.getItem('messages')) || [];
+  let messageList = "Notifications:\n\n";
+
+  if (messages.length === 0) {
+    messageList += "No notifications yet.";
+  } else {
+    messages.forEach((msg, index) => {
+      messageList += `${index + 1}. ${msg.message}\nSent at: ${new Date(msg.timestamp).toLocaleString()}\n\n`;
+    });
+  }
+
+  alert(messageList);
+}
+
+// initialize notification count on page load
+document.addEventListener('DOMContentLoaded', updateNotificationCount);
+
+// function to make payment
+function makePayment() {
+  alert('Payment initiated.');
+}
+
+// function to view payment history
+function viewHistory() {
+  alert('Viewing payment history.');
+}
+
+// function to edit profile
+function editProfile() {
+  alert('Editing profile.');
+}
+
+// function to clear notifications
+function clearNotifications() {
+  alert('Notifications cleared.');
+}
+
+// function to change password
+function changePassword() {
+  alert('Changing password.');
+}
+
+// initialize table with Test Prep Applications visible by default
+document.addEventListener('DOMContentLoaded', () => {
+  updateApplicationCount(); // Initialize the application count
+});
+
+ // initialize data with zero counts
+ document.addEventListener('DOMContentLoaded', () => {
+  const initialData = {
+      applications: [],
+      offerPayments: [],
+      banksAppliedTo: [],
+      notifications: []
+  };
+
+  // Set initial data if not present in localStorage
+  if (!localStorage.getItem('applications')) {
+      localStorage.setItem('applications', JSON.stringify(initialData.applications));
+  }
+  if (!localStorage.getItem('offerPayments')) {
+      localStorage.setItem('offerPayments', JSON.stringify(initialData.offerPayments));
+  }
+  if (!localStorage.getItem('banksAppliedTo')) {
+      localStorage.setItem('banksAppliedTo', JSON.stringify(initialData.banksAppliedTo));
+  }
+  if (!localStorage.getItem('notifications')) {
+      localStorage.setItem('notifications', JSON.stringify(initialData.notifications));
+  }
+
+  // Populate counts
+  updateCounts();
+});
+
+// Function to update the counts for all cards
+function updateCounts() {
+  // Get data from localStorage
+  const applications = JSON.parse(localStorage.getItem('applications')) || [];
+  const offerPayments = JSON.parse(localStorage.getItem('offerPayments')) || [];
+  const banksAppliedTo = JSON.parse(localStorage.getItem('banksAppliedTo')) || [];
+  const notifications = JSON.parse(localStorage.getItem('notifications')) || [];
+
+  // Update the count for each card
+  document.querySelector('.application-count').textContent = applications.length;
+  document.querySelector('.offer-count').textContent = offerPayments.length;
+  document.querySelector('.payment-history-count').textContent = banksAppliedTo.length;
+  document.querySelector('.notifications-count').textContent = notifications.length;
+}
+// ENQUIRE NOW 
+document.addEventListener('DOMContentLoaded', () => {
+  const enquiredList = document.getElementById('enquired-list');
+
+  // Fetch vendors from localStorage
+  const enquiredVendors = JSON.parse(localStorage.getItem('enquiredVendors')) || [];
+
+  // Populate Enquired Section
+  enquiredVendors.forEach(vendor => {
+      const card = document.createElement('div');
+      card.className = 'enquired-vendor-card';
+      card.innerHTML = `
+          <h3>${vendor.name}</h3>
+          <p><strong>State:</strong> ${vendor.state}</p>
+          <p><strong>City:</strong> ${vendor.city}</p>
+          <p><strong>Exam:</strong> ${vendor.exam}</p>
+          <p><strong>Counselor:</strong> ${vendor.counselor}</p>
+          <button class="view-more-btn" onclick="viewMore(${vendor.id})">View More</button>
+          <button class="book-seat-btn" onclick="bookSeat(${vendor.id})">Book a Seat</button>
+      `;
+      enquiredList.appendChild(card);
+  });
+});
+
+// Functions for button actions
+function viewMore(id) {
+  alert(`View more details for Vendor ID: ${id}`);
+  // Redirect or show more details
+}
+
+function bookSeat(id) {
+  alert(`Booking a seat for Vendor ID: ${id}`);
+  // Implement booking logic here
+}
+    </script>
+
+    
+<script>
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const sideBar = document.getElementById("sideBar");
+
+mobileMenuBtn.addEventListener("click", () => {
+  sideBar.classList.toggle("active");
+});
+</script>
+
+
+
+<!-- footer -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- column 1: Logo + About + Social Icons -->
+            <div class="footer-col footer-about">
+                <img src="../../images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="../../images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="../../images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="../../images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="../../images/Home/footer/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- Column 2: Services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="#">Education Loans</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 3: Study Destinations -->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="#">USA</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">UK</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 4: Contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>info@studybefikar.com</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+
+
+</body>
+
+</html>

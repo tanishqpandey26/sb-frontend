@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyBefikar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+    rel="stylesheet">
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 32px;
+    /* Increased height */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* subtle shadow */
+    z-index: 1000;
+}
+
+.logo {
+    height: 70px;
+}
+
+.navbar-right {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar-right li {
+    position: relative;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #424242;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-style: bold;
+}
+
+.navbar-right a.active {
+  background: #59898E33;
+  color: #287781 !important;
+  border-radius: 6px;
+  padding: 12px 18px;
+}
+
+.dropdown.open .dropdown-content {
+  display: block !important;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    /* aligned right below the navbar */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    min-width: 240px;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 12px 18px;
+    color: #424242;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+    background-color: #59898E33;
+    /* 20% transparent highlight on hover */
+    color: #287781;
+    /* Optional: highlight text color on hover */
+}
+
+.contact-btn {
+    background-color: #287781;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    background-color: #1d5e65;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+    .navbar-right {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+}
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 110px 0% 0px 4%;
+    gap: 40px;
+    background-color: #EFFCFE;
+    flex-wrap: wrap;
+}
+
+.hero-right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    /* aligns image to right edge */
+}
+
+.hero-img {
+    width: 100%;
+    /* big but not full screen */
+    max-width: 650px;
+    /* prevents it from becoming too huge */
+    height: auto;
+    object-fit: contain;
+}
+.hero-left {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 24px;
+    /* Add space only between text and image */
+}
+
+.trusted-card {
+    background-color: #e0f4f1;
+    /* Light #287781 background */
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.trusted-card .star {
+    color: #287781;
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.trusted-card .trusted-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #287781;
+    line-height: 100%;
+}
+
+.hero-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 78px;
+    line-height: 100%;
+    letter-spacing: 0;
+    margin-bottom: 24px;
+}
+
+.heading-line1 {
+    color: #424242;
+}
+
+.heading-line2 {
+    color: #287781;
+}
+
+.hero-subtext {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    color: #424242;
+    max-width: 600px;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Book Consultation – bordered with icon */
+.btn-bordered {
+    width: 220px;
+    height: 45px;
+    padding: 10px 15px;
+    color: #287781;
+    border: 1px solid #59898E;
+    background-color: transparent;
+}
+
+.video-icon {
+    font-size: 16px;
+    line-height: 1;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 120px 24px 60px;
+    }
+
+    .hero-heading {
+        font-size: 52px;
+    }
+
+    .hero-subtext {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-img {
+        width: calc(100vw - 50%);
+        /* cover only right half fully */
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+
+
+/* Section container */
+.why-section {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    max-width: 1320px;
+    /* fits 3 cards + gaps perfectly */
+    margin: 0 auto;
+}
+
+/* Main heading */
+.why-section h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #424242;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+
+/* Subtitle */
+.why-section p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    color: #424242;
+    line-height: 100%;
+    margin-bottom: 50px;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: #F8F8F8;
+    border-radius: 20px;
+    padding: 30px 24px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    width: 423px;
+    height: 417px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for lift & shadow */
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    /* slight lift */
+    box-shadow: 0 8px 24px rgba(40, 119, 129, 0.3);
+    /* soft glow */
+    background-color: #f0fdfc;
+    /* lightened background */
+}
+
+@media (max-width: 1024px) {
+    .info-card {
+        width: 48%;
+        /* show 2 cards per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        width: 100%;
+        /* single column on mobile */
+    }
+}
+
+.icon-box {
+    width: 63px;
+    height: 63px;
+    background-color: #E0F4F1;
+    border-radius: 9px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    flex-shrink: 0;
+}
+
+
+/* Heading inside card */
+.info-card h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #424242;
+    line-height: 31px;
+}
+
+/* Paragraph inside card */
+.info-card p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #7C7C7C;
+    flex-grow: 1;
+}
+
+/* Learn more button */
+.learn-btn {
+    display: inline-block;
+    width: 100%;
+    height: 47px;
+    background-color: #287781;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.learn-btn:hover {
+    background-color: #195057;
+}
+
+
+
+.process-section {
+    padding: 20px 3%;
+    background-color: #fff;
+}
+
+.process-heading h2 {
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #424242;
+    margin-bottom: 10px;
+}
+
+.process-heading p {
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #424242;
+    margin-bottom: 60px;
+}
+
+.process-step {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+.process-step .process-text {
+    width: 45%;
+    padding: 20px;
+}
+
+.process-step .process-image {
+    width: 55%;
+    padding: 20px;
+}
+
+.process-step .process-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 39px;
+}
+
+/* Zig-zag layout using :nth-of-type() */
+.process-step:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+/* Styling for text */
+.process-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background-color: #287781;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.process-title hr {
+    flex-grow: 1;
+    height: 1px;
+    border: none;
+    background-color: #ccc;
+}
+
+.tick-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.process-text h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #424242;
+    margin-bottom: 12px;
+    line-height: 31px;
+}
+
+.process-text p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #424242;
+    margin-bottom: 16px;
+}
+
+.learn-more {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #287781;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .process-step {
+        flex-direction: column !important;
+    }
+
+    .process-text,
+    .process-image {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .process-heading h2 {
+        font-size: 24px;
+    }
+
+    .process-heading p {
+        font-size: 18px;
+    }
+}
+
+
+
+.guidance-section {
+    background-color: #fff;
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.guidance-heading h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #424242;
+    margin-bottom: 10px;
+}
+
+.guidance-heading p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #424242;
+    margin-bottom: 50px;
+}
+
+.guidance-form {
+    background-color: #F8F8F8;
+    max-width: 1077px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 39px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    flex: 1 1 48%;
+    min-width: 300px;
+}
+
+label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #424242;
+    margin-bottom: 8px;
+}
+
+.required {
+    color: red;
+    font-size: 20px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    padding: 22px 26px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    resize: none;
+}
+
+textarea {
+    height: 241px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 60px;
+    background-color: #287781;
+    color: white;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #1d5e65;
+}
+
+.error-msg {
+    color: red;
+    font-size: 14px;
+    display: none;
+    margin-top: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 18px;
+    }
+
+    .guidance-heading p {
+        font-size: 18px;
+    }
+}
+
+
+
+
+.footer {
+    background-color: #092A2E;
+    padding: 60px 2% 30px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1320px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-about {
+    flex: 2.5;
+    max-width: none;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+
+.footer-about p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-col h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 22px;
+    color: #ffffff;
+}
+
+.footer-col p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-col.contact-col {
+    min-width: 300px;
+    max-width: 350px;
+}
+
+.footer-col:not(.footer-about) {
+    margin-left: -5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Divider line */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ffffff44;
+    margin: 40px auto 20px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Bottom copyright text */
+.footer-bottom {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+.footer-right-columns {
+    display: flex;
+    gap: 40px;
+    margin-left: 30px;
+    /* You can increase this to shift more */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-right-columns {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .footer-col {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.footer-col ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 100%;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #4ED0E1;
+    /* Optional: subtle hover color */
+}
+
+/* ================= NAVBAR: MOBILE MENU =================== */
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        padding: 16px 24px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        color: #424242;
+    }
+
+    .navbar-right {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin-top: 10px;
+        display: none;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .navbar-right.active {
+        display: flex;
+    }
+}
+
+
+/* ================= NAVBAR: END =================== */
+
+    </style>
+</head>
+
+<body>
+  <!--NavBar Section-->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo" class="logo">
+    </div>
+    <ul class="navbar-right" id="mobileNav">
+
+      <li class="dropdown">
+        <a href="#">Countries</a>
+        <ul class="dropdown-content">
+          <li><a href="usa.html">USA</a></li>
+          <li><a href="#">UK</a></li>
+          <li><a href="#">Canada</a></li>
+          <li><a href="#">Germany</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Loan</a>
+        <ul class="dropdown-content">
+          <li><a href="check-eligibility.html">Check Eligibility</a></li>
+          <li><a href="available-banks.html">Available Banks</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
+        <ul class="dropdown-content">
+          <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+          <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
+          <li><a href="#">Application Deadline</a></li>
+          <li><a href="#">University Finder</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Test Preparation</a>
+        <ul class="dropdown-content">
+          <li><a href="#">Test Prep Services</a></li>
+          <li><a href="#">Prepare for Exam</a></li>
+          <li><a href="#">Take a Mock Test</a></li>
+          <li><a href="#">Exam Deadlines</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">All Exams</a>
+        <ul class="dropdown-content">
+          <li><a href="#">SAT</a></li>
+          <li><a href="#">GMAT</a></li>
+          <li><a href="#">GRE</a></li>
+          <li><a href="#">IELTS</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Services</a>
+        <ul class="dropdown-content">
+          <li><a href="#">All Services</a></li>
+          <li><a href="#">Visa Assistance</a></li>
+          <li><a href="#">Profile Evaluation</a></li>
+          <li><a href="#">Apply to University</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#" class="dropdown">Notice Board</a></li>
+      <li><a href="#" class="dropdown">About Us</a></li>
+      <li><a href="#" class="dropdown">Contact Us</a></li>
+
+      <li><a href="signup.html" class="contact-btn">Login</a></li>
+    </ul>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+  </nav>
+
+  <script>
+    const btn = document.getElementById('mobileMenuBtn');
+    const nav = document.getElementById('mobileNav');
+
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+
+  <script>
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+      let wasClicked = false;
+      const link = dropdown.querySelector('a');
+
+      // Toggle on click
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const isOpen = dropdown.classList.contains('open');
+
+        // Close all dropdowns
+        dropdowns.forEach(d => {
+          d.classList.remove('open');
+          d.dataset.clicked = "false";
+        });
+
+        if (!isOpen) {
+          dropdown.classList.add('open');
+          dropdown.dataset.clicked = "true";
+        }
+      });
+
+      // Hover to open (desktop only)
+      dropdown.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+          dropdown.classList.add('open');
+        }
+      });
+
+      dropdown.addEventListener('mouseleave', () => {
+        if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+          dropdown.classList.remove('open');
+        }
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      dropdowns.forEach(dropdown => {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('open');
+          dropdown.dataset.clicked = "false";
+        }
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+      const links = document.querySelectorAll(".navbar-right a");
+
+      links.forEach(link => {
+        const linkPath = link.getAttribute("href").split("/").pop();
+
+        if (linkPath === currentPath) {
+          // Highlight the clicked link
+          link.classList.add("active");
+
+          // Also highlight parent if inside dropdown
+          const parentDropdown = link.closest(".dropdown");
+          if (parentDropdown) {
+            const parentLink = parentDropdown.querySelector(":scope > a");
+            if (parentLink) parentLink.classList.add("active");
+          }
+        }
+      });
+    });
+  </script>
+
+
+  <!--Hero Section-->
+
+  <section class="hero">
+    <div class="hero-left">
+      <div class="trusted-card">
+        <span class="star">★</span>
+        <span class="trusted-text">Trusted by 10,000+ Students</span>
+      </div>
+
+      <h1 class="hero-heading">
+        <span class="heading-line1">Admission</span><br>
+        <span class="heading-line2">Counselling</span>
+      </h1>
+
+      <p class="hero-subtext">
+        StudyBefikar: A unique approach to admission counselling that transforms your dreams into reality
+      </p>
+
+      <div class="hero-buttons">
+        <a href="signup.html" class="btn btn-bordered">
+          <img class="video-icon" src="/Palak/Admission_counselling/Admission_Counselling_Images/cam-recorder.png" width="24" height="24" viewBox="0 0 24 24">
+          Book Consultation
+        </a>
+      </div>
+
+    </div>
+
+    <div class="hero-right">
+      <img src="/Palak/Admission_counselling/Admission_Counselling_Images/image.png" alt="Hero Image" class="hero-img" />
+    </div>
+  </section>
+
+
+
+  <section class="why-section">
+    <div class="why-heading">
+      <h2>"Why Studybefikar Is Your Perfect Counselling Partner?"</h2>
+      <p>Because your future deserves the best!</p>
+    </div>
+
+    <div class="card-grid">
+      <!-- Card 1 -->
+      <div class="info-card">
+        <div class="icon-box" style="background-image: url('/Palak/Admission_counselling/Admission_Counselling_Images/2.png');"></div>
+        <h3>Choose from a Wide Range of Counsellors</h3>
+        <p>
+          Access our network of expert counsellors specializing in different countries, universities, and courses. Get
+          personalized guidance tailored to your academic goals.
+        </p>
+        <a href="#" class="learn-btn">Learn more</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="info-card">
+        <div class="icon-box" style="background-image: url('/Palak/Admission_counselling/Admission_Counselling_Images/3.png');"></div>
+        <h3>Identify the Right Course, Country, and University</h3>
+        <p>
+          Our comprehensive database and expert analysis help you find the perfect match for your academic aspirations,
+          career goals, and budget requirements.
+        </p>
+        <a href="#" class="learn-btn">Learn more</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="info-card">
+        <div class="icon-box" style="background-image: url('/Palak/Admission_counselling/Admission_Counselling_Images/4.png');"></div>
+        <h3>Profile Evaluation & Enhancement</h3>
+        <p>
+          Get detailed assessment of your academic profile, identify strengths and areas for improvement, and receive
+          actionable recommendations.
+        </p>
+        <a href="#" class="learn-btn">Learn more</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="info-card">
+        <div class="icon-box" style="background-image: url('/Palak/Admission_counselling/Admission_Counselling_Images/5.png');"></div>
+        <h3>Application & Admission Support</h3>
+        <p>
+          Complete assistance with application processes, document preparation, email writing, essay writing, and
+          interview preparation
+          for your dream universities.
+        </p>
+        <a href="#" class="learn-btn">Learn more</a>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="info-card">
+        <div class="icon-box" style="background-image: url('/Palak/Admission_counselling/Admission_Counselling_Images/6.png');"></div>
+
+        <h3>Scholarship & Education Loan Assistance</h3>
+        <p>
+          Find and apply for scholarships, grants, and financial aid to fund your education. Get expert help navigating
+          student loans, compare options, and secure the best rates—all in one place.
+        </p>
+        <a href="#" class="learn-btn">Learn more</a>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="info-card">
+        <div class="icon-box" style="background-image: url('/Palak/Admission_counselling/Admission_Counselling_Images/7.png');"></div>
+        <h3>Visa Processing Support</h3>
+        <p>
+          Hassle-free visa assistance with document preparation, application submission, and interview guidance. Ensure
+          smooth visa approval process with our help and get you request processed earliest.
+        </p>
+        <a href="#" class="learn-btn">Learn more</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!--Process Section-->
+
+  <section class="process-section">
+    <div class="process-heading">
+      <h2>Our Proven Process</h2>
+      <p>A systematic approach to ensure your success in international education</p>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="process-step">
+      <div class="process-text">
+        <div class="process-title">
+          <span class="step-number">1</span>
+          <hr>
+          <img src="/Palak/Admission_counselling/Admission_Counselling_Images/tick.png" class="tick-icon" alt="tick">
+        </div>
+        <h3>Choose from a Wide Range of Counselors Across India</h3>
+        <p>Select a counselor from anywhere in India and book a free consultation. Our expert counselors will offer
+          personalized guidance to help you make the best decisions for your study abroad journey—all at no cost to you.
+        </p>
+        <a href="#" class="learn-more">Learn more →</a>
+      </div>
+      <div class="process-image">
+        <img src="/Palak/Admission_counselling/Admission_Counselling_Images/21.jpg" alt="Initial Consultation">
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="process-step">
+      <div class="process-text">
+        <div class="process-title">
+          <span class="step-number">2</span>
+          <hr>
+          <img src="/Palak/Admission_counselling/Admission_Counselling_Images/tick.png" class="tick-icon" alt="tick">
+        </div>
+        <h3>Identify the Right Course, Country, and University</h3>
+        <p>We assist students in selecting the ideal destination country, institution, and course that align with their
+          goals. For students unsure about which course to pursue, we conduct a test to assess their interests and
+          strengths, guiding them toward the best options.</p>
+        <a href="#" class="learn-more">Learn more →</a>
+      </div>
+      <div class="process-image">
+        <img src="/Palak/Admission_counselling/Admission_Counselling_Images/22.jpg" alt="Profile Assessment">
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="process-step">
+      <div class="process-text">
+        <div class="process-title">
+          <span class="step-number">3</span>
+          <hr>
+          <img src="/Palak/Admission_counselling/Admission_Counselling_Images/tick.png" class="tick-icon" alt="tick">
+        </div>
+        <h3>Profile Evaluation</h3>
+        <p>We are committed to delivering the best outcomes by thoroughly evaluating each student’s profile to ensure it
+          meets the required standards. Our counselors focus on key aspects, offer valuable feedback, and ensure all
+          details are accurate and complete. We keep students informed about the progress of their profile evaluation,
+          while our experts analyze each profile to align with university-specific requirements, improving success rates
+          and expediting responses.</p>
+        <a href="#" class="learn-more">Learn more →</a>
+      </div>
+      <div class="process-image">
+        <img src="/Palak/Admission_counselling/Admission_Counselling_Images/23.jpg" alt="University Selection">
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="process-step">
+      <div class="process-text">
+        <div class="process-title">
+          <span class="step-number">4</span>
+          <hr>
+          <img src="/Palak/Admission_counselling/Admission_Counselling_Images/tick.png" class="tick-icon" alt="tick">
+        </div>
+        <h3>Application & Admission Support</h3>
+        <p>We guide you through the entire application and admission process by helping you select the right intake and
+          submit applications to universities and courses that align with your goals. This ensures you receive
+          admissions offers in a timely manner. Our services include creating flawless applications with high-quality
+          Statements of Purpose (SOPs), Letters of Recommendation (LORs), and Resumes. We also provide real-time
+          tracking of your application progress and stay in touch with universities to ensure smooth follow-ups and
+          faster results.</p>
+        <a href="#" class="learn-more">Learn more →</a>
+      </div>
+      <div class="process-image">
+        <img src="/Palak/Admission_counselling/Admission_Counselling_Images/24.jpg" alt="Application Support">
+      </div>
+    </div>
+
+    <div class="process-step">
+      <div class="process-text">
+        <div class="process-title">
+          <span class="step-number">5</span>
+          <hr>
+          <img src="/Palak/Admission_counselling/Admission_Counselling_Images/tick.png" class="tick-icon" alt="tick">
+        </div>
+        <h3>Scholarship Assistance</h3>
+        <p>There are abundant scholarship opportunities at universities across the globe, and we are here to assist you
+          in identifying and applying for the scholarships that align with your qualifications. We provide timely alerts
+          about the latest and most valuable scholarships, offer expert advice on how to navigate the application
+          process, and give you full support throughout your scholarship application journey, ensuring you have the best
+          chance of success.</p>
+        <a href="#" class="learn-more">Learn more →</a>
+      </div>
+      <div class="process-image">
+        <img src="/Palak/Admission_counselling/Admission_Counselling_Images/step5.jpg" alt="Application Support">
+      </div>
+    </div>
+
+    <div class="process-step">
+      <div class="process-text">
+        <div class="process-title">
+          <span class="step-number">6</span>
+          <hr>
+          <img src="/Palak/Admission_counselling/Admission_Counselling_Images/tick.png" class="tick-icon" alt="tick">
+        </div>
+        <h3>Visa Processing Support</h3>
+        <p>Our team of skilled visa experts provides comprehensive assistance in preparing and presenting your visa
+          documents to Embassies and High Commissions, ensuring a smooth process and swift approval. With a proven track
+          record of high visa success rates across various countries, we offer impeccable guidance on all aspects of
+          visa documentation. Additionally, we conduct mock visa interviews to help you prepare thoroughly, boosting
+          your confidence and improving your chances of success.</p>
+        <a href="#" class="learn-more">Learn more →</a>
+      </div>
+      <div class="process-image">
+        <img src="/Palak/Admission_counselling/Admission_Counselling_Images/step6.jpg" alt="Application Support">
+      </div>
+    </div>
+
+    <div class="process-step">
+      <div class="process-text">
+        <div class="process-title">
+          <span class="step-number">7</span>
+          <hr>
+          <img src="/Palak/Admission_counselling/Admission_Counselling_Images/tick.png" class="tick-icon" alt="tick">
+        </div>
+        <h3>Education Loan Assistance</h3>
+        <p>Securing an education loan for studying at your dream university has never been simpler! We offer access to
+          study loans through over 20 leading banks and NBFCs, ensuring you have a wide range of options to choose from.
+          Our experts help with financial structuring tailored to your specific university and course requirements,
+          making sure you get the right amount of funding. Additionally, we provide hassle-free documentation and work
+          with top trusted banking partners to ensure a smooth and efficient loan approval process.</p>
+        <a href="#" class="learn-more">Learn more →</a>
+      </div>
+      <div class="process-image">
+        <img src="/Palak/Admission_counselling/Admission_Counselling_Images/step7.jpg" alt="Application Support">
+      </div>
+    </div>
+  </section>
+
+
+  <!--Form Section-->
+  <section class="guidance-section">
+    <div class="guidance-heading">
+      <h2>Get Expert Guidance for Your Study Abroad Journey</h2>
+      <p>Fill out the form below and let our experts help you achieve your academic dreams</p>
+    </div>
+
+    <form class="guidance-form" id="consultationForm">
+      <!-- Full Name -->
+      <div class="form-group full-width">
+        <label for="name">Full Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        <small class="error-msg" id="nameError">Please fill full name</small>
+      </div>
+
+      <!-- Email & Phone -->
+      <div class="form-row">
+        <div class="form-group half-width">
+          <label for="email">Email Address <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          <small class="error-msg" id="emailError">Please enter a valid email</small>
+        </div>
+        <div class="form-group half-width">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+        </div>
+      </div>
+
+      <!-- Study Destination -->
+      <div class="form-group full-width">
+        <label for="destination">Preferred Study Destination <span class="required">*</span></label>
+        <select id="destination" name="destination" required>
+          <option value="">Select a destination</option>
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+          <option value="Canada">Canada</option>
+          <option value="Australia">Australia</option>
+          <option value="Germany">Germany</option>
+        </select>
+        <small class="error-msg" id="destinationError">Please select a destination</small>
+      </div>
+
+      <!-- Query -->
+      <div class="form-group full-width">
+        <label for="query">Your Query <span class="required">*</span></label>
+        <textarea id="query" name="query" placeholder="Tell us about your study goals and how we can help you"
+          required></textarea>
+        <small class="error-msg" id="queryError">Please enter your query</small>
+      </div>
+
+      <!-- Button -->
+      <button type="submit" class="submit-btn">Request Consultation</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById("consultationForm").addEventListener("submit", function (e) {
+      let isValid = true;
+
+      // Full name
+      const name = document.getElementById("name");
+      const nameError = document.getElementById("nameError");
+      if (!name.value.trim()) {
+        nameError.style.display = "block";
+        isValid = false;
+      } else {
+        nameError.style.display = "none";
+      }
+
+      // Email
+      const email = document.getElementById("email");
+      const emailError = document.getElementById("emailError");
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.value.trim() || !emailPattern.test(email.value.trim())) {
+        emailError.style.display = "block";
+        isValid = false;
+      } else {
+        emailError.style.display = "none";
+      }
+
+      // Destination
+      const destination = document.getElementById("destination");
+      const destinationError = document.getElementById("destinationError");
+      if (!destination.value) {
+        destinationError.style.display = "block";
+        isValid = false;
+      } else {
+        destinationError.style.display = "none";
+      }
+
+      // Query
+      const query = document.getElementById("query");
+      const queryError = document.getElementById("queryError");
+      if (!query.value.trim()) {
+        queryError.style.display = "block";
+        isValid = false;
+      } else {
+        queryError.style.display = "none";
+      }
+
+      if (!isValid) e.preventDefault();
+    });
+  </script>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Column 1: Logo + About + Social Icons -->
+      <div class="footer-col footer-about">
+        <img src="/Palak/Admission_counselling/Admission_Counselling_Images/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+        <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+          achieve their academic dreams abroad.</p>
+        <div class="footer-socials">
+          <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/9.png" alt="Instagram"></a>
+          <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/10.png" alt="Facebook"></a>
+          <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/11.png" alt="LinkedIn"></a>
+          <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/12.png" alt="X"></a>
+        </div>
+      </div>
+      <div class="footer-right-columns">
+
+        <!-- Column 2: Services -->
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Admission Counselling</a></li>
+            <li><a href="#">University Selection</a></li>
+            <li><a href="#">Visa Processing</a></li>
+            <li><a href="#">Scholarship Assistance</a></li>
+            <li><a href="#">Education Loans</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Study Destinations -->
+        <div class="footer-col">
+          <h4>Study Destinations</h4>
+          <ul>
+            <li><a href="#">USA</a></li>
+            <li><a href="#">Canada</a></li>
+            <li><a href="#">UK</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="footer-col contact-col">
+          <h4>Contact Us</h4>
+          <p>info@studybefikar.com</p>
+          <p>+1 (555) 123-4567</p>
+
+          <h4>Office Hours</h4>
+          <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+          <p>Sat: 10:00 AM - 4:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-line" />
+    <p class="footer-bottom">
+      © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+    </p>
+  </footer>
+
+
+
+
+
+
+</body>
+
+</html>

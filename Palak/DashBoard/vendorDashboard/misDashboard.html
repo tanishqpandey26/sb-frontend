@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Befikar</title>
+    <link rel="stylesheet" href="./misDashboard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://sets.hugeicons.com/dashboard.css" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <!-- sidebar + container -->
+
+  <div class="dashboardContainer">
+
+  <!-- sidebar -->
+
+  <div class="sideBar" id="sideBar">
+  <div class="sideBarContent">
+    <img
+      class="sideBarImg"
+      src="../../images/dashboard/sideBar/study-befikar1.png"
+      alt="Profile"
+    />
+
+    <div class="sideBarNavs">
+
+      <a href="/Palak/DashBoard/vendorDashboard/vendorDashboard.html" data-page="dashboard">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M13.5 8.183V4.817q0-.357.234-.587t.58-.23h4.88q.347 0 .576.23t.23.587v3.366q0 .358-.234.587q-.234.23-.58.23h-4.88q-.346 0-.576-.23t-.23-.587M4 11.2V4.8q0-.34.234-.57t.58-.23h4.88q.347 0 .576.23t.23.57v6.4q0 .34-.234.57t-.58.23h-4.88q-.346 0-.576-.23T4 11.2m9.5 8v-6.4q0-.34.234-.57t.58-.23h4.88q.347 0 .576.23t.23.57v6.4q0 .34-.234.57t-.58.23h-4.88q-.346 0-.576-.23t-.23-.57M4 19.183v-3.366q0-.357.234-.587t.58-.23h4.88q.347 0 .576.23t.23.587v3.366q0 .358-.234.587q-.234.23-.58.23h-4.88q-.346 0-.576-.23T4 19.183M5 11h4.5V5H5zm9.5 8H19v-6h-4.5zm0-11H19V5h-4.5zM5 19h4.5v-3H5zm4.5-3"/>
+        </svg> 
+        Dashboard
+      </a>
+
+
+       <div class="dropdownNav">
+        <a href="/Palak/DashBoard/vendorDashboard/bankwiseDashboard.html" 
+           class="dropdownTrigger" data-page="loans">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M8.63 20q-1.928 0-3.279-1.351T4 15.363q0-.808.277-1.574t.8-1.395l3.512-4.217L7.1 5.162q-.211-.404.018-.783q.23-.379.69-.379h8.384q.46 0 .69.379t.018.783l-1.489 3.015l3.512 4.217q.523.629.8 1.395q.277.765.277 1.574q0 1.935-1.35 3.286T15.37 20zm3.367-4.52q-.668 0-1.14-.475t-.472-1.143t.475-1.14t1.144-.472t1.14.476t.472 1.143t-.476 1.14t-1.143.472M9.51 7.75h5L15.875 5h-7.75zM8.63 19h6.74q1.521 0 2.576-1.064Q19 16.87 19 15.365q0-.634-.213-1.235t-.625-1.09l-3.58-4.29h-5.14l-3.584 4.285q-.414.488-.636 1.095Q5 14.736 5 15.369q0 1.502 1.065 2.567Q7.129 19 8.63 19"/>
+          </svg>
+          Loans  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>
+        </a>
+
+        <!-- dropdown -->
+        <div class="dropdownMenu">
+
+          <a href="/Palak/DashBoard/vendorDashboard/bankwiseDashboard.html" data-subpage="bankwise">Bank-wise Disbursement</a>
+           <a href="/Palak/DashBoard/vendorDashboard/studentDetailDashboard.html" data-subpage="student">Student Details</a>
+          <a href="/Palak/DashBoard/vendorDashboard/misDashboard.html" data-subpage="mis">MIS Report</a>
+          <a href="/Palak/DashBoard/vendorDashboard/loanSettingsDashboard.html" data-subpage="settings">Loans Settings</a>
+
+        </div>
+        
+      </div>
+      
+
+
+    </div>
+  </div>
+</div>
+
+
+ <script>
+function getCurrentPage() {
+ 
+    const cleanPath = window.location.pathname;
+    const filename = cleanPath.split('/').pop().split('.')[0];
+    
+    const pageMap = {
+  'vendorDashboard': 'dashboard',  
+  'bankwiseDashboard': 'bankwise',
+  'studentDetailDashboard': 'student',
+  'misDashboard': 'mis',
+  'loanSettingsDashboard': 'settings'
+};
+
+    
+    return pageMap[filename] || 'dashboard'; 
+}
+
+
+function setActiveNav() {
+  const currentPage = getCurrentPage();
+  const navLinks = document.querySelectorAll('.sideBarNavs a');
+  const dropdownNav = document.querySelector('.dropdownNav');
+
+  navLinks.forEach(link => link.classList.remove('active'));
+
+  // handle subpages
+  if (['bankwise', 'student', 'mis', 'settings'].includes(currentPage)) {
+    dropdownNav.classList.add('open'); 
+    document.querySelector(`.dropdownMenu a[data-subpage="${currentPage}"]`)?.classList.add('active');
+    document.querySelector('.dropdownTrigger').classList.add('active');
+  } else {
+    dropdownNav.classList.remove('open');
+    document.querySelector(`.sideBarNavs a[data-page="${currentPage}"]`)?.classList.add('active');
+  }
+}
+
+
+
+function handleDropdownToggle() {
+  const trigger = document.querySelector('.dropdownTrigger');
+  const parent = document.querySelector('.dropdownNav');
+  trigger.addEventListener('click', function(e) {
+    // Default goes to Bankwise
+    if (!parent.classList.contains('open')) {
+      e.preventDefault();
+      parent.classList.add('open');
+      window.location.href = "/Palak/DashBoard/vendorDashboard/bankwiseDashboard.html";
+    }
+  });
+}
+
+function cleanURL() {
+    if (window.location.hash) {
+        history.replaceState(null, null, window.location.pathname + window.location.search);
+    }
+}
+
+
+function handleNavigation() {
+    const navLinks = document.querySelectorAll('.sideBarNavs a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            cleanURL();
+            
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+            
+            
+        });
+    });
+}
+
+
+function preventHashEvents() {
+   
+    window.addEventListener('hashchange', (e) => {
+        e.preventDefault();
+        cleanURL();
+    });
+    
+    setInterval(cleanURL, 1000);
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    cleanURL();
+    setActiveNav();
+    handleNavigation();
+    preventHashEvents();
+    handleDropdownToggle();
+});
+
+document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) {
+        cleanURL();
+        setActiveNav();
+    }
+});
+
+window.addEventListener('focus', () => {
+    cleanURL();
+    setActiveNav();
+});
+
+window.addEventListener('popstate', () => {
+    cleanURL();
+    setActiveNav();
+});
+</script>
+
+
+  <!-- mobile topbar -->
+ <div class="mobileTopBar">
+  
+  <img src="../../images/dashboard/sideBar/study-befikar1.png" alt="Profile">
+  
+  <div class="mobileBtnWrapper">
+
+  <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+
+  </div>
+
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const userDropdowns = document.querySelectorAll(".userDropdown");
+
+    userDropdowns.forEach(dropdown => {
+      const userImg = dropdown.querySelector(".userImg");
+
+      userImg.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+      });
+    });
+  });
+</script>
+
+
+
+  <!-- dashboard elements -->
+  <div class="dashboardElements">
+    
+    <!-- header -->
+<header class="loanHeader">
+  <h1 class="loanTitle">Loan Panel</h1>
+  <button class="logoutBtn">Logout</button>
+</header>
+
+    
+  </div>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll(".tabBtn");
+  const tabContents = document.querySelectorAll(".tabContent");
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // remove active classes
+      tabButtons.forEach(b => b.classList.remove("active"));
+      tabContents.forEach(c => c.classList.remove("active"));
+
+      // add active to clicked
+      btn.classList.add("active");
+      const targetId = btn.getAttribute("data-target");
+      document.querySelector(`.${targetId}`).classList.add("active");
+    });
+  });
+});
+
+</script>
+
+
+  </div>
+  
+</div>
+
+
+ <script>
+        
+// highlight nav 
+  const linkColor = document.querySelectorAll('.nav__link');
+  function colorLink() {
+    linkColor.forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+  }
+  linkColor.forEach(l => l.addEventListener('click', colorLink));
+
+  // dropdown toggle 
+  document.addEventListener("DOMContentLoaded", function () {
+    const userCards = document.querySelectorAll(".userCard");
+
+    userCards.forEach(card => {
+      card.addEventListener("click", function (e) {
+        // stop toggle 
+        if (e.target.tagName === "BUTTON") {
+          e.stopPropagation();
+          return;
+        }
+
+        const details = this.querySelector(".details");
+        const dropdown = this.querySelector(".dropdown");
+        const isOpen = details.style.display === "block";
+
+        // close other cards
+        document.querySelectorAll(".userCard .details").forEach(d => {
+          d.style.display = "none";
+        });
+        document.querySelectorAll(".userCard .dropdown").forEach(dr => {
+          dr.textContent = "▼";
+        });
+
+        // toggle current
+        if (!isOpen) {
+          details.style.display = "block";
+          dropdown.textContent = "▲";
+        } else {
+          details.style.display = "none";
+          dropdown.textContent = "▼";
+        }
+      });
+
+      // tab btns
+      const tabButtons = card.querySelectorAll(".details .buttons button");
+      tabButtons.forEach(btn => {
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation(); 
+
+          // remove active
+          tabButtons.forEach(b => b.classList.remove("active"));
+
+          // add active 
+          this.classList.add("active");
+        });
+      });
+    });
+  });
+
+
+    </script>
+
+    
+<script>
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const sideBar = document.getElementById("sideBar");
+
+mobileMenuBtn.addEventListener("click", () => {
+  sideBar.classList.toggle("active");
+});
+</script>
+
+
+
+<!-- footer -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- column 1: Logo + About + Social Icons -->
+            <div class="footer-col footer-about">
+                <img src="../../images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="../../images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="../../images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="../../images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="../../images/Home/footer/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- Column 2: Services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="#">Education Loans</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 3: Study Destinations -->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="#">USA</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">UK</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 4: Contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>info@studybefikar.com</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+
+
+</body>
+
+</html>

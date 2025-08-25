@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Befikar</title>
+    <link rel="stylesheet" href="loanDetails.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+</head>
+
+<body>
+
+<!-- navbar -->
+
+     <nav class="navbar">
+          <div class="navbar-left">
+            <img src="../../images/Home/study-befikar1.png" alt="Logo" class="logo">
+          </div>
+          <ul class="navbar-right" id="mobileNav">
+        
+            <li class="dropdown">
+              <a href="#">Countries</a>
+              <ul class="dropdown-content">
+                <li><a href="usa.html">USA</a></li>
+                <li><a href="#">UK</a></li>
+                <li><a href="#">Canada</a></li>
+                <li><a href="#">Germany</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Loan</a>
+              <ul class="dropdown-content">
+                <li><a href="../loanHome.html">Check Eligibility</a></li>
+                <li><a href="../bankdetail.html">Available Banks</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Admission Counselling</a>
+              <ul class="dropdown-content">
+                <li><a href="index.html">Admission Process</a></li>
+                <li><a href="book-consultation.html">Book Consultation</a></li>
+                <li><a href="#">Application Deadline</a></li>
+                <li><a href="#">University Finder</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Test Preparation</a>
+              <ul class="dropdown-content">
+                <li><a href="#">Test Prep Services</a></li>
+                <li><a href="#">Prepare for Exam</a></li>
+                <li><a href="#">Take a Mock Test</a></li>
+                <li><a href="#">Exam Deadlines</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">All Exams</a>
+              <ul class="dropdown-content">
+                <li><a href="#">SAT</a></li>
+                <li><a href="#">GMAT</a></li>
+                <li><a href="#">GRE</a></li>
+                <li><a href="#">IELTS</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Services</a>
+              <ul class="dropdown-content">
+                <li><a href="#">All Services</a></li>
+                <li><a href="#">Visa Assistance</a></li>
+                <li><a href="#">Profile Evaluation</a></li>
+                <li><a href="#">Apply to University</a></li>
+              </ul>
+            </li>
+        
+            <li><a href="#" class="dropdown">Notice Board</a></li>
+            <li><a href="#" class="dropdown">About Us</a></li>
+            <li><a href="#" class="dropdown">Contact Us</a></li>
+        
+            <li><a href="signup.html" class="contact-btn">Login</a></li>
+          </ul>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+</nav>
+        
+        <br/><br/><br/><br/>
+
+        <script>
+          const btn = document.getElementById('mobileMenuBtn');
+          const nav = document.getElementById('mobileNav');
+
+          btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+          });
+        </script>
+        
+        <script>
+          const dropdowns = document.querySelectorAll('.dropdown');
+
+          dropdowns.forEach(dropdown => {
+            let wasClicked = false;
+            const link = dropdown.querySelector('a');
+
+            // Toggle on click
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+
+              const isOpen = dropdown.classList.contains('open');
+
+              // Close all dropdowns
+              dropdowns.forEach(d => {
+                d.classList.remove('open');
+                d.dataset.clicked = "false";
+              });
+
+              if (!isOpen) {
+                dropdown.classList.add('open');
+                dropdown.dataset.clicked = "true";
+              }
+            });
+
+            // Hover to open (desktop only)
+            dropdown.addEventListener('mouseenter', () => {
+              if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                dropdown.classList.add('open');
+              }
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+              if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                dropdown.classList.remove('open');
+              }
+            });
+          });
+
+          // Close on outside click
+          document.addEventListener('click', (e) => {
+            dropdowns.forEach(dropdown => {
+              if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+                dropdown.dataset.clicked = "false";
+              }
+            });
+          });
+        </script>
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+            const links = document.querySelectorAll(".navbar-right a");
+
+            links.forEach(link => {
+              const linkPath = link.getAttribute("href").split("/").pop();
+
+              if (linkPath === currentPath) {
+                // Highlight the clicked link
+                link.classList.add("active");
+
+                // Also highlight parent if inside dropdown
+                const parentDropdown = link.closest(".dropdown");
+                if (parentDropdown) {
+                  const parentLink = parentDropdown.querySelector(":scope > a");
+                  if (parentLink) parentLink.classList.add("active");
+                }
+              }
+            });
+          });
+        </script>
+
+
+<!-- step-8-section -->
+
+<section class="stepOneSection" id="stepOneSection"> 
+  <div class="stepOneHeader">
+    <span>Step 8 of 8</span>
+    <div class="stepProgressBar">
+      <div class="stepProgress"></div>
+    </div>
+  </div>
+
+  <div class="stepOneContainer">
+    
+    <div class="stepOneLeftCol"></div>
+
+    <!-- right col -->
+    <div class="stepOneRightCol">
+      <div class="stepInfoLabel">Loan Details</div>
+
+      <!-- amt section -->
+      <!-- <h3 class="stepOneRightColHeader">How much loan amount do you want in Dollar?</h3>
+      <p class="stepOneSelectOptionHeader">Input the amount you wish to borrow for your academic journey. </p>
+      <input type="number" id="loanAmount" class="inputField" placeholder="Enter amount" min="1" /> -->
+
+     <!-- collateral section -->
+
+<div id="collateralSection">
+
+  <h3 class="stepOneRightColHeader">How much loan amount do you want in Rupees?</h3>
+  <p class="stepOneSelectOptionHeader">Input the amount you wish to borrow for your academic journey. </p>
+  <input type="number" id="loanAmountINR" class="inputField" placeholder="Enter amount" min="1" />
+
+  <h3 class="stepOneRightColHeader">What type of loan do you want?</h3>
+  <p class="stepOneSelectOptionHeader">Select the type of loan you want.</p>
+
+  <div class="selectOneOptionContainer collateral-options">
+    <div class="selectOneOption" data-value="Collateral"><span>Collateral</span></div>
+    <div class="selectOneOption" data-value="nonCollateral"><span>Non-Collateral</span></div>
+  </div>
+</div>
+
+<!-- co-signer section -->
+<div id="cosignerSection" style="display:none;">
+
+  <h3 class="stepOneRightColHeader">How much loan amount do you want in Dollar?</h3>
+  <p class="stepOneSelectOptionHeader">Input the amount you wish to borrow for your academic journey. </p>
+  <input type="number" id="loanAmountUSD" class="inputField" placeholder="Enter amount" min="1" />
+  
+  <h3 class="stepOneRightColHeader">Co-signer Requirement</h3>
+  <p class="stepOneSelectOptionHeader">Do you have a co-signer for this loan?</p>
+
+  <div class="selectOneOptionContainer cosigner-options">
+    <div class="selectOneOption" data-value="yesCosigner"><span>Yes</span></div>
+    <div class="selectOneOption" data-value="noCosigner"><span>No</span></div>
+  </div>
+</div>
+
+      <!-- Buttons -->
+      <div class="stepBtnContainer">
+        <button class="stepPrevBtn">Previous</button>
+        <button class="stepFinishBtn" disabled>Finish</button>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const collateralSection = document.getElementById("collateralSection");
+  const cosignerSection = document.getElementById("cosignerSection");
+  const amountInputINR = document.getElementById("loanAmountINR");
+  const amountInputUSD = document.getElementById("loanAmountUSD");
+  const finishBtn = document.querySelector(".stepFinishBtn");
+  const prevBtn = document.querySelector(".stepPrevBtn");
+
+  // load formData
+  let formData = JSON.parse(localStorage.getItem("formData")) || {};
+  let loanAmount = formData.loanAmount || "";
+  const loanCurrency = formData.loanCurrency || "INR"; // default INR
+
+  // show relevant section
+  if (loanCurrency === "USD") {
+    collateralSection.style.display = "none";
+    cosignerSection.style.display = "block";
+  } else {
+    collateralSection.style.display = "block";
+    cosignerSection.style.display = "none";
+  }
+
+  let collateralStatus = formData.collateralStatus || null;
+  let cosignerStatus = formData.cosignerStatus || null;
+
+  // restore loan amount
+  if (loanAmount) {
+    if (loanCurrency === "USD" && loanAmount.startsWith("$")) {
+      amountInputUSD.value = loanAmount.replace("$", "");
+    } else if (loanAmount.startsWith("₹")) {
+      amountInputINR.value = loanAmount.replace("₹", "");
+    }
+  }
+
+  // restore collateral active state
+  if (collateralStatus) {
+    document.querySelectorAll(".collateral-options .selectOneOption").forEach(opt => {
+      if (opt.dataset.value === collateralStatus) opt.classList.add("active");
+    });
+  }
+
+  // restore cosigner active state
+  if (cosignerStatus) {
+    document.querySelectorAll(".cosigner-options .selectOneOption").forEach(opt => {
+      if (opt.dataset.value === cosignerStatus) opt.classList.add("active");
+    });
+  }
+
+  function updateFinishButton() {
+    if (loanAmount) {
+      if (loanCurrency === "USD") {
+        finishBtn.disabled = !cosignerStatus;
+      } else {
+        finishBtn.disabled = !collateralStatus;
+      }
+    } else {
+      finishBtn.disabled = true;
+    }
+  }
+  updateFinishButton();
+
+  // input handlers
+  amountInputINR.addEventListener("input", function () {
+    if (loanCurrency !== "INR") return; 
+    loanAmount = this.value < 1 ? "" : "₹" + this.value;
+    formData.loanAmount = loanAmount;
+    localStorage.setItem("formData", JSON.stringify(formData));
+    updateFinishButton();
+  });
+
+  amountInputUSD.addEventListener("input", function () {
+    if (loanCurrency !== "USD") return; 
+    loanAmount = this.value < 1 ? "" : "$" + this.value;
+    formData.loanAmount = loanAmount;
+    localStorage.setItem("formData", JSON.stringify(formData));
+    updateFinishButton();
+  });
+
+  // collateral option handler
+  document.querySelectorAll(".collateral-options .selectOneOption").forEach(option => {
+    option.addEventListener("click", function () {
+      document.querySelectorAll(".collateral-options .selectOneOption").forEach(opt => opt.classList.remove("active"));
+      this.classList.add("active");
+
+      collateralStatus = this.dataset.value;
+      formData.collateralStatus = collateralStatus;
+      localStorage.setItem("formData", JSON.stringify(formData));
+      updateFinishButton();
+    });
+  });
+
+  // cosigner option handler
+  document.querySelectorAll(".cosigner-options .selectOneOption").forEach(option => {
+    option.addEventListener("click", function () {
+      document.querySelectorAll(".cosigner-options .selectOneOption").forEach(opt => opt.classList.remove("active"));
+      this.classList.add("active");
+
+      cosignerStatus = this.dataset.value;
+      formData.cosignerStatus = cosignerStatus;
+      localStorage.setItem("formData", JSON.stringify(formData));
+      updateFinishButton();
+    });
+  });
+
+  // form validation
+  const requiredFields = [
+    "admissionStatus",
+    "applicantEmployment",
+    "coapplicantEmployment",
+    "cosignerStatus",
+    "courseStatus",
+    "currentDegreeStatus",
+    "examStatus",
+    "loanAmount",
+    "preferredIntake",
+    "vendor"
+  ];
+
+  function allRequiredFieldsPresent(data) {
+    return requiredFields.every(field => data[field] !== null && data[field] !== undefined && data[field] !== "");
+  }
+
+  // finish btn
+  finishBtn.addEventListener("click", function () {
+    if (!allRequiredFieldsPresent(formData)) {
+      alert("Please complete all required fields before submitting.");
+      return;
+    }
+
+    if (loanAmount && ((loanCurrency === "USD" && cosignerStatus) || (loanCurrency !== "USD" && collateralStatus))) {
+      localStorage.setItem("formData", JSON.stringify(formData));
+      console.log("Final Form Data:", formData);
+
+      // clear storage 
+      localStorage.removeItem("formData");
+
+      alert("Form submitted! Data cleared from local storage.");
+    }
+  });
+
+  // prev btn
+  prevBtn.addEventListener("click", function () {
+    window.location.href = "vendor.html";
+  });
+});
+</script>
+
+
+
+
+
+
+<!-- footer -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1: Logo + About + Social Icons -->
+            <div class="footer-col footer-about">
+                <img src="../../images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="../../images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="../../images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="../../images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="../../images/Home/footer/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- Column 2: Services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="#">Education Loans</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 3: Study Destinations -->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="#">USA</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">UK</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 4: Contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>info@studybefikar.com</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+
+
+  <!-- chatbot-section -->
+
+<button class="chatbot-toggler">
+    <span class="material-symbols-rounded">mode_comment</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <div class="chatbot">
+    <header>
+      <h2>Chatbot</h2>
+      <span class="close-btn material-symbols-outlined">close</span>
+    </header>
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Hi there 👋<br />Can i get your Name and Email?</p>
+      </li>
+    </ul>
+    <div class="chat-input">
+      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+      <span id="send-btn" class="material-symbols-rounded">send</span>
+    </div>
+  </div>
+
+<div id="chatbot-container"></div>
+
+<script>
+   
+    document.addEventListener('DOMContentLoaded', function() {
+    
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', toggleDropdown);
+      });
+    });
+  
+    //chatbot
+const chatbotToggler = document.querySelector(".chatbot-toggler");
+const closeBtn = document.querySelector(".close-btn");
+const chatbox = document.querySelector(".chatbox");
+const chatInput = document.querySelector(".chat-input textarea");
+const sendChatBtn = document.querySelector(".chat-input span");
+
+let userMessage = null; // Variable to store user's message
+const inputInitHeight = chatInput.scrollHeight;
+
+// Define the question flow structure
+const questionFlow = {
+  start: "What service can we assist you with today? \n 1) Loan \n 2) Test Prepration \n 3) Visa \n 4) Admission Counselling \n4) Profile Evaluation",
+  options: {
+    Loan: {
+      question: "Which Currency do you want to take Loan in?\n 1) Dollar \n 2) Rupees ",
+      responses: {
+        Dollar: "We can assist with Dollar loans. Lets get more Details?\n Which Degree do you want to pursue?",
+        Rupees: "We can assist with personal loans. What is the loan amount you're looking for?"},
+        "nextQuestion": {
+        "question": "Do you have a co-signer?",
+        "options": {
+          "1": "Business",
+          "2": "Education",
+          "3": "Other"
+        },
+        "responses": {
+          "Business": "Great! Let's discuss terms for a business loan in Dollar.",
+          "Education": "Sure! Let's explore education loan options in Dollar.",
+          "Other": "Got it! We'll help you find a suitable Dollar loan for your needs."
+        }
+      }
+    },
+    "Rupees": {
+      "message": "We can assist with personal loans. What is the loan amount you're looking for?",
+      "nextQuestion": {
+        "question": "What is the tenure of the loan?",
+        "options": {
+          "1": "1-3 years",
+         "2": "3-5 years",
+          "3": "More than 5 years"
+        },
+        "responses": {
+          "1-3 years": "Short-term loans are a great choice for flexibility.",
+          "3-5 years": "Mid-term loans offer a balance between affordability and tenure.",
+          "More than 5 years": "Long-term loans provide lower monthly payments over time."
+        }
+      }
+    }
+  
+},
+    "Test Prep": {
+      question: "Which test are you preparing for? (GRE/GMAT/SAT)",
+      responses: {
+        GRE: "We offer GRE coaching. Would you like to know about our courses?",
+        GMAT: "We offer GMAT coaching. Would you like to know about our courses?",
+        SAT: "We offer SAT coaching. Would you like to know about our courses?",
+      },
+    },
+    Admission: {
+      question: "Which level of admission are you seeking? (Undergraduate/Postgraduate)",
+      responses: {
+        Undergraduate: "We assist with undergraduate admissions. Do you have a target country in mind?",
+        Postgraduate: "We assist with postgraduate admissions. Do you have a target program in mind?",
+      },
+    },
+    "Profile Evaluation": {
+      question: "Are you looking for a detailed profile evaluation for admissions or career guidance?",
+      responses: {
+        Admissions: "Please share your academic and extracurricular details for evaluation.",
+        Career: "Please share your work experience and career aspirations for evaluation.",
+      },
+    },
+    Visa: {
+      question: "Which type of visa are you applying for? (Student/Work/Tourist)",
+      responses: {
+        Student: "We assist with student visas. Have you received your admission letter?",
+        Work: "We assist with work visas. Do you have an employer's sponsorship?",
+        Tourist: "We assist with tourist visas. Do you have travel dates planned?",
+      },
+    },
+  };
+
+let currentStep = "start";
+let currentSection = null;
+
+const createChatLi = (message, className) => {
+  const chatLi = document.createElement("li");
+  chatLi.classList.add("chat", className);
+  const chatContent =
+    className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+  chatLi.innerHTML = chatContent;
+  chatLi.querySelector("p").textContent = message;
+  return chatLi;
+};
+
+const generateResponse = (chatElement) => {
+  const messageElement = chatElement.querySelector("p");
+
+  if (currentStep === "start") {
+    // Initial question
+    messageElement.textContent = questionFlow.start;
+    currentStep = "options";
+  } else if (currentStep === "options") {
+    // Options for services
+    const optionKeys = Object.keys(questionFlow.options);
+    if (optionKeys.includes(userMessage)) {
+      currentSection = userMessage;
+      messageElement.textContent = questionFlow.options[currentSection].question;
+      currentStep = "responses";
+    } else {
+      messageElement.textContent = "Please select a valid option: Loan, Test Prep, Admission, Profile Evaluation, Visa.";
+    }
+  } else if (currentStep === "responses") {
+    const responses = questionFlow.options[currentSection].responses;
+    if (responses[userMessage]) {
+      messageElement.textContent = responses[userMessage];
+      currentStep = "completed";
+    } else {
+      messageElement.textContent = `Please select a valid option for ${currentSection}.`;
+    }
+  } else {
+    // End of conversation
+    messageElement.textContent = "Thank you for chatting with us!";
+  }
+
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+};
+
+const handleChat = () => {
+  userMessage = chatInput.value.trim(); // Get user entered message
+  if (!userMessage) return;
+
+  // Clear the input textarea and set its height to default
+  chatInput.value = "";
+  chatInput.style.height = `${inputInitHeight}px`;
+
+  // Append the user's message to the chatbox
+  chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+
+  setTimeout(() => {
+    // Generate response based on current step and user message
+    const incomingChatLi = createChatLi("Thinking...", "incoming");
+    chatbox.appendChild(incomingChatLi);
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+    generateResponse(incomingChatLi);
+  }, 600);
+};
+
+chatInput.addEventListener("input", () => {
+  chatInput.style.height = `${inputInitHeight}px`;
+  chatInput.style.height = `${chatInput.scrollHeight}px`;
+});
+
+chatInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+    e.preventDefault();
+    handleChat();
+  }
+});
+
+sendChatBtn.addEventListener("click", handleChat);
+closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+    function toggleNavbar() {
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+
+    function toggleDropdown(event) {
+      const dropdown = event.currentTarget;
+      dropdown.classList.toggle('active');
+    }
+    const buttons = document.querySelectorAll(".button-container button");
+    const contents = document.querySelectorAll(".content-container");
+  
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Remove 'active' class from all buttons and contents
+        buttons.forEach(btn => btn.classList.remove("active"));
+        contents.forEach(content => content.classList.remove("active"));
+  
+        // Add 'active' class to clicked button and corresponding content
+        button.classList.add("active");
+        const contentId = button.id.replace("btn-", "content-");
+        document.getElementById(contentId).classList.add("active");
+      });
+    });
+    function switchContent(sectionId) {
+      // Remove active class from all buttons
+      document.querySelectorAll('.button').forEach(button => button.classList.remove('active'));
+
+      // Add active class to clicked button
+      document.querySelector(`.button[onclick="switchContent('${sectionId}')"]`).classList.add('active');
+
+      // Hide all content sections
+      document.querySelectorAll('.content').forEach(content => content.classList.remove('active'));
+
+      // Show the selected content section
+      document.getElementById(sectionId).classList.add('active');
+    }
+
+</script>
+
+
+
+</body>
+
+</html>

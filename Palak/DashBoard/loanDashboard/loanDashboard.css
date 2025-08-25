@@ -1,0 +1,868 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans';
+}
+
+
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* sidebar */
+.sideBar {
+  width: 249px;
+  background-color: #FAFAFA;
+  color: #000;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  gap: 37px;
+}
+
+.sideBarContent {
+  width: 217px;
+  text-align: center;
+}
+
+
+.sideBar img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 37px;
+}
+
+.sideBarNavs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  gap: 6px;
+  text-decoration: none;
+  color: #000;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.sideBarNavs a {
+  height: 40px;
+  text-decoration: none;
+  color:#424242;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;   
+  align-items: center;
+}
+
+.sideBarNavs a svg {
+ margin-right: 10px;
+}
+
+.sideBarNavs a.active {
+  background: #287781;
+  color:#fff;
+}
+
+/* mobile/tablet topbar */
+.mobileTopBar {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  background: #FAFAFA;
+  padding: 10px 20px;
+  color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+}
+
+.mobileTopBar img {
+   width: 66px;
+  height: 56px;
+}
+
+.mobile-menu-btn {
+  font-size: 24px;
+  padding: 8px 12px;
+  background: transparent;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .dashboardContainer {
+    flex-direction: column;
+  }
+
+  .sideBar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .sideBarContent {
+  width: 100%;
+   margin-top: 15%;
+}
+
+  .sideBar.active {
+    transform: translateX(0);
+  }
+
+  .sideBar img {
+  display: none;
+}
+
+  .dashboardElements {
+    width: 100%;
+  }
+
+    .mobile-menu-btn {
+    display: block;
+  }
+  
+  .mobileTopBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+  }
+
+  .mobileTopBar img.userImg {
+    margin-left: 300px;  
+  }
+  
+}
+
+
+/*  dropdown */
+.userDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.userDropdown img.userImg {
+   width: 70px;
+  height: 70px;
+  box-shadow: 0px 4px 4px 0px #0000001A;
+  border-radius: 50%;  
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #ddd;
+}
+
+.userDropdown .dropdownMenu {
+  position: absolute;
+  top: 110%; 
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.userDropdown .dropdownMenu a {
+  padding: 10px 10px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  transition: background 0.2s;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.userDropdown .dropdownMenu a:hover {
+  color:#287781;
+  background: #59898E33;
+}
+
+.userDropdown.active .dropdownMenu {
+  display: flex;
+}
+
+
+@media (min-width: 769px) {
+  .dashboardHeader {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px 20px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .dashboardHeader-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .dashboardHeader .userImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .mobileTopBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+
+  .mobileImgBtnWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1px; 
+  }
+
+  .mobileTopBar img.userImg {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .mobileTopBar .dropdownMenu {
+    top: 120%;
+    right: 0;
+    width: 160px;
+  }
+}
+
+
+/* dashboard elements */
+
+.dashboardElements {
+  width: 100%;
+  
+}
+
+
+/* dashboardHeader */
+
+
+.dashboardHeader {
+  width: 100%;
+height: 84px;
+  background: #f9f9f9;   
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  padding: 0 20px;       
+  box-shadow: 0px 4px 4px 0px #0000001A;
+}
+
+.dashboardHeader-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.dashboardHeader .contactUs {
+  font-size: 16px;
+  color: #424242;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+
+@media (max-width: 768px) {
+  .dashboardHeader {
+    display: none;
+  }
+
+   .userImg {
+  width: 58px;
+  height: 58px;
+  box-shadow: 0px 4px 4px 0px #0000001A;
+  border-radius: 50%;  
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  margin-right: 2px;
+}
+}
+
+
+.tabsContainer {
+  width: 100%;
+  margin: 30px auto;
+  gap: 6px;
+}
+
+
+.tabBar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 9px;
+  height:40px;
+  width:305px;
+  margin-left: 30px;
+}
+
+.tabBtn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  background: #fff;
+  color: #424242;;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.tabBtn.active {
+  background: #59898E33;
+  color:#287781;
+}
+
+.tabBarDivider {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top: 1px solid #ddd;
+}
+
+.tabContent {
+  display: none;
+  padding: 20px;
+  background: #fff;
+}
+
+.tabContent.active {
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+
+  .tabBar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 9px;
+  margin-left: 30px;
+}
+
+
+  .tabBtn {
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .tabBarDivider {
+    display: none;
+  }
+}
+
+
+
+/* loanDashboard */
+
+
+.loanDashboardTopSection {
+  padding: 20px auto;
+}
+
+.loanDashboardHeader {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  margin-top: 20px;
+}
+
+.loanDashboardSubHeader {
+  font-size: 16px;
+  font-weight: 400;
+  color: #424242;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+
+.loanTableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 0.2px solid gray;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  max-width: 1100px;
+}
+
+.loanTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px; 
+}
+
+.loanTable th,
+.loanTable td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* column */
+.loanTable th {
+  background: #F6F6F6;
+  font-weight: 700;
+  font-size: 12px;
+  color: #424242;
+}
+
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.badge.pending {
+  background: #FFF8C3;
+  color:#958B02;
+}
+.badge.active {
+  background:#FFF8C3;
+  color:#958B02;
+}
+.badge.completed {
+  background: #FFF8C3;
+  color: #958B02;
+}
+
+
+.uploadBtn {
+  padding: 10px;
+  background:#287781;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-size: 12px;
+  font-weight: 600;
+  height: 35px;
+}
+
+
+.noDataMsg {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #424242;
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .loanTableWrapper {
+    overflow-x: scroll;
+  }
+  .loanTable {
+    font-size: 13px;
+  }
+  .loanTable th,
+  .loanTable td {
+    padding: 10px;
+  }
+}
+
+
+.dollarOptions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  padding: 20px;
+}
+
+.dollarOptionsBtn {
+  padding: 10px;
+  background-color: #287781;  
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  height: 53px;
+}
+
+
+
+@media (max-width: 768px) {
+  .dollarOptionsBtn {
+    width: 50%;         
+    font-size: 10px;
+    padding: 10px;
+  }
+}
+
+
+@media (min-width: 769px) {
+  .dollarOptionsBtn {
+    width: auto;         
+    min-width: 250px;    
+  }
+}
+
+
+
+
+/* explore bank  */
+
+.exploreBankSection {
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.exploreBankHeader {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color:#424242;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.exploreBankSubHeader {
+  text-align: center;
+   font-size: 16px;
+  font-weight: 400;
+  color:#424242;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.exploreNbfcSection{
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.explorePvtBankSection {
+  margin-top: 50px;
+}
+
+
+.exploreNbfcHeader,
+.explorePvtBankHeader {
+  font-size: 24px;
+  font-weight: 700;
+  color:#424242;
+  margin-bottom: 12px;
+  padding-left: 5px; 
+}
+
+.exploreNbfcContainer,
+.explorePvtBankContainer {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto; 
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.exploreNbfcContainer::-webkit-scrollbar,
+.explorePvtBankContainer::-webkit-scrollbar {
+  height: 6px;
+}
+
+.exploreNbfcContainer::-webkit-scrollbar-thumb,
+.explorePvtBankContainer::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+
+/* card */
+.exploreNbfcCard,
+.explorePvtBankCard {
+  flex: 0 0 520px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  scroll-snap-align: start;
+  text-align: center;
+  width: 520px;
+  height: 328px;
+  gap: 30px;
+}
+
+.exploreNbfcImg,
+.explorePvtBankImg {
+  width: 300px;
+  height: 120px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.exploreNbfcSubHeader,
+.explorePvtBankSubHeader {
+  font-size: 16px;
+  font-weight: 400;
+  color: #424242;
+  margin: 30px 0;
+}
+
+.exploreNbfcInterestRate,
+.explorePvtBankInterestRate {
+  font-size: 16px;
+  font-weight: 700;
+  color: #424242;
+  margin-bottom: 30px;
+}
+
+
+.exploreNbfcBtnContainer,
+.explorePvtBankBtnContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.exploreNbfcKnowMoreBtn,
+.explorePvtBankKnowMoreBtn {
+  flex: 1;
+  padding:10px;
+  border: 1px solid #007bff;
+  color: #fff;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
+  width: 110px;
+  height: 33px;
+}
+
+.exploreNbfcApplyNowBtn,
+.explorePvtBankApplyNowBtn {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #287781;
+  background: #fff;
+  color: #287781;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 110px;
+  height: 33px;
+}
+
+
+
+@media (max-width: 768px) {
+  .exploreBankHeader {
+    font-size: 20px;
+  }
+
+  .exploreBankSubHeader {
+    font-size: 14px;
+  }
+
+  .exploreNbfcCard,
+  .explorePvtBankCard {
+    flex: 0 0 400px;
+    padding: 12px;
+  }
+
+  .exploreNbfcImg,
+  .explorePvtBankImg {
+    width: 200px;
+    height: 120px;
+  }
+
+  .exploreNbfcSubHeader,
+  .explorePvtBankSubHeader {
+    font-size: 16px;
+  }
+}
+
+
+
+/* footer */
+
+
+.footer {
+    background-color: #092A2E;
+    padding: 60px 2% 30px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1320px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-about {
+    flex: 2.5;
+    max-width: none;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+
+.footer-about p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-col h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 22px;
+    color: #ffffff;
+}
+
+.footer-col p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-col.contact-col {
+    min-width: 300px;
+    max-width: 350px;
+}
+
+.footer-col:not(.footer-about) {
+    margin-left: -5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials img {
+    width: 48px;
+    height: 48px;
+}
+
+
+.footer-line {
+    border: none;
+    border-top: 1px solid #ffffff44;
+    margin: 40px auto 20px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+.footer-right-columns {
+    display: flex;
+    gap: 40px;
+    margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-right-columns {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .footer-col {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.footer-col ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 100%;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #4ED0E1;
+}
+
+ 

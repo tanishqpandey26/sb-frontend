@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Befikar</title>
+    <link rel="stylesheet" href="/Palak/loanHome.css">
+    <link rel="stylesheet" href="loanHome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+
+</head> 
+<body>
+
+
+  
+<!--NavBar Section-->
+
+<nav class="navbar">
+          <div class="navbar-left">
+            <img src="../images/Home/study-befikar1.png" alt="Logo" class="logo">
+          </div>
+          <ul class="navbar-right" id="mobileNav">
+        
+            <li class="dropdown">
+              <a href="#">Countries</a>
+              <ul class="dropdown-content">
+                <li><a href="usa.html">USA</a></li>
+                <li><a href="#">UK</a></li>
+                <li><a href="#">Canada</a></li>
+                <li><a href="#">Germany</a></li>
+              </ul>
+            </li>
+        
+             <li class="dropdown">
+              <a href="#">Loan</a>
+              <ul class="dropdown-content">
+                <li><a href="../Loan/loanHome.html">Check Eligibility</a></li>
+                <li><a href="../Loan/bankdetail.html">Available Banks</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Admission Counselling</a>
+              <ul class="dropdown-content">
+                <li><a href="index.html">Admission Process</a></li>
+                <li><a href="book-consultation.html">Book Consultation</a></li>
+                <li><a href="#">Application Deadline</a></li>
+                <li><a href="#">University Finder</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Test Preparation</a>
+              <ul class="dropdown-content">
+                <li><a href="#">Test Prep Services</a></li>
+                <li><a href="#">Prepare for Exam</a></li>
+                <li><a href="#">Take a Mock Test</a></li>
+                <li><a href="#">Exam Deadlines</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">All Exams</a>
+              <ul class="dropdown-content">
+                <li><a href="#">SAT</a></li>
+                <li><a href="#">GMAT</a></li>
+                <li><a href="#">GRE</a></li>
+                <li><a href="#">IELTS</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Services</a>
+              <ul class="dropdown-content">
+                <li><a href="#">All Services</a></li>
+                <li><a href="#">Visa Assistance</a></li>
+                <li><a href="#">Profile Evaluation</a></li>
+                <li><a href="#">Apply to University</a></li>
+              </ul>
+            </li>
+        
+            <li><a href="#" class="dropdown">Notice Board</a></li>
+            <li><a href="#" class="dropdown">About Us</a></li>
+            <li><a href="#" class="dropdown">Contact Us</a></li>
+        
+            <li><a href="signup.html" class="contact-btn">Login</a></li>
+          </ul>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+</nav>
+        
+        <br/><br/><br/><br/>
+
+        <script>
+          const btn = document.getElementById('mobileMenuBtn');
+          const nav = document.getElementById('mobileNav');
+
+          btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+          });
+        </script>
+        
+        <script>
+          const dropdowns = document.querySelectorAll('.dropdown');
+
+          dropdowns.forEach(dropdown => {
+            let wasClicked = false;
+            const link = dropdown.querySelector('a');
+
+            // Toggle on click
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+
+              const isOpen = dropdown.classList.contains('open');
+
+              // Close all dropdowns
+              dropdowns.forEach(d => {
+                d.classList.remove('open');
+                d.dataset.clicked = "false";
+              });
+
+              if (!isOpen) {
+                dropdown.classList.add('open');
+                dropdown.dataset.clicked = "true";
+              }
+            });
+
+            // Hover to open (desktop only)
+            dropdown.addEventListener('mouseenter', () => {
+              if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                dropdown.classList.add('open');
+              }
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+              if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                dropdown.classList.remove('open');
+              }
+            });
+          });
+
+          // Close on outside click
+          document.addEventListener('click', (e) => {
+            dropdowns.forEach(dropdown => {
+              if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+                dropdown.dataset.clicked = "false";
+              }
+            });
+          });
+        </script>
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+            const links = document.querySelectorAll(".navbar-right a");
+
+            links.forEach(link => {
+              const linkPath = link.getAttribute("href").split("/").pop();
+
+              if (linkPath === currentPath) {
+                // Highlight the clicked link
+                link.classList.add("active");
+
+                // Also highlight parent if inside dropdown
+                const parentDropdown = link.closest(".dropdown");
+                if (parentDropdown) {
+                  const parentLink = parentDropdown.querySelector(":scope > a");
+                  if (parentLink) parentLink.classList.add("active");
+                }
+              }
+            });
+          });
+        </script>
+
+
+
+<!-- hero-section -->
+
+    <section class="hero">
+  <div class="hero-content">
+    <!-- LEFT COLUMN (Desktop) / DETAIL BOX (Mobile) -->
+
+    <div class="hero-detailbox">
+
+       <div class="hero-route">Home &gt; Loan &gt; Available Banks</div>
+      <div class="hero-mini-heading">
+        <img src="../images/loanHome/herosection/blue-star.png" alt="Star" />
+        <span>Loan Eligibility</span>
+      </div>
+      <h1 class="hero-heading">
+        <span class="tophead">Study abroad with</span> <br />
+        <span class="lowhead">Financial Confidence</span>
+      </h1>
+      <p class="hero-para">
+        <span>Check your loan eligibility and discover exclusive</span> <br/> benefits customized specifically for your needs.
+      </p>
+      <div class="hero-btns">
+        <a href="#" class="btn primary">
+          Check Eligibility Now <img src="../images/loanHome/herosection/right-arrow.png" alt="Arrow" />
+        </a>
+        <a href="#" class="btn secondary">
+          <img src="../images/loanHome/herosection/videocam.png" alt="Arrow" /> Book Consultation
+        </a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN (Desktop) / INFO CARD (Mobile) -->
+    <div class="hero-infocard">
+      <img src="../images/loanHome/herosection/lady.png" alt="Lady" class="hero-image" />
+
+      <div class="info-box info1">
+        <img src="../images/loanHome/herosection/head.png" alt="head" />
+        <p>Fast Approval Process</p>
+      </div>
+      <div class="info-box info2">
+        <img src="../images/loanHome/herosection/head.png" alt="head" />
+        <p>Low-Interest Rates</p>
+      </div>
+    </div>
+
+  </div>
+    </section>
+
+
+<!-- service-section -->
+
+  <section class="services">
+  <div class="services-header">
+    <h2 class="service-heading">“Find Your Perfect Student Loan Match”
+    <p class="service-para">
+      Explore personalized loan options, multiple lenders, and expert guidance, all in one place!
+    </p>
+  </div>
+
+
+  <div class="services-container">
+
+    <div class="service-card">
+
+      <div class="left-col">
+        <img src="../images/loanHome/servicesection/doctor.jpg" alt="Service 1" />
+      </div>
+
+      <div class="right-col">
+        <img src="../images/loanHome/servicesection/two-ppl-vector.png" alt="Icon" class="card-icon" />
+        <h3 class="card-header">Multiple Lenders</h3>
+        <p class="card-desc">As a student, managing finances for tuition, living expenses, and other educational costs can be challenging. One option to help you secure the funds you need is a Multiple Lenders Loan, which allows you to access loans from several different lenders, giving you more flexibility and better financial options.</p>
+        <button class="card-btn">Check Eligibility Now</button>
+      </div>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <div class="left-col">
+        <img src="../images/loanHome/servicesection/calculator.jpg" alt="Service 1" />
+      </div>
+
+      <div class="right-col">
+        <img src="../images/loanHome/servicesection/cash-vector.png" alt="Icon" class="card-icon" />
+        <h3 class="card-header">Multi-Currency Loan</h3>
+        <p class="card-desc">Flexibility Across Borders In today’s interconnected global economy, managing finances across multiple countries requires solutions that are as flexible as your ambitions. A Multi-Currency Loan is designed to provide businesses and individuals with the flexibility to borrow in the currency that best fits their needs.</p>
+        <button class="card-btn">Check Eligibility Now</button>
+      </div>
+
+    </div>
+
+
+   <div class="service-card">
+
+      <div class="left-col">
+        <img src="../images/loanHome/servicesection/cross-man.jpg" alt="Service 1" />
+      </div>
+
+      <div class="right-col">
+        <img src="../images/loanHome/servicesection/doc-vector.png" alt="Icon" class="card-icon" />
+        <h3 class="card-header">No-collateral Needed</h3>
+        <p class="card-desc">As a student, securing financing for your education can sometimes feel overwhelming, especially when you’re asked to put up collateral—like property or assets—to secure a loan. Fortunately, No-Collateral Loans offer a solution that allows you to access the funds you need without risking your personal assets.</p>
+        <button class="card-btn">Check Eligibility Now</button>
+      </div>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <div class="left-col">
+        <img src="../images/loanHome/servicesection/chatting-ppl.jpg" alt="Service 1" />
+      </div>
+
+      <div class="right-col">
+        <img src="../images/loanHome/servicesection/one-ppl-vector.png" alt="Icon" class="card-icon" />
+        <h3 class="card-header">Expert Advice</h3>
+        <p class="card-desc">Financial experts can help you understand the various loan products available, from federal student loans to private options, ensuring you select the best one for your situation. Maximize Your Financial Aid: Advisors can guide you in applying for scholarships, grants, and other forms of financial aid that reduce the amount you need to borrow.</p>
+        <button class="card-btn">Check Eligibility Now</button>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  </section>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.querySelector(".services-container");
+
+  let scrollTimeout;
+
+  container.addEventListener("scroll", function() {
+    // total scrollable width
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+    // if at the end
+    if (Math.ceil(container.scrollLeft) >= maxScrollLeft) {
+      clearTimeout(scrollTimeout);
+
+      scrollTimeout = setTimeout(() => {
+        container.scrollTo({ left: 0, behavior: "smooth" });
+      }, 5000); // 5 seconds
+    }
+  });
+});
+  </script>
+
+
+
+<!-- loan-process section -->
+
+<section class="loan-process">
+  <div class="loan-process-header">
+    <h2 class="loan-service-heading">How Our Loan Process Works</h2>
+    <p class="loan-service-desc">
+      We’ve made our loan process simple and straightforward. Here’s a quick overview of each step, so you know what’s ahead.
+    </p>
+  </div>
+
+  <div class="loan-process-cards">
+
+    <div class="loan-card">
+      <div class="card-number">1</div>
+      <h3 class="loan-service-card-header">Apply Online</h3>
+      <p class="loan-service-card-desc">Fill out our simple application form with your basic details and study preferences</p>
+    </div>
+
+    <div class="loan-card">
+      <div class="card-number">2</div>
+      <h3 class="loan-service-card-header">Document Upload</h3>
+      <p class="loan-service-card-desc">Upload required documents securely through our encrypted portal</p>
+    </div>
+
+    <div class="loan-card">
+      <div class="card-number">3</div>
+      <h3 class="loan-service-card-header">Loan Assessment</h3>
+      <p class="loan-service-card-desc">Our experts evaluate your application and match you with the best loan options</p>
+    </div>
+
+    <div class="loan-card">
+      <div class="card-number">4</div>
+      <h3 class="loan-service-card-header">Loan Approval</h3>
+      <p class="loan-service-card-desc">Receive approval notification and funds disbursed directly to your institution</p>
+    </div>
+  </div>
+</section>
+
+<!-- plan-finance-section -->
+
+<section class="plan-finance">
+  <div class="planfinance-heading">Plan Your Finance With Ease</div>
+  <p class="planfinance-para">
+    Easily manage your money. Budget, save, and plan with simple tools that make finance stress-free.
+  </p>
+
+  <div class="planfinance-container">
+
+    <!-- Card 1 -->
+    <div class="planfinance-card">
+      <div class="planfinance-toplabel">
+        <img src="../images/loanHome/planYourFinance/blue-lens.png" alt="Icon" />
+        <div class="planfinance-infobox">95% Success Rate</div>
+      </div>
+      <h3 class="planfinance-cardheading">Check Your Eligibility</h3>
+      <p class="planfinance-carddesc">
+        Fund your study abroad journey with confidence. We help you to check your eligibility results in just a few steps.
+      </p>
+      <button class="planfinance-btn">Check Eligibility Now</button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="planfinance-card">
+      <div class="planfinance-toplabel">
+        <img src="../images/loanHome/planYourFinance/pink-calculator.png" alt="Icon" />
+        <div class="planfinance-infobox">Instant Results</div>
+      </div>
+      <h3 class="planfinance-cardheading">EMI Calculator</h3>
+      <p class="planfinance-carddesc">
+       Estimate your monthly loan repayments with ease. Enter loan details, and our tool will do the math.
+
+      </p>
+      <button class="planfinance-btn">Check Eligibility Now</button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="planfinance-card">
+      <div class="planfinance-toplabel">
+        <img src="../images/loanHome/planYourFinance/yellow-building.png" alt="Icon" />
+        <div class="planfinance-infobox">95% Success Rate</div>
+      </div>
+      <h3 class="planfinance-cardheading">Know More About Banks</h3>
+      <p class="planfinance-carddesc">
+        Explore detailed information on bank options for international education loans, including interest rates, andcollateral vs. non-collateral loans.
+      </p>
+      <button class="planfinance-btn">Check Eligibility Now</button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- loan-partner-section -->
+
+<section class="loan-partner-section">
+  <h2 class="loanPartnerHeader">Our Trusted Loan Partners</h2>
+  <p class="loanPartnerPara">We’ve partnered with top banks to bring you the best student loan options. <span>Compare and choose the one that fits your needs.</span></p>
+
+  <div class="loanPartnerCards">
+
+    <div class="loanPartnerCard">
+      <img src="../images/loanHome/banks/icici-banner.png" alt="Partner 1" class="loanPartnerBannerImg" />
+      <h3 class="loanPartnerName">ICICI Bank</h3>
+      <p class="loanPartnerRate">Interest Rate:<span> 10.5% APR </span></p>
+       <button class="loanPartnerBtn">Explore</button>
+    </div>
+
+    <div class="loanPartnerCard">
+      <img src="../images/loanHome/banks/axis-banner.png" alt="Partner 2" class="loanPartnerBannerImg" />
+      <h3 class="loanPartnerName">Axis Bank</h3>
+      <p class="loanPartnerRate">Interest Rate:<span> 11.0% APR </span></p>
+      <button class="loanPartnerBtn">Explore</button>
+    </div>
+
+    <div class="loanPartnerCard">
+      <img src="../images/loanHome/banks/idfc-banner.png" alt="Partner 3" class="loanPartnerBannerImg" />
+      <h3 class="loanPartnerName">IDFC</h3>
+      <p class="loanPartnerRate">Interest Rate:<span> 10.8% APR </span></p>
+      <button class="loanPartnerBtn">Explore</button>
+    </div>
+
+    <div class="loanPartnerCard">
+      <img src="../images/loanHome/banks/union-bank-banner.png" alt="Partner 4" class="loanPartnerBannerImg" />
+      <h3 class="loanPartnerName">Union Bank</h3>
+      <p class="loanPartnerRate">Interest Rate:<span> 9.9% APR </span></p>
+      <button class="loanPartnerBtn">Explore</button>
+    </div>
+
+    <div class="loanPartnerCard">
+      <img src="../images/loanHome/banks/avanse-banner.png" alt="Partner 5" class="loanPartnerBannerImg" />
+      <h3 class="loanPartnerName">Avanse</h3>
+      <p class="loanPartnerRate">Interest Rate:<span> 11.3% APR </span></p>
+      <button class="loanPartnerBtn">Explore</button>
+    </div>
+
+    <div class="loanPartnerCard">
+      <img src="../images/loanHome/banks/credila-banner.png" alt="Partner 6" class="loanPartnerBannerImg" />
+      <h3 class="loanPartnerName">Credila</h3>
+      <p class="loanPartnerRate">Interest Rate:<span> 10.2% APR </span></p>
+      <button class="loanPartnerBtn">Explore</button>
+    </div>
+
+    <div class="loanPartnerCard">
+      <img src="../images/loanHome/banks/incred-banner.png" alt="Partner 7" class="loanPartnerBannerImg" />
+      <h3 class="loanPartnerName">Incred</h3>
+      <p class="loanPartnerRate">Interest Rate:<span> 10.5% APR </span></p>
+      <button class="loanPartnerBtn">Explore</button>
+    </div>
+
+    <div class="loanPartnerCard">
+      <img src="../images/loanHome/banks/auxilo-banner.png" alt="Partner 8" class="loanPartnerBannerImg" />
+      <h3 class="loanPartnerName">Auxilo</h3>
+      <p class="loanPartnerRate">Interest Rate:<span> 11.0% APR </span></p>
+      <button class="loanPartnerBtn">Explore</button>
+    </div>
+
+  </div>
+
+  <div class="loanPartnerNoteContainer">
+    <p class="loanPartnerNote">
+    NOTE: APR stands for Annual Percentage Rate. It’s the yearly cost of borrowing money, including interest and fees.
+    </p>
+  </div>
+
+</section>
+
+<!-- testimonial-section -->
+
+
+ <section class="testimonialSection">
+        <h2 class="testimonialHeading">Our Happy Stories!</h2>
+        <p class="testimonialSubtext">
+            Success stories from students who achieved their dreams of studying abroad.
+        </p>
+
+        <div class="testimonial-carousel-container">
+            <div class="testimonialCarousel" id="testimonialCarousel">
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "Study Befikar made my dream of studying in Canada a reality. Their loan guidance was clear, transparent, and stress-free. I never thought financing my education could be this smooth!"
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Avirush Kr</p>
+                            <p class="userTitle">University of Toronto</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "The team guided me through every step — from comparing loan options to preparing my SOP. I secured funding within two weeks and felt fully confident throughout the process."
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer2.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Siddhesh C Borhade</p>
+                            <p class="userTitle">New York University</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "I had no idea how to apply for a study abroad loan, but Study Befikar explained everything patiently. Their support during the moratorium period questions was outstanding."
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer3.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Tirth Shah</p>
+                            <p class="userTitle">University of Melbourne</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "What I loved most was their honesty. They didn’t just push me towards one lender, but helped me choose the best loan for my profile. Highly recommend their services!"
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer4.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Karan Singh</p>
+                            <p class="userTitle">London School of Economics</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "Thanks to Study Befikar, I didn’t have to worry about the financial side of my higher education. I could focus entirely on my admission process while they handled the loan hassle."
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer5.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Ananya Patel</p>
+                            <p class="userTitle">University of British Columbia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "This platform transformed the way I approach web development. The guidance was exceptional and helped me secure admission to my dream university."
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer6.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Avirush Kr</p>
+                            <p class="userTitle">Co-Founder at XYZ</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="testimonial-indicators">
+            <div class="testimonial-indicator active-indicator" onclick="goToTestimonial(0)"></div>
+            <div class="testimonial-indicator ellipse" onclick="goToTestimonial(1)"></div>
+            <div class="testimonial-indicator" onclick="goToTestimonial(2)"></div>
+        </div>
+
+    </section>
+
+     <script>
+        let currentTestimonialSlide = 0;
+        const totalTestimonials = 5;
+
+        function getCardsPerView() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth <= 768) return 1; // mobile
+            if (screenWidth <= 1024) return 2; // tablet
+            return 3; // desktop
+        }
+
+        function getMaxSlides() {
+            const cardsPerView = getCardsPerView();
+            return Math.max(1, totalTestimonials - cardsPerView + 1);
+        }
+
+        function nextTestimonial() {
+            const maxSlides = getMaxSlides();
+            currentTestimonialSlide = (currentTestimonialSlide + 1) % maxSlides;
+            updateTestimonialCarousel();
+        }
+
+        function prevTestimonial() {
+            const maxSlides = getMaxSlides();
+            currentTestimonialSlide = (currentTestimonialSlide - 1 + maxSlides) % maxSlides;
+            updateTestimonialCarousel();
+        }
+
+        function goToTestimonial(index) {
+            const maxSlides = getMaxSlides();
+            currentTestimonialSlide = Math.min(index, maxSlides - 1);
+            updateTestimonialCarousel();
+        }
+
+        function updateTestimonialCarousel() {
+            const carousel = document.getElementById('testimonialCarousel');
+            const indicators = document.querySelectorAll('.testimonial-indicator');
+            const cardsPerView = getCardsPerView();
+            
+            let translateX;
+            if (cardsPerView === 1) {
+                // mobile
+                translateX = currentTestimonialSlide * 100;
+            } else if (cardsPerView === 2) {
+                // tablet
+                translateX = currentTestimonialSlide * 100;
+            } else {
+                // desktop
+                translateX = currentTestimonialSlide * (100 / 3);
+            }
+            
+            carousel.style.transform = `translateX(-${translateX}%)`;
+            
+            // update indicators 
+            const maxSlides = getMaxSlides();
+            indicators.forEach((indicator, index) => {
+                const isActive = index === Math.min(currentTestimonialSlide, maxSlides - 1);
+                indicator.classList.toggle('active-indicator', isActive);
+            });
+        }
+
+        function updateIndicators() {
+            const indicatorContainer = document.querySelector('.testimonial-indicators');
+            const maxSlides = getMaxSlides();
+            
+            // clear existing indicators
+            indicatorContainer.innerHTML = '';
+            
+            // create new indicators based on max slides
+            for (let i = 0; i < Math.min(maxSlides, 3); i++) {
+                const indicator = document.createElement('div');
+                indicator.className = `testimonial-indicator ${i === 0 ? 'active-indicator' : ''} ${i === 1 ? 'ellipse' : ''}`;
+                indicator.onclick = () => goToTestimonial(i);
+                indicatorContainer.appendChild(indicator);
+            }
+        }
+
+        // auto slide
+        let autoSlideInterval;
+        function startAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(() => {
+                nextTestimonial();
+            }, 10000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        // handle window resize
+        window.addEventListener('resize', () => {
+            currentTestimonialSlide = 0;
+            updateIndicators();
+            updateTestimonialCarousel();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+
+        // stop auto-slide on hover
+        document.querySelector('.testimonial-carousel-container').addEventListener('mouseenter', stopAutoSlide);
+        document.querySelector('.testimonial-carousel-container').addEventListener('mouseleave', startAutoSlide);
+
+        // initialize on page load
+        window.addEventListener('load', () => {
+            updateIndicators();
+            updateTestimonialCarousel();
+            startAutoSlide();
+        });
+    </script>
+
+
+<!-- country-specific-loan-section -->
+
+<section class="countrySpecLoangit ">
+  <h2 class="countrySpecLoanHeader">Country-Specific Loan Requirements</h2>
+  <p class="countrySpecLoanPara">Learn what it takes to qualify for an education loan in different countries and find the best option for your study abroad journey.</p>
+
+  <!-- country tabbar -->
+  <div class="countryTabContainer">
+    <div class="countryTabs">
+      <div class="countryTab active" data-country="usa">USA</div>
+      <div class="countryTab" data-country="uk">UK</div>
+      <div class="countryTab" data-country="nz">New Zealand</div>
+      <div class="countryTab" data-country="germany">Germany</div>
+      <div class="countryTab" data-country="france">France</div>
+      <div class="countryTab" data-country="ireland">Ireland</div>
+      <div class="countryTab" data-country="canada">Canada</div>
+      <div class="countryTab" data-country="singapore">Singapore</div>
+    </div>
+  </div>
+
+  <!-- mobile carousel controls -->
+  <!-- <div class="countryCarouselControls">
+    <button class="countryTabNav left">&#8249;</button>
+    <button class="countryTabNav right">&#8250;</button>
+  </div> -->
+
+  <!-- country cards -->
+ <div class="countrySpecLoanCard" id="usa">
+    <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../images/loanHome/country/usa.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">USA</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      The USA offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="uk" style="display:none;">
+    <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../images/loanHome/country/uk.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">UK</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      The UK offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="nz" style="display:none;">
+     <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../images/loanHome/country/nz.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">New Zealand</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      New Zealand offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="germany" style="display:none;">
+     <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../images/loanHome/country/germany.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">Germany</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      Germany offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="france" style="display:none;">
+     <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../images/loanHome/country/france.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">France</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      France offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="ireland" style="display:none;">
+     <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../images/loanHome/country/ireland.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">Ireland</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      Ireland offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="canada" style="display:none;">
+     <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../images/loanHome/country/canada.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">Canada</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      Canada offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="singapore" style="display:none;">
+     <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="../images/loanHome/country/singapore.png" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">Singapore</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      Singapore offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".countryTab");
+  const tabContainer = document.querySelector(".countryTabs");
+  const cards = document.querySelectorAll(".countrySpecLoanCard");
+  // const leftBtn = document.querySelector(".countryTabNav.left");
+  // const rightBtn = document.querySelector(".countryTabNav.right");
+  let activeIndex = 0;
+
+  function setActiveTab(index) {
+    tabs.forEach(tab => tab.classList.remove("active"));
+    cards.forEach(card => (card.style.display = "none"));
+
+    tabs[index].classList.add("active");
+    const countryId = tabs[index].dataset.country;
+    document.getElementById(countryId).style.display = "block";
+    activeIndex = index;
+
+    tabs[index].scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest"
+    });
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      setActiveTab(index);
+    });
+  });
+
+  // leftBtn.addEventListener("click", () => {
+  //   const newIndex = (activeIndex - 1 + tabs.length) % tabs.length;
+  //   setActiveTab(newIndex);
+  // });
+
+  // rightBtn.addEventListener("click", () => {
+  //   const newIndex = (activeIndex + 1) % tabs.length;
+  //   setActiveTab(newIndex);
+  // });
+
+  setActiveTab(0);
+});
+
+</script>
+
+<!-- loan-option-section -->
+
+<section class="loanOptions">
+  <h2 class="loanOptionHeader">Choose Your Loan Option</h2>
+  <p class="loanOptionSubHeader">Compare loan options side by side to find the perfect fit for your financial situation</p>
+
+  <div class="loanOptionCards">
+
+    <!-- Card 1 -->
+    <div class="loanOptionCard">
+      <img src="../images/loanHome/loanOption/blue-two-head.png" alt="Icon" class="loanOptionIcon">
+      <h3 class="loanOptionCardHeader">Co-Signer Required</h3>
+      <p class="loanOptionCardSubHeader">Team Up for Better Terms</p>
+      <img src="../images/loanHome/loanOption/co-signer.jpg" alt="Loan Type" class="loanOptionCardImg">
+      <p class="loanOptionCardDesc">If you have a limited credit history, a co-signer with a strong credit profile can help you secure the loan. The co-signer will be responsible for repayment if you fail to pay.</p>
+      <button class="loanOptionBtn">Apply Now</button>
+    </div>
+
+    <!-- card 2 -->
+    <div class="loanOptionCard">
+      <img src="../images/loanHome/loanOption/pink-two-head.png" alt="Icon" class="loanOptionIcon">
+      <h3 class="loanOptionCardHeader">No Co-signer Required</h3>
+      <p class="loanOptionCardSubHeader">Go Solo with Independence</p>
+      <img src="../images/loanHome/loanOption/no-co-signer.jpg" alt="Loan Type" class="loanOptionCardImg">
+      <p class="loanOptionCardDesc">If you have a strong credit score or income, you may be able to apply for a loan without the need for a co-signer. This gives you the freedom to manage the loan on your own.</p>
+      <button class="loanOptionBtn">Apply Now</button>
+    </div>
+
+    <!-- card 3 -->
+    <div class="loanOptionCard">
+      <img src="../images/loanHome/loanOption/blue-two-head.png" alt="Icon" class="loanOptionIcon">
+      <h3 class="loanOptionCardHeader">Collateral Required</h3>
+      <p class="loanOptionCardSubHeader">Asset-Backed Security</p>
+      <img src="../images/loanHome/loanOption/collateral.jpg" alt="Loan Type" class="loanOptionCardImg">
+      <p class="loanOptionCardDesc">Some loan providers may require collateral (such as property, savings, or other assets) to secure the loan. This can help reduce the risk for the lender and may lead to better loan terms.</p>
+      <button class="loanOptionBtn">Apply Now</button>
+    </div>
+
+    <!-- card 4 -->
+    <div class="loanOptionCard">
+      <img src="../images/loanHome/loanOption/pink-two-head.png" alt="Icon" class="loanOptionIcon">
+      <h3 class="loanOptionCardHeader">Non - Collateral</h3>
+      <p class="loanOptionCardSubHeader">No Assets Required</p>
+      <img src="../images/loanHome/loanOption/non-collateral.jpg" alt="Loan Type" class="loanOptionCardImg">
+      <p class="loanOptionCardDesc">If you have a strong credit score or income, you may be able to apply for a loan without the need for a co-signer. This gives you the freedom to manage the loan on your own.</p>
+      <button class="loanOptionBtn">Apply Now</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- faq-section -->
+
+<section class="faqSection">
+  <h2 class="faqHeader">Frequently Asked Questions</h2>
+  <p class="faqSubHeader">Find answers to the most common questions about our loan services.</p>
+
+  <div class="faqCollapsibleContainer">
+
+  <div class="faqCollapsible">
+    <div class="faqCollapsibleHeading">
+      <span>Can I apply for a loan with a cosigner?</span>
+      <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+    </div>
+    <div class="faqCollapsibleDropdownDesc">
+      Yes, you can apply for a loan with a cosigner. A cosigner with a strong credit history can improve your chances of approval, especially if you have limited or no credit.
+    </div>
+  </div>
+
+  <!-- FAQ 2 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Can I get a study abroad loan without collateral?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Yes, unsecured education loans are available up to ₹7.5–40 lakhs (depending on lender and student profile).<br/>
+    However, interest rates may be higher compared to secured loans.
+  </div>
+</div>
+
+<!-- FAQ 3 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>What types of courses are eligible for an education loan abroad?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    • Undergraduate programs (Bachelors)<br/>
+    • Postgraduate programs (Masters, MBA, MS)<br/>
+    • Professional courses (Medicine, Engineering, Law)<br/>
+    • Diploma and certificate courses (in select cases)
+  </div>
+</div>
+
+<!-- FAQ 4 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>What is the difference between an education loan from banks vs NBFCs for studying abroad?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    • Banks: Lower interest rates, government subsidy schemes, but stricter rules and longer processing.<br/>
+    • NBFCs: Faster approval, flexible repayment, higher sanction amounts, but higher interest.
+  </div>
+</div>
+
+<!-- FAQ 5 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>How much loan amount can I get for studying abroad?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    • Up to ₹1.5 Cr with collateral-based loans.<br/>
+    • Unsecured loans generally range between ₹7.5 lakhs to ₹40 lakhs.<br/>
+    Loan amount depends on country, university ranking, and course expenses.
+  </div>
+</div>
+
+<!-- FAQ 6 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>What is an SOP for a study abroad loan?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    A Statement of Purpose (SOP) for a loan is a document where you explain:<br/>
+    • Why you want to study abroad<br/>
+    • Your career goals<br/>
+    • Your repayment plan after studies<br/>
+    A strong SOP can improve your chances of loan approval, especially for unsecured loans.
+  </div>
+</div>
+
+<!-- FAQ 7 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>How do I write a convincing SOP for an education loan?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    • Mention course details, university, and why you chose it.<br/>
+    • Highlight your academic and career achievements.<br/>
+    • Explain financial background and need for the loan.<br/>
+    • Show repayment capability (future job opportunities, salary expectations).
+  </div>
+</div>
+
+<!-- FAQ 8 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>What are the interest rates for overseas education loans?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    • Public banks: 9% – 12% (with collateral, can be lower).<br/>
+    • Private banks/NBFCs: 11% – 15% (unsecured).<br/>
+    • Female students may get concessions of 0.5%.
+  </div>
+</div>
+
+<!-- FAQ 9 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Do I need to show collateral for every study abroad loan?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    No. Collateral is mandatory only for secured loans.<br/>
+    For unsecured loans, income proof and credit history of the co-applicant are crucial.
+  </div>
+</div>
+
+<!-- FAQ 10 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Can I apply for a study abroad loan online?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Yes, most banks and NBFCs allow online applications.<br/>
+    You can check eligibility, upload documents, and get pre-approval digitally.
+  </div>
+</div>
+
+<!-- FAQ 11 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>How does the moratorium period work in an education loan abroad?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    The moratorium is a holiday period where you don’t need to repay EMIs.<br/>
+    It usually includes your course duration + 6–12 months after graduation.
+  </div>
+</div>
+
+<!-- FAQ 12 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Can I get a study abroad loan if my co-applicant has a low CIBIL score?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Yes, but lenders may reduce the loan amount, increase interest rates, or ask for collateral.<br/>
+    In such cases, NBFCs are often more flexible.
+  </div>
+</div>
+
+<!-- FAQ 13 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>What are the common reasons for education loan rejection?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    • Low academic performance<br/>
+    • Unrecognized university/course<br/>
+    • Weak financial background of co-applicant<br/>
+    • Poor CIBIL score<br/>
+    • Incomplete documentation
+  </div>
+</div>
+
+<!-- FAQ 14 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>How to improve chances of getting a study abroad loan approved?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    • Maintain a strong academic record.<br/>
+    • Apply to recognized and reputed universities.<br/>
+    • Arrange a financially stable co-applicant.<br/>
+    • Submit a detailed SOP for the loan.<br/>
+    • Provide collateral if possible.
+  </div>
+</div>
+
+<!-- FAQ 15 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Are there government schemes for study abroad loans?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Yes, schemes like Vidya Lakshmi Portal and Padho Pardesh (for minority students) provide subsidized interest rates and easy access to education loans.
+  </div>
+</div>
+
+<!-- FAQ 16 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Can I transfer my existing education loan to another lender?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Yes. Loan refinancing or balance transfer allows you to shift to a lender with lower interest rates or better repayment terms.
+  </div>
+</div>
+
+<!-- FAQ 17 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Can I get a study abroad loan if I don’t have an admission letter yet?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Some lenders provide in-principle sanction letters which can be used to strengthen your visa application.<br/>
+    Final loan disbursement needs admission proof.
+  </div>
+</div>
+
+<!-- FAQ 18 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Is health insurance covered in a study abroad loan?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Yes, most lenders include medical insurance, travel insurance, and visa-related expenses under the loan.
+  </div>
+</div>
+
+<!-- FAQ 19 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>How do lenders decide the education loan amount?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Loan amount is based on:<br/>
+    • University ranking and country<br/>
+    • Tuition + living cost<br/>
+    • Co-applicant’s financial profile<br/>
+    • Student’s academic record
+  </div>
+</div>
+
+<!-- FAQ 20 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Can I work part-time abroad to repay my education loan?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Yes, but repayment is expected primarily from post-study employment.<br/>
+    Some countries have restrictions on part-time work hours for international students.
+  </div>
+</div>
+
+<!-- FAQ 21 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Can I apply for a study abroad loan if my parents are retired?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Yes, but lenders may ask for another co-applicant with a steady income or collateral security. <br/>
+    Some NBFCs accept retired parents if there are strong collateral assets.
+  </div>
+</div>
+
+<!-- FAQ 22 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>What is the minimum percentage required to get an education loan for studying abroad?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Generally, students should have at least 55–60% marks in their last academic qualification. <br/>
+    However, for reputed universities, even average scores may be accepted if other factors (SOP, collateral, co-applicant) are strong.
+  </div>
+</div>
+
+<!-- FAQ 23 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Can I get a study abroad loan for diploma or short-term courses?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Yes, but most lenders prefer degree or professional courses. <br/>
+    Some NBFCs and private banks do provide loans for diplomas, vocational, and language programs abroad if the institute is recognized.
+  </div>
+</div>
+
+<!-- FAQ 24 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Can I apply for multiple education loans from different banks?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    You cannot take multiple loans for the same course, but you can apply to different banks/NBFCs to compare offers and choose the best one before finalizing.
+  </div>
+</div>
+
+<!-- FAQ 25 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>What happens if I am unable to repay my education loan abroad?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Defaulting affects both the student’s and co-applicant’s CIBIL score, <br/>
+    leading to legal action or collateral seizure (if applicable). <br/>
+    It also impacts future loan eligibility.
+  </div>
+</div>
+
+<!-- FAQ 26 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Can I get an education loan if I already have a personal loan or home loan?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Yes, but lenders will check your existing liabilities and repayment capacity. <br/>
+    Too many loans can reduce eligibility or increase interest rates.
+  </div>
+</div>
+
+<!-- FAQ 27 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Is GRE/GMAT/IELTS/TOEFL mandatory for study abroad loans?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Not mandatory for loans, but required for admission to certain universities. <br/>
+    If the course/university doesn’t demand these tests, banks/NBFCs generally do not insist on them.
+  </div>
+</div>
+
+<!-- FAQ 28 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Do banks provide foreign currency loans for studying abroad?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Yes. Many banks disburse loans in foreign currency directly to the university’s account to avoid conversion charges. <br/>
+    NBFCs also offer forex-based loans.
+  </div>
+</div>
+
+<!-- FAQ 29 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>What is the maximum repayment tenure for a study abroad loan?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Repayment tenure can go up to 15–20 years, depending on the lender, loan amount, and whether collateral is provided.
+  </div>
+</div>
+
+<!-- FAQ 30 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Can I get a study abroad loan if I have a gap year in my studies?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Yes, but lenders will ask for justification (SOP or explanation letter). <br/>
+    Strong reasons like preparing for entrance exams, internships, or work experience are acceptable.
+  </div>
+</div>
+
+
+  </div>
+
+</section>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const faqs = document.querySelectorAll(".faqCollapsible");
+
+  faqs.forEach(faq => {
+    const heading = faq.querySelector(".faqCollapsibleHeading");
+
+    heading.addEventListener("click", () => {
+      faq.classList.toggle("active");
+
+      const desc = faq.querySelector(".faqCollapsibleDropdownDesc");
+      if (faq.classList.contains("active")) {
+        desc.style.display = "block";
+      } else {
+        desc.style.display = "none";
+      }
+    });
+  });
+});
+
+</script>
+
+
+<!-- contact-form -->
+
+
+<section class="contactFormSection">
+  <h2 class="contactFormHeader">Contact Study Befikar</h2>
+  <p class="contactFormSubHeader">Have questions about your student loan? Our team is here to help you every step of the way.
+</p>
+
+  <div class="contactFormContainer">
+    <form id="contactForm">
+      
+      <!-- fullname -->
+       <label for="contactFormName">Full Name</label>
+      <input type="text" id="contactFormFullName" placeholder="Enter your full name" required />
+
+      <!-- Email + Phone -->
+     <div class="contactFormRow">
+
+      <div class="contactFormEmailContainer">
+         <label for="contactFormEmail" >Email Address</label>
+        <input type="email" id="contactFormEmail" placeholder="Enter your email address" required />
+      </div>
+
+      <div class="contactFormPhnNoContainer">
+        <label for="contactFormPhnNo" >Phone Number</label>
+        <input type="tel" id="contactFormPhnNo" placeholder="Enter your Phone Number" required />
+      </div>
+
+      </div>
+
+
+      <!-- Type of Loan -->
+       <label for="contactFormTypeOfLoan" >Type of Loan</label>
+      <select id="contactFormTypeOfLoan" title="type-of-loan" required>
+        <option value="">Select a destination</option>
+        <option value="education">Education Loan</option>
+        <option value="home">Home Loan</option>
+        <option value="personal">Personal Loan</option>
+      </select>
+
+      <!-- Query -->
+       <label for="contactFormQuery" >Query</label>
+      <textarea id="contactFormQuery" placeholder="Let us know how we can help you....." required></textarea>
+
+      <!-- Button -->
+      <button type="submit" class="contactFormBtn">Request Consultation</button>
+    </form>
+    
+  </div>
+</section>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault(); 
+
+  let fullName = document.getElementById("contactFormFullName").value.trim();
+  let email = document.getElementById("contactFormEmail").value.trim();
+  let phone = document.getElementById("contactFormPhnNo").value.trim();
+  let loanType = document.getElementById("contactFormTypeOfLoan").value;
+  let query = document.getElementById("contactFormQuery").value.trim();
+
+  if (!fullName || !email || !phone || !loanType || !query) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  alert("Form submitted successfully!");
+  this.reset(); 
+});
+</script>
+
+
+
+
+<!-- footer-section -->
+
+ <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1: Logo + About + Social Icons -->
+            <div class="footer-col footer-about">
+                <img src="../Images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="../Images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="../Images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="../Images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="../Images/Home/footer/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- Column 2: Services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="#">Education Loans</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 3: Study Destinations -->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="#">USA</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">UK</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 4: Contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>info@studybefikar.com</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+
+
+
+<!-- chatbot-section -->
+
+<button class="chatbot-toggler">
+    <span class="material-symbols-rounded">mode_comment</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <div class="chatbot">
+    <header>
+      <h2>Chatbot</h2>
+      <span class="close-btn material-symbols-outlined">close</span>
+    </header>
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Hi there 👋<br />Can i get your Name and Email?</p>
+      </li>
+    </ul>
+    <div class="chat-input">
+      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+      <span id="send-btn" class="material-symbols-rounded">send</span>
+    </div>
+  </div>
+
+<div id="chatbot-container"></div>
+
+<script>
+   
+    document.addEventListener('DOMContentLoaded', function() {
+    
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', toggleDropdown);
+      });
+    });
+  
+    //chatbot
+const chatbotToggler = document.querySelector(".chatbot-toggler");
+const closeBtn = document.querySelector(".close-btn");
+const chatbox = document.querySelector(".chatbox");
+const chatInput = document.querySelector(".chat-input textarea");
+const sendChatBtn = document.querySelector(".chat-input span");
+
+let userMessage = null; // Variable to store user's message
+const inputInitHeight = chatInput.scrollHeight;
+
+// Define the question flow structure
+const questionFlow = {
+  start: "What service can we assist you with today? \n 1) Loan \n 2) Test Prepration \n 3) Visa \n 4) Admission Counselling \n4) Profile Evaluation",
+  options: {
+    Loan: {
+      question: "Which Currency do you want to take Loan in?\n 1) Dollar \n 2) Rupees ",
+      responses: {
+        Dollar: "We can assist with Dollar loans. Lets get more Details?\n Which Degree do you want to pursue?",
+        Rupees: "We can assist with personal loans. What is the loan amount you're looking for?"},
+        "nextQuestion": {
+        "question": "Do you have a co-signer?",
+        "options": {
+          "1": "Business",
+          "2": "Education",
+          "3": "Other"
+        },
+        "responses": {
+          "Business": "Great! Let's discuss terms for a business loan in Dollar.",
+          "Education": "Sure! Let's explore education loan options in Dollar.",
+          "Other": "Got it! We'll help you find a suitable Dollar loan for your needs."
+        }
+      }
+    },
+    "Rupees": {
+      "message": "We can assist with personal loans. What is the loan amount you're looking for?",
+      "nextQuestion": {
+        "question": "What is the tenure of the loan?",
+        "options": {
+          "1": "1-3 years",
+         "2": "3-5 years",
+          "3": "More than 5 years"
+        },
+        "responses": {
+          "1-3 years": "Short-term loans are a great choice for flexibility.",
+          "3-5 years": "Mid-term loans offer a balance between affordability and tenure.",
+          "More than 5 years": "Long-term loans provide lower monthly payments over time."
+        }
+      }
+    }
+  
+},
+    "Test Prep": {
+      question: "Which test are you preparing for? (GRE/GMAT/SAT)",
+      responses: {
+        GRE: "We offer GRE coaching. Would you like to know about our courses?",
+        GMAT: "We offer GMAT coaching. Would you like to know about our courses?",
+        SAT: "We offer SAT coaching. Would you like to know about our courses?",
+      },
+    },
+    Admission: {
+      question: "Which level of admission are you seeking? (Undergraduate/Postgraduate)",
+      responses: {
+        Undergraduate: "We assist with undergraduate admissions. Do you have a target country in mind?",
+        Postgraduate: "We assist with postgraduate admissions. Do you have a target program in mind?",
+      },
+    },
+    "Profile Evaluation": {
+      question: "Are you looking for a detailed profile evaluation for admissions or career guidance?",
+      responses: {
+        Admissions: "Please share your academic and extracurricular details for evaluation.",
+        Career: "Please share your work experience and career aspirations for evaluation.",
+      },
+    },
+    Visa: {
+      question: "Which type of visa are you applying for? (Student/Work/Tourist)",
+      responses: {
+        Student: "We assist with student visas. Have you received your admission letter?",
+        Work: "We assist with work visas. Do you have an employer's sponsorship?",
+        Tourist: "We assist with tourist visas. Do you have travel dates planned?",
+      },
+    },
+  };
+
+let currentStep = "start";
+let currentSection = null;
+
+const createChatLi = (message, className) => {
+  const chatLi = document.createElement("li");
+  chatLi.classList.add("chat", className);
+  const chatContent =
+    className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+  chatLi.innerHTML = chatContent;
+  chatLi.querySelector("p").textContent = message;
+  return chatLi;
+};
+
+const generateResponse = (chatElement) => {
+  const messageElement = chatElement.querySelector("p");
+
+  if (currentStep === "start") {
+    // Initial question
+    messageElement.textContent = questionFlow.start;
+    currentStep = "options";
+  } else if (currentStep === "options") {
+    // Options for services
+    const optionKeys = Object.keys(questionFlow.options);
+    if (optionKeys.includes(userMessage)) {
+      currentSection = userMessage;
+      messageElement.textContent = questionFlow.options[currentSection].question;
+      currentStep = "responses";
+    } else {
+      messageElement.textContent = "Please select a valid option: Loan, Test Prep, Admission, Profile Evaluation, Visa.";
+    }
+  } else if (currentStep === "responses") {
+    const responses = questionFlow.options[currentSection].responses;
+    if (responses[userMessage]) {
+      messageElement.textContent = responses[userMessage];
+      currentStep = "completed";
+    } else {
+      messageElement.textContent = `Please select a valid option for ${currentSection}.`;
+    }
+  } else {
+    // End of conversation
+    messageElement.textContent = "Thank you for chatting with us!";
+  }
+
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+};
+
+const handleChat = () => {
+  userMessage = chatInput.value.trim(); // Get user entered message
+  if (!userMessage) return;
+
+  // Clear the input textarea and set its height to default
+  chatInput.value = "";
+  chatInput.style.height = `${inputInitHeight}px`;
+
+  // Append the user's message to the chatbox
+  chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+
+  setTimeout(() => {
+    // Generate response based on current step and user message
+    const incomingChatLi = createChatLi("Thinking...", "incoming");
+    chatbox.appendChild(incomingChatLi);
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+    generateResponse(incomingChatLi);
+  }, 600);
+};
+
+chatInput.addEventListener("input", () => {
+  chatInput.style.height = `${inputInitHeight}px`;
+  chatInput.style.height = `${chatInput.scrollHeight}px`;
+});
+
+chatInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+    e.preventDefault();
+    handleChat();
+  }
+});
+
+sendChatBtn.addEventListener("click", handleChat);
+closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+    function toggleNavbar() {
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+
+    function toggleDropdown(event) {
+      const dropdown = event.currentTarget;
+      dropdown.classList.toggle('active');
+    }
+    const buttons = document.querySelectorAll(".button-container button");
+    const contents = document.querySelectorAll(".content-container");
+  
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Remove 'active' class from all buttons and contents
+        buttons.forEach(btn => btn.classList.remove("active"));
+        contents.forEach(content => content.classList.remove("active"));
+  
+        // Add 'active' class to clicked button and corresponding content
+        button.classList.add("active");
+        const contentId = button.id.replace("btn-", "content-");
+        document.getElementById(contentId).classList.add("active");
+      });
+    });
+    function switchContent(sectionId) {
+      // Remove active class from all buttons
+      document.querySelectorAll('.button').forEach(button => button.classList.remove('active'));
+
+      // Add active class to clicked button
+      document.querySelector(`.button[onclick="switchContent('${sectionId}')"]`).classList.add('active');
+
+      // Hide all content sections
+      document.querySelectorAll('.content').forEach(content => content.classList.remove('active'));
+
+      // Show the selected content section
+      document.getElementById(sectionId).classList.add('active');
+    }
+
+</script>
+
+<script>
+  window.addEventListener("load", function() {
+    // reset scroll
+    setTimeout(() => window.scrollTo(0, 0), 0);
+
+    // prevent autofocus scroll
+    if (document.activeElement && document.activeElement.blur) {
+      document.activeElement.blur();
+    }
+  });
+</script>
+
+
+</body>
+</html>

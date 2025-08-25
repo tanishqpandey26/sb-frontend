@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Design</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+
+</head> 
+<body>
+
+
+  
+        <!--NavBar Section-->
+        <nav class="navbar">
+          <div class="navbar-left">
+            <img src="../images/Home/study-befikar1.png" alt="Logo" class="logo">
+          </div>
+          <ul class="navbar-right" id="mobileNav">
+        
+            <li class="dropdown">
+              <a href="#">Countries</a>
+              <ul class="dropdown-content">
+                <li><a href="usa.html">USA</a></li>
+                <li><a href="#">UK</a></li>
+                <li><a href="#">Canada</a></li>
+                <li><a href="#">Germany</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Loan</a>
+              <ul class="dropdown-content">
+                <li><a href="../Loan/loanHome.html">Check Eligibility</a></li>
+                <li><a href="../Loan/bankdetail.html">Available Banks</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Admission Counselling</a>
+              <ul class="dropdown-content">
+                <li><a href="index.html">Admission Process</a></li>
+                <li><a href="book-consultation.html">Book Consultation</a></li>
+                <li><a href="#">Application Deadline</a></li>
+                <li><a href="#">University Finder</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Test Preparation</a>
+              <ul class="dropdown-content">
+                <li><a href="#">Test Prep Services</a></li>
+                <li><a href="#">Prepare for Exam</a></li>
+                <li><a href="#">Take a Mock Test</a></li>
+                <li><a href="#">Exam Deadlines</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">All Exams</a>
+              <ul class="dropdown-content">
+                <li><a href="#">SAT</a></li>
+                <li><a href="#">GMAT</a></li>
+                <li><a href="#">GRE</a></li>
+                <li><a href="#">IELTS</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Services</a>
+              <ul class="dropdown-content">
+                <li><a href="#">All Services</a></li>
+                <li><a href="#">Visa Assistance</a></li>
+                <li><a href="#">Profile Evaluation</a></li>
+                <li><a href="#">Apply to University</a></li>
+              </ul>
+            </li>
+        
+            <li><a href="#" class="dropdown">Notice Board</a></li>
+            <li><a href="#" class="dropdown">About Us</a></li>
+            <li><a href="#" class="dropdown">Contact Us</a></li>
+        
+            <li><a href="signup.html" class="contact-btn">Login</a></li>
+          </ul>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </nav>
+        
+        <br/><br/><br/><br/>
+
+        <script>
+          const btn = document.getElementById('mobileMenuBtn');
+          const nav = document.getElementById('mobileNav');
+
+          btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+          });
+        </script>
+        
+        <script>
+          const dropdowns = document.querySelectorAll('.dropdown');
+
+          dropdowns.forEach(dropdown => {
+            let wasClicked = false;
+            const link = dropdown.querySelector('a');
+
+            // Toggle on click
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+
+              const isOpen = dropdown.classList.contains('open');
+
+              // Close all dropdowns
+              dropdowns.forEach(d => {
+                d.classList.remove('open');
+                d.dataset.clicked = "false";
+              });
+
+              if (!isOpen) {
+                dropdown.classList.add('open');
+                dropdown.dataset.clicked = "true";
+              }
+            });
+
+            // Hover to open (desktop only)
+            dropdown.addEventListener('mouseenter', () => {
+              if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                dropdown.classList.add('open');
+              }
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+              if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                dropdown.classList.remove('open');
+              }
+            });
+          });
+
+          // Close on outside click
+          document.addEventListener('click', (e) => {
+            dropdowns.forEach(dropdown => {
+              if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+                dropdown.dataset.clicked = "false";
+              }
+            });
+          });
+        </script>
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+            const links = document.querySelectorAll(".navbar-right a");
+
+            links.forEach(link => {
+              const linkPath = link.getAttribute("href").split("/").pop();
+
+              if (linkPath === currentPath) {
+                // Highlight the clicked link
+                link.classList.add("active");
+
+                // Also highlight parent if inside dropdown
+                const parentDropdown = link.closest(".dropdown");
+                if (parentDropdown) {
+                  const parentLink = parentDropdown.querySelector(":scope > a");
+                  if (parentLink) parentLink.classList.add("active");
+                }
+              }
+            });
+          });
+        </script>
+
+
+<!--Hero Section-->
+
+ <section class="heroSection">
+      <div class="heroContent">
+        <div class="imageColumn">
+          <img src="../images/Home/herosection/heroimg.png" alt="Hero Image" class="heroImage" />
+
+          <!-- Overlapping Boxes -->
+          <div class="infoBox consultantsBox">
+            <img src="../images/Home/herosection/heads.png" alt="Icon" />
+            <span>500+ Verified Consultants</span>
+          </div>
+
+          <div class="infoBox countriesBox">
+            <img src="../images/Home/herosection/heads.png" alt="Icon" />
+            <span>18+ Countries Covered</span>
+          </div>
+        </div>
+
+        <div class="textColumn">
+          <div class="trustBadge">
+            <img src="../images/Home/herosection/star.png" alt="Icon" /> Trusted by 10,000+ Students
+          </div>
+          <h1>Welcome to <span class="highlight">Study Befikar</span></h1>
+          <p>
+            Empowering students to confidently plan their study abroad journey
+            with expert guidance and personalized support.
+          </p>
+
+          <div class="heroButtons">
+            <button class="primaryBtn"  id="openModalBtn">Start your journey →</button>
+            <button class="secondaryBtn">Book Consultation</button>
+          </div>
+          
+          <!-- Modal -->
+          <div id="serviceModal" class="modal">
+            <div class="modal-content">
+              <!-- Left Side: Image -->
+              <div class="modal-left">
+                <img src="../images/Home/herosection/modal-img.jpg" alt="Services" />
+              </div>
+          
+              <!-- Right Side: Content -->
+              <div class="modal-right">
+                <button class="close">&times;</button>
+                <h2>Please choose one of our services</h2>
+                <button class="service-btn">Loan Services</button>
+                <button class="service-btn">Admission Counseling</button>
+                <button class="service-btn">Test Preparation</button>
+                <button class="service-btn">Book Consultation</button>
+              </div>
+            </div>
+          </div>
+
+          <script>
+           document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("serviceModal");
+  const openBtn = document.getElementById("openModalBtn");
+  const modalCloseBtn = document.querySelector("#serviceModal .close");
+
+  openBtn.onclick = () => {
+    modal.style.display = "flex";
+  };
+  modalCloseBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+  window.onclick = (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+});
+
+          </script>
+
+
+          <div class="hero-divider"></div>
+
+          <div class="testimonial">
+            <img src="../images/Home/herosection/group-ppl.png" alt="Students" />
+            <span>We've served over 500+ students across 18 countries!</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scrolling Banner -->
+      <div class="scrollingBanner">
+        <div class="scrollWrapper">
+          <div class="scrollText">
+            <span>
+              Check all university deadlines and latest scholarship updates in
+              our notice board section •
+            </span>
+            <span>
+              Check all university deadlines and latest scholarship updates in
+              our notice board section •
+            </span>
+            <span>
+              Check all university deadlines and latest scholarship updates in
+              our notice board section •
+            </span>
+          </div>
+        </div>
+      </div>
+
+ </section>
+
+<!-- why choose us section -->
+
+ <section class="whySection">
+    <div class="headingContent">
+      <h2 class="heading">Why Choose Us</h2>
+      <p class="subheading">India’s first digital marketplace for study abroad students</p>
+    </div>
+
+    <div class="gridContainer" id="cardGrid">
+    </div>
+  </section>
+
+
+  <script>
+    const cardData = [
+      {
+        icon: "../images/Home/whychooseus/frame18-ppl.png",
+        title: "All Consultants in One Place",
+        desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
+      },
+      {
+        icon: "../images/Home/whychooseus/frame18-star.png",
+        title: "Top Profile Evaluators in India",
+        desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
+      },
+      {
+        icon: "../images/Home/whychooseus/frame18-building.png",
+        title: "Find Best Banks & Low Interest Rates",
+        desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
+      },
+      {
+        icon: "../images/Home/whychooseus/frame18-docs.png",
+        title: "Send Documents in One Click",
+        desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
+      }
+    ];
+
+    const arrowIcon = "../images/Home/whychooseus/right-arrow.png";
+
+    const cardGrid = document.getElementById("cardGrid");
+
+    cardData.forEach(card => {
+      const cardEl = document.createElement("div");
+      cardEl.className = "card";
+
+      cardEl.innerHTML = `
+        <div class="cardContent">
+          <img src="${card.icon}" alt="icon" class="icon" />
+          <h3 class="cardTitle">${card.title}</h3>
+          <p class="cardDesc">${card.desc}</p>
+          <div class="buttonGroup">
+            <button class="exploreBtn">
+              <span class="exploreText">Explore</span>
+              <img src="${arrowIcon}" alt="arrow" />
+            </button>
+            <button class="knowMoreBtn">
+              <span class="knowMoreText">Know More</span>
+            </button>
+            <button class="bookNowBtn">
+              <span class="bookNowText">Book Now</span>
+            </button>
+          </div>
+        </div>
+      `;
+
+      cardGrid.appendChild(cardEl);
+    });
+  </script>
+
+
+
+<!-- services section  -->
+
+<section class="servicesSection">
+  <h2 class="heading">Our Services</h2>
+  <p class="subtext">
+    From choosing the right university to securing a student visa, Study Befikar provides end-to-end guidance tailored to your needs.
+  </p>
+
+  
+<div class="toggleButtons">
+  <button class="toggleBtn active" onclick="setActiveTab('test')">Test Preparation</button>
+  <button class="toggleBtn inactive" onclick="setActiveTab('admission')">Admission Counselling</button>
+  <button class="toggleBtn inactive" onclick="setActiveTab('loan')">Loan</button>
+  <div class="service-divider"></div>
+</div>
+
+  <div id="tabContent"></div>
+
+</section>
+
+<script>
+  let activeTab = "test";
+  let currentSlide = 0;
+
+  const content = {
+  test: {
+    heading: "Test Preparation",
+    text: `Preparing for standardized tests like TOEFL, IELTS, GRE, or GMAT? Study Befikar provides expert guidance, study materials, and mock tests to help you ace your exams and reach your dream university. Our personalized approach ensures you get the right prep at the right time.`,
+    images: [
+      { src: "../images/Home/test/toefl.jpg", alt: "TOEFL" },
+      { src: "../images/Home/test/ielts.png", alt: "IELTS" },
+      { src: "../images/Home/test/gmat.png", alt: "GMAT" },
+    ]
+  },
+
+ admission: {
+    heading: "Admission Counsulting",
+    text: `At Study Befikar, our Admission Consulting is designed to simplify your entire study abroad journey, from personalized profile evaluations to final application submission. We guide you every step of the way. Explore our countries.`,
+
+    countries: [
+    {
+      name: "United States of America",
+      desc: "Top universities and career opportunities.",
+      countryImg: "../images/Home/country/usa.png",
+      countrySpecificImg: "../images/Home/country/usa1.png"
+    },
+
+    {
+      name: "United Kingdom",
+      desc: "Shorter programs and globally ranked schools.",
+      countryImg: "../images/Home/country/uk.png",
+      countrySpecificImg: "../images/Home/country/uk1.jpg"
+    },
+
+    {
+      name: "New Zealand",
+      desc: "High-quality education with natural beauty.",
+      countryImg: "../images/Home/country/nz.png",
+      countrySpecificImg: "../images/Home/country/nz1.jpg"
+    },
+
+    {
+      name: "Germany",
+      desc: "Free or low-tuition education.",
+      countryImg: "../images/Home/country/germany.png",
+      countrySpecificImg: "../images/Home/country/germany1.jpg"
+    },
+
+    {
+      name: "France",
+      desc: "Quality education and lifestyle.",
+      countryImg: "../images/Home/country/france.png",
+      countrySpecificImg: "../images/Home/country/france1.png"
+    },
+
+    {
+      name: "Canada",
+      desc: "Affordable education with great PR prospects.",
+      countryImg: "../images/Home/country/canada.png",
+      countrySpecificImg: "../images/Home/country/canada1.png"
+    },
+
+    {
+      name: "Ireland",
+      desc: "Post-study work and job-rich economy.",
+      countryImg: "../images/Home/country/ireland.png",
+      countrySpecificImg: "../images/Home/country/ireland1.png"
+    },
+
+    {
+      name: "Singapore",
+      desc: "Top student cities with vibrant culture.",
+      countryImg: "../images/Home/country/singapore.png",
+      countrySpecificImg: "../images/Home/country/singapore1.png"
+    },
+  ],
+
+     admConsult: {
+  heading: "Our Admission Consulting Process",
+  subheading: "A comprehensive approach to guide you through every step of your educational journey",
+  cards: [
+    {
+      number: 1,
+      heading: "Profile Evaluation",
+      subheading: "Get a personalized assessment of your academic and career background to identify best-fit universities."
+    },
+    {
+      number: 2,
+      heading: "University Shortlisting",
+      subheading: "Receive a curated list of universities tailored to your goals, preferences, and profile."
+    },
+    {
+      number: 3,
+      heading: "Application Support",
+      subheading: "End-to-end guidance for preparing documents, filling forms, and submitting strong applications."
+    },
+    {
+      number: 4,
+      heading: "Visa Assistance",
+      subheading: "Expert help to ensure a smooth and stress-free visa process, from documentation to interviews."
+    }
+  ]
+},
+  },
+
+ loan: {
+  heading: "Education Loans",
+  text: "Financing your education abroad is easier with Study Befikar. We help you find the best loan options, guide you through the application process, and ensure you get the lowest interest rates. From eligibility checks to document submission, we've got you covered.",
+
+  cards: [
+    {
+      bg: "#FDF0F4",
+      heading: "Affordable Study Abroad Loans With No Hidden Costs",
+      subheading: "At Study Befikar, we believe students should never be burdened by hidden costs or complicated loan processes. That’s why we offer a transparent, student-first approach to education financing.",
+      doublet:"../images/Home/loan/double-tick-pink.png" ,
+      points: [
+        "100% transparent process, no hidden charges or surprise fees",
+        "Absolutely free for students, no service charges or consultation fees",
+        "Seamless loan experience, fast, simple, and stress-free",
+        "Focus on your future, we handle the details so you can focus on your education",
+        "Trusted by thousands, a platform built on trust, reliability, and student-first values"
+      ],
+      image: "../images/Home/loan/loan1.png"
+    },
+
+    {
+      bg: "#FFF6E1",
+      heading: "Hassle-Free Loan Application For Study Abroad",
+      subheading: "Eliminate the stress of complicated loan applications with our hassle-free process. We make financing your study abroad journey smooth and worry-free:",
+      doublet:"../images/Home/loan/double-tick-yellow.png" ,
+      points: [
+        "Simple and fast loan application process",
+        "Customized loan offers tailored to your needs",
+        "No impact on your credit score when exploring options",
+        "We handle the paperwork and follow-ups for you",
+        "Focus on your education while we manage the rest"
+      ],
+      image: "../images/Home/loan/loan2.png"
+    },
+
+    {
+      bg: "#E4F7FA",
+      heading: "Best Interest Rates For Study Abroad Loans",
+      subheading: "Access the best study abroad loan rates with Study Befikar, where we connect you with leading public and private lenders around the world. Our goal is to make your education more affordable and stress-free",
+      doublet:"../images/Home/loan/double-tick-blue.png" ,
+      points: [
+        "Best interest rates tailored to your profile",
+        "Wide network of top public and private lenders",
+        "Flexible repayment options to suit your needs",
+        "Personalized loan matching for maximum savings",
+        "Affordable financing that makes studying abroad accessible"
+      ],
+      image: "../images/Home/loan/loan3.png"
+    },
+
+    {
+      bg: "#E9EDFF",
+      heading: "Transparency with Study Befikar: No Gimmicks, Just Clarity",
+      subheading: "At Study Befikar, we prioritize transparency at every step of your study abroad loan journey. No gimmicks, just clear, honest support to help you make confident decisions",
+      doublet:"../images/Home/loan/double-tick-dblue.png" ,
+      points: [
+        "View real, pre-qualified loan rates tailored to your profile",
+        "No misleading offers or hidden conditions",
+        "Full clarity on interest rates, repayment terms, and timelines",
+        "Empowering you with honest information to choose the best loan",
+        "Confidence and control throughout your financial planning"
+      ],
+      image: "../images/Home/loan/loan4.png"
+    }
+  ],
+
+}
+
+};
+
+ function getImagesPerView() {
+    const width = window.innerWidth;
+    if (width <= 768) return 1;
+    if (width <= 1024) return 2;
+    return 2;
+  }
+
+  function setActiveTab(tab) {
+    activeTab = tab;
+    currentSlide = 1;
+
+    document.querySelectorAll('.toggleBtn').forEach(btn => {
+      btn.classList.remove('active');
+      btn.classList.add('inactive');
+    });
+
+    const activeButton = Array.from(document.querySelectorAll('.toggleBtn')).find(btn =>
+      btn.textContent.toLowerCase().includes(tab)
+    );
+    if (activeButton) {
+      activeButton.classList.add('active');
+      activeButton.classList.remove('inactive');
+    }
+
+    const tabData = content[tab];
+
+  
+   //admission
+   if (tab === "admission") {
+      const isMobile = window.innerWidth <= 768;
+      const maxVisible = isMobile ? 4 : 8;
+
+      const admissionHTML = `
+      
+        <div class="Servicecard">
+          <h3 class="cardHeading">${tabData.heading}</h3>
+          <p class="cardText">${tabData.text}</p>
+          <div class="admissionGrid">
+            ${tabData.countries.map((country, i) => `
+              <div class="admissionCard ${isMobile && i >= maxVisible ? 'hiddenCard' : ''}">
+                <div class="countryImgWrapper">
+                  <img src="${country.countryImg}" class="countryImg" alt="${country.name} Flag" />
+                </div>
+                <img src="${country.countrySpecificImg}" class="countrySpecificImg" alt="${country.name}" />
+                <div class="countryNameLabel">${country.name}</div>
+                <div class="hoverContent">
+                  <h4>${country.name}</h4>
+                  <p>${country.desc}</p>
+                  <button class="visitCountry">
+                    Explore <img src="../Images/Home/country/right-arrow.png" alt="Arrow" />
+                  </button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+          ${isMobile ? `<button id="viewMoreBtn" onclick="toggleViewMore()">View More</button>` : ''}
+        </div>
+
+        <!-- admission consulting -->
+<div class="admConsultOuter">
+  <div class="admConsultWrapper">
+    <h3 class="admConsultHeading">${tabData.admConsult.heading}</h3>
+    <p class="admConsultSubheading">${tabData.admConsult.subheading}</p>
+
+    <div class="admConsultGrid">
+      ${tabData.admConsult.cards.map(card => `
+        <div class="admConsultCard flash">
+          <div class="cardNumber">${card.number}</div>
+          <h4 class="cardTitle">${card.heading}</h4>
+          <p class="cardDesc">${card.subheading}</p>
+        </div>
+      `).join('')}
+    </div>
+  </div>
+</div>
+
+      `;
+
+      document.getElementById("tabContent").innerHTML = admissionHTML;
+      return;
+    }
+
+    
+    //loan
+    if (tab === "loan") {
+      const loanHTML = `
+        <h3 class="cardHeading">${tabData.heading}</h3>
+        <p class="cardText">${tabData.text}</p>
+        <div class="loanCardsContainer">
+          ${tabData.cards.map((card, i) => `
+            <div class="loanCard card-${i + 1}" style="background: ${card.bg}">
+              <div class="loanCardInner ${i % 2 === 0 ? 'normal' : 'reverse'}">
+                <div class="loanTextColumn">
+                  <h4 class="loanCardHeading">${card.heading}</h4>
+                  <p class="loanCardSubheading">${card.subheading}</p>
+                  <ul class="loanCardList">
+                    ${card.points.map(point => `
+                      <li><img src="${card.doublet}" alt="${card.heading}" /> ${point}</li>
+                    `).join('')}
+                  </ul>
+                </div>
+                <div class="loanImageColumn">
+                  <img src="${card.image}" alt="${card.heading}" />
+                </div>
+              </div>
+            </div>
+          `).join('')}
+          <div class="scrollingBankBanner">
+            <div class="scrollBankWrapper">
+              <div class="scrollImg">
+                ${Array(6).fill('<span><img src="../Images/Home/loan/bank.png" alt="Bank Partners Banner" /></span>').join('    ')}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      document.getElementById("tabContent").innerHTML = loanHTML;
+      return;
+    }
+
+    const cardHTML = `
+      <div class="Servicecard">
+        <h3 class="cardHeading">${tabData.heading}</h3>
+        <p class="cardText">${tabData.text}</p>
+        <div class="carousel-container">
+          <div class="imageSlider" id="imageSlider">
+            ${tabData.images.map(img => `
+              <div class="imageWrapper">
+                <img src="${img.src}" alt="${img.alt}" />
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+      <div class="service-indicators" id="serviceIndicators">
+  <div class="service-indicator active-service-indicator" onclick="goToServiceSlide(0)"></div>
+  <div class="service-indicator ellipse" onclick="goToServiceSlide(1)"></div>
+  <div class="service-indicator" onclick="goToServiceSlide(1)"></div>
+</div>
+    `;
+    document.getElementById("tabContent").innerHTML = cardHTML;
+    updateCarousel();
+    updateServiceIndicators();
+  }
+
+    // <div class="service-indicators" id="serviceIndicators">
+    //       ${tabData.images.map((_, i) => `
+    //         <div class="service-indicator ${i === 0 ? 'active-service-indicator' : ''} ${i === 1 ? 'ellipse' : ''}" onclick="goToServiceSlide(${i})"></div>
+    //       `).join('')}
+    //     </div>
+    //   </div>
+
+  function toggleViewMore() {
+    const hiddenCards = document.querySelectorAll('.hiddenCard');
+    hiddenCards.forEach(card => card.classList.remove('hiddenCard'));
+    const btn = document.getElementById('viewMoreBtn');
+    if (btn) btn.style.display = 'none';
+  }
+
+  function goToServiceSlide(index) {
+    const totalImages = content[activeTab].images.length;
+    const imagesPerView = getImagesPerView();
+    const maxSlide = Math.max(0, totalImages - imagesPerView);
+    currentSlide = Math.min(index, maxSlide);
+    updateCarousel();
+    updateServiceIndicators();
+  }
+
+  function updateCarousel() {
+    const slider = document.getElementById('imageSlider');
+    const totalImages = content[activeTab].images.length;
+    const imagesPerView = getImagesPerView();
+    const maxSlide = Math.max(0, totalImages - imagesPerView);
+    currentSlide = Math.min(currentSlide, maxSlide);
+    const shiftPercent = 100 / imagesPerView;
+
+    if (slider) {
+      slider.style.transform = `translateX(-${currentSlide * shiftPercent}%)`;
+    }
+
+    updateServiceIndicators();
+  }
+
+  // function updateServiceIndicators() {
+  //   const indicators = document.querySelectorAll('.service-indicator');
+  //   indicators.forEach((indicator, index) => {
+  //     indicator.classList.toggle('active-service-indicator', index === currentSlide);
+  //   });
+  // }
+
+  function updateServiceIndicators() {
+  const indicators = document.querySelectorAll('.service-indicator');
+  indicators.forEach((indicator, index) => {
+    // if index is 2 (rightmost), treat it as slide 1 (same as ellipse)
+    const slideIndex = index === 2 ? 1 : index;
+    indicator.classList.toggle('active-service-indicator', slideIndex === currentSlide);
+  });
+}
+
+
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      updateCarousel();
+      updateServiceIndicators();
+      if (activeTab === "admission") {
+        setActiveTab("admission");
+      }
+    }, 150);
+  });
+
+  window.onload = () => setActiveTab(activeTab);
+</script>
+
+
+<!-- testimonial-section -->
+
+
+ <section class="testimonialSection">
+        <h2 class="testimonialHeading">Our Happy Stories!</h2>
+        <p class="testimonialSubtext">
+            Success stories from students who achieved their dreams of studying abroad.
+        </p>
+
+        <div class="testimonial-carousel-container">
+            <div class="testimonialCarousel" id="testimonialCarousel">
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "Study Befikar made my dream of studying in Canada a reality. Their loan guidance was clear, transparent, and stress-free. I never thought financing my education could be this smooth!"
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Avirush Kr</p>
+                            <p class="userTitle">University of Toronto</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "The team guided me through every step — from comparing loan options to preparing my SOP. I secured funding within two weeks and felt fully confident throughout the process."
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer2.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Siddhesh C Borhade</p>
+                            <p class="userTitle">New York University</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "I had no idea how to apply for a study abroad loan, but Study Befikar explained everything patiently. Their support during the moratorium period questions was outstanding."
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer3.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Tirth Shah</p>
+                            <p class="userTitle">University of Melbourne</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "What I loved most was their honesty. They didn’t just push me towards one lender, but helped me choose the best loan for my profile. Highly recommend their services!"
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer4.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Karan Singh</p>
+                            <p class="userTitle">London School of Economics</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "Thanks to Study Befikar, I didn’t have to worry about the financial side of my higher education. I could focus entirely on my admission process while they handled the loan hassle."
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer5.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Ananya Patel</p>
+                            <p class="userTitle">University of British Columbia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "This platform transformed the way I approach web development. The guidance was exceptional and helped me secure admission to my dream university."
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer6.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Avirush Kr</p>
+                            <p class="userTitle">Co-Founder at XYZ</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="testimonial-indicators">
+            <div class="testimonial-indicator active-indicator" onclick="goToTestimonial(0)"></div>
+            <div class="testimonial-indicator ellipse" onclick="goToTestimonial(1)"></div>
+            <div class="testimonial-indicator" onclick="goToTestimonial(2)"></div>
+        </div>
+
+    </section>
+
+     <script>
+        let currentTestimonialSlide = 0;
+        const totalTestimonials = 5;
+
+        function getCardsPerView() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth <= 768) return 1; // mobile
+            if (screenWidth <= 1024) return 2; // tablet
+            return 3; // desktop
+        }
+
+        function getMaxSlides() {
+            const cardsPerView = getCardsPerView();
+            return Math.max(1, totalTestimonials - cardsPerView + 1);
+        }
+
+        function nextTestimonial() {
+            const maxSlides = getMaxSlides();
+            currentTestimonialSlide = (currentTestimonialSlide + 1) % maxSlides;
+            updateTestimonialCarousel();
+        }
+
+        function prevTestimonial() {
+            const maxSlides = getMaxSlides();
+            currentTestimonialSlide = (currentTestimonialSlide - 1 + maxSlides) % maxSlides;
+            updateTestimonialCarousel();
+        }
+
+        function goToTestimonial(index) {
+            const maxSlides = getMaxSlides();
+            currentTestimonialSlide = Math.min(index, maxSlides - 1);
+            updateTestimonialCarousel();
+        }
+
+        function updateTestimonialCarousel() {
+            const carousel = document.getElementById('testimonialCarousel');
+            const indicators = document.querySelectorAll('.testimonial-indicator');
+            const cardsPerView = getCardsPerView();
+            
+            let translateX;
+            if (cardsPerView === 1) {
+                // mobile
+                translateX = currentTestimonialSlide * 100;
+            } else if (cardsPerView === 2) {
+                // tablet
+                translateX = currentTestimonialSlide * 100;
+            } else {
+                // desktop
+                translateX = currentTestimonialSlide * (100 / 3);
+            }
+            
+            carousel.style.transform = `translateX(-${translateX}%)`;
+            
+            // update indicators 
+            const maxSlides = getMaxSlides();
+            indicators.forEach((indicator, index) => {
+                const isActive = index === Math.min(currentTestimonialSlide, maxSlides - 1);
+                indicator.classList.toggle('active-indicator', isActive);
+            });
+        }
+
+        function updateIndicators() {
+            const indicatorContainer = document.querySelector('.testimonial-indicators');
+            const maxSlides = getMaxSlides();
+            
+            // clear existing indicators
+            indicatorContainer.innerHTML = '';
+            
+            // create new indicators based on max slides
+            for (let i = 0; i < Math.min(maxSlides, 3); i++) {
+                const indicator = document.createElement('div');
+                indicator.className = `testimonial-indicator ${i === 0 ? 'active-indicator' : ''} ${i === 1 ? 'ellipse' : ''}`;
+                indicator.onclick = () => goToTestimonial(i);
+                indicatorContainer.appendChild(indicator);
+            }
+        }
+
+        // auto slide
+        let autoSlideInterval;
+        function startAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(() => {
+                nextTestimonial();
+            }, 10000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        // handle window resize
+        window.addEventListener('resize', () => {
+            currentTestimonialSlide = 0;
+            updateIndicators();
+            updateTestimonialCarousel();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+
+        // stop auto-slide on hover
+        document.querySelector('.testimonial-carousel-container').addEventListener('mouseenter', stopAutoSlide);
+        document.querySelector('.testimonial-carousel-container').addEventListener('mouseleave', startAutoSlide);
+
+        // initialize on page load
+        window.addEventListener('load', () => {
+            updateIndicators();
+            updateTestimonialCarousel();
+            startAutoSlide();
+        });
+    </script>
+
+
+<!-- footer-section -->
+
+ <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1: Logo + About + Social Icons -->
+            <div class="footer-col footer-about">
+                <img src="../images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="../images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="../images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="../images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="../images/Home/footer/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- Column 2: Services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="#">Education Loans</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 3: Study Destinations -->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="#">USA</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">UK</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 4: Contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>info@studybefikar.com</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+
+
+<!-- chatbot-section -->
+
+  <button class="chatbot-toggler">
+    <span class="material-symbols-rounded">mode_comment</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <div class="chatbot">
+    <header>
+      <h2>Chatbot</h2>
+      <span class="close-btn material-symbols-outlined">close</span>
+    </header>
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Hi there 👋<br />Can i get your Name and Email?</p>
+      </li>
+    </ul>
+    <div class="chat-input">
+      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+      <span id="send-btn" class="material-symbols-rounded">send</span>
+    </div>
+  </div>
+
+<div id="chatbot-container"></div>
+
+<script>
+   
+    document.addEventListener('DOMContentLoaded', function() {
+    
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', toggleDropdown);
+      });
+    });
+  
+    //chatbot
+const chatbotToggler = document.querySelector(".chatbot-toggler");
+const closeBtn = document.querySelector(".close-btn");
+const chatbox = document.querySelector(".chatbox");
+const chatInput = document.querySelector(".chat-input textarea");
+const sendChatBtn = document.querySelector(".chat-input span");
+
+let userMessage = null; // Variable to store user's message
+const inputInitHeight = chatInput.scrollHeight;
+
+// Define the question flow structure
+const questionFlow = {
+  start: "What service can we assist you with today? \n 1) Loan \n 2) Test Prepration \n 3) Visa \n 4) Admission Counselling \n4) Profile Evaluation",
+  options: {
+    Loan: {
+      question: "Which Currency do you want to take Loan in?\n 1) Dollar \n 2) Rupees ",
+      responses: {
+        Dollar: "We can assist with Dollar loans. Lets get more Details?\n Which Degree do you want to pursue?",
+        Rupees: "We can assist with personal loans. What is the loan amount you're looking for?"},
+        "nextQuestion": {
+        "question": "Do you have a co-signer?",
+        "options": {
+          "1": "Business",
+          "2": "Education",
+          "3": "Other"
+        },
+        "responses": {
+          "Business": "Great! Let's discuss terms for a business loan in Dollar.",
+          "Education": "Sure! Let's explore education loan options in Dollar.",
+          "Other": "Got it! We'll help you find a suitable Dollar loan for your needs."
+        }
+      }
+    },
+    "Rupees": {
+      "message": "We can assist with personal loans. What is the loan amount you're looking for?",
+      "nextQuestion": {
+        "question": "What is the tenure of the loan?",
+        "options": {
+          "1": "1-3 years",
+         "2": "3-5 years",
+          "3": "More than 5 years"
+        },
+        "responses": {
+          "1-3 years": "Short-term loans are a great choice for flexibility.",
+          "3-5 years": "Mid-term loans offer a balance between affordability and tenure.",
+          "More than 5 years": "Long-term loans provide lower monthly payments over time."
+        }
+      }
+    }
+  
+},
+    "Test Prep": {
+      question: "Which test are you preparing for? (GRE/GMAT/SAT)",
+      responses: {
+        GRE: "We offer GRE coaching. Would you like to know about our courses?",
+        GMAT: "We offer GMAT coaching. Would you like to know about our courses?",
+        SAT: "We offer SAT coaching. Would you like to know about our courses?",
+      },
+    },
+    Admission: {
+      question: "Which level of admission are you seeking? (Undergraduate/Postgraduate)",
+      responses: {
+        Undergraduate: "We assist with undergraduate admissions. Do you have a target country in mind?",
+        Postgraduate: "We assist with postgraduate admissions. Do you have a target program in mind?",
+      },
+    },
+    "Profile Evaluation": {
+      question: "Are you looking for a detailed profile evaluation for admissions or career guidance?",
+      responses: {
+        Admissions: "Please share your academic and extracurricular details for evaluation.",
+        Career: "Please share your work experience and career aspirations for evaluation.",
+      },
+    },
+    Visa: {
+      question: "Which type of visa are you applying for? (Student/Work/Tourist)",
+      responses: {
+        Student: "We assist with student visas. Have you received your admission letter?",
+        Work: "We assist with work visas. Do you have an employer's sponsorship?",
+        Tourist: "We assist with tourist visas. Do you have travel dates planned?",
+      },
+    },
+  };
+
+let currentStep = "start";
+let currentSection = null;
+
+const createChatLi = (message, className) => {
+  const chatLi = document.createElement("li");
+  chatLi.classList.add("chat", className);
+  const chatContent =
+    className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+  chatLi.innerHTML = chatContent;
+  chatLi.querySelector("p").textContent = message;
+  return chatLi;
+};
+
+const generateResponse = (chatElement) => {
+  const messageElement = chatElement.querySelector("p");
+
+  if (currentStep === "start") {
+    // Initial question
+    messageElement.textContent = questionFlow.start;
+    currentStep = "options";
+  } else if (currentStep === "options") {
+    // Options for services
+    const optionKeys = Object.keys(questionFlow.options);
+    if (optionKeys.includes(userMessage)) {
+      currentSection = userMessage;
+      messageElement.textContent = questionFlow.options[currentSection].question;
+      currentStep = "responses";
+    } else {
+      messageElement.textContent = "Please select a valid option: Loan, Test Prep, Admission, Profile Evaluation, Visa.";
+    }
+  } else if (currentStep === "responses") {
+    const responses = questionFlow.options[currentSection].responses;
+    if (responses[userMessage]) {
+      messageElement.textContent = responses[userMessage];
+      currentStep = "completed";
+    } else {
+      messageElement.textContent = `Please select a valid option for ${currentSection}.`;
+    }
+  } else {
+    // End of conversation
+    messageElement.textContent = "Thank you for chatting with us!";
+  }
+
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+};
+
+const handleChat = () => {
+  userMessage = chatInput.value.trim(); // Get user entered message
+  if (!userMessage) return;
+
+  // Clear the input textarea and set its height to default
+  chatInput.value = "";
+  chatInput.style.height = `${inputInitHeight}px`;
+
+  // Append the user's message to the chatbox
+  chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+
+  setTimeout(() => {
+    // Generate response based on current step and user message
+    const incomingChatLi = createChatLi("Thinking...", "incoming");
+    chatbox.appendChild(incomingChatLi);
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+    generateResponse(incomingChatLi);
+  }, 600);
+};
+
+chatInput.addEventListener("input", () => {
+  chatInput.style.height = `${inputInitHeight}px`;
+  chatInput.style.height = `${chatInput.scrollHeight}px`;
+});
+
+chatInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+    e.preventDefault();
+    handleChat();
+  }
+});
+
+sendChatBtn.addEventListener("click", handleChat);
+closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+    function toggleNavbar() {
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+
+    function toggleDropdown(event) {
+      const dropdown = event.currentTarget;
+      dropdown.classList.toggle('active');
+    }
+    const buttons = document.querySelectorAll(".button-container button");
+    const contents = document.querySelectorAll(".content-container");
+  
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Remove 'active' class from all buttons and contents
+        buttons.forEach(btn => btn.classList.remove("active"));
+        contents.forEach(content => content.classList.remove("active"));
+  
+        // Add 'active' class to clicked button and corresponding content
+        button.classList.add("active");
+        const contentId = button.id.replace("btn-", "content-");
+        document.getElementById(contentId).classList.add("active");
+      });
+    });
+    function switchContent(sectionId) {
+      // Remove active class from all buttons
+      document.querySelectorAll('.button').forEach(button => button.classList.remove('active'));
+
+      // Add active class to clicked button
+      document.querySelector(`.button[onclick="switchContent('${sectionId}')"]`).classList.add('active');
+
+      // Hide all content sections
+      document.querySelectorAll('.content').forEach(content => content.classList.remove('active'));
+
+      // Show the selected content section
+      document.getElementById(sectionId).classList.add('active');
+    }
+
+</script>
+
+
+</body>
+</html>

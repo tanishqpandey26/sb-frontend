@@ -1,0 +1,566 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans';
+}
+
+
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* sidebar */
+.sideBar {
+  width: 249px;
+  background-color: #FAFAFA;
+  color: #000;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  gap: 37px;
+}
+
+.sideBarContent {
+  width: 217px;
+  text-align: center;
+}
+
+
+.sideBar img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 37px;
+}
+
+.sideBarNavs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  gap: 6px;
+  text-decoration: none;
+  color: #000;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.sideBarNavs a {
+  height: 40px;
+  text-decoration: none;
+  color:#424242;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;   
+  align-items: center;
+}
+
+.sideBarNavs a svg {
+ margin-right: 10px;
+}
+
+.sideBarNavs a.active {
+  background: #287781;
+  color:#fff;
+}
+
+
+.dropdownNav {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+/* dropdown */
+
+.dropdownMenu {
+  display: none;
+  flex-direction: column;
+  margin-left: 20px;
+  border-left: 2px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.dropdownMenu a {
+  padding: 8px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  color:#424242;
+}
+
+.dropdownMenu a.active {
+  background: #59898E33;
+  color: #424242;
+}
+
+
+.dropdownNav.open .dropdownMenu {
+  display: flex;
+}
+
+
+
+/* mobile/tablet topbar */
+.mobileTopBar {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  background: #FAFAFA;
+  padding: 10px 20px;
+  color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+}
+
+.mobileTopBar img {
+   width: 66px;
+  height: 56px;
+}
+
+.mobile-menu-btn {
+  font-size: 24px;
+  padding: 8px 12px;
+  background: transparent;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .dashboardContainer {
+    flex-direction: column;
+  }
+
+  .sideBar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .sideBarContent {
+  width: 100%;
+   margin-top: 15%;
+}
+
+  .sideBar.active {
+    transform: translateX(0);
+  }
+
+  .sideBar img {
+  display: none;
+}
+
+  .dashboardElements {
+    width: 100%;
+  }
+
+    .mobile-menu-btn {
+    display: block;
+  }
+  
+  .mobileTopBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+  }
+
+  .mobileTopBar img.userImg {
+    margin-left: 300px;  
+  }
+  
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .mobileTopBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+
+  .mobileBtnWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1px; 
+  }
+
+}
+
+
+/* dashboard elements */
+
+.dashboardElements {
+  width: 100%;
+}
+
+
+/* header */
+
+.loanHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #f8f9fa; 
+  border-bottom: 0.2px solid #424242;
+  box-shadow: 0px 4px 4px 0px #0000001A;
+  position: sticky; 
+  top: 0;
+  z-index: 10;
+  height: 84px;
+}
+
+
+.loanTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #424242;
+  margin: 0;
+}
+
+
+.logoutBtn {
+  background: #287781; 
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 119px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .loanHeader {
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #f8f9fa; 
+  border-bottom: 1px solid #ddd;
+  position: sticky; 
+  top: 0;
+  z-index: 10;
+  }
+
+  .loanTitle {
+    font-size: 1.25rem;
+  }
+
+  .logoutBtn {
+    padding: 10px;
+  }
+}
+
+
+
+.bankwiseContainer {
+  padding: 20px;
+  background: #fff;
+}
+
+
+.bankwiseTopLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bankwiseHeader {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.bankwiseActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.bankSelectBtn {
+  background: #fff;
+  color: #287781;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+
+.viewAllDropdown {
+  position: relative;
+}
+
+.viewAllBtn {
+  background: #fff;
+  color: #424242;
+  border: 0.5px solid #287781;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.viewAllMenu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 10;
+}
+.viewAllMenu a {
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.viewAllMenu a:hover {
+  background: #59898E33;
+  color:#287781;
+}
+.viewAllDropdown.open .viewAllMenu {
+  display: flex;
+}
+
+
+.bankwiseCardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.bankwiseCard {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.bankwiseCard:hover {
+  transform: translateY(-5px);
+}
+
+.bankwiseCardImg {
+  max-width: 80px;
+}
+.bankwiseCount {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #333;
+}
+.bankwiseCardSubHeader {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+
+@media (max-width: 768px) {
+  .bankwiseCardContainer {
+    grid-template-columns: 1fr; 
+  }
+  .bankwiseHeader {
+    font-size: 1.25rem;
+  }
+  .bankSelectBtn,
+  .viewAllBtn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+
+
+
+
+/* footer */
+
+
+.footer {
+    background-color: #092A2E;
+    padding: 60px 2% 30px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1320px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-about {
+    flex: 2.5;
+    max-width: none;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+
+.footer-about p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-col h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 22px;
+    color: #ffffff;
+}
+
+.footer-col p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-col.contact-col {
+    min-width: 300px;
+    max-width: 350px;
+}
+
+.footer-col:not(.footer-about) {
+    margin-left: -5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials img {
+    width: 48px;
+    height: 48px;
+}
+
+
+.footer-line {
+    border: none;
+    border-top: 1px solid #ffffff44;
+    margin: 40px auto 20px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+.footer-right-columns {
+    display: flex;
+    gap: 40px;
+    margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-right-columns {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .footer-col {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.footer-col ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 100%;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #4ED0E1;
+}
+
+ 
