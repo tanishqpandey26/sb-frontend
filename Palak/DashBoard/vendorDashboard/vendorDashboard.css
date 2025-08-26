@@ -31,8 +31,8 @@ body {
 
 
 .sideBar img {
-  width: 90px;
-  height: 90px;
+  width: 66px;
+  height: 56px;
   margin-bottom: 37px;
 }
 
@@ -71,43 +71,30 @@ body {
 }
 
 
-.dropdownNav {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Dropdown menu */
 .dropdownMenu {
   display: none;
   flex-direction: column;
   margin-left: 20px;
   border-left: 2px solid #ddd;
-  padding-left: 10px;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 .dropdownMenu a {
   padding: 8px 10px;
-  font-size: 14px;
+  font-size: 10px;
+  font-weight: 600;
+  color:#424242;
 }
 
 .dropdownMenu a.active {
-  background: #dce8ff;
-  color: #0040aa;
+  background: #59898E33;
+  color: #424242;
 }
 
-/* Show dropdown when active */
+
 .dropdownNav.open .dropdownMenu {
   display: flex;
-}
-
-/* hierarchy line */
-.hierarchyLine {
-  position: absolute;
-  left: 28px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #ddd;
 }
 
 

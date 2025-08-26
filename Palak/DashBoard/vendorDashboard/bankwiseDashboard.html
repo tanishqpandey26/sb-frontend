@@ -222,14 +222,14 @@ window.addEventListener('popstate', () => {
  <!-- bank-wise-overview -->
 
   <section class="bankwiseContainer">
-  <!-- Top Label -->
+  
   <div class="bankwiseTopLabel">
     <h2 class="bankwiseHeader">Bank-Wise Overview</h2>
     <div class="bankwiseActions">
-      <!-- Button -->
+      
       <button class="bankSelectBtn">Select Bank</button>
 
-      <!-- Dropdown -->
+     
       <div class="viewAllDropdown">
         <button class="viewAllBtn">View All ▾</button>
         <div class="viewAllMenu">
@@ -245,11 +245,12 @@ window.addEventListener('popstate', () => {
           <a href="#" data-bank="IDFC">IDFC</a>
         </div>
       </div>
+      
     </div>
   </div>
 
 
-  <!-- Card Container -->
+  
   <div class="bankwiseCardContainer">
 
     <!-- card 1 -->
@@ -295,6 +296,7 @@ window.addEventListener('popstate', () => {
     </div>
 
   </div>
+  
 </section>
 
 
@@ -337,40 +339,40 @@ window.addEventListener('popstate', () => {
     <div class="filterTabSection">
       <span class="filterLabel">Filter by</span>
 
-      <div class="filterTabsWrapper">
-        <div class="filterTabs">
+     <div class="filterTabsWrapper">
+  <div class="filterTabs">
 
-          <div class="filterTab">
-            <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/calendar.png" alt="">
-            <span>Intake</span>
-          </div>
+    <button class="filterTab">
+      <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/calendar.png" alt="">
+      <span>Intake</span>
+    </button>
 
-          <div class="filterTab">
-            <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/sort.png" alt="">
-            <span>Intake</span>
-          </div>
+    <button class="filterTab">
+      <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/sort.png" alt="">
+      <span>Program</span>
+    </button>
 
-          <div class="filterTab">
-            <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/sort.png" alt="">
-            <span>Intake</span>
-          </div>
+    <button class="filterTab">
+      <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/sort.png" alt="">
+      <span>University</span>
+    </button>
 
-          <div class="filterTab">
-            <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/sort.png" alt="">
-            <span>Country</span>
-          </div>
+    <button class="filterTab">
+      <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/sort.png" alt="">
+      <span>Country</span>
+    </button>
 
-          <div class="filterTab">
-            <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/sort.png" alt="">
-            <span>Year</span>
-          </div>
+    <button class="filterTab">
+      <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/sort.png" alt="">
+      <span>Year</span>
+    </button>
 
-          <button class="applyFilterBtn">Apply Filter</button>
-          <button class="clearFilterBtn">Clear Filter</button>
+    <button class="applyFilterBtn">Apply Filter</button>
+    <button class="clearFilterBtn">Clear Filter</button>
 
-        </div>
+  </div>
+</div>
 
-      </div>
       
     </div>
 
@@ -643,6 +645,7 @@ syntheticData.forEach(item => {
 </script>
 
 
+
 <script>
   // filter tab 
   const filterTabs = document.querySelectorAll(".filterTab");
@@ -664,29 +667,6 @@ syntheticData.forEach(item => {
 
     
   </div>
-
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const tabButtons = document.querySelectorAll(".tabBtn");
-  const tabContents = document.querySelectorAll(".tabContent");
-
-  tabButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      // remove active classes
-      tabButtons.forEach(b => b.classList.remove("active"));
-      tabContents.forEach(c => c.classList.remove("active"));
-
-      // add active to clicked
-      btn.classList.add("active");
-      const targetId = btn.getAttribute("data-target");
-      document.querySelector(`.${targetId}`).classList.add("active");
-    });
-  });
-});
-
-</script>
 
 
   </div>

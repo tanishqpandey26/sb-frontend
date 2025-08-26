@@ -69,7 +69,7 @@ function getCurrentPage() {
 
   const pageMap = {
     'vendorDashboard': 'dashboard',
-    'loanDashboard': 'loans',    // ✅ add loanDashboard mapping
+    'loanDashboard': 'loans',    
     'bankwiseDashboard': 'bankwise',
     'studentDetailDashboard': 'student',
     'misDashboard': 'mis',
@@ -214,36 +214,281 @@ window.addEventListener('popstate', () => {
   <div class="dashboardElements">
     
     <!-- header -->
-<header class="loanHeader">
-  <h1 class="loanTitle">Loan Panel</h1>
-  <button class="logoutBtn">Logout</button>
-</header>
+      <header class="loanHeader">
+        <h1 class="loanTitle">Student Loan Dashboard</h1>
+        <button class="logoutBtn">Logout</button>
+      </header>
 
+    <!-- topLabel -->
+    <div class="studentDetailTopLabelSection">
+      <div class="studentDetailTopLabelContainer">
+
+    <div class="viewAllDropdown">
+      <button class="viewAllBtn">Search by ▾</button>
+
+      <div class="viewAllMenu">
+        <button href="#" data-bank="Search By">Search By</button>
+        <button href="#" data-bank="All">All</button>
+        <button href="#" data-bank="Student ID">Student ID</button>
+      </div>
+
+    </div>
+
+
+    <div class="searchBox">
+      <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/search.png" alt="search">
+      <input type="text" placeholder="Search...">
+    </div>
+
+    <button class="searchBtn">Search</button>
+
+    <button class="clearFilterBtn">Clear Filter</button>
+
+    </div>
+  </div>
+
+   <!-- studentDetailSection -->
+   <section class="studentDetailSection">
+
+    <div class="studentDetailSectionContainer">
+
+    <div class="studentDetailCard">
+      <p class="studentID"><strong>Student ID:</strong> <span>809</span></p>
+      <p class="studentName"><strong>Student Name:</strong><span>Shaun Suhaas Alagala</span></p>
+      <p class="studentEmail"><strong>Student Email:</strong><span>shaunsuhaasa.edu2025@gmail.com</span></p>
+    </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- studentDetailTableSection  -->
+
+<div class="studentDetailTableSection">
+
+   <div class="studentTableWrapper">
+    <table class="studentTable">
+      <thead>
+        <tr>
+          <th>BANK APP ID</th>
+          <th>CURRENCY</th>
+          <th>BANK</th>
+          <th>LOAN AMOUNT</th>
+          <th>INTAKE</th>
+          <th>LOGIN</th>
+          <th>PENDENCY</th>
+          <th>STATUS</th>
+          <th>PF</th>
+          <th>DISBURSED</th>
+          <th>SANCTION AMT</th>
+          <th>COLLATERAL</th>
+          <th>COURSE</th>
+          <th>UNIVERSITY</th>
+          <th>COUNTRY</th>
+          <th>MAIL SENT</th>
+        </tr>
+      </thead>
+
+      <tbody id="bankTableBody">
+        
+      </tbody>
+
+    </table>
+  </div>
+
+</div>
+
+
+<script>
+const syntheticData = [
+  {
+    bankappid: "NIL",
+    currency:"₹",
+    bank: "Avanse",
+    loanAmount: "₹3800000.0",
+    intake: "Fall 2025",
+    login: "No",
+    pendency:"NIL",
+    status: "Pending",
+    pf:"No",
+    disbursed: "No",
+    sanctionAmount: "₹0",
+    collateral:"Non-Collateral",
+    course: "Others",
+    university: "NYU",
+    country: "USA",
+    mailSent: "NIL"
+  },
+  
+    {
+    bankappid: "NIL",
+    currency:"₹",
+    bank: "Avanse",
+    loanAmount: "₹3800000.0",
+    intake: "Fall 2025",
+    login: "No",
+    pendency:"NIL",
+    status: "Pending",
+    pf:"No",
+    disbursed: "No",
+    sanctionAmount: "₹0",
+    collateral:"Non-Collateral",
+    course: "Others",
+    university: "NYU",
+    country: "USA",
+    mailSent: "NIL"
+  },
+
+    {
+    bankappid: "NIL",
+    currency:"₹",
+    bank: "Avanse",
+    loanAmount: "₹3800000.0",
+    intake: "Fall 2025",
+    login: "No",
+    pendency:"NIL",
+    status: "Pending",
+    pf:"No",
+    disbursed: "No",
+    sanctionAmount: "₹0",
+    collateral:"Non-Collateral",
+    course: "Others",
+    university: "NYU",
+    country: "USA",
+    mailSent: "NIL"
+  },
+
+    {
+    bankappid: "NIL",
+    currency:"₹",
+    bank: "Avanse",
+    loanAmount: "₹3800000.0",
+    intake: "Fall 2025",
+    login: "No",
+    pendency:"NIL",
+    status: "Pending",
+    pf:"No",
+    disbursed: "No",
+    sanctionAmount: "₹0",
+    collateral:"Non-Collateral",
+    course: "Others",
+    university: "NYU",
+    country: "USA",
+    mailSent: "NIL"
+  },
+
+    {
+    bankappid: "NIL",
+    currency:"₹",
+    bank: "Avanse",
+    loanAmount: "₹3800000.0",
+    intake: "Fall 2025",
+    login: "No",
+    pendency:"NIL",
+    status: "Pending",
+    pf:"No",
+    disbursed: "No",
+    sanctionAmount: "₹0",
+    collateral:"Non-Collateral",
+    course: "Others",
+    university: "NYU",
+    country: "USA",
+    mailSent: "NIL"
+  },
+
+    {
+    bankappid: "NIL",
+    currency:"₹",
+    bank: "Avanse",
+    loanAmount: "₹3800000.0",
+    intake: "Fall 2025",
+    login: "No",
+    pendency:"NIL",
+    status: "Pending",
+    pf:"No",
+    disbursed: "No",
+    sanctionAmount: "₹0",
+    collateral:"Non-Collateral",
+    course: "Others",
+    university: "NYU",
+    country: "USA",
+    mailSent: "NIL"
+  },
+];
+
+// data into table
+const tbody = document.getElementById("bankTableBody");
+
+syntheticData.forEach(item => {
+  const tr = document.createElement("tr");
+
+  const statusClass =
+    item.status === "Pending"
+      ? "status-pending"
+      : item.status === "Active"
+      ? "status-active"
+      : "status-completed";
+
+  tr.innerHTML = `
+    <td>${item.bankappid}</td>
+    <td>${item.currency}</td>
+    <td>${item.bank}</td>
+    <td>${item.loanAmount}</td>
+    <td>${item.intake}</td>
+    <td>${item.login}</td>
+    <td>${item.pendency}</td>
+    <td><span class="status-badge ${statusClass}">${item.status}</span></td>
+    <td>${item.pf}</td>
+    <td>${item.disbursed}</td>
+    <td>${item.sanctionAmount}</td>
+    <td>${item.collateral}</td>
+    <td>${item.course}</td>
+    <td>${item.university}</td>
+    <td>${item.country}</td>
+    <td>${item.mailSent}</td>
+  `;
+
+  tbody.appendChild(tr);
+});
+</script>
     
   </div>
 
 
-
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const tabButtons = document.querySelectorAll(".tabBtn");
-  const tabContents = document.querySelectorAll(".tabContent");
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdown = document.querySelector('.viewAllDropdown');
+  const btn = dropdown.querySelector('.viewAllBtn');
+  const menu = dropdown.querySelector('.viewAllMenu');
 
-  tabButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      // remove active classes
-      tabButtons.forEach(b => b.classList.remove("active"));
-      tabContents.forEach(c => c.classList.remove("active"));
+  // Toggle dropdown
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('open');
+  });
 
-      // add active to clicked
-      btn.classList.add("active");
-      const targetId = btn.getAttribute("data-target");
-      document.querySelector(`.${targetId}`).classList.add("active");
+  // Handle option click
+  menu.querySelectorAll('a').forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      const bank = item.getAttribute('data-bank');
+      btn.textContent = bank + " ▾"; 
+      dropdown.classList.remove('open');
+
+      console.log("Selected Bank:", bank);
     });
   });
-});
 
+
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+    }
+  });
+});
 </script>
+
 
 
   </div>

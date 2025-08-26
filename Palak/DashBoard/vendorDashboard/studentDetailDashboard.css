@@ -31,8 +31,8 @@ body {
 
 
 .sideBar img {
-  width: 90px;
-  height: 90px;
+  width: 66px;
+  height:56px;
   margin-bottom: 37px;
 }
 
@@ -223,7 +223,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
-  background: #f8f9fa; 
+  background: #fff; 
   border-bottom: 0.2px solid #424242;
   box-shadow: 0px 4px 4px 0px #0000001A;
   position: sticky; 
@@ -247,7 +247,8 @@ body {
   border: none;
   padding: 10px;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
   transition: background 0.3s ease;
   width: 119px;
@@ -256,8 +257,6 @@ body {
 }
 
 
-
-/* Responsive Styling */
 @media (max-width: 768px) {
   .loanHeader {
    display: flex;
@@ -277,6 +276,460 @@ body {
 
   .logoutBtn {
     padding: 10px;
+  }
+}
+
+
+
+/* topLabel */
+
+.studentDetailTopLabelSection {
+  width: 100%;
+  padding: 15px;
+  background: #fff;
+  
+}
+
+.studentDetailTopLabelContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+.viewAllDropdown {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+}
+
+.viewAllBtn {
+  background: #fff;
+  color: #424242;
+  border: 0.5px solid #287781;
+  border-radius: 8px;
+  padding: 9px 28px;
+  cursor: pointer;
+   font-size: 12px;
+  font-weight: 600;
+  width: 130px;
+  height: 34px;
+  margin-top: 20px;
+}
+.viewAllMenu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: #fff;
+  border: 0.1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  z-index: 10;
+  text-align: center;
+  width: 130px;
+}
+.viewAllMenu button {
+  padding: 10px;
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 10px;
+  color: #424242;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  height: 40px;
+  border: none;
+  background-color: #fff;
+}
+.viewAllMenu button:hover {
+  background: #59898E33;
+  color:#287781;
+}
+.viewAllDropdown.open .viewAllMenu {
+  display: flex;
+}
+
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0.5px solid #287781;
+  border-radius: 8px;
+  padding: 6px 12px;
+  background: #fff;
+  flex-shrink: 0;
+  height: 40px;
+  width: 58%;
+  margin-top: 15px;
+}
+
+.searchBox img {
+  width: 16px;
+  height: 16px;
+}
+
+.searchBox input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  flex: 1;
+  min-width: 120px;
+  font-size: 12px;
+  font-weight: 600;
+  color:#424242;
+}
+
+
+.searchBtn {
+  padding: 8px 15px;
+  background: #287781;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 12.5%;
+  height: 35px;
+  margin-top: 20px;
+}
+
+.searchBtn:hover {
+  background: #195057;
+}
+
+.clearFilterBtn {
+  padding: 8px 15px;
+  border: 1px solid #287781;
+  background: #fff;
+  color: #287781;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 12.5%;
+  height: 35px;
+  margin-top: 20px;
+}
+
+.clearFilterBtn:hover {
+  background: #f0f0f0;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+  .studentDetailTopLabelContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchByDropDown,
+  .searchBox,
+  .searchBtn,
+  .clearFilterBtn {
+    width: 100%;
+  }
+}
+
+
+
+/* student-detail */
+
+.studentDetailSection {
+  padding: 10px;
+  background: #fff;
+}
+
+.studentDetailSectionContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.studentDetailCard {
+  background: #fff;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 98px;
+}
+
+.studentID,
+.studentName,
+.studentEmail  {
+  margin: 20px 10px;
+}
+
+.studentDetailSection strong {
+  margin: 6px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color:#287781;
+  width: 66px;
+  height: 15px;
+}
+
+.studentID span,
+.studentName span,
+.studentEmail span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #414A53;
+  background-color: #EFF0F2;
+  padding: 0 6px 0;
+  width: 24px;
+  height: 15px;
+}
+
+
+@media (max-width: 600px) {
+  .studentDetailCard {
+    padding: 14px;
+  }
+  .studentName {
+    font-size: 15px;
+  }
+}
+
+
+
+/* studentTable */
+
+.studentDetailTableSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;          
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.bankOverviewTopLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px 15px;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+}
+
+
+.filterTabSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0; 
+}
+
+.filterLabel {
+  font-weight: 600;
+  font-size: 12px;
+  color:#287781;
+  white-space: nowrap;
+}
+
+.filterTabsWrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+  flex: 1;
+}
+
+.filterTabs {
+  display: flex;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.filterTab {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 0.5px solid #287781;
+  box-shadow: 0px 4px 15px 0px #292D320D;
+  padding: 5px 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+  background: #fff;
+  transition: background 0.2s ease;
+  font-weight: 600;
+  font-size: 12px;
+  color: #424242;
+  height: 36px;
+}
+
+
+.filterTab img {
+  width: 16px;
+  height: 16px;
+}
+
+.filterTab:hover {
+  background: #f5f5f5;
+}
+
+.filterTab.active {
+  background: #287781;
+  color: #fff;
+  border-color: #287781;
+  box-shadow: 0 0 8px rgba(25, 80, 87, 0.4);
+}
+
+.filterTab.active img {
+  filter: brightness(0) invert(1);
+}
+
+
+.applyFilterBtn{
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  color: #fff;
+  background-color: #287781;
+  white-space: nowrap;
+  box-shadow: 0px 4px 15px 0px #292D320D;
+}
+
+
+.clearFilterBtn {
+  padding: 10px 10px;
+  border-radius: 8px;
+  border: 0.5px solid #287781;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  background-color: #fff;
+  white-space: nowrap;
+  color: #424242;
+}
+
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0.5px solid #287781;
+  border-radius: 8px;
+  padding: 6px 12px;
+  background: #fff;
+  flex-shrink: 0;
+  height: 40px;
+}
+
+.searchBox img {
+  width: 16px;
+  height: 16px;
+}
+
+.searchBox input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  flex: 1;
+  min-width: 120px;
+  font-size: 12px;
+  font-weight: 600;
+  color:#424242;
+}
+
+
+@media (max-width: 768px) {
+  .bankOverviewTopLabel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .filterTabSection {
+    flex-wrap: nowrap;
+  }
+
+  .searchBox {
+    width: 100%;
+  }
+}
+
+
+
+
+/* bankOverview table */
+
+.studentTableWrapper {
+  overflow-x: auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 40px;
+  max-width: 970px; 
+  max-height: 300px;
+}
+
+
+.studentTable {
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.studentTable th,
+.studentTable td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+.studentTable th {
+  background:#F6F6F6;
+  color:#424242;
+  font-weight: 700;
+  font-size: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.studentTable tbody{
+  color:#424242;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.status-pending {
+  background:#FFF8C3;
+  color: #958B02;
+}
+
+.status-active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-completed {
+  background: #cce5ff;
+  color: #004085;
+}
+
+
+@media (max-width: 768px) {
+  .studentTable {
+    font-size: 13px;
   }
 }
 
