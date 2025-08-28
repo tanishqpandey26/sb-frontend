@@ -98,6 +98,7 @@ body {
 }
 
 
+
 /* mobile/tablet topbar */
 .mobileTopBar {
   display: none;
@@ -350,6 +351,7 @@ body {
   font-size: 0.95rem;
   transition: background 0.3s ease;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 

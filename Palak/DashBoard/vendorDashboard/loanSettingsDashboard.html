@@ -23,7 +23,7 @@
 
   <!-- sidebar -->
 
-   <div class="sideBar" id="sideBar">
+ <div class="sideBar" id="sideBar">
   <div class="sideBarContent">
     <img
       class="sideBarImg"
@@ -42,22 +42,32 @@
 
 
        <div class="dropdownNav">
-        <a href="/Palak/DashBoard/vendorDashboard/loanDashboard.html" 
+        <a href="#" 
            class="dropdownTrigger" data-page="loans">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path fill="currentColor" d="M8.63 20q-1.928 0-3.279-1.351T4 15.363q0-.808.277-1.574t.8-1.395l3.512-4.217L7.1 5.162q-.211-.404.018-.783q.23-.379.69-.379h8.384q.46 0 .69.379t.018.783l-1.489 3.015l3.512 4.217q.523.629.8 1.395q.277.765.277 1.574q0 1.935-1.35 3.286T15.37 20zm3.367-4.52q-.668 0-1.14-.475t-.472-1.143t.475-1.14t1.144-.472t1.14.476t.472 1.143t-.476 1.14t-1.143.472M9.51 7.75h5L15.875 5h-7.75zM8.63 19h6.74q1.521 0 2.576-1.064Q19 16.87 19 15.365q0-.634-.213-1.235t-.625-1.09l-3.58-4.29h-5.14l-3.584 4.285q-.414.488-.636 1.095Q5 14.736 5 15.369q0 1.502 1.065 2.567Q7.129 19 8.63 19"/>
           </svg>
-          Loans <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>
+          Loans 
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>
         </a>
 
         <!-- Dropdown Items -->
-        <div class="dropdownMenu"> <a href="/Palak/DashBoard/vendorDashboard/bankwiseDashboard.html" data-subpage="bankwise">Bank-wise Disbursement</a> <a href="/Palak/DashBoard/vendorDashboard/studentDetailDashboard.html" data-subpage="student">Student Details</a> <a href="/Palak/DashBoard/vendorDashboard/misDashboard.html" data-subpage="mis">MIS Report</a> <a href="/Palak/DashBoard/vendorDashboard/loanSettingsDashboard.html" data-subpage="settings">Loans Settings</a> </div>
+        <div class="dropdownMenu"> 
+          <a href="/Palak/DashBoard/vendorDashboard/loanDashboard.html" data-subpage="home">Home   </a> 
+          <a href="/Palak/DashBoard/vendorDashboard/bankwiseDashboard.html" data-subpage="bankwise">Bank-wise Disbursement   </a> 
+          <a href="/Palak/DashBoard/vendorDashboard/studentDetailDashboard.html" data-subpage="student">Student Details
+          </a> 
+          <a href="/Palak/DashBoard/vendorDashboard/misDashboard.html" data-subpage="mis">MIS Report </a> 
+          <a href="/Palak/DashBoard/vendorDashboard/loanSettingsDashboard.html" data-subpage="settings">Loans Settings
+          </a> 
+        </div>
 
       </div>
       
 
 
     </div>
+
   </div>
 </div>
 
@@ -69,7 +79,7 @@ function getCurrentPage() {
 
   const pageMap = {
     'vendorDashboard': 'dashboard',
-    'loanDashboard': 'loans',    // ✅ add loanDashboard mapping
+    'loanDashboard': 'home',    
     'bankwiseDashboard': 'bankwise',
     'studentDetailDashboard': 'student',
     'misDashboard': 'mis',
@@ -86,18 +96,16 @@ function setActiveNav() {
 
   navLinks.forEach(link => link.classList.remove('active'));
 
-  // ✅ If on loanDashboard → open dropdown, but don’t mark children active
-  if (currentPage === 'loans') {
+  if (currentPage === 'home') {
     dropdownNav.classList.add('open');
     document.querySelector('.dropdownTrigger').classList.add('active');
-  }
-  // ✅ If inside subpages → open dropdown, highlight correct child
+    document.querySelector(`.dropdownMenu a[data-subpage="home"]`).classList.add('active');
+  } 
   else if (['bankwise', 'student', 'mis', 'settings'].includes(currentPage)) {
     dropdownNav.classList.add('open');
     document.querySelector(`.dropdownMenu a[data-subpage="${currentPage}"]`)?.classList.add('active');
     document.querySelector('.dropdownTrigger').classList.add('active');
   } 
-  // ✅ Otherwise → just normal nav highlight
   else {
     dropdownNav.classList.remove('open');
     document.querySelector(`.sideBarNavs a[data-page="${currentPage}"]`)?.classList.add('active');
@@ -107,13 +115,11 @@ function setActiveNav() {
 function handleDropdownToggle() {
   const trigger = document.querySelector('.dropdownTrigger');
   const parent = document.querySelector('.dropdownNav');
+
   trigger.addEventListener('click', function(e) {
-    // If dropdown not open → redirect to Loan Dashboard
-    if (!parent.classList.contains('open')) {
-      e.preventDefault();
-      parent.classList.add('open');
-      window.location.href = "/Palak/DashBoard/vendorDashboard/loanDashboard.html";
-    }
+    e.preventDefault(); 
+    parent.classList.toggle('open');
+    trigger.classList.add('active'); 
   });
 }
 

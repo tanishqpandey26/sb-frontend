@@ -329,11 +329,29 @@ body {
   box-shadow: 0px 4px 14.3px 0px #59898EAB;
 }
 
-.loanDashboardCardImg {
-  max-width: 80px;
+
+.iconContainer {
   width: 37px;
   height: 37px;
+  display: flex;                 
+  justify-content: center;
+  align-items: center; 
+  border-radius: 50%;           
+  background-color: #59898E33;   
+  transition: background 0.3s ease;
 }
+
+.iconContainer:hover {
+  background-color: #28778133;  
+}
+
+.loanDashboardCardImg {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;        
+}
+
+
 
 .loanDashboardCardCount {
   font-size: 34px;
@@ -534,5 +552,3 @@ body {
 .footer-col ul li a:hover {
     color: #4ED0E1;
 }
-
- 
