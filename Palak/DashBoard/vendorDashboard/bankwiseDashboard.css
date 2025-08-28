@@ -399,6 +399,21 @@ body {
   box-shadow: 0px 4px 14.3px 0px #59898EAB;
 }
 
+.iconContainer {
+  width: 37px;
+  height: 37px;
+  display: flex;                 
+  justify-content: center;
+  align-items: center; 
+  border-radius: 50%;           
+  background-color: #59898E33;   
+  transition: background 0.3s ease;
+}
+
+.iconContainer:hover {
+  background-color: #28778133;  
+}
+
 .bankwiseCardImg {
   max-width: 80px;
   width: 37px;
