@@ -31,8 +31,8 @@ body {
 
 
 .sideBar img {
-  width: 90px;
-  height: 90px;
+  width: 66px;
+  height: 56px;
   margin-bottom: 37px;
 }
 
@@ -70,7 +70,7 @@ body {
   color:#fff;
 }
 
-/* mobile/tablet topbar */
+
 .mobileTopBar {
   display: none;
   align-items: center;
@@ -156,8 +156,8 @@ body {
 }
 
 .userDropdown img.userImg {
-   width: 70px;
-  height: 70px;
+   width: 58px;
+  height: 58px;
   box-shadow: 0px 4px 4px 0px #0000001A;
   border-radius: 50%;  
   object-fit: cover;
@@ -172,7 +172,7 @@ body {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  min-width: 150px;
+  width: 200px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: none;
   flex-direction: column;
@@ -186,7 +186,7 @@ body {
   display: block;
   transition: background 0.2s;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .userDropdown .dropdownMenu a:hover {
@@ -310,6 +310,8 @@ height: 84px;
 }
 
 
+/* loan-tabs */
+
 .tabsContainer {
   width: 100%;
   margin: 30px auto;
@@ -324,6 +326,7 @@ height: 84px;
   height:40px;
   width:305px;
   margin-left: 30px;
+  margin-bottom: 10px;
 }
 
 .tabBtn {
@@ -334,7 +337,7 @@ height: 84px;
   color: #424242;;
   border: none;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 12px;
   transition: background 0.3s, color 0.3s;
 }
@@ -342,6 +345,7 @@ height: 84px;
 .tabBtn.active {
   background: #59898E33;
   color:#287781;
+  font-weight: 600;
 }
 
 .tabBarDivider {
@@ -395,8 +399,8 @@ height: 84px;
 .loanDashboardHeader {
   font-size: 24px;
   font-weight: 700;
-  color: #222;
-  margin-top: 20px;
+  color: #424242;
+  margin-top: 30px;
 }
 
 .loanDashboardSubHeader {
@@ -519,6 +523,7 @@ height: 84px;
   font-weight: 700;
   cursor: pointer;
   transition: background 0.3s ease;
+  width:263px;
   height: 53px;
 }
 
@@ -618,8 +623,8 @@ height: 84px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
   scroll-snap-align: start;
   text-align: center;
-  width: 520px;
-  height: 328px;
+  width: 500px;
+  height: 320px;
   gap: 30px;
 }
 
@@ -630,6 +635,27 @@ height: 84px;
   margin: 0 auto 20px;
   display: block;
 }
+
+.exploreNbfcContainer .exploreNbfcCard:nth-child(1) .exploreNbfcImg {
+  width: 120px;
+  height: 105px;
+}
+
+.exploreNbfcContainer .exploreNbfcCard:nth-child(2) .exploreNbfcImg {
+  width: 300px;
+  height: 105px;
+}
+
+.exploreNbfcContainer .exploreNbfcCard:nth-child(3) .exploreNbfcImg {
+  width: 400px;
+  height: 105px;
+}
+
+.exploreNbfcContainer .exploreNbfcCard:nth-child(4) .exploreNbfcImg {
+  width: 400px;
+  height: 105px;
+}
+
 
 .exploreNbfcSubHeader,
 .explorePvtBankSubHeader {
@@ -653,21 +679,29 @@ height: 84px;
   display: flex;
   justify-content: space-between;
   gap: 8px;
+  width: 240px;
+  height: 33px;
+  margin: 0 25%;
 }
 
 .exploreNbfcKnowMoreBtn,
 .explorePvtBankKnowMoreBtn {
   flex: 1;
   padding:10px;
-  border: 1px solid #007bff;
   color: #fff;
   border-radius: 7px;
   cursor: pointer;
   transition: all 0.3s ease;
   background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
-  width: 110px;
-  height: 33px;
+  border: none;
 }
+
+
+.exploreNbfcKnowMoreBtn:hover,
+.explorePvtBankKnowMoreBtn:hover {
+  transform:scale(1.1);
+}
+
 
 .exploreNbfcApplyNowBtn,
 .explorePvtBankApplyNowBtn {
@@ -682,6 +716,17 @@ height: 84px;
   width: 110px;
   height: 33px;
 }
+
+
+.exploreNbfcApplyNowBtn:hover,
+.explorePvtBankApplyNowBtn:hover {
+  background: #287781;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 3px rgba(40, 119, 129, 0.3);
+}
+
+
 
 
 

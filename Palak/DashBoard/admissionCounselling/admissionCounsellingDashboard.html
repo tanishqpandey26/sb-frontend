@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Study Befikar</title>
-    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="./admissionCounsellingDashboard.css" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
         rel="stylesheet">
      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -22,7 +22,8 @@
   <div class="dashboardContainer">
 
   <!-- sidebar -->
-<div class="sideBar" id="sideBar">
+
+  <div class="sideBar" id="sideBar">
   <div class="sideBarContent">
     <img
       class="sideBarImg"
@@ -155,9 +156,9 @@ window.addEventListener('popstate', () => {
 });
 </script>
 
-    
+
   <!-- mobile topbar -->
-  <div class="mobileTopBar">
+ <div class="mobileTopBar">
   
   <img src="../../images/dashboard/sideBar/study-befikar1.png" alt="Profile">
   
@@ -201,201 +202,226 @@ window.addEventListener('popstate', () => {
 </script>
 
 
+
   <!-- dashboard elements -->
   <div class="dashboardElements">
 
-  <header class="dashboardHeader">
-  <div class="dashboardHeader-right">
-    <a href="#" class="contactUs">Contact Us</a>
-    <div class="userDropdown">
-      <img src="../../images/dashboard/homeDashboard/userImg.jpg" alt="User" class="userImg" />
-      <div class="dropdownMenu">
-        <a href="#">Dashboard</a>
-        <a href="#">Basic Info</a>
-        <a href="#">Academic Info</a>
-        <a href="#">Test Score</a>
-        <a href="#">Work Experience</a>
-        <a href="#">Parents/Guardians</a>
-        <a href="#">Billings</a>
-        <a href="#">Settings</a>
-        <a href="#">Help & Supports</a>
-        <a href="#">Logout</a>
+    <header class="dashboardHeader">
+
+      <div class="dashboardHeader-left">
+        <p>Admission Counselling Dashboard</p>
+      </div>
+
+      <div class="dashboardHeader-right">
+        <a href="#" class="contactUs">Contact Us</a>
+        <div class="userDropdown">
+          <img src="../../images/dashboard/homeDashboard/userImg.jpg" alt="User" class="userImg" />
+          <div class="dropdownMenu">
+            <a href="#">Dashboard</a>
+            <a href="#">Basic Info</a>
+            <a href="#">Academic Info</a>
+            <a href="#">Test Score</a>
+            <a href="#">Work Experience</a>
+            <a href="#">Parents/Guardians</a>
+            <a href="#">Billings</a>
+            <a href="#">Settings</a>
+            <a href="#">Help & Supports</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+
+    </header>
+    
+   
+  <div class="tabsContainer">
+
+  <!-- tab bar -->
+  <div class="tabBar">
+    <button class="tabBtn active" data-target="dashboard">Dashboard</button>
+    <button class="tabBtn" data-target="enrolledWith">Enrolled with</button>
+    <button class="tabBtn" data-target="enquiredTo">Enquired To</button>
+  </div>
+
+  <!-- tab contents -->
+
+
+  <!-- dashboardTab -->
+  <div class="dashboard tabContent active">
+    <hr class="tabBarDivider" />
+
+     <div class="dashboardTabTopSection">
+
+  <div class="dashboardTabHeader">Find Your Perfect Counselor
+</div>
+  <div class="dashboardSubHeader">Discover expert guidance for your academic journey.</div>
+
+  <!-- search filter  -->
+  <div class="dashboardSearchFilterContainer">
+    <div class="searchContainer">
+      <input type="text" class="dashboardSearchBox" placeholder="Search...">
+      <button class="dashboardSearchBtn">Search</button>
+    </div>
+
+    <button class="filterBtn">Filters ▾</button>
+  </div>
+
+  <!-- hidden filters -->
+    <hr class="dashbordtabBarDivider" />
+
+  <div class="dashboardFilterOptions" style="display: none;">
+
+    <div class="filterOptionContainer">
+    <label>Zip Code</label>
+    <input type="text" placeholder="Zip Code" class="filterInput">
+    </div>
+
+    <div class="filterOptionContainer">
+    <label>State</label>
+       <div class="stateDropdown">
+        <button class="stateBtn">View All ▾</button>
+        <div class="stateMenu">
+          <a href="#" data-bank="View All">View All</a>
+          <a href="#" data-bank="HDFC">HDFC</a>
+        </div>
       </div>
     </div>
+
+    <div class="filterOptionContainer">
+    <label>City</label>
+    <select class="dropdownCity">
+      <option value="">Select City</option>
+      <option>Los Angeles</option>
+      <option>Houston</option>
+      <option>New York City</option>
+    </select>
+    </div>  
+
+    <div class="filterOptionContainer">
+    <label>Exam</label>
+    <select class="dropdownExam">
+      <option value="">Select Exam</option>
+      <option>IELTS</option>
+      <option>TOEFL</option>
+      <option>GRE</option>
+    </select>
+    </div>
+
+    <div class="filterOptionContainer">
+    <label>Counsellor Name</label>
+    <input type="text" placeholder="Counsellor Name" class="filterInput">
+    </div>  
+
+    <div class="searchClearContainer">
+      <button class="filterSearchBtn">Search</button>
+      <button class="clearFilterBtn">Clear Filter</button>
+    </div>
+
+
   </div>
-</header>
+
+     </div>
 
 
-  <!--  welcome section -->
-<section class="dashboardWelcome">
-  <p class="dashboardUserName">Hello, Derek!</p>
-  <p class="dashboardSubtitle">Welcome back! Here's your academic overview.</p>
-  <hr class="divider" />
-</section>
+  </div>
 
 
+  <script>
+document.querySelector(".filterBtn").addEventListener("click", function () {
+  const filterOptions = document.querySelector(".dashboardFilterOptions");
+  
+  if (filterOptions.style.display === "none" || filterOptions.style.display === "") {
+    filterOptions.style.display = "flex";  
+  } else {
+    filterOptions.style.display = "none";  
+  }
+});
 
-<!-- user-cards -->
+document.querySelector('.filterSearchBtn').addEventListener('click', () => {
+  alert("Filters applied!");
+});
 
-<section class="userCardsSection">
+document.querySelector('.clearFilterBtn').addEventListener('click', () => {
+  document.querySelectorAll('.dashboardFilterOptions input').forEach(input => input.value = "");
+  document.querySelectorAll('.dashboardFilterOptions select').forEach(select => select.selectedIndex = 0);
+});
+</script>
 
-        <div class="userCardsContainer">
+<script>
+  const viewAllDropdown = document.querySelector(".viewAllDropdown");
+  const viewAllBtn = document.querySelector(".viewAllBtn");
+  const menuLinks = document.querySelectorAll(".viewAllMenu a");
 
-              <!-- Card 1: Applications Table -->
-              <div class="userCard" onclick="toggleDetails(this)">
+  // toggle dropdown
+  viewAllBtn.addEventListener("click", () => {
+    viewAllDropdown.classList.toggle("open");
+  });
 
-                <div class="userCardTop">
-                <h2 class="userCardHeader">Enquired/Enrolled</h2>
-                <span class="dropdown"><img src="../../images/dashboard/homeDashboard/dropdown.png" title="dropdown"></span>
-                </div>
+  // close dropdown 
+  document.addEventListener("click", (e) => {
+    if (!viewAllDropdown.contains(e.target)) {
+      viewAllDropdown.classList.remove("open");
+    }
+  });
 
-                <h3 class="application-count">0</h3>
-                <p class="userCardSubHeader">All Applications </p>
-
-                <div class="details" style="display: none;">
-
-                <hr class="card-divider" />
-                    <div class="buttons">
-                        <button onclick="filterTable('test-prep')">Test</button>
-                        <button onclick="filterTable('admission')">Admission</button>
-                        <button onclick="filterTable('university')">University</button>
-                    </div>
-
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Date Applied</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Rows will be dynamically inserted here -->
-                        </tbody>
-                    </table>
-
-                </div>
-
-            </div>
-            
-          
-              <!-- Card 2: Offer Payments -->
-              <div class="userCard" onclick="toggleDetails(this)">
-
-                <div class="userCardTop">
-                <h2 class="userCardHeader">University Application</h2>
-                <span class="dropdown"><img src="../../images/dashboard/homeDashboard/dropdown.png" title="dropdown"></span>
-                </div>
-
-                  <h3 class="offer-count">5</h3>
-                  <p class="userCardSubHeader">Offer Payments </p>
-
-                  <div class="details" style="display: none;">
-
-                    <hr class="card-divider" />
-                      <p class="collapsiblePara">Details about offer payments here.</p>
-                      <button class="collapsibleBtn" onclick="makePayment()">Make Payment</button>
-                  </div>
-              </div>
-          
-
-              <!-- Card 3: Payment History -->
-              <div class="userCard" onclick="toggleDetails(this)">
-
-                 <div class="userCardTop">
-                <h2 class="userCardHeader">Loan Application</h2>
-                <span class="dropdown"><img src="../../images/dashboard/homeDashboard/dropdown.png" title="dropdown"></span>
-                </div>
-
-                  <h3 class="payment-history-count">3</h3>
-                  <p class="userCardSubHeader">All Loans Application Details</p>
-
-                  <div class="details" style="display: none;">
-                    <hr class="card-divider" />
-                      <p class="collapsiblePara">Check all your loans application details</p>
-                      <button class="collapsibleBtn" onclick="viewHistory()">Loans Dashboard</button>
-                  </div>
-              </div>
-          
-                <!-- Card 4: Notifications -->
-              <div class="userCard" onclick="toggleDetails(this)">
-
-                 <div class="userCardTop">
-                <h2 class="userCardHeader">Payment History</h2>
-                <span class="dropdown"><img src="../../images/dashboard/homeDashboard/dropdown.png" title="dropdown"></span>
-                </div>
-
-                  <h3 class="notifications-count">8</h3>
-                  <p class="userCardSubHeader">Notifications</p>
-
-                  <div class="details" style="display: none;">
-                    <hr class="card-divider" />
-                      <p class="collapsiblePara">Recent notifications here.</p>
-                      <button class="collapsibleBtn" onclick="clearNotifications()">Clear Notifications</button>
-                  </div>
-              </div>
-
-              
-               <!-- Card 5: Settings -->
-              <div class="userCard" onclick="toggleDetails(this)">
-
-                 <div class="userCardTop">
-                <h2 class="userCardHeader">Pending Payment Settings</h2>
-                <span class="dropdown"><img src="../../images/dashboard/homeDashboard/dropdown.png" title="dropdown"></span>
-                </div>
-              
-                  <p class="userCardfivesixSubHeader">Your payment setting is incomplete </p>
-
-                  <div class="barLabel">
-                    <p class="barHeader">Progress</p>
-                    <p class="percentageRight">90%</p>
-                  </div>
-                  
-                  <div class="settingProgressBar">
-                     <div class="settingProgress"></div>
-                  </div>
-
-                  <div class="details" style="display: none;">
-                    <hr class="card-divider" />
-                      <p class="collapsiblePara">Account settings options here.</p>
-                      <button class="collapsibleBtn" onclick="changePassword()">Change Password</button>
-                  </div>
-              </div>
-
-              <!-- Card 6: Profile Information -->
-              <div class="userCard" onclick="toggleDetails(this)">
-
-                 <div class="userCardTop">
-                <h2 class="userCardHeader">Visa Profile</h2>
-                <span class="dropdown"><img src="../../images/dashboard/homeDashboard/dropdown.png" title="dropdown"></span>
-                </div>
-
-                  <p class="userCardfivesixSubHeader">Your visa profile is incomplete</p>
-
-                  <div class="barLabel">
-                    <p class="barHeader">Progress</p>
-                    <p class="percentageRight">90%</p>
-                  </div>
-                  
-                  <div class="profieProgressBar">
-                       <div class="profileProgress"></div>
-                  </div>
-
-                  <div class="details" style="display: none;">
-                    
-                  <hr class="card-divider" />
-                      <p class="collapsiblePara">Account settings options here.</p>
-                      <button class="collapsibleBtn" onclick="editProfile()">Edit Profile</button>
-                  </div>
-              </div>
-          
-
-        </div>
-
- </section>
+  // update btn text 
+  menuLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault(); 
+      const selectedBank = link.getAttribute("data-bank");
+      viewAllBtn.textContent = selectedBank + " ▾"; 
+      viewAllDropdown.classList.remove("open"); 
+    });
+  });
+</script>
 
 
-    <script>
+  <!-- enrolledWith -->
+
+  <div class="enrolledWith tabContent">
+    <hr class="tabBarDivider" />
+    <p>enrolled with</p>
+  </div>
+
+  <!-- enquiredTo -->
+
+  <div class="enquiredTo tabContent">
+    <hr class="tabBarDivider" />
+    <p>enquired to</p>
+  </div>
+
+
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll(".tabBtn");
+  const tabContents = document.querySelectorAll(".tabContent");
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // remove active classes
+      tabButtons.forEach(b => b.classList.remove("active"));
+      tabContents.forEach(c => c.classList.remove("active"));
+
+      // add active to clicked
+      btn.classList.add("active");
+      const targetId = btn.getAttribute("data-target");
+      document.querySelector(`.${targetId}`).classList.add("active");
+    });
+  });
+});
+
+</script>
+
+
+  </div>
+  
+</div>
+
+
+ <script>
         
 // highlight nav link
   const linkColor = document.querySelectorAll('.nav__link');
@@ -405,13 +431,13 @@ window.addEventListener('popstate', () => {
   }
   linkColor.forEach(l => l.addEventListener('click', colorLink));
 
-  // dropdown toggle for user cards
+  // dropdown toggle 
   document.addEventListener("DOMContentLoaded", function () {
     const userCards = document.querySelectorAll(".userCard");
 
     userCards.forEach(card => {
       card.addEventListener("click", function (e) {
-        // stop toggle if clicking inside .details on a BUTTON
+        // stop toggle 
         if (e.target.tagName === "BUTTON") {
           e.stopPropagation();
           return;
@@ -421,7 +447,7 @@ window.addEventListener('popstate', () => {
         const dropdown = this.querySelector(".dropdown");
         const isOpen = details.style.display === "block";
 
-        // close all other cards first
+        // close other cards
         document.querySelectorAll(".userCard .details").forEach(d => {
           d.style.display = "none";
         });
@@ -439,11 +465,11 @@ window.addEventListener('popstate', () => {
         }
       });
 
-      // tab buttons active state (inside this card only)
+      // tab btns
       const tabButtons = card.querySelectorAll(".details .buttons button");
       tabButtons.forEach(btn => {
         btn.addEventListener("click", function (e) {
-          e.stopPropagation(); // prevent closing card
+          e.stopPropagation(); 
 
           // remove active only from buttons in THIS card
           tabButtons.forEach(b => b.classList.remove("active"));
@@ -657,7 +683,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Fetch vendors from localStorage
   const enquiredVendors = JSON.parse(localStorage.getItem('enquiredVendors')) || [];
 
-  // Populate Enquired Section
+  // populate Enquired Section
   enquiredVendors.forEach(vendor => {
       const card = document.createElement('div');
       card.className = 'enquired-vendor-card';
@@ -674,106 +700,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Functions for button actions
+//  btn actions
 function viewMore(id) {
   alert(`View more details for Vendor ID: ${id}`);
-  // Redirect or show more details
+  
 }
 
 function bookSeat(id) {
   alert(`Booking a seat for Vendor ID: ${id}`);
-  // Implement booking logic here
+  
 }
     </script>
 
-
-
-<!-- explore-more-section -->
-
-<section class="exploreMoreSection">
-  <h2 class="dashboardExploreMoreHeader">Explore More</h2>
-
-  <div class="dashboardExploreContainer">
     
-
-    <!-- card 1 -->
-    <div class="dashboardExploreCard">
-      <div class="dashboardCardTop">
-        <h3 class="dashboardCardHeader">Search Universities</h3>
-        <p class="dashBoardCardInfobox">Education</p>
-      </div>
-      <p class="dashboardCardSubHeader">Find the best universities worldwide.</p>
-      <button class="dashboardCardLearnMoreBtn">Learn More<img src="../../images/dashboard/homeDashboard/right-arrow.png" title="right-arrow"> </button>
-    </div>
-
-
-    <!-- card 2 -->
-    <div class="dashboardExploreCard">
-      <div class="dashboardCardTop">
-        <h3 class="dashboardCardHeader">Search Counsellor</h3>
-        <p class="dashBoardCardInfobox">Counselling</p>
-      </div>
-      <p class="dashboardCardSubHeader">Connect with expert counsellors for guidance.</p>
-      <button class="dashboardCardLearnMoreBtn">Learn More<img src="../../images/dashboard/homeDashboard/right-arrow.png" title="right-arrow"></button>
-    </div>
-
-
-    <!-- card 3 -->
-    <div class="dashboardExploreCard">
-      <div class="dashboardCardTop">
-        <h3 class="dashboardCardHeader">Explore Exams</h3>
-        <p class="dashBoardCardInfobox">Testing</p>
-      </div>
-      <p class="dashboardCardSubHeader">Find exams related to your desired program.</p>
-      <button class="dashboardCardLearnMoreBtn">Learn More<img src="../../images/dashboard/homeDashboard/right-arrow.png" title="right-arrow"></button>
-    </div>
-
-
-     <!-- card 4 -->
-    <div class="dashboardExploreCard">
-      <div class="dashboardCardTop">
-        <h3 class="dashboardCardHeader">Notice</h3>
-        <p class="dashBoardCardInfobox">Education</p>
-      </div>
-      <p class="dashboardCardSubHeader">Check out the latest notices and updates.</p>
-      <button class="dashboardCardLearnMoreBtn">Learn More<img src="../../images/dashboard/homeDashboard/right-arrow.png" title="right-arrow"></button>
-    </div>
-
-
-    <!-- card 5 -->
-    <div class="dashboardExploreCard">
-      <div class="dashboardCardTop">
-        <h3 class="dashboardCardHeader">Explore Loan Eligibility</h3>
-        <p class="dashBoardCardInfobox">Loan</p>
-      </div>
-      <p class="dashboardCardSubHeader">Find out if you qualify for educational loans</p>
-      <button class="dashboardCardLearnMoreBtn">Learn More<img src="../../images/dashboard/homeDashboard/right-arrow.png" title="right-arrow"></button>
-    </div>
-
-
-
-
-     <!-- card 7 -->
-    <div class="dashboardExploreCard">
-      <div class="dashboardCardTop">
-        <h3 class="dashboardCardHeader">Pay via Fylwaire/EBIX</h3>
-        <p class="dashBoardCardInfobox">Education</p>
-      </div>
-      <p class="dashboardCardSubHeader">Make your payments securely via Flywire.</p>
-      <button class="dashboardCardLearnMoreBtn">Learn More<img src="../../images/dashboard/homeDashboard/right-arrow.png" title="right-arrow"></button>
-    </div>
-
-
-    
-
-
-  </div>
-</section>
-
-  </div>
-  
-</div>
-
 <script>
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
 const sideBar = document.getElementById("sideBar");
