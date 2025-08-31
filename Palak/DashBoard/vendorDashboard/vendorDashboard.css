@@ -56,7 +56,7 @@ body {
   border-radius: 5px;
   transition: background 0.3s;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 14px;
   display: flex;   
   align-items: center;
 }
@@ -82,7 +82,7 @@ body {
 
 .dropdownMenu a {
   padding: 8px 10px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   color:#424242;
 }
@@ -272,106 +272,7 @@ body {
 
 
 
-.loanDashboardSection {
-  padding: 30px;
-  background: #fff;
-}
 
-
-.loanDashboardHeader {
-  margin-bottom: 30px;
-}
-
-.loanDashboardHeader h2 {
-  font-size: 24px;
-  font-weight: 700;
-  color:#424242;
-  margin: 0;
-}
-.loanDashboardSubHeader {
-  font-size: 16px;
-  font-weight: 400;
-  color:#424242;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-
-.loanDashboardCardContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-
-.loanDashboardCard {
-  background: #fff;
-  padding: 18px;
-  border-radius: 7px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  width: 259px ;
-  height: 239px;
-  border: 0.1px solid #59898E;
-  box-shadow: 0px 4px 4px 0px #0000001A;
-}
-
-.loanDashboardCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 4px 14.3px 0px #59898EAB;
-}
-
-.loanDashboardCardImg {
-  max-width: 80px;
-  width: 37px;
-  height: 37px;
-}
-
-.loanDashboardCardCount {
-  font-size: 34px;
-  font-weight: 700;
-  color:#000;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.loanDashboardCardSubHeader {
- font-size: 16px;
-  font-weight: 600;
-  color:#424242;
-  margin: 5px 0 30px;
-}
-
-.loanDashboardCardViewMoreBtn {
-  background: #fff;
-  color: #000;
-  border: 0.2px solid #287781;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.95rem;
-  transition: background 0.3s ease;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-
-@media (max-width: 768px) {
-  .loanDashboardCardContainer {
-    grid-template-columns: 1fr; 
-  }
-
-  .loanDashboardHeader h2 {
-    font-size: 1.4rem;
-  }
-  .loanDashboardSubHeader {
-    font-size: 10px;
-  }
-
-  .loanDashboardCard {
-  width: auto ;
-  height: auto;
-}
-}
 
 
 

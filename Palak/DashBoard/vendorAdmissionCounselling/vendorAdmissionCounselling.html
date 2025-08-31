@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Befikar</title>
+    <link rel="stylesheet" href="/Palak/DashBoard/vendorAdmissionCounselling/vendorAdmissionCounselling.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://sets.hugeicons.com/dashboard.css" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <!-- sidebar + container -->
+
+  <div class="dashboardContainer">
+
+  <!-- sidebar -->
+
+ <div class="sideBar" id="sideBar">
+  <div class="sideBarContent">
+    <img
+      class="sideBarImg"
+      src="../../images/Home/footer/logo2.png"
+      alt="Profile"
+    />
+
+    <div class="sideBarNavs">
+
+      <a href="/Palak/DashBoard/vendorAdmissionCounselling/vendorAdmissionCounselling.html" data-page="vendordashboard">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="#ffffff" d="M3 3h8v10H3zm2 2v6h4V5zm8-2h8v6h-8zm2 2v2h4V5zm-2 6h8v10h-8zm2 2v6h4v-6zM3 15h8v6H3zm2 2v2h4v-2z"/></svg>
+        Dashboard
+      </a>
+
+
+       <div class="dropdownNav">
+        <a href="#" 
+           class="dropdownTrigger" data-page="loans">
+           <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="#ffffff" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16z"/></svg>
+          Enquires 
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"/></svg>
+        </a>
+
+        <!-- dropdown  -->
+        <div class="dropdownMenu"> 
+          <a href="/Palak/DashBoard/vendorAdmissionCounselling/enquiresAdmissionCounselling.html" data-subpage="enquiresAdCoun">Admission Counselling</a> 
+          <a href="/Palak/DashBoard/vendorAdmissionCounselling/enquiresTestPreparation.html" data-subpage="enquiresTestPrep">Test Preparation</a> 
+        </div>
+
+      </div>
+
+
+      <a href="#" data-page="vendordashboard">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="none" stroke="#ffffff" stroke-linejoin="round" stroke-width="2.5" d="m12 2l3.104 6.728l7.358.873l-5.44 5.03l1.444 7.268L12 18.28L5.534 21.9l1.444-7.268L1.538 9.6l7.359-.873z"/></svg>
+        Student Ratings
+      </a>
+
+      <a href="#" data-page="vendordashboard">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zm0 2h18M7 15h.01M11 15h2"/></svg>
+        Invoice Receipts
+      </a>
+
+       <a href="#" data-page="vendordashboard">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M16 2v4M8 2v4m5-2h-2C7.229 4 5.343 4 4.172 5.172S3 8.229 3 12v2c0 3.771 0 5.657 1.172 6.828S7.229 22 11 22h2c3.771 0 5.657 0 6.828-1.172S21 17.771 21 14v-2c0-3.771 0-5.657-1.172-6.828S16.771 4 13 4M3 10h18"/><path d="M9 16.5s1.5.5 2 2c0 0 2.177-4 5-5"/></g></svg>
+        Appointments
+      </a>
+
+       <a href="#" data-page="vendordashboard">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><g fill="none" stroke="#ffffff" stroke-width="1.5"><path d="M12 7.5a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0Z"/><path stroke-linecap="round" d="M13.5 11a3.5 3.5 0 1 0 0-7"/><path stroke-linecap="round" stroke-linejoin="round" d="M13.143 20H3.857C2.831 20 2 19.233 2 18.286C2 15.919 4.079 14 6.643 14h3.714a4.9 4.9 0 0 1 2.786.857"/><path stroke-linecap="round" d="M19 14v6m3-3h-6"/></g></svg>
+        Sub Agents
+      </a>
+
+       <a href="#" data-page="vendordashboard">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M19.5 16v-3.994c0-1.486 0-2.23-.256-2.91c-.255-.68-.745-1.24-1.723-2.358L16 5H8L6.48 6.738C5.5 7.856 5.01 8.416 4.755 9.096s-.256 1.424-.256 2.91V16c0 2.828 0 4.243.879 5.121S7.672 22 10.5 22h3c2.828 0 4.243 0 5.121-.879c.879-.878.879-2.293.879-5.121"/><path d="M9.5 15.683c0 1.23 1.854 2.237 3.633 1.672s1.517-2.23.913-2.884s-1.491-.544-2.506-.596c-2.281-.116-2.442-2.303-.595-3.168c1.355-.635 3.093.18 3.293 1.293m-2.267-2.5v.978m0 7.242v.78M7.5 2h9c.466 0 .699 0 .883.076a1 1 0 0 1 .54.541c.077.184.077.417.077.883s0 .699-.076.883a1 1 0 0 1-.541.54C17.199 5 16.966 5 16.5 5h-9c-.466 0-.699 0-.883-.076a1 1 0 0 1-.54-.541C6 4.199 6 3.966 6 3.5s0-.699.076-.883a1 1 0 0 1 .541-.54C6.801 2 7.034 2 7.5 2"/></g></svg>
+        Loan Services
+      </a>
+
+      
+    </div>
+
+  </div>
+</div>
+
+
+ <script>
+function getCurrentPage() {
+  const cleanPath = window.location.pathname;
+  const filename = cleanPath.split('/').pop().split('.')[0];
+
+  const pageMap = {
+    'vendorAdmissionCounselling': 'vendordashboard',
+    'enquiresAdmissionCounselling': 'enquiresAdCoun',    
+    'enquiresTestPreparation': 'enquiresTestPrep',
+  };
+
+  return pageMap[filename] || 'dashboard';
+}
+
+function setActiveNav() {
+  const currentPage = getCurrentPage();
+  const navLinks = document.querySelectorAll('.sideBarNavs a');
+  const dropdownNav = document.querySelector('.dropdownNav');
+
+  navLinks.forEach(link => link.classList.remove('active'));
+
+  if (currentPage === 'home') {
+    dropdownNav.classList.add('open');
+    document.querySelector('.dropdownTrigger').classList.add('active');
+    document.querySelector(`.dropdownMenu a[data-subpage="home"]`).classList.add('active');
+  } 
+  else if (['enquiresAdCoun', 'enquiresTestPrep'].includes(currentPage)) {
+    dropdownNav.classList.add('open');
+    document.querySelector(`.dropdownMenu a[data-subpage="${currentPage}"]`)?.classList.add('active');
+    document.querySelector('.dropdownTrigger').classList.add('active');
+  } 
+  else {
+    dropdownNav.classList.remove('open');
+    document.querySelector(`.sideBarNavs a[data-page="${currentPage}"]`)?.classList.add('active');
+  }
+}
+
+function handleDropdownToggle() {
+  const trigger = document.querySelector('.dropdownTrigger');
+  const parent = document.querySelector('.dropdownNav');
+
+  trigger.addEventListener('click', function(e) {
+    e.preventDefault(); 
+    parent.classList.toggle('open');
+    trigger.classList.add('active'); 
+  });
+}
+
+
+function cleanURL() {
+    if (window.location.hash) {
+        history.replaceState(null, null, window.location.pathname + window.location.search);
+    }
+}
+
+
+function handleNavigation() {
+    const navLinks = document.querySelectorAll('.sideBarNavs a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            cleanURL();
+            
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+            
+            
+        });
+    });
+}
+
+
+function preventHashEvents() {
+   
+    window.addEventListener('hashchange', (e) => {
+        e.preventDefault();
+        cleanURL();
+    });
+    
+    setInterval(cleanURL, 1000);
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    cleanURL();
+    setActiveNav();
+    handleNavigation();
+    preventHashEvents();
+    handleDropdownToggle();
+});
+
+document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) {
+        cleanURL();
+        setActiveNav();
+    }
+});
+
+window.addEventListener('focus', () => {
+    cleanURL();
+    setActiveNav();
+});
+
+window.addEventListener('popstate', () => {
+    cleanURL();
+    setActiveNav();
+});
+</script>
+
+
+  <!-- mobile topbar -->
+ <div class="mobileTopBar">
+  
+  <img src="../../images/dashboard/sideBar/study-befikar1.png" alt="Profile">
+  
+  <div class="mobileBtnWrapper">
+
+  <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+
+  </div>
+
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const userDropdowns = document.querySelectorAll(".userDropdown");
+
+    userDropdowns.forEach(dropdown => {
+      const userImg = dropdown.querySelector(".userImg");
+
+      userImg.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+      });
+    });
+  });
+</script>
+
+
+
+  <!-- dashboard elements -->
+  <div class="dashboardElements">
+    
+    <!-- header -->
+      <header class="dashboardHeader">
+    <div class="dashboardHeader-right">
+      <div class="headerInfobox">
+        <p>✓   You are already signed in.</p>
+      </div>
+      <a href="#" class="contactUs" title="contactUs">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><g fill="none"><path fill="#000" fill-rule="evenodd" d="M14.375 3.982a6.086 6.086 0 0 0-8.424 4.933l-.252 2.265l-.006.056a7.5 7.5 0 0 1-1.006 2.98l-.03.049l-.577.963l-.014.024c-.25.417-.458.763-.593 1.049c-.136.289-.24.602-.188.933a1.5 1.5 0 0 0 .518.916c.258.216.58.286.897.318c.315.032.718.032 1.205.032h12.19c.487 0 .89 0 1.205-.032c.317-.032.64-.102.897-.318a1.5 1.5 0 0 0 .518-.916c.053-.332-.052-.644-.188-.933c-.135-.286-.342-.632-.593-1.05l-.014-.023l-.578-.963l-.029-.048a7.5 7.5 0 0 1-1.006-2.98l-.006-.057l-.042-.382q-.471.157-.985.193l.033.3l.007.06a8.5 8.5 0 0 0 1.14 3.377l.03.052l.579.963c.268.446.448.749.56.984c.111.238.11.323.105.35a.5.5 0 0 1-.173.306c-.022.018-.094.064-.355.09c-.26.026-.611.027-1.132.027H5.932c-.52 0-.873 0-1.131-.027c-.262-.026-.334-.072-.356-.09a.5.5 0 0 1-.173-.305c-.004-.028-.006-.113.106-.35c.11-.236.292-.539.56-.985l.577-.963l.031-.052a8.5 8.5 0 0 0 1.14-3.378l.007-.06l.252-2.265A5.086 5.086 0 0 1 13.67 4.78q.3-.447.704-.8m1.814 1.19a2 2 0 0 0-.79.63a5.07 5.07 0 0 1 1.653 3.197c.355-.009.687-.11.972-.28A6.07 6.07 0 0 0 16.19 5.17" clip-rule="evenodd"/><path stroke="#000" stroke-linecap="round" d="M9.102 18.406c.171.744.548 1.402 1.072 1.87c.524.47 1.166.724 1.826.724s1.302-.254 1.826-.723c.524-.47.9-1.127 1.072-1.871" stroke-width="1"/><circle cx="17" cy="7" r="2" fill="#000"/></g></svg>
+      </a>
+      <div class="userDropdown">
+        <img src="../../images/dashboard/homeDashboard/userImg.jpg" alt="User" class="userImg" />
+        <div class="dropdownMenu">
+          <a href="#">Dashboard</a>
+          <a href="#">Basic Info</a>
+          <a href="#">Academic Info</a>
+          <a href="#">Test Score</a>
+          <a href="#">Work Experience</a>
+          <a href="#">Parents/Guardians</a>
+          <a href="#">Billings</a>
+          <a href="#">Settings</a>
+          <a href="#">Help & Supports</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+     </header>
+
+    <!-- statsSection -->
+    <div class="statsSection">
+      <div class="statsCardContainer">
+
+        <!-- Card 1 -->
+        <div class="statsCard">
+          <div class="statsTopLabel">
+            <h3 class="statsFarLeftHeader">Open Enquiries</h3>
+            <div class="statsFarRightIconbox"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path fill="#000" d="M17 12.5a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1m-5 0a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1m-5 0a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1"/><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12c0 1.821.487 3.53 1.338 5L2.5 21.5l4.5-.838A9.96 9.96 0 0 0 12 22"/></g></svg></div>
+          </div>
+          <p class="statsCardSubHeader">0 <span>Enquires</span></p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="statsCard">
+          <div class="statsTopLabel">
+            <h3 class="statsFarLeftHeader">Contacted Enquiries</h3>
+            <div class="statsFarRightIconbox">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><g fill="none" stroke="#000" stroke-width="1.5"><path d="M4 10c0-3.771 0-5.657 1.172-6.828S8.229 2 12 2h1.5c3.771 0 5.657 0 6.828 1.172S21.5 6.229 21.5 10v4c0 3.771 0 5.657-1.172 6.828S17.271 22 13.5 22H12c-3.771 0-5.657 0-6.828-1.172S4 17.771 4 14z"/><path stroke-linejoin="round" d="M9.8 11.974c-.427-.744-.633-1.351-.757-1.967c-.184-.91.237-1.8.933-2.368c.295-.24.632-.158.806.155l.393.705c.311.558.467.838.436 1.134c-.03.296-.24.537-.66 1.02zm0 0a10.36 10.36 0 0 0 3.726 3.726m0 0c.744.427 1.351.633 1.967.757c.91.184 1.8-.237 2.368-.933c.24-.295.158-.632-.155-.806l-.704-.393c-.56-.311-.839-.467-1.135-.436c-.296.03-.537.24-1.02.66z"/><path stroke-linecap="round" stroke-linejoin="round" d="M5 6H2.5M5 12H2.5M5 18H2.5"/></g></svg>
+            </div>
+          </div>
+          <p class="statsCardSubHeader">0 <span>Enquires</span></p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="statsCard">
+          <div class="statsTopLabel">
+            <h3 class="statsFarLeftHeader">Enrolled</h3>
+            <div class="statsFarRightIconbox">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 256 256"><g fill="#000"><path d="m224 64l-96 32l-96-32l96-32Z" opacity="0.2"/><path d="m226.53 56.41l-96-32a8 8 0 0 0-5.06 0l-96 32a8 8 0 0 0-5.4 6.75A5 5 0 0 0 24 64v80a8 8 0 0 0 16 0V75.1l33.59 11.19a64 64 0 0 0 20.65 88.05c-18 7.06-33.56 19.83-44.94 37.29a8 8 0 1 0 13.4 8.74C77.77 197.25 101.57 184 128 184s50.23 13.25 65.3 36.37a8 8 0 0 0 13.4-8.74c-11.38-17.46-27-30.23-44.94-37.29a64 64 0 0 0 20.65-88l44.12-14.7a8 8 0 0 0 0-15.18ZM176 120a48 48 0 1 1-86.65-28.45l36.12 12a8 8 0 0 0 5.06 0l36.12-12A47.9 47.9 0 0 1 176 120m-48-32.43L57.3 64L128 40.43L198.7 64Z"/></g></svg>
+            </div>
+          </div>
+          <p class="statsCardSubHeader">0 <span>Entries</span></p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="statsCard">
+          <div class="statsTopLabel">
+            <h3 class="statsFarLeftHeader">Non-Qualified Enquiries</h3>
+            <div class="statsFarRightIconbox">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12.5 3.004a33 33 0 0 0-2.67.067c-4.184.278-7.516 3.657-7.79 7.9a20 20 0 0 0 0 2.52c.1 1.545.783 2.976 1.588 4.184c.467.845.159 1.9-.328 2.823c-.35.665-.526.997-.385 1.237c.14.24.455.248 1.084.263c1.245.03 2.084-.322 2.75-.813c.377-.279.566-.418.696-.434s.387.09.899.3c.46.19.995.307 1.485.34c1.425.094 2.914.094 4.342 0c4.183-.278 7.515-3.658 7.789-7.9c.042-.655.051-1.328.027-1.991M16 2l6 6m-6 0l6-6M8.5 15h7m-7-5H12"/></svg>
+            </div>
+          </div>
+          <p class="statsCardSubHeader">0 <span>Entries</span></p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- enquiresTable -->
+
+    <div class="enquiresContainer">
+
+      <div class="enquiresHeader">Enquires</div>
+
+      <div class="enquiresOverviewTableWrapper">
+      <table class="enquiresOverviewTable">
+        <thead>
+          <tr>
+            <th>STUDENT NAME</th>
+            <th>ENQUIRY DATE</th>
+            <th>CONTACT NO</th>
+            <th>LEAD TO</th>
+            <th>PRODUCTS</th>
+            <th>ACTION</th>
+          </tr>
+        </thead>
+
+        <tbody id="enquiresTableBody">
+          
+        </tbody>
+
+      </table>
+      </div>
+
+    </div>
+
+
+     <script>
+const syntheticData = [
+  {
+    studentName: "XYZ",
+    enquiryDate: "00/00/0000",
+    contactNo: "1234567890",
+    leadTo: "anyone",
+    products: "product",
+    action: "action",
+  },
+];
+
+const tbody = document.getElementById("enquiresTableBody");
+
+
+tbody.innerHTML = "";
+
+if (syntheticData.length === 0) {
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+    <td colspan="6" style="text-align:center; padding:20px; color:#777;">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="37px" height="37px" viewBox="0 0 24 24"><path fill="#424242" fill-rule="evenodd" d="M11 2a9 9 0 1 0 5.618 16.032l3.675 3.675a1 1 0 0 0 1.414-1.414l-3.675-3.675A9 9 0 0 0 11 2m-6 9a6 6 0 1 1 12 0a6 6 0 0 1-12 0" clip-rule="evenodd"/></svg>
+        <span>No data available</span>
+      </div>
+    </td>`;
+  tbody.appendChild(tr);
+} else {
+  syntheticData.forEach(item => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${item.studentName}</td>
+      <td>${item.enquiryDate}</td>
+      <td>${item.contactNo}</td>
+      <td>${item.leadTo}</td>
+      <td>${item.products}</td>
+      <td>${item.action}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+     </script>
+
+
+    <!-- ratingCommentsSection -->
+
+<section class="ratingCommentsContainer">
+  
+  <div class="ratingContainer">
+    <h2 class="ratingHeader">Overall Ratings</h2>
+
+    <div class="ratingBox">
+    
+      <div class="ratingTopLabel">
+        <h3 class="ratingBoxHeader">0 
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="11px" height="10px" viewBox="0 0 24 24"><path fill="#000" fill-rule="evenodd" d="M11.292 3.308c-.394.514-.838 1.308-1.484 2.466l-.327.587l-.059.106c-.3.54-.555.998-.964 1.308c-.413.314-.917.427-1.503.559l-.114.026l-.636.144c-1.255.284-2.11.479-2.694.71c-.571.224-.691.409-.737.556c-.049.156-.05.395.29.937c.347.55.932 1.236 1.786 2.236l.434.507l.075.087c.403.47.739.862.893 1.358c.153.493.102 1.01.04 1.638l-.01.117l-.066.677c-.13 1.332-.216 2.25-.187 2.91c.03.66.169.842.28.926c.098.075.28.157.873-.013c.603-.172 1.405-.539 2.58-1.08l.596-.274l.109-.05c.545-.253 1.017-.471 1.533-.471s.988.218 1.533.47q.053.026.11.05l.595.275c1.175.541 1.977.908 2.58 1.08c.593.17.775.088.873.013c.111-.084.25-.267.28-.926c.03-.66-.058-1.578-.187-2.91l-.066-.677l-.01-.117c-.062-.628-.113-1.145.04-1.638c.154-.496.49-.888.893-1.358l.075-.087l.434-.507c.854-1 1.439-1.686 1.785-2.236c.341-.542.34-.78.291-.937c-.046-.147-.166-.332-.737-.556c-.585-.231-1.439-.426-2.694-.71l-.636-.144l-.114-.026c-.586-.132-1.09-.245-1.503-.559c-.41-.31-.663-.767-.964-1.308l-.058-.106l-.328-.587c-.646-1.158-1.09-1.952-1.484-2.466S12.114 2.75 12 2.75s-.315.044-.708.558m-1.19-.912C10.577 1.774 11.166 1.25 12 1.25s1.422.524 1.899 1.146c.468.612.965 1.503 1.572 2.592l.359.643c.392.704.493.854.619.95c.12.091.277.143 1.04.316l.7.158c1.176.266 2.145.485 2.85.763c.732.289 1.373.714 1.62 1.507c.244.785-.03 1.507-.454 2.18c-.412.655-1.07 1.425-1.874 2.365l-.475.555c-.517.604-.625.752-.676.915c-.051.167-.047.36.032 1.165l.071.738c.122 1.256.221 2.28.186 3.06c-.035.795-.215 1.557-.87 2.055c-.668.506-1.445.45-2.195.234c-.727-.208-1.633-.625-2.733-1.132l-.656-.302c-.718-.33-.871-.383-1.015-.383s-.297.053-1.015.383l-.655.302c-1.101.507-2.007.924-2.734 1.132c-.75.215-1.527.272-2.194-.234c-.656-.498-.836-1.26-.871-2.054c-.035-.78.064-1.805.186-3.06l.072-.739c.078-.806.082-.998.03-1.165c-.05-.163-.158-.31-.675-.915l-.475-.555c-.803-.94-1.461-1.71-1.873-2.364c-.425-.674-.699-1.396-.455-2.181c.247-.793.888-1.218 1.62-1.507c.705-.278 1.674-.497 2.85-.763l.063-.014l.636-.144c.764-.173.92-.225 1.041-.317c.126-.095.227-.245.62-.949l.358-.643c.607-1.09 1.104-1.98 1.572-2.592" clip-rule="evenodd"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="11px" height="10px" viewBox="0 0 24 24"><path fill="#000" fill-rule="evenodd" d="M11.292 3.308c-.394.514-.838 1.308-1.484 2.466l-.327.587l-.059.106c-.3.54-.555.998-.964 1.308c-.413.314-.917.427-1.503.559l-.114.026l-.636.144c-1.255.284-2.11.479-2.694.71c-.571.224-.691.409-.737.556c-.049.156-.05.395.29.937c.347.55.932 1.236 1.786 2.236l.434.507l.075.087c.403.47.739.862.893 1.358c.153.493.102 1.01.04 1.638l-.01.117l-.066.677c-.13 1.332-.216 2.25-.187 2.91c.03.66.169.842.28.926c.098.075.28.157.873-.013c.603-.172 1.405-.539 2.58-1.08l.596-.274l.109-.05c.545-.253 1.017-.471 1.533-.471s.988.218 1.533.47q.053.026.11.05l.595.275c1.175.541 1.977.908 2.58 1.08c.593.17.775.088.873.013c.111-.084.25-.267.28-.926c.03-.66-.058-1.578-.187-2.91l-.066-.677l-.01-.117c-.062-.628-.113-1.145.04-1.638c.154-.496.49-.888.893-1.358l.075-.087l.434-.507c.854-1 1.439-1.686 1.785-2.236c.341-.542.34-.78.291-.937c-.046-.147-.166-.332-.737-.556c-.585-.231-1.439-.426-2.694-.71l-.636-.144l-.114-.026c-.586-.132-1.09-.245-1.503-.559c-.41-.31-.663-.767-.964-1.308l-.058-.106l-.328-.587c-.646-1.158-1.09-1.952-1.484-2.466S12.114 2.75 12 2.75s-.315.044-.708.558m-1.19-.912C10.577 1.774 11.166 1.25 12 1.25s1.422.524 1.899 1.146c.468.612.965 1.503 1.572 2.592l.359.643c.392.704.493.854.619.95c.12.091.277.143 1.04.316l.7.158c1.176.266 2.145.485 2.85.763c.732.289 1.373.714 1.62 1.507c.244.785-.03 1.507-.454 2.18c-.412.655-1.07 1.425-1.874 2.365l-.475.555c-.517.604-.625.752-.676.915c-.051.167-.047.36.032 1.165l.071.738c.122 1.256.221 2.28.186 3.06c-.035.795-.215 1.557-.87 2.055c-.668.506-1.445.45-2.195.234c-.727-.208-1.633-.625-2.733-1.132l-.656-.302c-.718-.33-.871-.383-1.015-.383s-.297.053-1.015.383l-.655.302c-1.101.507-2.007.924-2.734 1.132c-.75.215-1.527.272-2.194-.234c-.656-.498-.836-1.26-.871-2.054c-.035-.78.064-1.805.186-3.06l.072-.739c.078-.806.082-.998.03-1.165c-.05-.163-.158-.31-.675-.915l-.475-.555c-.803-.94-1.461-1.71-1.873-2.364c-.425-.674-.699-1.396-.455-2.181c.247-.793.888-1.218 1.62-1.507c.705-.278 1.674-.497 2.85-.763l.063-.014l.636-.144c.764-.173.92-.225 1.041-.317c.126-.095.227-.245.62-.949l.358-.643c.607-1.09 1.104-1.98 1.572-2.592" clip-rule="evenodd"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="11px" height="10px" viewBox="0 0 24 24"><path fill="#000" fill-rule="evenodd" d="M11.292 3.308c-.394.514-.838 1.308-1.484 2.466l-.327.587l-.059.106c-.3.54-.555.998-.964 1.308c-.413.314-.917.427-1.503.559l-.114.026l-.636.144c-1.255.284-2.11.479-2.694.71c-.571.224-.691.409-.737.556c-.049.156-.05.395.29.937c.347.55.932 1.236 1.786 2.236l.434.507l.075.087c.403.47.739.862.893 1.358c.153.493.102 1.01.04 1.638l-.01.117l-.066.677c-.13 1.332-.216 2.25-.187 2.91c.03.66.169.842.28.926c.098.075.28.157.873-.013c.603-.172 1.405-.539 2.58-1.08l.596-.274l.109-.05c.545-.253 1.017-.471 1.533-.471s.988.218 1.533.47q.053.026.11.05l.595.275c1.175.541 1.977.908 2.58 1.08c.593.17.775.088.873.013c.111-.084.25-.267.28-.926c.03-.66-.058-1.578-.187-2.91l-.066-.677l-.01-.117c-.062-.628-.113-1.145.04-1.638c.154-.496.49-.888.893-1.358l.075-.087l.434-.507c.854-1 1.439-1.686 1.785-2.236c.341-.542.34-.78.291-.937c-.046-.147-.166-.332-.737-.556c-.585-.231-1.439-.426-2.694-.71l-.636-.144l-.114-.026c-.586-.132-1.09-.245-1.503-.559c-.41-.31-.663-.767-.964-1.308l-.058-.106l-.328-.587c-.646-1.158-1.09-1.952-1.484-2.466S12.114 2.75 12 2.75s-.315.044-.708.558m-1.19-.912C10.577 1.774 11.166 1.25 12 1.25s1.422.524 1.899 1.146c.468.612.965 1.503 1.572 2.592l.359.643c.392.704.493.854.619.95c.12.091.277.143 1.04.316l.7.158c1.176.266 2.145.485 2.85.763c.732.289 1.373.714 1.62 1.507c.244.785-.03 1.507-.454 2.18c-.412.655-1.07 1.425-1.874 2.365l-.475.555c-.517.604-.625.752-.676.915c-.051.167-.047.36.032 1.165l.071.738c.122 1.256.221 2.28.186 3.06c-.035.795-.215 1.557-.87 2.055c-.668.506-1.445.45-2.195.234c-.727-.208-1.633-.625-2.733-1.132l-.656-.302c-.718-.33-.871-.383-1.015-.383s-.297.053-1.015.383l-.655.302c-1.101.507-2.007.924-2.734 1.132c-.75.215-1.527.272-2.194-.234c-.656-.498-.836-1.26-.871-2.054c-.035-.78.064-1.805.186-3.06l.072-.739c.078-.806.082-.998.03-1.165c-.05-.163-.158-.31-.675-.915l-.475-.555c-.803-.94-1.461-1.71-1.873-2.364c-.425-.674-.699-1.396-.455-2.181c.247-.793.888-1.218 1.62-1.507c.705-.278 1.674-.497 2.85-.763l.063-.014l.636-.144c.764-.173.92-.225 1.041-.317c.126-.095.227-.245.62-.949l.358-.643c.607-1.09 1.104-1.98 1.572-2.592" clip-rule="evenodd"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="11px" height="10px" viewBox="0 0 24 24"><path fill="#000" fill-rule="evenodd" d="M11.292 3.308c-.394.514-.838 1.308-1.484 2.466l-.327.587l-.059.106c-.3.54-.555.998-.964 1.308c-.413.314-.917.427-1.503.559l-.114.026l-.636.144c-1.255.284-2.11.479-2.694.71c-.571.224-.691.409-.737.556c-.049.156-.05.395.29.937c.347.55.932 1.236 1.786 2.236l.434.507l.075.087c.403.47.739.862.893 1.358c.153.493.102 1.01.04 1.638l-.01.117l-.066.677c-.13 1.332-.216 2.25-.187 2.91c.03.66.169.842.28.926c.098.075.28.157.873-.013c.603-.172 1.405-.539 2.58-1.08l.596-.274l.109-.05c.545-.253 1.017-.471 1.533-.471s.988.218 1.533.47q.053.026.11.05l.595.275c1.175.541 1.977.908 2.58 1.08c.593.17.775.088.873.013c.111-.084.25-.267.28-.926c.03-.66-.058-1.578-.187-2.91l-.066-.677l-.01-.117c-.062-.628-.113-1.145.04-1.638c.154-.496.49-.888.893-1.358l.075-.087l.434-.507c.854-1 1.439-1.686 1.785-2.236c.341-.542.34-.78.291-.937c-.046-.147-.166-.332-.737-.556c-.585-.231-1.439-.426-2.694-.71l-.636-.144l-.114-.026c-.586-.132-1.09-.245-1.503-.559c-.41-.31-.663-.767-.964-1.308l-.058-.106l-.328-.587c-.646-1.158-1.09-1.952-1.484-2.466S12.114 2.75 12 2.75s-.315.044-.708.558m-1.19-.912C10.577 1.774 11.166 1.25 12 1.25s1.422.524 1.899 1.146c.468.612.965 1.503 1.572 2.592l.359.643c.392.704.493.854.619.95c.12.091.277.143 1.04.316l.7.158c1.176.266 2.145.485 2.85.763c.732.289 1.373.714 1.62 1.507c.244.785-.03 1.507-.454 2.18c-.412.655-1.07 1.425-1.874 2.365l-.475.555c-.517.604-.625.752-.676.915c-.051.167-.047.36.032 1.165l.071.738c.122 1.256.221 2.28.186 3.06c-.035.795-.215 1.557-.87 2.055c-.668.506-1.445.45-2.195.234c-.727-.208-1.633-.625-2.733-1.132l-.656-.302c-.718-.33-.871-.383-1.015-.383s-.297.053-1.015.383l-.655.302c-1.101.507-2.007.924-2.734 1.132c-.75.215-1.527.272-2.194-.234c-.656-.498-.836-1.26-.871-2.054c-.035-.78.064-1.805.186-3.06l.072-.739c.078-.806.082-.998.03-1.165c-.05-.163-.158-.31-.675-.915l-.475-.555c-.803-.94-1.461-1.71-1.873-2.364c-.425-.674-.699-1.396-.455-2.181c.247-.793.888-1.218 1.62-1.507c.705-.278 1.674-.497 2.85-.763l.063-.014l.636-.144c.764-.173.92-.225 1.041-.317c.126-.095.227-.245.62-.949l.358-.643c.607-1.09 1.104-1.98 1.572-2.592" clip-rule="evenodd"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="11px" height="10px" viewBox="0 0 24 24"><path fill="#000" fill-rule="evenodd" d="M11.292 3.308c-.394.514-.838 1.308-1.484 2.466l-.327.587l-.059.106c-.3.54-.555.998-.964 1.308c-.413.314-.917.427-1.503.559l-.114.026l-.636.144c-1.255.284-2.11.479-2.694.71c-.571.224-.691.409-.737.556c-.049.156-.05.395.29.937c.347.55.932 1.236 1.786 2.236l.434.507l.075.087c.403.47.739.862.893 1.358c.153.493.102 1.01.04 1.638l-.01.117l-.066.677c-.13 1.332-.216 2.25-.187 2.91c.03.66.169.842.28.926c.098.075.28.157.873-.013c.603-.172 1.405-.539 2.58-1.08l.596-.274l.109-.05c.545-.253 1.017-.471 1.533-.471s.988.218 1.533.47q.053.026.11.05l.595.275c1.175.541 1.977.908 2.58 1.08c.593.17.775.088.873.013c.111-.084.25-.267.28-.926c.03-.66-.058-1.578-.187-2.91l-.066-.677l-.01-.117c-.062-.628-.113-1.145.04-1.638c.154-.496.49-.888.893-1.358l.075-.087l.434-.507c.854-1 1.439-1.686 1.785-2.236c.341-.542.34-.78.291-.937c-.046-.147-.166-.332-.737-.556c-.585-.231-1.439-.426-2.694-.71l-.636-.144l-.114-.026c-.586-.132-1.09-.245-1.503-.559c-.41-.31-.663-.767-.964-1.308l-.058-.106l-.328-.587c-.646-1.158-1.09-1.952-1.484-2.466S12.114 2.75 12 2.75s-.315.044-.708.558m-1.19-.912C10.577 1.774 11.166 1.25 12 1.25s1.422.524 1.899 1.146c.468.612.965 1.503 1.572 2.592l.359.643c.392.704.493.854.619.95c.12.091.277.143 1.04.316l.7.158c1.176.266 2.145.485 2.85.763c.732.289 1.373.714 1.62 1.507c.244.785-.03 1.507-.454 2.18c-.412.655-1.07 1.425-1.874 2.365l-.475.555c-.517.604-.625.752-.676.915c-.051.167-.047.36.032 1.165l.071.738c.122 1.256.221 2.28.186 3.06c-.035.795-.215 1.557-.87 2.055c-.668.506-1.445.45-2.195.234c-.727-.208-1.633-.625-2.733-1.132l-.656-.302c-.718-.33-.871-.383-1.015-.383s-.297.053-1.015.383l-.655.302c-1.101.507-2.007.924-2.734 1.132c-.75.215-1.527.272-2.194-.234c-.656-.498-.836-1.26-.871-2.054c-.035-.78.064-1.805.186-3.06l.072-.739c.078-.806.082-.998.03-1.165c-.05-.163-.158-.31-.675-.915l-.475-.555c-.803-.94-1.461-1.71-1.873-2.364c-.425-.674-.699-1.396-.455-2.181c.247-.793.888-1.218 1.62-1.507c.705-.278 1.674-.497 2.85-.763l.063-.014l.636-.144c.764-.173.92-.225 1.041-.317c.126-.095.227-.245.62-.949l.358-.643c.607-1.09 1.104-1.98 1.572-2.592" clip-rule="evenodd"/>
+            </svg>
+          </span>
+        </h3>
+        <div class="ratingInfobox">No ratings yet</div>
+      </div>
+
+     
+      <hr class="ratingDividerLine" />
+
+      <div class="ratingFiveStar">
+        <span>5
+          <svg xmlns="http://www.w3.org/2000/svg" width="11px" height="10px" viewBox="0 0 16 16"><path fill="#FDD835" fill-rule="evenodd" d="m8 1.91l2.035 3.943l3.938.845l-2.71 2.868l.3 4.33L8 11.867l-3.563 2.029l.299-4.33l-2.71-2.868l3.938-.845z" clip-rule="evenodd"/></svg>
+        </span>
+        <div class="ratingFiveStarLine">
+          <div class="fill" style="width: 70%"></div>
+        </div>
+        <span>80</span>
+      </div>
+
+       <div class="ratingFiveStar">
+        <span>4
+          <svg xmlns="http://www.w3.org/2000/svg" width="11px" height="10px" viewBox="0 0 16 16"><path fill="#FDD835" fill-rule="evenodd" d="m8 1.91l2.035 3.943l3.938.845l-2.71 2.868l.3 4.33L8 11.867l-3.563 2.029l.299-4.33l-2.71-2.868l3.938-.845z" clip-rule="evenodd"/></svg>
+        </span>
+        <div class="ratingFiveStarLine">
+          <div class="fill" style="width: 70%"></div>
+        </div>
+        <span>80</span>
+      </div>
+
+       <div class="ratingFiveStar">
+        <span>3
+          <svg xmlns="http://www.w3.org/2000/svg" width="11px" height="10px" viewBox="0 0 16 16"><path fill="#FDD835" fill-rule="evenodd" d="m8 1.91l2.035 3.943l3.938.845l-2.71 2.868l.3 4.33L8 11.867l-3.563 2.029l.299-4.33l-2.71-2.868l3.938-.845z" clip-rule="evenodd"/></svg>
+        </span>
+        <div class="ratingFiveStarLine">
+          <div class="fill" style="width: 70%"></div>
+        </div>
+        <span>80</span>
+      </div>
+
+       <div class="ratingFiveStar">
+        <span>2
+          <svg xmlns="http://www.w3.org/2000/svg" width="11px" height="10px" viewBox="0 0 16 16"><path fill="#FDD835" fill-rule="evenodd" d="m8 1.91l2.035 3.943l3.938.845l-2.71 2.868l.3 4.33L8 11.867l-3.563 2.029l.299-4.33l-2.71-2.868l3.938-.845z" clip-rule="evenodd"/></svg>
+        </span>
+        <div class="ratingFiveStarLine">
+          <div class="fill" style="width: 70%"></div>
+        </div>
+        <span>80</span>
+      </div>
+
+      <div class="ratingFiveStar">
+        <span>1
+          <svg xmlns="http://www.w3.org/2000/svg" width="11px" height="10px" viewBox="0 0 16 16"><path fill="#FDD835" fill-rule="evenodd" d="m8 1.91l2.035 3.943l3.938.845l-2.71 2.868l.3 4.33L8 11.867l-3.563 2.029l.299-4.33l-2.71-2.868l3.938-.845z" clip-rule="evenodd"/></svg>
+        </span>
+        <div class="ratingFiveStarLine">
+          <div class="fill" style="width: 70%"></div>
+        </div>
+        <span>80</span>
+      </div>
+
+
+    </div>
+
+  </div>
+
+ 
+  <div class="commentsContainer">
+
+  <div class="commentsTopLabel">
+    <h3 class="commentsHeader">Comments</h3>
+    <button class="commentsFilterBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24">
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 7h15M7 12h10m-7 5h4"/>
+      </svg>
+      Filter
+    </button>
+  </div>
+
+ 
+  <div class="commentsTableWrapper">
+
+    <table class="commentsTable">
+      <thead>
+        <tr>
+          <th>STUDENT NAME</th>
+          <th>RATINGS</th>
+          <th>COMMENTS</th>
+          <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody id="commentsTableBody">
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const commentsData = [
+    {
+      studentName: "XYZ",
+      ratings: "5 Stars",
+      comments: "Great course!",
+      commentAction: "Reply",
+    },
+    {
+      studentName: "XYZ",
+      ratings: "5 Stars",
+      comments: "Great course!",
+      commentAction: "Reply",
+    },
+    {
+      studentName: "XYZ",
+      ratings: "5 Stars",
+      comments: "Great course!",
+      commentAction: "Reply",
+    },
+    {
+      studentName: "XYZ",
+      ratings: "5 Stars",
+      comments: "Great course!",
+      commentAction: "Reply",
+    },
+    {
+      studentName: "XYZ",
+      ratings: "5 Stars",
+      comments: "Great course!",
+      commentAction: "Reply",
+    },
+    {
+      studentName: "XYZ",
+      ratings: "5 Stars",
+      comments: "Great course!",
+      commentAction: "Reply",
+    },
+    {
+      studentName: "XYZ",
+      ratings: "5 Stars",
+      comments: "Great course!",
+      commentAction: "Reply",
+    },
+    {
+      studentName: "XYZ",
+      ratings: "5 Stars",
+      comments: "Great course!",
+      commentAction: "Reply",
+    },
+    {
+      studentName: "XYZ",
+      ratings: "5 Stars",
+      comments: "Great course!",
+      commentAction: "Reply",
+    },
+    {
+      studentName: "XYZ",
+      ratings: "5 Stars",
+      comments: "Great course!",
+      commentAction: "Reply",
+    },
+  ];
+
+  const tbody = document.getElementById("commentsTableBody");
+  tbody.innerHTML = "";
+
+  if (commentsData.length === 0) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td colspan="4" style="text-align:center; padding:20px; color:#777;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 24 24">
+            <path fill="#424242" fill-rule="evenodd" d="M11 2a9 9 0 1 0 5.618 16.032l3.675 3.675a1 1 0 0 0 1.414-1.414l-3.675-3.675A9 9 0 0 0 11 2m-6 9a6 6 0 1 1 12 0a6 6 0 0 1-12 0" clip-rule="evenodd"/>
+          </svg>
+          <span>No data available</span>
+        </div>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  } else {
+    commentsData.forEach(item => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${item.studentName}</td>
+        <td>${item.ratings}</td>
+        <td>${item.comments}</td>
+        <td>${item.commentAction}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+});
+</script>
+
+    
+
+</section>
+
+      
+     <!-- subAgentsReport -->
+       
+     <section class="subAgentsReportContainer">
+
+      <div class="subAgentsReportHeader">Sub Agents Report</div>
+
+      <div class="subAgentsReportOverviewTableWrapper">
+      <table class="subAgentsReportOverviewTable">
+        <thead>
+          <tr>
+            <th>AGENT NAME</th>
+            <th>FOLLOWED-UP</th>
+            <th>ENQUIRES</th>
+            <th>ENROLLED</th>
+            <th>COMMENT ANSWERED</th>
+            <th>ACTION</th>
+          </tr>
+        </thead>
+
+        <tbody id="subAgentsReportTableBody">
+          
+        </tbody>
+
+      </table>
+      </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const subAgentsReportData = [
+
+              {
+                agentName: "james bond",
+                followedUp: "ISI",
+                enquires: "qwerty",
+                enrolled: "pta",
+                commentAnswered: "no",
+                action: "action",
+              },
+
+              
+              {
+                agentName: "james bond",
+                followedUp: "ISI",
+                enquires: "qwerty",
+                enrolled: "pta",
+                commentAnswered: "no",
+                action: "action",
+              },
+
+              
+              {
+                agentName: "james bond",
+                followedUp: "ISI",
+                enquires: "qwerty",
+                enrolled: "pta",
+                commentAnswered: "no",
+                action: "action",
+              },
+
+              
+              {
+                agentName: "james bond",
+                followedUp: "ISI",
+                enquires: "qwerty",
+                enrolled: "pta",
+                commentAnswered: "no",
+                action: "action",
+              },
+
+              
+              {
+                agentName: "james bond",
+                followedUp: "ISI",
+                enquires: "qwerty",
+                enrolled: "pta",
+                commentAnswered: "no",
+                action: "action",
+              },
+
+              
+              {
+                agentName: "james bond",
+                followedUp: "ISI",
+                enquires: "qwerty",
+                enrolled: "pta",
+                commentAnswered: "no",
+                action: "action",
+              },
+
+              
+              {
+                agentName: "james bond",
+                followedUp: "ISI",
+                enquires: "qwerty",
+                enrolled: "pta",
+                commentAnswered: "no",
+                action: "action",
+              },
+
+              
+              {
+                agentName: "james bond",
+                followedUp: "ISI",
+                enquires: "qwerty",
+                enrolled: "pta",
+                commentAnswered: "no",
+                action: "action",
+              },
+
+              
+              {
+                agentName: "james bond",
+                followedUp: "ISI",
+                enquires: "qwerty",
+                enrolled: "pta",
+                commentAnswered: "no",
+                action: "action",
+              },
+
+              
+              {
+                agentName: "james bond",
+                followedUp: "ISI",
+                enquires: "qwerty",
+                enrolled: "pta",
+                commentAnswered: "no",
+                action: "action",
+              },
+
+              
+              {
+                agentName: "james bond",
+                followedUp: "ISI",
+                enquires: "qwerty",
+                enrolled: "pta",
+                commentAnswered: "no",
+                action: "action",
+              },
+
+              
+              {
+                agentName: "james bond",
+                followedUp: "ISI",
+                enquires: "qwerty",
+                enrolled: "pta",
+                commentAnswered: "no",
+                action: "action",
+              },
+
+            ];
+
+            const tbody = document.getElementById("subAgentsReportTableBody");
+            tbody.innerHTML = "";
+
+            if (subAgentsReportData.length === 0) {
+              const tr = document.createElement("tr");
+              tr.innerHTML = `
+                <td colspan="4" style="text-align:center; padding:20px; color:#777;">
+                  <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 24 24">
+                      <path fill="#424242" fill-rule="evenodd" d="M11 2a9 9 0 1 0 5.618 16.032l3.675 3.675a1 1 0 0 0 1.414-1.414l-3.675-3.675A9 9 0 0 0 11 2m-6 9a6 6 0 1 1 12 0a6 6 0 0 1-12 0" clip-rule="evenodd"/>
+                    </svg>
+                    <span>No data available</span>
+                  </div>
+                </td>
+              `;
+              tbody.appendChild(tr);
+            } else {
+              subAgentsReportData.forEach(item => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                  <td>${item.agentName}</td>
+                  <td>${item.followedUp}</td>
+                  <td>${item.enquires}</td>
+                  <td>${item.enrolled}</td>
+                  <td>${item.commentAnswered}</td>
+                  <td>${item.action}</td>
+                `;
+                tbody.appendChild(tr);
+              });
+            }
+          });
+        </script>
+
+    </section>
+
+
+    <!-- financialOverviewSection -->
+    <section class="financialOverviewSection">
+        
+        <h2 class="financialOverHeader">Financial Overview</h2>
+        <p class="financialOverSubHeader">Track your revenue and payment status.</p>
+
+       
+        <div class="financialOverContainer">
+
+          <!-- card 1 -->
+          <div class="financialOverCard">
+            <div class="financialIconBox">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="none" stroke="#287781" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 3h14v18l-1.032-.884a2 2 0 0 0-2.603 0L14.333 21l-1.031-.884a2 2 0 0 0-2.604 0L9.667 21l-1.032-.884a2 2 0 0 0-2.603 0L5 21zm10 4H9m6 4H9m6 4h-4"/></svg>
+            </div>
+            <h3 class="financialOverCardHeader">3</h3>
+            <p class="financialOverCardSubHeader">Total Invoice</p>
+          </div>
+
+          <!-- card 2 -->
+          <div class="financialOverCard">
+            <div class="financialIconBox">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><g fill="none" stroke="#D43273" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M2.017 14C4.217 14 6 15.783 6 17.983M6 4.017C6 6.217 4.217 8 2.017 8M18 4.017C18 6.197 19.769 7.97 21.942 8"/><path d="M22 11v-1c0-2.828 0-4.243-.879-5.121C20.243 4 18.828 4 16 4H8c-2.828 0-4.243 0-5.121.879C2 5.757 2 7.172 2 10v2c0 2.828 0 4.243.879 5.121C3.757 18 5.172 18 8 18h3"/><path d="M15 11a3 3 0 1 1-6 0a3 3 0 0 1 6 0m-1 7s1 0 2 2c0 0 3.177-5 6-6"/></g></svg>
+            </div>
+            <h3 class="financialOverCardHeader">0</h3>
+            <p class="financialOverCardSubHeader">Payments Succeeded</p>
+          </div>
+
+          <!-- card 3 -->
+          <div class="financialOverCard">
+            <div class="financialIconBox">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 50 50"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke="#C7A926" d="m21.875 21.875l6.25 6.25m0-6.25l-6.25 6.25"/><path stroke="#C7A926" d="M14.583 6.25H37.5a2.083 2.083 0 0 1 2.083 2.083v33.334A2.083 2.083 0 0 1 37.5 43.75h-25a2.083 2.083 0 0 1-2.083-2.083v-31.25zm-4.166 4.167h4.166V6.25z"/></g></svg>
+            </div>
+            <h3 class="financialOverCardHeader">0</h3>
+            <p class="financialOverCardSubHeader">Outstanding Payments</p>
+          </div>
+        </div>
+      </section>
+
+
+
+  </div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll(".tabBtn");
+  const tabContents = document.querySelectorAll(".tabContent");
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // remove active classes
+      tabButtons.forEach(b => b.classList.remove("active"));
+      tabContents.forEach(c => c.classList.remove("active"));
+
+      // add active to clicked
+      btn.classList.add("active");
+      const targetId = btn.getAttribute("data-target");
+      document.querySelector(`.${targetId}`).classList.add("active");
+    });
+  });
+});
+
+</script>
+
+
+  </div>
+  
+</div>
+
+
+ <script>
+        
+// highlight nav 
+  const linkColor = document.querySelectorAll('.nav__link');
+  function colorLink() {
+    linkColor.forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+  }
+  linkColor.forEach(l => l.addEventListener('click', colorLink));
+
+  // dropdown toggle 
+  document.addEventListener("DOMContentLoaded", function () {
+    const userCards = document.querySelectorAll(".userCard");
+
+    userCards.forEach(card => {
+      card.addEventListener("click", function (e) {
+        // stop toggle 
+        if (e.target.tagName === "BUTTON") {
+          e.stopPropagation();
+          return;
+        }
+
+        const details = this.querySelector(".details");
+        const dropdown = this.querySelector(".dropdown");
+        const isOpen = details.style.display === "block";
+
+        // close other cards
+        document.querySelectorAll(".userCard .details").forEach(d => {
+          d.style.display = "none";
+        });
+        document.querySelectorAll(".userCard .dropdown").forEach(dr => {
+          dr.textContent = "▼";
+        });
+
+        // toggle current
+        if (!isOpen) {
+          details.style.display = "block";
+          dropdown.textContent = "▲";
+        } else {
+          details.style.display = "none";
+          dropdown.textContent = "▼";
+        }
+      });
+
+      // tab btns
+      const tabButtons = card.querySelectorAll(".details .buttons button");
+      tabButtons.forEach(btn => {
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation(); 
+
+          // remove active
+          tabButtons.forEach(b => b.classList.remove("active"));
+
+          // add active 
+          this.classList.add("active");
+        });
+      });
+    });
+  });
+
+
+    </script>
+
+    
+<script>
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const sideBar = document.getElementById("sideBar");
+
+mobileMenuBtn.addEventListener("click", () => {
+  sideBar.classList.toggle("active");
+});
+</script>
+
+
+
+<!-- footer -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- column 1: Logo + About + Social Icons -->
+            <div class="footer-col footer-about">
+                <img src="../../images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="../../images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="../../images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="../../images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="../../images/Home/footer/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- Column 2: Services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="#">Education Loans</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 3: Study Destinations -->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="#">USA</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">UK</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 4: Contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>info@studybefikar.com</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+
+
+</body>
+
+</html>

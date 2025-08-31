@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Study Befikar</title>
-    <link rel="stylesheet" href="./admissionCounsellingDashboard.css" />
+    <link rel="stylesheet" href="/Palak/DashBoard/admissionCounselling/admissionCounsellingDashboard.css" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
         rel="stylesheet">
      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -239,7 +239,7 @@ window.addEventListener('popstate', () => {
   <!-- tab bar -->
   <div class="tabBar">
     <button class="tabBtn active" data-target="dashboard">Dashboard</button>
-    <button class="tabBtn" data-target="enrolledWith">Enrolled with</button>
+    <button class="tabBtn" data-target="enrolledWith">Enroll with</button>
     <button class="tabBtn" data-target="enquiredTo">Enquired To</button>
   </div>
 
@@ -258,12 +258,33 @@ window.addEventListener('popstate', () => {
 
   <!-- search filter  -->
   <div class="dashboardSearchFilterContainer">
+    
     <div class="searchContainer">
-      <input type="text" class="dashboardSearchBox" placeholder="Search...">
+      <img src="../../images/dashboard/vendorDashboard/bankwiseOverview/search.png" class="searchIcon" title="search">
+      <input type="text" class="dashboardSearchBox" placeholder="        Search...">
       <button class="dashboardSearchBtn">Search</button>
     </div>
 
-    <button class="filterBtn">Filters ▾</button>
+      <script>const searchInput = document.querySelector(".dashboardSearchBox");
+      const searchIcon = document.querySelector(".searchIcon");
+
+      searchInput.addEventListener("input", () => {
+        if (searchInput.value.trim() !== "") {
+          searchIcon.style.display = "none";
+        } else {
+          searchIcon.style.display = "block";
+        }
+      });
+      </script>
+
+
+    <button class="filterBtn" title="filter">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24">
+    <path fill="#ffffff" d="M7 11h10v2H7zM4 7h16v2H4zm6 8h4v2h-4z"/>
+  </svg>
+  <span>Filters</span>
+</button>
+
   </div>
 
   <!-- hidden filters -->
@@ -271,46 +292,54 @@ window.addEventListener('popstate', () => {
 
   <div class="dashboardFilterOptions" style="display: none;">
 
-    <div class="filterOptionContainer">
+
+    <div class="inputContainer">
     <label>Zip Code</label>
     <input type="text" placeholder="Zip Code" class="filterInput">
     </div>
 
-    <div class="filterOptionContainer">
-    <label>State</label>
-       <div class="stateDropdown">
-        <button class="stateBtn">View All ▾</button>
-        <div class="stateMenu">
-          <a href="#" data-bank="View All">View All</a>
-          <a href="#" data-bank="HDFC">HDFC</a>
-        </div>
-      </div>
+    <div class="filterOptionContainer"> 
+  <label>State</label>
+  <div class="customDropdown stateDropdown">
+    <button class="dropdownBtn">View All ▾</button>
+    <div class="dropdownMenu">
+      <a href="#" data-value="View All">View All</a>
+      <a href="#" data-value="California">California</a>
+      <a href="#" data-value="Texas">Texas</a>
+      <a href="#" data-value="New York">New York</a>
     </div>
+  </div>
+</div>
 
-    <div class="filterOptionContainer">
-    <label>City</label>
-    <select class="dropdownCity">
-      <option value="">Select City</option>
-      <option>Los Angeles</option>
-      <option>Houston</option>
-      <option>New York City</option>
-    </select>
-    </div>  
-
-    <div class="filterOptionContainer">
-    <label>Exam</label>
-    <select class="dropdownExam">
-      <option value="">Select Exam</option>
-      <option>IELTS</option>
-      <option>TOEFL</option>
-      <option>GRE</option>
-    </select>
+    <div class="filterOptionContainer"> 
+  <label>City</label>
+  <div class="customDropdown cityDropdown">
+    <button class="dropdownBtn">Select City ▾</button>
+    <div class="dropdownMenu">
+      <a href="#" data-value="Los Angeles">Los Angeles</a>
+      <a href="#" data-value="Houston">Houston</a>
+      <a href="#" data-value="New York City">New York City</a>
     </div>
+  </div>
+</div>
 
-    <div class="filterOptionContainer">
+<div class="filterOptionContainer"> 
+  <label>Exam</label>
+  <div class="customDropdown examDropdown">
+    <button class="dropdownBtn">Select Exam ▾</button>
+    <div class="dropdownMenu">
+      <a href="#" data-value="IELTS">IELTS</a>
+      <a href="#" data-value="TOEFL">TOEFL</a>
+      <a href="#" data-value="GRE">GRE</a>
+    </div>
+  </div>
+</div>
+
+    <div class="inputContainer">
     <label>Counsellor Name</label>
     <input type="text" placeholder="Counsellor Name" class="filterInput">
-    </div>  
+    </div>
+
 
     <div class="searchClearContainer">
       <button class="filterSearchBtn">Search</button>
@@ -321,6 +350,266 @@ window.addEventListener('popstate', () => {
   </div>
 
      </div>
+
+
+     <!-- student_cards -->
+      <div class="studentCardContainer">
+  
+        
+        <div class="studentCard">
+          <div class="studentTopLabel">
+            <div class="studentTopLeftCol">
+              <img src="/Palak/images/dashboard/admissionDashboard/counsellor.jpg" alt="Student" class="studentImg">
+              <div>
+                <h3 class="studentName">John Doe</h3>
+                <p class="studentRating"><svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 24 24"><path fill="#FDD835" d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"/></svg> 4.8(127 Reviews)</p>
+              </div>
+            </div>
+            <div class="studentTopRightCol">
+              <div class="studentInfoBox">
+                <p>SAT</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="studentLocation"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 512 512"><path fill="#424242" d="M240.3 396.8c3.3 5.1 9.1 8.5 15.7 8.5s12.4-3.4 15.8-8.5L382 226.6c14.8-22.9 23.4-48.1 23.4-77.3C405.3 64.9 339 0 256 0S106.7 64.9 106.7 149.3c0 29.2 8.6 54.4 23.4 77.3zM256 64c47.1 0 85.3 38.2 85.3 85.3s-38.2 85.3-85.3 85.3s-85.3-38.2-85.3-85.3S208.9 64 256 64m109.4 259.5L256 469.3L146.6 323.5c-37.4 19.6-61.3 48.9-61.3 81.8C85.3 464.2 161.7 512 256 512s170.7-47.8 170.7-106.7c0-32.9-23.9-62.2-61.3-81.8"/></svg>Los Angeles, California</p>
+
+          <p class="studentExperience"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 24 24"><path fill="#424242" d="M17 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill="#424242" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75M5.71 4.89c-1.005.135-1.585.389-2.008.812S3.025 6.705 2.89 7.71q-.034.255-.058.539h18.336q-.024-.284-.058-.54c-.135-1.005-.389-1.585-.812-2.008s-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14M2.75 12c0-.854 0-1.597.013-2.25h18.474c.013.653.013 1.396.013 2.25v2c0 1.907-.002 3.262-.14 4.29c-.135 1.005-.389 1.585-.812 2.008s-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-4c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812s-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289z" clip-rule="evenodd"/></svg>3 years of experience</p>
+
+          <div class="studentBtnContainer">
+            <button class="studentKnowMoreBtn">Know More</button>
+            <button class="studentEnrollNowBtn">Enroll Now</button>
+            <button class="studentEnquireBtn">Enquire</button>
+          </div>
+        </div>
+
+
+        <div class="studentCard">
+          <div class="studentTopLabel">
+            <div class="studentTopLeftCol">
+              <img src="/Palak/images/dashboard/admissionDashboard/counsellor.jpg" alt="Student" class="studentImg">
+              <div>
+                <h3 class="studentName">John Doe</h3>
+                <p class="studentRating"><svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 24 24"><path fill="#FDD835" d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"/></svg> 4.8(127 Reviews)</p>
+              </div>
+            </div>
+            <div class="studentTopRightCol">
+              <div class="studentInfoBox">
+                <p>SAT</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="studentLocation"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 512 512"><path fill="#424242" d="M240.3 396.8c3.3 5.1 9.1 8.5 15.7 8.5s12.4-3.4 15.8-8.5L382 226.6c14.8-22.9 23.4-48.1 23.4-77.3C405.3 64.9 339 0 256 0S106.7 64.9 106.7 149.3c0 29.2 8.6 54.4 23.4 77.3zM256 64c47.1 0 85.3 38.2 85.3 85.3s-38.2 85.3-85.3 85.3s-85.3-38.2-85.3-85.3S208.9 64 256 64m109.4 259.5L256 469.3L146.6 323.5c-37.4 19.6-61.3 48.9-61.3 81.8C85.3 464.2 161.7 512 256 512s170.7-47.8 170.7-106.7c0-32.9-23.9-62.2-61.3-81.8"/></svg>Los Angeles, California</p>
+
+          <p class="studentExperience"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 24 24"><path fill="#424242" d="M17 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill="#424242" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75M5.71 4.89c-1.005.135-1.585.389-2.008.812S3.025 6.705 2.89 7.71q-.034.255-.058.539h18.336q-.024-.284-.058-.54c-.135-1.005-.389-1.585-.812-2.008s-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14M2.75 12c0-.854 0-1.597.013-2.25h18.474c.013.653.013 1.396.013 2.25v2c0 1.907-.002 3.262-.14 4.29c-.135 1.005-.389 1.585-.812 2.008s-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-4c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812s-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289z" clip-rule="evenodd"/></svg>3 years of experience</p>
+
+          <div class="studentBtnContainer">
+            <button class="studentKnowMoreBtn">Know More</button>
+            <button class="studentEnrollNowBtn">Enroll Now</button>
+            <button class="studentEnquireBtn">Enquire</button>
+          </div>
+        </div>
+
+
+        <div class="studentCard">
+          <div class="studentTopLabel">
+            <div class="studentTopLeftCol">
+              <img src="/Palak/images/dashboard/admissionDashboard/counsellor.jpg" alt="Student" class="studentImg">
+              <div>
+                <h3 class="studentName">John Doe</h3>
+                <p class="studentRating"><svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 24 24"><path fill="#FDD835" d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"/></svg> 4.8(127 Reviews)</p>
+              </div>
+            </div>
+            <div class="studentTopRightCol">
+              <div class="studentInfoBox">
+                <p>SAT</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="studentLocation"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 512 512"><path fill="#424242" d="M240.3 396.8c3.3 5.1 9.1 8.5 15.7 8.5s12.4-3.4 15.8-8.5L382 226.6c14.8-22.9 23.4-48.1 23.4-77.3C405.3 64.9 339 0 256 0S106.7 64.9 106.7 149.3c0 29.2 8.6 54.4 23.4 77.3zM256 64c47.1 0 85.3 38.2 85.3 85.3s-38.2 85.3-85.3 85.3s-85.3-38.2-85.3-85.3S208.9 64 256 64m109.4 259.5L256 469.3L146.6 323.5c-37.4 19.6-61.3 48.9-61.3 81.8C85.3 464.2 161.7 512 256 512s170.7-47.8 170.7-106.7c0-32.9-23.9-62.2-61.3-81.8"/></svg>Los Angeles, California</p>
+
+          <p class="studentExperience"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 24 24"><path fill="#424242" d="M17 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill="#424242" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75M5.71 4.89c-1.005.135-1.585.389-2.008.812S3.025 6.705 2.89 7.71q-.034.255-.058.539h18.336q-.024-.284-.058-.54c-.135-1.005-.389-1.585-.812-2.008s-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14M2.75 12c0-.854 0-1.597.013-2.25h18.474c.013.653.013 1.396.013 2.25v2c0 1.907-.002 3.262-.14 4.29c-.135 1.005-.389 1.585-.812 2.008s-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-4c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812s-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289z" clip-rule="evenodd"/></svg>3 years of experience</p>
+
+          <div class="studentBtnContainer">
+            <button class="studentKnowMoreBtn">Know More</button>
+            <button class="studentEnrollNowBtn">Enroll Now</button>
+            <button class="studentEnquireBtn">Enquire</button>
+          </div>
+        </div>
+
+
+        <div class="studentCard">
+          <div class="studentTopLabel">
+            <div class="studentTopLeftCol">
+              <img src="/Palak/images/dashboard/admissionDashboard/counsellor.jpg" alt="Student" class="studentImg">
+              <div>
+                <h3 class="studentName">John Doe</h3>
+                <p class="studentRating"><svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 24 24"><path fill="#FDD835" d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"/></svg> 4.8(127 Reviews)</p>
+              </div>
+            </div>
+            <div class="studentTopRightCol">
+              <div class="studentInfoBox">
+                <p>SAT</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="studentLocation"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 512 512"><path fill="#424242" d="M240.3 396.8c3.3 5.1 9.1 8.5 15.7 8.5s12.4-3.4 15.8-8.5L382 226.6c14.8-22.9 23.4-48.1 23.4-77.3C405.3 64.9 339 0 256 0S106.7 64.9 106.7 149.3c0 29.2 8.6 54.4 23.4 77.3zM256 64c47.1 0 85.3 38.2 85.3 85.3s-38.2 85.3-85.3 85.3s-85.3-38.2-85.3-85.3S208.9 64 256 64m109.4 259.5L256 469.3L146.6 323.5c-37.4 19.6-61.3 48.9-61.3 81.8C85.3 464.2 161.7 512 256 512s170.7-47.8 170.7-106.7c0-32.9-23.9-62.2-61.3-81.8"/></svg>Los Angeles, California</p>
+
+          <p class="studentExperience"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 24 24"><path fill="#424242" d="M17 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill="#424242" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75M5.71 4.89c-1.005.135-1.585.389-2.008.812S3.025 6.705 2.89 7.71q-.034.255-.058.539h18.336q-.024-.284-.058-.54c-.135-1.005-.389-1.585-.812-2.008s-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14M2.75 12c0-.854 0-1.597.013-2.25h18.474c.013.653.013 1.396.013 2.25v2c0 1.907-.002 3.262-.14 4.29c-.135 1.005-.389 1.585-.812 2.008s-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-4c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812s-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289z" clip-rule="evenodd"/></svg>3 years of experience</p>
+
+          <div class="studentBtnContainer">
+            <button class="studentKnowMoreBtn">Know More</button>
+            <button class="studentEnrollNowBtn">Enroll Now</button>
+            <button class="studentEnquireBtn">Enquire</button>
+          </div>
+        </div>
+
+
+        <div class="studentCard">
+          <div class="studentTopLabel">
+            <div class="studentTopLeftCol">
+              <img src="/Palak/images/dashboard/admissionDashboard/counsellor.jpg" alt="Student" class="studentImg">
+              <div>
+                <h3 class="studentName">John Doe</h3>
+                <p class="studentRating"><svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 24 24"><path fill="#FDD835" d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"/></svg> 4.8(127 Reviews)</p>
+              </div>
+            </div>
+            <div class="studentTopRightCol">
+              <div class="studentInfoBox">
+                <p>SAT</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="studentLocation"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 512 512"><path fill="#424242" d="M240.3 396.8c3.3 5.1 9.1 8.5 15.7 8.5s12.4-3.4 15.8-8.5L382 226.6c14.8-22.9 23.4-48.1 23.4-77.3C405.3 64.9 339 0 256 0S106.7 64.9 106.7 149.3c0 29.2 8.6 54.4 23.4 77.3zM256 64c47.1 0 85.3 38.2 85.3 85.3s-38.2 85.3-85.3 85.3s-85.3-38.2-85.3-85.3S208.9 64 256 64m109.4 259.5L256 469.3L146.6 323.5c-37.4 19.6-61.3 48.9-61.3 81.8C85.3 464.2 161.7 512 256 512s170.7-47.8 170.7-106.7c0-32.9-23.9-62.2-61.3-81.8"/></svg>Los Angeles, California</p>
+
+          <p class="studentExperience"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 24 24"><path fill="#424242" d="M17 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill="#424242" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75M5.71 4.89c-1.005.135-1.585.389-2.008.812S3.025 6.705 2.89 7.71q-.034.255-.058.539h18.336q-.024-.284-.058-.54c-.135-1.005-.389-1.585-.812-2.008s-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14M2.75 12c0-.854 0-1.597.013-2.25h18.474c.013.653.013 1.396.013 2.25v2c0 1.907-.002 3.262-.14 4.29c-.135 1.005-.389 1.585-.812 2.008s-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-4c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812s-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289z" clip-rule="evenodd"/></svg>3 years of experience</p>
+
+          <div class="studentBtnContainer">
+            <button class="studentKnowMoreBtn">Know More</button>
+            <button class="studentEnrollNowBtn">Enroll Now</button>
+            <button class="studentEnquireBtn">Enquire</button>
+          </div>
+        </div>
+
+
+        <div class="studentCard">
+          <div class="studentTopLabel">
+            <div class="studentTopLeftCol">
+              <img src="/Palak/images/dashboard/admissionDashboard/counsellor.jpg" alt="Student" class="studentImg">
+              <div>
+                <h3 class="studentName">John Doe</h3>
+                <p class="studentRating"><svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 24 24"><path fill="#FDD835" d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"/></svg> 4.8(127 Reviews)</p>
+              </div>
+            </div>
+            <div class="studentTopRightCol">
+              <div class="studentInfoBox">
+                <p>SAT</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="studentLocation"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 512 512"><path fill="#424242" d="M240.3 396.8c3.3 5.1 9.1 8.5 15.7 8.5s12.4-3.4 15.8-8.5L382 226.6c14.8-22.9 23.4-48.1 23.4-77.3C405.3 64.9 339 0 256 0S106.7 64.9 106.7 149.3c0 29.2 8.6 54.4 23.4 77.3zM256 64c47.1 0 85.3 38.2 85.3 85.3s-38.2 85.3-85.3 85.3s-85.3-38.2-85.3-85.3S208.9 64 256 64m109.4 259.5L256 469.3L146.6 323.5c-37.4 19.6-61.3 48.9-61.3 81.8C85.3 464.2 161.7 512 256 512s170.7-47.8 170.7-106.7c0-32.9-23.9-62.2-61.3-81.8"/></svg>Los Angeles, California</p>
+
+          <p class="studentExperience"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 24 24"><path fill="#424242" d="M17 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill="#424242" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75M5.71 4.89c-1.005.135-1.585.389-2.008.812S3.025 6.705 2.89 7.71q-.034.255-.058.539h18.336q-.024-.284-.058-.54c-.135-1.005-.389-1.585-.812-2.008s-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14M2.75 12c0-.854 0-1.597.013-2.25h18.474c.013.653.013 1.396.013 2.25v2c0 1.907-.002 3.262-.14 4.29c-.135 1.005-.389 1.585-.812 2.008s-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-4c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812s-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289z" clip-rule="evenodd"/></svg>3 years of experience</p>
+
+          <div class="studentBtnContainer">
+            <button class="studentKnowMoreBtn">Know More</button>
+            <button class="studentEnrollNowBtn">Enroll Now</button>
+            <button class="studentEnquireBtn">Enquire</button>
+          </div>
+        </div>
+
+
+        <div class="studentCard">
+          <div class="studentTopLabel">
+            <div class="studentTopLeftCol">
+              <img src="/Palak/images/dashboard/admissionDashboard/counsellor.jpg" alt="Student" class="studentImg">
+              <div>
+                <h3 class="studentName">John Doe</h3>
+                <p class="studentRating"><svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 24 24"><path fill="#FDD835" d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"/></svg> 4.8(127 Reviews)</p>
+              </div>
+            </div>
+            <div class="studentTopRightCol">
+              <div class="studentInfoBox">
+                <p>SAT</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="studentLocation"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 512 512"><path fill="#424242" d="M240.3 396.8c3.3 5.1 9.1 8.5 15.7 8.5s12.4-3.4 15.8-8.5L382 226.6c14.8-22.9 23.4-48.1 23.4-77.3C405.3 64.9 339 0 256 0S106.7 64.9 106.7 149.3c0 29.2 8.6 54.4 23.4 77.3zM256 64c47.1 0 85.3 38.2 85.3 85.3s-38.2 85.3-85.3 85.3s-85.3-38.2-85.3-85.3S208.9 64 256 64m109.4 259.5L256 469.3L146.6 323.5c-37.4 19.6-61.3 48.9-61.3 81.8C85.3 464.2 161.7 512 256 512s170.7-47.8 170.7-106.7c0-32.9-23.9-62.2-61.3-81.8"/></svg>Los Angeles, California</p>
+
+          <p class="studentExperience"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 24 24"><path fill="#424242" d="M17 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill="#424242" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75M5.71 4.89c-1.005.135-1.585.389-2.008.812S3.025 6.705 2.89 7.71q-.034.255-.058.539h18.336q-.024-.284-.058-.54c-.135-1.005-.389-1.585-.812-2.008s-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14M2.75 12c0-.854 0-1.597.013-2.25h18.474c.013.653.013 1.396.013 2.25v2c0 1.907-.002 3.262-.14 4.29c-.135 1.005-.389 1.585-.812 2.008s-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-4c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812s-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289z" clip-rule="evenodd"/></svg>3 years of experience</p>
+
+          <div class="studentBtnContainer">
+            <button class="studentKnowMoreBtn">Know More</button>
+            <button class="studentEnrollNowBtn">Enroll Now</button>
+            <button class="studentEnquireBtn">Enquire</button>
+          </div>
+        </div>
+
+
+
+        <div class="studentCard">
+          <div class="studentTopLabel">
+            <div class="studentTopLeftCol">
+              <img src="/Palak/images/dashboard/admissionDashboard/counsellor.jpg" alt="Student" class="studentImg">
+              <div>
+                <h3 class="studentName">John Doe</h3>
+                <p class="studentRating"><svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 24 24"><path fill="#FDD835" d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"/></svg> 4.8(127 Reviews)</p>
+              </div>
+            </div>
+            <div class="studentTopRightCol">
+              <div class="studentInfoBox">
+                <p>SAT</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="studentLocation"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 512 512"><path fill="#424242" d="M240.3 396.8c3.3 5.1 9.1 8.5 15.7 8.5s12.4-3.4 15.8-8.5L382 226.6c14.8-22.9 23.4-48.1 23.4-77.3C405.3 64.9 339 0 256 0S106.7 64.9 106.7 149.3c0 29.2 8.6 54.4 23.4 77.3zM256 64c47.1 0 85.3 38.2 85.3 85.3s-38.2 85.3-85.3 85.3s-85.3-38.2-85.3-85.3S208.9 64 256 64m109.4 259.5L256 469.3L146.6 323.5c-37.4 19.6-61.3 48.9-61.3 81.8C85.3 464.2 161.7 512 256 512s170.7-47.8 170.7-106.7c0-32.9-23.9-62.2-61.3-81.8"/></svg>Los Angeles, California</p>
+
+          <p class="studentExperience"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 24 24"><path fill="#424242" d="M17 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill="#424242" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75M5.71 4.89c-1.005.135-1.585.389-2.008.812S3.025 6.705 2.89 7.71q-.034.255-.058.539h18.336q-.024-.284-.058-.54c-.135-1.005-.389-1.585-.812-2.008s-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14M2.75 12c0-.854 0-1.597.013-2.25h18.474c.013.653.013 1.396.013 2.25v2c0 1.907-.002 3.262-.14 4.29c-.135 1.005-.389 1.585-.812 2.008s-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-4c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812s-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289z" clip-rule="evenodd"/></svg>3 years of experience</p>
+
+          <div class="studentBtnContainer">
+            <button class="studentKnowMoreBtn">Know More</button>
+            <button class="studentEnrollNowBtn">Enroll Now</button>
+            <button class="studentEnquireBtn">Enquire</button>
+          </div>
+        </div>
+
+
+        <div class="studentCard">
+          <div class="studentTopLabel">
+            <div class="studentTopLeftCol">
+              <img src="/Palak/images/dashboard/admissionDashboard/counsellor.jpg" alt="Student" class="studentImg">
+              <div>
+                <h3 class="studentName">John Doe</h3>
+                <p class="studentRating"><svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 24 24"><path fill="#FDD835" d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"/></svg> 4.8(127 Reviews)</p>
+              </div>
+            </div>
+            <div class="studentTopRightCol">
+              <div class="studentInfoBox">
+                <p>SAT</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="studentLocation"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 512 512"><path fill="#424242" d="M240.3 396.8c3.3 5.1 9.1 8.5 15.7 8.5s12.4-3.4 15.8-8.5L382 226.6c14.8-22.9 23.4-48.1 23.4-77.3C405.3 64.9 339 0 256 0S106.7 64.9 106.7 149.3c0 29.2 8.6 54.4 23.4 77.3zM256 64c47.1 0 85.3 38.2 85.3 85.3s-38.2 85.3-85.3 85.3s-85.3-38.2-85.3-85.3S208.9 64 256 64m109.4 259.5L256 469.3L146.6 323.5c-37.4 19.6-61.3 48.9-61.3 81.8C85.3 464.2 161.7 512 256 512s170.7-47.8 170.7-106.7c0-32.9-23.9-62.2-61.3-81.8"/></svg>Los Angeles, California</p>
+
+          <p class="studentExperience"><svg xmlns="http://www.w3.org/2000/svg" width="11px" height="14px" viewBox="0 0 24 24"><path fill="#424242" d="M17 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill="#424242" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75M5.71 4.89c-1.005.135-1.585.389-2.008.812S3.025 6.705 2.89 7.71q-.034.255-.058.539h18.336q-.024-.284-.058-.54c-.135-1.005-.389-1.585-.812-2.008s-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14M2.75 12c0-.854 0-1.597.013-2.25h18.474c.013.653.013 1.396.013 2.25v2c0 1.907-.002 3.262-.14 4.29c-.135 1.005-.389 1.585-.812 2.008s-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-4c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812s-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289z" clip-rule="evenodd"/></svg>3 years of experience</p>
+
+          <div class="studentBtnContainer">
+            <button class="studentKnowMoreBtn">Know More</button>
+            <button class="studentEnrollNowBtn">Enroll Now</button>
+            <button class="studentEnquireBtn">Enquire</button>
+          </div>
+        </div>
+
+
+      </div>
 
 
   </div>
@@ -348,35 +637,38 @@ document.querySelector('.clearFilterBtn').addEventListener('click', () => {
 </script>
 
 <script>
-  const viewAllDropdown = document.querySelector(".viewAllDropdown");
-  const viewAllBtn = document.querySelector(".viewAllBtn");
-  const menuLinks = document.querySelectorAll(".viewAllMenu a");
+  document.querySelectorAll(".customDropdown").forEach(dropdown => {
+  const btn = dropdown.querySelector(".dropdownBtn");
+  const menu = dropdown.querySelector(".dropdownMenu");
 
   // toggle dropdown
-  viewAllBtn.addEventListener("click", () => {
-    viewAllDropdown.classList.toggle("open");
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.querySelectorAll(".customDropdown").forEach(d => {
+      if (d !== dropdown) d.classList.remove("open");
+    });
+    dropdown.classList.toggle("open");
   });
 
-  // close dropdown 
-  document.addEventListener("click", (e) => {
-    if (!viewAllDropdown.contains(e.target)) {
-      viewAllDropdown.classList.remove("open");
-    }
-  });
-
-  // update btn text 
-  menuLinks.forEach(link => {
+  // select option
+  menu.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", (e) => {
-      e.preventDefault(); 
-      const selectedBank = link.getAttribute("data-bank");
-      viewAllBtn.textContent = selectedBank + " ▾"; 
-      viewAllDropdown.classList.remove("open"); 
+      e.preventDefault();
+      btn.textContent = link.getAttribute("data-value") + " ▾";
+      dropdown.classList.remove("open");
     });
   });
+});
+
+// close dropdown when clicking outside
+document.addEventListener("click", () => {
+  document.querySelectorAll(".customDropdown").forEach(d => d.classList.remove("open"));
+});
+
 </script>
 
 
-  <!-- enrolledWith -->
+  <!-- enroll With -->
 
   <div class="enrolledWith tabContent">
     <hr class="tabBarDivider" />

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Study Befikar</title>
-    <link rel="stylesheet" href="./testPreparationDashboard.css" />
+    <link rel="stylesheet" href="/Palak/DashBoard/testPreparation/testPreparationDashboard.css" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
         rel="stylesheet">
      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -22,7 +22,8 @@
   <div class="dashboardContainer">
 
   <!-- sidebar -->
-<div class="sideBar" id="sideBar">
+
+  <div class="sideBar" id="sideBar">
   <div class="sideBarContent">
     <img
       class="sideBarImg"
@@ -155,9 +156,9 @@ window.addEventListener('popstate', () => {
 });
 </script>
 
-    
+
   <!-- mobile topbar -->
-  <div class="mobileTopBar">
+ <div class="mobileTopBar">
   
   <img src="../../images/dashboard/sideBar/study-befikar1.png" alt="Profile">
   
@@ -201,201 +202,214 @@ window.addEventListener('popstate', () => {
 </script>
 
 
+
   <!-- dashboard elements -->
   <div class="dashboardElements">
 
-  <header class="dashboardHeader">
-  <div class="dashboardHeader-right">
-    <a href="#" class="contactUs">Contact Us</a>
-    <div class="userDropdown">
-      <img src="../../images/dashboard/homeDashboard/userImg.jpg" alt="User" class="userImg" />
-      <div class="dropdownMenu">
-        <a href="#">Dashboard</a>
-        <a href="#">Basic Info</a>
-        <a href="#">Academic Info</a>
-        <a href="#">Test Score</a>
-        <a href="#">Work Experience</a>
-        <a href="#">Parents/Guardians</a>
-        <a href="#">Billings</a>
-        <a href="#">Settings</a>
-        <a href="#">Help & Supports</a>
-        <a href="#">Logout</a>
+    <header class="dashboardHeader">
+
+      <div class="dashboardHeader-left">
+        <p>Test Preparation</p>
       </div>
-    </div>
+
+      <div class="dashboardHeader-right">
+        <a href="#" class="contactUs">Contact Us</a>
+        <div class="userDropdown">
+          <img src="../../images/dashboard/homeDashboard/userImg.jpg" alt="User" class="userImg" />
+          <div class="dropdownMenu">
+            <a href="#">Dashboard</a>
+            <a href="#">Basic Info</a>
+            <a href="#">Academic Info</a>
+            <a href="#">Test Score</a>
+            <a href="#">Work Experience</a>
+            <a href="#">Parents/Guardians</a>
+            <a href="#">Billings</a>
+            <a href="#">Settings</a>
+            <a href="#">Help & Supports</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+
+    </header>
+    
+   
+  <div class="tabsContainer">
+
+  <!-- tab bar -->
+  <div class="tabBar">
+    <button class="tabBtn active" data-target="dashboard">Dashboard</button>
+    <button class="tabBtn" data-target="enrolledWith">Enroll with</button>
+    <button class="tabBtn" data-target="enquiredTo">Enquired To</button>
   </div>
-</header>
+
+  <!-- tab contents -->
 
 
-  <!--  welcome section -->
-<section class="dashboardWelcome">
-  <p class="dashboardUserName">Hello, Derek!</p>
-  <p class="dashboardSubtitle">Welcome back! Here's your academic overview.</p>
-  <hr class="divider" />
-</section>
+  <!-- dashboardTab -->
+  <div class="dashboard tabContent active">
+    <hr class="tabBarDivider" />
+
+          <!-- Test Prep Top Section -->
+      <section class="testPrepTopSection">
+        <h1 class="testPrepTopHeader">Test Preparation</h1>
+        <h2 class="testPrepTopSubHeader">Access comprehensive materials, expert guidance, and proven strategies to excel in your exams.</h2>
+
+        <div class="emptyBox">
+        <p class="testPrepTopPara">No information available </p> 
+        </div>
+        
+      </section>
 
 
+  </div>
 
-<!-- user-cards -->
 
-<section class="userCardsSection">
+  <!-- enroll With -->
 
-        <div class="userCardsContainer">
+  <div class="enrolledWith tabContent">
+    <hr class="tabBarDivider" />
+    <p>enrolled with</p>
+  </div>
 
-              <!-- Card 1: Applications Table -->
-              <div class="userCard" onclick="toggleDetails(this)">
+  <!-- enquiredTo -->
 
-                <div class="userCardTop">
-                <h2 class="userCardHeader">Enquired/Enrolled</h2>
-                <span class="dropdown"><img src="../../images/dashboard/homeDashboard/dropdown.png" title="dropdown"></span>
-                </div>
+  <div class="enquiredTo tabContent">
+    <hr class="tabBarDivider" />
 
-                <h3 class="application-count">0</h3>
-                <p class="userCardSubHeader">All Applications </p>
+        <!-- enquireto top -->
+      <section class="enquireToTopSection">
+        <h1 class="enquireToTopHeader">Enquired</h1>
+        <h2 class="enquireToTopSubHeader">Here, students can find infromation about those who have inquired about test preparation resources.</h2>
 
-                <div class="details" style="display: none;">
+        <div class="enquireToTopBox">
+          <h3 class="enquireToTopBoxHeader">Find Your Perfect Counselor</h3>
+          <p class="enquireToTopBoxSubHeader">
+            Get matched with experienced counselors who specialize in your target exams and study preferences
 
-                <hr class="card-divider" />
-                    <div class="buttons">
-                        <button onclick="filterTable('test-prep')">Test</button>
-                        <button onclick="filterTable('admission')">Admission</button>
-                        <button onclick="filterTable('university')">University</button>
-                    </div>
-
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Date Applied</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Rows will be dynamically inserted here -->
-                        </tbody>
-                    </table>
-
-                </div>
-
-            </div>
-            
-          
-              <!-- Card 2: Offer Payments -->
-              <div class="userCard" onclick="toggleDetails(this)">
-
-                <div class="userCardTop">
-                <h2 class="userCardHeader">University Application</h2>
-                <span class="dropdown"><img src="../../images/dashboard/homeDashboard/dropdown.png" title="dropdown"></span>
-                </div>
-
-                  <h3 class="offer-count">5</h3>
-                  <p class="userCardSubHeader">Offer Payments </p>
-
-                  <div class="details" style="display: none;">
-
-                    <hr class="card-divider" />
-                      <p class="collapsiblePara">Details about offer payments here.</p>
-                      <button class="collapsibleBtn" onclick="makePayment()">Make Payment</button>
-                  </div>
-              </div>
-          
-
-              <!-- Card 3: Payment History -->
-              <div class="userCard" onclick="toggleDetails(this)">
-
-                 <div class="userCardTop">
-                <h2 class="userCardHeader">Loan Application</h2>
-                <span class="dropdown"><img src="../../images/dashboard/homeDashboard/dropdown.png" title="dropdown"></span>
-                </div>
-
-                  <h3 class="payment-history-count">3</h3>
-                  <p class="userCardSubHeader">All Loans Application Details</p>
-
-                  <div class="details" style="display: none;">
-                    <hr class="card-divider" />
-                      <p class="collapsiblePara">Check all your loans application details</p>
-                      <button class="collapsibleBtn" onclick="viewHistory()">Loans Dashboard</button>
-                  </div>
-              </div>
-          
-                <!-- Card 4: Notifications -->
-              <div class="userCard" onclick="toggleDetails(this)">
-
-                 <div class="userCardTop">
-                <h2 class="userCardHeader">Payment History</h2>
-                <span class="dropdown"><img src="../../images/dashboard/homeDashboard/dropdown.png" title="dropdown"></span>
-                </div>
-
-                  <h3 class="notifications-count">8</h3>
-                  <p class="userCardSubHeader">Notifications</p>
-
-                  <div class="details" style="display: none;">
-                    <hr class="card-divider" />
-                      <p class="collapsiblePara">Recent notifications here.</p>
-                      <button class="collapsibleBtn" onclick="clearNotifications()">Clear Notifications</button>
-                  </div>
-              </div>
-
-              
-               <!-- Card 5: Settings -->
-              <div class="userCard" onclick="toggleDetails(this)">
-
-                 <div class="userCardTop">
-                <h2 class="userCardHeader">Pending Payment Settings</h2>
-                <span class="dropdown"><img src="../../images/dashboard/homeDashboard/dropdown.png" title="dropdown"></span>
-                </div>
-              
-                  <p class="userCardfivesixSubHeader">Your payment setting is incomplete </p>
-
-                  <div class="barLabel">
-                    <p class="barHeader">Progress</p>
-                    <p class="percentageRight">90%</p>
-                  </div>
-                  
-                  <div class="settingProgressBar">
-                     <div class="settingProgress"></div>
-                  </div>
-
-                  <div class="details" style="display: none;">
-                    <hr class="card-divider" />
-                      <p class="collapsiblePara">Account settings options here.</p>
-                      <button class="collapsibleBtn" onclick="changePassword()">Change Password</button>
-                  </div>
-              </div>
-
-              <!-- Card 6: Profile Information -->
-              <div class="userCard" onclick="toggleDetails(this)">
-
-                 <div class="userCardTop">
-                <h2 class="userCardHeader">Visa Profile</h2>
-                <span class="dropdown"><img src="../../images/dashboard/homeDashboard/dropdown.png" title="dropdown"></span>
-                </div>
-
-                  <p class="userCardfivesixSubHeader">Your visa profile is incomplete</p>
-
-                  <div class="barLabel">
-                    <p class="barHeader">Progress</p>
-                    <p class="percentageRight">90%</p>
-                  </div>
-                  
-                  <div class="profieProgressBar">
-                       <div class="profileProgress"></div>
-                  </div>
-
-                  <div class="details" style="display: none;">
-                    
-                  <hr class="card-divider" />
-                      <p class="collapsiblePara">Account settings options here.</p>
-                      <button class="collapsibleBtn" onclick="editProfile()">Edit Profile</button>
-                  </div>
-              </div>
-          
-
+          </p>
+          <button class="enquireToTopBoxBtn">Find Your Perfect Counsellor Now!</button>
         </div>
 
- </section>
+      </section>
 
 
-    <script>
+       <section class="plan-finance">
+      <div class="planfinance-heading">Explore More</div>
+      <p class="planfinance-para">Choose your path to success.</p>
+
+      <div class="planfinance-container">
+
+        <!-- card 1 -->
+        <div class="planfinance-card">
+          <div class="planfinance-toplabel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><path fill="none" stroke="#287781" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.333 3c2.46-.003 4.836.887 6.667 2.5V21a10.07 10.07 0 0 0-6.667-2.5c-1.562 0-2.343 0-2.688-.22a1.16 1.16 0 0 1-.424-.425C2 17.51 2 16.895 2 15.663v-9.26c0-1.428 0-2.141.549-2.72c.548-.579 1.11-.609 2.234-.668Q5.056 3 5.333 3M12 21V5.5a10.07 10.07 0 0 1 7.217-2.485c1.124.06 1.686.09 2.234.668c.549.579.549 1.292.549 2.72V11.5m-.311 3.434l-.623-.623a1.063 1.063 0 0 0-1.503 0l-3.349 3.35a3.2 3.2 0 0 0-.872 1.628L15 21l1.71-.342a3.2 3.2 0 0 0 1.63-.872l3.349-3.349a1.063 1.063 0 0 0 0-1.503"/></svg>
+          </div>
+          <h3 class="planfinance-cardheading">Take a Mock Test</h3>
+          <p class="planfinance-carddesc">
+            Assess your knowledge and identify areas to improve by taking a comprehensive mock test.
+          </p>
+          <button class="takeMockTest-btn">Take a Mock Test</button>
+        </div>
+
+        <!-- card 2 -->
+        <div class="planfinance-card">
+          <div class="planfinance-toplabel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><g fill="none" stroke="#A12456" stroke-width="1.5"><path d="M5.409 17.118c-.359-1.516-.538-2.274-.303-2.858c.146-.363.396-.676.72-.9C6.346 13 7.13 13 8.702 13h6.597c1.57 0 2.355 0 2.875.36c.324.224.574.537.72.9c.235.584.056 1.342-.303 2.858c-.353 1.494-.53 2.24-.97 2.777a3 3 0 0 1-1.02.802c-.628.303-1.402.303-2.949.303h-3.304c-1.547 0-2.32 0-2.948-.303a3 3 0 0 1-1.02-.802c-.442-.537-.618-1.283-.971-2.777Z"/><path stroke-linecap="round" d="M3 21h18m-10-5h2"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 11c1.838-2.595 6.119-2.737 8 0"/><path d="M14 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z"/></g></svg>
+          </div>
+          <h3 class="planfinance-cardheading">Prepare Now</h3>
+          <p class="planfinance-carddesc">
+          Get access to study materials, tips, and resources to start preparing the right way.
+          </p>
+          <button class="takeMockTest-btn">Prepare Now</button>
+        </div>
+
+        <!-- card 3 -->
+        <div class="planfinance-card">
+          <div class="planfinance-toplabel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><path fill="#917B1A" d="M17 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill="#917B1A" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75M5.71 4.89c-1.005.135-1.585.389-2.008.812S3.025 6.705 2.89 7.71q-.034.255-.058.539h18.336q-.024-.284-.058-.54c-.135-1.005-.389-1.585-.812-2.008s-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14M2.75 12c0-.854 0-1.597.013-2.25h18.474c.013.653.013 1.396.013 2.25v2c0 1.907-.002 3.262-.14 4.29c-.135 1.005-.389 1.585-.812 2.008s-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-4c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812s-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289z" clip-rule="evenodd"/></svg>
+          </div>
+          <h3 class="planfinance-cardheading">Book Discounted Test</h3>
+          <p class="planfinance-carddesc">
+           Book a discounted mock test to evaluate your current preparation level at a lower cost.
+          </p>
+          <button class="takeMockTest-btn">Book Discounted Test</button>
+        </div>
+
+      </div>
+
+       </section>
+
+
+        <section class="popularExamSection">
+          <h2 class="popularExamHeader">Popular Exams</h2>
+          <p class="popularExamSubHeader">
+            Prepare with trusted material and expert guidance for top exams
+          </p>
+
+          <div class="popularExamContainer">
+            
+            <div class="popularExamCard">
+              <div class="popularExamCardContent">
+                <h3 class="bottomLeftHeader">TOEFL</h3>
+                <p class="bottomLeftSubHeader">Test of English as a Foreign Language</p>
+              </div>
+            </div>
+
+            
+            <div class="popularExamCard">
+              <div class="popularExamCardContent">
+                <h3 class="bottomLeftHeader">IELTS</h3>
+                <p class="bottomLeftSubHeader">International English Language Testing System</p>
+              </div>
+            </div>
+
+            
+            <div class="popularExamCard">
+              <div class="popularExamCardContent">
+                <h3 class="bottomLeftHeader">GMAT</h3>
+                <p class="bottomLeftSubHeader">Graduate Management Admission Test</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+  </div>
+
+
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll(".tabBtn");
+  const tabContents = document.querySelectorAll(".tabContent");
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // remove active classes
+      tabButtons.forEach(b => b.classList.remove("active"));
+      tabContents.forEach(c => c.classList.remove("active"));
+
+      // add active to clicked
+      btn.classList.add("active");
+      const targetId = btn.getAttribute("data-target");
+      document.querySelector(`.${targetId}`).classList.add("active");
+    });
+  });
+});
+
+</script>
+
+
+  </div>
+  
+</div>
+
+
+ <script>
         
 // highlight nav link
   const linkColor = document.querySelectorAll('.nav__link');
@@ -405,13 +419,13 @@ window.addEventListener('popstate', () => {
   }
   linkColor.forEach(l => l.addEventListener('click', colorLink));
 
-  // dropdown toggle for user cards
+  // dropdown toggle 
   document.addEventListener("DOMContentLoaded", function () {
     const userCards = document.querySelectorAll(".userCard");
 
     userCards.forEach(card => {
       card.addEventListener("click", function (e) {
-        // stop toggle if clicking inside .details on a BUTTON
+        // stop toggle 
         if (e.target.tagName === "BUTTON") {
           e.stopPropagation();
           return;
@@ -421,7 +435,7 @@ window.addEventListener('popstate', () => {
         const dropdown = this.querySelector(".dropdown");
         const isOpen = details.style.display === "block";
 
-        // close all other cards first
+        // close other cards
         document.querySelectorAll(".userCard .details").forEach(d => {
           d.style.display = "none";
         });
@@ -439,11 +453,11 @@ window.addEventListener('popstate', () => {
         }
       });
 
-      // tab buttons active state (inside this card only)
+      // tab btns
       const tabButtons = card.querySelectorAll(".details .buttons button");
       tabButtons.forEach(btn => {
         btn.addEventListener("click", function (e) {
-          e.stopPropagation(); // prevent closing card
+          e.stopPropagation(); 
 
           // remove active only from buttons in THIS card
           tabButtons.forEach(b => b.classList.remove("active"));
@@ -657,7 +671,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Fetch vendors from localStorage
   const enquiredVendors = JSON.parse(localStorage.getItem('enquiredVendors')) || [];
 
-  // Populate Enquired Section
+  // populate Enquired Section
   enquiredVendors.forEach(vendor => {
       const card = document.createElement('div');
       card.className = 'enquired-vendor-card';
@@ -674,106 +688,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Functions for button actions
+//  btn actions
 function viewMore(id) {
   alert(`View more details for Vendor ID: ${id}`);
-  // Redirect or show more details
+  
 }
 
 function bookSeat(id) {
   alert(`Booking a seat for Vendor ID: ${id}`);
-  // Implement booking logic here
+  
 }
     </script>
 
-
-
-<!-- explore-more-section -->
-
-<section class="exploreMoreSection">
-  <h2 class="dashboardExploreMoreHeader">Explore More</h2>
-
-  <div class="dashboardExploreContainer">
     
-
-    <!-- card 1 -->
-    <div class="dashboardExploreCard">
-      <div class="dashboardCardTop">
-        <h3 class="dashboardCardHeader">Search Universities</h3>
-        <p class="dashBoardCardInfobox">Education</p>
-      </div>
-      <p class="dashboardCardSubHeader">Find the best universities worldwide.</p>
-      <button class="dashboardCardLearnMoreBtn">Learn More<img src="../../images/dashboard/homeDashboard/right-arrow.png" title="right-arrow"> </button>
-    </div>
-
-
-    <!-- card 2 -->
-    <div class="dashboardExploreCard">
-      <div class="dashboardCardTop">
-        <h3 class="dashboardCardHeader">Search Counsellor</h3>
-        <p class="dashBoardCardInfobox">Counselling</p>
-      </div>
-      <p class="dashboardCardSubHeader">Connect with expert counsellors for guidance.</p>
-      <button class="dashboardCardLearnMoreBtn">Learn More<img src="../../images/dashboard/homeDashboard/right-arrow.png" title="right-arrow"></button>
-    </div>
-
-
-    <!-- card 3 -->
-    <div class="dashboardExploreCard">
-      <div class="dashboardCardTop">
-        <h3 class="dashboardCardHeader">Explore Exams</h3>
-        <p class="dashBoardCardInfobox">Testing</p>
-      </div>
-      <p class="dashboardCardSubHeader">Find exams related to your desired program.</p>
-      <button class="dashboardCardLearnMoreBtn">Learn More<img src="../../images/dashboard/homeDashboard/right-arrow.png" title="right-arrow"></button>
-    </div>
-
-
-     <!-- card 4 -->
-    <div class="dashboardExploreCard">
-      <div class="dashboardCardTop">
-        <h3 class="dashboardCardHeader">Notice</h3>
-        <p class="dashBoardCardInfobox">Education</p>
-      </div>
-      <p class="dashboardCardSubHeader">Check out the latest notices and updates.</p>
-      <button class="dashboardCardLearnMoreBtn">Learn More<img src="../../images/dashboard/homeDashboard/right-arrow.png" title="right-arrow"></button>
-    </div>
-
-
-    <!-- card 5 -->
-    <div class="dashboardExploreCard">
-      <div class="dashboardCardTop">
-        <h3 class="dashboardCardHeader">Explore Loan Eligibility</h3>
-        <p class="dashBoardCardInfobox">Loan</p>
-      </div>
-      <p class="dashboardCardSubHeader">Find out if you qualify for educational loans</p>
-      <button class="dashboardCardLearnMoreBtn">Learn More<img src="../../images/dashboard/homeDashboard/right-arrow.png" title="right-arrow"></button>
-    </div>
-
-
-
-
-     <!-- card 7 -->
-    <div class="dashboardExploreCard">
-      <div class="dashboardCardTop">
-        <h3 class="dashboardCardHeader">Pay via Fylwaire/EBIX</h3>
-        <p class="dashBoardCardInfobox">Education</p>
-      </div>
-      <p class="dashboardCardSubHeader">Make your payments securely via Flywire.</p>
-      <button class="dashboardCardLearnMoreBtn">Learn More<img src="../../images/dashboard/homeDashboard/right-arrow.png" title="right-arrow"></button>
-    </div>
-
-
-    
-
-
-  </div>
-</section>
-
-  </div>
-  
-</div>
-
 <script>
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
 const sideBar = document.getElementById("sideBar");

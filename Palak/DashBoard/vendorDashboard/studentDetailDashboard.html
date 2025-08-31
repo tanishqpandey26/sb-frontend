@@ -58,6 +58,7 @@
           <a href="/Palak/DashBoard/vendorDashboard/studentDetailDashboard.html" data-subpage="student">Student Details
           </a> 
           <a href="/Palak/DashBoard/vendorDashboard/misDashboard.html" data-subpage="mis">MIS Report </a> 
+          <a href="/Palak/DashBoard/vendorDashboard/addNewStudentDashboard.html" data-subpage="addnew">Add New Student </a> 
           <a href="/Palak/DashBoard/vendorDashboard/loanSettingsDashboard.html" data-subpage="settings">Loans Settings
           </a> 
         </div>
@@ -83,6 +84,7 @@ function getCurrentPage() {
     'bankwiseDashboard': 'bankwise',
     'studentDetailDashboard': 'student',
     'misDashboard': 'mis',
+    'addNewStudentDashboard': 'addnew',
     'loanSettingsDashboard': 'settings'
   };
 
@@ -101,7 +103,7 @@ function setActiveNav() {
     document.querySelector('.dropdownTrigger').classList.add('active');
     document.querySelector(`.dropdownMenu a[data-subpage="home"]`).classList.add('active');
   } 
-  else if (['bankwise', 'student', 'mis', 'settings'].includes(currentPage)) {
+  else if (['bankwise', 'student', 'mis','addnew', 'settings'].includes(currentPage)) {
     dropdownNav.classList.add('open');
     document.querySelector(`.dropdownMenu a[data-subpage="${currentPage}"]`)?.classList.add('active');
     document.querySelector('.dropdownTrigger').classList.add('active');
@@ -458,6 +460,8 @@ syntheticData.forEach(item => {
   tbody.appendChild(tr);
 });
 </script>
+
+
     
   </div>
 
