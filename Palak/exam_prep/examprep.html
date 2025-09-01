@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prepare for Exams</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 32px;
+    /* Increased height */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* subtle shadow */
+    z-index: 1000;
+}
+
+.logo {
+    height: 70px;
+}
+
+.navbar-right {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar-right li {
+    position: relative;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #424242;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-style: bold;
+}
+
+.navbar-right a.active {
+    background: #59898E33;
+    color: #287781 !important;
+    border-radius: 6px;
+    padding: 12px 18px;
+}
+
+.dropdown.open .dropdown-content {
+    display: block !important;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    /* aligned right below the navbar */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    min-width: 240px;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 12px 18px;
+    color: #424242;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+    background-color: #59898E33;
+    /* 20% transparent highlight on hover */
+    color: #287781;
+    /* Optional: highlight text color on hover */
+}
+
+.contact-btn {
+    background-color: #287781;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    background-color: #1d5e65;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+    .navbar-right {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+}
+
+
+
+.footer {
+    background-color: #092A2E;
+    padding: 60px 2% 30px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1320px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-about {
+    flex: 2.5;
+    max-width: none;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+
+.footer-about p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-col h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 22px;
+    color: #ffffff;
+}
+
+.footer-col p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-col.contact-col {
+    min-width: 300px;
+    max-width: 350px;
+}
+
+.footer-col:not(.footer-about) {
+    margin-left: -5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Divider line */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ffffff44;
+    margin: 40px auto 20px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Bottom copyright text */
+.footer-bottom {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+.footer-right-columns {
+    display: flex;
+    gap: 40px;
+    margin-left: 30px;
+    /* You can increase this to shift more */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-right-columns {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .footer-col {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.footer-col ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 100%;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #4ED0E1;
+    /* Optional: subtle hover color */
+}
+
+/* ================= NAVBAR: MOBILE MENU =================== */
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        padding: 16px 24px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        color: #424242;
+    }
+
+    .navbar-right {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin-top: 10px;
+        display: none;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .navbar-right.active {
+        display: flex;
+    }
+}
+     
+/* ================= BOOK CUNSULTATION PAGE =================== */
+
+.book-consultation-hero {
+    position: relative;
+    height: 100vh;
+    background:
+        linear-gradient(89.07deg, rgba(0, 0, 0, 0.66) 36.56%, rgba(102, 102, 102, 0) 99.23%),
+        url('/Palak/exam_prep/examprep_imgs/exam_prep.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: flex-start;
+    padding: 200px 4% 60px;
+    color: #FAFAFA;
+}
+
+.breadcrumb {
+    position: absolute;
+    top: 100px;
+    left: 7%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    opacity: 0.9;
+}
+
+.breadcrumb {
+    margin-bottom: 20px;
+    padding-top: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #FAFAFA;
+}
+
+.breadcrumb a {
+    color: #FAFAFA;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+    color: #ddd;
+}
+
+
+.hero-overlay {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.book-consultation-hero .hero-left {
+    max-width: 50%;
+}
+
+.glass-card {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.consultation-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 68px;
+    margin-bottom: 20px;
+}
+
+.consultation-heading .highlighted {
+    color: #FAFAFA;
+}
+
+.consultation-subtext {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.stats-row {
+    display: flex;
+    gap: 40px;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.stat-number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+}
+
+.stat-label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+
+.consultation-section {
+    width: 1272px;
+    margin: 30px auto;
+    gap: 100px;
+}
+
+.consultation-heading h2 {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 34px;
+    font-weight: 700;
+    color: #424242;
+    text-align: center;
+}
+
+.consultation-heading p {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 24px;
+    font-weight: 400;
+    color: #424242;
+    text-align: center;
+    line-height: 35px;
+    margin-top: 15px;
+}
+
+.step-loader {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 60px 0;
+    gap: 30px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #717A84;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.step .circle {
+    width: 34px;
+    height: 34px;
+    border: 2px solid #717A84;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step.active {
+    color: #287781;
+}
+
+.step.active .circle {
+    border-color: #287781;
+    color: #287781;
+}
+
+.line {
+    width: 150px;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 17px;
+}
+
+.consultation-form-card {
+    background: #FAFAFA;
+    border-radius: 20px;
+    box-shadow: 4px 4px 22.6px #0000001A, -4px -4px 22.6px #0000001A;
+    padding-bottom: 40px;
+}
+
+.form-header {
+    background: #287781;
+    color: #fff;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    padding: 27px 50px;
+    border-radius: 0;
+    width: 100%;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.form-header:first-of-type {
+    border-radius: 20px 20px 0 0;
+}
+
+
+.consultation-form {
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.row {
+    display: flex;
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.form-group.full {
+    width: 100%;
+}
+
+label {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 6px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 18px 20px;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.custom-dropdown {
+    width: 565px;
+    position: relative;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 12px;
+    color: #000000;
+    /* opacity: 0.8; */
+    z-index: 10;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.custom-dropdown .dropdown-trigger {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 18px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-dropdown .dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 230px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 9999;
+    flex-direction: column;
+}
+
+.custom-dropdown .dropdown-option {
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.custom-dropdown .dropdown-option:hover {
+    background: #59898E33;
+    color: #287781;
+}
+
+.custom-dropdown.active .dropdown-options {
+    display: flex;
+}
+
+
+.additional-dropdown {
+    width: 565px;
+    position: relative;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 12px;
+    color: #000000;
+    /* opacity: 0.8; */
+    z-index: 10;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.additional-dropdown .dropdown-trigger {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 18px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.additional-dropdown .dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 230px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 9999;
+    flex-direction: column;
+}
+
+.additional-dropdown .dropdown-option {
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.additional-dropdown .dropdown-option:hover {
+    background: #59898E33;
+    color: #287781;
+}
+
+.additional-dropdown.active .dropdown-options {
+    display: flex;
+}
+
+
+.custom-dropdown .dropdown-options,
+.additional-dropdown .dropdown-options {
+    display: none;
+}
+
+.custom-dropdown.active .dropdown-options,
+.additional-dropdown.active .dropdown-options {
+    display: flex;
+}
+
+
+
+.required {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.form-group.full {
+    width: auto;
+    /* prevent 48% width interference */
+}
+
+.book-btn {
+    width: 582px;
+    height: 59px;
+    background: #287781;
+    color: #fff;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-btn .arrow {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.book-btn:hover {
+    background: #1d5e65;
+}
+
+    </style>
+</head>
+
+<body>
+    <!--NavBar Section-->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo"
+                class="logo">
+        </div>
+        <ul class="navbar-right" id="mobileNav">
+
+            <li class="dropdown">
+                <a href="#">Countries</a>
+                <ul class="dropdown-content">
+                    <li><a href="usa.html">USA</a></li>
+                    <li><a href="#">UK</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">Germany</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Loan</a>
+                <ul class="dropdown-content">
+                    <li><a href="check-eligibility.html">Check Eligibility</a></li>
+                    <li><a href="available-banks.html">Available Banks</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
+                <ul class="dropdown-content">
+                    <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+                    <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
+                    <li><a href="#">Application Deadline</a></li>
+                    <li><a href="#">University Finder</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
+                <ul class="dropdown-content">
+                    <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                    <li><a href="/Palak/exam_prep/examprep.html">Prepare for Exam</a></li>
+                    <li><a href="#">Take a Mock Test</a></li>
+                    <li><a href="#">Exam Deadlines</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">All Exams</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">SAT</a></li>
+                    <li><a href="#">GMAT</a></li>
+                    <li><a href="#">GRE</a></li>
+                    <li><a href="#">IELTS</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">All Services</a></li>
+                    <li><a href="#">Visa Assistance</a></li>
+                    <li><a href="#">Profile Evaluation</a></li>
+                    <li><a href="#">Apply to University</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#" class="dropdown">Notice Board</a></li>
+            <li><a href="#" class="dropdown">About Us</a></li>
+            <li><a href="#" class="dropdown">Contact Us</a></li>
+
+            <li><a href="signup.html" class="contact-btn">Login</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </nav>
+
+    <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('mobileNav');
+
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+    <script>
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(dropdown => {
+            let wasClicked = false;
+            const link = dropdown.querySelector('a');
+
+            // Toggle on click
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isOpen = dropdown.classList.contains('open');
+
+                // Close all dropdowns
+                dropdowns.forEach(d => {
+                    d.classList.remove('open');
+                    d.dataset.clicked = "false";
+                });
+
+                if (!isOpen) {
+                    dropdown.classList.add('open');
+                    dropdown.dataset.clicked = "true";
+                }
+            });
+
+            // Hover to open (desktop only)
+            dropdown.addEventListener('mouseenter', () => {
+                if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                    dropdown.classList.add('open');
+                }
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+                if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                    dropdown.classList.remove('open');
+                }
+            });
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove('open');
+                    dropdown.dataset.clicked = "false";
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+            const links = document.querySelectorAll(".navbar-right a");
+
+            links.forEach(link => {
+                const linkPath = link.getAttribute("href").split("/").pop();
+
+                if (linkPath === currentPath) {
+                    // Highlight the clicked link
+                    link.classList.add("active");
+
+                    // Also highlight parent if inside dropdown
+                    const parentDropdown = link.closest(".dropdown");
+                    if (parentDropdown) {
+                        const parentLink = parentDropdown.querySelector(":scope > a");
+                        if (parentLink) parentLink.classList.add("active");
+                    }
+                }
+            });
+        });
+    </script>
+
+    <section class="hero book-consultation-hero">
+        <div class="breadcrumb"><a href="/Palak/Home/home.html">Home</a> &gt;
+            <a href="/Palak/Test_Prep/testprep.html">Test preparation</a> &gt;
+            <span>Take A Mock Test</span>
+        </div>
+
+        <div class="hero-overlay">
+            <div class="hero-left">
+                <div class="glass-card">★ Trusted by 10,000+ Students</div>
+
+                <h1 class="consultation-heading">
+                    <span>Master Your</span><br>
+                    <span class="highlighted">Mock Tests</span>
+                </h1>
+
+                <p class="consultation-subtext">
+                    Prepare with confidence using our comprehensive mock test platform. Practice with real exam formats, get detailed
+                    analytics, and boost your scores.
+                </p>
+
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Students</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section class="consultation-section">
+    <div class="consultation-heading">
+        <h2>Select Your Mock Test</h2>
+        <p>
+            Choose your exam type, education level, and preferred date to begin your comprehensive mock test preparation
+            journey.
+        </p>
+    </div>
+
+    <!-- Step Loader -->
+    <div class="step-loader">
+        <div class="step active" id="step1">
+            <div class="circle">1</div>
+            <span class="step-label">Education Level</span>
+        </div>
+        <div class="line"></div>
+        <div class="step" id="step2">
+            <div class="circle">2</div>
+            <span class="step-label">Exam Type</span>
+        </div>
+        <div class="line"></div>
+        <div class="step" id="step3">
+            <div class="circle">3</div>
+            <span class="step-label">Exam Date</span>
+        </div>
+    </div>
+
+    <!-- Form Card -->
+    <div class="consultation-form-card" id="formCard">
+        <form class="consultation-form" id="consultationForm" action="confirmation.html" method="POST">
+            <!-- Hidden inputs for submission -->
+            <input type="hidden" name="intake" id="intake">
+            <input type="hidden" name="country" id="country">
+            <input type="hidden" name="exam" id="exam">
+
+            <!-- Step 1 -->
+            <div class="form-header">Education Level</div>
+            <div class="row">
+                <div class="form-group full">
+                    <label>Choose Your Current Academic Level <span class="required">*</span></label>
+                    <div class="custom-dropdown" id="intakeDropdown">
+                        <div class="dropdown-trigger">Select Education Level ▾</div>
+                        <div class="dropdown-options">
+                            <div class="dropdown-option">Fall 2025</div>
+                            <div class="dropdown-option">Spring 2026</div>
+                            <div class="dropdown-option">Summer 2026</div>
+                            <div class="dropdown-option">Fall 2026</div>
+                            <div class="dropdown-option">Spring 2027</div>
+                            <div class="dropdown-option">Summer 2027</div>
+                            <div class="dropdown-option">Fall 2027</div>
+                            <div class="dropdown-option">Spring 2028</div>
+                            <div class="dropdown-option">Summer 2028</div>
+                            <div class="dropdown-option">Fall 2028</div>
+                            <div class="dropdown-option">Spring 2029</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="form-header academic-header hidden">Exam Type</div>
+            <div class="row hidden academic-field">
+                <div class="form-group full">
+                    <label>Preferred Country <span class="required">*</span></label>
+                    <div class="custom-dropdown" id="countryDropdown">
+                        <div class="dropdown-trigger">Select country ▾</div>
+                        <div class="dropdown-options">
+                            <div class="dropdown-option">USA</div>
+                            <div class="dropdown-option">Canada</div>
+                            <div class="dropdown-option">UK</div>
+                            <div class="dropdown-option">New Zealand</div>
+                            <div class="dropdown-option">Australia</div>
+                            <div class="dropdown-option">Germany</div>
+                            <div class="dropdown-option">Japan</div>
+                            <div class="dropdown-option">Ireland</div>
+                            <div class="dropdown-option">Dubai</div>
+                            <div class="dropdown-option">Singapore</div>
+                            <div class="dropdown-option">Others</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="form-header additional-header hidden">Additional Information</div>
+            <div class="additional-field hidden additional-info">
+                <label>Exam Scores (if any) <span class="required">*</span></label>
+                <div class="additional-dropdown" id="examDropdown">
+                    <div class="dropdown-trigger">Select exam ▾</div>
+                    <div class="dropdown-options">
+                        <div class="dropdown-option">IELTS</div>
+                        <div class="dropdown-option">TOEFL</div>
+                        <div class="dropdown-option">GMAT</div>
+                        <div class="dropdown-option">GRE</div>
+                        <div class="dropdown-option">SAT</div>
+                        <div class="dropdown-option">ACT</div>
+                        <div class="dropdown-option">PTE</div>
+                        <div class="dropdown-option">OTHER</div>
+                        <div class="dropdown-option">Not applicable</div>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="button-wrapper">
+                    <div class="form-group full">
+                        <button type="submit" class="submit-btn book-btn">
+                            Book Consultation <span class="arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const intakeHidden = document.getElementById("intake");
+        const countryHidden = document.getElementById("country");
+        const examHidden = document.getElementById("exam");
+
+        const step2 = document.getElementById("step2");
+        const step3 = document.getElementById("step3");
+
+        const academicFields = document.querySelectorAll(".academic-field, .academic-header");
+        const additionalFields = document.querySelectorAll(".additional-field, .additional-header");
+
+        // Generic dropdown logic
+        document.querySelectorAll(".custom-dropdown, .additional-dropdown").forEach(dropdown => {
+            const trigger = dropdown.querySelector(".dropdown-trigger");
+            const options = dropdown.querySelectorAll(".dropdown-option");
+
+            trigger.addEventListener("click", (e) => {
+                e.stopPropagation();
+                document.querySelectorAll(".custom-dropdown, .additional-dropdown").forEach(d => {
+                    if (d !== dropdown) d.classList.remove("active");
+                });
+                dropdown.classList.toggle("active");
+            });
+
+            options.forEach(option => {
+                option.addEventListener("click", () => {
+                    trigger.textContent = option.textContent + " ▾";
+                    dropdown.classList.remove("active");
+
+                    // Save to hidden input
+                    if (dropdown.id === "intakeDropdown") {
+                        intakeHidden.value = option.textContent;
+                    } else if (dropdown.id === "countryDropdown") {
+                        countryHidden.value = option.textContent;
+                    } else if (dropdown.id === "examDropdown") {
+                        examHidden.value = option.textContent;
+                    }
+
+                    revealNextSteps();
+                });
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener("click", (e) => {
+            document.querySelectorAll(".custom-dropdown, .additional-dropdown").forEach(dropdown => {
+                if (!dropdown.contains(e.target)) dropdown.classList.remove("active");
+            });
+        });
+
+        // Step reveal logic
+        function revealNextSteps() {
+            const intakeChosen = intakeHidden.value !== "";
+            const countryChosen = countryHidden.value !== "";
+
+            if (intakeChosen) {
+                academicFields.forEach(el => el.classList.remove("hidden"));
+                step2.classList.add("active");
+
+                if (countryChosen) {
+                    step3.classList.add("active");
+                    additionalFields.forEach(el => el.classList.remove("hidden"));
+                } else {
+                    step3.classList.remove("active");
+                    additionalFields.forEach(el => el.classList.add("hidden"));
+                }
+            } else {
+                academicFields.forEach(el => el.classList.add("hidden"));
+                additionalFields.forEach(el => el.classList.add("hidden"));
+                step2.classList.remove("active");
+                step3.classList.remove("active");
+            }
+        }
+    });
+</script>
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1: Logo + About + Social Icons -->
+            <div class="footer-col footer-about">
+                <img src="/Palak/Admission_counselling/Admission_Counselling_Images/logo2.png" alt="StudyBefikar Logo"
+                    class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000
+                    students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/9.png"
+                            alt="Instagram"></a>
+                    <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/10.png"
+                            alt="Facebook"></a>
+                    <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/11.png"
+                            alt="LinkedIn"></a>
+                    <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+
+                <!-- Column 2: Services -->
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">Admission Counselling</a></li>
+                        <li><a href="#">University Selection</a></li>
+                        <li><a href="#">Visa Processing</a></li>
+                        <li><a href="#">Scholarship Assistance</a></li>
+                        <li><a href="#">Education Loans</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Study Destinations -->
+                <div class="footer-col">
+                    <h4>Study Destinations</h4>
+                    <ul>
+                        <li><a href="#">USA</a></li>
+                        <li><a href="#">Canada</a></li>
+                        <li><a href="#">UK</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="footer-col contact-col">
+                    <h4>Contact Us</h4>
+                    <p>info@studybefikar.com</p>
+                    <p>+1 (555) 123-4567</p>
+
+                    <h4>Office Hours</h4>
+                    <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    <p>Sat: 10:00 AM - 4:00 PM</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -317,56 +317,49 @@ window.addEventListener('popstate', () => {
      </div>
 
 
+     <div class="vendorAdmCounHomeTablePagination">
+       <div class="vendorAdmCounPaginationContainer">
+
+       </div>
+     </div>
+
+
      <script>
-      
-          const syntheticData = [
-             {
-              enquiryID: "809",
-              studentName: "Shaun Suhaas",
-              enquiryDate: "enquiry",
-              email: "Shaunsuhaasa.edu2025@gmail.com",
-              contactNo: "Axis vendorAdmCounHome",
-              subject: "Bachelor's",
-              sbPrice:"price",
-              country: "USA",
-              status: "Enrolled",
-              viewStudentBox:"⋮"
-            },
+        const syntheticData = [];
 
-            {
-              enquiryID: "809",
-              studentName: "Shaun Suhaas",
-              enquiryDate: "enquiry",
-              email: "Shaunsuhaasa.edu2025@gmail.com",
-              contactNo: "Axis vendorAdmCounHome",
-              subject: "Bachelor's",
-              sbPrice:"price",
-              country: "USA",
-              status: "Open",
-              viewStudentBox:"⋮"
-            },
+        for (let i = 1; i <= 100; i++) {
+          syntheticData.push({
+            enquiryID: i,
+            studentName: "Shaun Suhaas " + i,
+            enquiryDate: "January 01,2026",
+            email: "shaun" + i + "@gmail.com",
+            contactNo: "1234567890",
+            subject: "Bachelor's",
+            sbPrice: "₹0",
+            country: "India",
+            status: i % 2 === 0 ? "Enrolled" : "Open",
+            viewStudent: "⋮"
+          });
+        }
 
-            {
-              enquiryID: "809",
-              studentName: "Shaun Suhaas",
-              enquiryDate: "enquiry",
-              email: "Shaunsuhaasa.edu2025@gmail.com",
-              contactNo: "Axis vendorAdmCounHome",
-              subject: "Bachelor's",
-              sbPrice:"price",
-              country: "USA",
-              status: "Cancelled",
-              viewStudentBox:"⋮"
-            },
-            
-          ];
+        const tbody = document.getElementById("vendorAdmCounHomeTableBody");
+        const paginationContainer = document.querySelector(".vendorAdmCounPaginationContainer");
 
-          const tbody = document.getElementById("vendorAdmCounHomeTableBody");
+        let currentPage = 1;
+        const rowsPerPage = 10;
+        const totalPages = Math.ceil(syntheticData.length / rowsPerPage);
 
-          syntheticData.forEach(item => {
+        function renderTable(page) {
+          tbody.innerHTML = "";
+
+          const start = (page - 1) * rowsPerPage;
+          const end = start + rowsPerPage;
+          const pageData = syntheticData.slice(start, end);
+
+          pageData.forEach(item => {
             const tr = document.createElement("tr");
 
-           const statusClass =
+            const statusClass =
               item.status === "Open"
                 ? "status-open"
                 : item.status === "Enrolled"
@@ -394,16 +387,158 @@ window.addEventListener('popstate', () => {
               <td>${item.sbPrice}</td>
               <td>${item.country}</td>
               <td><span class="status-badge ${statusClass}">${item.status}</span></td>
-              <td>${item.viewStudentBox}</td>
+              <td>
+                <div class="viewStudentWrapper">
+                  <span class="viewStudentTrigger">⋮</span>
+                  <div class="viewStudentBox hidden">
+                    <button class="viewStudentBtn">View Student</button>
+                  </div>
+                </div>
+              </td>
             `;
 
             tbody.appendChild(tr);
           });
+        }
+
+        //  pagination
+        function renderPagination() {
+          paginationContainer.innerHTML = "";
+
+          // prev btn
+          const prev = document.createElement("span");
+          prev.innerText = "<";
+          prev.className = "pagination-btn";
+          if (currentPage === 1) prev.classList.add("disabled");
+          prev.addEventListener("click", () => {
+            if (currentPage > 1) {
+              currentPage--;
+              renderTable(currentPage);
+              renderPagination();
+            }
+          });
+          paginationContainer.appendChild(prev);
+
+          // pages
+          for (let i = 1; i <= totalPages; i++) {
+            if (
+              i === 1 || 
+              i === totalPages || 
+              i === currentPage || 
+              i === currentPage - 1 || 
+              i === currentPage + 1
+            ) {
+              const pageBtn = document.createElement("span");
+              pageBtn.innerText = i;
+              pageBtn.className = "pagination-btn";
+              if (i === currentPage) pageBtn.classList.add("active");
+              pageBtn.addEventListener("click", () => {
+                currentPage = i;
+                renderTable(currentPage);
+                renderPagination();
+              });
+              paginationContainer.appendChild(pageBtn);
+            } else if (
+              i === 2 && currentPage > 3 || 
+              i === totalPages - 1 && currentPage < totalPages - 2
+            ) {
+              const dots = document.createElement("span");
+              dots.innerText = "...";
+              dots.className = "pagination-dots";
+              paginationContainer.appendChild(dots);
+            }
+          }
+
+          // next btn
+          const next = document.createElement("span");
+          next.innerText = ">";
+          next.className = "pagination-btn";
+          if (currentPage === totalPages) next.classList.add("disabled");
+          next.addEventListener("click", () => {
+            if (currentPage < totalPages) {
+              currentPage++;
+              renderTable(currentPage);
+              renderPagination();
+            }
+          });
+          paginationContainer.appendChild(next);
+        }
+
         
+        renderTable(currentPage);
+        renderPagination();
+
+        
+        document.addEventListener("click", function (e) {
+          if (e.target.classList.contains("viewStudentTrigger")) {
+            const box = e.target.nextElementSibling;
+
+            if (!box.classList.contains("hidden")) {
+              box.classList.add("hidden");
+            } else {
+              document.querySelectorAll(".viewStudentBox").forEach(b => b.classList.add("hidden"));
+              box.classList.remove("hidden");
+            }
+          }
+
+          if (e.target.classList.contains("viewStudentBtn")) {
+            document.querySelector(".dashboardElements").style.display = "none";
+            document.querySelector(".viewStudentDashboardContainer").style.display = "block";
+          }
+        });
      </script>
 
 
   </div>
+
+
+  <!-- viewStudentContainer -->
+   <div class="viewStudentDashboardContainer"  style="display: none;" >
+
+    <!-- header -->
+     <header class="viewStudentdashboardHeader">
+      <div class="viewStudentDashboardHeader-left">
+        <button id="backToDashboardBtn">
+        &#x27E8;
+        </button>
+      </div>
+    <div class="viewStudentdashboardHeader-right">
+      <div class="viewStudentdashboardHeaderInfobox">
+        <p>✓   You are already signed in.</p>
+      </div>
+      <a href="#" class="contactUs" title="contactUs">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><g fill="none"><path fill="#000" fill-rule="evenodd" d="M14.375 3.982a6.086 6.086 0 0 0-8.424 4.933l-.252 2.265l-.006.056a7.5 7.5 0 0 1-1.006 2.98l-.03.049l-.577.963l-.014.024c-.25.417-.458.763-.593 1.049c-.136.289-.24.602-.188.933a1.5 1.5 0 0 0 .518.916c.258.216.58.286.897.318c.315.032.718.032 1.205.032h12.19c.487 0 .89 0 1.205-.032c.317-.032.64-.102.897-.318a1.5 1.5 0 0 0 .518-.916c.053-.332-.052-.644-.188-.933c-.135-.286-.342-.632-.593-1.05l-.014-.023l-.578-.963l-.029-.048a7.5 7.5 0 0 1-1.006-2.98l-.006-.057l-.042-.382q-.471.157-.985.193l.033.3l.007.06a8.5 8.5 0 0 0 1.14 3.377l.03.052l.579.963c.268.446.448.749.56.984c.111.238.11.323.105.35a.5.5 0 0 1-.173.306c-.022.018-.094.064-.355.09c-.26.026-.611.027-1.132.027H5.932c-.52 0-.873 0-1.131-.027c-.262-.026-.334-.072-.356-.09a.5.5 0 0 1-.173-.305c-.004-.028-.006-.113.106-.35c.11-.236.292-.539.56-.985l.577-.963l.031-.052a8.5 8.5 0 0 0 1.14-3.378l.007-.06l.252-2.265A5.086 5.086 0 0 1 13.67 4.78q.3-.447.704-.8m1.814 1.19a2 2 0 0 0-.79.63a5.07 5.07 0 0 1 1.653 3.197c.355-.009.687-.11.972-.28A6.07 6.07 0 0 0 16.19 5.17" clip-rule="evenodd"/><path stroke="#000" stroke-linecap="round" d="M9.102 18.406c.171.744.548 1.402 1.072 1.87c.524.47 1.166.724 1.826.724s1.302-.254 1.826-.723c.524-.47.9-1.127 1.072-1.871" stroke-width="1"/><circle cx="17" cy="7" r="2" fill="#000"/></g></svg>
+      </a>
+      <div class="userDropdown">
+        <img src="../../images/dashboard/homeDashboard/userImg.jpg" alt="User" class="userImg" />
+        <div class="dropdownMenu">
+          <a href="#">Dashboard</a>
+          <a href="#">Basic Info</a>
+          <a href="#">Academic Info</a>
+          <a href="#">Test Score</a>
+          <a href="#">Work Experience</a>
+          <a href="#">Parents/Guardians</a>
+          <a href="#">Billings</a>
+          <a href="#">Settings</a>
+          <a href="#">Help & Supports</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+
+    </header>
+
+
+   </div>
+
+   <script>
+  document.getElementById("backToDashboardBtn").addEventListener("click", function () {
+    
+    document.querySelector(".viewStudentDashboardContainer").style.display = "none";
+
+    document.querySelector(".dashboardElements").style.display = "block";
+  });
+</script>
 
 
 <script>
@@ -413,11 +548,10 @@ window.addEventListener('popstate', () => {
 
   tabButtons.forEach(btn => {
     btn.addEventListener("click", () => {
-      // remove active classes
+     
       tabButtons.forEach(b => b.classList.remove("active"));
       tabContents.forEach(c => c.classList.remove("active"));
 
-      // add active to clicked
       btn.classList.add("active");
       const targetId = btn.getAttribute("data-target");
       document.querySelector(`.${targetId}`).classList.add("active");

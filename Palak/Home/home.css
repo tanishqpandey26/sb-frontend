@@ -18,9 +18,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 32px;
-  /* Increased height */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  /* subtle shadow */
   z-index: 1000;
 }
 
@@ -226,7 +224,8 @@ body {
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 16px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
   margin-top: 10%;
 }
@@ -583,6 +582,7 @@ body {
   border-radius: 14px;
   padding: 21px 23px;
   transform-origin: center;
+  text-wrap: nowrap;
 }
 
 .countriesBox {
@@ -614,6 +614,7 @@ body {
     width: 140px;
     height: 45px;
     padding: 10px 12px;
+    text-wrap: wrap;
   }
 
   .countriesBox {
@@ -847,33 +848,39 @@ body {
   }
 }
 
+
+
 /* service-section */
+
+/* testTab */
+
  .servicesSection {
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            font-family: 'Plus Jakarta Sans';
-            background-color: #fff;
-        }
-        .heading {
-            font-size: 34px;
-            font-weight: 700;
-            text-align: center;
-            color: #424242;
-            margin-bottom: 10px;
-        }
-        .subtext {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 30px;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-        }
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.heading {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    color: #424242;
+    margin-bottom: 10px;
+}
+
+.subtext {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
 
        
 
-    .toggleButtons {
+.toggleButtons {
   position: relative;
   display: flex;
   justify-content: center;
@@ -885,11 +892,12 @@ body {
 }
 
        
-    .toggleBtn {
+.toggleBtn {
   padding: 10px 20px;
   font-size: 16px;
   line-height: 25px;
   font-weight: 400;
+  font-size: 12px;
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -915,215 +923,165 @@ body {
 .service-divider {
   display: none;
 }
+        
+@media (max-width: 768px) {
 
-        .Servicecard {
-            margin-top: 30px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            
-        }
+.heading {
+ font-size: 24px;    
+}
 
-        .cardHeading {
+.subtext {
+  font-size: 12px;
+  color:#424242
+}
+
+.toggleBtn {
+  padding: 5px 5px;
+  font-size: 12px;
+}
+
+}
+
+
+
+/* testTab */
+
+.Servicecard {
+  margin-top: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px; 
+}
+
+.cardHeading {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-       .cardText {
+.cardText {
   font-size: 15px;
   line-height: 1.7;
   margin-bottom: 25px;
 }
 
-.carousel-container {
-  position: relative;
-  margin-bottom: 20px;
-  overflow-x: auto;       
-  overflow-y: hidden;     
-  white-space: nowrap;    
-  scroll-behavior: smooth; 
-}
 
-.carousel-container::-webkit-scrollbar {
-  height: 8px;
-}
-
-.carousel-container::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-.carousel-container::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-.imageSlider {
-  display: inline-flex; 
-  transition: transform 0.3s ease;
+.testCardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-}
-
-.imageWrapper {
-  flex: 0 0 calc(33.333% - 14px);
-  border: 2px solid #000D27;
-  border-radius: 6px;
-  overflow: hidden;
-  height: 160px;
-  position: relative;
-}
-
-.imageWrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.service-indicators {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-  grid-column: 1 / -1;
-}
-
-.service-indicator {
-  width: 10px;
-  height: 10px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.service-indicator.ellipse {
-  width: 30px;
-  border-radius: 20px;
-}
-
-.active-service-indicator {
-  background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
-  transform: scale(1.2);
-}
-
-.sliderUI {
   margin-top: 20px;
+  overflow-x: auto;
+}
+
+.testCardCarouselContainer {
+  overflow: hidden;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.testCardCarouselTrack {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  width: fit-content;
+  min-width: 100%;
+}
+
+.testCard {
+  position: relative;
+  height: 180px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+  height: 416px;
+  width: 518px;
+}
+
+
+.testCard-1 {
+  background-image: url("../images/Home/test/toefl.jpg");
+}
+.testCard-2 {
+  background-image: url("../images/Home/test/ielts.jpg");
+}
+.testCard-3 {
+  background-image: url("../images/Home/test/gmat.jpg");
+}
+
+.testCardOverlay {
+  position: absolute;
+  inset: 0; 
+  background: rgba(0, 0, 0, 0.4); 
+  display: flex;
+  align-items: flex-end; 
+  justify-content: flex-start; 
+  padding: 15px;
+}
+
+.testCardContent {
+  color: #fff;
+}
+
+.farLeftTestCardHeader {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.farLeftTestCardSubHeader {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 2px 0 0 0;
+}
+
+.testCardIndicators {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  margin-top: 12px;
+  gap: 8px;
 }
 
-.nav-dot {
-  width: 12px;
-  height: 12px;
+.testCardIndicator {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
   border-radius: 50%;
-  background-color: #ccc;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s;
 }
 
-.nav-dot.active {
-  background-color: #195057;
-}
-
-.nav-bar {
-  width: 80px;
-  height: 12px;
+.testCardIndicator.ellipse {
+  width: 24px;
   border-radius: 20px;
-  background-color: #ccc;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.nav-bar.active {
-  background-color: #195057;
-}
-
-        /* Mobile styles */
-        @media (max-width: 768px) {
-
-          .heading {
-            font-size: 24px;
-    
-        }
-        .subtext {
-            font-size: 12px;
-            color:#424242
-        }
-
-          .toggleBtn {
-  padding: 5px 5px;
-  font-size: 12px;
-}
-
-            .imageWrapper {
-                flex: 0 0 100%;
-                margin: 0;
-                height: 150px;
-            }
-
-            .imageSlider {
-                gap: 0;
-            }
-        }
-
-        .carousel-container {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.imageSlider {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-  gap: 20px;
-}
-
-.imageWrapper {
-  flex: 0 0 50%;
-  border: 2px solid #000D27;
-  border-radius: 6px;
-  overflow: hidden;
-  height: 450px;
-}
-
-.imageWrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.carousel-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #287781;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  font-size: 24px;
-  border-radius: 4px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.carousel-nav.prev {
-  left: 0;
-}
-
-.carousel-nav.next {
-  right: 0;
+.testCardIndicator.active {
+  background: #287781;
 }
 
 @media (max-width: 768px) {
-  .imageWrapper {
-    flex: 0 0 100%;
-    height: 350px;
+  .testCardCarouselContainer {
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 20px; 
   }
-
-  .imageSlider {
-    gap: 0;
+  
+  .testCardCarouselTrack {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    width: fit-content;
+  }
+  
+  .testCard {
+    width: calc(100vw - 80px); 
+    height: 250px;
+    flex-shrink: 0; 
   }
 }
 
@@ -1138,18 +1096,18 @@ body {
   justify-content: center;
 }
 
-/*  Admission Card  */
+
 .admissionCard {
-  width: 320px;
+  width: 300px;
   height: 476px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
-/*  Static Country-Specific Background Image  */
+
 .countrySpecificImg {
-  width: 320px;
+  width: 300px;
   height: 417px;
   border-radius: 20px;
   position: absolute;
@@ -1160,7 +1118,7 @@ body {
   transition: opacity 0.3s ease;
 }
 
-/*  circular country Flag Image  */
+
 .countryImgWrapper {
   position: absolute;
   top: 0;
@@ -1178,7 +1136,7 @@ body {
   opacity: 1;
 }
 
-/*  country name non-hover state  */
+
 
 .admissionCard .countryNameLabel {
   position: absolute;
@@ -1198,12 +1156,12 @@ body {
 }
 
 
-/*  hide static label when hovered  */
+
 .admissionCard:hover .countryNameLabel {
   display: none;
 }
 
-/* hover overlay behavior */
+
 .admissionCard:hover .countrySpecificImg {
   opacity: 0;
 }
@@ -1213,11 +1171,11 @@ body {
   pointer-events: all;
 }
 
-/*  Hover Overlay Container  */
+
 .hoverContent {
   position: absolute;
   top: 59px;
-  width: 320px;
+  width: 300px;
   height: 417px;
   background-color: #E4F7FA;
   border-radius: 20px;
@@ -1229,7 +1187,7 @@ body {
   pointer-events: none;
 }
 
-/*  Hover: Country Name  */
+
 .hoverContent h4 {
   font-size: 18px;
   font-weight: 600;
@@ -1237,14 +1195,14 @@ body {
   color: #000;
 }
 
-/*  hover: descr  */
+
 .hoverContent p {
   font-size: 14px;
   margin: 0 20px 20px;
   color: #444;
 }
 
-/*  hover: explore button  */
+
 .visitCountry {
   background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
   color: white;
@@ -1263,17 +1221,17 @@ body {
   height: 16px;
 }
 
-/*  Hidden Cards on Mobile  */
+
 .hiddenCard {
   display: none;
 }
 
-/*  View More Button (Mobile Only)  */
+
 #viewMoreBtn {
   display: none;
 }
 
-/*  Responsive Layout  */
+
 @media (max-width: 768px) {
   .admissionGrid {
     display: flex;
@@ -1336,11 +1294,11 @@ body {
 }
 
 .admConsultCard {
-  height: 282px;
+  height: 285px;
   background-color: #092A2E;
   border: 1px solid #fff;
   border-radius: 10px;
-  padding: 3rem 2rem;
+  padding: 28px 24px;
   box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
   position: relative;
   overflow: hidden;
@@ -1353,7 +1311,7 @@ body {
   transform: scale(1.02);
 }
 
-/* white flash animation overlay */
+
 .admConsultCard::before {
   content: "";
   position: absolute;
@@ -1365,12 +1323,12 @@ body {
   transition: opacity 0.3s ease;
 }
 
-/* flash on hover */
+
 .admConsultCard:hover::before {
   animation: fullFlash 0.7s ease forwards;
 }
 
-/* Flash  */
+
 @keyframes fullFlash {
   0% {
     opacity: 0;
@@ -1384,9 +1342,8 @@ body {
 }
 
 .admConsultCard .cardNumber {
- 
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-weight: 700;
+  font-size: 34px;
    background-image: linear-gradient(to bottom,#FFFFFF,rgba(153, 153, 153, 0.11) );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1394,13 +1351,9 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  display: inline;
-   margin-top: auto;
-  margin-bottom: auto;
   width: 269px;
 height: 43px;
 opacity: 1;
- font-family: Plus Jakarta Sans;
 font-weight: 700;
 font-style: Bold;
 font-size: 34px;
@@ -1409,26 +1362,22 @@ letter-spacing: 0%;
 }
 
 .admConsultCard .cardTitle {
-  margin-top: 10%;
-  width: 269px;
-height: 30px;
 opacity: 1;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
+  font-size: 21px;
+  font-weight: 700;
+  margin-top: 28px;
+  margin-bottom: 28px;
   color: #fff;
 }
 
 .admConsultCard .cardDesc {
-  font-size: 0.95rem;
+  font-size: 15px;
+  font-weight: 400;
   color: #fff;
-  width: 269px;
-height: 75px;
 opacity: 1;
-margin-top: 5%;
 }
 
-/* Flashing animation with overlay effect */
+
 @keyframes flashAnim {
   0%, 100% {
     box-shadow: 0 0 0 transparent;
@@ -1438,7 +1387,7 @@ margin-top: 5%;
   }
 }
 
-/* Mobile responsive */
+
 @media (max-width: 768px) {
 
   .admConsultWrapper {

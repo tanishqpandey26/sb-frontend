@@ -541,26 +541,26 @@ body {
 
 /* enquiredTo - explorMore */
 
-.plan-finance {
+.testPrepExploreMore {
   padding: 20px 20px;
   margin-top: 20px;
 }
 
-.planfinance-heading {
+.testPrepExploreMore-heading {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 10px;
   color: #424242;
 }
 
-.planfinance-para {
+.testPrepExploreMore-para {
   font-size: 16px;
   font-weight: 400;
   color: #424242;
   margin-bottom: 30px;
 }
 
-.planfinance-container {
+.testPrepExploreMore-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -568,7 +568,7 @@ body {
   width: auto;
 }
 
-.planfinance-card {
+.testPrepExploreMore-card {
   border-radius: 20px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   padding: 14px 29px;
@@ -577,24 +577,24 @@ body {
   min-width: auto;
 }
 
-.planfinance-card:hover {
+.testPrepExploreMore-card:hover {
   transform: scale(1.02);
 }
 
-.planfinance-card:nth-child(1){
+.testPrepExploreMore-card:nth-child(1){
   background-color: #E4F7FA;
 }
 
-.planfinance-card:nth-child(2){
+.testPrepExploreMore-card:nth-child(2){
   background-color: #FDF0F4;
 }
 
-.planfinance-card:nth-child(3){
+.testPrepExploreMore-card:nth-child(3){
   background-color: #FFF6E1;
 }
 
 
-.planfinance-cardheading {
+.testPrepExploreMore-cardheading {
     font-size: 24px;
   font-weight: 700;
   margin-top: 20px;
@@ -603,7 +603,7 @@ body {
   text-wrap: nowrap;
 }
 
-.planfinance-carddesc {
+.testPrepExploreMore-carddesc {
   flex-grow: 1;
   font-size: 16px;
   font-weight: 400;
@@ -633,23 +633,23 @@ body {
 
 @media (max-width: 768px) {
 
-  .planfinance-heading {
+  .testPrepExploreMore-heading {
   font-size: 16px; 
 }
 
-.planfinance-para{
+.testPrepExploreMore-para{
   font-size: 12px;
 }
 
-  .planfinance-container {
+  .testPrepExploreMore-container {
     grid-template-columns: 1fr;
   }
 
-.planfinance-cardheading {
+.testPrepExploreMore-cardheading {
     font-size: 16px;
 }
 
-.planfinance-carddesc {
+.testPrepExploreMore-carddesc {
    font-size: 12px;
 }
 }
@@ -694,7 +694,7 @@ body {
 }
 
 .popularExamCard {
-  max-width: auto;
+  max-width: 518px;
   height: 416px;
   border-radius: 16px;
   flex-shrink: 0;
@@ -718,6 +718,7 @@ body {
 .popularExamCard:nth-child(3) {
   background: url("/Palak/images/dashboard/testDashboard/gmat.jpg") center/cover no-repeat;
 }
+
 
 .popularExamCardContent {
   text-align: left;  

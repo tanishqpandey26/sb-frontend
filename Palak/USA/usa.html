@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyBefikar</title>
+    <link rel="stylesheet" href="/Palak/USA/usastyle.css" />
+    <link rel="stylesheet" href="/Palak/Admission_counselling/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!--NavBar Section-->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="/Palak/USA/USA_Images/Untitled design.png" alt="Logo" class="logo">
+        </div>
+        <ul class="navbar-right" id="mobileNav">
+
+            <li class="dropdown">
+                <a href="#">Countries</a>
+                <ul class="dropdown-content">
+                    <li><a href="usa.html">USA</a></li>
+                    <li><a href="#">UK</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">Germany</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Loan</a>
+                <ul class="dropdown-content">
+                    <li><a href="check-eligibility.html">Check Eligibility</a></li>
+                    <li><a href="available-banks.html">Available Banks</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Admission Counselling</a>
+                <ul class="dropdown-content">
+                    <li><a href="index.html">Admission Process</a></li>
+                    <li><a href="book-consultation.html">Book Consultation</a></li>
+                    <li><a href="#">Application Deadline</a></li>
+                    <li><a href="#">University Finder</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
+                <ul class="dropdown-content">
+                    <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                    <li><a href="#">Prepare for Exam</a></li>
+                    <li><a href="#">Take a Mock Test</a></li>
+                    <li><a href="#">Exam Deadlines</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">All Exams</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">SAT</a></li>
+                    <li><a href="#">GMAT</a></li>
+                    <li><a href="#">GRE</a></li>
+                    <li><a href="#">IELTS</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">All Services</a></li>
+                    <li><a href="#">Visa Assistance</a></li>
+                    <li><a href="#">Profile Evaluation</a></li>
+                    <li><a href="#">Apply to University</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#" class="dropdown">Notice Board</a></li>
+            <li><a href="#" class="dropdown">About Us</a></li>
+            <li><a href="#" class="dropdown">Contact Us</a></li>
+
+            <li><a href="signup.html" class="contact-btn">Login</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </nav>
+
+    <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('mobileNav');
+
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+
+    <script>
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(dropdown => {
+            let wasClicked = false;
+            const link = dropdown.querySelector('a');
+
+            // Toggle on click
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isOpen = dropdown.classList.contains('open');
+
+                // Close all dropdowns
+                dropdowns.forEach(d => {
+                    d.classList.remove('open');
+                    d.dataset.clicked = "false";
+                });
+
+                if (!isOpen) {
+                    dropdown.classList.add('open');
+                    dropdown.dataset.clicked = "true";
+                }
+            });
+
+            // Hover to open (desktop only)
+            dropdown.addEventListener('mouseenter', () => {
+                if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                    dropdown.classList.add('open');
+                }
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+                if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                    dropdown.classList.remove('open');
+                }
+            });
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove('open');
+                    dropdown.dataset.clicked = "false";
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+            const links = document.querySelectorAll(".navbar-right a");
+
+            links.forEach(link => {
+                const linkPath = link.getAttribute("href").split("/").pop();
+
+                if (linkPath === currentPath) {
+                    // Highlight the clicked link
+                    link.classList.add("active");
+
+                    // Also highlight parent if inside dropdown
+                    const parentDropdown = link.closest(".dropdown");
+                    if (parentDropdown) {
+                        const parentLink = parentDropdown.querySelector(":scope > a");
+                        if (parentLink) parentLink.classList.add("active");
+                    }
+                }
+            });
+        });
+    </script>
+
+
+
+    <!--Hero Section-->
+
+    <section class="hero">
+        <div class="hero-left">
+            <div class="bread"><a href="#">Home</a> &gt;
+                <a href="/">Countries</a> &gt;
+                <span>USA</span>
+            </div>
+            <div class="trusted-card">
+                <span class="star">★</span>
+                <span class="trusted-text">Study in United States of America (USA)</span>
+            </div>
+
+            <h1 class="heading">
+                <span class="heading1">All about Studying in</span>
+                <span class="heading2">USA</span>
+            </h1>
+
+            <p class="hero-subtext">
+                Learn the basics of studying in the United States,
+                from choosing a university to getting your visa.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="signup.html" class="btn btn-bordered">
+                    <img class="video-icon" src="/Palak/USA/USA_Images/cam-recorder.png" width="24" height="24" viewBox="0 0 24 24">
+                    Book Consultation
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+            <img src="/Palak/USA/USA_Images/USA.png" alt="Hero Image" class="hero-img" />
+        </div>
+    </section>
+
+
+    <section class="usa-tabs">
+        <div class="tab-nav-container">
+            <div class="tab-nav">
+                <a href="#why-usa" class="tab-btn active">Why Study in the USA?</a>
+                <a href="#top-universities" class="tab-btn">Top Universities</a>
+                <a href="#cost-usa" class="tab-btn">Finances</a>
+                <a href="#admission" class="tab-btn">College Application</a>
+                <a href="#courses" class="tab-btn">Courses</a>
+                <a href="#documents" class="tab-btn">Documents</a>
+                <a href="#visa" class="tab-btn">Visa Requirements</a>
+                <a href="#scholarships" class="tab-btn">Scholarships</a>
+            </div>
+            <div class="tab-line"></div>
+        </div>
+
+        <script>
+            document.querySelectorAll('.tab-btn').forEach(tab => {
+                tab.addEventListener('click', function () {
+                    document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        </script>
+
+
+        <section id="why-usa" class="usa-tabs">
+            <div class="tab-content active">
+                <h2 class="tab-heading">Why Study in the USA?</h2>
+                <p class="tab-desc">
+                    Over 1.1 million international students study in the USA, making it a top choice for higher
+                    education.
+                    With strong academics, well-known degrees, and many programs to choose from, the U.S. helps prepare
+                    you for a global career with opportunities beyond the classroom.
+                </p>
+
+                <div class="usa-container">
+                    <!-- Card 1 -->
+                    <div class="i-card">
+                        <img src="/Palak/USA/USA_Images/T15.png" alt="Career Support" />
+                        <h3>Highest Number of Top-Ranked Universities</h3>
+                        <p>
+                            The United States is home to some of the world's most prestigious universities,
+                            including Ivy League schools like Harvard, Yale, and Princeton.
+                        </p>
+                    </div>
+                    <!-- Repeat for other 5 cards -->
+                    <div class="i-card">
+                        <img src="/Palak/USA/USA_Images/T20.png" alt="Top Ranked Universities" />
+                        <h3>Strong Career Support</h3>
+                        <p>
+                            US universities offer extensive career services, including internships, job fairs,
+                            and guidance from professors and career counselors.
+                        </p>
+                    </div>
+
+                    <div class="i-card">
+                        <img src="/Palak/USA/USA_Images/T18.png" alt="Diverse Country" />
+                        <h3>The World's Most Diverse Country</h3>
+                        <p>
+                            Studying in the USA allows you to interact with people from different cultural
+                            and academic backgrounds.
+                        </p>
+                    </div>
+
+                    <div class="i-card">
+                        <img src="/Palak/USA/USA_Images/T19.png" alt="Innovative Education" />
+                        <h3>Innovative Education System</h3>
+                        <p>
+                            The US education system fosters critical thinking, creativity, and problem-solving.
+                        </p>
+                    </div>
+
+                    <div class="i-card">
+                        <img src="/Palak/USA/USA_Images/T17.png" alt="Networking" />
+                        <h3>Global Networking Opportunities</h3>
+                        <p>
+                            Studying in the US helps you connect with like-minded peers, professors, and industry
+                            leaders.
+                        </p>
+                    </div>
+
+                    <div class="i-card">
+                        <img src="/Palak/USA/USA_Images/T16.png" alt="Scholarships" />
+                        <h3>Financial Aid and Scholarships</h3>
+                        <p>
+                            Many universities offer financial aid packages, scholarships, and work-study programs
+                            for international students.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="trust-card">
+                <span class="trusted-text">Click to learn more</span>
+            </div> -->
+
+            <!-- Read More Button -->
+            <div class="more-content">
+                <button class="read-more-btn">Read More</button>
+                <div class="extra-content" style="display: none;">
+
+                    <h2 class="tab-heading">Types of Institutions</h2>
+
+                    <div class="usa-container">
+                        <!-- Card 1 -->
+                        <div class="i-card">
+                            <img src="/Palak/USA/USA_Images/T15.png" alt="Career Support" />
+                            <h3>State Colleges / Universities</h3>
+                            <p>
+                                These are public institutions funded by state
+                                governments.
+                            </p>
+                        </div>
+                        <!-- Repeat for other 5 cards -->
+                        <div class="i-card">
+                            <img src="/Palak/USA/USA_Images/T20.png" alt="Top Ranked Universities" />
+                            <h3>Private Colleges / Universities</h3>
+                            <p>
+                                These institutions are funded by private organizations
+                                or individuals.
+                            </p>
+                        </div>
+                    
+                        <div class="i-card">
+                            <img src="/Palak/USA/USA_Images/T18.png" alt="Diverse Country" />
+                            <h3>Community Colleges</h3>
+                            <p>
+                                Community colleges offer affordable two-year associate degrees.
+                            </p>
+                        </div>
+                    
+                        <div class="i-card">
+                            <img src="/Palak/USA/USA_Images/T19.png" alt="Innovative Education" />
+                            <h3>Institutes of Technology</h3>
+                            <p>
+                                These schools focus on technical education and applied
+                                sciences.
+                            </p>
+                        </div>
+
+                        </div>
+
+
+                        <h2 class="tab-heading">Additional Benefits of Studying in the USA</h2>
+                        
+                        <div class="usa-container">
+                            <!-- Card 1 -->
+                            <div class="i-card">
+                                <img src="/Palak/USA/USA_Images/T15.png" alt="Career Support" />
+                                <h3>Research Opportunities</h3>
+                                <p>
+                                    Many US universities are at the forefront of groundbreaking
+                                    research.
+                                </p>
+                            </div>
+                            <!-- Repeat for other 5 cards -->
+                            <div class="i-card">
+                                <img src="/Palak/USA/USA_Images/T20.png" alt="Top Ranked Universities" />
+                                <h3>Student Support Services</h3>
+                                <p>
+                                    US institutions provide a wide range of services to support
+                                    international students.
+                                </p>
+                            </div>
+                        
+                            <div class="i-card">
+                                <img src="/Palak/USA/USA_Images/T18.png" alt="Diverse Country" />
+                                <h3>Work Opportunities</h3>
+                                <p>
+                                    International students can work part-time on campus and gain
+                                    valuable experience.
+                                </p>
+                            </div>
+                        
+                            <div class="i-card">
+                                <img src="/Palak/USA/USA_Images/T19.png" alt="Innovative Education" />
+                                <h3>Campus Life</h3>
+                                <p>
+                                    US universities offer a vibrant campus life with numerous clubs and
+                                    activities.
+                                </p>
+                            </div>
+                </div>
+                <!-- The "Read Less" button will be placed here after content is revealed -->
+                <button class="read-less-btn" style="display: none;">Read Less</button>
+            </div>
+            </section>
+
+        <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                    const readMoreBtn = document.querySelector(".read-more-btn");
+                    const extraContent = document.querySelector(".extra-content");
+                    const readLessBtn = document.querySelector(".read-less-btn");
+
+                    // Initially hide the additional content and "Read Less" button
+                    extraContent.style.display = "none";
+                    readLessBtn.style.display = "none";
+
+                    // Toggle between showing or hiding extra content
+                    function toggleContent() {
+                        if (extraContent.style.display === "none") {
+                            extraContent.style.display = "block";
+                            readMoreBtn.style.display = "none"; // Hide the "Read More" button
+                            readLessBtn.style.display = "inline-block"; // Show the "Read Less" button
+                        } else {
+                            extraContent.style.display = "none";
+                            readMoreBtn.style.display = "inline-block"; // Show the "Read More" button again
+                            readLessBtn.style.display = "none"; // Hide the "Read Less" button
+                        }
+                    }
+
+                    // Event listener for the "Read More" / "Read Less" button
+                    readMoreBtn.addEventListener("click", toggleContent);
+                    readLessBtn.addEventListener("click", toggleContent);
+                });
+        </script>
+
+        <section id="top-universities" class="top-universities-section">
+
+            <h2 class="section-heading">Top Universities in USA</h2>
+
+            <!-- Moving Text Marquee -->
+            <div class="marquee">
+                <div class="marquee-inner">
+                    <span style="color:#FDD835;">Apply Now To The Universities</span>
+                    <span style="color:#F373A8;">Apply Now To The Universities</span>
+                    <span style="color:#287781;">Apply Now To The Universities</span>
+                    <span style="color:#B50505;">Apply Now To The Universities</span>
+
+                    <!-- duplicate for seamless loop -->
+                    <span style="color:#FDD835;">Apply Now To The Universities</span>
+                    <span style="color:#F373A8;">Apply Now To The Universities</span>
+                    <span style="color:#287781;">Apply Now To The Universities</span>
+                    <span style="color:#B50505;">Apply Now To The Universities</span>
+                </div>
+            </div>
+
+
+            <!-- Cards Container -->
+            <div class="university-cards">
+
+                <!-- 1. New York University -->
+                <div class="university-card">
+                    <div class="card-img">
+                        <img src="/Palak/USA/USA_Images/T1.png" alt="New York University">
+                        <span class="qs-rank">QS Rank: 38</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>New York University</h3>
+                        <p class="location"><img src="/Palak/USA/USA_Images/location.png" alt=""> New York City, New York</p>
+                        <p><strong>Popular For: </strong> <span class="highlight">Sciences & Engineering Courses</span>
+                        </p>
+                        <p><strong>Founded: </strong> <span class="highlight">1831</span></p>
+                        <div class="stats">
+                            <div class="stat-box">
+                                <p class="stat-title">Students</p>
+                                <p class="stat-value">23,000</p>
+                            </div>
+                            <div class="stat-box">
+                                <p class="stat-title">Tuition per year</p>
+                                <p class="stat-value">$54,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. John Hopkins University -->
+                <div class="university-card">
+                    <div class="card-img">
+                        <img src="/Palak/USA/USA_Images/T2.png" alt="John Hopkins University">
+                        <span class="qs-rank">QS Rank: 28</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>John Hopkins University</h3>
+                        <p class="location"><img src="/Palak/USA/USA_Images/location.png" alt=""> Baltimore, Maryland</p>
+                        <p><strong>Popular For: </strong> <span class="highlight">Biology Course</span></p>
+                        <p><strong>Founded: </strong> <span class="highlight">1876</span></p>
+                        <div class="stats">
+                            <div class="stat-box">
+                                <p class="stat-title">Students</p>
+                                <p class="stat-value">23,000</p>
+                            </div>
+                            <div class="stat-box">
+                                <p class="stat-title">Tuition per year</p>
+                                <p class="stat-value">$60,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Carnegie Mellon University -->
+                <div class="university-card">
+                    <div class="card-img">
+                        <img src="/Palak/USA/USA_Images/T3.png" alt="Carnegie Mellon University">
+                        <span class="qs-rank">QS Rank: 52</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Carnegie Mellon University</h3>
+                        <p class="location"><img src="/Palak/USA/USA_Images/location.png" alt=""> Pittsburgh, Pennsylvania</p>
+                        <p><strong>Popular For: </strong> <span class="highlight">Information Systems Courses</span></p>
+                        <p><strong>Founded: </strong> <span class="highlight">1900</span></p>
+                        <div class="stats">
+                            <div class="stat-box">
+                                <p class="stat-title">Students</p>
+                                <p class="stat-value">23,000</p>
+                            </div>
+                            <div class="stat-box">
+                                <p class="stat-title">Tuition per year</p>
+                                <p class="stat-value">$55,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Stanford University -->
+                <div class="university-card">
+                    <div class="card-img">
+                        <img src="/Palak/USA/USA_Images/T4.png" alt="Stanford University">
+                        <span class="qs-rank">QS Rank: 2</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Stanford University</h3>
+                        <p class="location"><img src="/Palak/USA/USA_Images/location.png" alt=""> Stanford, California</p>
+                        <p><strong>Popular For: </strong> <span class="highlight">Computer Science Course</span></p>
+                        <p><strong>Founded: </strong> <span class="highlight">1885</span></p>
+                        <div class="stats">
+                            <div class="stat-box">
+                                <p class="stat-title">Students</p>
+                                <p class="stat-value">23,000</p>
+                            </div>
+                            <div class="stat-box">
+                                <p class="stat-title">Tuition per year</p>
+                                <p class="stat-value">$51,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Massachusetts Institute of Technology (MIT) -->
+                <div class="university-card">
+                    <div class="card-img">
+                        <img src="/Palak/USA/USA_Images/T5.png" alt="Massachusetts Institute of Technology">
+                        <span class="qs-rank">QS Rank: 1</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Massachusetts Institute of Technology (MIT)</h3>
+                        <p class="location"><img src="/Palak/USA/USA_Images/location.png" alt=""> Cambridge, Massachusetts</p>
+                        <p><strong>Popular For: </strong> <span class="highlight">Engineering & Technology
+                                Courses</span></p>
+                        <p><strong>Founded: </strong> <span class="highlight">1861</span></p>
+                        <div class="stats">
+                            <div class="stat-box">
+                                <p class="stat-title">Students</p>
+                                <p class="stat-value">23,000</p>
+                            </div>
+                            <div class="stat-box">
+                                <p class="stat-title">Tuition per year</p>
+                                <p class="stat-value">$53,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Michigan State University -->
+                <div class="university-card">
+                    <div class="card-img">
+                        <img src="/Palak/USA/USA_Images/T6.png" alt="Michigan State University">
+                        <span class="qs-rank">QS Rank: 152</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Michigan State University</h3>
+                        <p class="location"><img src="/Palak/USA/USA_Images/location.png" alt=""> East Lansing, Michigan</p>
+                        <p><strong>Popular For: </strong> <span class="highlight">Business Management Course</span></p>
+                        <p><strong>Founded: </strong> <span class="highlight">1855</span></p>
+                        <div class="stats">
+                            <div class="stat-box">
+                                <p class="stat-title">Students</p>
+                                <p class="stat-value">23,000</p>
+                            </div>
+                            <div class="stat-box">
+                                <p class="stat-title">Tuition per year</p>
+                                <p class="stat-value">$14,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Harvard University -->
+                <div class="university-card">
+                    <div class="card-img">
+                        <img src="/Palak/USA/USA_Images/T7.png" alt="Harvard University">
+                        <span class="qs-rank">QS Rank: 3</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Harvard University</h3>
+                        <p class="location"><img src="/Palak/USA/USA_Images/location.png" alt=""> Cambridge, Massachusetts</p>
+                        <p><strong>Popular For: </strong> <span class="highlight">Law & Business Courses</span></p>
+                        <p><strong>Founded: </strong> <span class="highlight">1636</span></p>
+                        <div class="stats">
+                            <div class="stat-box">
+                                <p class="stat-title">Students</p>
+                                <p class="stat-value">23,000</p>
+                            </div>
+                            <div class="stat-box">
+                                <p class="stat-title">Tuition per year</p>
+                                <p class="stat-value">$50,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Princeton University -->
+                <div class="university-card">
+                    <div class="card-img">
+                        <img src="/Palak/USA/USA_Images/T8.png" alt="Princeton University">
+                        <span class="qs-rank">QS Rank: 38</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Princeton University</h3>
+                        <p class="location"><img src="/Palak/USA/USA_Images/location.png" alt=""> Princeton, New Jersey</p>
+                        <p><strong>Popular For: </strong> <span class="highlight">Mathematics & Physics Courses</span>
+                        </p>
+                        <p><strong>Founded: </strong> <span class="highlight">1746</span></p>
+                        <div class="stats">
+                            <div class="stat-box">
+                                <p class="stat-title">Students</p>
+                                <p class="stat-value">23,000</p>
+                            </div>
+                            <div class="stat-box">
+                                <p class="stat-title">Tuition per year</p>
+                                <p class="stat-value">$49,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="trust-card">
+                <span class="trusted-text">QS World Ranking is a global ranking of universities based on factors like
+                    academic reputation, research, and
+                    employer recognition.</span>
+            </div>
+
+        </section>
+
+        <section id="cost-usa" class="cost-section">
+
+            <h2 class="cost-heading">Cost of Studying in the USA</h2>
+            <p class="cost-desc">
+                The cost of studying in the USA depends on the university, course, location, and scholarships.
+                Living expenses like rent and daily needs also add to the total cost.
+            </p>
+
+            <div class="cost-table">
+                <!-- Table Header -->
+                <div class="table-header">
+                    <div class="table-cell">Category</div>
+                    <div class="table-cell">Details</div>
+                    <div class="table-cell">Cost Range</div>
+                </div>
+
+                <!-- Table Rows -->
+                <div class="table-row">
+                    <div class="table-cell">Cost of Education</div>
+                    <div class="table-cell">Public Universities</div>
+                    <div class="table-cell">-</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell">Undergraduate (Annual)</div>
+                    <div class="table-cell">Public Universities</div>
+                    <div class="table-cell">$8,000 - $35,000</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell">Master’s (Annual)</div>
+                    <div class="table-cell">Public Universities</div>
+                    <div class="table-cell">$10,000 - $35,000</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell">Undergraduate (Annual)</div>
+                    <div class="table-cell">Private Universities</div>
+                    <div class="table-cell">$25,000 - $55,000</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell">Master’s (Annual)</div>
+                    <div class="table-cell">Private Universities</div>
+                    <div class="table-cell">$22,000 - $50,000</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell">Bachelor’s Degree</div>
+                    <div class="table-cell">Average Annual Costs for Specific Programmes</div>
+                    <div class="table-cell">$20,000 - $50,000</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell">Master’s Degree</div>
+                    <div class="table-cell">-</div>
+                    <div class="table-cell">$15,000 - $40,000</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell">MBA</div>
+                    <div class="table-cell">-</div>
+                    <div class="table-cell">Up to $70,000 at top institutions</div>
+                </div>
+            </div>
+
+            <div class="eligibility-btn">
+                <span>Check Eligibility Now</span>
+                <img src="/Palak/USA/USA_Images/vector.png" alt="Right Arrow">
+            </div>
+
+
+        </section>
+
+        <section class="admission-section" id="admission">
+            <h2 class="admission-heading">College Application Request</h2>
+            <p class="admission-subtext">
+                Pursuing education in the USA is a popular choice among international students.
+                Here’s an overview of the key requirements to help you get started.
+            </p>
+
+            <!-- Card 1 -->
+            <div class="admission-wrapper">
+                <div class="card-number">1</div>
+                <div class="admission-card" style="background:#FDF0F4;">
+                    <div class="card-content">
+                        <h3>Academic Qualifications</h3>
+                        <div class="columns">
+                            <div>
+                                <h4>Undergraduate Programs</h4>
+                                <p>Completion of secondary education (high school diploma or equivalent).</p>
+                            </div>
+                            <div>
+                                <h4>Graduate Programs</h4>
+                                <p>A bachelor’s degree or its equivalent from an accredited institution.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="admission-wrapper">
+                <div class="card-number">2</div>
+                <div class="admission-card" style="background:#FFF6E1;">
+                    <div class="card-content">
+                        <h3>Standardized Tests</h3>
+                        <div class="columns">
+                            <div>
+                                <h4>Undergraduate</h4>
+                                <p>SAT or ACT scores are typically required.</p>
+                            </div>
+                            <div>
+                                <h4>Graduate</h4>
+                                <p>GRE or GMAT scores, depending on the program.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="admission-wrapper">
+                <div class="card-number">3</div>
+                <div class="admission-card" style="background:#F2FBFC;">
+                    <div class="card-content">
+                        <h3>English Proficiency</h3>
+                        <!-- <div class="columns"> -->
+                        <div>
+                            <h4>Exam Score</h4>
+                            <p>TOEFL or IELTS scores to demonstrate language skills, with minimum requirements varying
+                                by
+                                institution.</p>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Card 4 (Bullet Points) -->
+            <div class="admission-wrapper">
+                <div class="card-number">4</div>
+                <div class="admission-card" style="background:#E9F3FF;">
+                    <div class="card-content">
+                        <h3>Application Materials</h3>
+                        <div class="columns">
+                            <ul>
+                                <li>Academic transcripts</li>
+                                <li>Letters of recommendation (2-3)</li>
+                            </ul>
+                            <ul>
+                                <li>Statement of purpose or personal statement</li>
+                                <li>Resume or CV</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="admission-wrapper">
+                <div class="card-number">5</div>
+                <div class="admission-card" style="background:#EBDBFF;">
+                    <div class="card-content">
+                        <h3>Financial Documentation</h3>
+                        <!-- <div class="columns"> -->
+                        <div>
+                            <h4>Documents Needed</h4>
+                            <p>Proof of funds to cover tuition and living expenses (often required for visa
+                                applications).
+                            </p>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="admission-wrapper">
+                <div class="card-number">6</div>
+                <div class="admission-card" style="background:#F2FBFC;">
+                    <div class="card-content">
+                        <h3>Application Fee</h3>
+                        <div class="columns">
+                            <div>
+                                <h4>Costs Range</h4>
+                                <p>Non-refundable fees ranging from $50 to $250.</p>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="admission-buttons">
+            <button class="btn-mock-test">Take a Mock Test</button>
+            <button class="btn-counsellor">Get help with expert counsellors</button>
+        </div>
+
+
+        <section class="courses-section" id="courses">
+            <h2 class="section-heading">Available Courses to Study</h2>
+            <p class="section-desc">
+                The United States is known for its high-quality education and globally respected degrees.
+                With thousands of schools and courses to choose from, you can study at top universities
+                and enjoy a rich campus experience.
+            </p>
+
+            <!-- STEM COURSES -->
+            <div class="course-category">
+                <div class="course-header">
+                    <button class="arrow-btn" id="stem-prev">&#10094;</button>
+                    <h3>STEM Courses</h3>
+                    <button class="arrow-btn" id="stem-next">&#10095;</button>
+                </div>
+
+                <div class="course-slider" id="stem-slider">
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/T9.jpg" alt="Computer Science">
+                        <div class="course-content">
+                            <h4>Computer Science</h4>
+                            <p>Dive into the cutting-edge of data science, software development and ML. Uncover how algorithms are transforming everyday life.</p>
+                            <button class="learn-btn">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/T10.jpg" alt="Engineering">
+                        <div class="course-content">
+                            <h4>Technology</h4>
+                            <p>Study cutting-edge technology and its applications across industries, from AI-driven healthcare solutions to blockchain
+                            in finance.</p>
+                            <button class="learn-btn">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/T11.jpg" alt="Data Science">
+                        <div class="course-content">
+                            <h4>Engineering</h4>
+                            <p>Learn the principles of engineering and explore various fields such as mechanical, civil, and electrical engineering.</p>
+                            <button class="learn-btn">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/biotechnology.jpg" alt="Biotechnology">
+                        <div class="course-content">
+                            <h4>Data Science</h4>
+                            <p>Study the techniques for analyzing large datasets and deriving actionable insights using statistical and computational
+                            methods.</p>
+                            <button class="learn-btn">Learn More</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- NON-STEM COURSES -->
+            <div class="course-category">
+                <div class="course-header">
+                    <button class="arrow-btn" id="nonstem-prev">&#10094;</button>
+                    <h3>Non-STEM Courses</h3>
+                    <button class="arrow-btn" id="nonstem-next">&#10095;</button>
+                </div>
+
+                <div class="course-slider" id="nonstem-slider">
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/T14.jpg" alt="Business Administration">
+                        <div class="course-content">
+                            <h4>Accounting</h4>
+                            <p>Learn financial management and accounting principles to excel in the business world.</p>
+                            <button class="learn-btn">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/T12.jpg" alt="Law">
+                        <div class="course-content">
+                            <h4>Finance
+                            </h4>
+                            <p>Study financial markets, investment strategies, and corporate finance management.</p>
+                            <button class="learn-btn">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/T13.jpg" alt="Media Studies">
+                        <div class="course-content">
+                            <h4>Marketing</h4>
+                            <p>Learn the principles of marketing, consumer behavior, and strategic marketing techniques.</p>
+                            <button class="learn-btn">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/psychology.jpg" alt="Psychology">
+                        <div class="course-content">
+                            <h4>Management</h4>
+                            <p>Study the principles of management and how to effectively lead teams and organizations.</p>
+                            <button class="learn-btn">Learn More</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <script>
+            function initSlider(prevId, nextId, sliderId) {
+                const slider = document.getElementById(sliderId);
+                const prev = document.getElementById(prevId);
+                const next = document.getElementById(nextId);
+
+                const card = slider.querySelector('.course-card');
+                const cardWidth = card.offsetWidth;
+                const gap = parseInt(getComputedStyle(slider).gap) || 0;
+                const scrollAmount = cardWidth + gap;
+
+                next.addEventListener('click', () => {
+                    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                });
+
+                prev.addEventListener('click', () => {
+                    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                });
+            }
+
+            initSlider('stem-prev', 'stem-next', 'stem-slider');
+            initSlider('nonstem-prev', 'nonstem-next', 'nonstem-slider');
+
+
+        </script>
+
+
+        <section class="documents-section" id="documents">
+            <h2 class="section-heading">Documents required to study in the USA</h2>
+            <p class="section-desc">
+                When applying for a course in the USA as an international student, you typically need several documents
+                to
+                complete the application process.
+            </p>
+
+            <div class="documents-container">
+                <!-- Left Card -->
+                <div class="doc-card left-card">
+                    <p class="doc-intro">
+                        The documents may vary depending on the institution and the specific program, but some common
+                        ones
+                        include:
+                    </p>
+                    <ul class="doc-list">
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Application Form</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Application Fees</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Statement of Purpose / Essays</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Resume</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Recommendation Letters</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Academic Transcripts</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Marksheets & Certificates</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Bank Certificate</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Declaration Certificate of Finance</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Test Score Report</li>    
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Test Score Report</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Passport</li>
+
+                    </ul>
+                    <button class="btn-consult">Free Expert Consultation</button>
+                </div>
+
+                <!-- Right Card (Form) -->
+                <div class="doc-card right-card">
+                    <h3 class="form-heading">Book your Free Consultation with Trustworthy Counsellors</h3>
+                    <form class="consult-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Mobile Number" required>
+                        <input type="text" placeholder="Preferred Course" required>
+
+                        <div class="form-row">
+                            <select required>
+                                <option value="">Select Month</option>
+                                <option>January</option>
+                                <option>February</option>
+                                <option>March</option>
+                                <option>April</option>
+                                <option>May</option>
+                                <option>June</option>
+                                <option>July</option>
+                                <option>August</option>
+                                <option>September</option>
+                                <option>October</option>
+                                <option>November</option>
+                                <option>December</option>
+                            </select>
+                            <select required>
+                                <option value="">Select Year</option>
+                                <option>2025</option>
+                                <option>2026</option>
+                                <option>2027</option>
+                            </select>
+                        </div>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" required>
+                            I consent to receiving Calls, WhatsApp, Email and Google RCS from Study Befikar to assist with this
+                            enquiry.
+                        </label>
+
+                        <button type="submit" class="btn-submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="documents-section" id="visa">
+            <h2 class="section-heading">Visa Requirement</h2>
+            <p class="section-desc">
+                To study in the USA, international students need a student visa. Here’s what you need to know to get
+                started.
+            </p>
+
+            <div class="documents-container">
+                <!-- Left Card -->
+                <div class="visa-card">
+                    <ul class="doc-list">
+                        <li>International students planning to study in the United States must obtain a visa. The most
+                            common type is the F-1
+                            non-immigrant visa, designed for students enrolling in accredited colleges or universities
+                            in the U.S.
+                        </li>
+                    </ul>
+
+                    <p class="doc-intro">Before you apply, you need:</p>
+                    <ul class="doc-list">
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Be accepted and approved for your chosen course of
+                            study.</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Register with the Student and Exchange Visitor
+                            Information System (SEVIS) and pay a registration fee of $350 (£253).</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> You'll also need to schedule a visa interview at the
+                            U.S. embassy or consulate in your home country.</li>
+                    </ul>
+                    <p class="doc-intro">Required documents for visa interview:</p>
+                    <ul class="doc-list">
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Your passport</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Your visa application form</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Financial documents demonstrating your ability to
+                            fund your education and living expenses.</li>
+                        <button class="learn-more-btn">
+                            Learn More<span class="arrow">→</span>
+                        </button>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="scholarship-section" id="scholarships">
+            <h2 class="scholarship-title">
+                Scholarship Opportunities for International Students
+            </h2>
+            <p class="scholarship-subtitle">
+                Studying in the United States can be expensive, but there are numerous scholarships available to help
+                international students achieve their academic goals.
+            </p>
+
+            <div class="cards-container">
+                <!-- Card 1 -->
+                <div class="scholarship-card" style="background-color: #E4F7FA;">
+                    <img src="/Palak/USA/USA_Images/27.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Merit-Based</h3>
+                    <p class="card-description">
+                        Awarded for academic excellence, leadership skills, or special talents
+                    </p>
+                    <button class="learn-more-btn">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="scholarship-card" style="background-color: #FDF0F4;">
+                    <img src="/Palak/USA/USA_Images/28.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Need-Based</h3>
+                    <p class="card-description">
+                        Scholarships for students demonstrating financial need
+                    </p>
+                    <button class="learn-more-btn">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="scholarship-card" style="background-color: #FFF6E1;">
+                    <img src="/Palak/USA/USA_Images/29.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Athletic</h3>
+                    <p class="card-description">
+                        Recognizing outstanding athletic performance and potential
+                    </p>
+                    <button class="learn-more-btn">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="scholarship-card" style="background-color: #E9F3FF;">
+                    <img src="/Palak/USA/USA_Images/30.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Creative Arts</h3>
+                    <p class="card-description">
+                        For students excelling in arts, music, or creative endeavors
+                    </p>
+                    <button class="learn-more-btn">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="scholarship-card" style="background-color: #EBDBFF;">
+                    <img src="/Palak/USA/USA_Images/31.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Community Service</h3>
+                    <p class="card-description">
+                        Awarded for outstanding community involvement and leadership
+                    </p>
+                    <button class="learn-more-btn">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+</section>
+
+
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Column 1: Logo + About + Social Icons -->
+                <div class="footer-col footer-about">
+                    <img src="/Palak/USA/USA_Images/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                    <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000
+                        students
+                        achieve their academic dreams abroad.</p>
+                    <div class="footer-socials">
+                        <a href="#"><img src="/Palak/USA/USA_Images/9.png" alt="Instagram"></a>
+                        <a href="#"><img src="/Palak/USA/USA_Images/10.png" alt="Facebook"></a>
+                        <a href="#"><img src="/Palak/USA/USA_Images/11.png" alt="LinkedIn"></a>
+                        <a href="#"><img src="/Palak/USA/USA_Images/12.png" alt="X"></a>
+                    </div>
+                </div>
+                <div class="footer-right-columns">
+
+                    <!-- Column 2: Services -->
+                    <div class="footer-col">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><a href="#">Admission Counselling</a></li>
+                            <li><a href="#">University Selection</a></li>
+                            <li><a href="#">Visa Processing</a></li>
+                            <li><a href="#">Scholarship Assistance</a></li>
+                            <li><a href="#">Education Loans</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Study Destinations -->
+                    <div class="footer-col">
+                        <h4>Study Destinations</h4>
+                        <ul>
+                            <li><a href="#">USA</a></li>
+                            <li><a href="#">Canada</a></li>
+                            <li><a href="#">UK</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact -->
+                    <div class="footer-col contact-col">
+                        <h4>Contact Us</h4>
+                        <p>info@studybefikar.com</p>
+                        <p>+1 (555) 123-4567</p>
+
+                        <h4>Office Hours</h4>
+                        <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                        <p>Sat: 10:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-line" />
+            <p class="footer-bottom">
+                © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+            </p>
+        </footer>
+
+
+<div id="popup" class="popup">
+    <div class="popup-box">
+        <!-- Cross Button -->
+        <a id="close-btn" class="cross-btn">&times;</a>
+
+        <!-- Inner Container -->
+        <div class="container">
+            <!-- Left Section: Login Form -->
+            <div class="form-section">
+                <!-- Logo Heading -->
+                <div class="welcome-logo">
+                    <h1>Sign In</h1>
+                    <p class="subtitle">Log in to continue planning your study abroad journey</p>
+                </div>
+
+                <form action="/login" method="POST">
+                    <!-- Email -->
+                    <div class="input-group">
+                        <input type="text" name="email" placeholder="Email Address" required>
+                    </div>
+                    <!-- Password -->
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <!-- Mobile Number -->
+                    <div class="input-group mobile-input">
+                        <input type="text" name="countryCode" value="+91" readonly>
+                        <input type="text" name="mobileNumber" placeholder="Mobile Number" required>
+                    </div>
+                    <!-- Login Actions -->
+                    <div class="actions">
+                        <button class="forgot-password-btn">Forgot Password</button>
+                        <button type="submit" class="login-btn">LOGIN</button>
+                    </div>
+                    <!-- Links -->
+                    <div class="links">
+                        <a href="#">Register now</a>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="divider">or</div>
+                    <!-- Social Buttons -->
+                    <div class="social-buttons">
+                        <button class="google-btn">
+                            <a href="/auth/google"><img src="/Palak/USA/USA_Images/google.png" alt="Google">
+                            Sign in with Google</a>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Section: Background Image -->
+            <div class="image-section">
+                <img src="/Palak/USA/USA_Images/signin (1).jpg" alt="Study Befikar">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const popup = document.getElementById("popup");
+        const closeBtn = document.getElementById("close-btn");
+
+        const showPopup = () => popup.style.display = "flex";
+        const hidePopup = () => {
+            popup.style.display = "none";
+            startPopupTimer();
+        };
+
+        const startPopupTimer = () => setTimeout(showPopup, 10000);
+
+        startPopupTimer();
+
+        closeBtn.addEventListener("click", hidePopup);
+
+        window.addEventListener("click", (event) => {
+            if (event.target === popup) hidePopup();
+        });
+    });
+</script>
+
+
+
+
+</body>
+
+</html>
