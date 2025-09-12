@@ -184,36 +184,41 @@ body {
 }
 
 .hero-route {
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 700;
   margin-bottom: 10%;
   color: #287781;
 }
 
 
 .hero-mini-heading {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.hero-mini-heading span{
+  background-color: #59898E33;
+  color:#287781;
+  width: 160px;
+  height: 44px;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: bold;
-  font-size: 1rem;
-  color:  #287781;
-  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 5px;
   font-weight: 500;
-  font-weight: bold;
   font-size: 16px;
-  margin-top:10%;
 }
 
 .hero-heading {
   font-size: 55px;
   font-weight: 700;
-  font-weight: bold;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 .hero-heading .lowhead {
-  color: #287781; /* your desired color */
+  color: #287781; 
 }
 
 .hero-para {
@@ -253,7 +258,7 @@ body {
   color: #59898E;
 }
 
-/* RIGHT COLUMN (Info Card) */
+
 .hero-infocard {
   flex: 1;
   position: relative;
@@ -337,6 +342,20 @@ body {
   font-size: 10px;
 }
 
+.hero-mini-heading span{
+  font-weight: 500;
+  font-size: 10px;
+  width: 125px;
+  height: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  text-wrap: nowrap;
+}
+
+.hero-mini-heading span svg{
+  width: 16px;
+  height: 16px;
+}
   .hero-heading {
   font-size: 24px;
   font-weight: 700;
@@ -521,12 +540,15 @@ font-size: 24px;
   color: #fff;
   padding: 0.7rem 1.5rem;
   font-weight: 700;
-  font-weight: bold;
   font-size: 12px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 
@@ -872,6 +894,7 @@ font-size: 16px;
   transition: background 0.3s;
   width: 143px;
   height: 33px;
+  text-decoration: none;
 }
 
 .planfinance-btn:hover{
@@ -900,6 +923,8 @@ font-size: 16px;
    font-size: 12px;
 }
 }
+
+
 
 /* loan-partner-section */
 
@@ -948,11 +973,30 @@ font-size: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
   border-top: 5px solid #287781;
+  height: 222px;
 }
 
 .loanPartnerCard:hover {
   border: 5px solid #287781;
   transform: scale(1.02);
+}
+
+.hiddenCard {
+  display: none;
+}
+
+.viewMoreLoanPartnerBtn{
+  margin-top: 40px;
+  padding: 10px 10px;
+  width: 143px;
+  background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 700;
+  font-weight: bold;
+  font-size: 12px;
+  border:1px solid #287781;
+  height: 40px;
 }
 
 .loanPartnerBannerImg {
@@ -968,7 +1012,7 @@ font-size: 16px;
  font-weight: 700;
   font-weight: bold;
   color: #424242;
-  margin: 8px 0;
+  margin: 10px 0;
 }
 
 .loanPartnerRate span {
@@ -979,18 +1023,27 @@ font-size: 16px;
   padding: 5px 5px;
 }
 
-.loanPartnerBtn{
-  margin-top: 20px;
-  padding: 10px 10px;
-  width: 143px;
-  background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
-  color: #fff;
-  border-radius: 10px;
-  font-weight: 700;
-  font-weight: bold;
-  font-size: 12px;
-  border:1px solid #287781;
+.bankLoanPartnerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;      
+  text-decoration: none;      
+  color: #fff;                
+  background-color: #287781;  
+  padding: 10px 20px;         
+  border-radius: 8px;         
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;  
+  margin: 10px auto;   
+  width: 100px;        
 }
+
+.bankLoanPartnerBtn:hover {
+  transform: scale(1.05);    
+}
+
 
 .loanPartnerNoteContainer {
   display: flex;
@@ -1015,6 +1068,10 @@ font-size: 16px;
 @media (max-width: 768px) {
   .loanPartnerCards {
     grid-template-columns: 1fr;
+  }
+
+  .loanPartnerCard{
+    height: 300px;
   }
 
   .loanPartnerHeader {
@@ -1354,6 +1411,7 @@ margin-right: 7.5%;
 }
 
 .countrySpecImg {
+  border-radius: 50%;
   width: 64px;
   height: 64px;
   object-fit: cover;
@@ -1643,20 +1701,22 @@ margin-right: 7.5%;
 }
 
 .loanOptionBtn {
-  padding: 0.5rem 1.25rem;
   color: #fff;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   font-size: 12px;
-  font-weight: bold;
-  font-weight: 700;
+  font-weight: 600;
   transition: background 0.3s ease;
   background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
   gap:10px;
   padding: 10px;
-  width: 143px;
+  width: 150px;
   height: 33px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

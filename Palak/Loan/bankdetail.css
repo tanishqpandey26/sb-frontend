@@ -307,33 +307,29 @@ body {
 @media (max-width: 768px) {
    .hero {
     position: relative; 
-     background-image: url('../images/bankdetails/herosection/hero-avail-banks.jpg');
+     background-image: url('/Palak/images/bankdetails/herosection/hero-avail-banks.jpg');
     background-size: cover;
     background-position: center;
     color: white;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 374px;
   }
 
   .hero-left-half {
     position: absolute; 
     top: 0;
     left: 0;
-    width: 100%;
+    width: 80%;
     height: 100%;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    background: linear-gradient(
-      89.07deg,
-      rgba(0, 0, 0, 0.71) 36.56%,
-      rgba(102, 102, 102, 0) 99.23%
-    );
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 20px;
     box-sizing: border-box;
+     background: linear-gradient(89.07deg, rgba(0, 0, 0, 0.71) 36.56%, rgba(102, 102, 102, 0) 99.23%);
   }
 
   .hero-content {
@@ -378,7 +374,6 @@ body {
   .hero-heading {
     padding-top: 10px;
     padding-bottom: 10px;
-    font-weight: bold;
     font-size: 24px;
     font-weight: 700;
   }
@@ -420,12 +415,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 10px;
+    gap: 9px;
     margin-top: 1px;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 10px;
+    padding: 5px;
     border-radius: 6px;
     flex-wrap: nowrap; 
+    width: 80%;
   }
 
   .fact-item {
@@ -440,8 +435,8 @@ body {
   .fact-top {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 4px;
-    font-weight: bold;
     font-size: 16px;
     font-weight: 700;
   }
@@ -453,8 +448,9 @@ body {
 
   .fact-bottom {
     margin-top: 4px; 
-    font-weight: bold;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 12px;
+    color:#fff;
   }
 
   .desktop-only {
@@ -484,14 +480,14 @@ body {
   color: #222;
 }
 
-/* GRID LAYOUT */
+
 .nbfc-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
-/* NBFC CARD */
+
 .nbfc-card {
   background: #fff;
   border-radius: 16px;
@@ -504,7 +500,7 @@ body {
 
 }
 
-/* TOP LABEL */
+
 .nbfc-top-label-container{
 background-color:#3FA0AC;
 border-bottom: 1px solid #3FA0AC;
@@ -559,7 +555,7 @@ padding: 1.5rem;
    border-radius: 9px;
 }
 
-/* FEE & TIME */
+
 .nbfc-fee-time-label {
   display: flex;
   justify-content: space-between;
@@ -607,7 +603,7 @@ padding: 1.5rem;
   color: #000;
 }
 
-/* features */
+
 .nbfc-features {
   display: flex;
   flex-direction: column;
@@ -646,7 +642,7 @@ padding: 1.5rem;
   height: 16px;
 }
 
-/* BUTTON */
+
 .nbfc-btn {
   width: 90%;
   margin: 5% auto;
@@ -662,6 +658,10 @@ padding: 1.5rem;
   text-align: center;
   transition: background-color 0.3s ease;
   height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .nbfc-btn:hover {
@@ -729,6 +729,10 @@ padding: 1.5rem;
   text-align: center;
   transition: background-color 0.3s ease;
   height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .intl-btn:hover {

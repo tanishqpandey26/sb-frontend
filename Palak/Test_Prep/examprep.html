@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prepare for Exams</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 32px;
+    /* Increased height */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* subtle shadow */
+    z-index: 1000;
+}
+
+.logo {
+    height: 70px;
+}
+
+.navbar-right {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar-right li {
+    position: relative;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #424242;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-style: bold;
+}
+
+.navbar-right a.active {
+    background: #59898E33;
+    color: #287781 !important;
+    border-radius: 6px;
+    padding: 12px 18px;
+}
+
+.dropdown.open .dropdown-content {
+    display: block !important;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    /* aligned right below the navbar */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    min-width: 240px;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 12px 18px;
+    color: #424242;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+    background-color: #59898E33;
+    /* 20% transparent highlight on hover */
+    color: #287781;
+    /* Optional: highlight text color on hover */
+}
+
+.contact-btn {
+    background-color: #287781;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    background-color: #1d5e65;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+    .navbar-right {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+}
+
+
+
+.footer {
+    background-color: #092A2E;
+    padding: 60px 2% 30px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1320px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-about {
+    flex: 2.5;
+    max-width: none;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+
+.footer-about p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-col h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 22px;
+    color: #ffffff;
+}
+
+.footer-col p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-col.contact-col {
+    min-width: 300px;
+    max-width: 350px;
+}
+
+.footer-col:not(.footer-about) {
+    margin-left: -5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Divider line */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ffffff44;
+    margin: 40px auto 20px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Bottom copyright text */
+.footer-bottom {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+.footer-right-columns {
+    display: flex;
+    gap: 40px;
+    margin-left: 30px;
+    /* You can increase this to shift more */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-right-columns {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .footer-col {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.footer-col ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 100%;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #4ED0E1;
+    /* Optional: subtle hover color */
+}
+
+/* ================= NAVBAR: MOBILE MENU =================== */
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        padding: 16px 24px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        color: #424242;
+    }
+
+    .navbar-right {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin-top: 10px;
+        display: none;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .navbar-right.active {
+        display: flex;
+    }
+}
+     
+/* ================= BOOK CUNSULTATION PAGE =================== */
+
+.book-consultation-hero {
+    position: relative;
+    height: 100vh;
+    background:
+        linear-gradient(89.07deg, rgba(0, 0, 0, 0.66) 36.56%, rgba(102, 102, 102, 0) 99.23%),
+        url('/Palak/Test_Prep/Test_Prep_Images/exam_prep.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: flex-start;
+    padding: 200px 4% 60px;
+    color: #FAFAFA;
+}
+
+.breadcrumb {
+    position: absolute;
+    top: 100px;
+    left: 7%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    opacity: 0.9;
+}
+
+.breadcrumb {
+    margin-bottom: 20px;
+    padding-top: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #FAFAFA;
+}
+
+.breadcrumb a {
+    color: #FAFAFA;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+    color: #ddd;
+}
+
+
+.hero-overlay {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.book-consultation-hero .hero-left {
+    max-width: 50%;
+}
+
+.glass-card {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.consultation-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 68px;
+    margin-bottom: 20px;
+}
+
+.consultation-heading .highlighted {
+    color: #FAFAFA;
+}
+
+.consultation-subtext {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.stats-row {
+    display: flex;
+    gap: 40px;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.stat-number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+}
+
+.stat-label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+
+.consultation-section {
+    width: 1272px;
+    margin: 30px auto;
+    gap: 100px;
+}
+
+.consultation-heading h2 {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 34px;
+    font-weight: 700;
+    color: #424242;
+    text-align: center;
+}
+
+.consultation-heading p {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 24px;
+    font-weight: 400;
+    color: #424242;
+    text-align: center;
+    line-height: 35px;
+    margin-top: 15px;
+}
+
+.step-loader {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 60px 0;
+    gap: 30px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #717A84;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.step .circle {
+    width: 34px;
+    height: 34px;
+    border: 2px solid #717A84;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step.active {
+    color: #287781;
+}
+
+.step.active .circle {
+    border-color: #287781;
+    color: #287781;
+}
+
+.line {
+    width: 150px;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 17px;
+}
+
+.consultation-form-card {
+    background: #FAFAFA;
+    border-radius: 20px;
+    box-shadow: 4px 4px 22.6px #0000001A, -4px -4px 22.6px #0000001A;
+    padding-bottom: 40px;
+}
+
+.form-header {
+    background: #287781;
+    color: #fff;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    padding: 27px 50px;
+    border-radius: 0;
+    width: 100%;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.form-header:first-of-type {
+    border-radius: 20px 20px 0 0;
+}
+
+
+.consultation-form {
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.row {
+    display: flex;
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.form-group.full {
+    width: 100%;
+}
+
+label {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 6px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 18px 20px;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.custom-dropdown {
+    width: 95%;
+    position: relative;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 12px;
+    color: #000000;
+    /* opacity: 0.8; */
+    z-index: 2000;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.custom-dropdown .dropdown-trigger {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 18px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-dropdown .dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 170px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 9999;
+    flex-direction: column;
+}
+
+.custom-dropdown .dropdown-option {
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.custom-dropdown .dropdown-option:hover {
+    background: #59898E33;
+    color: #287781;
+}
+
+.custom-dropdown.active .dropdown-options {
+    display: flex;
+}
+
+
+.additional-dropdown {
+    width: 95%;
+    position: relative;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 12px;
+    color: #000000;
+    /* opacity: 0.8; */
+    z-index: 10;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.additional-dropdown .dropdown-trigger {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 18px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.additional-dropdown .dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 230px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 9999;
+    flex-direction: column;
+}
+
+.additional-dropdown .dropdown-option {
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.additional-dropdown .dropdown-option:hover {
+    background: #59898E33;
+    color: #287781;
+}
+
+.additional-dropdown.active .dropdown-options {
+    display: flex;
+}
+
+
+.custom-dropdown .dropdown-options,
+.additional-dropdown .dropdown-options {
+    display: none;
+}
+
+.custom-dropdown.active .dropdown-options,
+.additional-dropdown.active .dropdown-options {
+    display: flex;
+}
+
+
+
+.required {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-btn {
+    width: 50%;
+    height: 59px;
+    background: #287781;
+    color: #fff;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; 
+}
+
+.book-btn .arrow {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.book-btn:hover {
+    background: #1d5e65;
+}
+.exam-description {
+  width: 1173px;
+  height: 210px;
+  border-radius: 20px;
+  padding: 24px 26px;
+  background: var(--LightPink-11, #FDF0F4);
+  opacity: 1;
+  gap: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.exam-description .point {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #424242;
+}
+
+.exam-description .point img {
+  width: 18px;
+  height: 18px;
+  margin-top: 4px; /* aligns icon vertically */
+}
+
+.hidden {
+  display: none;
+}/* ===== DTP base ===== */
+.dtp-field { position: relative; font-family: 'Plus Jakarta Sans', sans-serif; }
+.dtp-label { display:block; margin-bottom:10px; color:#1A1A1A; font-weight:700; }
+
+/* Trigger button */
+.dtp-trigger{
+  width:100%;
+  text-align:left;
+  padding:14px 16px;
+  border:1px solid #D0D0D0;
+  border-radius:12px;
+  background:#fff;
+  font-size:16px;
+  color:#424242;
+  cursor:pointer;
+}
+
+/* Positioning the card centered below the trigger */
+.dtp-dropdown{ position:relative; }
+.dtp-card{
+  position:absolute;
+  left:50%;
+  top:calc(100% + 10px);
+  transform:translateX(-50%);
+  z-index:9999;
+
+  width:699.14px;
+  height:520.6px;
+  border-radius:20px;
+  border:0.2px solid #424242; /* Charcoal grey */
+  background:#FFFFFF;
+  display:none;
+  overflow:hidden;
+  box-shadow:0 12px 32px rgba(0,0,0,0.15);
+}
+.dtp-card.dtp-open{ display:flex; }
+
+/* Left panel (calendar) */
+.dtp-left{
+  width:399.14px;
+  height:100%;
+  padding:28px;
+  background:#F8F8F8;
+  border-right:1px solid #ddd;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.dtp-title{
+  margin:0;
+  font-size:19.95px;
+  line-height:150%;
+  font-weight:700;
+  color:#1A1A1A;
+}
+.dtp-cal{ display:flex; flex-direction:column; gap:12px; height:100%; }
+.dtp-cal-header{ display:flex; align-items:center; justify-content:space-between; }
+.dtp-month{ font-size:16px; color:#1A1A1A; }
+.dtp-nav{
+  border:none; background:transparent; font-size:18px; cursor:pointer;
+  padding:6px 8px; border-radius:6px;
+}
+.dtp-nav:hover{ background:#59898E33; }
+
+.dtp-weekdays{
+  display:grid; grid-template-columns:repeat(7,1fr); text-align:center;
+  font-size:12px; text-transform:uppercase; color:#1A1A1ACC;
+}
+.dtp-days{
+  display:grid; grid-template-columns:repeat(7,1fr); gap:8px; margin-top:6px;
+}
+.dtp-days div{
+  height:36px; display:flex; align-items:center; justify-content:center;
+  font-size:15px; border-radius:6px;
+}
+.dtp-day-disabled{ color:#1A1A1A9C; cursor:not-allowed; }
+.dtp-day-available{ font-weight:700; color:#59898E; background:#59898E33; cursor:pointer; }
+.dtp-day-available:hover{ background:#59898E55; }
+.dtp-day-selected{ background:#287781 !important; color:#fff !important; }
+
+/* Footer: Clear / Today */
+.dtp-cal-footer{
+  margin-top:auto; display:flex; justify-content:space-between; gap:10px;
+}
+.dtp-secondary{
+  border:none; background:#EFEFEF; color:#1A1A1A; padding:8px 14px;
+  border-radius:8px; cursor:pointer; font-size:14px;
+}
+.dtp-secondary:hover{ background:#E4E4E4; }
+
+/* Right panel (times) */
+.dtp-right{
+  width:300px; height:100%; padding:28px;
+  display:flex; flex-direction:column; gap:16px; background:#fff;
+}
+.dtp-timebar{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.dtp-selected{ font-weight:700; font-size:16px; color:#1A1A1A; }
+
+/* Toggle */
+.dtp-toggle{
+  display:flex; width:100px; height:34px; background:#59898E33;
+  border-radius:5px; padding:2px; gap:2px; align-items:center; justify-content:space-between;
+}
+.dtp-toggle-item{ flex:1; height:30px; border-radius:3px; cursor:pointer; position:relative; }
+.dtp-toggle-item input{ display:none; }
+.dtp-toggle-item span{
+  display:flex; height:100%; align-items:center; justify-content:center; font-size:14px; color:#000;
+  border-radius:3px;
+}
+.dtp-toggle-item input:checked + span{ background:#fff; font-weight:700; }
+
+/* Times */
+.dtp-times{ display:flex; flex-direction:column; gap:10px; margin-top:4px; }
+.dtp-time{
+  width:100%; max-width:236px; height:40px;
+  border:1px solid #59898E; color:#287781; background:#fff;
+  border-radius:8px; font-weight:700; font-size:16px; cursor:pointer; transition:.2s;
+}
+.dtp-time:hover, .dtp-time.dtp-active{ background:#287781; color:#fff; }
+
+/* Utility */
+.dtp-hide{ display:none !important; }
+
+/* (Optional) small screens: let card take screen width */
+@media (max-width: 760px){
+  .dtp-card{ width:96vw; height:80vh; }
+  .dtp-left{ width:58%; }
+  .dtp-right{ width:42%; }
+}
+
+
+/* =================== RESPONSIVE =================== */
+
+/* Tablet (<=1024px) */
+@media (max-width: 1024px) {
+  .book-consultation-hero {
+    flex-direction: column;
+    padding: 160px 5% 40px;
+    height: auto;
+  }
+
+  .book-consultation-hero .hero-left {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .consultation-heading {
+    font-size: 42px;
+    line-height: 52px;
+  }
+
+  .consultation-subtext {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 auto 30px;
+  }
+
+  .stats-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .consultation-section {
+    width: 95%;
+    gap: 50px;
+  }
+}
+
+/* Mobile (<=768px) */
+@media (max-width: 768px) {
+  .breadcrumb {
+    left: 5%;
+    top: 80px;
+    font-size: 10px;
+  }
+
+  .consultation-heading {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .consultation-subtext {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .step-loader {
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px 0;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .consultation-form {
+    padding: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .custom-dropdown,
+  .additional-dropdown {
+    width: 100%;
+  }
+
+  .exam-description {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+}
+
+/* Small mobile (<=480px) */
+@media (max-width: 480px) {
+  .consultation-heading {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .consultation-subtext {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .stat-number {
+    font-size: 20px;
+  }
+
+  .stat-label {
+    font-size: 14px;
+  }
+
+  .book-btn {
+    width: 100%;
+    font-size: 14px;
+    height: 50px;
+  }
+
+  .dtp-card {
+    width: 95vw;
+    height: 70vh;
+    flex-direction: column;
+  }
+
+  .dtp-left,
+  .dtp-right {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .step-loader {
+    flex-direction: column;
+    align-items: center;   /* Center the circles */
+    justify-content: center;
+    gap: 25px;             /* Space between steps */
+    margin: 40px auto;
+  }
+
+  .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .line {
+    display: none; /* Hide line on mobile */
+  }
+
+  .step-label {
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: center;
+  }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!--NavBar Section-->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="/Palak/Home/home.html"></a>
+            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo"
+                class="logo">
+            </a>
+    
+        </div>
+        <ul class="navbar-right" id="mobileNav">
+    
+            <li class="dropdown">
+                <a href="/Palak/USA/usa.html">Countries</a>
+                <ul class="dropdown-content">
+                    <li><a href="/Palak/USA/usa.html">USA</a></li>
+                    <li><a href="#">UK</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">Germany</a></li>
+                </ul>
+            </li>
+    
+            <li class="dropdown">
+                <a href="#">Loan</a>
+                <ul class="dropdown-content">
+                    <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                    <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
+                </ul>
+            </li>
+    
+            <li class="dropdown">
+                <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
+                <ul class="dropdown-content">
+                    <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+                    <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
+                    <li><a href="#">Application Deadline</a></li>
+                    <li><a href="#">University Finder</a></li>
+                </ul>
+            </li>
+    
+            <li class="dropdown">
+                <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
+                <ul class="dropdown-content">
+                    <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                    <li><a href="#">Prepare for Exam</a></li>
+                    <li><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></li>
+                    <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
+                </ul>
+            </li>
+    
+            <li class="dropdown">
+                <a href="#">All Exams</a>
+                <ul class="dropdown-content">
+                    <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
+                    <li><a href="/Palak/All_Exams/GMAT.html">GMAT</a></li>
+                    <li><a href="/Palak/All_Exams/GRE.html">GRE</a></li>
+                    <li><a href="/Palak/All_Exams/IELTS.html">IELTS</a></li>
+                    <li><a href="/Palak/All_Exams/PTE.html">PTE</a></li>
+                    <li><a href="/Palak/All_Exams/ACT.html">ACT</a></li>
+                    <li><a href="/Palak/All_Exams/TOEFL.html">TOEFL</a></li>
+                    <li><a href="/Palak/All_Exams/Duolingo.html">Duolingo</a></li>
+                </ul>
+            </li>
+    
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">All Services</a></li>
+                    <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
+                    <li><a href="#">Profile Evaluation</a></li>
+                    <li><a href="#">Apply to University</a></li>
+                </ul>
+            </li>
+    
+            <li><a href="#" class="dropdown">Notice Board</a></li>
+            <li><a href="#" class="dropdown">About Us</a></li>
+            <li><a href="#" class="dropdown">Contact Us</a></li>
+    
+            <li><a href="/Palak/Login Pages/signin.html" class="contact-btn">Login</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </nav>
+    <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('mobileNav');
+
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+    <script>
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(dropdown => {
+            let wasClicked = false;
+            const link = dropdown.querySelector('a');
+
+            // Toggle on click
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isOpen = dropdown.classList.contains('open');
+
+                // Close all dropdowns
+                dropdowns.forEach(d => {
+                    d.classList.remove('open');
+                    d.dataset.clicked = "false";
+                });
+
+                if (!isOpen) {
+                    dropdown.classList.add('open');
+                    dropdown.dataset.clicked = "true";
+                }
+            });
+
+            // Hover to open (desktop only)
+            dropdown.addEventListener('mouseenter', () => {
+                if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                    dropdown.classList.add('open');
+                }
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+                if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                    dropdown.classList.remove('open');
+                }
+            });
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove('open');
+                    dropdown.dataset.clicked = "false";
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+            const links = document.querySelectorAll(".navbar-right a");
+
+            links.forEach(link => {
+                const linkPath = link.getAttribute("href").split("/").pop();
+
+                if (linkPath === currentPath) {
+                    // Highlight the clicked link
+                    link.classList.add("active");
+
+                    // Also highlight parent if inside dropdown
+                    const parentDropdown = link.closest(".dropdown");
+                    if (parentDropdown) {
+                        const parentLink = parentDropdown.querySelector(":scope > a");
+                        if (parentLink) parentLink.classList.add("active");
+                    }
+                }
+            });
+        });
+    </script>
+
+    <section class="hero book-consultation-hero">
+        <div class="breadcrumb"><a href="/Palak/Home/home.html">Home</a> &gt;
+            <a href="/Palak/Test_Prep/testprep.html">Test preparation</a> &gt;
+            <span>Take A Mock Test</span>
+        </div>
+
+        <div class="hero-overlay">
+            <div class="hero-left">
+                <div class="glass-card">★ Trusted by 10,000+ Students</div>
+
+                <h1 class="consultation-heading">
+                    <span>Master Your</span><br>
+                    <span class="highlighted">Mock Tests</span>
+                </h1>
+
+                <p class="consultation-subtext">
+                    Prepare with confidence using our comprehensive mock test platform. Practice with real exam formats, get detailed
+                    analytics, and boost your scores.
+                </p>
+
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Students</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="consultation-section">
+    <div class="consultation-heading">
+        <h2>Select Your Mock Test</h2>
+        <p>
+            Choose your exam type, education level, and preferred date to begin your comprehensive mock test preparation
+            journey.
+        </p>
+    </div>
+
+    <!-- Step Loader -->
+    <div class="step-loader">
+        <div class="step active" id="step1">
+            <div class="circle">1</div>
+            <span class="step-label">Education Level</span>
+        </div>
+        <div class="line"></div>
+        <div class="step" id="step2">
+            <div class="circle">2</div>
+            <span class="step-label">Exam Type</span>
+        </div>
+        <div class="line"></div>
+        <div class="step" id="step3">
+            <div class="circle">3</div>
+            <span class="step-label">Exam Date</span>
+        </div>
+    </div>
+
+    <!-- Form Card -->
+    <div class="consultation-form-card" id="formCard">
+        <form class="consultation-form" id="consultationForm" action="confirmation.html" method="POST">
+            <!-- Hidden inputs for submission -->
+            <input type="hidden" name="intake" id="intake">
+            <input type="hidden" name="country" id="country">
+            <input type="hidden" name="exam" id="exam">
+
+            <!-- Step 1 -->
+            <div class="form-header">Education Level</div>
+            <div class="row">
+                <div class="form-group full">
+                    <label>Choose Your Current Academic Level <span class="required">*</span></label>
+                    <div class="custom-dropdown" id="intakeDropdown">
+                        <div class="dropdown-trigger">Select Education Level ▾</div>
+                        <div class="dropdown-options">
+                            <div class="dropdown-option">Bachelors</div>
+                            <div class="dropdown-option">Masters</div>
+                            <div class="dropdown-option">Diploma</div>
+                            <div class="dropdown-option">Higher Secondary</div>
+                            <div class="dropdown-option">Others</div>
+                        </div>
+                    </div>
+                <!-- Add this directly after #intakeDropdown -->
+                <div id="otherInputGroup" style="display:none; margin-top:12px;">
+                    <label for="otherInput"
+                        style="display:block; font-family: 'Plus Jakarta Sans'; font-weight:600; margin-bottom:6px;">
+                        Current academic level
+                    </label>
+                    <input id="otherInput" name="other_intake" type="text" placeholder="Please enter your current academic level"
+                        style="width:100%; padding:10px; border-radius:8px; border:1px solid #ddd; font-family: 'Plus Jakarta Sans';" />
+                </div>
+
+
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="form-header academic-header hidden">Exam Type</div>
+            <div class="row hidden academic-field">
+                <div class="form-group full">
+                    <label>Choose your exam type <span class="required">*</span></label>
+                    <div class="custom-dropdown" id="countryDropdown">
+                        <div class="dropdown-trigger">
+                            Select the standardized test you want to prepare for ▾
+                        </div>
+                        <div class="dropdown-options">
+                            <div class="dropdown-option" data-exam="IELTS">IELTS</div>
+                            <div class="dropdown-option" data-exam="TOEFL">TOEFL</div>
+                            <div class="dropdown-option" data-exam="GMAT">GMAT</div>
+                            <div class="dropdown-option" data-exam="GRE">GRE</div>
+                            <div class="dropdown-option" data-exam="SAT">SAT</div>
+                            <div class="dropdown-option" data-exam="ACT">ACT</div>
+                            <div class="dropdown-option" data-exam="PTE">PTE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Exam Description Box -->
+            <div id="exam-description" class="exam-description hidden"></div>
+
+
+            <!-- Step 3 -->
+            <div class="form-header additional-header hidden">Exam Date</div>
+            <div class="additional-field hidden additional-info">
+                <!-- Date & Time (DTP) -->
+                <div class="dtp-field">
+                    <label class="dtp-label">Choose Your Preferred Exam Date <span class="required">*</span></label>
+                
+                    <div class="dtp-dropdown" id="dtpDropdown">
+                        <button type="button" class="dtp-trigger" id="dtpTrigger">mm/dd/yy — select ▾</button>
+                
+                        <!-- Hidden fields that submit with your form -->
+                        <input type="hidden" name="exam_date" id="dtpHiddenDate">
+                        <input type="hidden" name="exam_time" id="dtpHiddenTime">
+                
+                        <!-- The Card -->
+                        <div class="dtp-card" id="dtpCard" aria-hidden="true">
+                            <!-- Left: Calendar -->
+                            <div class="dtp-left">
+                                <h3 class="dtp-title">Select a Date &amp; Time</h3>
+                
+                                <div class="dtp-cal">
+                                    <div class="dtp-cal-header">
+                                        <button type="button" class="dtp-nav" id="dtpPrev" aria-label="Previous month">‹</button>
+                                        <div class="dtp-month" id="dtpMonth">—</div>
+                                        <button type="button" class="dtp-nav" id="dtpNext" aria-label="Next month">›</button>
+                                    </div>
+                
+                                    <div class="dtp-weekdays">
+                                        <div>MON</div>
+                                        <div>TUE</div>
+                                        <div>WED</div>
+                                        <div>THU</div>
+                                        <div>FRI</div>
+                                        <div>SAT</div>
+                                        <div>SUN</div>
+                                    </div>
+                
+                                    <div class="dtp-days" id="dtpDays"></div>
+                
+                                    <div class="dtp-cal-footer">
+                                        <button type="button" class="dtp-secondary" id="dtpClear">Clear</button>
+                                        <button type="button" class="dtp-secondary" id="dtpToday">Today</button>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <!-- Right: Time -->
+                            <div class="dtp-right">
+                                <div class="dtp-timebar">
+                                    <div class="dtp-selected" id="dtpSelectedDate">No date selected</div>
+                
+                                    <div class="dtp-toggle">
+                                        <label class="dtp-toggle-item">
+                                            <input type="radio" name="dtpFormat" value="12" checked>
+                                            <span>12h</span>
+                                        </label>
+                                        <label class="dtp-toggle-item">
+                                            <input type="radio" name="dtpFormat" value="24">
+                                            <span>24h</span>
+                                        </label>
+                                    </div>
+                                </div>
+                
+                                <div class="dtp-times" id="dtpTimes"><!-- time buttons render here --></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Submit Button (part of form) -->
+                <div class="button-wrapper">
+                    <div class="form-group full">
+                        <button type="submit" class="book-btn">
+                            Schedule Mock Test <span class="arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Hidden inputs used to control step reveal / form submission
+        const intakeHidden = document.getElementById("intake");      // existing hidden input
+        const countryHidden = document.getElementById("country");    // existing hidden input
+        const examHidden = document.getElementById("exam");          // existing hidden input
+
+        // Elements for "Others" behaviour (must match HTML snippet above)
+        const otherGroup = document.getElementById("otherInputGroup");
+        const otherInput = document.getElementById("otherInput");
+
+        // Step UI
+        const step2 = document.getElementById("step2");
+        const step3 = document.getElementById("step3");
+        const academicFields = document.querySelectorAll(".academic-field, .academic-header");
+        const additionalFields = document.querySelectorAll(".additional-field, .additional-header");
+
+        // Safety: if any required element is missing, log and exit gracefully
+        if (!intakeHidden) console.warn("Missing #intake hidden input.");
+        if (!countryHidden) console.warn("Missing #country hidden input.");
+        if (!examHidden) console.warn("Missing #exam hidden input.");
+
+        // Generic dropdown handling — works for intakeDropdown, countryDropdown, examDropdown etc.
+        document.querySelectorAll(".custom-dropdown, .additional-dropdown").forEach(dropdown => {
+            const trigger = dropdown.querySelector(".dropdown-trigger");
+            const options = Array.from(dropdown.querySelectorAll(".dropdown-option"));
+
+            if (!trigger) return;
+
+            // Toggle dropdown open/close
+            trigger.addEventListener("click", (e) => {
+                e.stopPropagation();
+                // close other dropdowns
+                document.querySelectorAll(".custom-dropdown.active, .additional-dropdown.active").forEach(d => {
+                    if (d !== dropdown) d.classList.remove("active");
+                });
+                dropdown.classList.toggle("active");
+            });
+
+            // clicking an option
+            options.forEach(option => {
+                option.addEventListener("click", (ev) => {
+                    ev.preventDefault();
+                    ev.stopPropagation();
+
+                    const text = option.textContent.trim();
+                    trigger.textContent = text + " ▾";
+                    dropdown.classList.remove("active");
+
+                    // Specific handling for intake dropdown
+                    if (dropdown.id === "intakeDropdown") {
+                        if (text.toLowerCase() === "others" || text.toLowerCase() === "other") {
+                            // Show the "Other" text input and don't set the hidden intake to "Others"
+                            if (otherGroup) otherGroup.style.display = "block";
+                            if (otherInput) {
+                                otherInput.focus();
+                                // clear hidden until user types
+                                if (intakeHidden) intakeHidden.value = "";
+                            }
+                        } else {
+                            // Normal option selected
+                            if (otherGroup) otherGroup.style.display = "none";
+                            if (otherInput) otherInput.value = "";
+                            if (intakeHidden) intakeHidden.value = text;
+                        }
+                    }
+                    // For country/exam dropdowns set hidden fields
+                    else if (dropdown.id === "countryDropdown") {
+                        if (countryHidden) countryHidden.value = text;
+                    } else if (dropdown.id === "examDropdown") {
+                        if (examHidden) examHidden.value = text;
+                    } else if (dropdown.classList.contains('additional-dropdown')) {
+                        // If you have other additional dropdowns you can map them here as needed
+                    }
+
+                    // After any selection, try to reveal next steps
+                    revealNextSteps();
+                });
+            });
+        });
+
+        // clicking outside closes all dropdowns
+        document.addEventListener("click", () => {
+            document.querySelectorAll(".custom-dropdown.active, .additional-dropdown.active").forEach(d => d.classList.remove("active"));
+        });
+
+        // When user types into the "other" textbox, update hidden value & attempt reveal
+        if (otherInput) {
+            otherInput.addEventListener("input", () => {
+                const val = otherInput.value.trim();
+                if (intakeHidden) intakeHidden.value = val; // set hidden input to typed value
+                revealNextSteps();
+            });
+        }
+
+        // Reveal/hide step 2 and step 3 based on filled hidden fields
+        function revealNextSteps() {
+            const intakeVal = (intakeHidden && intakeHidden.value) ? intakeHidden.value.trim() : "";
+            const countryVal = (countryHidden && countryHidden.value) ? countryHidden.value.trim() : "";
+
+            const intakeChosen = intakeVal !== "";
+            const countryChosen = countryVal !== "";
+
+            if (intakeChosen) {
+                // show step 2 elements
+                academicFields.forEach(el => el.classList.remove("hidden"));
+                if (step2) step2.classList.add("active");
+
+                if (countryChosen) {
+                    if (step3) step3.classList.add("active");
+                    additionalFields.forEach(el => el.classList.remove("hidden"));
+                } else {
+                    if (step3) step3.classList.remove("active");
+                    additionalFields.forEach(el => el.classList.add("hidden"));
+                }
+            } else {
+                // hide everything until intake filled
+                academicFields.forEach(el => el.classList.add("hidden"));
+                additionalFields.forEach(el => el.classList.add("hidden"));
+                if (step2) step2.classList.remove("active");
+                if (step3) step3.classList.remove("active");
+            }
+        }
+
+        // initial check (in case values were prefilled)
+        revealNextSteps();
+    });
+</script>
+
+
+<script>
+    const dropdownOptions = document.querySelectorAll(".dropdown-option");
+        const examDescription = document.getElementById("exam-description");
+        const examDetails = {
+            SAT: [
+                "Needed for undergraduate (bachelor’s) admission, especially in the USA.",
+                "Covers Math, Reading, and Writing.",
+                "Scored between 400–1600.",
+                "Many US universities use it to compare applicants from different countries."
+            ],
+            IELTS: [
+                "Widely accepted for studying, working, and migrating abroad.",
+                "Tests Listening, Reading, Writing, and Speaking.",
+                "Scored on a band scale of 0–9.",
+                "Accepted by over 11,000 institutions worldwide."
+            ],
+            TOEFL: [
+                "Mostly required by US and Canadian universities.",
+                "Tests Reading, Listening, Speaking, and Writing.",
+                "Scored between 0–120.",
+                "Computer-based test available worldwide."
+            ],
+            GMAT: [
+                "Required for MBA admissions globally.",
+                "Tests Analytical Writing, Quant, Verbal, and Integrated Reasoning.",
+                "Scored between 200–800.",
+                "Accepted by top business schools."
+            ],
+            GRE: [
+                "Required for master’s and PhD programs worldwide.",
+                "Tests Verbal, Quant, and Analytical Writing.",
+                "Scored between 260–340.",
+                "Used for both STEM and non-STEM courses."
+            ],
+            ACT: [
+                "Alternative to SAT, used for undergraduate admissions.",
+                "Tests English, Math, Reading, Science, and optional Writing.",
+                "Scored between 1–36.",
+                "Preferred by many US universities."
+            ],
+            PTE: [
+                "Computer-based English test for study and migration.",
+                "Tests Speaking, Writing, Reading, and Listening.",
+                "Scored on a scale of 10–90.",
+                "Accepted in Australia, New Zealand, UK, and other countries."
+            ]
+        };
+
+        dropdownOptions.forEach(option => {
+                option.addEventListener("click", () => {
+                    const exam = option.dataset.exam;
+
+                    if (examDetails[exam]) {
+                        examDescription.innerHTML = examDetails[exam]
+                            .map(point => `
+          <div class="point">
+            <img src="/Palak/Test_Prep/Test_Prep_Images/tick-icon.png" alt="tick" />
+            <span>${point}</span>
+          </div>
+        `)
+                            .join("");
+
+                        examDescription.classList.remove("hidden");
+                    } else {
+                        examDescription.classList.add("hidden");
+                    }
+                });
+        });
+
+</script>
+
+<script>
+    (function () {
+        // --- Elements
+        const dropdown = document.getElementById('dtpDropdown');
+        const trigger = document.getElementById('dtpTrigger');
+        const card = document.getElementById('dtpCard');
+
+        const monthEl = document.getElementById('dtpMonth');
+        const daysEl = document.getElementById('dtpDays');
+        const prevBtn = document.getElementById('dtpPrev');
+        const nextBtn = document.getElementById('dtpNext');
+
+        const clearBtn = document.getElementById('dtpClear');
+        const todayBtn = document.getElementById('dtpToday');
+
+        const selectedEl = document.getElementById('dtpSelectedDate');
+        const timesEl = document.getElementById('dtpTimes');
+
+        const hiddenDate = document.getElementById('dtpHiddenDate');
+        const hiddenTime = document.getElementById('dtpHiddenTime');
+
+        const formatRadios = dropdown.querySelectorAll('input[name="dtpFormat"]');
+
+        // --- State
+        let viewDate = new Date();     // which month we're looking at
+        let selectedDate = null;       // JS Date object
+        let selectedMinutes = null;    // minutes from midnight (kept stable when toggling format)
+
+        // Configure allowed dates per YYYY-MM (example data)
+        // e.g. "2025-07": [5,12,18,23]
+        const ALLOWED = {};
+        const pad = n => String(n).padStart(2, '0');
+
+        // Example: allow a few dates in current & next month
+        (function seedAllowed() {
+            const now = new Date();
+            const y = now.getFullYear();
+            const m = now.getMonth();
+            const keyThis = `${y}-${pad(m + 1)}`;
+            const keyNext = `${m === 11 ? y + 1 : y}-${pad(m === 11 ? 1 : m + 2)}`;
+            ALLOWED[keyThis] = [5, 12, 18, 23, 27];
+            ALLOWED[keyNext] = [3, 10, 17, 24];
+        })();
+
+        // Time slots (minutes from midnight)
+        const BASE_SLOTS = [540, 600, 660, 720, 780, 840, 900]; // 9:00 .. 15:00 every 1h
+
+        // --- Helpers
+        const monthLabel = (d) =>
+            d.toLocaleString('en-US', { month: 'long', year: 'numeric' });
+
+        const weekdayMonFirst = (jsDay) => (jsDay === 0 ? 6 : jsDay - 1); // 0=Sun -> 6
+
+        function formatTime(mins, fmt) {
+            const h24 = Math.floor(mins / 60);
+            const mm = mins % 60;
+            if (fmt === '24') {
+                return `${String(h24).padStart(2, '0')}:${String(mm).padStart(2, '0')}`;
+            } else {
+                const h12 = ((h24 + 11) % 12) + 1;
+                const ampm = h24 >= 12 ? 'PM' : 'AM';
+                return `${h12}:${String(mm).padStart(2, '0')} ${ampm}`;
+            }
+        }
+
+        function toISODate(d) {
+            return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+        }
+
+        function formatTrigger(d, mins) {
+            const dateStr = d ? d.toLocaleDateString('en-US') : 'mm/dd/yy';
+            if (d && mins != null) {
+                const fmt = dropdown.querySelector('input[name="dtpFormat"]:checked').value;
+                return `${dateStr} at ${formatTime(mins, fmt)} ▾`;
+            }
+            return `${dateStr} — select ▾`;
+        }
+
+        // --- Render calendar month
+        function renderCalendar() {
+            // header
+            monthEl.textContent = monthLabel(viewDate);
+            daysEl.innerHTML = '';
+
+            const y = viewDate.getFullYear();
+            const m = viewDate.getMonth();
+            const first = new Date(y, m, 1);
+            const lastDate = new Date(y, m + 1, 0).getDate();
+            const offset = weekdayMonFirst(first.getDay());
+
+            // pad leading blanks
+            for (let i = 0; i < offset; i++) daysEl.appendChild(document.createElement('div'));
+
+            const key = `${y}-${pad(m + 1)}`;
+            const allowed = new Set(ALLOWED[key] || []);
+
+            for (let day = 1; day <= lastDate; day++) {
+                const cell = document.createElement('div');
+                cell.textContent = day;
+
+                if (allowed.has(day)) {
+                    cell.className = 'dtp-day-available';
+                    cell.addEventListener('click', (e) => {
+                        e.preventDefault(); e.stopPropagation();
+
+                        // clear previous selection
+                        daysEl.querySelectorAll('.dtp-day-available').forEach(d => d.classList.remove('dtp-day-selected'));
+                        cell.classList.add('dtp-day-selected');
+
+                        selectedDate = new Date(y, m, day);
+                        selectedEl.textContent = selectedDate.toLocaleDateString('en-US', { weekday: 'short', month: 'long', day: 'numeric' });
+                        hiddenDate.value = toISODate(selectedDate);
+                        // when date changes, clear time selection
+                        selectedMinutes = null;
+                        hiddenTime.value = '';
+                        renderTimes(); // show slots
+                    });
+                } else {
+                    cell.className = 'dtp-day-disabled';
+                }
+
+                // re-highlight if this is the selected date
+                if (selectedDate && selectedDate.getFullYear() === y && selectedDate.getMonth() === m && selectedDate.getDate() === day) {
+                    if (allowed.has(day)) cell.classList.add('dtp-day-selected');
+                }
+
+                daysEl.appendChild(cell);
+            }
+        }
+
+        // --- Render times based on format + selected date
+        function renderTimes() {
+            timesEl.innerHTML = '';
+            if (!selectedDate) { return; } // no times until a date is chosen
+
+            const fmt = dropdown.querySelector('input[name="dtpFormat"]:checked').value;
+
+            BASE_SLOTS.forEach(mins => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'dtp-time';
+                btn.textContent = formatTime(mins, fmt);
+
+                // keep active if previously chosen
+                if (selectedMinutes === mins) btn.classList.add('dtp-active');
+
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault(); e.stopPropagation();
+                    selectedMinutes = mins;
+
+                    // set active
+                    timesEl.querySelectorAll('.dtp-time').forEach(b => b.classList.remove('dtp-active'));
+                    btn.classList.add('dtp-active');
+
+                    // update hidden time in 24h for backend consistency
+                    hiddenTime.value = formatTime(mins, '24');
+
+                    // update trigger text & close card
+                    trigger.textContent = formatTrigger(selectedDate, selectedMinutes);
+                    closeCard();
+                });
+
+                timesEl.appendChild(btn);
+            });
+        }
+
+        // --- Open / Close
+        function openCard() {
+            card.classList.add('dtp-open');
+            card.setAttribute('aria-hidden', 'false');
+        }
+        function closeCard() {
+            card.classList.remove('dtp-open');
+            card.setAttribute('aria-hidden', 'true');
+        }
+
+        // --- Events
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault(); e.stopPropagation();
+            card.classList.contains('dtp-open') ? closeCard() : openCard();
+        });
+
+        // Prevent clicks inside from closing or submitting form
+        card.addEventListener('click', (e) => { e.stopPropagation(); });
+
+        // Outside click closes
+        document.addEventListener('click', () => {
+            if (card.classList.contains('dtp-open')) closeCard();
+        });
+
+        // Esc closes
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeCard();
+        });
+
+        // Month navigation
+        prevBtn.addEventListener('click', (e) => {
+            e.preventDefault(); e.stopPropagation();
+            viewDate.setMonth(viewDate.getMonth() - 1);
+            renderCalendar();
+        });
+        nextBtn.addEventListener('click', (e) => {
+            e.preventDefault(); e.stopPropagation();
+            viewDate.setMonth(viewDate.getMonth() + 1);
+            renderCalendar();
+        });
+
+        // Clear
+        clearBtn.addEventListener('click', (e) => {
+            e.preventDefault(); e.stopPropagation();
+            selectedDate = null;
+            selectedMinutes = null;
+            hiddenDate.value = '';
+            hiddenTime.value = '';
+            selectedEl.textContent = 'No date selected';
+            trigger.textContent = 'mm/dd/yy — select ▾';
+            renderCalendar();
+            timesEl.innerHTML = '';
+        });
+
+        // Today
+        todayBtn.addEventListener('click', (e) => {
+            e.preventDefault(); e.stopPropagation();
+            const now = new Date();
+            viewDate = new Date(now.getFullYear(), now.getMonth(), 1);
+            renderCalendar();
+            // If today is allowed, preselect it
+            const key = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+            const allowed = new Set(ALLOWED[key] || []);
+            if (allowed.has(now.getDate())) {
+                selectedDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                hiddenDate.value = toISODate(selectedDate);
+                selectedEl.textContent = selectedDate.toLocaleDateString('en-US', { weekday: 'short', month: 'long', day: 'numeric' });
+                // highlight selected
+                const idx = [...daysEl.children].findIndex(d => d.textContent == now.getDate());
+                if (idx > -1) daysEl.children[idx].classList.add('dtp-day-selected');
+                renderTimes();
+            }
+        });
+
+        // Toggle 12/24h — re-render labels, keep same minute value
+        formatRadios.forEach(r => {
+            r.addEventListener('change', (e) => {
+                e.stopPropagation();
+                renderTimes();
+                // also refresh trigger text if we already picked a time
+                trigger.textContent = formatTrigger(selectedDate, selectedMinutes);
+            });
+        });
+
+        // Initial paint
+        renderCalendar();
+    })();
+</script>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1: Logo + About + Social Icons -->
+            <div class="footer-col footer-about">
+                <img src="/Palak/Admission_counselling/Admission_Counselling_Images/logo2.png" alt="StudyBefikar Logo"
+                    class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000
+                    students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/9.png"
+                            alt="Instagram"></a>
+                    <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/10.png"
+                            alt="Facebook"></a>
+                    <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/11.png"
+                            alt="LinkedIn"></a>
+                    <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+
+                <!-- Column 2: Services -->
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">Admission Counselling</a></li>
+                        <li><a href="#">University Selection</a></li>
+                        <li><a href="#">Visa Processing</a></li>
+                        <li><a href="#">Scholarship Assistance</a></li>
+                        <li><a href="#">Education Loans</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Study Destinations -->
+                <div class="footer-col">
+                    <h4>Study Destinations</h4>
+                    <ul>
+                        <li><a href="#">USA</a></li>
+                        <li><a href="#">Canada</a></li>
+                        <li><a href="#">UK</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="footer-col contact-col">
+                    <h4>Contact Us</h4>
+                    <p>info@studybefikar.com</p>
+                    <p>+1 (555) 123-4567</p>
+
+                    <h4>Office Hours</h4>
+                    <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    <p>Sat: 10:00 AM - 4:00 PM</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+</body>
+
+</html>

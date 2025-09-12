@@ -354,10 +354,7 @@ body {
     height: 63px;
     background-color: #E0F4F1;
     border-radius: 9px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60%;
-    flex-shrink: 0;
+    background-size: 100%;
 }
 
 
@@ -1116,10 +1113,11 @@ select {
     font-size: 12px;
     border-radius: 10px;
     border: 1px solid #ccc;
+    margin-bottom: 20px;
 }
 
 .degree-options {
-    margin: 40px 50px 20px;
+    margin: 40px 10px 20px;
     display: flex;
     flex-direction: column;
 }

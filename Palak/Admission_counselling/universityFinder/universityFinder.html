@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Befikar</title>
+    <link rel="stylesheet" href="/Palak/Admission_counselling/universityFinder/universityFinder.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+
+</head> 
+<body>
+
+
+  
+        <!--NavBar Section-->
+        <nav class="navbar">
+          <div class="navbar-left">
+            <a href="/Palak/Home/home.html">
+            <img src="/Palak/images/Home/study-befikar1.png" alt="Logo" class="logo">
+            </a>
+          </div>
+
+          <ul class="navbar-right" id="mobileNav">
+        
+            <li class="dropdown"><a href="#">About</a></li>
+
+            <li class="dropdown">
+              <a href="/Palak/USA/usa.html">Countries</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/USA/usa.html">USA</a></li>
+                <li><a href="#">UK</a></li>
+                <li><a href="#">Canada</a></li>
+                <li><a href="#">Germany</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Loan</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+                <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
+                <li><a href="#">Application Deadline</a></li>
+                <li><a href="#">University Finder</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                <li><a href="/Palak/exam_prep/examprep.html">Prepare for Exam</a></li>
+                <li><a href="#">Take a Mock Test</a></li>
+                <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">All Exams</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
+                <li><a href="#">GMAT</a></li>
+                <li><a href="#">GRE</a></li>
+                <li><a href="#">IELTS</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Services</a>
+              <ul class="dropdown-content">
+                <li><a href="#">All Services</a></li>
+                <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
+                <li><a href="#">Profile Evaluation</a></li>
+                <li><a href="#">Apply to University</a></li>
+              </ul>
+            </li>
+        
+            <li><a href="/Palak/NoticeBoard/noticeBoard.html" class="dropdown">Notice Board</a></li>
+            
+        
+            <li><a href="signup.html" class="contact-btn">Contact Us</a></li>
+          </ul>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </nav>
+        
+        <br/><br/><br/><br/>
+
+        <script>
+          const btn = document.getElementById('mobileMenuBtn');
+          const nav = document.getElementById('mobileNav');
+
+          btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+          });
+        </script>
+        
+        <script>
+          const dropdowns = document.querySelectorAll('.dropdown');
+
+          dropdowns.forEach(dropdown => {
+            let wasClicked = false;
+            const link = dropdown.querySelector('a');
+
+            // Toggle on click
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+
+              const isOpen = dropdown.classList.contains('open');
+
+              // Close all dropdowns
+              dropdowns.forEach(d => {
+                d.classList.remove('open');
+                d.dataset.clicked = "false";
+              });
+
+              if (!isOpen) {
+                dropdown.classList.add('open');
+                dropdown.dataset.clicked = "true";
+              }
+            });
+
+            // Hover to open (desktop only)
+            dropdown.addEventListener('mouseenter', () => {
+              if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                dropdown.classList.add('open');
+              }
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+              if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                dropdown.classList.remove('open');
+              }
+            });
+          });
+
+          // Close on outside click
+          document.addEventListener('click', (e) => {
+            dropdowns.forEach(dropdown => {
+              if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+                dropdown.dataset.clicked = "false";
+              }
+            });
+          });
+        </script>
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+            const links = document.querySelectorAll(".navbar-right a");
+
+            links.forEach(link => {
+              const linkPath = link.getAttribute("href").split("/").pop();
+
+              if (linkPath === currentPath) {
+                // Highlight the clicked link
+                link.classList.add("active");
+
+                // Also highlight parent if inside dropdown
+                const parentDropdown = link.closest(".dropdown");
+                if (parentDropdown) {
+                  const parentLink = parentDropdown.querySelector(":scope > a");
+                  if (parentLink) parentLink.classList.add("active");
+                }
+              }
+            });
+          });
+        </script>
+
+
+<!--Hero Section-->
+
+    <section class="hero">
+
+    <!-- left half -->
+    <div class="hero-left-half">
+
+        <div class="hero-content">
+        
+        <!-- breadcrumb route -->
+        <div class="hero-route">Home &gt; Admission Counselling &gt; University Finder </div>
+
+        <div class="hero-box desktop-only">
+
+        <div class="hero-mini-heading">
+            <img src="/Palak/images/bankdetails/herosection/star.png" alt="Star Icon" />
+            <span>Trusted by 10,000+ Students</span>
+        </div>
+        <h1 class="hero-heading">Find the Best University for You</h1>
+        <p class="hero-para">Discover top-ranked universities worldwide. Whether you're interested in studying abroad, pursuing a specific degree, or looking for the best scholarships, our comprehensive guide helps you make informed decisions.
+        </p>
+        <!-- search box -->
+        <div class="heroSearchBox">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="#08121D" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"/></svg>
+        <input type="text" placeholder="Search for universities" />
+        </div>
+
+
+        </div>
+
+        <div class="hero-box-mobile-only">
+
+        <div class="hero-mini-heading">
+            <img src="/Palak/images/bankdetails/herosection/star.png" alt="Star Icon" />
+            <span>Trusted by 10,000+ Students</span>
+        </div>
+
+        <h1 class="hero-heading">Find the Best  <br/> <span>University for You </span></h1>
+
+        <p class="hero-para">
+            Discover top-ranked universities worldwide. Whether you're interested in studying abroad, pursuing a specific degree, or looking for the best scholarships, our comprehensive guide helps you make informed decisions.
+        </p>
+
+        <!-- search box -->
+        <div class="heroSearchBox">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="#08121D" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"/></svg>
+        <input type="text" placeholder="Search for universities" />
+        </div>
+
+
+        </div>
+
+        </div>
+
+    </div>
+
+    </section>
+
+
+<!-- sideBarFilter + universityBoxList -->
+
+
+<section class="sideBarUniversityContainer">
+
+  <!--  sidebar Filter -->
+
+  <aside class="sideBarFilter">
+
+    <div class="filterContainer">
+      <h3 class="filterHeader">Filters</h3>
+
+      <!-- exam  -->
+      <div class="form-group">
+        <label>Exams</label>
+        <div class="custom-dropdown" id="examDropdown">
+          <div class="dropdown-trigger">Select Exam ▾</div>
+          <div class="dropdown-options">
+            <div class="dropdown-option">GRE</div>
+            <div class="dropdown-option">GMAT</div>
+            <div class="dropdown-option">TOEFL</div>
+            <div class="dropdown-option">IELTS</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- score -->
+      <div class="form-group">
+        <label>Score</label>
+        <div class="custom-dropdown" id="scoreDropdown">
+          <div class="dropdown-trigger">Select Score ▾</div>
+          <div class="dropdown-options">
+            <div class="dropdown-option">0-50</div>
+            <div class="dropdown-option">51-75</div>
+            <div class="dropdown-option">76-100</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- country -->
+      <div class="form-group">
+        <label>Country</label>
+        <div class="custom-dropdown" id="countryDropdown">
+          <div class="dropdown-trigger">Select Country ▾</div>
+          <div class="dropdown-options">
+            <div class="dropdown-option">USA</div>
+            <div class="dropdown-option">UK</div>
+            <div class="dropdown-option">Canada</div>
+            <div class="dropdown-option">Australia</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="filter-buttons">
+        <button class="filterApplyBtn">Apply</button>
+        <button class="filterClearFilterBtn">Clear filter</button>
+      </div>
+    </div>
+
+  </aside>
+
+    <script>
+    document.querySelectorAll(".custom-dropdown").forEach(dropdown => {
+    const trigger = dropdown.querySelector(".dropdown-trigger");
+    const options = dropdown.querySelector(".dropdown-options");
+
+    trigger.addEventListener("click", () => {
+        // close 
+        document.querySelectorAll(".dropdown-options").forEach(opt => {
+        if (opt !== options) opt.style.display = "none";
+        });
+        // toggle current
+        options.style.display = options.style.display === "block" ? "none" : "block";
+    });
+
+    options.querySelectorAll(".dropdown-option").forEach(option => {
+        option.addEventListener("click", () => {
+        trigger.textContent = option.textContent + " ▾";
+        options.style.display = "none";
+        });
+    });
+    });
+
+    // close dropdown 
+    document.addEventListener("click", (e) => {
+    if (!e.target.closest(".custom-dropdown")) {
+        document.querySelectorAll(".dropdown-options").forEach(opt => opt.style.display = "none");
+    }
+    });
+    </script>
+
+
+  <!-- university box list -->
+   <div class="universityBoxListContainer">
+
+  <!-- university header  -->
+    <div class="universityHeaderSection">
+
+        <div class="farLeft">
+        <h2 class="farLeftHeader">Top Universities</h2>
+        <p class="farLeftSubHeader">Found 8 universities matching your criteria</p>
+        </div>
+
+        <div class="farRightTabBar">
+        <button class="tabBtn active" data-tab="box">Box</button>
+        <button class="tabBtn" data-tab="list">List</button>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll(".tabBtn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            // remove active
+            document.querySelectorAll(".tabBtn").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            const selected = btn.dataset.tab;
+
+            // hide 
+            document.querySelectorAll(".universityTabContent > div").forEach(tab => {
+            tab.classList.remove("active");
+            });
+
+            // show selected tab
+            if (selected === "box") {
+            document.querySelector(".universityBoxTab").classList.add("active");
+            } else {
+            document.querySelector(".universityListTab").classList.add("active");
+            }
+        });
+        });
+    </script>
+
+
+  <!-- content  -->
+  <div class="universityTabContent">
+
+    <!-- box view -->
+    <div class="universityBoxTab active">
+
+        <div class="universityBoxCardContainer">
+
+            <!-- card 1 -->
+            <div class="universityBoxCard">
+                <div class="topFarLeftInfobox" style="background-image: url('/Palak/images/universityFinder/universityBox/johnHopkins.png')">
+                <div class="topLeftCardRanking">QS World Ranking: 28</div>
+                <div class="overlay"></div>
+                </div>
+                <h3 class="boxCardHeader">John Hopkins University</h3>
+                <p class="boxCardSubHeader">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="#424242" d="M12 3a7 7 0 0 0-7 7c0 2.862 1.782 5.623 3.738 7.762A26 26 0 0 0 12 20.758q.262-.201.615-.49a26 26 0 0 0 2.647-2.504C17.218 15.623 19 12.863 19 10a7 7 0 0 0-7-7m0 20.214l-.567-.39l-.003-.002l-.006-.005l-.02-.014l-.075-.053l-.27-.197a28 28 0 0 1-3.797-3.44C5.218 16.875 3 13.636 3 9.999a9 9 0 0 1 18 0c0 3.637-2.218 6.877-4.262 9.112a28 28 0 0 1-3.796 3.44a17 17 0 0 1-.345.251l-.021.014l-.006.005l-.002.001zM12 8a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-4 2a4 4 0 1 1 8 0a4 4 0 0 1-8 0"/></svg>
+                    Baltimore, Maryland</p>
+                <p class="boxCardPopular">Popular for: <span>Biology Course</span></p>
+                <p class="boxCardFounded">Founded: <span> 1876</span></p>
+
+                <div class="boxCardDetailContainer">
+
+                <div class="boxCardStudentBox">
+                <div class="boxCardStudentBoxHeader">Students</div>
+                <div class="boxCardStudentBoxValue">23,000</div>
+                </div>
+
+                <div class="boxCardTuitionBox">
+                <div class="boxCardTuitionBoxHeader">Tuition per year</div>
+                <div class="boxCardTuitionBoxValue">$60,000</div>
+                </div>
+
+                </div>
+
+            </div>
+
+            <!-- card 2 -->
+            <div class="universityBoxCard">
+                <div class="topFarLeftInfobox" style="background-image: url('/Palak/images/universityFinder/universityBox/nyu.png')">
+                <div class="topLeftCardRanking">QS World Ranking: 28</div>
+                <div class="overlay"></div>
+                </div>
+                <h3 class="boxCardHeader">John Hopkins University</h3>
+                <p class="boxCardSubHeader">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="#424242" d="M12 3a7 7 0 0 0-7 7c0 2.862 1.782 5.623 3.738 7.762A26 26 0 0 0 12 20.758q.262-.201.615-.49a26 26 0 0 0 2.647-2.504C17.218 15.623 19 12.863 19 10a7 7 0 0 0-7-7m0 20.214l-.567-.39l-.003-.002l-.006-.005l-.02-.014l-.075-.053l-.27-.197a28 28 0 0 1-3.797-3.44C5.218 16.875 3 13.636 3 9.999a9 9 0 0 1 18 0c0 3.637-2.218 6.877-4.262 9.112a28 28 0 0 1-3.796 3.44a17 17 0 0 1-.345.251l-.021.014l-.006.005l-.002.001zM12 8a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-4 2a4 4 0 1 1 8 0a4 4 0 0 1-8 0"/></svg>
+                    Baltimore, Maryland</p>
+                <p class="boxCardPopular">Popular for: <span>Biology Course</span></p>
+                <p class="boxCardFounded">Founded: <span> 1876</span></p>
+
+                <div class="boxCardDetailContainer">
+
+                <div class="boxCardStudentBox">
+                <div class="boxCardStudentBoxHeader">Students</div>
+                <div class="boxCardStudentBoxValue">23,000</div>
+                </div>
+
+                <div class="boxCardTuitionBox">
+                <div class="boxCardTuitionBoxHeader">Tuition per year</div>
+                <div class="boxCardTuitionBoxValue">$60,000</div>
+                </div>
+
+                </div>
+
+            </div>
+
+            <!-- card 3 -->
+            <div class="universityBoxCard">
+                <div class="topFarLeftInfobox" style="background-image: url('/Palak/images/universityFinder/universityBox/cmu.png')">
+                <div class="topLeftCardRanking">QS World Ranking: 28</div>
+                <div class="overlay"></div>
+                </div>
+                <h3 class="boxCardHeader">John Hopkins University</h3>
+                <p class="boxCardSubHeader">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="#424242" d="M12 3a7 7 0 0 0-7 7c0 2.862 1.782 5.623 3.738 7.762A26 26 0 0 0 12 20.758q.262-.201.615-.49a26 26 0 0 0 2.647-2.504C17.218 15.623 19 12.863 19 10a7 7 0 0 0-7-7m0 20.214l-.567-.39l-.003-.002l-.006-.005l-.02-.014l-.075-.053l-.27-.197a28 28 0 0 1-3.797-3.44C5.218 16.875 3 13.636 3 9.999a9 9 0 0 1 18 0c0 3.637-2.218 6.877-4.262 9.112a28 28 0 0 1-3.796 3.44a17 17 0 0 1-.345.251l-.021.014l-.006.005l-.002.001zM12 8a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-4 2a4 4 0 1 1 8 0a4 4 0 0 1-8 0"/></svg>
+                    Baltimore, Maryland</p>
+                <p class="boxCardPopular">Popular for: <span>Biology Course</span></p>
+                <p class="boxCardFounded">Founded: <span> 1876</span></p>
+
+                <div class="boxCardDetailContainer">
+
+                <div class="boxCardStudentBox">
+                <div class="boxCardStudentBoxHeader">Students</div>
+                <div class="boxCardStudentBoxValue">23,000</div>
+                </div>
+
+                <div class="boxCardTuitionBox">
+                <div class="boxCardTuitionBoxHeader">Tuition per year</div>
+                <div class="boxCardTuitionBoxValue">$60,000</div>
+                </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- card 4 -->
+            <div class="universityBoxCard">
+                <div class="topFarLeftInfobox" style="background-image: url('/Palak/images/universityFinder/universityBox/msu.png')">
+                <div class="topLeftCardRanking">QS World Ranking: 28</div>
+                <div class="overlay"></div>
+                </div>
+                <h3 class="boxCardHeader">John Hopkins University</h3>
+                <p class="boxCardSubHeader">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="#424242" d="M12 3a7 7 0 0 0-7 7c0 2.862 1.782 5.623 3.738 7.762A26 26 0 0 0 12 20.758q.262-.201.615-.49a26 26 0 0 0 2.647-2.504C17.218 15.623 19 12.863 19 10a7 7 0 0 0-7-7m0 20.214l-.567-.39l-.003-.002l-.006-.005l-.02-.014l-.075-.053l-.27-.197a28 28 0 0 1-3.797-3.44C5.218 16.875 3 13.636 3 9.999a9 9 0 0 1 18 0c0 3.637-2.218 6.877-4.262 9.112a28 28 0 0 1-3.796 3.44a17 17 0 0 1-.345.251l-.021.014l-.006.005l-.002.001zM12 8a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-4 2a4 4 0 1 1 8 0a4 4 0 0 1-8 0"/></svg>
+                    Baltimore, Maryland</p>
+                <p class="boxCardPopular">Popular for: <span>Biology Course</span></p>
+                <p class="boxCardFounded">Founded: <span> 1876</span></p>
+
+                <div class="boxCardDetailContainer">
+
+                <div class="boxCardStudentBox">
+                <div class="boxCardStudentBoxHeader">Students</div>
+                <div class="boxCardStudentBoxValue">23,000</div>
+                </div>
+
+                <div class="boxCardTuitionBox">
+                <div class="boxCardTuitionBoxHeader">Tuition per year</div>
+                <div class="boxCardTuitionBoxValue">$60,000</div>
+                </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- card 5 -->
+            <div class="universityBoxCard">
+                <div class="topFarLeftInfobox" style="background-image: url('/Palak/images/universityFinder/universityBox/stanford.png')">
+                <div class="topLeftCardRanking">QS World Ranking: 28</div>
+                <div class="overlay"></div>
+                </div>
+                <h3 class="boxCardHeader">John Hopkins University</h3>
+                <p class="boxCardSubHeader">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="#424242" d="M12 3a7 7 0 0 0-7 7c0 2.862 1.782 5.623 3.738 7.762A26 26 0 0 0 12 20.758q.262-.201.615-.49a26 26 0 0 0 2.647-2.504C17.218 15.623 19 12.863 19 10a7 7 0 0 0-7-7m0 20.214l-.567-.39l-.003-.002l-.006-.005l-.02-.014l-.075-.053l-.27-.197a28 28 0 0 1-3.797-3.44C5.218 16.875 3 13.636 3 9.999a9 9 0 0 1 18 0c0 3.637-2.218 6.877-4.262 9.112a28 28 0 0 1-3.796 3.44a17 17 0 0 1-.345.251l-.021.014l-.006.005l-.002.001zM12 8a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-4 2a4 4 0 1 1 8 0a4 4 0 0 1-8 0"/></svg>
+                    Baltimore, Maryland</p>
+                <p class="boxCardPopular">Popular for: <span>Biology Course</span></p>
+                <p class="boxCardFounded">Founded: <span> 1876</span></p>
+
+                <div class="boxCardDetailContainer">
+
+                <div class="boxCardStudentBox">
+                <div class="boxCardStudentBoxHeader">Students</div>
+                <div class="boxCardStudentBoxValue">23,000</div>
+                </div>
+
+                <div class="boxCardTuitionBox">
+                <div class="boxCardTuitionBoxHeader">Tuition per year</div>
+                <div class="boxCardTuitionBoxValue">$60,000</div>
+                </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- card 6 -->
+            <div class="universityBoxCard">
+                <div class="topFarLeftInfobox" style="background-image: url('/Palak/images/universityFinder/universityBox/harvard.png')">
+                <div class="topLeftCardRanking">QS World Ranking: 28</div>
+                <div class="overlay"></div>
+                </div>
+                <h3 class="boxCardHeader">John Hopkins University</h3>
+                <p class="boxCardSubHeader">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="#424242" d="M12 3a7 7 0 0 0-7 7c0 2.862 1.782 5.623 3.738 7.762A26 26 0 0 0 12 20.758q.262-.201.615-.49a26 26 0 0 0 2.647-2.504C17.218 15.623 19 12.863 19 10a7 7 0 0 0-7-7m0 20.214l-.567-.39l-.003-.002l-.006-.005l-.02-.014l-.075-.053l-.27-.197a28 28 0 0 1-3.797-3.44C5.218 16.875 3 13.636 3 9.999a9 9 0 0 1 18 0c0 3.637-2.218 6.877-4.262 9.112a28 28 0 0 1-3.796 3.44a17 17 0 0 1-.345.251l-.021.014l-.006.005l-.002.001zM12 8a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-4 2a4 4 0 1 1 8 0a4 4 0 0 1-8 0"/></svg>
+                    Baltimore, Maryland</p>
+                <p class="boxCardPopular">Popular for: <span>Biology Course</span></p>
+                <p class="boxCardFounded">Founded: <span> 1876</span></p>
+
+                <div class="boxCardDetailContainer">
+
+                <div class="boxCardStudentBox">
+                <div class="boxCardStudentBoxHeader">Students</div>
+                <div class="boxCardStudentBoxValue">23,000</div>
+                </div>
+
+                <div class="boxCardTuitionBox">
+                <div class="boxCardTuitionBoxHeader">Tuition per year</div>
+                <div class="boxCardTuitionBoxValue">$60,000</div>
+                </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- list view -->
+    <div class="universityListTab">
+
+        <div class="universityListTable">
+            <table>
+            <thead>
+                <tr>
+                <th>Rank</th>
+                <th>University</th>
+                <th>Location</th>
+                <th>Popular For</th>
+                <th>Students</th>
+                <th>Tuition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>1</td>
+                <td>Australian National University</td>
+                <td>Canberra, Australia</td>
+                <td>Sciences & Engineering Courses</td>
+                <td>23,000+</td>
+                <td>$54,000</td>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>Australian National University</td>
+                <td>Canberra, Australia</td>
+                <td>Sciences & Engineering Courses</td>
+                <td>23,000+</td>
+                <td>$54,000</td>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>Australian National University</td>
+                <td>Canberra, Australia</td>
+                <td>Sciences & Engineering Courses</td>
+                <td>23,000+</td>
+                <td>$54,000</td>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>Australian National University</td>
+                <td>Canberra, Australia</td>
+                <td>Sciences & Engineering Courses</td>
+                <td>23,000+</td>
+                <td>$54,000</td>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>Australian National University</td>
+                <td>Canberra, Australia</td>
+                <td>Sciences & Engineering Courses</td>
+                <td>23,000+</td>
+                <td>$54,000</td>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>Australian National University</td>
+                <td>Canberra, Australia</td>
+                <td>Sciences & Engineering Courses</td>
+                <td>23,000+</td>
+                <td>$54,000</td>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>Australian National University</td>
+                <td>Canberra, Australia</td>
+                <td>Sciences & Engineering Courses</td>
+                <td>23,000+</td>
+                <td>$54,000</td>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>Australian National University</td>
+                <td>Canberra, Australia</td>
+                <td>Sciences & Engineering Courses</td>
+                <td>23,000+</td>
+                <td>$54,000</td>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>Australian National University</td>
+                <td>Canberra, Australia</td>
+                <td>Sciences & Engineering Courses</td>
+                <td>23,000+</td>
+                <td>$54,000</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+<!-- universityFactor section -->
+
+<section class="universityFactor-process">
+  <div class="universityFactor-process-header">
+    <h2 class="universityFactor-service-heading">Key Factors to Consider</h2>
+    <p class="universityFactor-service-desc">
+      Making the right choice for your education is crucial. Here are the important factors to evaluate when selecting your university.
+    </p>
+  </div>
+
+  <div class="universityFactor-process-cards">
+
+    <div class="universityFactor-card">
+      <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M11.669 5.212a.365.365 0 0 1 .662 0l.814 1.668c.054.11.155.187.273.207l1.768.294c.3.05.42.434.205.658l-1.266 1.326a.4.4 0 0 0-.104.335l.279 1.85c.047.314-.266.551-.536.407l-1.595-.849a.36.36 0 0 0-.338 0l-1.595.849c-.27.144-.583-.093-.536-.407l.279-1.85a.4.4 0 0 0-.104-.335L8.609 8.04c-.214-.224-.095-.608.205-.658l1.768-.294a.37.37 0 0 0 .273-.207z"/><path d="M19 9A7 7 0 1 1 5 9a7 7 0 0 1 14 0"/><path d="m13 16.342l1.626 4.31c.328.867.492 1.302.777 1.348c.286-.042.636-.52.978-1.383c.245-.618.367-.927.62-1.094q.116-.076.251-.12c.292-.092.627-.002 1.298.18c.717.194 1.215.14 1.412 0c.058-.041 0-.003 0-.003c.116-.206-.04-.526-.353-1.167L17.456 14M11 16.342L9.374 20.65c-.328.868-.652 1.304-.937 1.35c-.286-.042-.457-.474-.8-1.337c-.244-.618-.385-.974-.638-1.14a1 1 0 0 0-.251-.12c-.292-.093-.627-.002-1.298.179c-.717.194-1.215.137-1.412-.003c-.116-.206.04-.526.353-1.167L6.544 14"/></g></svg></div>
+      <h3 class="universityFactor-service-card-header">Accreditation & Reputation</h3>
+      <p class="universityFactor-service-card-desc">Ensure the university is accredited and has a strong academic reputation.</p>
+    </div>
+
+    <div class="universityFactor-card">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><g fill="none" stroke="#FFFFFF" stroke-width="1.5"><path stroke-linecap="round" d="M14 2h-4c-3.28 0-4.919 0-6.081.814a4.5 4.5 0 0 0-1.105 1.105C2 5.08 2 6.72 2 10s0 4.919.814 6.081a4.5 4.5 0 0 0 1.105 1.105C5.08 18 6.72 18 10 18h4c3.28 0 4.919 0 6.081-.814a4.5 4.5 0 0 0 1.105-1.105C22 14.92 22 13.28 22 10"/><path stroke-linejoin="round" d="M18.83 2.754c.298-.323.447-.484.605-.578a1.24 1.24 0 0 1 1.241-.02c.161.09.315.247.622.561s.46.47.548.635c.212.397.205.878-.018 1.268c-.092.162-.25.314-.566.619L17.5 8.862c-.599.577-.898.865-1.273 1.011c-.374.147-.786.136-1.609.114l-.112-.002c-.25-.007-.376-.01-.449-.093c-.072-.083-.062-.21-.043-.466l.011-.138c.056-.719.084-1.078.224-1.4c.14-.324.383-.586.867-1.11z"/><path stroke-linecap="round" d="m14.656 22l-.42-.419a3.1 3.1 0 0 1-.58-3.581M9 22l.42-.419A3.1 3.1 0 0 0 10 18m-3 4h10"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h7"/></g></svg>
+    </div>
+      <h3 class="universityFactor-service-card-header">Programs & Courses</h3>
+      <p class="universityFactor-service-card-desc">Choose a university that offers the programs and courses that align with your career aspirations.</p>
+    </div>
+
+    <div class="universityFactor-card">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#FFFFFF" d="M19.71 2.837c.733.147 1.306.72 1.453 1.453a3.56 3.56 0 0 1-.773 2.995l-2.751 3.252l1.944 7.131a1.25 1.25 0 0 1-.322 1.213l-1.302 1.302a1.01 1.01 0 0 1-1.597-.224l-2.942-5.296l-2.858 2.381l.21 1.053a1.25 1.25 0 0 1-.341 1.13L8.767 20.89a1.01 1.01 0 0 1-1.617-.263L5.89 18.11l-2.516-1.26a1.01 1.01 0 0 1-.263-1.617l1.664-1.664a1.25 1.25 0 0 1 1.129-.341l1.053.21l2.381-2.857l-5.296-2.943a1.01 1.01 0 0 1-.224-1.597L5.12 4.739a1.25 1.25 0 0 1 1.213-.322l7.13 1.944l3.253-2.751a3.56 3.56 0 0 1 2.995-.773Zm-.492 1.945a1.56 1.56 0 0 0-1.211.354l-3.65 3.089a1.01 1.01 0 0 1-.918.203L6.226 6.46l-.067.066l5.195 2.886a1.01 1.01 0 0 1 .285 1.53L8.115 15.17a1.01 1.01 0 0 1-.974.344l-1.237-.247l-.408.408l1.557.779a1.1 1.1 0 0 1 .492.492l.78 1.557l.407-.408l-.247-1.237a1.01 1.01 0 0 1 .344-.974l4.229-3.524a1.01 1.01 0 0 1 1.53.285l2.885 5.195l.066-.067l-1.967-7.213a1.01 1.01 0 0 1 .204-.918l3.088-3.65c.285-.337.412-.777.354-1.211Z"/></g></svg>
+      </div>
+      <h3 class="universityFactor-service-card-header">Study Abroad Opportunities</h3>
+      <p class="universityFactor-service-card-desc">If you’re considering studying abroad, explore universities with international programs.</p>
+    </div>
+
+    <div class="universityFactor-card">
+      <div class="card-number">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.5"><path d="M12 9c-1.105 0-2 .672-2 1.5s.895 1.5 2 1.5s2 .672 2 1.5s-.895 1.5-2 1.5m0-6c.87 0 1.612.417 1.886 1M12 9V8m0 7c-.87 0-1.612-.417-1.886-1M12 15v1"/><path d="M21 11.183V8.28c0-1.64 0-2.46-.404-2.995s-1.318-.794-3.145-1.314a25 25 0 0 1-3.229-1.173C13.023 2.266 12.424 2 12 2s-1.023.266-2.222.798c-.88.39-1.98.818-3.229 1.173c-1.827.52-2.74.78-3.145 1.314C3 5.82 3 6.64 3 8.28v2.903c0 5.625 5.063 9 7.594 10.336c.607.32.91.481 1.406.481s.799-.16 1.406-.48C15.937 20.182 21 16.807 21 11.182Z"/></g></svg>
+      </div>
+      <h3 class="universityFactor-service-card-header">Tuition Fees and Scholarships</h3>
+      <p class="universityFactor-service-card-desc"> Look for universities that offer affordable tuition fees, as well as scholarship opportunities.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- footer-section -->
+
+ <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-col footer-about">
+                <img src="/Palak/images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="/Palak/images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- Column 2: Services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="#">Education Loans</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 3: Study Destinations -->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="#">USA</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">UK</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 4: Contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>info@studybefikar.com</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+
+
+<!-- chatbot-section -->
+
+  <button class="chatbot-toggler">
+    <span class="material-symbols-rounded">mode_comment</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <div class="chatbot">
+    <header>
+      <h2>Chatbot</h2>
+      <span class="close-btn material-symbols-outlined">close</span>
+    </header>
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Hi there 👋<br />Can i get your Name and Email?</p>
+      </li>
+    </ul>
+    <div class="chat-input">
+      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+      <span id="send-btn" class="material-symbols-rounded">send</span>
+    </div>
+  </div>
+
+<div id="chatbot-container"></div>
+
+<script>
+   
+    document.addEventListener('DOMContentLoaded', function() {
+    
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', toggleDropdown);
+      });
+    });
+  
+    //chatbot
+const chatbotToggler = document.querySelector(".chatbot-toggler");
+const closeBtn = document.querySelector(".close-btn");
+const chatbox = document.querySelector(".chatbox");
+const chatInput = document.querySelector(".chat-input textarea");
+const sendChatBtn = document.querySelector(".chat-input span");
+
+let userMessage = null; // Variable to store user's message
+const inputInitHeight = chatInput.scrollHeight;
+
+// Define the question flow structure
+const questionFlow = {
+  start: "What service can we assist you with today? \n 1) Loan \n 2) Test Prepration \n 3) Visa \n 4) Admission Counselling \n4) Profile Evaluation",
+  options: {
+    Loan: {
+      question: "Which Currency do you want to take Loan in?\n 1) Dollar \n 2) Rupees ",
+      responses: {
+        Dollar: "We can assist with Dollar loans. Lets get more Details?\n Which Degree do you want to pursue?",
+        Rupees: "We can assist with personal loans. What is the loan amount you're looking for?"},
+        "nextQuestion": {
+        "question": "Do you have a co-signer?",
+        "options": {
+          "1": "Business",
+          "2": "Education",
+          "3": "Other"
+        },
+        "responses": {
+          "Business": "Great! Let's discuss terms for a business loan in Dollar.",
+          "Education": "Sure! Let's explore education loan options in Dollar.",
+          "Other": "Got it! We'll help you find a suitable Dollar loan for your needs."
+        }
+      }
+    },
+    "Rupees": {
+      "message": "We can assist with personal loans. What is the loan amount you're looking for?",
+      "nextQuestion": {
+        "question": "What is the tenure of the loan?",
+        "options": {
+          "1": "1-3 years",
+         "2": "3-5 years",
+          "3": "More than 5 years"
+        },
+        "responses": {
+          "1-3 years": "Short-term loans are a great choice for flexibility.",
+          "3-5 years": "Mid-term loans offer a balance between affordability and tenure.",
+          "More than 5 years": "Long-term loans provide lower monthly payments over time."
+        }
+      }
+    }
+  
+},
+    "Test Prep": {
+      question: "Which test are you preparing for? (GRE/GMAT/SAT)",
+      responses: {
+        GRE: "We offer GRE coaching. Would you like to know about our courses?",
+        GMAT: "We offer GMAT coaching. Would you like to know about our courses?",
+        SAT: "We offer SAT coaching. Would you like to know about our courses?",
+      },
+    },
+    Admission: {
+      question: "Which level of admission are you seeking? (Undergraduate/Postgraduate)",
+      responses: {
+        Undergraduate: "We assist with undergraduate admissions. Do you have a target country in mind?",
+        Postgraduate: "We assist with postgraduate admissions. Do you have a target program in mind?",
+      },
+    },
+    "Profile Evaluation": {
+      question: "Are you looking for a detailed profile evaluation for admissions or career guidance?",
+      responses: {
+        Admissions: "Please share your academic and extracurricular details for evaluation.",
+        Career: "Please share your work experience and career aspirations for evaluation.",
+      },
+    },
+    Visa: {
+      question: "Which type of visa are you applying for? (Student/Work/Tourist)",
+      responses: {
+        Student: "We assist with student visas. Have you received your admission letter?",
+        Work: "We assist with work visas. Do you have an employer's sponsorship?",
+        Tourist: "We assist with tourist visas. Do you have travel dates planned?",
+      },
+    },
+  };
+
+let currentStep = "start";
+let currentSection = null;
+
+const createChatLi = (message, className) => {
+  const chatLi = document.createElement("li");
+  chatLi.classList.add("chat", className);
+  const chatContent =
+    className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+  chatLi.innerHTML = chatContent;
+  chatLi.querySelector("p").textContent = message;
+  return chatLi;
+};
+
+const generateResponse = (chatElement) => {
+  const messageElement = chatElement.querySelector("p");
+
+  if (currentStep === "start") {
+    // Initial question
+    messageElement.textContent = questionFlow.start;
+    currentStep = "options";
+  } else if (currentStep === "options") {
+    // Options for services
+    const optionKeys = Object.keys(questionFlow.options);
+    if (optionKeys.includes(userMessage)) {
+      currentSection = userMessage;
+      messageElement.textContent = questionFlow.options[currentSection].question;
+      currentStep = "responses";
+    } else {
+      messageElement.textContent = "Please select a valid option: Loan, Test Prep, Admission, Profile Evaluation, Visa.";
+    }
+  } else if (currentStep === "responses") {
+    const responses = questionFlow.options[currentSection].responses;
+    if (responses[userMessage]) {
+      messageElement.textContent = responses[userMessage];
+      currentStep = "completed";
+    } else {
+      messageElement.textContent = `Please select a valid option for ${currentSection}.`;
+    }
+  } else {
+    // End of conversation
+    messageElement.textContent = "Thank you for chatting with us!";
+  }
+
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+};
+
+const handleChat = () => {
+  userMessage = chatInput.value.trim(); // Get user entered message
+  if (!userMessage) return;
+
+  // Clear the input textarea and set its height to default
+  chatInput.value = "";
+  chatInput.style.height = `${inputInitHeight}px`;
+
+  // Append the user's message to the chatbox
+  chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+
+  setTimeout(() => {
+    // Generate response based on current step and user message
+    const incomingChatLi = createChatLi("Thinking...", "incoming");
+    chatbox.appendChild(incomingChatLi);
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+    generateResponse(incomingChatLi);
+  }, 600);
+};
+
+chatInput.addEventListener("input", () => {
+  chatInput.style.height = `${inputInitHeight}px`;
+  chatInput.style.height = `${chatInput.scrollHeight}px`;
+});
+
+chatInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+    e.preventDefault();
+    handleChat();
+  }
+});
+
+sendChatBtn.addEventListener("click", handleChat);
+closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+    function toggleNavbar() {
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+
+    function toggleDropdown(event) {
+      const dropdown = event.currentTarget;
+      dropdown.classList.toggle('active');
+    }
+    const buttons = document.querySelectorAll(".button-container button");
+    const contents = document.querySelectorAll(".content-container");
+  
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Remove 'active' class from all buttons and contents
+        buttons.forEach(btn => btn.classList.remove("active"));
+        contents.forEach(content => content.classList.remove("active"));
+  
+        // Add 'active' class to clicked button and corresponding content
+        button.classList.add("active");
+        const contentId = button.id.replace("btn-", "content-");
+        document.getElementById(contentId).classList.add("active");
+      });
+    });
+    function switchContent(sectionId) {
+      // Remove active class from all buttons
+      document.querySelectorAll('.button').forEach(button => button.classList.remove('active'));
+
+      // Add active class to clicked button
+      document.querySelector(`.button[onclick="switchContent('${sectionId}')"]`).classList.add('active');
+
+      // Hide all content sections
+      document.querySelectorAll('.content').forEach(content => content.classList.remove('active'));
+
+      // Show the selected content section
+      document.getElementById(sectionId).classList.add('active');
+    }
+
+</script>
+
+
+</body>
+</html>

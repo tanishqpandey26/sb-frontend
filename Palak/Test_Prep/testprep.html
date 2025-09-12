@@ -78,6 +78,11 @@
   animation: gradientMove 2s linear infinite;
 }
 
+.learn-button a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 /* gradient animation */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
@@ -103,9 +108,8 @@
 
 /* Section heading/subheading */
 .test-prep-section{
-  max-width: 1320px;
   margin: 100px auto;
-  padding: 0 16px;
+  padding: 0 30px;
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--text);
 }
@@ -176,6 +180,15 @@
   flex-direction: column;
   justify-content: center;
   gap: 12px;
+}
+
+.card-content h4{
+    font-family: Plus Jakarta Sans;
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+line-height: 100%;
+margin-bottom: 20px;
 }
 
 .card-content .icon{
@@ -299,9 +312,13 @@
 
 .univ-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(624px, 1fr));
-    gap: 10px;
-    margin-left: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 624px)); /* flexible but max 624px */
+    gap: 40px;
+    justify-content: center;   /* center items inside the grid */
+    margin: 0 auto;            /* center grid itself */
+    max-width: 1370px;         /* ✅ keeps grid from stretching full width */
+    padding: 0 20px;           /* safe spacing for smaller screens */
+    margin-bottom: 40px;
 }
 
 .univ-card {
@@ -390,6 +407,7 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   background: white;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  height: 263px;
 }
 
 /* layering for stacking */
@@ -1001,6 +1019,11 @@
   }
 }
 
+.card-icon{
+    width: 50px;
+height: 50px;
+}
+
         </style>
 </head>
 
@@ -1009,30 +1032,34 @@
     <!--NavBar Section-->
     <nav class="navbar">
         <div class="navbar-left">
-            <img src="/Palak/USA/USA_Images/Untitled design.png" alt="Logo" class="logo">
+            <a href="/Palak/Home/home.html"></a>
+            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo"
+                class="logo">
+            </a>
+    
         </div>
         <ul class="navbar-right" id="mobileNav">
-
+    
             <li class="dropdown">
-                <a href="#">Countries</a>
+                <a href="/Palak/USA/usa.html">Countries</a>
                 <ul class="dropdown-content">
-                    <li><a href="usa.html">USA</a></li>
+                    <li><a href="/Palak/USA/usa.html">USA</a></li>
                     <li><a href="#">UK</a></li>
                     <li><a href="#">Canada</a></li>
                     <li><a href="#">Germany</a></li>
                 </ul>
             </li>
-
+    
             <li class="dropdown">
                 <a href="#">Loan</a>
                 <ul class="dropdown-content">
-                    <li><a href="check-eligibility.html">Check Eligibility</a></li>
-                    <li><a href="available-banks.html">Available Banks</a></li>
+                    <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                    <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
                 </ul>
             </li>
-
+    
             <li class="dropdown">
-                <a href="#">Admission Counselling</a>
+                <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
                 <ul class="dropdown-content">
                     <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
                     <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
@@ -1040,42 +1067,46 @@
                     <li><a href="#">University Finder</a></li>
                 </ul>
             </li>
-
+    
             <li class="dropdown">
                 <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
                 <ul class="dropdown-content">
                     <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
                     <li><a href="#">Prepare for Exam</a></li>
-                    <li><a href="#">Take a Mock Test</a></li>
-                    <li><a href="#">Exam Deadlines</a></li>
+                    <li><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></li>
+                    <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
                 </ul>
             </li>
-
+    
             <li class="dropdown">
                 <a href="#">All Exams</a>
                 <ul class="dropdown-content">
-                    <li><a href="#">SAT</a></li>
-                    <li><a href="#">GMAT</a></li>
-                    <li><a href="#">GRE</a></li>
-                    <li><a href="#">IELTS</a></li>
+                    <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
+                    <li><a href="/Palak/All_Exams/GMAT.html">GMAT</a></li>
+                    <li><a href="/Palak/All_Exams/GRE.html">GRE</a></li>
+                    <li><a href="/Palak/All_Exams/IELTS.html">IELTS</a></li>
+                    <li><a href="/Palak/All_Exams/PTE.html">PTE</a></li>
+                    <li><a href="/Palak/All_Exams/ACT.html">ACT</a></li>
+                    <li><a href="/Palak/All_Exams/TOEFL.html">TOEFL</a></li>
+                    <li><a href="/Palak/All_Exams/Duolingo.html">Duolingo</a></li>
                 </ul>
             </li>
-
+    
             <li class="dropdown">
                 <a href="#">Services</a>
                 <ul class="dropdown-content">
                     <li><a href="#">All Services</a></li>
-                    <li><a href="#">Visa Assistance</a></li>
+                    <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
                     <li><a href="#">Profile Evaluation</a></li>
                     <li><a href="#">Apply to University</a></li>
                 </ul>
             </li>
-
+    
             <li><a href="#" class="dropdown">Notice Board</a></li>
             <li><a href="#" class="dropdown">About Us</a></li>
             <li><a href="#" class="dropdown">Contact Us</a></li>
-
-            <li><a href="signup.html" class="contact-btn">Login</a></li>
+    
+            <li><a href="/Palak/Login Pages/signin.html" class="contact-btn">Login</a></li>
         </ul>
         <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
     </nav>
@@ -1227,7 +1258,7 @@
                     Experience our comprehensive assessment and get detailed performance analytics
                 </p>
                 <button class="learn-button">
-                    Start Mock Test <span class="arrow">→</span>
+                    <a href="/Palak/Test_Prep/examprep.html">Start Mock Test </a><span class="arrow">→</span>
                 </button>
             </div>
     
@@ -1421,7 +1452,7 @@
                     <li><img src="/Palak/Test_Prep/Test_Prep_Images/AITR.png" alt=""> <p><strong>Expert Faculty: </strong>Learn from experienced instructors who know the SAT inside and out.</p></li>
                     <li><img src="/Palak/Test_Prep/Test_Prep_Images/AITR.png" alt=""> <p><strong>Realistic Mock Tests: </strong>Practice with SAT-style tests to build confidence and familiarity.</p></li>
                 </ul>
-                <button class="learn-button">Learn More about SAT →</button>
+                <button class="learn-button"><a href="/Palak/All_Exams/sat.html"> Learn More about SAT →</a></button>
             </div>
         </div>
 
@@ -1447,7 +1478,7 @@
                         <p><strong>Realistic Mock Tests: </strong>Full-length ACT mock tests designed to mimic the real exam environment.</p>
                     </li>
                 </ul>
-                <button class="learn-button">Learn More about ACT →</button>
+                <button class="learn-button"><a href="/Palak/All_Exams/ACT.html">Learn More about ACT →</a></button>
             </div>
         </div>
 </div>
@@ -1476,7 +1507,7 @@
                         <p><strong>Realistic Mock Tests: </strong>Practice with SAT-style tests to build confidence and familiarity.</p>
                     </li>
                 </ul>
-                <button class="learn-button">Learn More about GRE →</button>
+                <button class="learn-button"><a href="/Palak/All_Exams/GRE.html">Learn More about GRE →</a></button>
             </div>
         </div>
 
@@ -1502,7 +1533,7 @@
                         <p><strong>Comprehensive Practice: </strong>Extensive practice materials to cover every topic and question type on the GMAT.</p>
                     </li>
                 </ul>
-                <button class="learn-button">Learn More about GMAT →</button>
+                <button class="learn-button"><a href="/Palak/All_Exams/GMAT.html">Learn More about GMAT →</a></button>
             </div>
         </div>
 </div>
@@ -1523,7 +1554,7 @@
                 <li><span>✔</span>Personalized assessments</li>
                 <li><span>✔</span>Online & offline batches</li>
             </ul>
-            <button class="learn-button">Learn More about IELTS</button>
+            <button class="learn-button"><a href="/Palak/All_Exams/IELTS.html">Learn More about IELTS</a></button>
         </div>
 
         <!-- Card 2 -->
@@ -1536,7 +1567,7 @@
                 <li><span>✔</span> Realistic assessments</li>
                 <li><span>✔</span> Tailored study plans</li>
             </ul>
-            <button class="learn-button">Learn More about TOEFL</button>
+            <button class="learn-button"><a href="/Palak/All_Exams/TOEFL.html"> Learn More about TOEFL</a></button>
         </div>
 
         <!-- Card 3 -->
@@ -1551,7 +1582,7 @@
 </li>
                 <li><span>✔</span> Expert guidance</li>
             </ul>
-            <button class="learn-button">Learn More about PTE</button>
+            <button class="learn-button"><a href="/Palak/All_Exams/PTE.html">Learn More about PTE</a></button>
         </div>
 
         <!-- Card 4 -->
@@ -1564,7 +1595,7 @@
                 <li><span>✔</span>Personalized assessments</li>
                 <li><span>✔</span>Online & offline batches</li>
             </ul>
-            <button class="learn-button">Learn More about IELTS</button>
+            <button class="learn-button"><a href="/Palak/All_Exams/IELTS.html">Learn More about IELTS</a></button>
         </div>
 
         <!-- Card 5 -->
@@ -1577,7 +1608,7 @@
                 <li><span>✔</span> Realistic assessments</li>
                 <li><span>✔</span> Tailored study plans</li>
             </ul>
-            <button class="learn-button">Learn More about TOEFL</button>
+            <button class="learn-button"><a href="/Palak/All_Exams/TOEFL.html">Learn More about TOEFL</a></button>
         </div>
     </div>
 
@@ -2076,9 +2107,9 @@
     <!-- Card 1 -->
     <div class="admission-wrapper">
         <div class="card-number">1</div>
-        <div class="admission-card" style="background:#FDF0F4;">
+        <div class="admission-card" style="background:#E4F7FA;">
             <div class="card-content">
-                <img src="/Palak/Test_Prep/Test_Prep_Images/34.png" alt="Icon" class="card-icon">
+                <img src="/Palak/Test_Prep/Test_Prep_Images/53.png" alt="Icon" class="card-icon">
                 <!-- <div class="columns"> -->
                 <div>
                     <h4>University & Course Selection</h4>
@@ -2095,7 +2126,7 @@
         <div class="card-number">2</div>
         <div class="admission-card" style="background:#FFF6E1;">
             <div class="card-content">
-            <img src="/Palak/Test_Prep/Test_Prep_Images/34.png" alt="Icon" class="card-icon">
+            <img src="/Palak/Test_Prep/Test_Prep_Images/54.png" alt="Icon" class="card-icon">
                 <!-- <div class="columns"> -->
                 <div>
                     <h4>Application Process</h4>
@@ -2109,9 +2140,9 @@
     <!-- Card 3 -->
     <div class="admission-wrapper">
         <div class="card-number">3</div>
-        <div class="admission-card" style="background:#F2FBFC;">
+        <div class="admission-card" style="background:#FDF0F4;">
             <div class="card-content">
-            <img src="/Palak/Test_Prep/Test_Prep_Images/34.png" alt="Icon" class="card-icon">
+            <img src="/Palak/Test_Prep/Test_Prep_Images/55.png" alt="Icon" class="card-icon">
             <!-- <div class="columns"> -->
             <div>
                 <h4>Education Loan & Scholarship</h4>
@@ -2124,9 +2155,9 @@
     <!-- Card 4 (Bullet Points) -->
     <div class="admission-wrapper">
         <div class="card-number">4</div>
-        <div class="admission-card" style="background:#E9F3FF;">
+        <div class="admission-card" style="background:#E4F7FA;">
             <div class="card-content">
-            <img src="/Palak/Test_Prep/Test_Prep_Images/34.png" alt="Icon" class="card-icon">
+            <img src="/Palak/Test_Prep/Test_Prep_Images/56.png" alt="Icon" class="card-icon">
             <!-- <div class="columns"> -->
             <div>
                 <h4>Visa Process & Approval</h4>
@@ -2139,9 +2170,9 @@
     <!-- Card 5 -->
     <div class="admission-wrapper">
         <div class="card-number">5</div>
-        <div class="admission-card" style="background:#EBDBFF;">
+        <div class="admission-card" style="background:#FFF6E1;">
             <div class="card-content">
-                <img src="/Palak/Test_Prep/Test_Prep_Images/34.png" alt="Icon" class="card-icon">
+                <img src="/Palak/Test_Prep/Test_Prep_Images/57.png" alt="Icon" class="card-icon">
                 <!-- <div class="columns"> -->
                 <div>
                     <h4>Pre-Departure & Arrival</h4>

@@ -1,0 +1,1314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans';
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 32px;
+  /* Increased height */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* subtle shadow */
+  z-index: 1000;
+}
+
+.logo {
+  height: 70px;
+}
+
+.navbar-right {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar-right li {
+  position: relative;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #424242;
+  line-height: 100%;
+  letter-spacing: 0;
+  font-style: bold;
+}
+
+.navbar-right a.active {
+  background: #59898E33;
+  color: #287781 !important;
+  border-radius: 6px;
+  padding: 12px 18px;
+}
+
+.dropdown.open .dropdown-content {
+  display: block !important;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  /* aligned right below the navbar */
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  min-width: 240px;
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 12px 18px;
+  color: #424242;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+  background-color: #59898E33;
+  /* 20% transparent highlight on hover */
+  color: #287781;
+  /* Optional: highlight text color on hover */
+}
+
+.contact-btn {
+  background-color: #287781;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.contact-btn:hover {
+  background-color: #1d5e65;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+  .navbar-right {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    padding: 16px 24px;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    color: #424242;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-top: 10px;
+    display: none;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 999;
+  }
+
+  .navbar-right.active {
+    display: flex;
+  }
+}
+
+
+/* hero  */
+
+.hero {
+  background-image: url('/Palak/images/universityFinder/hero/unifinderHero.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  height: 766px;
+}
+
+.hero-left-half {
+  width: 50%;
+  height: 766px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+ background: linear-gradient(89.07deg, rgba(0, 0, 0, 0.71) 36.56%, rgba(102, 102, 102, 0) 99.23%);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;     
+  justify-content: flex-start;
+  height: 100%;
+}
+
+
+.hero-box {
+  width: 578px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-route {
+  font-size: 12px;
+  font-weight: 700;
+  margin-top:30px;
+  margin-bottom: 10px;
+  color: #fafafa;
+}
+
+
+.hero-mini-heading {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FAFAFA;
+  background-color: #FFFFFF1A;
+  border-radius: 10px;
+  width: 277px;
+  border: 1px solid;
+  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, #666666 100%);
+  height:44px;
+  padding: 10px;
+  margin-top:10px
+}
+
+.hero-mini-heading img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+
+.hero-heading {
+  font-size: 55px;
+  font-weight: 700;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  color:#FAFAFA;
+}
+
+
+.hero-para {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #FAFAFA;
+  margin-bottom: 10%;
+  font-weight: 400;
+}
+
+.heroSearchBox {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.heroSearchBox .searchIcon {
+  width: 20px;
+  height: 20px;
+  color: #888;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.heroSearchBox input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+
+.heroSearchBox input::placeholder {
+  color: #aaa;
+  font-size: 14px;
+}
+
+
+.desktop-only {
+  display: block;
+}
+.hero-box-mobile-only {
+  display: none;
+}
+
+
+
+@media (max-width: 768px) {
+   .hero {
+    position: relative; 
+     background-image: url('/Palak/images/universityFinder/hero/unifinderHeroMobile.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+     min-height: 60vh; 
+  }
+
+  .hero-left-half {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 80%;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;  
+    padding: 20px 20px;
+    gap: 10px;  
+    box-sizing: border-box;
+    background: linear-gradient(89.07deg, rgba(0, 0, 0, 0.71) 36.56%, rgba(102, 102, 102, 0) 99.23%);
+  }
+
+  .hero-content {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-box {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: 374px;
+    width: 100%;
+  }
+
+  .hero-route{
+    font-size: 10px;
+    font-weight: 600;
+    padding-top: 5px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  .hero-mini-heading {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fafafa;
+    background-color: #ffffff1a;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: fit-content;
+    font-size: 10px;
+    font-weight: 500;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  .hero-mini-heading img {
+    height: 14px;
+    width: auto;
+  }
+
+  .hero-heading {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .hero-heading span {
+    font-weight: bold;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .hero-para {
+    width: 100%;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+  .hero-box-mobile-only {
+    display: block;
+  }
+
+    .heroSearchBox {
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+  }
+
+  .heroSearchBox .searchIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .heroSearchBox input {
+    font-size: 12px;
+  }
+
+  .heroSearchBox input::placeholder {
+    font-size: 12px;
+  }
+}
+
+
+
+/* sidebar university */
+
+.sideBarUniversityContainer {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .sideBarUniversityContainer {
+    flex-direction: column;
+  }
+  .sideBarFilter,
+  .universityBoxListContainer {
+    flex: 1 1 100%;
+  }
+}
+
+
+
+/* sidebar */
+
+.sideBarFilter {
+  flex: 0 0 30%;
+  background: #fff;
+  border-radius: 20px;
+  padding: 24px 21px;
+  box-shadow: 0px 4px 13.3px 0px #00000021;
+  height: 488px;
+}
+
+.filterHeader {
+  font-size: 24px;
+  font-weight: 600;
+  color: #424242;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label{
+  color: #424242;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.custom-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-trigger {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 4px;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+}
+
+.dropdown-option {
+  padding: 10px;
+  transition: background 0.2s;
+}
+.dropdown-option:hover {
+  background:#59898E33;
+  color: #287781;
+}
+
+
+.filter-buttons {
+  display: grid;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.filterApplyBtn,
+.filterClearFilterBtn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  box-shadow: 0px 4px 15px 0px #292D320D;
+  height: 35px;
+}
+
+.filterApplyBtn {
+  background:#287781;
+  color: #fff;
+}
+.filterClearFilterBtn {
+  background: #fff;
+  border: 0.1px solid #287781;
+}
+
+
+
+/* university list */
+.universityBoxListContainer {
+  flex: 0 0 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+
+.universityHeaderSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap; 
+}
+
+.farLeftHeader {
+  font-size: 34px;
+  font-weight: 700;
+  color: #424242;
+  margin: 0;
+}
+
+.farLeftSubHeader {
+  font-size: 24px;
+  font-weight: 400;
+  color: #424242;
+  margin: 10px 0 0;
+}
+
+.farRightTabBar {
+  display: flex;
+  gap: 10px;
+  border-radius: 15px;
+  padding: 8px 12px;
+  box-shadow: 0px 4px 4px 0px #0000001A;
+}
+
+.tabBtn {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.tabBtn.active {
+  background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
+  color: #fff;
+}
+
+
+/* content */
+.universityTabContent > div {
+  display: none;
+}
+.universityTabContent > div.active {
+  display: block;
+}
+
+
+/* box view*/
+.universityBoxTab {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+.universityBoxCardContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.universityBoxCard {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.universityBoxCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 4px 16.7px 0px #59898E;
+}
+
+
+.topFarLeftInfobox {
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.topFarLeftInfobox .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+}
+
+.topLeftCardRanking {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background:#195057;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 13px;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  white-space: nowrap;
+}
+
+.boxCardHeader {
+  font-size: 24px;
+  font-weight: 700;
+  color: #424242;
+  margin: 15px;
+}
+
+.boxCardSubHeader {
+  font-size: 12px;
+  font-weight: 400;
+  color: #424242;
+  margin: 0 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.boxCardPopular {
+  font-size: 16px;
+  font-weight: 700;
+  color: #424242;
+  margin: 0 15px 8px;
+  gap: 5px;
+}
+
+.boxCardPopular span{
+  color: #287781;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.boxCardFounded {
+  font-size: 16px;
+  font-weight: 700;
+  color: #424242;
+  margin: 0 15px 15px;
+  gap: 5px;
+}
+
+.boxCardFounded span {
+   color: #287781;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.boxCardDetailContainer {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  font-size: 14px;
+  gap:20px
+}
+
+.boxCardStudentBox,
+.boxCardTuitionBox{
+  background-color:#F6F6F6;
+  height: 85px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 182px;
+}
+
+.boxCardStudentBoxHeader,
+.boxCardTuitionBoxHeader{
+  font-weight: 600;
+  font-size: 12px;
+  color: #424242;
+}
+
+.boxCardStudentBoxValue,
+.boxCardTuitionBoxValue{
+  font-weight: 700;
+  font-size: 24px;
+  color: #287781;
+}
+
+
+@media (max-width: 768px) {
+  .universityBoxCardContainer {
+    grid-template-columns: 1fr; 
+  }
+}
+
+
+
+/* list view */
+.universityListTab ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.universityListTab li {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.universityListTable {
+  width: 100%;
+  overflow-x: auto; 
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.universityListTable table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.universityListTable th, 
+.universityListTable td {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.universityListTable th {
+  background: #287781;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  height: 65px;
+}
+
+.universityListTable tr{
+  height: 65px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.universityListTable tr:hover {
+  background: #59898E33;
+}
+
+@media (max-width: 768px) {
+  .universityListTable {
+  width: 100%;
+  max-height: 1000px; 
+  overflow-x: auto;  
+  overflow-y: auto; 
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.universityListTable table {
+  width: 100%;
+  min-width: 800px; 
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.universityListTable th, 
+.universityListTable td {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e0e0;
+  white-space: nowrap;
+}
+
+.universityListTable th {
+  height: 65px;
+  background: #287781;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  position: sticky;
+  top: 0; 
+  z-index: 2;
+}
+
+.universityListTable tr:hover {
+  background: #59898E33;
+}
+
+}
+
+
+
+
+@media (max-width: 768px) {
+  .universityHeaderSection {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .farLeftHeader {
+  font-size: 24px;
+  text-align: center;
+}
+
+.farLeftSubHeader {
+  font-size: 16px;
+  text-align: center;
+}
+
+  .farRightTabBar {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+}
+
+
+
+
+
+
+/* universityFactor-section */
+
+.universityFactor-process {
+  padding: 4rem 2rem;
+  background: #41091F;
+}
+
+.universityFactor-process-header {
+  margin-bottom: 5%;
+}
+
+.universityFactor-service-heading {
+  font-size: 34px;
+  font-weight: 700;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 30px;
+   color:#fff;
+   text-align: center;
+}
+
+.universityFactor-service-desc {
+    font-size: 24px;
+  font-weight: 400;
+  color:#fff;
+  text-align:center;
+}
+
+
+.universityFactor-process-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-content: space-between;
+}
+
+ .universityFactor-card {
+  background-color: #41091F;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 3rem 2rem;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  animation: flashAnim 2.5s infinite linear;
+  color: #fff;
+}
+
+.universityFactor-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.universityFactor-card:hover::before {
+  animation: fullFlash 0.7s ease forwards;
+}
+
+@keyframes fullFlash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.universityFactor-service-card-header {
+    margin-top: 10%;
+opacity: 1;
+  font-size: 24px;
+  font-weight: bold;
+  font-weight: 700;
+  margin-bottom: 10%;
+  color: #fff;
+}
+
+.universityFactor-service-card-desc {
+font-size: 0.95rem;
+  color: #fff;
+opacity: 1;
+margin-top: 20px;
+font-size: 16px;
+  font-weight: 400;
+}
+
+
+@media (max-width: 768px) {
+  .universityFactor-process-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .universityFactor-card {
+   height: 250px;
+}
+
+  .universityFactor-service-card-header {
+    margin-top: 5%;
+  margin-bottom: 5%;
+}
+} 
+
+
+
+/* footer         */
+
+
+.footer {
+    background-color: #092A2E;
+    padding: 60px 2% 30px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1320px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-about {
+    flex: 2.5;
+    max-width: none;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+
+.footer-about p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-col h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 22px;
+    color: #ffffff;
+}
+
+.footer-col p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-col.contact-col {
+    min-width: 300px;
+    max-width: 350px;
+}
+
+.footer-col:not(.footer-about) {
+    margin-left: -5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Divider line */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ffffff44;
+    margin: 40px auto 20px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Bottom copyright text */
+.footer-bottom {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+.footer-right-columns {
+    display: flex;
+    gap: 40px;
+    margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-right-columns {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .footer-col {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.footer-col ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 100%;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #4ED0E1;
+}
+
+ 
+
+/* Chatbot toggle button */
+.chatbot-toggler {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  background: #287781;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 34px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-toggler span:last-child {
+  display: none;
+}
+
+/* Chatbot container */
+.chatbot {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  width: 450px;
+  max-height: 80vh;
+  height: 500px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+  z-index: 9998;
+}
+
+.show-chatbot .chatbot {
+  transform: scale(1);
+}
+
+header {
+  background: #287781;
+  color: #fff;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+header .close-btn {
+  cursor: pointer;
+}
+
+/* chatbox messages */
+.chatbox {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  list-style: none;
+  margin: 0;
+}
+
+.chat {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.chat.incoming span {
+  margin-right: 8px;
+  color: #195057;
+}
+
+.chat.outgoing {
+  justify-content: flex-end;
+}
+
+.chat p {
+  background: #f1f1f1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  max-width: 75%;
+}
+
+.chat.outgoing p {
+  background: #195057;
+  color: white;
+}
+
+/* Input area */
+.chat-input {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  padding: 8px;
+  background: #fff;
+}
+
+.chat-input textarea {
+  flex: 1;
+  resize: none;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.chat-input span {
+  color: #195057;
+  font-size: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Scrollbar style */
+.chatbox::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .chatbot {
+    right: 10px;
+    bottom: 70px;
+    width: 300px;
+    max-height: 75vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatbot-toggler {
+    right: 15px;
+    bottom: 15px;
+    padding: 10px;
+  }
+
+  .chatbot {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+
+  header {
+    font-size: 16px;
+  }
+
+  .chatbox {
+    padding: 10px;
+  }
+
+  .chat p {
+    font-size: 14px;
+  }
+}
+

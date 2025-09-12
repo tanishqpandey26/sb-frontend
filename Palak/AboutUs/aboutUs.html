@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Design</title>
+    <link rel="stylesheet" href="/Palak/AboutUs/aboutUs.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+
+</head> 
+<body>
+
+
+  
+        <!--NavBar Section-->
+        <nav class="navbar">
+          <div class="navbar-left">
+            <a href="/Palak/Home/home.html">
+            <img src="/Palak/images/Home/study-befikar1.png" alt="Logo" class="logo">
+            </a>
+          </div>
+
+          <ul class="navbar-right" id="mobileNav">
+        
+            <li><a href="/Palak/AboutUs/aboutUs.html" class="dropdown">About</a></li>
+
+            <li class="dropdown">
+              <a href="/Palak/USA/usa.html">Countries</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/USA/usa.html">USA</a></li>
+                <li><a href="#">UK</a></li>
+                <li><a href="#">Canada</a></li>
+                <li><a href="#">Germany</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Loan</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+                <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
+                <li><a href="#">Application Deadline</a></li>
+                <li><a href="#">University Finder</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                <li><a href="/Palak/exam_prep/examprep.html">Prepare for Exam</a></li>
+                <li><a href="#">Take a Mock Test</a></li>
+                <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">All Exams</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
+                <li><a href="#">GMAT</a></li>
+                <li><a href="#">GRE</a></li>
+                <li><a href="#">IELTS</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Services</a>
+              <ul class="dropdown-content">
+                <li><a href="#">All Services</a></li>
+                <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
+                <li><a href="#">Profile Evaluation</a></li>
+                <li><a href="#">Apply to University</a></li>
+              </ul>
+            </li>
+        
+            <li><a href="/Palak/NoticeBoard/noticeBoard.html" class="dropdown">Notice Board</a></li>
+            
+        
+            <li><a href="signup.html" class="contact-btn">Contact Us</a></li>
+          </ul>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </nav>
+        
+        <br/><br/><br/><br/>
+
+        <script>
+          const btn = document.getElementById('mobileMenuBtn');
+          const nav = document.getElementById('mobileNav');
+
+          btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+          });
+        </script>
+        
+        <script>
+          const dropdowns = document.querySelectorAll('.dropdown');
+
+          dropdowns.forEach(dropdown => {
+            let wasClicked = false;
+            const link = dropdown.querySelector('a');
+
+            // Toggle on click
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+
+              const isOpen = dropdown.classList.contains('open');
+
+              // Close all dropdowns
+              dropdowns.forEach(d => {
+                d.classList.remove('open');
+                d.dataset.clicked = "false";
+              });
+
+              if (!isOpen) {
+                dropdown.classList.add('open');
+                dropdown.dataset.clicked = "true";
+              }
+            });
+
+            // Hover to open (desktop only)
+            dropdown.addEventListener('mouseenter', () => {
+              if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                dropdown.classList.add('open');
+              }
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+              if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                dropdown.classList.remove('open');
+              }
+            });
+          });
+
+          // Close on outside click
+          document.addEventListener('click', (e) => {
+            dropdowns.forEach(dropdown => {
+              if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+                dropdown.dataset.clicked = "false";
+              }
+            });
+          });
+        </script>
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+            const links = document.querySelectorAll(".navbar-right a");
+
+            links.forEach(link => {
+              const linkPath = link.getAttribute("href").split("/").pop();
+
+              if (linkPath === currentPath) {
+                // Highlight the clicked link
+                link.classList.add("active");
+
+                // Also highlight parent if inside dropdown
+                const parentDropdown = link.closest(".dropdown");
+                if (parentDropdown) {
+                  const parentLink = parentDropdown.querySelector(":scope > a");
+                  if (parentLink) parentLink.classList.add("active");
+                }
+              }
+            });
+          });
+        </script>
+
+
+
+
+<!--hero section-->
+
+
+<section class="heroAboutUs-process">
+  <div class="heroAboutUs-process-header">
+    <div class="heroAboutUs-route">Home &gt; About</div>
+    <h2 class="heroAboutUs-service-heading">About Study Befikar</h2>
+    <p class="heroAboutUs-service-desc">
+      Study Befikar is a modern educational consulting firm based in Mumbai. Although newly established, our team carries 15-25 years of collective experience in the education sector.
+    </p>
+    <p class="heroAboutUs-second-desc">
+        We offer a comprehensive suite of services, from profile evaluation and counseling to visa assistance, financial aid, and secure student housing abroad.
+    </p>
+  </div>
+
+  <div class="heroAboutUs-process-cards">
+
+    <div class="heroAboutUs-card">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><g fill="none" stroke="#FFFFFF" stroke-width="1.5"><path d="M12 7.5a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0Z"/><path stroke-linecap="round" d="M13.5 11a3.5 3.5 0 1 0 0-7"/><path stroke-linecap="round" stroke-linejoin="round" d="M13.143 20H3.857C2.831 20 2 19.233 2 18.286C2 15.919 4.079 14 6.643 14h3.714a4.9 4.9 0 0 1 2.786.857"/><path stroke-linecap="round" d="M19 14v6m3-3h-6"/></g></svg>
+    </div>
+      <h3 class="heroAboutUs-service-card-header">Expert Team</h3>
+      <p class="heroAboutUs-service-card-desc">Our team brings together 15–25 years of combined expertise, guiding students with knowledge, care, and proven strategies.</p>
+    </div>
+
+    <div class="heroAboutUs-card">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><g fill="none" stroke="#FFFFFF" stroke-width="1.5"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10s10-4.477 10-10Z"/><path stroke-linejoin="round" d="M20 5.699c-.935.067-2.132.43-2.962 1.504c-1.5 1.94-2.999 2.103-3.999 1.456c-1.5-.97-.239-2.543-1.999-3.397C9.893 4.705 9.733 3.19 10.372 2M2 11c.763.662 1.83 1.268 3.089 1.268c2.6 0 3.12.497 3.12 2.484s0 1.987.52 3.477c.338.97.456 1.938-.218 2.771M22 13.452c-.887-.51-2-.721-3.127.088c-2.155 1.55-3.642.266-4.311 1.549C13.577 16.977 17.096 17.57 14 22"/></g></svg>
+    </div>
+      <h3 class="heroAboutUs-service-card-header">Global Reach</h3>
+      <p class="heroAboutUs-service-card-desc">We connect students with leading universities and programs across the globe, making study abroad dreams a reality.</p>
+    </div>
+
+    <div class="heroAboutUs-card">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><g fill="none" stroke="#FFFFFF" stroke-width="1.5"><path d="M17 10.805c0-.346 0-.519.052-.673c.151-.448.55-.621.95-.803c.448-.205.672-.307.895-.325c.252-.02.505.034.721.155c.286.16.486.466.69.714c.943 1.146 1.415 1.719 1.587 2.35c.14.51.14 1.044 0 1.553c-.251.922-1.046 1.694-1.635 2.41c-.301.365-.452.548-.642.655a1.27 1.27 0 0 1-.721.155c-.223-.018-.447-.12-.896-.325c-.4-.182-.798-.355-.949-.803c-.052-.154-.052-.327-.052-.673zm-10 0c0-.436-.012-.827-.364-1.133c-.128-.111-.298-.188-.637-.343c-.449-.204-.673-.307-.896-.325c-.667-.054-1.026.402-1.41.87c-.944 1.145-1.416 1.718-1.589 2.35a2.94 2.94 0 0 0 0 1.553c.252.921 1.048 1.694 1.636 2.409c.371.45.726.861 1.363.81c.223-.018.447-.12.896-.325c.34-.154.509-.232.637-.343c.352-.306.364-.697.364-1.132z"/><path stroke-linecap="square" stroke-linejoin="round" d="M5 9c0-3.314 3.134-6 7-6s7 2.686 7 6"/><path stroke-linecap="round" stroke-linejoin="round" d="M19 17v.8c0 1.767-1.79 3.2-4 3.2h-2"/></g></svg>
+      </div>
+      <h3 class="heroAboutUs-service-card-header">Complete Support</h3>
+      <p class="heroAboutUs-service-card-desc">From career counseling to admissions, applications, and visa guidance—we provide step-by-step assistance at every stage.</p>
+    </div>
+
+    <div class="heroAboutUs-card">
+      <div class="card-number">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><path fill="#FFFFFF" d="m21.1 12.5l1.4 1.41l-6.53 6.59L12.5 17l1.4-1.41l2.07 2.08zM11 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 7c.68 0 1.5.09 2.41.26l-1.67 1.67l-.74-.03c-2.97 0-6.1 1.46-6.1 2.1v1.1h6.2L13 20H3v-3c0-2.66 5.33-4 8-4"/></svg>
+      </div>
+      <h3 class="heroAboutUs-service-card-header">Proven Success</h3>
+      <p class="heroAboutUs-service-card-desc">Thousands of students nationwide have achieved their education goals with our reliable and successful guidance.</p>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+<!-- missionVisionSection -->
+
+<section class="missionVisionSection">
+
+  <h2 class="missionVisionSectionHeader">Our Mission & Vision</h2>
+
+  <div class="missionVisionContainer">
+    
+    <!-- card1 -->
+    <div class="missionVisionCard">
+      <div class="missionVisionHeader">
+        <div class="missionVisionIcon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24"><g fill="none" stroke="#59898E" stroke-linecap="round" stroke-width="1.5"><path d="M5.6 22A1.6 1.6 0 0 0 4 20.4M8.8 22A4.8 4.8 0 0 0 4 17.2m8 4.8a8 8 0 0 0-8-8"/><path d="M5 11V9.5c0-3.287 0-4.931.908-6.038a4 4 0 0 1 .554-.554C7.57 2 9.212 2 12.5 2c3.287 0 4.931 0 6.038.908a4 4 0 0 1 .554.554C20 4.57 20 6.212 20 9.5V17c0 .93 0 1.394-.077 1.78a4 4 0 0 1-3.143 3.143C16.394 22 15.93 22 15 22"/></g></svg>
+        </div>
+        <h3 class="missionVisionCardHeader">Our Mission</h3>
+      </div>
+      <p class="missionVisionDesc">
+        To democratize access to quality international education by providing personalized, comprehensive guidance to students from all backgrounds. We strive to bridge the gap between dreams and reality, making study abroad opportunities accessible to every deserving student.
+      </p>
+    </div>
+
+
+    <!-- card2 -->
+    <div class="missionVisionCard">
+      <div class="missionVisionHeader">
+        <div class="missionVisionIcon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24"><path fill="#A12456" d="M12 9a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5c-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0a9.821 9.821 0 0 0-17.64 0"/></svg>
+        </div>
+        <h3 class="missionVisionCardHeader">Our Vision</h3>
+      </div>
+      <p class="missionVisionDesc">
+        To become India's most trusted and innovative educational consulting firm, recognized for our commitment to student success and our ability to transform educational aspirations into life-changing opportunities across the globe.
+      </p>
+    </div>
+
+
+  </div>
+</section>
+  
+
+
+<!-- ceoSection -->
+
+<section class="ceoSection">
+
+  <h2 class="ceoSectionHeader">Meet Our Founder and CEO</h2>
+
+  <div class="ceoContainer">
+
+    <!-- left col -->
+    <div class="ceoLeftCol">
+      <h3 class="ceoName">Harshit Kumar</h3>
+      <p class="ceoDesc">
+        His journey commenced as a seeker of knowledge, just like many of us. Hailing from a business family in Rajasthan, he too dreamt of exploring the world through education. However, nestled in a Tier 2 City, he encountered the formidable challenge that countless students face - the quest for the finest study abroad consultants in India.
+        <br/>
+        <br/>
+        Jaipur, his beloved hometown, seemed like an uncharted territory, devoid of the guidance he needed. In the labyrinth of 2016, finding a mentor for his study abroad voyage was a formidable task, and the expertise he sought remained elusive. Fueled by this struggle, Harshit embarked on a mission to forge a solution.
+      </p>
+    </div>
+
+    <!-- right col -->
+    <div class="ceoRightCol">
+      <img src="/Palak/images/aboutUs/team/ceo.png" alt="CEO John Doe" class="ceoImg" />
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- expertTeamSection -->
+
+<section class="expertTeamSection">
+
+  <h2 class="expertTeamHeader">Our Expert Team</h2>
+  <p class="expertTeamSubHeader">Meet the dedicated professionals who make your educational dreams a reality.</p>
+
+  <div class="expertTeamContainer">
+
+    <!-- card 1 -->
+    <div class="expertTeamCard">
+      <img src="/Palak/images/aboutUs/team/neelu.png" alt="Expert 1" class="expertImg" />
+      <h3 class="expertName">Neelu Tatkare</h3>
+      <p class="expertPosition">Education Consultant Head</p>
+      <p class="expertDesc">
+        A leader in study-abroad consulting with over 20 years of experience, Neelu has worked with top-tier organizations and guided students to prestigious universities in the USA, Canada, Ireland, and Australia.
+      </p>
+      <div class="expertSocialContainer">
+        <a href="mailto:jane@example.com" class="expertMailBtn" title="mail">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26px" viewBox="0 0 24 24"><g fill="none" stroke="#917B1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect width="20" height="16" x="2" y="4" rx="2"/></g></svg>
+        </a>
+        <a href="tel:+1234567890" class="expertPhnNoBtn" title="phone">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26px" viewBox="0 0 24 24"><path fill="none" stroke="#A12456" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/janesmith" target="_blank" class="expertLinkedin" title="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26px" viewBox="0 0 24 24"><path fill="#287781" fill-rule="evenodd" d="M5 1.25a2.75 2.75 0 1 0 0 5.5a2.75 2.75 0 0 0 0-5.5M3.75 4a1.25 1.25 0 1 1 2.5 0a1.25 1.25 0 0 1-2.5 0m-1.5 4A.75.75 0 0 1 3 7.25h4a.75.75 0 0 1 .75.75v13a.75.75 0 0 1-.75.75H3a.75.75 0 0 1-.75-.75zm1.5.75v11.5h2.5V8.75zM9.25 8a.75.75 0 0 1 .75-.75h4a.75.75 0 0 1 .75.75v.434l.435-.187a7.8 7.8 0 0 1 2.358-.595C20.318 7.4 22.75 9.58 22.75 12.38V21a.75.75 0 0 1-.75.75h-4a.75.75 0 0 1-.75-.75v-7a1.25 1.25 0 0 0-2.5 0v7a.75.75 0 0 1-.75.75h-4a.75.75 0 0 1-.75-.75zm1.5.75v11.5h2.5V14a2.75 2.75 0 1 1 5.5 0v6.25h2.5v-7.87c0-1.904-1.661-3.408-3.57-3.234a6.3 6.3 0 0 0-1.904.48l-1.48.635a.75.75 0 0 1-1.046-.69V8.75z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+
+
+    <!--  card 2 -->
+    <div class="expertTeamCard">
+      <img src="/Palak/images/aboutUs/team/ved.png" alt="Expert 2" class="expertImg" />
+      <h3 class="expertName">Neelu Tatkare</h3>
+      <p class="expertPosition">Education Consultant Head</p>
+      <p class="expertDesc">
+        A leader in study-abroad consulting with over 20 years of experience, Neelu has worked with top-tier organizations and guided students to prestigious universities in the USA, Canada, Ireland, and Australia.
+      </p>
+      <div class="expertSocialContainer">
+        <a href="mailto:jane@example.com" class="expertMailBtn" title="mail">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26px" viewBox="0 0 24 24"><g fill="none" stroke="#917B1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect width="20" height="16" x="2" y="4" rx="2"/></g></svg>
+        </a>
+        <a href="tel:+1234567890" class="expertPhnNoBtn" title="phone">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26px" viewBox="0 0 24 24"><path fill="none" stroke="#A12456" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/janesmith" target="_blank" class="expertLinkedin" title="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26px" viewBox="0 0 24 24"><path fill="#287781" fill-rule="evenodd" d="M5 1.25a2.75 2.75 0 1 0 0 5.5a2.75 2.75 0 0 0 0-5.5M3.75 4a1.25 1.25 0 1 1 2.5 0a1.25 1.25 0 0 1-2.5 0m-1.5 4A.75.75 0 0 1 3 7.25h4a.75.75 0 0 1 .75.75v13a.75.75 0 0 1-.75.75H3a.75.75 0 0 1-.75-.75zm1.5.75v11.5h2.5V8.75zM9.25 8a.75.75 0 0 1 .75-.75h4a.75.75 0 0 1 .75.75v.434l.435-.187a7.8 7.8 0 0 1 2.358-.595C20.318 7.4 22.75 9.58 22.75 12.38V21a.75.75 0 0 1-.75.75h-4a.75.75 0 0 1-.75-.75v-7a1.25 1.25 0 0 0-2.5 0v7a.75.75 0 0 1-.75.75h-4a.75.75 0 0 1-.75-.75zm1.5.75v11.5h2.5V14a2.75 2.75 0 1 1 5.5 0v6.25h2.5v-7.87c0-1.904-1.661-3.408-3.57-3.234a6.3 6.3 0 0 0-1.904.48l-1.48.635a.75.75 0 0 1-1.046-.69V8.75z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+<!-- whyChooseUs section -->
+<section class="whyChooseUsSection">
+
+  <h2 class="chooseUsHeader">Why Choose Study Befikar?</h2>
+  <p class="chooseUsSubHeader">
+    Discover what sets us apart in the competitive world of educational consulting.
+  </p>
+
+  <div class="chooseUsContainer">
+
+    <!-- card 1 -->
+    <div class="chooseUsCard">
+      <img src="/Palak/images/aboutUs/whychoseUs/building.png" alt="Expert Guidance" class="chooseUsImg" />
+      <h3 class="chooseUsCardHeader">Personalized Approach</h3>
+      <p class="chooseUsCardDesc">
+        Every student is unique, and so is our approach. We provide tailored solutions based on individual academic profiles, and personal preferences.
+      </p>
+    </div>
+
+    <!-- card 2 -->
+    <div class="chooseUsCard">
+      <img src="/Palak/images/aboutUs/whychoseUs/transparent.png" alt="Global Network" class="chooseUsImg" />
+      <h3 class="chooseUsCardHeader">Transparent Process</h3>
+      <p class="chooseUsCardDesc">
+        No hidden fees, no false promises. We maintain complete transparency in our processes, timelines, and costs from day one.
+      </p>
+    </div>
+
+    <!-- card 3 -->
+    <div class="chooseUsCard">
+      <img src="/Palak/images/aboutUs/whychoseUs/support.png" alt="Scholarships" class="chooseUsImg" />
+      <h3 class="chooseUsCardHeader">24/7 Support</h3>
+      <p class="chooseUsCardDesc">
+        Our dedicated support team is available round the clock to address your queries and concerns throughout your study abroad journey.
+      </p>
+    </div>
+
+    <!-- card 4 -->
+    <div class="chooseUsCard">
+      <img src="/Palak/images/aboutUs/whychoseUs/track.png" alt="24/7 Support" class="chooseUsImg" />
+      <h3 class="chooseUsCardHeader">Proven Track Record</h3>
+      <p class="chooseUsCardDesc">
+        With years of collective experience and hundreds of successful placements, our track record speaks for itself.
+      </p>
+    </div>
+
+     <!-- card 5 -->
+    <div class="chooseUsCard">
+      <img src="/Palak/images/aboutUs/whychoseUs/end.png" alt="24/7 Support" class="chooseUsImg" />
+      <h3 class="chooseUsCardHeader">End-to-End Service</h3>
+      <p class="chooseUsCardDesc">
+        From initial counseling to post-arrival support, we provide comprehensive services covering every aspect of your study abroad journey.
+      </p>
+    </div>
+
+     <!-- card 6 -->
+    <div class="chooseUsCard">
+      <img src="/Palak/images/aboutUs/whychoseUs/success.png" alt="24/7 Support" class="chooseUsImg" />
+      <h3 class="chooseUsCardHeader">High Success Rate</h3>
+      <p class="chooseUsCardDesc">
+        Our strategic approach and expert guidance result in consistently high admission and visa approval rates for our students.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- services section -->
+<section class="servicesSection">
+
+  <h2 class="serviceHeader">Our Comprehensive Services</h2>
+  <p class="serviceSubHeader">
+    From initial consultation to post-arrival support, we cover every aspect of your study abroad journey
+  </p>
+
+  <div class="serviceCardContainer">
+
+    <!-- card 1 -->
+    <div class="serviceCard" style="background-color: #E4F7FA;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><g fill="none" stroke="#287781" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0-14 0m18 11l-6-6"/><path d="m7 10l2 2l4-4"/></g></svg>
+      <h3 class="serviceCardHeader">Career Counseling</h3>
+      <p class="serviceCardDesc">
+        Personalized career guidance based on your interests, skills, and market trends.
+      </p>
+    </div>
+
+    <!-- card 2 -->
+    <div class="serviceCard" style="background-color:#FDF0F4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><path fill="none" stroke="#A12456" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 22h19.5M3 13v9m18-9v9M7.5 8v14m9-14v14M2 13h5m15 0h-5M6.5 8h11M12 8V4.982m0 0V2.97c0-.474 0-.711.146-.858c.46-.463 2.354.631 3.074 1.075c.608.374.78 1.122.78 1.795zM12 22v-2m-1.5-8v.5m3-.5v.5m-3 3.5v.5m3-.5v.5"/></svg>
+      <h3 class="serviceCardHeader">University Selection</h3>
+      <p class="serviceCardDesc">
+        Expert assistance in choosing the right universities and programs for your goals.
+      </p>
+    </div>
+
+    <!-- card 3 -->
+    <div class="serviceCard" style="background-color: #FFF6E1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><g fill="none" stroke="#917B1A" stroke-linejoin="round" stroke-width="1.5"><path d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12Z"/><path stroke-linecap="round" d="M11 7.5h6m-9 0a.5.5 0 1 1-1 0a.5.5 0 0 1 1 0m3 4.5h6m-9 0a.5.5 0 1 1-1 0a.5.5 0 0 1 1 0m3 4.5h6m-9 0a.5.5 0 1 1-1 0a.5.5 0 0 1 1 0"/></g></svg>
+      <h3 class="serviceCardHeader">Application Support</h3>
+      <p class="serviceCardDesc">
+        Complete assistance with application forms, essays, and documentation.
+      </p>
+    </div>
+
+    <!-- card 4 -->
+    <div class="serviceCard" style="background-color: #E0EFFF">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 20 20"><path fill="#0055B2" d="M14.504 4c-1.418-.01-2.638.96-3.205 1.487a2.1 2.1 0 0 1-.735.465l-.415.138l-2.641-1.81A1.6 1.6 0 0 0 6.605 4C5.28 4 4.532 5.525 5.345 6.573l.688.889l-1.274.425l-.593-1.224C3.638 5.573 2 5.95 2 7.16v2.986A1.75 1.75 0 0 0 4.321 11.8l3.018-1.043l-.293 1.465c-.311 1.555 1.687 2.466 2.657 1.212l3.098-4.006l4.179-1.351c.838-.272 1.332-1.28.737-2.091c-.59-.807-1.692-1.975-3.213-1.986M7.039 7.127L6.135 5.96a.596.596 0 0 1 .807-.857L8.96 6.487zm4.941-.908c.547-.51 1.515-1.226 2.516-1.219c1.008.007 1.85.806 2.414 1.576a.3.3 0 0 1 .043.298a.44.44 0 0 1-.281.251l-4.326 1.4a.5.5 0 0 0-.242.17l-3.192 4.127c-.323.418-.99.115-.886-.404l.293-1.464a1 1 0 0 0-1.307-1.142l-3.017 1.043a.75.75 0 0 1-.995-.71V7.16c0-.05.015-.076.028-.09a.15.15 0 0 1 .08-.046a.15.15 0 0 1 .094.006c.017.007.042.023.064.07l.784 1.618a.5.5 0 0 0 .608.256L10.88 6.9c.433-.144.799-.4 1.1-.68M2.5 17a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1z"/></svg>
+      <h3 class="serviceCardHeader">Visa Assistance</h3>
+      <p class="serviceCardDesc">
+        Expert guidance through the complex visa application process.
+      </p>
+    </div>
+
+    <!-- card 5 -->
+    <div class="serviceCard" style="background-color: #EEE0FF">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><path fill="none" stroke="#8A38F5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 22h19.5M3 13v9m18-9v9M7.5 8v14m9-14v14M2 13h5m15 0h-5M6.5 8h11M12 8V4.982m0 0V2.97c0-.474 0-.711.146-.858c.46-.463 2.354.631 3.074 1.075c.608.374.78 1.122.78 1.795zM12 22v-2m-1.5-8v.5m3-.5v.5m-3 3.5v.5m3-.5v.5"/></svg>
+      <h3 class="serviceCardHeader">Scholarship Guidance</h3>
+      <p class="serviceCardDesc">
+        Help you find and apply for scholarships and financial aid opportunities.
+      </p>
+    </div>
+
+    <!-- card 6 -->
+    <div class="serviceCard" style="background-color: #DDFFE2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 20 20"><path fill="#0A3812" d="M14.504 4c-1.418-.01-2.638.96-3.205 1.487a2.1 2.1 0 0 1-.735.465l-.415.138l-2.641-1.81A1.6 1.6 0 0 0 6.605 4C5.28 4 4.532 5.525 5.345 6.573l.688.889l-1.274.425l-.593-1.224C3.638 5.573 2 5.95 2 7.16v2.986A1.75 1.75 0 0 0 4.321 11.8l3.018-1.043l-.293 1.465c-.311 1.555 1.687 2.466 2.657 1.212l3.098-4.006l4.179-1.351c.838-.272 1.332-1.28.737-2.091c-.59-.807-1.692-1.975-3.213-1.986M7.039 7.127L6.135 5.96a.596.596 0 0 1 .807-.857L8.96 6.487zm4.941-.908c.547-.51 1.515-1.226 2.516-1.219c1.008.007 1.85.806 2.414 1.576a.3.3 0 0 1 .043.298a.44.44 0 0 1-.281.251l-4.326 1.4a.5.5 0 0 0-.242.17l-3.192 4.127c-.323.418-.99.115-.886-.404l.293-1.464a1 1 0 0 0-1.307-1.142l-3.017 1.043a.75.75 0 0 1-.995-.71V7.16c0-.05.015-.076.028-.09a.15.15 0 0 1 .08-.046a.15.15 0 0 1 .094.006c.017.007.042.023.064.07l.784 1.618a.5.5 0 0 0 .608.256L10.88 6.9c.433-.144.799-.4 1.1-.68M2.5 17a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1z"/></svg>
+      <h3 class="serviceCardHeader">Pre-Departure Support</h3>
+      <p class="serviceCardDesc">
+        Comprehensive preparation for your journey including accommodation and travel.
+      </p>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+<!-- global university section -->
+<div class="globalUnivSection">
+  <h3 class="globalUnivHeading">Global University Partnerships</h3>
+  <p class="globalUnivText">
+    We have established strong partnerships with leading universities across the globe.
+  </p>
+
+  <div class="globalUnivGrid" id="globalUnivGrid">
+    
+    <div class="globalUnivCard">
+      <div class="countryImgWrapper">
+        <img src="/Palak/images/Home/country/usa.png" class="countryImg" alt="USA Flag" />
+      </div>
+      <img src="/Palak/images/Home/country/usa1.png" class="countrySpecificImg" alt="USA" />
+      <div class="countryNameLabel">United States of America</div>
+      <div class="hoverContent">
+        <h4>United States of America</h4>
+        <p>Pursue higher education in USA and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.</p>
+        <a href="/Palak/USA/usa.html" class="visitCountry">
+          Explore <img src="/Palak/Images/Home/country/right-arrow.png" alt="Arrow" />
+        </a>
+      </div>
+    </div>
+
+    <div class="globalUnivCard">
+      <div class="countryImgWrapper">
+        <img src="/Palak/images/Home/country/uk.png" class="countryImg" alt="UK Flag" />
+      </div>
+      <img src="/Palak/images/Home/country/uk1.jpg" class="countrySpecificImg" alt="UK" />
+      <div class="countryNameLabel">United Kingdom</div>
+      <div class="hoverContent">
+        <h4>United Kingdom</h4>
+        <p>Pursue higher education in UK and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.</p>
+        <a href="/Palak/USA/usa.html" class="visitCountry">
+          Explore <img src="/Palak/Images/Home/country/right-arrow.png" alt="Arrow" />
+        </a>
+      </div>
+    </div>
+
+    <div class="globalUnivCard">
+      <div class="countryImgWrapper">
+        <img src="/Palak/images/Home/country/nz.png" class="countryImg" alt="NZ Flag" />
+      </div>
+      <img src="/Palak/images/Home/country/nz1.jpg" class="countrySpecificImg" alt="NZ" />
+      <div class="countryNameLabel">New Zealand</div>
+      <div class="hoverContent">
+        <h4>New Zealand</h4>
+        <p>Pursue higher education in New Zealand and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.</p>
+        <a href="/Palak/USA/usa.html" class="visitCountry">
+          Explore <img src="/Palak/Images/Home/country/right-arrow.png" alt="Arrow" />
+        </a>
+      </div>
+    </div>
+
+    <div class="globalUnivCard">
+      <div class="countryImgWrapper">
+        <img src="/Palak/images/Home/country/germany.png" class="countryImg" alt="germany Flag" />
+      </div>
+      <img src="/Palak/images/Home/country/germany1.jpg" class="countrySpecificImg" alt="germany" />
+      <div class="countryNameLabel">Germany</div>
+      <div class="hoverContent">
+        <h4>Germany</h4>
+        <p>Pursue higher education in Germany and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.</p>
+        <a href="/Palak/USA/usa.html" class="visitCountry">
+          Explore <img src="/Palak/Images/Home/country/right-arrow.png" alt="Arrow" />
+        </a>
+      </div>
+    </div>
+
+    <div class="globalUnivCard">
+      <div class="countryImgWrapper">
+        <img src="/Palak/images/Home/country/france.png" class="countryImg" alt="France Flag" />
+      </div>
+      <img src="/Palak/images/Home/country/france1.png" class="countrySpecificImg" alt="France" />
+      <div class="countryNameLabel">France</div>
+      <div class="hoverContent">
+        <h4>France</h4>
+        <p>Pursue higher education in France and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.</p>
+        <a href="/Palak/USA/usa.html" class="visitCountry">
+          Explore <img src="/Palak/Images/Home/country/right-arrow.png" alt="Arrow" />
+        </a>
+      </div>
+    </div>
+
+    <div class="globalUnivCard ">
+      <div class="countryImgWrapper">
+        <img src="/Palak/images/Home/country/canada.png" class="countryImg" alt="canada Flag" />
+      </div>
+      <img src="/Palak/images/Home/country/canada1.png" class="countrySpecificImg" alt="canada" />
+      <div class="countryNameLabel">Canada</div>
+      <div class="hoverContent">
+        <h4>Canada</h4>
+        <p>Pursue higher education in Canada and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.</p>
+        <a href="/Palak/USA/usa.html" class="visitCountry">
+          Explore <img src="/Palak/Images/Home/country/right-arrow.png" alt="Arrow" />
+        </a>
+      </div>
+    </div>
+
+    <div class="globalUnivCard">
+      <div class="countryImgWrapper">
+        <img src="/Palak/images/Home/country/ireland.png" class="countryImg" alt="ireland Flag" />
+      </div>
+      <img src="/Palak/images/Home/country/ireland1.png" class="countrySpecificImg" alt="ireland" />
+      <div class="countryNameLabel">Ireland</div>
+      <div class="hoverContent">
+        <h4>Ireland</h4>
+        <p>Pursue higher education in Ireland and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.</p>
+        <a href="/Palak/USA/usa.html" class="visitCountry">
+          Explore <img src="/Palak/Images/Home/country/right-arrow.png" alt="Arrow" />
+        </a>
+      </div>
+    </div>
+
+    <div class="globalUnivCard">
+      <div class="countryImgWrapper">
+        <img src="/Palak/images/Home/country/singapore.png" class="countryImg" alt="singapore Flag" />
+      </div>
+      <img src="/Palak/images/Home/country/singapore1.png" class="countrySpecificImg" alt="singapore" />
+      <div class="countryNameLabel">Singapore</div>
+      <div class="hoverContent">
+        <h4>Singapore</h4>
+        <p>Pursue higher education in Singapore and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.</p>
+        <a href="/Palak/USA/usa.html" class="visitCountry">
+          Explore <img src="/Palak/Images/Home/country/right-arrow.png" alt="Arrow" />
+        </a>
+      </div>
+    </div>
+  
+
+  </div>
+
+  <button id="viewMoreBtn" style="display:none;" onclick="toggleViewMore()">View More</button>
+
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const grid = document.getElementById("globalUnivGrid");
+  const cards = grid.querySelectorAll(".globalUnivCard");
+  const btn = document.getElementById("viewMoreBtn");
+  const isMobile = window.innerWidth <= 768;
+  let visibleCount = 4;
+
+  if (isMobile) {
+    
+    cards.forEach((card, index) => {
+      if (index >= visibleCount) {
+        card.classList.add("hiddenCard");
+      }
+    });
+
+    if (cards.length > visibleCount) {
+      btn.style.display = "block";
+    }
+  }
+
+  window.toggleViewMore = function () {
+    const hiddenCards = grid.querySelectorAll(".hiddenCard");
+    let revealCount = 4; 
+
+    for (let i = 0; i < revealCount && i < hiddenCards.length; i++) {
+      hiddenCards[i].classList.remove("hiddenCard");
+    }
+
+    if (grid.querySelectorAll(".hiddenCard").length === 0) {
+      btn.style.display = "none";
+    }
+  };
+});
+</script>
+
+
+
+
+<!-- footer-section -->
+
+ <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1: Logo + About + Social Icons -->
+            <div class="footer-col footer-about">
+                <img src="../images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="../images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="../images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="../images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="../images/Home/footer/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- Column 2: Services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="#">Education Loans</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 3: Study Destinations -->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="#">USA</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">UK</a></li>
+                </ul>
+            </div>
+    
+            <!-- Column 4: Contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>info@studybefikar.com</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+
+
+<!-- chatbot-section -->
+
+  <button class="chatbot-toggler">
+    <span class="material-symbols-rounded">mode_comment</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <div class="chatbot">
+    <header>
+      <h2>Chatbot</h2>
+      <span class="close-btn material-symbols-outlined">close</span>
+    </header>
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Hi there 👋<br />Can i get your Name and Email?</p>
+      </li>
+    </ul>
+    <div class="chat-input">
+      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+      <span id="send-btn" class="material-symbols-rounded">send</span>
+    </div>
+  </div>
+
+<div id="chatbot-container"></div>
+
+<script>
+   
+    document.addEventListener('DOMContentLoaded', function() {
+    
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', toggleDropdown);
+      });
+    });
+  
+    //chatbot
+const chatbotToggler = document.querySelector(".chatbot-toggler");
+const closeBtn = document.querySelector(".close-btn");
+const chatbox = document.querySelector(".chatbox");
+const chatInput = document.querySelector(".chat-input textarea");
+const sendChatBtn = document.querySelector(".chat-input span");
+
+let userMessage = null; // Variable to store user's message
+const inputInitHeight = chatInput.scrollHeight;
+
+// Define the question flow structure
+const questionFlow = {
+  start: "What service can we assist you with today? \n 1) Loan \n 2) Test Prepration \n 3) Visa \n 4) Admission Counselling \n4) Profile Evaluation",
+  options: {
+    Loan: {
+      question: "Which Currency do you want to take Loan in?\n 1) Dollar \n 2) Rupees ",
+      responses: {
+        Dollar: "We can assist with Dollar loans. Lets get more Details?\n Which Degree do you want to pursue?",
+        Rupees: "We can assist with personal loans. What is the loan amount you're looking for?"},
+        "nextQuestion": {
+        "question": "Do you have a co-signer?",
+        "options": {
+          "1": "Business",
+          "2": "Education",
+          "3": "Other"
+        },
+        "responses": {
+          "Business": "Great! Let's discuss terms for a business loan in Dollar.",
+          "Education": "Sure! Let's explore education loan options in Dollar.",
+          "Other": "Got it! We'll help you find a suitable Dollar loan for your needs."
+        }
+      }
+    },
+    "Rupees": {
+      "message": "We can assist with personal loans. What is the loan amount you're looking for?",
+      "nextQuestion": {
+        "question": "What is the tenure of the loan?",
+        "options": {
+          "1": "1-3 years",
+         "2": "3-5 years",
+          "3": "More than 5 years"
+        },
+        "responses": {
+          "1-3 years": "Short-term loans are a great choice for flexibility.",
+          "3-5 years": "Mid-term loans offer a balance between affordability and tenure.",
+          "More than 5 years": "Long-term loans provide lower monthly payments over time."
+        }
+      }
+    }
+  
+},
+    "Test Prep": {
+      question: "Which test are you preparing for? (GRE/GMAT/SAT)",
+      responses: {
+        GRE: "We offer GRE coaching. Would you like to know about our courses?",
+        GMAT: "We offer GMAT coaching. Would you like to know about our courses?",
+        SAT: "We offer SAT coaching. Would you like to know about our courses?",
+      },
+    },
+    Admission: {
+      question: "Which level of admission are you seeking? (Undergraduate/Postgraduate)",
+      responses: {
+        Undergraduate: "We assist with undergraduate admissions. Do you have a target country in mind?",
+        Postgraduate: "We assist with postgraduate admissions. Do you have a target program in mind?",
+      },
+    },
+    "Profile Evaluation": {
+      question: "Are you looking for a detailed profile evaluation for admissions or career guidance?",
+      responses: {
+        Admissions: "Please share your academic and extracurricular details for evaluation.",
+        Career: "Please share your work experience and career aspirations for evaluation.",
+      },
+    },
+    Visa: {
+      question: "Which type of visa are you applying for? (Student/Work/Tourist)",
+      responses: {
+        Student: "We assist with student visas. Have you received your admission letter?",
+        Work: "We assist with work visas. Do you have an employer's sponsorship?",
+        Tourist: "We assist with tourist visas. Do you have travel dates planned?",
+      },
+    },
+  };
+
+let currentStep = "start";
+let currentSection = null;
+
+const createChatLi = (message, className) => {
+  const chatLi = document.createElement("li");
+  chatLi.classList.add("chat", className);
+  const chatContent =
+    className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+  chatLi.innerHTML = chatContent;
+  chatLi.querySelector("p").textContent = message;
+  return chatLi;
+};
+
+const generateResponse = (chatElement) => {
+  const messageElement = chatElement.querySelector("p");
+
+  if (currentStep === "start") {
+    // Initial question
+    messageElement.textContent = questionFlow.start;
+    currentStep = "options";
+  } else if (currentStep === "options") {
+    // Options for services
+    const optionKeys = Object.keys(questionFlow.options);
+    if (optionKeys.includes(userMessage)) {
+      currentSection = userMessage;
+      messageElement.textContent = questionFlow.options[currentSection].question;
+      currentStep = "responses";
+    } else {
+      messageElement.textContent = "Please select a valid option: Loan, Test Prep, Admission, Profile Evaluation, Visa.";
+    }
+  } else if (currentStep === "responses") {
+    const responses = questionFlow.options[currentSection].responses;
+    if (responses[userMessage]) {
+      messageElement.textContent = responses[userMessage];
+      currentStep = "completed";
+    } else {
+      messageElement.textContent = `Please select a valid option for ${currentSection}.`;
+    }
+  } else {
+    // End of conversation
+    messageElement.textContent = "Thank you for chatting with us!";
+  }
+
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+};
+
+const handleChat = () => {
+  userMessage = chatInput.value.trim(); // Get user entered message
+  if (!userMessage) return;
+
+  // Clear the input textarea and set its height to default
+  chatInput.value = "";
+  chatInput.style.height = `${inputInitHeight}px`;
+
+  // Append the user's message to the chatbox
+  chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+
+  setTimeout(() => {
+    // Generate response based on current step and user message
+    const incomingChatLi = createChatLi("Thinking...", "incoming");
+    chatbox.appendChild(incomingChatLi);
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+    generateResponse(incomingChatLi);
+  }, 600);
+};
+
+chatInput.addEventListener("input", () => {
+  chatInput.style.height = `${inputInitHeight}px`;
+  chatInput.style.height = `${chatInput.scrollHeight}px`;
+});
+
+chatInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+    e.preventDefault();
+    handleChat();
+  }
+});
+
+sendChatBtn.addEventListener("click", handleChat);
+closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+    function toggleNavbar() {
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+
+    function toggleDropdown(event) {
+      const dropdown = event.currentTarget;
+      dropdown.classList.toggle('active');
+    }
+    const buttons = document.querySelectorAll(".button-container button");
+    const contents = document.querySelectorAll(".content-container");
+  
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Remove 'active' class from all buttons and contents
+        buttons.forEach(btn => btn.classList.remove("active"));
+        contents.forEach(content => content.classList.remove("active"));
+  
+        // Add 'active' class to clicked button and corresponding content
+        button.classList.add("active");
+        const contentId = button.id.replace("btn-", "content-");
+        document.getElementById(contentId).classList.add("active");
+      });
+    });
+    function switchContent(sectionId) {
+      // Remove active class from all buttons
+      document.querySelectorAll('.button').forEach(button => button.classList.remove('active'));
+
+      // Add active class to clicked button
+      document.querySelector(`.button[onclick="switchContent('${sectionId}')"]`).classList.add('active');
+
+      // Hide all content sections
+      document.querySelectorAll('.content').forEach(content => content.classList.remove('active'));
+
+      // Show the selected content section
+      document.getElementById(sectionId).classList.add('active');
+    }
+
+</script>
+
+
+</body>
+</html>

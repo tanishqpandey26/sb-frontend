@@ -1,0 +1,2121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyBefikar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 32px;
+            /* Increased height */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            /* subtle shadow */
+            z-index: 1000;
+        }
+
+        .logo {
+            height: 70px;
+        }
+
+        .navbar-right {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .navbar-right li {
+            position: relative;
+        }
+
+        .navbar-right a {
+            text-decoration: none;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            color: #424242;
+            line-height: 100%;
+            letter-spacing: 0;
+            font-style: bold;
+        }
+
+        .navbar-right a.active {
+            background: #59898E33;
+            color: #287781 !important;
+            border-radius: 6px;
+            padding: 12px 18px;
+        }
+
+        .dropdown.open .dropdown-content {
+            display: block !important;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            /* aligned right below the navbar */
+            left: 0;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            min-width: 240px;
+            border-radius: 6px;
+            overflow: hidden;
+            z-index: 999;
+        }
+
+        .dropdown-content li a {
+            display: block;
+            padding: 12px 18px;
+            color: #424242;
+            transition: background-color 0.2s ease;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #59898E33;
+            /* 20% transparent highlight on hover */
+            color: #287781;
+            /* Optional: highlight text color on hover */
+        }
+
+        .contact-btn {
+            background-color: #287781;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .contact-btn:hover {
+            background-color: #1d5e65;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+
+            .navbar-right {
+                flex-direction: column;
+                gap: 16px;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+            }
+        }
+
+
+        .footer {
+            background-color: #092A2E;
+            padding: 60px 2% 30px;
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            max-width: 1320px;
+            margin: 0 auto;
+            height: auto;
+        }
+
+        .footer-logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .footer-about {
+            flex: 2.5;
+            max-width: none;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 31px;
+        }
+
+
+        .footer-about p {
+            font-size: 16px;
+            font-weight: 200;
+            line-height: 100%;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .footer-col h4 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            font-size: 16px;
+            font-weight: 200;
+            margin-bottom: 22px;
+            color: #ffffff;
+        }
+
+        .footer-col p {
+            font-size: 16px;
+            font-weight: 200;
+            line-height: 100%;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .footer-col.contact-col {
+            min-width: 300px;
+            max-width: 350px;
+        }
+
+        .footer-col:not(.footer-about) {
+            margin-left: -5px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-socials img {
+            width: 48px;
+            height: 48px;
+        }
+
+        /* Divider line */
+        .footer-line {
+            border: none;
+            border-top: 1px solid #ffffff44;
+            margin: 40px auto 20px;
+            width: 100%;
+            max-width: 1300px;
+        }
+
+        /* Bottom copyright text */
+        .footer-bottom {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 200;
+            color: #ffffff;
+        }
+
+        .footer-right-columns {
+            display: flex;
+            gap: 40px;
+            margin-left: 30px;
+            /* You can increase this to shift more */
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+            }
+
+            .footer-right-columns {
+                flex-direction: column;
+                margin-left: 0;
+            }
+
+            .footer-col {
+                width: 100%;
+                max-width: none;
+            }
+        }
+
+        .footer-col ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 200;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 100%;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #4ED0E1;
+            /* Optional: subtle hover color */
+        }
+
+        /* ================= NAVBAR: MOBILE MENU =================== */
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: row;
+                padding: 16px 24px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                color: #424242;
+            }
+
+            .navbar-right {
+                flex-direction: column;
+                gap: 16px;
+                width: 100%;
+                margin-top: 10px;
+                display: none;
+                background: #fff;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                position: absolute;
+                top: 70px;
+                left: 0;
+                z-index: 999;
+            }
+
+            .navbar-right.active {
+                display: flex;
+            }
+        }
+
+
+        /* ================= NAVBAR: END =================== */
+
+        
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 110px 0% 0px 4%;
+    gap: 40px;
+    background-color: #EFFCFE;
+    flex-wrap: wrap;
+}
+
+.hero-right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    /* aligns image to right edge */
+}
+
+.hero-img {
+    width: 100%;
+    /* big but not full screen */
+    max-width: 650px;
+    /* prevents it from becoming too huge */
+    height: auto;
+    object-fit: contain;
+}
+.hero-left {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 24px;
+    /* Add space only between text and image */
+}
+
+.trusted-card {
+    background-color: #e0f4f1;
+    /* Light #287781 background */
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 6px;
+    margin-bottom: 50px;
+}
+
+.trusted-card .star {
+    color: #287781;
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.trusted-card .trusted-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #287781;
+    line-height: 100%;
+}
+
+.hero-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 100%;
+    letter-spacing: 0;
+    margin-bottom: 24px;
+}
+
+.heading-line1 {
+    color: #424242;
+}
+
+.heading-line2 {
+    color: #287781;
+}
+
+.hero-subtext {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    color: #424242;
+    max-width: 600px;
+    margin-top: 40px;
+    margin-bottom: 32px;
+}
+
+.bread {
+    position: absolute;
+    top: 100px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #287781;
+    margin-top: 50px;
+}
+
+.bread a {
+    color: #287781;
+    transition: color 0.2s ease;
+}
+
+.bread a:hover {
+    color: #0d2629;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 120px 24px 60px;
+    }
+
+    .hero-heading {
+        font-size: 52px;
+    }
+
+    .hero-subtext {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .bread {
+        position: relative;
+        top: 0;
+        margin-bottom: 15px;
+        font-size: 10px;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    .hero-img {
+        width: calc(100vw - 50%);
+        /* cover only right half fully */
+        height: auto;
+        object-fit: cover;
+        
+    }
+    .bread {
+        top: 80px;
+        font-size: 11px;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!--NavBar Section-->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="/Palak/Home/home.html"></a>
+            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo"
+                class="logo">
+            </a>
+    
+        </div>
+        <ul class="navbar-right" id="mobileNav">
+    
+            <li class="dropdown">
+                <a href="/Palak/USA/usa.html">Countries</a>
+                <ul class="dropdown-content">
+                    <li><a href="/Palak/USA/usa.html">USA</a></li>
+                    <li><a href="#">UK</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">Germany</a></li>
+                </ul>
+            </li>
+    
+            <li class="dropdown">
+                <a href="#">Loan</a>
+                <ul class="dropdown-content">
+                    <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                    <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
+                </ul>
+            </li>
+    
+            <li class="dropdown">
+                <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
+                <ul class="dropdown-content">
+                    <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+                    <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
+                    <li><a href="#">Application Deadline</a></li>
+                    <li><a href="#">University Finder</a></li>
+                </ul>
+            </li>
+    
+            <li class="dropdown">
+                <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
+                <ul class="dropdown-content">
+                    <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                    <li><a href="#">Prepare for Exam</a></li>
+                    <li><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></li>
+                    <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
+                </ul>
+            </li>
+    
+            <li class="dropdown">
+                <a href="#">All Exams</a>
+                <ul class="dropdown-content">
+                    <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
+                    <li><a href="/Palak/All_Exams/GMAT.html">GMAT</a></li>
+                    <li><a href="/Palak/All_Exams/GRE.html">GRE</a></li>
+                    <li><a href="/Palak/All_Exams/IELTS.html">IELTS</a></li>
+                    <li><a href="/Palak/All_Exams/PTE.html">PTE</a></li>
+                    <li><a href="/Palak/All_Exams/ACT.html">ACT</a></li>
+                    <li><a href="/Palak/All_Exams/TOEFL.html">TOEFL</a></li>
+                    <li><a href="/Palak/All_Exams/Duolingo.html">Duolingo</a></li>
+                </ul>
+            </li>
+    
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">All Services</a></li>
+                    <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
+                    <li><a href="#">Profile Evaluation</a></li>
+                    <li><a href="#">Apply to University</a></li>
+                </ul>
+            </li>
+    
+            <li><a href="#" class="dropdown">Notice Board</a></li>
+            <li><a href="#" class="dropdown">About Us</a></li>
+            <li><a href="#" class="dropdown">Contact Us</a></li>
+    
+            <li><a href="/Palak/Login Pages/signin.html" class="contact-btn">Login</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </nav>
+    <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('mobileNav');
+
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+    <script>
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(dropdown => {
+            let wasClicked = false;
+            const link = dropdown.querySelector('a');
+
+            // Toggle on click
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isOpen = dropdown.classList.contains('open');
+
+                // Close all dropdowns
+                dropdowns.forEach(d => {
+                    d.classList.remove('open');
+                    d.dataset.clicked = "false";
+                });
+
+                if (!isOpen) {
+                    dropdown.classList.add('open');
+                    dropdown.dataset.clicked = "true";
+                }
+            });
+
+            // Hover to open (desktop only)
+            dropdown.addEventListener('mouseenter', () => {
+                if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                    dropdown.classList.add('open');
+                }
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+                if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+                    dropdown.classList.remove('open');
+                }
+            });
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove('open');
+                    dropdown.dataset.clicked = "false";
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+            const links = document.querySelectorAll(".navbar-right a");
+
+            links.forEach(link => {
+                const linkPath = link.getAttribute("href").split("/").pop();
+
+                if (linkPath === currentPath) {
+                    // Highlight the clicked link
+                    link.classList.add("active");
+
+                    // Also highlight parent if inside dropdown
+                    const parentDropdown = link.closest(".dropdown");
+                    if (parentDropdown) {
+                        const parentLink = parentDropdown.querySelector(":scope > a");
+                        if (parentLink) parentLink.classList.add("active");
+                    }
+                }
+            });
+        });
+    </script>
+
+<section class="hero">
+    <div class="hero-left">
+        <div class="bread"><a href="/Palak/Admission_counselling/admit.html">Home</a> &gt;
+            <a href="#">All Exams</a> &gt;
+            <span>IELTS</span>
+        </div>
+        <div class="trusted-card">
+            <span class="star">★</span>
+            <span class="trusted-text">IELTS 2025 - International English Language Testing System</span>
+        </div>
+
+        <h1 class="hero-heading">
+            <span class="heading-line1">Master the IELTS with</span><br>
+            <span class="heading-line2">Expert Guidance</span>
+        </h1>
+
+        <p class="hero-subtext">
+            Achieve your dream college admission with comprehensive IELTS preparation. Get personalized study plans, expert
+            instruction, and proven strategies to maximize your score.
+        </p>
+
+    </div>
+
+    <div class="hero-right">
+        <img src="/Palak/All_Exams/Exams_Images/39.png" alt="Hero Image"
+            class="hero-img" />
+    </div>
+</section>
+<style>
+            
+.second {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 110px 30px 110px 4%;
+    gap: 40px;
+    background-color: #FFFFFF;
+    flex-wrap: wrap;
+}
+
+.second-right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    /* aligns image to right edge */
+}
+
+.second-img {
+    width: 100%;
+    /* big but not full screen */
+    max-width: 650px;
+    /* prevents it from becoming too huge */
+    height: auto;
+    object-fit: contain;
+    border-radius: 24px;
+}
+.second-left {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 24px;
+    /* Add space only between text and image */
+}
+
+.second-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0;
+    margin-bottom: 24px;
+}
+
+.second-line1 {
+    color: #424242;
+}
+
+.second-subtext {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    color: #424242;
+    max-width: 600px;
+    margin-top: 40px;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+    .second {
+        flex-direction: column;
+        padding: 30px 24px 60px;
+    }
+
+    .second-heading {
+        font-size: 16px;
+    }
+
+    .second-subtext {
+        font-size: 12px;
+        line-height: 17px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .second-img {
+        width: calc(100vw - 50%);
+        /* cover only right half fully */
+        height: auto;
+        object-fit: cover; 
+    }
+}
+
+
+.point {
+  display: flex;
+  align-items: center; /* vertically center icon + text */
+  gap: 12px; /* spacing between tick and text */
+}
+
+.tick-icon {
+  width: 35px;
+  height: 35px;
+  opacity: 1;
+  transform: rotate(0deg); /* angle */
+}
+
+.point p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #424242;
+  margin: 0; /* remove default paragraph margin */
+}
+
+</style>
+
+<section class="second">
+    <div class="second-right">
+        <img src="/Palak/All_Exams/Exams_Images/hero.jpg" alt="IELTS Hero Image" class="second-img" />
+    </div>
+    <div class="second-left">
+        <h1 class="second-heading">
+            <span class="second-line1">Your Guide to IELTS Success</span><br>
+        </h1>
+        <p class="second-subtext">
+            The International English Language Testing System (IELTS) is one of the world’s most trusted exams 
+            for study, work, and migration. Accepted by 11,000+ organizations worldwide, it evaluates your 
+            English skills in Listening, Reading, Writing, and Speaking.
+            <br><br>
+            Available in Academic and General Training formats, IELTS can be taken on paper, computer, or online. 
+            Scores are reported on a 0–9 band scale and remain valid for 2 years.
+        </p>
+
+        <div class="point">
+            <img src="/Palak/All_Exams/Exams_Images/43.png" alt="tick icon" class="tick-icon">
+            <p>Four sections: Listening, Reading, Writing & Speaking</p>
+        </div>
+
+        <div class="point">
+            <img src="/Palak/All_Exams/Exams_Images/43.png" alt="tick icon" class="tick-icon">
+            <p>Total test duration: 2 hours 45 minutes</p>
+        </div>
+
+        <div class="point">
+            <img src="/Palak/All_Exams/Exams_Images/43.png" alt="tick icon" class="tick-icon">
+            <p>Scoring scale: 0–9 bands (valid for 2 years)</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Section with 3 cards -->
+<section class="cards-section">
+    <div class="card">
+        <img src="/Palak/All_Exams/Exams_Images/40.png" alt="Logo 1" class="card-logo">
+        <div class="card-text">
+            <h3>Test Format</h3>
+            <p>Listening | Reading | Writing | Speaking</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="/Palak/All_Exams/Exams_Images/41.png" alt="Logo 2" class="card-logo">
+        <div class="card-text">
+            <h3>Scoring System</h3>
+            <p>0–9 band scale (in 0.5 increments)</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="/Palak/All_Exams/Exams_Images/42.png" alt="Logo 3" class="card-logo">
+        <div class="card-text">
+            <h3>Duration</h3>
+            <p>2 hours 45 minutes (total test time)</p>
+        </div>
+    </div>
+</section>
+
+<style>
+.cards-section {
+  width: 100%; /* take full width */
+  height: auto; /* let height adjust */
+  background: #F8F8F8;
+  padding: 61px 70px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* ensures wrapping on small screens */
+  box-sizing: border-box;
+}
+
+.card {
+  flex: 1;
+  min-width: 280px; /* helps in responsive */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+}
+
+.card-logo {
+  width: 84px;
+  height: 84px;
+  border-radius: 20px;
+  /* padding: 10px; */
+  background: #F0F0F0; /* placeholder background */
+  object-fit: contain;
+}
+
+.card-text h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  color: #424242;
+  margin: 0;
+}
+
+.card-text p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #424242;
+  margin: 5px 0 0 0;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 768px) {
+  .cards-section {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .card {
+    flex-direction: row;
+    width: 100%;
+  }
+  .card-text p {
+    font-size: 12px;
+  line-height: 17px;
+  }
+
+  .card-text h3 {
+  font-size: 16px;
+  }
+  .card-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  }
+
+}
+</style>
+
+<!-- SAT Exam Pattern & Scoring System Section -->
+<section class="sat-section">
+    <!-- Heading -->
+    <h2 class="sat-heading">IELTS Exam Pattern & Scoring System</h2>
+    <p class="sat-subheading">
+        Understanding the IELTS format helps you prepare effectively and maximise your band score.
+    </p>
+
+    <div class="sat-layout">
+        <!-- Left Column -->
+        <div class="sat-left">
+            <!-- Yellow Card -->
+            <div class="sat-card yellow-card">
+                <img src="/Palak/All_Exams/Exams_Images/51.png" alt="Listening Icon" class="sat-icon">
+                <div class="sat-card-text">
+                    <h3>Listening</h3>
+                    <p class="sat-meta">30 minutes + 10 min transfer time</p>
+                    <p class="sat-desc">40 questions across four recordings; understand conversations, monologues, opinions and detailed info.</p>
+                </div>
+            </div>
+
+            <!-- Pink Card -->
+            <div class="sat-card pink-card">
+                <img src="/Palak/All_Exams/Exams_Images/44.png" alt="Reading Icon" class="sat-icon">
+                <div class="sat-card-text">
+                    <h3>Reading</h3>
+                    <p class="sat-meta">60 minutes, 40 questions</p>
+                    <p class="sat-desc">3 passages; Academic texts for Academic version, and everyday reading for General Training.</p>
+                </div>
+            </div>
+
+            <!-- Extra Card for Writing -->
+            <div class="sat-card yellow-card">
+                <img src="/Palak/All_Exams/Exams_Images/51.png" alt="Writing Icon" class="sat-icon">
+                <div class="sat-card-text">
+                    <h3>Writing</h3>
+                    <p class="sat-meta">60 minutes – 2 tasks</p>
+                    <p class="sat-desc">Task 1 & Task 2; task types differ for Academic vs General Training. Assessed on coherence, grammar, vocabulary, task response.</p>
+                </div>
+            </div>
+
+            <!-- Extra Card for Speaking -->
+            <div class="sat-card pink-card">
+                <img src="/Palak/All_Exams/Exams_Images/44.png" alt="Speaking Icon" class="sat-icon">
+                <div class="sat-card-text">
+                    <h3>Speaking</h3>
+                    <p class="sat-meta">11-14 minutes</p>
+                    <p class="sat-desc">Face-to-face interview (or video-call where applicable), part introduction, cue card, discussion.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="sat-right">
+            <div class="sat-score-card">
+                <h1 class="score-value">9.0</h1>
+                <p class="score-label">Maximum Band Score</p>
+                <hr class="score-divider" />
+
+                <ul class="score-breakdown">
+                    <li><img src="/Palak/All_Exams/Exams_Images/52.png" class="tick-icon" alt=""> Each section scored 0-9 bands</li>
+                    <li><img src="/Palak/All_Exams/Exams_Images/52.png" class="tick-icon" alt=""> Bands reported in 0.5 increments</li>
+                    <li><img src="/Palak/All_Exams/Exams_Images/52.png" class="tick-icon" alt=""> Overall band is average of four section bands, rounded to nearest half-band. :contentReference[oaicite:4]{index=4}</li>
+                </ul>
+
+                <div class="score-note">
+                    <strong>Note:</strong> Listening, Reading, Writing are done on the same day (no breaks between them); Speaking may be scheduled up to a week before or after. :contentReference[oaicite:5]{index=5}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button -->
+    <div class="sat-button-wrap">
+        <button class="sat-btn"><a href="/Palak/Test_Prep/ieltsprep.html"> Free IELTS Mock and Check Your Skills</a></button>
+    </div>
+</section>
+
+<style>
+    /* Section */
+    .sat-section {
+        max-width: 1439px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    /* Heading */
+    .sat-heading {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 100%;
+        color: #424242;
+        margin-bottom: 15px;
+    }
+
+    .sat-subheading {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 35px;
+        color: #424242;
+        margin-bottom: 40px;
+    }
+
+    /* Layout */
+    .sat-layout {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: stretch;
+        /* ensures equal height */
+    }
+
+    /* Left Column */
+    .sat-left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .sat-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        border-radius: 20px;
+        padding: 41px 32px;
+        text-align: left;
+        /* ensures text is left-aligned */
+        flex: 1;
+        /* cards stretch equally */
+    }
+
+    .yellow-card {
+        background: #FFF6E1;
+    }
+
+    .pink-card {
+        background: #FDF0F4;
+    }
+
+    .sat-icon {
+        width: 25px;
+        height: 25px;
+        flex-shrink: 0;
+    }
+
+    .sat-card-text {
+        flex: 1;
+    }
+
+    .sat-card-text h3 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: #424242;
+        margin: 0px 0 10px;
+    }
+
+    .sat-meta {
+        font-weight: 600;
+        font-size: 16px;
+        margin: 5px 0 8px;
+        color: #424242;
+    }
+
+    .sat-desc {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        color: #424242;
+        margin: 10px 0 0 0 ;
+    }
+
+    /* Right Column */
+    .sat-right {
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+    }
+
+    .sat-score-card {
+        background: #E4F7FA;
+        border-radius: 20px;
+        padding: 40px;
+        /* increased spacing for equal height */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* spreads out content */
+        flex: 1;
+    }
+
+    .score-value {
+        font-weight: 700;
+        font-size: 48px;
+        margin: 0;
+        color: #424242;
+    }
+
+    .score-label {
+        font-weight: 600;
+        font-size: 16px;
+        margin: 15px 0 25px;
+        color: #424242;
+    }
+
+    .score-divider {
+        border: 0.3px solid #424242;
+        margin: 20px 0;
+    }
+
+    .score-breakdown {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px;
+        text-align: left;
+    }
+
+    .score-breakdown li {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 12px;
+        color: #424242;
+        display: flex;
+        align-items: center;
+    }
+
+    .tick-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+
+    .score-note {
+        background: #59898E33;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 12px;
+        color: #287781;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    /* Button */
+    .sat-button-wrap {
+        margin-top: 40px;
+        text-align: center;
+    }
+    .sat-btn a {
+        text-decoration: none;
+        color: white;
+    }
+    .sat-btn {
+        width: 451px;
+        height: 51px;
+        border-radius: 10px;
+        background: #287781;
+        color: #fff;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .sat-btn:hover {
+        background: #1d5e65;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+        .sat-heading {
+            font-size: 24px;
+        }
+
+        .sat-subheading {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        .sat-layout {
+            flex-direction: column;
+        }
+
+        .sat-btn {
+            width: 100%;
+        }
+    }
+</style>
+
+<section class="cost-section">
+
+    <h2 class="cost-heading">IELTS Syllabus Overview</h2>
+    <p class="cost-desc">
+        The IELTS exam evaluates your English proficiency across four core sections. Below is a breakdown of the key sections, topics, and what you’ll be tested on.
+    </p>
+
+    <div class="cost-table">
+        <!-- Table Header -->
+        <div class="table-header">
+            <div class="table-cell">Section</div>
+            <div class="table-cell">Topics</div>
+            <div class="table-cell">Description</div>
+        </div>
+
+        <!-- Listening -->
+        <div class="table-row">
+            <div class="table-cell">Listening</div>
+            <div class="table-cell">
+                Conversations <br><br>
+                Monologues <br><br>
+                Academic Discussions <br><br>
+                Everyday Social Contexts
+            </div>
+            <div class="table-cell">
+                40 questions across 4 recordings. <br><br>
+                Understand main ideas, opinions, and factual information. <br><br>
+                Follow conversations and extract key details. <br><br>
+                Identify attitudes and intentions of speakers.
+            </div>
+        </div>
+
+        <!-- Reading -->
+        <div class="table-row">
+            <div class="table-cell">Reading</div>
+            <div class="table-cell">
+                Academic Texts (for Academic IELTS) <br><br>
+                General Reading Materials (for General Training) <br><br>
+                Comprehension Passages <br><br>
+                Vocabulary in Context
+            </div>
+            <div class="table-cell">
+                40 questions in 60 minutes. <br><br>
+                Identify main ideas, supporting details, and arguments. <br><br>
+                Match headings, complete summaries, and identify writer’s views. <br><br>
+                Handle multiple-choice, True/False/Not Given, and matching tasks.
+            </div>
+        </div>
+
+        <!-- Writing -->
+        <div class="table-row">
+            <div class="table-cell">Writing</div>
+            <div class="table-cell">
+                Task 1 – Academic: Describe Graphs, Charts, Diagrams <br><br>
+                Task 1 – General: Write a Formal/Informal Letter <br><br>
+                Task 2 – Essay Writing
+            </div>
+            <div class="table-cell">
+                2 tasks in 60 minutes. <br><br>
+                Present and compare visual data (Academic) or write letters (General). <br><br>
+                Write essays expressing arguments, opinions, and solutions. <br><br>
+                Assessed on coherence, grammar, vocabulary, and task achievement.
+            </div>
+        </div>
+
+        <!-- Speaking -->
+        <div class="table-row">
+            <div class="table-cell">Speaking</div>
+            <div class="table-cell">
+                Part 1 – Introduction & Interview <br><br>
+                Part 2 – Cue Card Task <br><br>
+                Part 3 – Two-Way Discussion
+            </div>
+            <div class="table-cell">
+                Lasts 11–14 minutes with an examiner. <br><br>
+                Answer general questions about yourself and familiar topics. <br><br>
+                Speak on a given topic for 1–2 minutes. <br><br>
+                Discuss abstract ideas and express opinions clearly.
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<style>
+.cost-section {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 60px 0;
+}
+
+.cost-heading {
+    font-weight: 700;
+    font-size: 34px;
+    color: #424242;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cost-desc {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    color: #424242;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+/* Table */
+.cost-table {
+    width: 1280px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 16px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Header Row */
+.table-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 66px;
+    align-items: center;
+    background: #287781;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    font-size: 16px;
+    padding: 0 36px;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    align-items: center;
+    background: #F6F6F6;
+    padding: 30px 36px;
+    border: 0.01px solid #59898E33;
+    transition: background 0.3s ease;
+}
+
+.table-row:hover {
+    background: #59898E33;
+    /* hover color */
+}
+
+.table-cell {
+    text-align: left;
+    padding: 10px;
+}
+
+/* Tablets and smaller screens */
+@media (max-width: 992px) {
+    .cost-heading {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .cost-desc {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 0 20px;
+        margin-bottom: 30px;
+    }
+
+    .cost-table {
+        width: 90%;
+        font-size: 14px;
+    }
+
+}
+
+/* Mobile screens */
+@media (max-width: 576px) {
+    .cost-heading {
+        font-size: 24px;
+    }
+
+    .cost-desc {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .table-header,
+    .table-row {
+        font-size: 12px;
+    }
+}
+</style>
+
+<section class="cost-section">
+
+    <h2 class="cost-heading">IELTS Exam Dates</h2>
+    <p class="cost-desc">
+        The IELTS test is conducted multiple times each month worldwide, giving candidates flexibility to choose their preferred date and mode of exam.
+    </p>
+
+    <div class="cost-table">
+        <!-- Table Header -->
+        <div class="table-header">
+            <div class="table-cell">Test Type</div>
+            <div class="table-cell">Availability / Window</div>
+            <div class="table-cell">Notes / Registration Info</div>
+        </div>
+
+        <!-- IELTS Academic -->
+        <div class="table-row">
+            <div class="table-cell">IELTS Academic</div>
+            <div class="table-cell">48 fixed dates per year (up to 4 times a month)</div>
+            <div class="table-cell">Available in both paper-based and computer-delivered formats.</div>
+        </div>
+
+        <!-- IELTS General Training -->
+        <div class="table-row">
+            <div class="table-cell">IELTS General Training</div>
+            <div class="table-cell">48 fixed dates per year (up to 4 times a month)</div>
+            <div class="table-cell">Mostly chosen for migration and work opportunities abroad.</div>
+        </div>
+
+        <!-- Computer-delivered IELTS -->
+        <div class="table-row">
+            <div class="table-cell">Computer-delivered IELTS</div>
+            <div class="table-cell">Available 3 times a day, 7 days a week (depending on location)</div>
+            <div class="table-cell">Faster results (within 3–5 days). Slots often more flexible than paper-based.</div>
+        </div>
+
+        <!-- Booking Advice -->
+        <div class="table-row">
+            <div class="table-cell">Booking Timeline</div>
+            <div class="table-cell">Year-round</div>
+            <div class="table-cell">Register at least 1–2 months in advance, especially during peak university admission seasons.</div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="sat-dates-section">
+    <!-- Heading -->
+    <h2 class="sat-dates-heading">IELTS Preparation Resources</h2>
+    <p class="sat-dates-subheading">
+        Boost your IELTS prep with expert tools to excel in Listening, Reading, Writing, and Speaking.
+    </p>
+
+    <!-- Cards Wrapper -->
+    <div class="sat-dates-cards">
+        <!-- Left Arrow (mobile only) -->
+        <div class="sat-arrow left">&#10094;</div>
+
+        <!-- Cards Inner (for sliding) -->
+        <div class="sat-dates-inner">
+            <!-- Card 1 -->
+            <div class="sat-date-card">
+                <img src="/Palak/All_Exams/Exams_Images/Practice.jpg" alt="IELTS Mock Tests">
+                <h3>IELTS Mock Tests</h3>
+                <p>Take full-length IELTS practice tests to assess your skills across all four modules and track progress.</p>
+                <button class="sat-date-btn">Learn More</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="sat-date-card">
+                <img src="/Palak/All_Exams/Exams_Images/Class.jpg" alt="IELTS Live Classes">
+                <h3>Live Interactive Classes</h3>
+                <p>Join expert-led classes covering Listening, Reading, Writing, and Speaking strategies for all IELTS formats.</p>
+                <button class="sat-date-btn">Learn More</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="sat-date-card">
+                <img src="/Palak/All_Exams/Exams_Images/Perform.jpg" alt="IELTS Performance Analytics">
+                <h3>Performance Analytics</h3>
+                <p>Get detailed score reports, identify strengths and weaknesses, and improve performance with actionable insights.</p>
+                <button class="sat-date-btn">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Right Arrow (mobile only) -->
+        <div class="sat-arrow right">&#10095;</div>
+    </div>
+</section>
+
+<style>
+    /* Section Container */
+    .sat-dates-section {
+        background: #EFFCFE;
+        padding: 60px 10px;
+        text-align: center;
+    }
+
+    /* Heading */
+    .sat-dates-heading {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 100%;
+        color: #424242;
+        margin-bottom: 15px;
+    }
+
+    /* Subheading */
+    .sat-dates-subheading {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 35px;
+        color: #424242;
+        margin-bottom: 50px;
+    }
+
+    /* Desktop Layout */
+    .sat-dates-cards {
+        display: flex;
+        justify-content: center;
+        gap: 19px;
+        flex-wrap: wrap;
+        max-width: 1302px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .sat-dates-inner {
+        display: flex;
+        gap: 19px;
+    }
+
+    .sat-date-card {
+        width: 410px;
+        height: 530px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+        background: #fff;
+        box-sizing: border-box;
+        transition: transform 0.3s ease;
+    }
+
+    .sat-date-card:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Card Image */
+    .sat-date-card img {
+        width: 100%;
+        height: 352px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    /* Card Heading */
+    .sat-date-card h3 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        color: #424242;
+        margin: 0;
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    /* Card Text */
+    .sat-date-card p {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        color: #424242;
+        margin: 0;
+        padding: 0 20px;
+        text-align: left;
+    }
+
+    /* Button */
+    .sat-date-btn {
+        width: 130px;
+        height: 41px;
+        border-radius: 10px;
+        background: #287781;
+        color: #fff;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        margin-top: auto;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+    /* --- Mobile View --- */
+@media screen and (max-width: 768px) {
+    .sat-dates-heading {
+        font-size: 24px;
+    }
+
+    .sat-dates-subheading {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    /* Make Carousel */
+    .sat-dates-cards {
+        overflow: hidden;
+        max-width: 90%;
+        position: relative;
+    }
+
+    .sat-dates-inner {
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .sat-date-card {
+        min-width: 100%;
+        border-radius: 20px;
+        gap: 12px;
+        padding: 15px;
+        background: #fff;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* let content decide height */
+    }
+
+    .sat-date-card img {
+        width: 100%;
+        height: auto; /* keep aspect ratio */
+        border-radius: 50px;
+        object-fit: contain; /* avoid zoom/crop */
+        max-height: 200px; /* optional: control max height */
+    }
+
+    .sat-date-card h3 {
+        font-size: 16px;
+        margin-top: 10px;
+        text-align: left;
+    }
+
+    .sat-date-card p {
+        font-size: 12px;
+        line-height: 18px;
+        margin: 5px 0 10px;
+        text-align: left;
+    }
+
+    .sat-date-btn {
+        width: 104px;
+        height: 33px;
+        border-radius: 9px;
+        font-size: 10px;
+        margin-top: auto;
+    }
+
+    /* Show arrows only on mobile */
+    .sat-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 18px;
+    }
+
+    .sat-arrow.left {
+        left: 10px;
+    }
+
+    .sat-arrow.right {
+        right: 10px;
+    }
+}
+
+    /* Hide arrows on desktop */
+    @media screen and (min-width: 769px) {
+        .sat-arrow {
+            display: none;
+        }
+    }
+</style>
+<script>
+    /* Simple Carousel Logic */
+    const inner = document.querySelector(".sat-dates-inner");
+    const cards = document.querySelectorAll(".sat-date-card");
+    const leftArrow = document.querySelector(".sat-arrow.left");
+    const rightArrow = document.querySelector(".sat-arrow.right");
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        inner.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    rightArrow.addEventListener("click", () => {
+        if (currentIndex < cards.length - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    leftArrow.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+</script>
+
+
+<section class="sat-section">
+    <!-- Heading -->
+    <h2 class="sat-heading">How We Simplify Your IELTS Test Prep</h2>
+    <p class="sat-subheading">
+        Our proven methodology breaks down complex concepts into manageable steps.
+    </p>
+    <div class="admission-container">
+        <div class="admission-image">
+            <img src="/Palak/Test_Prep/Test_Prep_Images/univ.jpg" alt="Admission Guide">
+        </div>
+        <div class="admission-cards">
+            <!-- Card 1 -->
+            <div class="admission-wrapper">
+                <div class="card-number">1</div>
+                <div class="admission-card" style="background:#E4F7FA;">
+                    <div class="card-content">
+                        <img src="/Palak/All_Exams/Exams_Images/45.png" alt="Icon" class="card-icon">
+                        <!-- <div class="columns"> -->
+                        <div>
+                            <h4>Up-to-Date Study Material
+                            </h4>
+                            <p>We provide the most relevant resources, along with extra practice worksheets and assignments to strengthen learning.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="admission-wrapper">
+                <div class="card-number">2</div>
+                <div class="admission-card" style="background:#FFF6E1;">
+                    <div class="card-content">
+                        <img src="/Palak/All_Exams/Exams_Images/46.png" alt="Icon" class="card-icon">
+                        <!-- <div class="columns"> -->
+                        <div>
+                            <h4>Expert Faculty & Conceptual Learning</h4>
+                            <p>Learn from skilled faculty who teach concepts clearly using classroom PPTs
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="admission-wrapper">
+                <div class="card-number">3</div>
+                <div class="admission-card" style="background:#FDF0F4;">
+                    <div class="card-content">
+                        <img src="/Palak/All_Exams/Exams_Images/47.png" alt="Icon" class="card-icon">
+                        <!-- <div class="columns"> -->
+                        <div>
+                            <h4>Topic-Wise Test Series</h4>
+                            <p>Regular tests in both English and Math ensure you master each topic step by step.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 (Bullet Points) -->
+            <div class="admission-wrapper">
+                <div class="card-number">4</div>
+                <div class="admission-card" style="background:#E4F7FA;">
+                    <div class="card-content">
+                        <img src="/Palak/All_Exams/Exams_Images/48.png" alt="Icon" class="card-icon">
+                        <!-- <div class="columns"> -->
+                        <div>
+                            <h4>Full-Length Mock Exams</h4>
+                            <p>Practice with real exam-like tests to build confidence, improve time management, and track your progress.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="admission-wrapper">
+                <div class="card-number">5</div>
+                <div class="admission-card" style="background:#FFF6E1;">
+                    <div class="card-content">
+                        <img src="/Palak/All_Exams/Exams_Images/49.png" alt="Icon" class="card-icon">
+                        <!-- <div class="columns"> -->
+                        <div>
+                            <h4>Special Support for Weak Areas</h4>
+                            <p>If you find certain topics challenging, you can rejoin selected sessions in the next SAT batch completely free of
+                            charge.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admission-wrapper">
+                <div class="card-number">6</div>
+                <div class="admission-card" style="background:#FDF0F4;">
+                    <div class="card-content">
+                        <img src="/Palak/All_Exams/Exams_Images/50.png" alt="Icon" class="card-icon">
+                        <!-- <div class="columns"> -->
+                        <div>
+                            <h4>Beyond Test Prep</h4>
+                            <p>We also guide you through the admissions journey for undergraduate studies in the U.S.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<STYLE>
+
+/* Wrapper to hold number outside card */
+.admission-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card-number {
+    width: 64px;
+    height: 64px;
+    background: #59898E;
+    color: white;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* The vertical line */
+.card-number::after {
+    content: "";
+    position: absolute;
+    top: 82px;
+    /* start just below the number circle */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: calc(100% + 20px);
+    /* extend to next number */
+    background-color: #000000;
+    z-index: 1;
+}
+
+/* Remove line from last number */
+.admission-wrapper:last-child .card-number::after {
+    display: none;
+}
+
+.admission-card {
+    flex: 1;
+    border-radius: 20px;
+    padding: 20px;
+    height: 263px;
+    display: flex;
+    /* align-items: center; */
+}
+
+.card-content img{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 12px;
+    background: #F0F0F0; /* placeholder background */
+    object-fit: contain;
+}
+
+.card-content {
+    flex: 1;
+    text-align: left;
+}
+
+h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #424242;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.admission-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Left Image */
+.admission-image {
+    flex: 0 0 625px; /* fixed width for image */
+    position: sticky;
+    top: 100px; /* distance from top when sticky */
+}
+
+.admission-image img {
+    width: 100%;
+    height: 622px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Right Cards */
+.admission-cards {
+    flex: 1;
+}
+
+.admission-cards {
+  position: relative;
+  height: 300vh; /* enough height so scrolling happens */
+}
+
+.admission-wrapper {
+  position: sticky;
+  top: 100px; /* adjust where cards should “stick” */
+  margin-bottom: 50px;
+}
+
+.admission-card {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* layering for stacking */
+.admission-wrapper:nth-child(1) .admission-card { z-index: 5; }
+.admission-wrapper:nth-child(2) .admission-card { z-index: 4; }
+.admission-wrapper:nth-child(3) .admission-card { z-index: 3; }
+.admission-wrapper:nth-child(4) .admission-card { z-index: 2; }
+.admission-wrapper:nth-child(5) .admission-card { z-index: 1; }
+
+
+/* Default = Desktop (Your current styles) */
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .admission-container {
+    flex-direction: column; /* stack image above cards */
+    align-items: center;
+  }
+
+  .admission-image {
+    flex: none;
+    width: 100%;
+    max-width: 500px;
+    position: relative; /* remove sticky */
+    top: auto;
+    margin-bottom: 30px;
+  }
+
+  .admission-image img {
+    height: auto; /* allow natural scaling */
+  }
+
+  .admission-cards {
+    height: auto; /* remove fake scroll stacking */
+  }
+
+  .admission-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .admission-card {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .admission-container {
+    gap: 20px;
+    padding: 0 15px;
+    margin-bottom: 60px;
+
+  }
+
+  .admission-image {
+    flex: none;
+    width: 100%;
+    max-width: 342px;
+    position: relative; /* remove sticky */
+    top: auto;
+    margin-bottom: -50px;
+  }
+
+  .admission-cards {
+    height: auto; /* normal scrolling */
+  }
+
+  .admission-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .admission-card {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .card-number {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .card-content h3 {
+    font-size: 18px;
+  }
+
+  .card-content p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}</STYLE>
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Column 1: Logo + About + Social Icons -->
+        <div class="footer-col footer-about">
+            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/logo2.png" alt="StudyBefikar Logo"
+                class="footer-logo">
+            <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                achieve their academic dreams abroad.</p>
+            <div class="footer-socials">
+                <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/9.png"
+                        alt="Instagram"></a>
+                <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/10.png"
+                        alt="Facebook"></a>
+                <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/11.png"
+                        alt="LinkedIn"></a>
+                <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/12.png" alt="X"></a>
+            </div>
+        </div>
+        <div class="footer-right-columns">
+
+            <!-- Column 2: Services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="#">Education Loans</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Study Destinations -->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="#">USA</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">UK</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>info@studybefikar.com</p>
+                <p>+1 (555) 123-4567</p>
+
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="footer-line" />
+    <p class="footer-bottom">
+        © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+    </p>
+</footer>
+</body>
+</html>

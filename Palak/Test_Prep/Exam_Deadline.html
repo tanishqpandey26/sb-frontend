@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyBefikar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 32px;
+            /* Increased height */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            /* subtle shadow */
+            z-index: 1000;
+        }
+
+        .logo {
+            height: 70px;
+        }
+
+        .navbar-right {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .navbar-right li {
+            position: relative;
+        }
+
+        .navbar-right a {
+            text-decoration: none;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            color: #424242;
+            line-height: 100%;
+            letter-spacing: 0;
+            font-style: bold;
+        }
+
+        .navbar-right a.active {
+            background: #59898E33;
+            color: #287781 !important;
+            border-radius: 6px;
+            padding: 12px 18px;
+        }
+
+        .dropdown.open .dropdown-content {
+            display: block !important;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            /* aligned right below the navbar */
+            left: 0;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            min-width: 240px;
+            border-radius: 6px;
+            overflow: hidden;
+            z-index: 999;
+        }
+
+        .dropdown-content li a {
+            display: block;
+            padding: 12px 18px;
+            color: #424242;
+            transition: background-color 0.2s ease;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #59898E33;
+            /* 20% transparent highlight on hover */
+            color: #287781;
+            /* Optional: highlight text color on hover */
+        }
+
+        .contact-btn {
+            background-color: #287781;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .contact-btn:hover {
+            background-color: #1d5e65;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+
+            .navbar-right {
+                flex-direction: column;
+                gap: 16px;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+            }
+        }
+
+        
+.footer {
+    background-color: #092A2E;
+    padding: 60px 2% 30px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1320px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-about {
+    flex: 2.5;
+    max-width: none;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+
+.footer-about p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-col h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 22px;
+    color: #ffffff;
+}
+
+.footer-col p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 100%;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-col.contact-col {
+    min-width: 300px;
+    max-width: 350px;
+}
+
+.footer-col:not(.footer-about) {
+    margin-left: -5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Divider line */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ffffff44;
+    margin: 40px auto 20px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Bottom copyright text */
+.footer-bottom {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+.footer-right-columns {
+    display: flex;
+    gap: 40px;
+    margin-left: 30px;
+    /* You can increase this to shift more */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-right-columns {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .footer-col {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.footer-col ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 100%;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #4ED0E1;
+    /* Optional: subtle hover color */
+}
+
+/* ================= NAVBAR: MOBILE MENU =================== */
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        padding: 16px 24px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        color: #424242;
+    }
+
+    .navbar-right {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin-top: 10px;
+        display: none;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .navbar-right.active {
+        display: flex;
+    }
+}
+
+
+/* ================= NAVBAR: END =================== */
+
+
+/* Section container */
+.why-section {
+    background-color: #fff;
+    padding: 90px 0 0 0;
+    text-align: center;
+    max-width: 1320px;
+    /* fits 3 cards + gaps perfectly */
+    margin: 50px auto;
+}
+
+/* Main heading */
+.why-section h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #424242;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+
+/* Subtitle */
+.why-section p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    color: #424242;
+    line-height: 100%;
+    margin-bottom: 50px;
+}
+
+    </style>
+</head>
+
+<body>
+  <!--NavBar Section-->
+<nav class="navbar">
+    <div class="navbar-left">
+        <a href="/Palak/Home/home.html"></a>
+        <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo"
+            class="logo">
+        </a>
+
+    </div>
+    <ul class="navbar-right" id="mobileNav">
+
+        <li class="dropdown">
+            <a href="/Palak/USA/usa.html">Countries</a>
+            <ul class="dropdown-content">
+                <li><a href="/Palak/USA/usa.html">USA</a></li>
+                <li><a href="#">UK</a></li>
+                <li><a href="#">Canada</a></li>
+                <li><a href="#">Germany</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#">Loan</a>
+            <ul class="dropdown-content">
+                <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
+            <ul class="dropdown-content">
+                <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+                <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
+                <li><a href="#">Application Deadline</a></li>
+                <li><a href="#">University Finder</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
+            <ul class="dropdown-content">
+                <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                <li><a href="#">Prepare for Exam</a></li>
+                <li><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></li>
+                <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#">All Exams</a>
+            <ul class="dropdown-content">
+                <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
+                <li><a href="/Palak/All_Exams/GMAT.html">GMAT</a></li>
+                <li><a href="/Palak/All_Exams/GRE.html">GRE</a></li>
+                <li><a href="/Palak/All_Exams/IELTS.html">IELTS</a></li>
+                <li><a href="/Palak/All_Exams/PTE.html">PTE</a></li>
+                <li><a href="/Palak/All_Exams/ACT.html">ACT</a></li>
+                <li><a href="/Palak/All_Exams/TOEFL.html">TOEFL</a></li>
+                <li><a href="/Palak/All_Exams/Duolingo.html">Duolingo</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#">Services</a>
+            <ul class="dropdown-content">
+                <li><a href="#">All Services</a></li>
+                <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
+                <li><a href="#">Profile Evaluation</a></li>
+                <li><a href="#">Apply to University</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#" class="dropdown">Notice Board</a></li>
+        <li><a href="#" class="dropdown">About Us</a></li>
+        <li><a href="#" class="dropdown">Contact Us</a></li>
+
+        <li><a href="/Palak/Login Pages/signin.html" class="contact-btn">Login</a></li>
+    </ul>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+</nav>
+
+  <script>
+    const btn = document.getElementById('mobileMenuBtn');
+    const nav = document.getElementById('mobileNav');
+
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+
+  <script>
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+      let wasClicked = false;
+      const link = dropdown.querySelector('a');
+
+      // Toggle on click
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const isOpen = dropdown.classList.contains('open');
+
+        // Close all dropdowns
+        dropdowns.forEach(d => {
+          d.classList.remove('open');
+          d.dataset.clicked = "false";
+        });
+
+        if (!isOpen) {
+          dropdown.classList.add('open');
+          dropdown.dataset.clicked = "true";
+        }
+      });
+
+      // Hover to open (desktop only)
+      dropdown.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+          dropdown.classList.add('open');
+        }
+      });
+
+      dropdown.addEventListener('mouseleave', () => {
+        if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+          dropdown.classList.remove('open');
+        }
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      dropdowns.forEach(dropdown => {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('open');
+          dropdown.dataset.clicked = "false";
+        }
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+      const links = document.querySelectorAll(".navbar-right a");
+
+      links.forEach(link => {
+        const linkPath = link.getAttribute("href").split("/").pop();
+
+        if (linkPath === currentPath) {
+          // Highlight the clicked link
+          link.classList.add("active");
+
+          // Also highlight parent if inside dropdown
+          const parentDropdown = link.closest(".dropdown");
+          if (parentDropdown) {
+            const parentLink = parentDropdown.querySelector(":scope > a");
+            if (parentLink) parentLink.classList.add("active");
+          }
+        }
+      });
+    });
+  </script>
+
+  <section class="why-section">
+    <div class="why-heading">
+      <h2>Find Your Exam Center</h2>
+      <p>Discover test centers and exam dates for your upcoming standardized tests</p>
+    </div>
+    </section>
+    
+<section class="exam-section">
+    <!-- Section Title -->
+    <h2 class="exam-title">Choose Your Exam</h2>
+
+    <!-- Exam Buttons -->
+    <div class="exam-button-container">
+        <button class="exam-btn" data-exam="gre">GRE</button>
+        <button class="exam-btn" data-exam="sat">SAT</button>
+        <button class="exam-btn" data-exam="gmat">GMAT</button>
+        <button class="exam-btn" data-exam="ielts">IELTS</button>
+    </div>
+
+    <!-- Search Box -->
+    <div class="search-container">
+        <input type="text" id="searchCity" placeholder="Search your City Centre: Type city name (e.g., Jaipur)">
+        <span class="search-icon">🔍</span>
+    </div>
+
+    <!-- Exam Table Section -->
+    <div class="table-section">
+        <h3 id="examHeading" class="exam-heading">Choose an exam to see nearby centers and dates</h3>
+        <p id="examSubHeading" class="exam-subheading"> </p>
+
+        <table id="examTable">
+            <thead>
+                <tr>
+                    <th>TEST CENTERS</th>
+                    <th>MONTH</th>
+                    <th>EXAM DATES</th>
+                </tr>
+            </thead>
+            <tbody id="examBody">
+                <tr>
+                    <td colspan="3" class="no-data">Choose an exam to see nearby centers and dates...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<style>
+    /* Section styling */
+    .exam-section {
+        width: 1320px;
+        padding: 50px 25px;
+        border-radius: 20px;
+        background: #FAFAFA;
+        margin: 50px auto;
+        text-align: center;
+    }
+
+    .exam-title {
+        font-family: 'Plus Jakarta Sans';
+        font-weight: 700;
+        font-size: 24px;
+        color: #424242;
+        margin-bottom: 30px;
+    }
+
+/* Container for the buttons */
+.exam-button-container {
+    width: 500px;
+    height: 56px;
+    border-radius: 20px;
+    padding: 8px 12px;
+    display: flex;
+    gap: 10px;
+    background: #FFFFFF; /* var(--White) */
+    border: 0.2px solid var(--Charcoalgrey);
+    box-shadow: 0px 4px 4px 0px #0000001A;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Buttons inside container */
+.exam-btn {
+    width: 110px;
+    height: 40px;
+    border-radius: 14px;
+    background: #FFFFFF;
+    border: none; /* remove visible border */
+    cursor: pointer;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 600;
+    font-size: 14px;
+    color: #424242;
+    transition: all 0.3s ease;
+    padding: 10px 48px;
+    
+    /* Center text */
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    text-align: center;
+
+}
+
+/* Selected button */
+.exam-btn.active {
+    width: 110px;
+    height: 40px;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
+    color: white;
+    box-shadow: 0px 4px 4px 0px #0000001A;
+    padding: 10px 48px;
+    
+    /* Center text */
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    text-align: center;
+}
+
+
+    /* Search Box */
+    .search-container {
+        position: relative;
+        margin: 80px auto 40px auto;
+        width: 70%;
+        margin-bottom: 90px;
+    }
+
+    .search-container input {
+    width: 100%;
+    height: 40px;
+    padding: 12px 16px 12px 40px; /* space for icon on the left */
+    border-radius: 8px;
+    border: 1px solid #287781; /* slightly thicker border */
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 600;
+    font-size: 12px;
+    color: #333333; /* darker text */
+    outline: none;
+}
+
+   /* Search icon on the left */
+.search-container .search-icon {
+    position: absolute;
+    left: 12px; /* place icon inside input on left */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* so clicks go to input */
+}
+    /* Table Section */
+    .table-section {
+        width: 1270px;
+        border-radius: 20px;
+        background: #FAFAFA;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .exam-heading {
+        font-family: 'Plus Jakarta Sans';
+        font-weight: 700;
+        font-size: 34px;
+        color: #424242;
+        margin: 20px 0 10px 0;
+    }
+
+    .exam-subheading {
+        font-family: 'Plus Jakarta Sans';
+        font-weight: 400;
+        font-size: 16px;
+        color: #424242;
+        margin-bottom: 20px;
+    }
+    .exam-heading,
+.exam-subheading {
+    display: none; /* hide headings at first */
+}
+
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 40px;
+    }
+
+    thead tr {
+        background: #287781;
+        color: white;
+        font-family: 'Plus Jakarta Sans';
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+th, td {
+    padding: 15px;
+    text-align: center;     /* horizontal center */
+    vertical-align: middle; /* vertical center */
+    font-family: 'Plus Jakarta Sans';
+}
+
+    tbody tr {
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    tbody tr:hover {
+        background: #59898E33;
+        color: #287781;
+    }
+
+/* Exam dates boxes centered in their column */
+.exam-dates-box {
+    display: inline-block;
+    width: 25px;
+    height: 24px;
+    background: #0000001A;
+    border-radius: 5px;
+    margin: 2px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    transition: 0.3s;
+}
+
+    tbody tr:hover .exam-dates-box {
+    background: #FFFFFF;
+}
+
+    .no-data {
+        text-align: center;
+        font-family: 'Plus Jakarta Sans';
+        font-weight: 400;
+        font-size: 16px;
+        color: #424242;
+    }
+
+    
+/* Make month badges centered inside their column */
+.month-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: #59898E33;
+    color: #287781;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .exam-section,
+    .table-section {
+        width: 95%; /* full width with small margin */
+        padding: 20px 10px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .exam-button-container {
+        width: 100%;
+    }
+
+    .exam-btn {
+        flex: 1 1 40%; /* buttons take ~40% width */
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    .exam-btn.active {
+        padding: 10px 0;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .search-container {
+        width: 95%;
+        margin: 40px auto 40px auto;
+    }
+}
+
+
+/* Mobile responsive table */
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block; /* Stack everything */
+        width: 100%;
+    }
+
+    thead tr {
+        display: none; /* Hide the table header */
+    }
+
+    tbody tr {
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 15px;
+        background: #fff;
+        box-sizing: border-box;
+    }
+
+    tbody td {
+        text-align: left;
+        padding: 10px;
+        position: relative;
+    }
+
+    /* Add the column name before each cell content */
+    tbody td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        font-size: 14px;
+        color: #424242;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    /* Make badges horizontal */
+    td[data-label="MONTH"] .month-badge {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    td[data-label="EXAM DATES"] {
+        display: flex;        /* horizontal layout */
+        flex-wrap: wrap;      /* wrap if too many dates */
+        gap: 5px;             /* spacing between dates */
+    }
+
+    td[data-label="EXAM DATES"] .exam-dates-box {
+        margin: 0;            /* remove vertical margin */
+    }
+
+     .exam-heading {
+        font-family: 'Plus Jakarta Sans';
+        font-weight: 700;
+        font-size: 24px;
+        color: #424242;
+        margin: 20px 0 10px 0;
+    }
+
+    .exam-subheading {
+        font-family: 'Plus Jakarta Sans';
+        font-weight: 400;
+        font-size: 12px;
+        color: #424242;
+        margin-bottom: 20px;
+    }
+    .exam-heading,
+.exam-subheading {
+    display: none; /* hide headings at first */
+}
+
+/* Main heading */
+.why-section h2 {
+    font-size: 24px;
+}
+
+/* Subtitle */
+.why-section p {
+    font-size: 16px;
+}
+
+}
+
+</style>
+
+<script>
+    const examButtons = document.querySelectorAll('.exam-btn');
+    const examHeading = document.getElementById('examHeading');
+    const examSubHeading = document.getElementById('examSubHeading');
+    const examBody = document.getElementById('examBody');
+    const searchInput = document.getElementById('searchCity');
+
+    const examData = {
+        gre: [
+            { center: "Prometric Testing Private Limited", address: "9th Floor, Unit -2, Kapil Towers IT Block, Hyderabad", month: "July 2025", dates: [1, 2, 3, 4, 5, 6, 7, 8] },
+            { center: "Pearson Vue", address: "2nd Floor, Phoenix Towers, Bengaluru", month: "August 2025", dates: [5, 6, 7, 8, 9, 10, 11, 12] },
+            { center: "ETS Center", address: "1st Floor, Chennai", month: "September 2025", dates: [10, 11, 12, 13, 14, 15, 16, 17] },
+            { center: "Prometric Delhi", address: "New Delhi", month: "October 2025", dates: [2, 3, 4, 5, 6, 7, 8, 9] },
+            { center: "Global Test Center", address: "Mumbai", month: "November 2025", dates: [12, 13, 14, 15, 16, 17, 18, 19] }
+        ],
+        sat: [
+            { center: "College Board Center", address: "Delhi", month: "June 2025", dates: [1, 2, 3, 4, 5, 6, 7, 8] },
+            { center: "Pearson Vue", address: "Bengaluru", month: "July 2025", dates: [5, 6, 7, 8, 9, 10, 11, 12] },
+            { center: "ETS Center", address: "Chennai", month: "August 2025", dates: [10, 11, 12, 13, 14, 15, 16, 17] },
+            { center: "Prometric Delhi", address: "New Delhi", month: "September 2025", dates: [2, 3, 4, 5, 6, 7, 8, 9] },
+            { center: "Global Test Center", address: "Mumbai", month: "October 2025", dates: [12, 13, 14, 15, 16, 17, 18, 19] }
+        ],
+        gmat: [
+            { center: "GMAT Center A", address: "Hyderabad", month: "July 2025", dates: [1, 2, 3, 4, 5, 6, 7, 8] },
+            { center: "GMAT Center B", address: "Mumbai", month: "August 2025", dates: [5, 6, 7, 8, 9, 10, 11, 12] },
+            { center: "GMAT Center C", address: "Delhi", month: "September 2025", dates: [10, 11, 12, 13, 14, 15, 16, 17] },
+            { center: "GMAT Center D", address: "Bengaluru", month: "October 2025", dates: [2, 3, 4, 5, 6, 7, 8, 9] },
+            { center: "GMAT Center E", address: "Chennai", month: "November 2025", dates: [12, 13, 14, 15, 16, 17, 18, 19] }
+        ],
+        ielts: [
+            { center: "IELTS Center A", address: "Delhi", month: "June 2025", dates: [1, 2, 3, 4, 5, 6, 7, 8] },
+            { center: "IELTS Center B", address: "Bengaluru", month: "July 2025", dates: [5, 6, 7, 8, 9, 10, 11, 12] },
+            { center: "IELTS Center C", address: "Chennai", month: "August 2025", dates: [10, 11, 12, 13, 14, 15, 16, 17] },
+            { center: "IELTS Center D", address: "Mumbai", month: "September 2025", dates: [2, 3, 4, 5, 6, 7, 8, 9] },
+            { center: "IELTS Center E", address: "Kolkata", month: "October 2025", dates: [12, 13, 14, 15, 16, 17, 18, 19] }
+        ]
+    };
+
+    function renderTable(examKey, search = "") {
+        const data = examData[examKey].filter(row => row.center.toLowerCase().includes(search.toLowerCase()));
+        if (!data.length) {
+            examBody.innerHTML = `<tr><td colspan="3" class="no-data">No centers found for your search...</td></tr>`;
+            return;
+        }
+
+        let html = "";
+        data.forEach(row => {
+            html += `<tr>
+            <td data-label="TEST CENTERS">
+                <div style="font-weight:600;font-size:16px">${row.center}</div>
+                <div style="font-weight:400;font-size:12px">${row.address}</div>
+            </td>
+            <td data-label="MONTH"><span class="month-badge">${row.month}</span></td>
+            <td data-label="EXAM DATES">${row.dates.map(d => `<span class="exam-dates-box">${d}</span>`).join('')}</td>
+        </tr>`;
+        });
+        examBody.innerHTML = html;
+    }
+
+
+ examButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // highlight active button
+            examButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const examKey = btn.getAttribute('data-exam');
+
+            // Show the headings
+            examHeading.style.display = 'block';
+            examSubHeading.style.display = 'block';
+
+            // Update headings
+            examHeading.textContent = `${examKey.toUpperCase()} Exam Dates 2025`;
+            examSubHeading.textContent = "Find available test centers and their exam schedules";
+
+            // Render table
+            renderTable(examKey);
+        });
+    });
+
+    searchInput.addEventListener('input', () => {
+        const activeBtn = document.querySelector('.exam-btn.active');
+        if (activeBtn) {
+            renderTable(activeBtn.getAttribute('data-exam'), searchInput.value);
+        }
+    });
+</script>
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Column 1: Logo + About + Social Icons -->
+        <div class="footer-col footer-about">
+            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/logo2.png" alt="StudyBefikar Logo"
+                class="footer-logo">
+            <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                achieve their academic dreams abroad.</p>
+            <div class="footer-socials">
+                <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/9.png"
+                        alt="Instagram"></a>
+                <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/10.png"
+                        alt="Facebook"></a>
+                <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/11.png"
+                        alt="LinkedIn"></a>
+                <a href="#"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/12.png" alt="X"></a>
+            </div>
+        </div>
+        <div class="footer-right-columns">
+
+            <!-- Column 2: Services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="#">Education Loans</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Study Destinations -->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="#">USA</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">UK</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>info@studybefikar.com</p>
+                <p>+1 (555) 123-4567</p>
+
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="footer-line" />
+    <p class="footer-bottom">
+        © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+    </p>
+</footer>
+
+</body>
+
+</html>

@@ -475,27 +475,35 @@ body {
 .heading2 {
     color: #287781;
 }
-
-.trust-card , .read-more-btn , .read-less-btn{
+/* Shared button styles */
+.read-more-btn, 
+.read-less-btn {
+    height: 50px;
     background-color: #59898E33;
-    display: flex;
-    /* Use flexbox for centering */
-    justify-content: center;
-    /* Center horizontally */
-    margin: 20px auto;
-    /* Auto margins for centering block */
-    width: fit-content;
-    /* Shrink to content size */
+    margin: 20px auto;          /* centers horizontally */
+    display: block;             /* behave like block-level element */
+    width: fit-content;         /* shrink to content */
     padding: 6px 14px;
     border-radius: 6px;
-}
-
-.trust-card .trusted-text , .read-more-btn , .read-less-btn{
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
     font-size: 20px;
     color: #287781;
     line-height: 100%;
+    text-align: center;
+    cursor: pointer;
+    border-style: none;
+}
+
+/* Keep your trust card separate */
+.trust-card {
+    background-color: #59898E33;
+    padding: 6px 14px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    width: fit-content;
 }
 
 .bread {
@@ -652,18 +660,16 @@ body {
 /* Tab Navbar Container */
 .tab-nav-container {
     position: sticky;
-        /* keeps it fixed while scrolling */
-        top: 85px;
-        /* sticks to very top */
-        z-index: 1000;
-        /* stays above other elements */
-        background: #fff;
-        /* white background so text doesn't overlap page content */
-        margin-bottom: 30px;
-        padding: 5px 0;
-        /* optional: little padding for spacing */
-        border-bottom: 0.5px solid #ccc;
-        /* subtle separator */
+    top: 93px;
+    z-index: 999;
+    background: #fff;
+    margin-bottom: 30px;
+    padding: 5px 0;
+    border-bottom: 0.5px solid #ccc;
+
+    display: flex;               /* ✅ make flexbox */
+    justify-content: center;     /* ✅ center horizontally */
+    align-items: center;         /* ✅ align vertically */
 }
 
 /* Tabs Row */
@@ -671,17 +677,15 @@ body {
     display: flex;
     white-space: nowrap;
     overflow-x: auto;
-    /* In case small screens */
     gap: 10px;
     scrollbar-width: none;
-    /* Hide scrollbar Firefox */
-    margin-left: 20px;
+    margin: 0;                  /* ✅ remove margin-left */
 }
 
 .tab-nav::-webkit-scrollbar {
     display: none;
-    /* Hide scrollbar Chrome */
 }
+
 
 .tab-btn {
     display: inline-block;
@@ -893,10 +897,15 @@ html {
 /* University Cards */
 .university-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(624px, 1fr));
-    gap: 30px;
-    margin-left: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 624px)); /* flexible but max 624px */
+    gap: 40px;
+    justify-content: center;   /* center items inside the grid */
+    margin: 0 auto;            /* center grid itself */
+    max-width: 1370px;         /* ✅ keeps grid from stretching full width */
+    padding: 0 20px;           /* safe spacing for smaller screens */
+    margin-bottom: 40px;
 }
+
 
 .university-card {
     width: 620px;
@@ -1488,6 +1497,11 @@ h4 {
     transition: background 0.3s ease;
 }
 
+.btn-mock-test a {
+    color: white;
+    text-decoration: none;
+}
+
 .btn-mock-test:hover {
     background: #195057;
 }
@@ -1691,6 +1705,7 @@ h4 {
     overflow: hidden;
     width: calc((421px * 3) + (19px * 2));
     margin: 0 auto;
+    height: 660px;
 }
 
 .course-category {
@@ -1934,9 +1949,18 @@ h4 {
     transition: all 0.3s ease;
 }
 
+.btn-consult a {
+    color: #287781;
+    text-decoration: none;
+}
+
+.btn-consult a:hover {
+    color: white !important;
+}
+
 .btn-consult:hover {
     background: #287781;
-    color: #fff;
+    color: white !important;
 }
 
 .form-heading {
@@ -2113,6 +2137,11 @@ h4 {
 .learn-more-btn:hover .arrow {
     transform: translateX(3px);
     /* arrow moves slightly on hover */
+}
+
+.learn-more-btn a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Responsive Visa Card */

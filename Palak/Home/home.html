@@ -19,14 +19,19 @@
         <!--NavBar Section-->
         <nav class="navbar">
           <div class="navbar-left">
-            <img src="../images/Home/study-befikar1.png" alt="Logo" class="logo">
+            <a href="/Palak/Home/home.html">
+            <img src="/Palak/images/Home/study-befikar1.png" alt="Logo" class="logo">
+            </a>
           </div>
+
           <ul class="navbar-right" id="mobileNav">
         
+            <li><a href="/Palak/AboutUs/aboutUs.html" class="dropdown">About</a></li>
+
             <li class="dropdown">
-              <a href="#">Countries</a>
+              <a href="/Palak/USA/usa.html">Countries</a>
               <ul class="dropdown-content">
-                <li><a href="usa.html">USA</a></li>
+                <li><a href="/Palak/USA/usa.html">USA</a></li>
                 <li><a href="#">UK</a></li>
                 <li><a href="#">Canada</a></li>
                 <li><a href="#">Germany</a></li>
@@ -36,35 +41,35 @@
             <li class="dropdown">
               <a href="#">Loan</a>
               <ul class="dropdown-content">
-                <li><a href="../Loan/loanHome.html">Check Eligibility</a></li>
-                <li><a href="../Loan/bankdetail.html">Available Banks</a></li>
+                <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
               </ul>
             </li>
         
             <li class="dropdown">
-              <a href="#">Admission Counselling</a>
+              <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
               <ul class="dropdown-content">
-                <li><a href="index.html">Admission Process</a></li>
-                <li><a href="book-consultation.html">Book Consultation</a></li>
+                <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+                <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
                 <li><a href="#">Application Deadline</a></li>
                 <li><a href="#">University Finder</a></li>
               </ul>
             </li>
         
             <li class="dropdown">
-              <a href="#">Test Preparation</a>
+              <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
               <ul class="dropdown-content">
-                <li><a href="#">Test Prep Services</a></li>
-                <li><a href="#">Prepare for Exam</a></li>
+                <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                <li><a href="/Palak/exam_prep/examprep.html">Prepare for Exam</a></li>
                 <li><a href="#">Take a Mock Test</a></li>
-                <li><a href="#">Exam Deadlines</a></li>
+                <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
               </ul>
             </li>
         
             <li class="dropdown">
               <a href="#">All Exams</a>
               <ul class="dropdown-content">
-                <li><a href="#">SAT</a></li>
+                <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
                 <li><a href="#">GMAT</a></li>
                 <li><a href="#">GRE</a></li>
                 <li><a href="#">IELTS</a></li>
@@ -75,18 +80,18 @@
               <a href="#">Services</a>
               <ul class="dropdown-content">
                 <li><a href="#">All Services</a></li>
-                <li><a href="#">Visa Assistance</a></li>
+                <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
                 <li><a href="#">Profile Evaluation</a></li>
                 <li><a href="#">Apply to University</a></li>
               </ul>
             </li>
         
-            <li><a href="#" class="dropdown">Notice Board</a></li>
-            <li><a href="#" class="dropdown">About Us</a></li>
-            <li><a href="#" class="dropdown">Contact Us</a></li>
+            <li><a href="/Palak/NoticeBoard/noticeBoard.html" class="dropdown">Notice Board</a></li>
+            
         
-            <li><a href="signup.html" class="contact-btn">Login</a></li>
+            <li><a href="signup.html" class="contact-btn">Contact Us</a></li>
           </ul>
+
           <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </nav>
         
@@ -199,7 +204,9 @@
           <div class="trustBadge">
             <img src="../images/Home/herosection/star.png" alt="Icon" /> Trusted by 10,000+ Students
           </div>
-          <h1>Welcome to <span class="highlight">Study Befikar</span></h1>
+          <h1>Welcome to &nbsp;
+            <span class="highlight">  Study Befikar</span>
+          </h1>
           <p>
             Empowering students to confidently plan their study abroad journey
             with expert guidance and personalized support.
@@ -207,25 +214,36 @@
 
           <div class="heroButtons">
             <button class="primaryBtn"  id="openModalBtn">Start your journey →</button>
-            <button class="secondaryBtn">Book Consultation</button>
+            <a href="/Palak/Admission_counselling/book-consultation.html" class="secondaryBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="24px" viewBox="0 0 24 24">
+                <g class="videocam-outline">
+                  <g fill="currentColor" fill-rule="evenodd" class="Vector" clip-rule="evenodd">
+                    <path d="M6 5h7a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                    <path d="M20 14.887a.5.5 0 0 1-.832.373l-2-1.777a.5.5 0 0 1-.168-.374V10.83a.5.5 0 0 1 .172-.377l2-1.736a.5.5 0 0 1 .828.378v5.79Zm-4.139-5.944l2-1.735C19.482 5.803 22 6.953 22 9.096v5.79c0 2.158-2.549 3.302-4.16 1.87l-2-1.779A2.5 2.5 0 0 1 15 13.11v-2.28a2.5 2.5 0 0 1 .861-1.888Z"/>
+                  </g>
+                </g>
+              </svg>
+              Book Consultation
+            </a>
+
           </div>
           
-          <!-- Modal -->
+          <!-- modal -->
           <div id="serviceModal" class="modal">
             <div class="modal-content">
-              <!-- Left Side: Image -->
+              <!-- leftside -->
               <div class="modal-left">
                 <img src="../images/Home/herosection/modal-img.jpg" alt="Services" />
               </div>
           
-              <!-- Right Side: Content -->
+              <!-- rightSide -->
               <div class="modal-right">
                 <button class="close">&times;</button>
                 <h2>Please choose one of our services</h2>
-                <button class="service-btn">Loan Services</button>
-                <button class="service-btn">Admission Counseling</button>
-                <button class="service-btn">Test Preparation</button>
-                <button class="service-btn">Book Consultation</button>
+                <a href="/Palak/Loan/loanHome.html" class="modelLinks">Loan Services</a>
+                <a href="/Palak/Admission_counselling/admit.html" class="modelLinks">Admission Counseling</a>
+                <a href="/Palak/Test_Prep/testprep.html" class="modelLinks">Test Preparation</a>
+                <a href="/Palak/Admission_counselling/book-consultation.html" class="modelLinks">Book Consultation</a>
               </div>
             </div>
           </div>
@@ -286,71 +304,90 @@
 <!-- why choose us section -->
 
  <section class="whySection">
-    <div class="headingContent">
-      <h2 class="heading">Why Choose Us</h2>
-      <p class="subheading">India’s first digital marketplace for study abroad students</p>
-    </div>
+  <div class="headingContent">
+    <h2 class="heading">Why Choose Us</h2>
+    <p class="subheading">India’s first digital marketplace for study abroad students</p>
+  </div>
 
-    <div class="gridContainer" id="cardGrid">
-    </div>
-  </section>
+  <div class="gridContainer" id="cardGrid">
+  </div>
+</section>
 
-
-  <script>
-    const cardData = [
-      {
-        icon: "../images/Home/whychooseus/frame18-ppl.png",
-        title: "All Consultants in One Place",
-        desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
-      },
-      {
-        icon: "../images/Home/whychooseus/frame18-star.png",
-        title: "Top Profile Evaluators in India",
-        desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
-      },
-      {
-        icon: "../images/Home/whychooseus/frame18-building.png",
-        title: "Find Best Banks & Low Interest Rates",
-        desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
-      },
-      {
-        icon: "../images/Home/whychooseus/frame18-docs.png",
-        title: "Send Documents in One Click",
-        desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
+<script>
+  const cardData = [
+    {
+      icon: "../images/Home/whychooseus/frame18-ppl.png",
+      title: "All Consultants in One Place",
+      desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
+      links: {
+        explore: "/Palak/Admission_counselling/admit.html",
+        knowMore: "/Palak/exam_prep/examprep.html",
+        bookNow: "/Palak/Admission_Counselling/book-consultation.html"
       }
-    ];
+    },
+    {
+      icon: "../images/Home/whychooseus/frame18-star.png",
+      title: "Top Profile Evaluators in India",
+      desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
+      links: {
+        explore: "/Palak/Admission_counselling/admit.html",
+        knowMore: "/Palak/exam_prep/examprep.html",
+        bookNow: "/Palak/Admission_Counselling/book-consultation.html"
+      }
+    },
+    {
+      icon: "../images/Home/whychooseus/frame18-building.png",
+      title: "Find Best Banks & Low Interest Rates",
+      desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
+      links: {
+        explore: "/Palak/Loan/loanHome.html",
+        knowMore: "/Palak/Loan/bankDetail.html",
+        bookNow: "/Palak/Admission_Counselling/book-consultation.html"
+      }
+    },
+    {
+      icon: "../images/Home/whychooseus/frame18-docs.png",
+      title: "Send Documents in One Click",
+      desc: "Access a wide range of experienced study abroad consultants, compare and connect with these consultants, all in one digital platform.",
+      links: {
+        explore: "/Palak/Loan/loanHome.html",
+        knowMore: "/Palak/Loan/bankDetail.html",
+        bookNow: "/Palak/Admission_Counselling/book-consultation.html"
+      }
+    }
+  ];
 
-    const arrowIcon = "../images/Home/whychooseus/right-arrow.png";
+  const arrowIcon = "../images/Home/whychooseus/right-arrow.png";
+  const cardGrid = document.getElementById("cardGrid");
 
-    const cardGrid = document.getElementById("cardGrid");
+  cardData.forEach(card => {
+    const cardEl = document.createElement("div");
+    cardEl.className = "card";
 
-    cardData.forEach(card => {
-      const cardEl = document.createElement("div");
-      cardEl.className = "card";
-
-      cardEl.innerHTML = `
-        <div class="cardContent">
-          <img src="${card.icon}" alt="icon" class="icon" />
-          <h3 class="cardTitle">${card.title}</h3>
-          <p class="cardDesc">${card.desc}</p>
-          <div class="buttonGroup">
-            <button class="exploreBtn">
-              <span class="exploreText">Explore</span>
-              <img src="${arrowIcon}" alt="arrow" />
-            </button>
-            <button class="knowMoreBtn">
-              <span class="knowMoreText">Know More</span>
-            </button>
-            <button class="bookNowBtn">
-              <span class="bookNowText">Book Now</span>
-            </button>
-          </div>
+    cardEl.innerHTML = `
+      <div class="cardContent">
+        <img src="${card.icon}" alt="icon" class="icon" />
+        <h3 class="cardTitle">${card.title}</h3>
+        <p class="cardDesc">${card.desc}</p>
+        <div class="buttonGroup">
+          <a href="${card.links.explore}" class="exploreBtn">
+            <span class="exploreText">Explore</span>
+            <img src="${arrowIcon}" alt="arrow" />
+          </a>
+          <a href="${card.links.knowMore}" class="knowMoreBtn">
+            <span class="knowMoreText">Know More</span>
+          </a>
+          <a href="${card.links.bookNow}" class="bookNowBtn">
+            <span class="bookNowText">Book Now</span>
+          </a>
         </div>
-      `;
+      </div>
+    `;
 
-      cardGrid.appendChild(cardEl);
-    });
-  </script>
+    cardGrid.appendChild(cardEl);
+  });
+</script>
+
 
 
 
@@ -385,19 +422,38 @@
     heading: "Test Preparation",
     text: `Preparing for standardized tests like TOEFL, IELTS, GRE, or GMAT? Study Befikar provides expert guidance, study materials, and mock tests to help you ace your exams and reach your dream university. Our personalized approach ensures you get the right prep at the right time.`,
     cards: [
-      { 
-        header: "TOEFL", 
-        subHeader: "Test of English as a Foreign Language"
-      },
-      { 
-        header: "IELTS", 
-        subHeader: "International English Language Testing System"
-      },
-      { 
-        header: "GMAT", 
-        subHeader: "Graduate Management Admission Test"
-      },
-    ]
+  { 
+    header: "GRE", 
+    subHeader: "Graduate Record Examinations",
+    link: "/Palak/All_Exams/sat.html"
+  },
+  { 
+    header: "GMAT", 
+    subHeader: "Graduate Management Admission Test",
+    link: "/Palak/All_Exams/sat.html"
+  },
+  { 
+    header: "IELTS", 
+    subHeader: "International English Language Testing System",
+    link: "/Palak/All_Exams/sat.html"
+  },
+  { 
+    header: "SAT", 
+    subHeader: "Scholastic Assessment Test",
+    link: "/Palak/All_Exams/sat.html"
+  },
+  { 
+    header: "PTE", 
+    subHeader: "Pearson Test of English",
+    link: "/Palak/All_Exams/sat.html"
+  },
+  { 
+    header: "TOEFL", 
+    subHeader: "Test of English as a Foreign Language",
+    link: "/Palak/All_Exams/sat.html"
+  }, 
+]
+
   },
 
 
@@ -406,62 +462,64 @@
     text: `At Study Befikar, our Admission Consulting is designed to simplify your entire study abroad journey, from personalized profile evaluations to final application submission. We guide you every step of the way. Explore our countries.`,
 
     countries: [
-    {
-      name: "United States of America",
-      desc: "Top universities and career opportunities.",
-      countryImg: "../images/Home/country/usa.png",
-      countrySpecificImg: "../images/Home/country/usa1.png"
-    },
+  {
+    name: "United States of America",
+    desc: "Pursue higher education in the France and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.",
+    countryImg: "../images/Home/country/usa.png",
+    countrySpecificImg: "../images/Home/country/usa1.png",
+    link: "/Palak/USA/usa.html"
+  },
+  {
+    name: "United Kingdom",
+    desc: "Shorter programs and globally ranked schools.",
+    countryImg: "../images/Home/country/uk.png",
+    countrySpecificImg: "../images/Home/country/uk1.jpg",
+    link: "/countries/uk.html"
+  },
+  {
+    name: "New Zealand",
+    desc: "High-quality education with natural beauty.",
+    countryImg: "../images/Home/country/nz.png",
+    countrySpecificImg: "../images/Home/country/nz1.jpg",
+    link: "/countries/nz.html"
+  },
+  {
+    name: "Germany",
+    desc: "Free or low-tuition education.",
+    countryImg: "../images/Home/country/germany.png",
+    countrySpecificImg: "../images/Home/country/germany1.jpg",
+    link: "/countries/germany.html"
+  },
+  {
+    name: "France",
+    desc: "Quality education and lifestyle.",
+    countryImg: "../images/Home/country/france.png",
+    countrySpecificImg: "../images/Home/country/france1.png",
+    link: "/countries/france.html"
+  },
+  {
+    name: "Canada",
+    desc: "Affordable education with great PR prospects.",
+    countryImg: "../images/Home/country/canada.png",
+    countrySpecificImg: "../images/Home/country/canada1.png",
+    link: "/countries/canada.html"
+  },
+  {
+    name: "Ireland",
+    desc: "Post-study work and job-rich economy.",
+    countryImg: "../images/Home/country/ireland.png",
+    countrySpecificImg: "../images/Home/country/ireland1.png",
+    link: "/countries/ireland.html"
+  },
+  {
+    name: "Singapore",
+    desc: "Top student cities with vibrant culture.",
+    countryImg: "../images/Home/country/singapore.png",
+    countrySpecificImg: "../images/Home/country/singapore1.png",
+    link: "/countries/singapore.html"
+  },
+],
 
-    {
-      name: "United Kingdom",
-      desc: "Shorter programs and globally ranked schools.",
-      countryImg: "../images/Home/country/uk.png",
-      countrySpecificImg: "../images/Home/country/uk1.jpg"
-    },
-
-    {
-      name: "New Zealand",
-      desc: "High-quality education with natural beauty.",
-      countryImg: "../images/Home/country/nz.png",
-      countrySpecificImg: "../images/Home/country/nz1.jpg"
-    },
-
-    {
-      name: "Germany",
-      desc: "Free or low-tuition education.",
-      countryImg: "../images/Home/country/germany.png",
-      countrySpecificImg: "../images/Home/country/germany1.jpg"
-    },
-
-    {
-      name: "France",
-      desc: "Quality education and lifestyle.",
-      countryImg: "../images/Home/country/france.png",
-      countrySpecificImg: "../images/Home/country/france1.png"
-    },
-
-    {
-      name: "Canada",
-      desc: "Affordable education with great PR prospects.",
-      countryImg: "../images/Home/country/canada.png",
-      countrySpecificImg: "../images/Home/country/canada1.png"
-    },
-
-    {
-      name: "Ireland",
-      desc: "Post-study work and job-rich economy.",
-      countryImg: "../images/Home/country/ireland.png",
-      countrySpecificImg: "../images/Home/country/ireland1.png"
-    },
-
-    {
-      name: "Singapore",
-      desc: "Top student cities with vibrant culture.",
-      countryImg: "../images/Home/country/singapore.png",
-      countrySpecificImg: "../images/Home/country/singapore1.png"
-    },
-  ],
 
      admConsult: {
   heading: "Our Admission Consulting Process",
@@ -494,6 +552,7 @@
  loan: {
   heading: "Education Loans",
   text: "Financing your education abroad is easier with Study Befikar. We help you find the best loan options, guide you through the application process, and ensure you get the lowest interest rates. From eligibility checks to document submission, we've got you covered.",
+  loanApplyNowBtn: "/Palak/Loan/loanHome.html",
 
   cards: [
     {
@@ -590,58 +649,57 @@
   
    //admission
    if (tab === "admission") {
-      const isMobile = window.innerWidth <= 768;
-      const maxVisible = isMobile ? 4 : 8;
+  const isMobile = window.innerWidth <= 768;
+  const maxVisible = isMobile ? 4 : 8;
 
-      const admissionHTML = `
-      
-        <div class="Servicecard">
-          <h3 class="cardHeading">${tabData.heading}</h3>
-          <p class="cardText">${tabData.text}</p>
-          <div class="admissionGrid">
-            ${tabData.countries.map((country, i) => `
-              <div class="admissionCard ${isMobile && i >= maxVisible ? 'hiddenCard' : ''}">
-                <div class="countryImgWrapper">
-                  <img src="${country.countryImg}" class="countryImg" alt="${country.name} Flag" />
-                </div>
-                <img src="${country.countrySpecificImg}" class="countrySpecificImg" alt="${country.name}" />
-                <div class="countryNameLabel">${country.name}</div>
-                <div class="hoverContent">
-                  <h4>${country.name}</h4>
-                  <p>${country.desc}</p>
-                  <button class="visitCountry">
-                    Explore <img src="../Images/Home/country/right-arrow.png" alt="Arrow" />
-                  </button>
-                </div>
-              </div>
-            `).join('')}
+  const admissionHTML = `
+    <div class="Servicecard">
+      <h3 class="cardHeading">${tabData.heading}</h3>
+      <p class="cardText">${tabData.text}</p>
+      <div class="admissionGrid">
+        ${tabData.countries.map((country, i) => `
+          <div class="admissionCard ${isMobile && i >= maxVisible ? 'hiddenCard' : ''}">
+            <div class="countryImgWrapper">
+              <img src="${country.countryImg}" class="countryImg" alt="${country.name} Flag" />
+            </div>
+            <img src="${country.countrySpecificImg}" class="countrySpecificImg" alt="${country.name}" />
+            <div class="countryNameLabel">${country.name}</div>
+            <div class="hoverContent">
+              <h4>${country.name}</h4>
+              <p>${country.desc}</p>
+              <a href="${country.link}" class="visitCountry">
+                Explore <img src="../Images/Home/country/right-arrow.png" alt="Arrow" />
+              </a>
+            </div>
           </div>
-          ${isMobile ? `<button id="viewMoreBtn" onclick="toggleViewMore()">View More</button>` : ''}
-        </div>
-
-        <!-- admission consulting -->
-<div class="admConsultOuter">
-  <div class="admConsultWrapper">
-    <h3 class="admConsultHeading">${tabData.admConsult.heading}</h3>
-    <p class="admConsultSubheading">${tabData.admConsult.subheading}</p>
-
-    <div class="admConsultGrid">
-      ${tabData.admConsult.cards.map(card => `
-        <div class="admConsultCard flash">
-          <div class="cardNumber">${card.number}</div>
-          <h4 class="cardTitle">${card.heading}</h4>
-          <p class="cardDesc">${card.subheading}</p>
-        </div>
-      `).join('')}
+        `).join('')}
+      </div>
+      ${isMobile ? `<button id="viewMoreBtn" onclick="toggleViewMore()">View More</button>` : ''}
     </div>
-  </div>
-</div>
 
-      `;
+    <!-- admission consulting -->
+    <div class="admConsultOuter">
+      <div class="admConsultWrapper">
+        <h3 class="admConsultHeading">${tabData.admConsult.heading}</h3>
+        <p class="admConsultSubheading">${tabData.admConsult.subheading}</p>
 
-      document.getElementById("tabContent").innerHTML = admissionHTML;
-      return;
-    }
+        <div class="admConsultGrid">
+          ${tabData.admConsult.cards.map(card => `
+            <div class="admConsultCard flash">
+              <div class="cardNumber">${card.number}</div>
+              <h4 class="cardTitle">${card.heading}</h4>
+              <p class="cardDesc">${card.subheading}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.getElementById("tabContent").innerHTML = admissionHTML;
+  return;
+}
+
 
     
     //loan
@@ -649,6 +707,7 @@
       const loanHTML = `
         <h3 class="cardHeading">${tabData.heading}</h3>
         <p class="cardText">${tabData.text}</p>
+        <a href="${tabData.loanApplyNowBtn}" class="cardLoanApplyBtn">Apply Now</a>
         <div class="loanCardsContainer">
           ${tabData.cards.map((card, i) => `
             <div class="loanCard card-${i + 1}" style="background: ${card.bg}">
@@ -689,6 +748,8 @@
     <div class="testCardCarouselContainer">
       <div class="testCardCarouselTrack" id="testCardCarouselTrack">
         ${tabData.cards.map((card, index) => `
+
+         <a href="${card.link}" class="testCardLink">
           <div class="testCard testCard-${index + 1}">
             <div class="testCardOverlay">
               <div class="testCardContent">
@@ -697,20 +758,17 @@
               </div>
             </div>
           </div>
+            </a>
+
         `).join('')}
       </div>
     </div>
 
    <!-- indicators -->
-    <div class="testCardIndicators">
-      <div class="testCardIndicator active" onclick="goToTestSlide(0)"></div>
-      <div class="testCardIndicator ellipse" onclick="goToTestSlide(1)"></div>
-      <div class="testCardIndicator" onclick="goToTestSlide(2)"></div>
-    </div>
-  </div>
-
-`;
     
+  </div>
+`;
+
     document.getElementById("tabContent").innerHTML = cardHTML;
   }
 

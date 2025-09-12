@@ -17,28 +17,32 @@
     <!--NavBar Section-->
     <nav class="navbar">
         <div class="navbar-left">
-            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo" class="logo">
+            <a href="/Palak/Home/home.html"></a>
+            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo"
+                class="logo">
+            </a>
+    
         </div>
         <ul class="navbar-right" id="mobileNav">
-
+    
             <li class="dropdown">
-                <a href="#">Countries</a>
+                <a href="/Palak/USA/usa.html">Countries</a>
                 <ul class="dropdown-content">
-                    <li><a href="usa.html">USA</a></li>
+                    <li><a href="/Palak/USA/usa.html">USA</a></li>
                     <li><a href="#">UK</a></li>
                     <li><a href="#">Canada</a></li>
                     <li><a href="#">Germany</a></li>
                 </ul>
             </li>
-
+    
             <li class="dropdown">
                 <a href="#">Loan</a>
                 <ul class="dropdown-content">
-                    <li><a href="check-eligibility.html">Check Eligibility</a></li>
-                    <li><a href="available-banks.html">Available Banks</a></li>
+                    <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                    <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
                 </ul>
             </li>
-
+    
             <li class="dropdown">
                 <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
                 <ul class="dropdown-content">
@@ -48,42 +52,46 @@
                     <li><a href="#">University Finder</a></li>
                 </ul>
             </li>
-
+    
             <li class="dropdown">
                 <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
                 <ul class="dropdown-content">
                     <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
                     <li><a href="#">Prepare for Exam</a></li>
-                    <li><a href="#">Take a Mock Test</a></li>
-                    <li><a href="#">Exam Deadlines</a></li>
+                    <li><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></li>
+                    <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
                 </ul>
             </li>
-
+    
             <li class="dropdown">
                 <a href="#">All Exams</a>
                 <ul class="dropdown-content">
-                    <li><a href="#">SAT</a></li>
-                    <li><a href="#">GMAT</a></li>
-                    <li><a href="#">GRE</a></li>
-                    <li><a href="#">IELTS</a></li>
+                    <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
+                    <li><a href="/Palak/All_Exams/GMAT.html">GMAT</a></li>
+                    <li><a href="/Palak/All_Exams/GRE.html">GRE</a></li>
+                    <li><a href="/Palak/All_Exams/IELTS.html">IELTS</a></li>
+                    <li><a href="/Palak/All_Exams/PTE.html">PTE</a></li>
+                    <li><a href="/Palak/All_Exams/ACT.html">ACT</a></li>
+                    <li><a href="/Palak/All_Exams/TOEFL.html">TOEFL</a></li>
+                    <li><a href="/Palak/All_Exams/Duolingo.html">Duolingo</a></li>
                 </ul>
             </li>
-
+    
             <li class="dropdown">
                 <a href="#">Services</a>
                 <ul class="dropdown-content">
                     <li><a href="#">All Services</a></li>
-                    <li><a href="#">Visa Assistance</a></li>
+                    <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
                     <li><a href="#">Profile Evaluation</a></li>
                     <li><a href="#">Apply to University</a></li>
                 </ul>
             </li>
-
+    
             <li><a href="#" class="dropdown">Notice Board</a></li>
             <li><a href="#" class="dropdown">About Us</a></li>
             <li><a href="#" class="dropdown">Contact Us</a></li>
-
-            <li><a href="signup.html" class="contact-btn">Login</a></li>
+    
+            <li><a href="/Palak/Login Pages/signin.html" class="contact-btn">Login</a></li>
         </ul>
         <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
     </nav>
@@ -207,8 +215,6 @@
         </div>
     </section>
 
-
-
     <section class="consultation-section">
         <div class="consultation-heading">
             <h2>Book Your Free Consultation</h2>
@@ -240,7 +246,7 @@
         <div class="consultation-form-card" id="formCard">
             <!-- Step 1: Personal Info -->
             <div class="form-header">Personal Information</div>
-            <form class="consultation-form" id="consultationForm">
+            <form id="consultationForm" class="consultation-form" action="/Palak/Admission_counselling/confirmation.html" method="GET">
                 <div class="row">
                     <div class="form-group">
                         <label for="fullName">Full Name <span class="required">*</span></label>
@@ -282,8 +288,7 @@
 
                 <!-- ✅ Added class: academic-field -->
                 <div class="degree-options hidden academic-field">
-                    <label class="degree-label">Which degree do you want to pursue? <span
-                            class="required">*</span></label>
+                    <label class="degree-label">Which degree do you want to pursue? <span class="required">*</span></label>
                     <div class="degree-cards" id="degreeCardGroup">
                         <label class="degree-card">
                             <input type="radio" name="degree" value="Bachelor" />
@@ -334,6 +339,7 @@
                                 <div class="dropdown-option">Spring 2029</div>
                             </div>
                         </div>
+                        <input type="hidden" name="intake" value="">
                     </div>
         
                     <!-- Preferred Country -->
@@ -355,6 +361,7 @@
                                  <div class="dropdown-option">Others</div>
                             </div>
                         </div>
+                        <input type="hidden" name="country" value="">
                     </div>
 
                 </div>
@@ -404,9 +411,7 @@
                             <div class="dropdown-option">Not applicable</div>
                         </div>
                     </div>
-                    <input type="hidden" id="exam" name="exam" />
-
-
+                    
                     <!-- Score Textbox -->
                     <div class="form-group full hidden" id="scoreField">
                         <input type="text" id="examScore" placeholder="Enter exam score" />
@@ -430,202 +435,251 @@
                     <!-- Submit Button -->
                     <div class="button-wrapper">
                         <div class="form-group full">
-                            <button type="button" class="submit-btn book-btn"
-                                onclick="window.location.href='confirmation.html'">
+                            <button type="submit" class="submit-btn book-btn">
                                 Book Consultation <span class="arrow">→</span>
                             </button>
+
 
                         </div>
                     </div>
 
                 </div>
-
-
-
     </section>
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("consultationForm");
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const examDropdown = document.getElementById("examDropdown");
-            const examTrigger = examDropdown.querySelector(".dropdown-trigger");
-            const examOptions = examDropdown.querySelectorAll(".dropdown-option");
-            const examHiddenInput = document.getElementById("exam");
-            const scoreField = document.getElementById("scoreField");
+        // Inputs
+        const fullName = document.getElementById("fullName");
+        const phone = document.getElementById("phone");
+        const email = document.getElementById("email");
+        const course = document.getElementById("course");
 
-            examTrigger.addEventListener("click", (e) => {
-                e.stopPropagation(); // Prevent closing immediately
-                document.querySelectorAll('.additional-dropdown').forEach(d => {
-                    if (d !== examDropdown) d.classList.remove('active');
-                });
-                examDropdown.classList.toggle("active");
+        // Sections
+        const academicFields = document.querySelectorAll(".academic-field, .academic-header");
+        const additionalFields = document.querySelectorAll(".additional-field, .additional-header");
+
+        const step2 = document.getElementById("step2");
+        const step3 = document.getElementById("step3");
+
+        const visaRadios = Array.from(document.getElementsByName("visa") || []);
+        const visaCountryGroup = document.getElementById("visaCountryGroup");
+        const examSelectHidden = document.getElementById("exam");
+
+        // Create or get error span
+        function getErrorSpan(input) {
+            let el = input.parentNode.querySelector(".error-msg");
+            if (!el) {
+                el = document.createElement("span");
+                el.className = "error-msg";
+                el.style.color = "red";
+                el.style.fontSize = "0.8em";
+                el.style.display = "block";
+                input.parentNode.appendChild(el);
+            }
+            return el;
+        }
+
+        // Validations with messages
+        function validateName(show = false) {
+            const v = fullName.value.trim();
+            const el = getErrorSpan(fullName);
+            if (!v) { if (show) el.textContent = "Full name is required"; return false; }
+            if (!/^[A-Za-z\s'-]+$/.test(v)) { if (show) el.textContent = "Name must contain only letters"; return false; }
+            el.textContent = ""; return true;
+        }
+
+        function validatePhone(show = false) {
+            const digits = phone.value.replace(/\D/g, "");
+            const el = getErrorSpan(phone);
+            if (digits.length !== 10) { if (show) el.textContent = "Enter a valid 10-digit phone number"; return false; }
+            el.textContent = ""; return true;
+        }
+
+        function validateEmail(show = false) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const el = getErrorSpan(email);
+            if (!re.test(email.value.trim())) { if (show) el.textContent = "Enter a valid email"; return false; }
+            el.textContent = ""; return true;
+        }
+
+        function validateGender(show = false) {
+            const checked = document.querySelector('input[name="gender"]:checked');
+            if (!checked && show) {
+                const group = document.querySelector(".gender-group");
+                let el = group.querySelector(".error-msg");
+                if (!el) {
+                    el = document.createElement("span");
+                    el.className = "error-msg";
+                    el.style.color = "red";
+                    el.style.fontSize = "0.8em";
+                    group.appendChild(el);
+                }
+                el.textContent = "Please select gender";
+            } else {
+                const el = document.querySelector(".gender-group .error-msg");
+                if (el) el.textContent = "";
+            }
+            return !!checked;
+        }
+
+        function validateStep1(show = false) {
+            return validateName(show) && validatePhone(show) && validateEmail(show) && validateGender(show);
+        }
+
+        function validateStep2() {
+            const degree = document.querySelector('input[name="degree"]:checked');
+            const intake = document.querySelector('input[name="intake"]').value.trim();
+            const country = document.querySelector('input[name="country"]').value.trim();
+            const courseVal = course.value.trim();
+            return degree && intake && country && courseVal;
+        }
+
+        // Reveal steps
+        function revealNextSteps() {
+            if (validateStep1(true)) {
+                academicFields.forEach(el => el.classList.remove("hidden"));
+                step2.classList.add("active");
+            } else {
+                step2.classList.remove("active");
+                step3.classList.remove("active");
+                academicFields.forEach(el => el.classList.add("hidden"));
+                additionalFields.forEach(el => el.classList.add("hidden"));
+                return;
+            }
+            if (validateStep2()) {
+                additionalFields.forEach(el => el.classList.remove("hidden"));
+                step3.classList.add("active");
+            } else {
+                additionalFields.forEach(el => el.classList.add("hidden"));
+                step3.classList.remove("active");
+            }
+        }
+
+        // Listeners for step 1
+        [fullName, phone, email].forEach(inp => {
+            inp.addEventListener("input", () => { validateStep1(true); revealNextSteps(); });
+            inp.addEventListener("blur", () => { validateStep1(true); revealNextSteps(); });
+        });
+        document.querySelectorAll('input[name="gender"]').forEach(radio => {
+            radio.addEventListener("change", () => { validateStep1(true); revealNextSteps(); });
+        });
+
+        // Degree selection
+        document.querySelectorAll(".degree-card").forEach(card => {
+            card.addEventListener("click", () => {
+                document.querySelectorAll(".degree-card").forEach(c => c.classList.remove("active"));
+                card.classList.add("active");
+                card.querySelector("input").checked = true;
+                revealNextSteps();
+            });
+        });
+
+        // Attach listeners for Step 2 fields
+        document.querySelectorAll('input[name="degree"], input[name="intake"], input[name="country"], #course')
+            .forEach(inp => {
+                inp.addEventListener("input", revealNextSteps);
+                inp.addEventListener("change", revealNextSteps);
             });
 
-            examOptions.forEach(option => {
+
+        // Visa toggle
+        visaRadios.forEach(r => r.addEventListener("change", () => {
+            visaCountryGroup.classList.toggle("hidden", r.value !== "yes");
+        }));
+        
+        // Dropdown handling
+        document.querySelectorAll(".custom-dropdown, .additional-dropdown").forEach(dropdown => {
+            const trigger = dropdown.querySelector(".dropdown-trigger");
+            const options = dropdown.querySelectorAll(".dropdown-option");
+            const hiddenInput = dropdown.nextElementSibling;
+
+            trigger.addEventListener("click", (e) => {
+                e.stopPropagation();
+                document.querySelectorAll(".custom-dropdown, .additional-dropdown").forEach(d => {
+                    if (d !== dropdown) d.classList.remove("active");
+                });
+                dropdown.classList.toggle("active");
+            });
+
+            options.forEach(option => {
                 option.addEventListener("click", () => {
-                    examTrigger.textContent = option.textContent + " ▾";
-                    examHiddenInput.value = option.textContent;
-                    examDropdown.classList.remove("active");
+                    const text = option.textContent.trim();
+                    trigger.textContent = text + " ▾";
+                    dropdown.classList.remove("active");
+                    if (hiddenInput) hiddenInput.value = text;
+                    if (dropdown.id === "examDropdown" && examSelectHidden) examSelectHidden.value = text;
 
-                    if (option.textContent !== "") {
-                        scoreField.classList.remove("hidden");
-                    } else {
-                        scoreField.classList.add("hidden");
-                    }
-                });
-            });
+                    // --- Exam specific handling ---
+                    if (dropdown.id === "examDropdown") {
+                        const scoreField = document.getElementById("scoreField");
+                        let customExamField = document.getElementById("customExamField");
 
-            // Close exam dropdown if clicked outside
-            document.addEventListener("click", function (e) {
-                if (!examDropdown.contains(e.target)) {
-                    examDropdown.classList.remove("active");
-                }
-            });
-        });
-    </script>
+                        // Create exam name field if not exists
+                        if (!customExamField) {
+                            customExamField = document.createElement("div");
+                            customExamField.className = "form-group full hidden";
+                            customExamField.id = "customExamField";
+                            customExamField.innerHTML = `<input type="text" id="customExam" placeholder="Enter exam name" />`;
+                            scoreField.parentNode.insertBefore(customExamField, scoreField);
+                        }
 
+                        const customExamInput = customExamField.querySelector("#customExam");
 
+                        if (text === "Not applicable") {
+                            // Hide both
+                            customExamField.classList.add("hidden");
+                            scoreField.classList.add("hidden");
+                            customExamInput.value = "";
+                        } else if (text === "OTHER") {
+                            // Allow user to type their own exam name
+                            customExamField.classList.remove("hidden");
+                            customExamInput.removeAttribute("readonly");  // ✅ make editable
+                            customExamInput.value = "";
+                            scoreField.classList.add("hidden");
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll('.custom-dropdown').forEach(dropdown => {
-                const trigger = dropdown.querySelector('.dropdown-trigger');
-                const options = dropdown.querySelectorAll('.dropdown-option');
-
-                trigger.addEventListener('click', (e) => {
-                    e.stopPropagation(); // prevent global click handler from firing
-                    document.querySelectorAll('.custom-dropdown').forEach(d => {
-                        if (d !== dropdown) d.classList.remove('active');
-                    });
-                    dropdown.classList.toggle('active');
-                });
-
-                options.forEach(option => {
-                    option.addEventListener('click', () => {
-                        trigger.textContent = option.textContent + ' ▾';
-                        dropdown.classList.remove('active');
-                    });
-                });
-            });
-
-            // Close dropdown if clicked outside
-            document.addEventListener('click', function (e) {
-                document.querySelectorAll('.custom-dropdown').forEach(dropdown => {
-                    if (!dropdown.contains(e.target)) {
-                        dropdown.classList.remove('active');
-                    }
-                });
-            });
-        });
-    </script>
-
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const fullName = document.getElementById("fullName");
-            const phone = document.getElementById("phone");
-            const email = document.getElementById("email");
-            const course = document.getElementById("course");
-
-            const academicFields = document.querySelectorAll(".academic-field, .academic-header");
-            const additionalFields = document.querySelectorAll(".additional-field, .additional-header");
-
-            const step2 = document.getElementById("step2");
-            const step3 = document.getElementById("step3");
-
-            const visaRadios = document.getElementsByName("visa");
-            const visaCountryGroup = document.getElementById("visaCountryGroup");
-
-            const examSelect = document.getElementById("exam");
-            const scoreField = document.getElementById("scoreField");
-
-            // STEP 1 VALIDATION
-            function validateStep1() {
-                const gender = document.querySelector('input[name="gender"]:checked');
-                return fullName.value.trim() && phone.value.trim() && email.value.trim() && gender;
-            }
-
-            // STEP 2 VALIDATION
-            function validateStep2() {
-                const selectedDegree = document.querySelector('input[name="degree"]:checked');
-                const intake = document.querySelector('#intakeDropdown .dropdown-trigger').textContent.includes('Select') ? '' : 'chosen';
-                const country = document.querySelector('#countryDropdown .dropdown-trigger').textContent.includes('Select') ? '' : 'chosen';
-                const courseValue = course.value.trim();
-                return selectedDegree && intake && country && courseValue;
-            }
-
-            // STEP DISPLAY LOGIC
-            function revealNextSteps() {
-                if (validateStep1()) {
-                    academicFields.forEach(el => el.classList.remove("hidden"));
-                    step2.classList.add("active");
-
-                    if (validateStep2()) {
-                        step3.classList.add("active");
-                        additionalFields.forEach(el => el.classList.remove("hidden"));
-                    } else {
-                        step3.classList.remove("active");
-                        additionalFields.forEach(el => el.classList.add("hidden"));
+                            customExamInput.addEventListener("input", () => {
+                                if (customExamInput.value.trim()) {
+                                    scoreField.classList.remove("hidden");
+                                } else {
+                                    scoreField.classList.add("hidden");
+                                }
+                            });
+                        }
+ else {
+                            // Predefined exams → auto-fill exam name and show score
+                            customExamField.classList.remove("hidden");
+                            customExamInput.value = text;
+                            customExamInput.setAttribute("readonly", true);
+                            scoreField.classList.remove("hidden");
+                        }
                     }
 
-                } else {
-                    academicFields.forEach(el => el.classList.add("hidden"));
-                    additionalFields.forEach(el => el.classList.add("hidden"));
-                    step2.classList.remove("active");
-                    step3.classList.remove("active");
-                }
-            }
 
-            // 👇 INPUT EVENT LISTENERS
-            [fullName, phone, email, course].forEach(input => {
-                input.addEventListener("input", revealNextSteps);
-            });
-
-            document.querySelectorAll(".custom-dropdown .dropdown-option").forEach(option => {
-                option.addEventListener("click", revealNextSteps);
-            });
-
-            // Visa logic
-            visaRadios.forEach(radio => {
-                radio.addEventListener("change", () => {
-                    visaCountryGroup.classList.toggle("hidden", radio.value !== "yes");
-                });
-            });
-
-            examSelect.addEventListener("change", () => {
-                scoreField.classList.toggle("hidden", examSelect.value === "");
-            });
-
-            // DEGREE CARD LOGIC (← ✅ moved inside DOMContentLoaded)
-            const degreeCards = document.querySelectorAll('.degree-card');
-
-            degreeCards.forEach(card => {
-                card.addEventListener('click', () => {
-                    // Deselect all
-                    degreeCards.forEach(c => {
-                        c.classList.remove('active');
-                        c.querySelector('input').checked = false;
-                    });
-
-                    // Select clicked one
-                    const input = card.querySelector('input');
-                    input.checked = true;
-                    card.classList.add('active');
-
-                    // Recheck step logic
                     revealNextSteps();
                 });
             });
-            document.querySelectorAll('input[name="gender"]').forEach(radio => {
-                radio.addEventListener("change", revealNextSteps);
-            });
-
-
         });
-    </script>
 
+        document.addEventListener("click", (e) => {
+            document.querySelectorAll(".custom-dropdown, .additional-dropdown").forEach(dropdown => {
+                if (!dropdown.contains(e.target)) dropdown.classList.remove("active");
+            });
+        });
 
+        // Final form submit
+        form.addEventListener("submit", (e) => {
+            if (!validateStep1(true) || !validateStep2()) {
+                e.preventDefault();
+                revealNextSteps();
+                alert("Please complete all required fields before submitting.");
+            }
+        });
+
+        revealNextSteps();
+    });
+</script>
 
 
     <footer class="footer">

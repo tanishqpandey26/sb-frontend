@@ -497,6 +497,7 @@ body {
   margin-right: 40px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 
@@ -613,14 +614,14 @@ body {
 
 .viewStudentBox {
   position: absolute;
-  top: 50%;             
+  top: 100%;             
   right: 100%;           
   transform: translateY(-50%);
   background: #fff;
   border: 0.1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
-  display: flex;
+  display: grid;
   align-items: center;
   height: auto;
   white-space: nowrap;   
@@ -636,6 +637,9 @@ body {
   font-size: 12px;
   font-weight: 700;
   color: #424242;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .viewStudentBox button:hover {
@@ -707,7 +711,6 @@ body {
   background: #fff;   
   display: flex;
   padding: 0 20px;       
-  border: 0.2px solid var(--Charcoalgrey, #424242);
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
@@ -739,12 +742,12 @@ body {
 }
 
 .viewStudentdashboardHeaderInfobox {
-  font-size: 13px;
+  font-size: 10px;
   color: #287781;
-  background: #e6f4f5;
+  background: #59898E33;
   padding: 6px 12px;
   border-radius: 6px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .contactUs {
@@ -759,6 +762,814 @@ body {
 .contactUs:hover {
   background: #f0f0f0;
 }
+
+
+
+
+/* viewStudentToplabel */
+
+  .viewStudentTopLabelSection {
+            background: #fff;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .viewStudentTopFarLeft {
+            flex: 1;
+            z-index: 2;
+        }
+
+        .viewStudentFarLeftHeader {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: -0.5px;
+            color: #424242;
+        }
+
+        .viewStudentFarLeftSubHeader {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25px;
+            color: #424242;
+        }
+
+        .viewStudentTopFarRight {
+            flex: 0 0 auto;
+            z-index: 2;
+        }
+
+        .viewStudentEmailDocs {
+            background: #287781;
+            box-shadow: 0px 4px 15px 0px #292D320D;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 10px 20px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 12px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .viewStudentEmailDocs:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .viewStudentTopLabelSection {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                padding: 20px;
+            }
+
+            .viewStudentTopFarLeft {
+                width: 100%;
+                margin-bottom: 16px;
+            }
+
+            .viewStudentFarLeftHeader {
+                font-size: 24px;
+                margin-bottom: 6px;
+            }
+
+            .viewStudentFarLeftSubHeader {
+                font-size: 16px;
+            }
+
+            .viewStudentTopFarRight {
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            .viewStudentEmailDocs {
+                padding: 14px 18px;
+                font-size: 14px;
+                width: 100%;
+            }
+        }
+
+
+
+/* viewStudent - detail */
+
+.viewStudentDetailContainer {
+  padding: 20px 10px;
+  margin: 0 auto;
+  background-color: #287781;
+  width: 95%;
+  border-radius: 15px;
+  height: 104px;
+}
+
+.desktop-layout {
+  display: flex;
+  align-items: center; 
+  gap: 30px;           
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.viewStudentImage {
+  width: 63px;
+  height: 63px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid var(--White, #FFFFFF);
+  transition: transform 0.3s ease;
+}
+
+.viewStudentImage:hover {
+  transform: scale(1.05);
+}
+
+.circle-badge {
+  position: absolute;
+  top: -3px;       
+  right: -3px;
+  width: 11px;  
+  height: 11px;
+  background-color: #319F43;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+}
+
+.student-details {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;  
+  align-items: center;
+  gap: 50px;                     
+  flex-wrap: nowrap;   
+  margin: 10px auto;        
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  text-align: left;             
+  white-space: nowrap;      
+}
+
+.detail-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+
+.mobile-layout {
+  display: none;
+}
+
+
+        
+        @media (max-width: 768px) {
+
+          .viewStudentDetailContainer {
+                padding: 20px;
+                height: 238px;
+            }
+
+            .desktop-layout {
+                display: none;
+            }
+
+            .mobile-layout {
+                display: block;
+            }
+
+            .mobile-image-container {
+                margin-bottom: 24px;
+            }
+
+            .viewStudentImage {
+                width: 65px;
+                height: 65px;
+            }
+
+            .mobile-row {
+                display: flex;
+                gap: 16px;
+                margin-bottom: 20px;
+            }
+
+            .mobile-row:last-child {
+                margin-bottom: 0;
+            }
+
+            .mobile-detail-item {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                min-width: 0;
+            }
+
+            .detail-label{
+              font-size: 600;
+              font-weight: 12px;
+            }
+
+            .detail-value {
+              font-weight: 700;
+              font-size: 12px;
+            }
+        }
+
+    
+        .detail-item, .mobile-detail-item {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .detail-item:nth-child(2) { animation-delay: 0.1s; }
+        .detail-item:nth-child(3) { animation-delay: 0.2s; }
+        .detail-item:nth-child(4) { animation-delay: 0.3s; }
+        .detail-item:nth-child(5) { animation-delay: 0.4s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+
+ /* view Student tab bar */
+
+ .tabsContainer {
+  width: 100%;
+  margin: 30px auto;
+  gap: 6px;
+}
+
+
+.tabBar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 9px;
+  height:40px;
+  width:305px;
+  margin-left: 30px;
+}
+
+.tabBtn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  background: #fff;
+  color: #424242;;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 12px;
+  transition: background 0.3s, color 0.3s;
+  text-wrap: nowrap;
+}
+
+.tabBtn.active {
+  background: #59898E33;
+  color:#287781;
+  font-weight: 600;
+}
+
+.viewStudentTabBarDivider {
+  width: 95%;
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top: 1px solid #ddd;
+}
+
+.tabContent {
+  display: none;
+  padding: 20px;
+  background: #fff;
+}
+
+.tabContent.active {
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+
+  .tabBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: auto ;
+}
+
+  .tabBtn {
+    border-radius: 6px;
+    text-align: center;
+    font-size: 11px;
+  }
+
+}
+
+
+
+/* product Course Info tab */
+
+.productCourseSection {
+  padding: 20px;
+  background: #fff;
+}
+
+.productCourseCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.productCourseCard {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.productCourseTopLabel {
+  display: flex;
+  align-items: center;
+  background-color: #F6F6F6;
+  height: 56px;
+  padding: 25px 20px;
+  gap: 20px;
+}
+
+.productCourseCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  margin: 0;
+  color: #424242;
+}
+
+.productCourseCardInfobox {
+  background:#59898E33;
+  color: #287781;
+  font-size: 10px;
+  font-weight: 600;
+  padding:  10px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 23px;
+}
+
+.productCourseRow {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productCourseCardItem {
+  font-weight: 600;
+  font-size: 12px;
+  color: #424242;
+}
+
+.productCourseCardDetail {
+  font-weight: 400;
+  font-size: 12px;
+  color: #424242;
+}
+
+.productCourseCard:nth-child(1) .productCourseRow:nth-child(8) .productCourseCardDetail {
+  color: #287781;       
+  background:#59898E33;  
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.productCourseCardDetailBtn{
+  background-color: #fff;
+  color: #287781;
+  font-weight: 600;
+  font-size: 12px;
+  border: none;
+  padding: 0 5px;
+}
+
+.productCourseCardDivider {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 4px 0;
+}
+
+
+@media (max-width: 768px) {
+
+  .productCourseTopLabel {
+  gap: 10px;
+}
+
+  .productCourseCardHeader {
+    font-size: 16px;
+  }
+}
+
+
+
+/* document-tab */
+
+
+.documentTabSection {
+  padding: 20px;
+  background: #fff;
+}
+
+.documentTabCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.documentTabCard {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.documentTabTopLabel {
+  display: flex;
+  align-items: center;
+  background-color: #F6F6F6;
+  height: 56px;
+  padding: 25px 20px;
+  gap: 20px;
+}
+
+.documentTabCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  margin: 0;
+  color: #424242;
+}
+
+.documentTabRow {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.documentTabCardItem {
+  font-weight: 600;
+  font-size: 12px;
+  color: #424242;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.documentTabCardDetail {
+  font-weight: 400;
+  font-size: 12px;
+  color: #424242;
+}
+
+.documentTabCard:nth-child(1) .documentTabRow:nth-child(8) .documentTabCardDetail {
+  color: #287781;       
+  background:#59898E33;  
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.documentTabCardButton{
+  background-color: #FBD6E2;
+  color:#D42F81;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0 5px;
+  padding:  10px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 23px;
+  border: none;
+}
+
+.documentBox{
+  border: none;
+  background-color: #fff;
+}
+
+.documentTabCardDivider {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 4px 0;
+}
+
+
+@media (max-width: 768px) {
+
+  .documentTabTopLabel {
+  gap: 10px;
+}
+
+  .documentTabCardHeader {
+    font-size: 16px;
+  }
+}
+
+
+
+/* paymentOptions */
+
+.paymentOptionsSection {
+  padding: 20px;
+  background: #fff;
+}
+
+.paymentOptionsCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.paymentOptionsCard {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.paymentOptionsTopLabel {
+  display: flex;
+  align-items: center;
+  background-color: #F6F6F6;
+  height: 56px;
+  padding: 25px 20px;
+  gap: 20px;
+}
+
+.paymentOptionsCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  margin: 0;
+  color: #424242;
+}
+
+.paymentOptionsRow {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paymentOptionsCardItem {
+  font-weight: 600;
+  font-size: 12px;
+  color: #424242;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.paymentOptionsCardDetail {
+  font-weight: 400;
+  font-size: 12px;
+  color: #424242;
+}
+
+.paymentOptionsCard:nth-child(1) .paymentOptionsRow:nth-child(8) .paymentOptionsCardDetail {
+  color: #287781;       
+  background:#59898E33;  
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.paymentOptionsBox{
+  border: none;
+  background-color: #fff;
+  color: #08121D;
+}
+
+.paymentOptionsCardDivider {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 4px 0;
+}
+
+
+@media (max-width: 768px) {
+
+  .paymentOptionsTopLabel {
+  gap: 10px;
+}
+
+  .paymentOptionsCardHeader {
+    font-size: 16px;
+  }
+}
+
+
+
+/* comments Tab */
+
+.commentsTabSection {
+  padding: 20px;
+  background: #fff;
+}
+
+.commentsTabCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.commentsTabCard {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.commentsTabTopLabel {
+  display: flex;
+  align-items: center;
+  background-color: #F6F6F6;
+  height: 56px;
+  padding: 25px 20px;
+  gap: 20px;
+}
+
+.commentsTabCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  margin: 0;
+  color: #424242;
+}
+
+.commentsTabRow {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.commentTabMobileContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.commentsTabCardItem {
+  background-color:#59898E33;
+  color:#287781;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0 5px;
+  padding:  10px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 23px;
+  border: none;
+}
+
+.commentsTabRating{
+  font-weight: 600;
+  font-size: 12px;
+  color: #424242;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.commentsTabRemark{
+  font-weight: 600;
+  font-size: 12px;
+  color: #424242;
+}
+
+.commentsTabCard:nth-child(1) .commentsTabRow:nth-child(8) .commentsTabCardDetail {
+  color: #287781;       
+  background:#59898E33;  
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.commentsTabBox{
+  border: none;
+  background-color: #fff;
+  color: #08121D;
+}
+
+.commentsTabCardDivider {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 4px 0;
+}
+
+
+@media (max-width: 768px) {
+
+  .commentsTabTopLabel {
+  gap: 10px;
+}
+
+  .commentsTabCardHeader {
+    font-size: 16px;
+  }
+
+  .commentTabMobileContainer{
+  display: grid;
+  justify-content: flex-start;
+  align-items: left;
+}
+
+.commentsTabCardItem {
+  font-size: 10px;
+  padding: 0 5px;
+  padding:  10px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 129px;
+  text-wrap: nowrap;
+}
+
+.commentsTabRating{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.commentsTabRemark{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+}
+
 
 
 /* footer */

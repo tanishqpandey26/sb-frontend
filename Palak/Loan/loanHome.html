@@ -19,54 +19,59 @@
   
 <!--NavBar Section-->
 
-<nav class="navbar">
+    <nav class="navbar">
           <div class="navbar-left">
-            <img src="../images/Home/study-befikar1.png" alt="Logo" class="logo">
+            <a href="/Palak/Home/home.html">
+            <img src="/Palak/images/Home/study-befikar1.png" alt="Logo" class="logo">
+            </a>
           </div>
+
           <ul class="navbar-right" id="mobileNav">
         
+            <li class="dropdown"><a href="#">About</a></li>
+
             <li class="dropdown">
-              <a href="#">Countries</a>
+              <a href="/Palak/USA/usa.html">Countries</a>
               <ul class="dropdown-content">
-                <li><a href="usa.html">USA</a></li>
+                <li><a href="/Palak/USA/usa.html">USA</a></li>
                 <li><a href="#">UK</a></li>
                 <li><a href="#">Canada</a></li>
                 <li><a href="#">Germany</a></li>
               </ul>
             </li>
         
-             <li class="dropdown">
+            <li class="dropdown">
               <a href="#">Loan</a>
               <ul class="dropdown-content">
-                <li><a href="../Loan/loanHome.html">Check Eligibility</a></li>
-                <li><a href="../Loan/bankdetail.html">Available Banks</a></li>
+                <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
               </ul>
             </li>
         
             <li class="dropdown">
-              <a href="#">Admission Counselling</a>
+              <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
               <ul class="dropdown-content">
-                <li><a href="index.html">Admission Process</a></li>
-                <li><a href="book-consultation.html">Book Consultation</a></li>
+                <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+                <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
                 <li><a href="#">Application Deadline</a></li>
                 <li><a href="#">University Finder</a></li>
               </ul>
             </li>
         
             <li class="dropdown">
-              <a href="#">Test Preparation</a>
+              <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
               <ul class="dropdown-content">
-                <li><a href="#">Test Prep Services</a></li>
-                <li><a href="#">Prepare for Exam</a></li>
+                <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                <li><a href="/Palak/exam_prep/examprep.html">Prepare for Exam</a></li>
                 <li><a href="#">Take a Mock Test</a></li>
-                <li><a href="#">Exam Deadlines</a></li>
+                <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
               </ul>
             </li>
         
             <li class="dropdown">
               <a href="#">All Exams</a>
               <ul class="dropdown-content">
-                <li><a href="#">SAT</a></li>
+                <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
                 <li><a href="#">GMAT</a></li>
                 <li><a href="#">GRE</a></li>
                 <li><a href="#">IELTS</a></li>
@@ -77,20 +82,21 @@
               <a href="#">Services</a>
               <ul class="dropdown-content">
                 <li><a href="#">All Services</a></li>
-                <li><a href="#">Visa Assistance</a></li>
+                <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
                 <li><a href="#">Profile Evaluation</a></li>
                 <li><a href="#">Apply to University</a></li>
               </ul>
             </li>
         
-            <li><a href="#" class="dropdown">Notice Board</a></li>
-            <li><a href="#" class="dropdown">About Us</a></li>
-            <li><a href="#" class="dropdown">Contact Us</a></li>
+            <li><a href="/Palak/NoticeBoard/noticeBoard.html" class="dropdown">Notice Board</a></li>
+            
         
-            <li><a href="signup.html" class="contact-btn">Login</a></li>
+            <li><a href="signup.html" class="contact-btn">Contact Us</a></li>
           </ul>
+
           <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-</nav>
+        </nav>
+
         
         <br/><br/><br/><br/>
 
@@ -183,14 +189,15 @@
 
     <section class="hero">
   <div class="hero-content">
-    <!-- LEFT COLUMN (Desktop) / DETAIL BOX (Mobile) -->
+    <!-- left col desktop / detailBox mobile -->
 
     <div class="hero-detailbox">
 
-       <div class="hero-route">Home &gt; Loan &gt; Available Banks</div>
+       <div class="hero-route">Home &gt; Loan &gt;Check Eligibility</div>
       <div class="hero-mini-heading">
-        <img src="../images/loanHome/herosection/blue-star.png" alt="Star" />
-        <span>Loan Eligibility</span>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="#287781" d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"/></svg>
+          Loan Eligibility</span>
       </div>
       <h1 class="hero-heading">
         <span class="tophead">Study abroad with</span> <br />
@@ -200,10 +207,10 @@
         <span>Check your loan eligibility and discover exclusive</span> <br/> benefits customized specifically for your needs.
       </p>
       <div class="hero-btns">
-        <a href="#" class="btn primary">
+        <a href="/Palak/Loan/loanRequest/selectCountry.html" class="btn primary">
           Check Eligibility Now <img src="../images/loanHome/herosection/right-arrow.png" alt="Arrow" />
         </a>
-        <a href="#" class="btn secondary">
+        <a href="/Palak/Admission_counselling/book-consultation.html" class="btn secondary">
           <img src="../images/loanHome/herosection/videocam.png" alt="Arrow" /> Book Consultation
         </a>
       </div>
@@ -212,14 +219,14 @@
 
     <!-- RIGHT COLUMN (Desktop) / INFO CARD (Mobile) -->
     <div class="hero-infocard">
-      <img src="../images/loanHome/herosection/lady.png" alt="Lady" class="hero-image" />
+      <img src="/Palak/images/loanHome/herosection/lady.png" alt="Lady" class="hero-image" />
 
       <div class="info-box info1">
-        <img src="../images/loanHome/herosection/head.png" alt="head" />
+        <img src="/Palak/images/loanHome/herosection/head.png" alt="head" />
         <p>Fast Approval Process</p>
       </div>
       <div class="info-box info2">
-        <img src="../images/loanHome/herosection/head.png" alt="head" />
+        <img src="/Palak/images/loanHome/herosection/head.png" alt="head" />
         <p>Low-Interest Rates</p>
       </div>
     </div>
@@ -244,14 +251,14 @@
     <div class="service-card">
 
       <div class="left-col">
-        <img src="../images/loanHome/servicesection/doctor.jpg" alt="Service 1" />
+        <img src="/Palak/images/loanHome/servicesection/doctor.jpg" alt="Service 1" />
       </div>
 
       <div class="right-col">
-        <img src="../images/loanHome/servicesection/two-ppl-vector.png" alt="Icon" class="card-icon" />
+        <img src="/Palak/images/loanHome/servicesection/two-ppl-vector.png" alt="Icon" class="card-icon" />
         <h3 class="card-header">Multiple Lenders</h3>
         <p class="card-desc">As a student, managing finances for tuition, living expenses, and other educational costs can be challenging. One option to help you secure the funds you need is a Multiple Lenders Loan, which allows you to access loans from several different lenders, giving you more flexibility and better financial options.</p>
-        <button class="card-btn">Check Eligibility Now</button>
+        <a href="/Palak/Loan/bankdetail.html" class="card-btn">Check Eligibility Now</a>
       </div>
 
     </div>
@@ -260,14 +267,14 @@
     <div class="service-card">
 
       <div class="left-col">
-        <img src="../images/loanHome/servicesection/calculator.jpg" alt="Service 1" />
+        <img src="/Palak/images/loanHome/servicesection/calculator.jpg" alt="Service 1" />
       </div>
 
       <div class="right-col">
-        <img src="../images/loanHome/servicesection/cash-vector.png" alt="Icon" class="card-icon" />
+        <img src="/Palak/images/loanHome/servicesection/cash-vector.png" alt="Icon" class="card-icon" />
         <h3 class="card-header">Multi-Currency Loan</h3>
         <p class="card-desc">Flexibility Across Borders In today’s interconnected global economy, managing finances across multiple countries requires solutions that are as flexible as your ambitions. A Multi-Currency Loan is designed to provide businesses and individuals with the flexibility to borrow in the currency that best fits their needs.</p>
-        <button class="card-btn">Check Eligibility Now</button>
+        <a href="/Palak/Loan/loanRequest/selectCountry.html" class="card-btn">Check Eligibility Now</a>
       </div>
 
     </div>
@@ -276,14 +283,14 @@
    <div class="service-card">
 
       <div class="left-col">
-        <img src="../images/loanHome/servicesection/cross-man.jpg" alt="Service 1" />
+        <img src="/Palak/images/loanHome/servicesection/cross-man.jpg" alt="Service 1" />
       </div>
 
       <div class="right-col">
-        <img src="../images/loanHome/servicesection/doc-vector.png" alt="Icon" class="card-icon" />
+        <img src="/Palak/images/loanHome/servicesection/doc-vector.png" alt="Icon" class="card-icon" />
         <h3 class="card-header">No-collateral Needed</h3>
         <p class="card-desc">As a student, securing financing for your education can sometimes feel overwhelming, especially when you’re asked to put up collateral—like property or assets—to secure a loan. Fortunately, No-Collateral Loans offer a solution that allows you to access the funds you need without risking your personal assets.</p>
-        <button class="card-btn">Check Eligibility Now</button>
+        <a href="/Palak/Loan/loanRequest/selectCountry.html" class="card-btn">Check Eligibility Now</a>
       </div>
 
     </div>
@@ -292,14 +299,14 @@
     <div class="service-card">
 
       <div class="left-col">
-        <img src="../images/loanHome/servicesection/chatting-ppl.jpg" alt="Service 1" />
+        <img src="/Palak/images/loanHome/servicesection/chatting-ppl.jpg" alt="Service 1" />
       </div>
 
       <div class="right-col">
-        <img src="../images/loanHome/servicesection/one-ppl-vector.png" alt="Icon" class="card-icon" />
+        <img src="/Palak/images/loanHome/servicesection/one-ppl-vector.png" alt="Icon" class="card-icon" />
         <h3 class="card-header">Expert Advice</h3>
         <p class="card-desc">Financial experts can help you understand the various loan products available, from federal student loans to private options, ensuring you select the best one for your situation. Maximize Your Financial Aid: Advisors can guide you in applying for scholarships, grants, and other forms of financial aid that reduce the amount you need to borrow.</p>
-        <button class="card-btn">Check Eligibility Now</button>
+        <a href="/Palak/Admission_counselling/book-consultation.html" class="card-btn">Check Eligibility Now</a>
       </div>
 
     </div>
@@ -325,7 +332,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       scrollTimeout = setTimeout(() => {
         container.scrollTo({ left: 0, behavior: "smooth" });
-      }, 5000); // 5 seconds
+      }, 5000); // 5 sec
     }
   });
 });
@@ -384,20 +391,20 @@ document.addEventListener("DOMContentLoaded", function() {
     <!-- Card 1 -->
     <div class="planfinance-card">
       <div class="planfinance-toplabel">
-        <img src="../images/loanHome/planYourFinance/blue-lens.png" alt="Icon" />
+        <img src="/Palak/images/loanHome/planYourFinance/blue-lens.png" alt="Icon" />
         <div class="planfinance-infobox">95% Success Rate</div>
       </div>
       <h3 class="planfinance-cardheading">Check Your Eligibility</h3>
       <p class="planfinance-carddesc">
         Fund your study abroad journey with confidence. We help you to check your eligibility results in just a few steps.
       </p>
-      <button class="planfinance-btn">Check Eligibility Now</button>
+      <a href="#" class="planfinance-btn">Check Eligibility Now</a>
     </div>
 
     <!-- Card 2 -->
     <div class="planfinance-card">
       <div class="planfinance-toplabel">
-        <img src="../images/loanHome/planYourFinance/pink-calculator.png" alt="Icon" />
+        <img src="/Palak/images/loanHome/planYourFinance/pink-calculator.png" alt="Icon" />
         <div class="planfinance-infobox">Instant Results</div>
       </div>
       <h3 class="planfinance-cardheading">EMI Calculator</h3>
@@ -405,20 +412,20 @@ document.addEventListener("DOMContentLoaded", function() {
        Estimate your monthly loan repayments with ease. Enter loan details, and our tool will do the math.
 
       </p>
-      <button class="planfinance-btn">Check Eligibility Now</button>
+      <a href="#" class="planfinance-btn">Check Eligibility Now</a>
     </div>
 
     <!-- Card 3 -->
     <div class="planfinance-card">
       <div class="planfinance-toplabel">
-        <img src="../images/loanHome/planYourFinance/yellow-building.png" alt="Icon" />
+        <img src="/Palak/images/loanHome/planYourFinance/yellow-building.png" alt="Icon" />
         <div class="planfinance-infobox">95% Success Rate</div>
       </div>
       <h3 class="planfinance-cardheading">Know More About Banks</h3>
       <p class="planfinance-carddesc">
         Explore detailed information on bank options for international education loans, including interest rates, andcollateral vs. non-collateral loans.
       </p>
-      <button class="planfinance-btn">Check Eligibility Now</button>
+      <a href="/Palak/Loan/bankdetail.html" class="planfinance-btn">Check Eligibility Now</a>
     </div>
 
   </div>
@@ -434,61 +441,93 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="loanPartnerCards">
 
     <div class="loanPartnerCard">
-      <img src="../images/loanHome/banks/icici-banner.png" alt="Partner 1" class="loanPartnerBannerImg" />
+      <img src="/Palak/images/loanHome/banks/icici-banner.png" alt="Partner 1" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">ICICI Bank</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 10.5% APR </span></p>
-       <button class="loanPartnerBtn">Explore</button>
+       <a class="bankLoanPartnerBtn">Explore</a>
     </div>
 
     <div class="loanPartnerCard">
-      <img src="../images/loanHome/banks/axis-banner.png" alt="Partner 2" class="loanPartnerBannerImg" />
+      <img src="/Palak/images/loanHome/banks/axis-banner.png" alt="Partner 2" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">Axis Bank</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 11.0% APR </span></p>
-      <button class="loanPartnerBtn">Explore</button>
+      <a class="bankLoanPartnerBtn">Explore</a>
     </div>
 
     <div class="loanPartnerCard">
-      <img src="../images/loanHome/banks/idfc-banner.png" alt="Partner 3" class="loanPartnerBannerImg" />
+      <img src="/Palak/images/loanHome/banks/idfc-banner.png" alt="Partner 3" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">IDFC</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 10.8% APR </span></p>
-      <button class="loanPartnerBtn">Explore</button>
+      <a class="bankLoanPartnerBtn">Explore</a>
     </div>
 
     <div class="loanPartnerCard">
-      <img src="../images/loanHome/banks/union-bank-banner.png" alt="Partner 4" class="loanPartnerBannerImg" />
+      <img src="/Palak/images/loanHome/banks/union-bank-banner.png" alt="Partner 4" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">Union Bank</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 9.9% APR </span></p>
-      <button class="loanPartnerBtn">Explore</button>
+      <a class="bankLoanPartnerBtn">Explore</a>
     </div>
 
     <div class="loanPartnerCard">
-      <img src="../images/loanHome/banks/avanse-banner.png" alt="Partner 5" class="loanPartnerBannerImg" />
+      <img src="/Palak/images/loanHome/banks/avanse-banner.png" alt="Partner 5" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">Avanse</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 11.3% APR </span></p>
-      <button class="loanPartnerBtn">Explore</button>
+      <a class="bankLoanPartnerBtn">Explore</a>
     </div>
 
     <div class="loanPartnerCard">
-      <img src="../images/loanHome/banks/credila-banner.png" alt="Partner 6" class="loanPartnerBannerImg" />
+      <img src="/Palak/images/loanHome/banks/credila-banner.png" alt="Partner 6" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">Credila</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 10.2% APR </span></p>
-      <button class="loanPartnerBtn">Explore</button>
+      <a class="bankLoanPartnerBtn">Explore</a>
     </div>
 
     <div class="loanPartnerCard">
-      <img src="../images/loanHome/banks/incred-banner.png" alt="Partner 7" class="loanPartnerBannerImg" />
+      <img src="/Palak/images/loanHome/banks/incred-banner.png" alt="Partner 7" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">Incred</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 10.5% APR </span></p>
-      <button class="loanPartnerBtn">Explore</button>
+      <a class="bankLoanPartnerBtn">Explore</a>
     </div>
 
     <div class="loanPartnerCard">
-      <img src="../images/loanHome/banks/auxilo-banner.png" alt="Partner 8" class="loanPartnerBannerImg" />
+      <img src="/Palak/images/loanHome/banks/auxilo-banner.png" alt="Partner 8" class="loanPartnerBannerImg" />
       <h3 class="loanPartnerName">Auxilo</h3>
       <p class="loanPartnerRate">Interest Rate:<span> 11.0% APR </span></p>
-      <button class="loanPartnerBtn">Explore</button>
+      <a class="bankLoanPartnerBtn">Explore</a>
     </div>
 
+     <div class="loanPartnerCard hiddenCard">
+      <img src="/Palak/images/loanHome/banks/avanse-banner.png" alt="Partner 5" class="loanPartnerBannerImg" />
+      <h3 class="loanPartnerName">Avanse</h3>
+      <p class="loanPartnerRate">Interest Rate:<span> 11.3% APR </span></p>
+      <a class="bankLoanPartnerBtn">Explore</a>
+    </div>
+
+    <div class="loanPartnerCard hiddenCard">
+      <img src="/Palak/images/loanHome/banks/credila-banner.png" alt="Partner 6" class="loanPartnerBannerImg" />
+      <h3 class="loanPartnerName">Credila</h3>
+      <p class="loanPartnerRate">Interest Rate:<span> 10.2% APR </span></p>
+      <a class="bankLoanPartnerBtn">Explore</a>
+    </div>
+
+    <div class="loanPartnerCard hiddenCard">
+      <img src="/Palak/images/loanHome/banks/incred-banner.png" alt="Partner 7" class="loanPartnerBannerImg" />
+      <h3 class="loanPartnerName">Incred</h3>
+      <p class="loanPartnerRate">Interest Rate:<span> 10.5% APR </span></p>
+      <a class="bankLoanPartnerBtn">Explore</a>
+    </div>
+
+    <div class="loanPartnerCard hiddenCard">
+      <img src="/Palak/images/loanHome/banks/auxilo-banner.png" alt="Partner 8" class="loanPartnerBannerImg" />
+      <h3 class="loanPartnerName">Auxilo</h3>
+      <p class="loanPartnerRate">Interest Rate:<span> 11.0% APR </span></p>
+      <a class="bankLoanPartnerBtn">Explore</a>
+    </div>
+
+  </div>
+
+  <div class="viewMoreLoanPartnerContainer">
+  <button title="viewMoreLoanPartner" class="viewMoreLoanPartnerBtn">View More</button>
   </div>
 
   <div class="loanPartnerNoteContainer">
@@ -498,6 +537,25 @@ document.addEventListener("DOMContentLoaded", function() {
   </div>
 
 </section>
+
+
+<script>
+  const viewMoreBtn = document.querySelector(".viewMoreLoanPartnerBtn");
+  const hiddenCards = document.querySelectorAll(".loanPartnerCard.hiddenCard");
+
+  let isExpanded = false;
+
+  viewMoreBtn.addEventListener("click", () => {
+    isExpanded = !isExpanded;
+
+    hiddenCards.forEach(card => {
+      card.style.display = isExpanded ? "block" : "none";
+    });
+
+    viewMoreBtn.textContent = isExpanded ? "View Less" : "View More";
+  });
+</script>
+
 
 <!-- testimonial-section -->
 
@@ -753,20 +811,16 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="countryTab" data-country="ireland">Ireland</div>
       <div class="countryTab" data-country="canada">Canada</div>
       <div class="countryTab" data-country="singapore">Singapore</div>
+      <div class="countryTab" data-country="australia">Australia</div>
     </div>
   </div>
 
-  <!-- mobile carousel controls -->
-  <!-- <div class="countryCarouselControls">
-    <button class="countryTabNav left">&#8249;</button>
-    <button class="countryTabNav right">&#8250;</button>
-  </div> -->
 
   <!-- country cards -->
  <div class="countrySpecLoanCard" id="usa">
     <div class="countrySpecTopLabel">
       <div class="countrySpecLeftLabel">
-        <img src="../images/loanHome/country/usa.png" alt="USA Flag" class="countrySpecImg">
+        <img src="/Palak/images/loanHome/country/usa.png" alt="USA Flag" class="countrySpecImg">
         <span class="countrySpecName">USA</span>
       </div>
       <div class="countrySpecRightLabel">
@@ -784,27 +838,27 @@ document.addEventListener("DOMContentLoaded", function() {
       <h4>Requirement details</h4>
       <ul>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Verification of employment status or a job offer letter may be required, especially for recent graduates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A cosigner may be necessary for international students, ideally someone living in the U.S.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of university enrollment or admission is required.
         </li>
       </ul>
@@ -815,7 +869,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="countrySpecLoanCard" id="uk" style="display:none;">
     <div class="countrySpecTopLabel">
       <div class="countrySpecLeftLabel">
-        <img src="../images/loanHome/country/uk.png" alt="USA Flag" class="countrySpecImg">
+        <img src="/Palak/images/loanHome/country/uk.png" alt="USA Flag" class="countrySpecImg">
         <span class="countrySpecName">UK</span>
       </div>
       <div class="countrySpecRightLabel">
@@ -833,27 +887,27 @@ document.addEventListener("DOMContentLoaded", function() {
       <h4>Requirement details</h4>
       <ul>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Verification of employment status or a job offer letter may be required, especially for recent graduates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A cosigner may be necessary for international students, ideally someone living in the U.S.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of university enrollment or admission is required.
         </li>
       </ul>
@@ -864,7 +918,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="countrySpecLoanCard" id="nz" style="display:none;">
      <div class="countrySpecTopLabel">
       <div class="countrySpecLeftLabel">
-        <img src="../images/loanHome/country/nz.png" alt="USA Flag" class="countrySpecImg">
+        <img src="/Palak/images/loanHome/country/nz.png" alt="USA Flag" class="countrySpecImg">
         <span class="countrySpecName">New Zealand</span>
       </div>
       <div class="countrySpecRightLabel">
@@ -882,27 +936,27 @@ document.addEventListener("DOMContentLoaded", function() {
       <h4>Requirement details</h4>
       <ul>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Verification of employment status or a job offer letter may be required, especially for recent graduates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A cosigner may be necessary for international students, ideally someone living in the U.S.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of university enrollment or admission is required.
         </li>
       </ul>
@@ -913,7 +967,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="countrySpecLoanCard" id="germany" style="display:none;">
      <div class="countrySpecTopLabel">
       <div class="countrySpecLeftLabel">
-        <img src="../images/loanHome/country/germany.png" alt="USA Flag" class="countrySpecImg">
+        <img src="/Palak/images/loanHome/country/germany.png" alt="USA Flag" class="countrySpecImg">
         <span class="countrySpecName">Germany</span>
       </div>
       <div class="countrySpecRightLabel">
@@ -931,27 +985,27 @@ document.addEventListener("DOMContentLoaded", function() {
       <h4>Requirement details</h4>
       <ul>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Verification of employment status or a job offer letter may be required, especially for recent graduates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A cosigner may be necessary for international students, ideally someone living in the U.S.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of university enrollment or admission is required.
         </li>
       </ul>
@@ -962,7 +1016,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="countrySpecLoanCard" id="france" style="display:none;">
      <div class="countrySpecTopLabel">
       <div class="countrySpecLeftLabel">
-        <img src="../images/loanHome/country/france.png" alt="USA Flag" class="countrySpecImg">
+        <img src="/Palak/images/loanHome/country/france.png" alt="USA Flag" class="countrySpecImg">
         <span class="countrySpecName">France</span>
       </div>
       <div class="countrySpecRightLabel">
@@ -980,27 +1034,27 @@ document.addEventListener("DOMContentLoaded", function() {
       <h4>Requirement details</h4>
       <ul>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Verification of employment status or a job offer letter may be required, especially for recent graduates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A cosigner may be necessary for international students, ideally someone living in the U.S.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of university enrollment or admission is required.
         </li>
       </ul>
@@ -1011,7 +1065,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="countrySpecLoanCard" id="ireland" style="display:none;">
      <div class="countrySpecTopLabel">
       <div class="countrySpecLeftLabel">
-        <img src="../images/loanHome/country/ireland.png" alt="USA Flag" class="countrySpecImg">
+        <img src="/Palak/images/loanHome/country/ireland.png" alt="USA Flag" class="countrySpecImg">
         <span class="countrySpecName">Ireland</span>
       </div>
       <div class="countrySpecRightLabel">
@@ -1029,27 +1083,27 @@ document.addEventListener("DOMContentLoaded", function() {
       <h4>Requirement details</h4>
       <ul>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Verification of employment status or a job offer letter may be required, especially for recent graduates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A cosigner may be necessary for international students, ideally someone living in the U.S.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of university enrollment or admission is required.
         </li>
       </ul>
@@ -1060,7 +1114,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="countrySpecLoanCard" id="canada" style="display:none;">
      <div class="countrySpecTopLabel">
       <div class="countrySpecLeftLabel">
-        <img src="../images/loanHome/country/canada.png" alt="USA Flag" class="countrySpecImg">
+        <img src="/Palak/images/loanHome/country/canada.png" alt="USA Flag" class="countrySpecImg">
         <span class="countrySpecName">Canada</span>
       </div>
       <div class="countrySpecRightLabel">
@@ -1078,27 +1132,27 @@ document.addEventListener("DOMContentLoaded", function() {
       <h4>Requirement details</h4>
       <ul>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Verification of employment status or a job offer letter may be required, especially for recent graduates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A cosigner may be necessary for international students, ideally someone living in the U.S.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of university enrollment or admission is required.
         </li>
       </ul>
@@ -1109,7 +1163,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="countrySpecLoanCard" id="singapore" style="display:none;">
      <div class="countrySpecTopLabel">
       <div class="countrySpecLeftLabel">
-        <img src="../images/loanHome/country/singapore.png" alt="USA Flag" class="countrySpecImg">
+        <img src="/Palak/images/loanHome/country/singapore.png" alt="USA Flag" class="countrySpecImg">
         <span class="countrySpecName">Singapore</span>
       </div>
       <div class="countrySpecRightLabel">
@@ -1127,27 +1181,76 @@ document.addEventListener("DOMContentLoaded", function() {
       <h4>Requirement details</h4>
       <ul>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Verification of employment status or a job offer letter may be required, especially for recent graduates.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           A cosigner may be necessary for international students, ideally someone living in the U.S.
         </li>
         <li class="countrySpecDetailElement">
-          <img src="../images/loanHome/country/double-tick-blue.png" alt="✓">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of university enrollment or admission is required.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="countrySpecLoanCard" id="australia" style="display:none;">
+     <div class="countrySpecTopLabel">
+      <div class="countrySpecLeftLabel">
+        <img src="/Palak/images/loanHome/country/australia.svg" alt="USA Flag" class="countrySpecImg">
+        <span class="countrySpecName">Australia</span>
+      </div>
+      <div class="countrySpecRightLabel">
+        <span class="countrySpecTimeLabel">Processing Time</span>
+        <span class="countrySpecTime">2-4 Weeks</span>
+      </div>
+    </div>
+
+    <p class="countrySpecDesc">
+      Australia offers numerous loan options for students, including federal and private loans. International students typically need a U.S. co-signer. Understanding your financial health is key, as lenders assess your credit score, income, and repayment ability.
+    </p>
+
+    <div class="countrySpecDetails">
+
+      <h4>Requirement details</h4>
+      <ul>
+        <li class="countrySpecDetailElement">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
+          A credit score of at least 600 is required; higher scores improve approval chances and lower interest rates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
+          Proof of income is needed, such as pay stubs, tax returns, or recent bank statements, to show the ability to repay.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
+          Verification of employment status or a job offer letter may be required, especially for recent graduates.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
+          A debt-to-income (DTI) ratio below 43% is preferred, as it indicates better financial stability.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
+          A cosigner may be necessary for international students, ideally someone living in the U.S.
+        </li>
+        <li class="countrySpecDetailElement">
+          <img src="/Palak/images/loanHome/country/double-tick-blue.png" alt="✓">
           Proof of university enrollment or admission is required.
         </li>
       </ul>
@@ -1164,8 +1267,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll(".countryTab");
   const tabContainer = document.querySelector(".countryTabs");
   const cards = document.querySelectorAll(".countrySpecLoanCard");
-  // const leftBtn = document.querySelector(".countryTabNav.left");
-  // const rightBtn = document.querySelector(".countryTabNav.right");
+
   let activeIndex = 0;
 
   function setActiveTab(index) {
@@ -1190,16 +1292,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // leftBtn.addEventListener("click", () => {
-  //   const newIndex = (activeIndex - 1 + tabs.length) % tabs.length;
-  //   setActiveTab(newIndex);
-  // });
-
-  // rightBtn.addEventListener("click", () => {
-  //   const newIndex = (activeIndex + 1) % tabs.length;
-  //   setActiveTab(newIndex);
-  // });
-
   setActiveTab(0);
 });
 
@@ -1213,44 +1305,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <div class="loanOptionCards">
 
-    <!-- Card 1 -->
+    <!-- card 1 -->
     <div class="loanOptionCard">
-      <img src="../images/loanHome/loanOption/blue-two-head.png" alt="Icon" class="loanOptionIcon">
+      <img src="/Palak/images/loanHome/loanOption/blue-two-head.png" alt="Icon" class="loanOptionIcon">
       <h3 class="loanOptionCardHeader">Co-Signer Required</h3>
       <p class="loanOptionCardSubHeader">Team Up for Better Terms</p>
-      <img src="../images/loanHome/loanOption/co-signer.jpg" alt="Loan Type" class="loanOptionCardImg">
+      <img src="/Palak/images/loanHome/loanOption/co-signer.jpg" alt="Loan Type" class="loanOptionCardImg">
       <p class="loanOptionCardDesc">If you have a limited credit history, a co-signer with a strong credit profile can help you secure the loan. The co-signer will be responsible for repayment if you fail to pay.</p>
-      <button class="loanOptionBtn">Apply Now</button>
+      <a href="#" class="loanOptionBtn">Apply Now</a>
     </div>
 
     <!-- card 2 -->
     <div class="loanOptionCard">
-      <img src="../images/loanHome/loanOption/pink-two-head.png" alt="Icon" class="loanOptionIcon">
+      <img src="/Palak/images/loanHome/loanOption/pink-two-head.png" alt="Icon" class="loanOptionIcon">
       <h3 class="loanOptionCardHeader">No Co-signer Required</h3>
       <p class="loanOptionCardSubHeader">Go Solo with Independence</p>
-      <img src="../images/loanHome/loanOption/no-co-signer.jpg" alt="Loan Type" class="loanOptionCardImg">
+      <img src="/Palak/images/loanHome/loanOption/no-co-signer.jpg" alt="Loan Type" class="loanOptionCardImg">
       <p class="loanOptionCardDesc">If you have a strong credit score or income, you may be able to apply for a loan without the need for a co-signer. This gives you the freedom to manage the loan on your own.</p>
-      <button class="loanOptionBtn">Apply Now</button>
+      <a href="#" class="loanOptionBtn">Apply Now</a>
     </div>
 
     <!-- card 3 -->
     <div class="loanOptionCard">
-      <img src="../images/loanHome/loanOption/blue-two-head.png" alt="Icon" class="loanOptionIcon">
+      <img src="/Palak/images/loanHome/loanOption/blue-two-head.png" alt="Icon" class="loanOptionIcon">
       <h3 class="loanOptionCardHeader">Collateral Required</h3>
       <p class="loanOptionCardSubHeader">Asset-Backed Security</p>
-      <img src="../images/loanHome/loanOption/collateral.jpg" alt="Loan Type" class="loanOptionCardImg">
+      <img src="/Palak/images/loanHome/loanOption/collateral.jpg" alt="Loan Type" class="loanOptionCardImg">
       <p class="loanOptionCardDesc">Some loan providers may require collateral (such as property, savings, or other assets) to secure the loan. This can help reduce the risk for the lender and may lead to better loan terms.</p>
-      <button class="loanOptionBtn">Apply Now</button>
+      <a href="#" class="loanOptionBtn">Apply Now</a>
     </div>
 
     <!-- card 4 -->
     <div class="loanOptionCard">
-      <img src="../images/loanHome/loanOption/pink-two-head.png" alt="Icon" class="loanOptionIcon">
+      <img src="/Palak/images/loanHome/loanOption/pink-two-head.png" alt="Icon" class="loanOptionIcon">
       <h3 class="loanOptionCardHeader">Non - Collateral</h3>
       <p class="loanOptionCardSubHeader">No Assets Required</p>
-      <img src="../images/loanHome/loanOption/non-collateral.jpg" alt="Loan Type" class="loanOptionCardImg">
+      <img src="/Palak/images/loanHome/loanOption/non-collateral.jpg" alt="Loan Type" class="loanOptionCardImg">
       <p class="loanOptionCardDesc">If you have a strong credit score or income, you may be able to apply for a loan without the need for a co-signer. This gives you the freedom to manage the loan on your own.</p>
-      <button class="loanOptionBtn">Apply Now</button>
+      <a href="#" class="loanOptionBtn">Apply Now</a>
     </div>
   </div>
 </section>

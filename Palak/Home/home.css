@@ -82,9 +82,7 @@ body {
 
 .dropdown-content li a:hover {
   background-color: #59898E33;
-  /* 20% transparent highlight on hover */
   color: #287781;
-  /* Optional: highlight text color on hover */
 }
 
 .contact-btn {
@@ -101,7 +99,7 @@ body {
   background-color: #1d5e65;
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
 
   .navbar-right {
@@ -226,32 +224,33 @@ body {
   font-size: 16px;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
-  margin-top: 10%;
+  margin-bottom: 5px;
+  margin-top: 5%;
 }
 
 .textColumn h1 {
-  font-size: 38px;
+  font-size: 48px;
   font-weight: 700;
-  margin-bottom: 15px;
 }
 
-.highlight {
+.textColumn h1 .highlight {
   color: #1D8BA1;
+  display: inline;
 }
 
 .textColumn p {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 400;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  color:#424242;
+  line-height: 35px;
+  margin-bottom: 10px;
   max-width: 500px;
 }
 
 .heroButtons {
   display: flex;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   flex-wrap: wrap;
   animation: fadeInUp 0.8s ease forwards;
 }
@@ -311,7 +310,7 @@ body {
   animation: shimmer 0.5s linear infinite;
 }
 
-/* Define the shimmer animation */
+
 @keyframes shimmer {
   0% {
     transform: translateX(-100%);
@@ -335,6 +334,21 @@ body {
 .secondaryBtn {
   background: transparent;
   border: 2px solid #195057;
+  color: #287781;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.secondaryBtn a{
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid #195057;
   color: #195057;
   padding: 10px 18px;
   border-radius: 6px;
@@ -349,14 +363,13 @@ body {
 
 .hero-divider {
   border-top: 1px dotted #195057;
-  margin: 20px 0;
+  margin: 10px 0;
   width: 100%;
-  margin-top: 10px;
 }
 
 
 
-/* Modal Background */
+/* modal bg */
 .modal {
   display: none;
   position: fixed;
@@ -365,10 +378,10 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
-  padding: 20px; /* Reduced for desktop too */
+  padding: 20px; 
 }
 
-/* Modal Content */
+
 .modal-content {
   background: white;
   display: flex;
@@ -379,7 +392,7 @@ body {
   position: relative;
 }
 
-/* Left side (image) */
+
 .modal-left {
   flex: 1;
 }
@@ -390,7 +403,7 @@ body {
   object-fit: cover;
 }
 
-/* Right side (text & buttons) */
+
 .modal-right {
   flex: 1;
   padding: 30px;
@@ -406,8 +419,8 @@ body {
   margin-bottom: 20px;
 }
 
-/* Buttons */
-.service-btn {
+
+.modelLinks {
   width: 100%;
   padding: 12px;
   margin-bottom: 10px;
@@ -418,13 +431,17 @@ body {
   font-size: 14px;
   cursor: pointer;
   transition: 0.3s;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.service-btn:hover {
+.modelLinks:hover {
   background: #145a8d;
 }
 
-/* Close button */
+
 .close {
   position: absolute;
   right: 15px;
@@ -473,7 +490,7 @@ body {
     font-size: 18px;
   }
 
-  .service-btn {
+  .modelLinks {
     font-size: 13px;
     padding: 10px;
   }
@@ -493,7 +510,7 @@ body {
     font-size: 16px;
   }
 
-  .service-btn {
+  .modelLinks {
     font-size: 12px;
     padding: 8px;
   }
@@ -505,8 +522,10 @@ body {
   align-items: center;
   gap: 10px;
   font-size: 16px;
-  margin-top: 10px;
+  font-weight: 600;
+  margin-top: 5px;
 }
+
 .textColumn {
 
   display: flex;
@@ -793,16 +812,15 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
+  text-decoration: none;
 }
 
-/* .exploreBtn {
-  background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
-  color: white;
-} */
 
 .exploreBtn{
   background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
-  color:#fff
+  color:#fff;
+  display: flex;
+  align-items: center;
 }
 
 .knowMoreBtn,
@@ -907,6 +925,7 @@ body {
   position: relative;
   z-index: 1;
   margin-bottom: -2px; 
+  min-width: 75px;
 }
 
 .toggleBtn.active {
@@ -965,6 +984,22 @@ body {
   margin-bottom: 25px;
 }
 
+.cardLoanApplyBtn {
+  text-decoration: none;
+  background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
+  color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin: 20px auto; 
+}
+
 
 .testCardContainer {
   display: grid;
@@ -975,40 +1010,60 @@ body {
 }
 
 .testCardCarouselContainer {
-  overflow: hidden;
-  width: 100%;
-  margin: 20px 0;
+  overflow-x: auto;    
+  overflow-y: hidden;     
+  -webkit-overflow-scrolling: touch; 
+  scrollbar-width: thin;  
+  scrollbar-color: #287781 transparent;
+  padding-bottom: 10px;
+}
+
+.testCardCarouselContainer::-webkit-scrollbar {
+  height: 8px;
+}
+.testCardCarouselContainer::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 50%;
+}
+.testCardCarouselContainer::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .testCardCarouselTrack {
   display: flex;
   gap: 20px;
-  transition: transform 0.5s ease-in-out;
-  width: fit-content;
-  min-width: 100%;
+  width: max-content; 
 }
 
 .testCard {
   position: relative;
-  height: 180px;
   border-radius: 12px;
   background-size: cover;
   background-position: center;
   overflow: hidden;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
   height: 416px;
-  width: 518px;
+  width: 750px;
 }
 
 
 .testCard-1 {
-  background-image: url("../images/Home/test/toefl.jpg");
+  background-image: url("/Palak/images/Home/test/gre.jpg");
 }
 .testCard-2 {
-  background-image: url("../images/Home/test/ielts.jpg");
+  background-image: url("/Palak/images/Home/test/gmat.jpg");
 }
 .testCard-3 {
-  background-image: url("../images/Home/test/gmat.jpg");
+  background-image: url("/Palak/images/Home/test/ielts.jpg");
+}
+.testCard-4 {
+  background-image: url("/Palak/images/Home/test/sat.jpg");
+}
+.testCard-5 {
+  background-image: url("/Palak/images/Home/test/pte.jpg");
+}
+.testCard-6 {
+  background-image: url("/Palak/images/Home/test/toefl.jpg");
 }
 
 .testCardOverlay {
@@ -1063,25 +1118,10 @@ body {
   background: #287781;
 }
 
-@media (max-width: 768px) {
-  .testCardCarouselContainer {
-    overflow: hidden;
-    width: 100%;
-    margin: 20px 0;
-    padding: 0 20px; 
-  }
-  
-  .testCardCarouselTrack {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.5s ease-in-out;
-    width: fit-content;
-  }
-  
+@media (max-width: 768px) {  
   .testCard {
-    width: calc(100vw - 80px); 
-    height: 250px;
-    flex-shrink: 0; 
+    width: 400px; 
+    height: 350px;
   }
 }
 
@@ -1142,7 +1182,7 @@ body {
   position: absolute;
   top: 90%;
   left: 5%;
-  width: 300x;
+  width: 300px;
   height: 20px;
   font-size: 16px;
   font-weight: bold;
@@ -1214,6 +1254,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  text-decoration: none;
 }
 
 .visitCountry img {
@@ -1416,7 +1457,6 @@ font-style: Bold;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-top: 40px;
 }
 
 .loanCard {
