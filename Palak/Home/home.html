@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header Design</title>
+    <title>Study Befikar</title>
     <link rel="stylesheet" href="/Palak/Home/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
         rel="stylesheet">
@@ -20,13 +20,12 @@
         <nav class="navbar">
           <div class="navbar-left">
             <a href="/Palak/Home/home.html">
-            <img src="/Palak/images/Home/study-befikar1.png" alt="Logo" class="logo">
+            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo" class="logo">
             </a>
-          </div>
-
-          <ul class="navbar-right" id="mobileNav">
         
-            <li><a href="/Palak/AboutUs/aboutUs.html" class="dropdown">About</a></li>
+          </div>
+          <ul class="navbar-right" id="mobileNav">
+
 
             <li class="dropdown">
               <a href="/Palak/USA/usa.html">Countries</a>
@@ -39,7 +38,7 @@
             </li>
         
             <li class="dropdown">
-              <a href="#">Loan</a>
+              <a href="/Palak/Loan/loanHome.html">Loan</a>
               <ul class="dropdown-content">
                 <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
                 <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
@@ -52,7 +51,7 @@
                 <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
                 <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
                 <li><a href="#">Application Deadline</a></li>
-                <li><a href="#">University Finder</a></li>
+                <li><a href="/Palak/Admission_counselling/universityFinder/universityFinder.html">University Finder</a></li>
               </ul>
             </li>
         
@@ -60,8 +59,8 @@
               <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
               <ul class="dropdown-content">
                 <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
-                <li><a href="/Palak/exam_prep/examprep.html">Prepare for Exam</a></li>
-                <li><a href="#">Take a Mock Test</a></li>
+                <li><a href="#">Prepare for Exam</a></li>
+                <li><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></li>
                 <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
               </ul>
             </li>
@@ -70,9 +69,13 @@
               <a href="#">All Exams</a>
               <ul class="dropdown-content">
                 <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
-                <li><a href="#">GMAT</a></li>
-                <li><a href="#">GRE</a></li>
-                <li><a href="#">IELTS</a></li>
+                <li><a href="/Palak/All_Exams/GMAT.html">GMAT</a></li>
+                <li><a href="/Palak/All_Exams/GRE.html">GRE</a></li>
+                <li><a href="/Palak/All_Exams/IELTS.html">IELTS</a></li>
+                <li><a href="/Palak/All_Exams/PTE.html">PTE</a></li>
+                <li><a href="/Palak/All_Exams/ACT.html">ACT</a></li>
+                <li><a href="/Palak/All_Exams/TOEFL.html">TOEFL</a></li>
+                <li><a href="/Palak/All_Exams/Duolingo.html">Duolingo</a></li>
               </ul>
             </li>
         
@@ -81,17 +84,17 @@
               <ul class="dropdown-content">
                 <li><a href="#">All Services</a></li>
                 <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
-                <li><a href="#">Profile Evaluation</a></li>
+                <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
                 <li><a href="#">Apply to University</a></li>
               </ul>
             </li>
         
             <li><a href="/Palak/NoticeBoard/noticeBoard.html" class="dropdown">Notice Board</a></li>
-            
-        
-            <li><a href="signup.html" class="contact-btn">Contact Us</a></li>
-          </ul>
 
+            <li><a href="/Palak/AboutUs/aboutUs.html" class="dropdown">About</a></li>
+        
+            <li><a href="/Palak/Login Pages/signin.html" class="contact-btn">Contact Us</a></li>
+          </ul>
           <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </nav>
         
@@ -105,80 +108,80 @@
             nav.classList.toggle('active');
           });
         </script>
-        
-        <script>
-          const dropdowns = document.querySelectorAll('.dropdown');
 
-          dropdowns.forEach(dropdown => {
-            let wasClicked = false;
-            const link = dropdown.querySelector('a');
+  <script>
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-            // Toggle on click
-            link.addEventListener('click', (e) => {
-              e.preventDefault();
-              e.stopPropagation();
+    dropdowns.forEach(dropdown => {
+      let wasClicked = false;
+      const link = dropdown.querySelector('a');
 
-              const isOpen = dropdown.classList.contains('open');
+      // Toggle on click
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
 
-              // Close all dropdowns
-              dropdowns.forEach(d => {
-                d.classList.remove('open');
-                d.dataset.clicked = "false";
-              });
+        const isOpen = dropdown.classList.contains('open');
 
-              if (!isOpen) {
-                dropdown.classList.add('open');
-                dropdown.dataset.clicked = "true";
-              }
-            });
+        // Close all dropdowns
+        dropdowns.forEach(d => {
+          d.classList.remove('open');
+          d.dataset.clicked = "false";
+        });
 
-            // Hover to open (desktop only)
-            dropdown.addEventListener('mouseenter', () => {
-              if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
-                dropdown.classList.add('open');
-              }
-            });
+        if (!isOpen) {
+          dropdown.classList.add('open');
+          dropdown.dataset.clicked = "true";
+        }
+      });
 
-            dropdown.addEventListener('mouseleave', () => {
-              if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
-                dropdown.classList.remove('open');
-              }
-            });
-          });
+      // Hover to open (desktop only)
+      dropdown.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+          dropdown.classList.add('open');
+        }
+      });
 
-          // Close on outside click
-          document.addEventListener('click', (e) => {
-            dropdowns.forEach(dropdown => {
-              if (!dropdown.contains(e.target)) {
-                dropdown.classList.remove('open');
-                dropdown.dataset.clicked = "false";
-              }
-            });
-          });
-        </script>
-        
-        <script>
-          document.addEventListener("DOMContentLoaded", () => {
-            const currentPath = window.location.pathname.split("/").pop(); // Get current file name
-            const links = document.querySelectorAll(".navbar-right a");
+      dropdown.addEventListener('mouseleave', () => {
+        if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+          dropdown.classList.remove('open');
+        }
+      });
+    });
 
-            links.forEach(link => {
-              const linkPath = link.getAttribute("href").split("/").pop();
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      dropdowns.forEach(dropdown => {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('open');
+          dropdown.dataset.clicked = "false";
+        }
+      });
+    });
+  </script>
 
-              if (linkPath === currentPath) {
-                // Highlight the clicked link
-                link.classList.add("active");
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+      const links = document.querySelectorAll(".navbar-right a");
 
-                // Also highlight parent if inside dropdown
-                const parentDropdown = link.closest(".dropdown");
-                if (parentDropdown) {
-                  const parentLink = parentDropdown.querySelector(":scope > a");
-                  if (parentLink) parentLink.classList.add("active");
-                }
-              }
-            });
-          });
-        </script>
+      links.forEach(link => {
+        const linkPath = link.getAttribute("href").split("/").pop();
+
+        if (linkPath === currentPath) {
+          // Highlight the clicked link
+          link.classList.add("active");
+
+          // Also highlight parent if inside dropdown
+          const parentDropdown = link.closest(".dropdown");
+          if (parentDropdown) {
+            const parentLink = parentDropdown.querySelector(":scope > a");
+            if (parentLink) parentLink.classList.add("active");
+          }
+        }
+      });
+    });
+  </script>
 
 
 <!--Hero Section-->
@@ -186,26 +189,26 @@
  <section class="heroSection">
       <div class="heroContent">
         <div class="imageColumn">
-          <img src="../images/Home/herosection/heroimg.png" alt="Hero Image" class="heroImage" />
+          <img src="/Palak/images/Home/herosection/heroimg.png" alt="Hero Image" class="heroImage" />
 
           <!-- Overlapping Boxes -->
           <div class="infoBox consultantsBox">
-            <img src="../images/Home/herosection/heads.png" alt="Icon" />
+            <img src="/Palak/images/Home/herosection/heads.png" alt="Icon" />
             <span>500+ Verified Consultants</span>
           </div>
 
           <div class="infoBox countriesBox">
-            <img src="../images/Home/herosection/heads.png" alt="Icon" />
+            <img src="/Palak/images/Home/herosection/heads.png" alt="Icon" />
             <span>18+ Countries Covered</span>
           </div>
         </div>
 
         <div class="textColumn">
           <div class="trustBadge">
-            <img src="../images/Home/herosection/star.png" alt="Icon" /> Trusted by 10,000+ Students
+            <img src="/Palak/images/Home/herosection/star.png" alt="Icon" /> Trusted by 10,000+ Students
           </div>
           <h1>Welcome to &nbsp;
-            <span class="highlight">  Study Befikar</span>
+            <span class="highlight">Study Befikar</span>
           </h1>
           <p>
             Empowering students to confidently plan their study abroad journey
@@ -233,7 +236,7 @@
             <div class="modal-content">
               <!-- leftside -->
               <div class="modal-left">
-                <img src="../images/Home/herosection/modal-img.jpg" alt="Services" />
+                <img src="/Palak/images/Home/herosection/modal-img.jpg" alt="Services" />
               </div>
           
               <!-- rightSide -->
@@ -273,7 +276,7 @@
           <div class="hero-divider"></div>
 
           <div class="testimonial">
-            <img src="../images/Home/herosection/group-ppl.png" alt="Students" />
+            <img src="/Palak/images/Home/herosection/group-ppl.png" alt="Students" />
             <span>We've served over 500+ students across 18 countries!</span>
           </div>
         </div>
@@ -357,7 +360,7 @@
     }
   ];
 
-  const arrowIcon = "../images/Home/whychooseus/right-arrow.png";
+  const arrowIcon = "/Palak/images/Home/whychooseus/right-arrow.png";
   const cardGrid = document.getElementById("cardGrid");
 
   cardData.forEach(card => {
@@ -464,58 +467,65 @@
     countries: [
   {
     name: "United States of America",
-    desc: "Pursue higher education in the France and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.",
-    countryImg: "../images/Home/country/usa.png",
-    countrySpecificImg: "../images/Home/country/usa1.png",
+    desc: "Pursue higher education in the USA and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.",
+    countryImg: "/Palak/images/Home/country/usa.png",
+    countrySpecificImg: "/Palak/images/Home/country/usa1.png",
     link: "/Palak/USA/usa.html"
   },
+
   {
     name: "United Kingdom",
-    desc: "Shorter programs and globally ranked schools.",
-    countryImg: "../images/Home/country/uk.png",
-    countrySpecificImg: "../images/Home/country/uk1.jpg",
+    desc: "Pursue higher education in the UK and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.",
+    countryImg: "/Palak/images/Home/country/uk.png",
+    countrySpecificImg: "/Palak/images/Home/country/uk1.jpg",
     link: "/countries/uk.html"
   },
+
   {
     name: "New Zealand",
-    desc: "High-quality education with natural beauty.",
-    countryImg: "../images/Home/country/nz.png",
-    countrySpecificImg: "../images/Home/country/nz1.jpg",
+    desc: "Pursue higher education in New Zealand and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.",
+    countryImg: "/Palak/images/Home/country/nz.png",
+    countrySpecificImg: "/Palak/images/Home/country/nz1.jpg",
     link: "/countries/nz.html"
   },
+
   {
     name: "Germany",
-    desc: "Free or low-tuition education.",
-    countryImg: "../images/Home/country/germany.png",
-    countrySpecificImg: "../images/Home/country/germany1.jpg",
+    desc: "Pursue higher education in Germany and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.",
+    countryImg: "/Palak/images/Home/country/germany.png",
+    countrySpecificImg: "/Palak/images/Home/country/germany1.jpg",
     link: "/countries/germany.html"
   },
+
   {
     name: "France",
-    desc: "Quality education and lifestyle.",
-    countryImg: "../images/Home/country/france.png",
-    countrySpecificImg: "../images/Home/country/france1.png",
+    desc: "Pursue higher education in France and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.",
+    countryImg: "/Palak/images/Home/country/france.png",
+    countrySpecificImg: "/Palak/images/Home/country/france1.png",
     link: "/countries/france.html"
   },
+
   {
     name: "Canada",
-    desc: "Affordable education with great PR prospects.",
-    countryImg: "../images/Home/country/canada.png",
-    countrySpecificImg: "../images/Home/country/canada1.png",
+    desc: "Pursue higher education in Canada and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.",
+    countryImg: "/Palak/images/Home/country/canada.png",
+    countrySpecificImg: "/Palak/images/Home/country/canada1.png",
     link: "/countries/canada.html"
   },
+
   {
     name: "Ireland",
-    desc: "Post-study work and job-rich economy.",
-    countryImg: "../images/Home/country/ireland.png",
-    countrySpecificImg: "../images/Home/country/ireland1.png",
+    desc: "Pursue higher education in Ireland and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.",
+    countryImg: "/Palak/images/Home/country/ireland.png",
+    countrySpecificImg: "/Palak/images/Home/country/ireland1.png",
     link: "/countries/ireland.html"
   },
+
   {
     name: "Singapore",
-    desc: "Top student cities with vibrant culture.",
-    countryImg: "../images/Home/country/singapore.png",
-    countrySpecificImg: "../images/Home/country/singapore1.png",
+    desc: "Pursue higher education in Singapore and tap into groundbreaking STEM and research opportunities that shape future innovators and global industry leaders.",
+    countryImg: "/Palak/images/Home/country/singapore.png",
+    countrySpecificImg: "/Palak/images/Home/country/singapore1.png",
     link: "/countries/singapore.html"
   },
 ],
@@ -559,7 +569,7 @@
       bg: "#FDF0F4",
       heading: "Affordable Study Abroad Loans With No Hidden Costs",
       subheading: "At Study Befikar, we believe students should never be burdened by hidden costs or complicated loan processes. That’s why we offer a transparent, student-first approach to education financing.",
-      doublet:"../images/Home/loan/double-tick-pink.png" ,
+      doublet:"/Palak/images/Home/loan/double-tick-pink.png" ,
       points: [
         "100% transparent process, no hidden charges or surprise fees",
         "Absolutely free for students, no service charges or consultation fees",
@@ -567,14 +577,14 @@
         "Focus on your future, we handle the details so you can focus on your education",
         "Trusted by thousands, a platform built on trust, reliability, and student-first values"
       ],
-      image: "../images/Home/loan/loan1.png"
+      image: "/Palak/images/Home/loan/loan1.png"
     },
 
     {
       bg: "#FFF6E1",
       heading: "Hassle-Free Loan Application For Study Abroad",
       subheading: "Eliminate the stress of complicated loan applications with our hassle-free process. We make financing your study abroad journey smooth and worry-free:",
-      doublet:"../images/Home/loan/double-tick-yellow.png" ,
+      doublet:"/Palak/images/Home/loan/double-tick-yellow.png" ,
       points: [
         "Simple and fast loan application process",
         "Customized loan offers tailored to your needs",
@@ -582,14 +592,14 @@
         "We handle the paperwork and follow-ups for you",
         "Focus on your education while we manage the rest"
       ],
-      image: "../images/Home/loan/loan2.png"
+      image: "/Palak/images/Home/loan/loan2.png"
     },
 
     {
       bg: "#E4F7FA",
       heading: "Best Interest Rates For Study Abroad Loans",
       subheading: "Access the best study abroad loan rates with Study Befikar, where we connect you with leading public and private lenders around the world. Our goal is to make your education more affordable and stress-free",
-      doublet:"../images/Home/loan/double-tick-blue.png" ,
+      doublet:"/Palak/images/Home/loan/double-tick-blue.png" ,
       points: [
         "Best interest rates tailored to your profile",
         "Wide network of top public and private lenders",
@@ -597,14 +607,14 @@
         "Personalized loan matching for maximum savings",
         "Affordable financing that makes studying abroad accessible"
       ],
-      image: "../images/Home/loan/loan3.png"
+      image: "/Palak/images/Home/loan/loan3.png"
     },
 
     {
       bg: "#E9EDFF",
       heading: "Transparency with Study Befikar: No Gimmicks, Just Clarity",
       subheading: "At Study Befikar, we prioritize transparency at every step of your study abroad loan journey. No gimmicks, just clear, honest support to help you make confident decisions",
-      doublet:"../images/Home/loan/double-tick-dblue.png" ,
+      doublet:"/Palak/images/Home/loan/double-tick-dblue.png" ,
       points: [
         "View real, pre-qualified loan rates tailored to your profile",
         "No misleading offers or hidden conditions",
@@ -612,7 +622,7 @@
         "Empowering you with honest information to choose the best loan",
         "Confidence and control throughout your financial planning"
       ],
-      image: "../images/Home/loan/loan4.png"
+      image: "/Palak/images/Home/loan/loan4.png"
     }
   ],
 
@@ -658,6 +668,7 @@
       <p class="cardText">${tabData.text}</p>
       <div class="admissionGrid">
         ${tabData.countries.map((country, i) => `
+
           <div class="admissionCard ${isMobile && i >= maxVisible ? 'hiddenCard' : ''}">
             <div class="countryImgWrapper">
               <img src="${country.countryImg}" class="countryImg" alt="${country.name} Flag" />
@@ -672,7 +683,8 @@
               </a>
             </div>
           </div>
-        `).join('')}
+        `
+      ).join('')}
       </div>
       ${isMobile ? `<button id="viewMoreBtn" onclick="toggleViewMore()">View More</button>` : ''}
     </div>
@@ -1081,14 +1093,14 @@ function goToTestSlide(index) {
         <div class="footer-container">
             <!-- Column 1: Logo + About + Social Icons -->
             <div class="footer-col footer-about">
-                <img src="../images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <img src="/Palak/images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
                 <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
                     achieve their academic dreams abroad.</p>
                 <div class="footer-socials">
-                    <a href="#"><img src="../images/Home/footer/9.png" alt="Instagram"></a>
-                    <a href="#"><img src="../images/Home/footer/10.png" alt="Facebook"></a>
-                    <a href="#"><img src="../images/Home/footer/11.png" alt="LinkedIn"></a>
-                    <a href="#"><img src="../images/Home/footer/12.png" alt="X"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/12.png" alt="X"></a>
                 </div>
             </div>
             <div class="footer-right-columns">

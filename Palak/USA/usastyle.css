@@ -1889,7 +1889,7 @@ h4 {
     box-shadow: 0px 4px 7.6px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     padding: 30px 36px;
-    height: 589px;
+    height: auto;
 }
 
 .left-card {
@@ -2215,7 +2215,7 @@ h4 {
 /* Individual Card */
 .scholarship-card {
     width: 420px;
-    height: 302px;
+    height: auto;
     border-radius: 20px;
     padding: 30px 29px;
     gap: 10px;

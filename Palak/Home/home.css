@@ -226,6 +226,8 @@ body {
   align-items: center;
   margin-bottom: 5px;
   margin-top: 5%;
+  display: flex;
+  align-items: center;
 }
 
 .textColumn h1 {
@@ -1131,7 +1133,7 @@ body {
 .admissionGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 10px;
   margin-top: 32px;
   justify-content: center;
 }
@@ -1385,7 +1387,7 @@ body {
 .admConsultCard .cardNumber {
   font-weight: 700;
   font-size: 34px;
-   background-image: linear-gradient(to bottom,#FFFFFF,rgba(153, 153, 153, 0.11) );
+  background-image: linear-gradient(to bottom,#FFFFFF,rgba(153, 153, 153, 0.11) );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1393,17 +1395,17 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   width: 269px;
-height: 43px;
-opacity: 1;
-font-weight: 700;
-font-style: Bold;
-font-size: 34px;
-line-height: 100%;
-letter-spacing: 0%;
+  height: 43px;
+  opacity: 1;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 34px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .admConsultCard .cardTitle {
-opacity: 1;
+  opacity: 1;
   font-size: 21px;
   font-weight: 700;
   margin-top: 28px;
@@ -1415,7 +1417,7 @@ opacity: 1;
   font-size: 15px;
   font-weight: 400;
   color: #fff;
-opacity: 1;
+  opacity: 1;
 }
 
 
@@ -1432,8 +1434,9 @@ opacity: 1;
 @media (max-width: 768px) {
 
   .admConsultWrapper {
-  height: auto;
-}
+    height: auto;
+  }
+
   .admConsultGrid {
     grid-template-columns: 1fr; 
   }
@@ -1442,11 +1445,11 @@ opacity: 1;
   font-size: 0.95rem;
   color: #fff;
   width: auto;
-height: 75px;
-opacity: 1;
-margin-top: 5%;
-font-weight: 400;
-font-style: Bold;
+  height: 75px;
+  opacity: 1;
+  margin-top: 5%;
+  font-weight: 400;
+  font-style: Bold;
 }
 }
 
@@ -1462,6 +1465,7 @@ font-style: Bold;
 .loanCard {
   border-radius: 20px;
   padding: 30px 20px;
+  box-shadow: 0px 4px 7.6px 0px #0000001A;
 }
 
 .loanCardInner {
@@ -1523,7 +1527,7 @@ font-style: Bold;
 
 .loanImageColumn img {
   width: 100%;
-  max-width: 300px; /*  image width on desktop */
+  max-width: 300px; 
   height: auto;
   display: block;
   margin: 0 auto;
@@ -1533,7 +1537,7 @@ font-style: Bold;
 .scrollingBankBanner {
   overflow: hidden;
   width: 100%;
-  background: #fff; /* Optional background */
+  background: #fff; 
 }
 
 .scrollBankWrapper {
@@ -1550,15 +1554,15 @@ font-style: Bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 30px; /* Space between images */
+  padding: 0 30px;
 }
 
 .scrollImg img {
-  height: 50px; /* Adjust as needed */
+  height: 50px; 
   width: auto;
 }
 
-/* Animation */
+
 @keyframes scrollLeft {
   0% {
     transform: translateX(0);

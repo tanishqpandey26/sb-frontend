@@ -1,0 +1,4474 @@
+[
+  {
+    "id": 1,
+    "rank": 1,
+    "name": "Massachusetts Institute of Technology (MIT)",
+    "location": "Cambridge, United States",
+    "overall": 100,
+    "employability": 100,
+    "intlSRatio": 91.6,
+    "studentDiversity": 92.3,
+    "sustainability": 93.8,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+  },
+
+  {
+    "id": 2,
+    "rank": 2,
+    "name": "Imperial College London",
+    "location": "London, United Kingdom",
+    "overall": 99.4,
+    "employability": 95.9,
+    "intlSRatio": 100,
+    "studentDiversity":100,
+    "sustainability": 98.3,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/icl.webp",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1000-1200"]  
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 3,
+    "rank": 3,
+    "name": "Stanford University",
+    "location": "Stanford, United States",
+    "overall": 98.9,
+    "employability": 100,
+    "intlSRatio": 73.5,
+    "studentDiversity":76.1,
+    "sustainability": 95.4,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/usa/stanford.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 4,
+    "rank": 4,
+    "name": "University of Oxford",
+    "location": "Oxford, United Kingdom",
+    "overall": 97.9,
+    "employability": 100,
+    "intlSRatio": 98.6,
+    "studentDiversity":98.7,
+    "sustainability": 77.9,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/oxford.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 5,
+    "rank": 5,
+    "name": "Harvard University",
+    "location": "Cambridge, United States",
+    "overall": 97.7,
+    "employability": 100,
+    "intlSRatio": 81.4,
+    "studentDiversity":60.6,
+    "sustainability": 77.8,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/usa/harvard.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 6,
+    "rank": 6,
+    "name": "University of Cambridge",
+    "location": "Cambridge, United Kingdom",
+    "overall": 97.2,
+    "employability": 100,
+    "intlSRatio": 93.1,
+    "studentDiversity":93.6,
+    "sustainability": 78.4,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 7,
+    "rank": 8,
+    "name": "National University of Singapore (NUS)",
+    "location": "Singapore, Singapore",
+    "overall": 95.9,
+    "employability": 100,
+    "intlSRatio": 96.9,
+    "studentDiversity":72.1,
+    "sustainability": 90,
+    "country": "Singapore",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 8,
+    "rank": 9,
+    "name": "University College London",
+    "location": "London, United Kingdom",
+    "overall": 95.8,
+    "employability": 89.3,
+    "intlSRatio": 100,
+    "studentDiversity":100,
+    "sustainability": 98.5,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 9,
+    "rank": 10,
+    "name": "California Institute of Technology",
+    "location": "Pasadena, United States",
+    "overall": 94.3,
+    "employability": 49.1,
+    "intlSRatio": 90.7,
+    "studentDiversity":91.4,
+    "sustainability": 79.2,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 10,
+    "rank": 12,
+    "name": "Nanyang Technological University,",
+    "location": " Singapore, Singapore",
+    "overall": 93.7,
+    "employability": 87.7,
+    "intlSRatio": 93.1,
+    "studentDiversity":93.6,
+    "sustainability": 87.2,
+    "country": "Singapore",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 11,
+    "rank": 13,
+    "name": "University of Chicago",
+    "location": "Chicago, United States",
+    "overall": 93,
+    "employability": 99.8,
+    "intlSRatio": 92.8,
+    "studentDiversity":69.1,
+    "sustainability": 73.3,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 12,
+    "rank": 15,
+    "name": "University of Pennsylvania",
+    "location": "Philadelphia, United States",
+    "overall": 92.5,
+    "employability": 100,
+    "intlSRatio": 76.3,
+    "studentDiversity":78.6,
+    "sustainability": 95,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 13,
+    "rank": 16,
+    "name": "Cornell University",
+    "location": "Ithaca, United States",
+    "overall": 91.6,
+    "employability": 99.3,
+    "intlSRatio": 75.7,
+    "studentDiversity":56.4,
+    "sustainability": 76.8,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 14,
+    "rank": 17,
+    "name": "University of California, Berkeley (UCB)",
+    "location": "Berkeley, United States",
+    "overall": 91.2,
+    "employability": 99.8,
+    "intlSRatio": 70.6,
+    "studentDiversity":52.6,
+    "sustainability": 98.8,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 15,
+    "rank": 19,
+    "name": "The University of Melbourne",
+    "location": "Melbourne, Australia",
+    "overall": 90.8,
+    "employability": 98.3,
+    "intlSRatio": 100,
+    "studentDiversity":74.4,
+    "sustainability": 98.2,
+    "country": "Australia",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 16,
+    "rank": 20,
+    "name": "The University of New South Wales",
+    "location": "Sydney, Australia",
+    "overall": 90.7,
+    "employability": 98.7,
+    "intlSRatio": 99.9,
+    "studentDiversity":99.9,
+    "sustainability": 97,
+    "country": "Australia",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 17,
+    "rank": 21,
+    "name": "Yale University",
+    "location": "New Haven, United States",
+    "overall": 90.4,
+    "employability": 99.8,
+    "intlSRatio": 72.7,
+    "studentDiversity":75.4,
+    "sustainability": 82.4,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 18,
+    "rank": 24,
+    "name": "Johns Hopkins University",
+    "location": "Baltimore, United States",
+    "overall": 89.7,
+    "employability": 84.1,
+    "intlSRatio": 94.2,
+    "studentDiversity":94.6,
+    "sustainability": 93,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 19,
+    "rank": 25,
+    "name": "Princeton University",
+    "location": "Princeton, United States",
+    "overall": 89.4,
+    "employability": 98.9,
+    "intlSRatio": 70,
+    "studentDiversity":52.2,
+    "sustainability": 76,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 20,
+    "rank": 25,
+    "name": "The University of Sydney",
+    "location": "Sydney, Australia",
+    "overall": 89.4,
+    "employability": 95.8,
+    "intlSRatio": 100,
+    "studentDiversity":100,
+    "sustainability": 97.6,
+    "country": "Australia",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 21,
+    "rank": 27,
+    "name": "McGill University",
+    "location": "Montreal, Canada",
+    "overall": 88.9,
+    "employability": 98.9,
+    "intlSRatio": 93.5,
+    "studentDiversity":69.6,
+    "sustainability": 96.3,
+    "country": "Canada",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["November"]
+  },
+
+  {
+    "id": 22,
+    "rank": 28,
+    "name": "Université PSL",
+    "location": "Paris, France",
+    "overall": 88.6,
+    "employability": 97.5,
+    "intlSRatio": 93.5,
+    "studentDiversity":69.6,
+    "sustainability": 87.8,
+    "country": "France",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 23,
+    "rank": 29,
+    "name": "University of Toronto",
+    "location": "Toronto, Canada",
+    "overall": 88.5,
+    "employability": 99.4,
+    "intlSRatio": 97.9,
+    "studentDiversity":98,
+    "sustainability": 100,
+    "country": "Canada",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 24,
+    "rank": 31,
+    "name": "King's College London",
+    "location": "London, United Kingdom",
+    "overall": 88.3,
+    "employability": 76.4,
+    "intlSRatio": 99,
+    "studentDiversity":99,
+    "sustainability": 96.5,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 25,
+    "rank": 32,
+    "name": "Australian National University (ANU)",
+    "location": "Canberra, Australia",
+    "overall": 87.4,
+    "employability": 95.8,
+    "intlSRatio": 100,
+    "studentDiversity":100,
+    "sustainability": 97.6,
+    "country": "Australia",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 26,
+    "rank": 34,
+    "name": "The University of Edinburgh",
+    "location": "Edinburgh, United Kingdom",
+    "overall": 87.2,
+    "employability": 69.7,
+    "intlSRatio": 99.9,
+    "studentDiversity":99.9,
+    "sustainability": 98.3,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 27,
+    "rank": 35,
+    "name": "The University of Manchester",
+    "location": "Manchester, United Kingdom",
+    "overall": 86.4,
+    "employability": 91.9,
+    "intlSRatio": 99.5,
+    "studentDiversity":99.5,
+    "sustainability": 98.2,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 28,
+    "rank": 36,
+    "name": "Monash University",
+    "location": "Melbourne, Australia",
+    "overall": 85.8,
+    "employability": 86.7,
+    "intlSRatio": 100,
+    "studentDiversity":100,
+    "sustainability": 91.7,
+    "country": "Australia",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 29,
+    "rank": 38,
+    "name": "Columbia University",
+    "location": "New York City, United States",
+    "overall": 85.6,
+    "employability": 100,
+    "intlSRatio": 98.1,
+    "studentDiversity":72.9,
+    "sustainability": 77.9,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 30,
+    "rank": 40,
+    "name": "University of British Columbia",
+    "location": "Vancouver, Canada",
+    "overall": 85.5,
+    "employability": 84.9,
+    "intlSRatio": 79.8,
+    "studentDiversity":81.7,
+    "sustainability": 98.5,
+    "country": "Canada",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 31,
+    "rank": 41,
+    "name": "Institut Polytechnique de Paris",
+    "location": "Paris, France",
+    "overall": 85.4,
+    "employability": 99.1,
+    "intlSRatio": 99.2,
+    "studentDiversity":99.2,
+    "sustainability": 77.9,
+    "country": "France",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 32,
+    "rank": 42,
+    "name": "Northwestern University",
+    "location": "Evanston, United States",
+    "overall": 85.1,
+    "employability": 99.5,
+    "intlSRatio": 67.2,
+    "studentDiversity":50,
+    "sustainability": 74.4,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 33,
+    "rank": 42,
+    "name": "The University of Queensland",
+    "location": "Brisbane City, Australia",
+    "overall": 85.1,
+    "employability": 66.6,
+    "intlSRatio": 100,
+    "studentDiversity":100,
+    "sustainability": 92.5,
+    "country": "Australia",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 34,
+    "rank": 45,
+    "name": "University of Michigan-Ann Arbor",
+    "location": "Ann Arbor, United States",
+    "overall": 84.7,
+    "employability": 99.1,
+    "intlSRatio": 56.1,
+    "studentDiversity":60.3,
+    "sustainability": 77.2,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 35,
+    "rank": 46,
+    "name": "University of California, Los Angeles (UCLA)",
+    "location": "Los Angeles, United States",
+    "overall": 84.4,
+    "employability": 98,
+    "intlSRatio": 31.8,
+    "studentDiversity":37.7,
+    "sustainability": 78,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 36,
+    "rank": 51,
+    "name": "University of Bristol",
+    "location": "Bristol, United Kingdom",
+    "overall": 82.5,
+    "employability": 63.1,
+    "intlSRatio": 95.7,
+    "studentDiversity":96,
+    "sustainability": 97,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 37,
+    "rank": 52,
+    "name": "Carnegie Mellon University",
+    "location": "Pittsburgh, United States",
+    "overall": 82.3,
+    "employability": 79.9,
+    "intlSRatio": 98.7,
+    "studentDiversity":73.4,
+    "sustainability": 66.2,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 38,
+    "rank": 55,
+    "name": "New York University (NYU)",
+    "location": "New York City, United States",
+    "overall": 81.1,
+    "employability": 99.5,
+    "intlSRatio": 99.7,
+    "studentDiversity":99.7,
+    "sustainability": 91.3,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 39,
+    "rank": 56,
+    "name": "The London School of Economics and Political Science (LSE)",
+    "location": "London, United Kingdom",
+    "overall": 80.5,
+    "employability": 99.9,
+    "intlSRatio": 100,
+    "studentDiversity":100,
+    "sustainability": 92.7,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 40,
+    "rank": 58,
+    "name": "Ludwig-Maximilians-Universität München",
+    "location": "Munich, Germany",
+    "overall": 80.1,
+    "employability": 76.8,
+    "intlSRatio": 53.2,
+    "studentDiversity": 57.6,
+    "sustainability": 87,
+    "country": "Germany",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 41,
+    "rank": 62,
+    "name": "Duke University",
+    "location": "Durham, United States",
+    "overall": 79,
+    "employability": 95.6,
+    "intlSRatio": 62,
+    "studentDiversity": 46.2,
+    "sustainability": 77.6,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 42,
+    "rank": 65,
+    "name": "The University of Auckland",
+    "location": "Auckland, New Zealand",
+    "overall": 77.5,
+    "employability": 96.9,
+    "intlSRatio": 95.5,
+    "studentDiversity": 95.8,
+    "sustainability": 95.7,
+    "country": "NEWZEALAND",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 43,
+    "rank": 66,
+    "name": "University of California, San Diego (UCSD)",
+    "location": "San Diego, United States",
+    "overall": 76.9,
+    "employability": 40.8,
+    "intlSRatio": 47,
+    "studentDiversity": 52,
+    "sustainability": 72.3,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 44,
+    "rank": 68,
+    "name": "University of Texas at Austin",
+    "location": "Austin, United States",
+    "overall": 76.4,
+    "employability": 19.1,
+    "intlSRatio": 14.4,
+    "studentDiversity": 52,
+    "sustainability": 70.6,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 45,
+    "rank": 69,
+    "name": "Brown University",
+    "location": "Providence, United States",
+    "overall": 76.2,
+    "employability": 67,
+    "intlSRatio": 70.2,
+    "studentDiversity": 52,
+    "sustainability": 72.6,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 46,
+    "rank": 70,
+    "name": "University of Illinois Urbana-Champaign",
+    "location": "Champaign, United States",
+    "overall": 75.9,
+    "employability": 92.5,
+    "intlSRatio": 70.1,
+    "studentDiversity": 52.2,
+    "sustainability": 75.9,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 47,
+    "rank": 70,
+    "name": "Université Paris-Saclay",
+    "location": "Paris, France",
+    "overall": 75.9,
+    "employability": 82.9,
+    "intlSRatio": 72.7,
+    "studentDiversity": 75.4,
+    "sustainability": 92.7,
+    "country": "France",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 48,
+    "rank": 72,
+    "name": "Sorbonne University",
+    "location": "Paris, France",
+    "overall": 75.7,
+    "employability": 84.2,
+    "intlSRatio":66.8,
+    "studentDiversity": 70,
+    "sustainability": 89.2,
+    "country": "France",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 49,
+    "rank": 74,
+    "name": "The University of Warwick",
+    "location": "Coventry, United Kingdom",
+    "overall": 75.2,
+    "employability": 75.3,
+    "intlSRatio":99.2,
+    "studentDiversity": 99.3,
+    "sustainability": 84.6,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 50,
+    "rank": 75,
+    "name": "Trinity College Dublin, The University of Dublin",
+    "location": "Dublin, Ireland",
+    "overall": 73.9,
+    "employability": 95.3,
+    "intlSRatio":94.9,
+    "studentDiversity": 95.2,
+    "sustainability": 73.8,
+    "country": "Ireland",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 51,
+    "rank": 76,
+    "name": "University of Birmingham",
+    "location": "Birmingham, United Kingdom",
+    "overall": 73.8,
+    "employability": 54.7,
+    "intlSRatio":93.4,
+    "studentDiversity": 93.9,
+    "sustainability": 92.8,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 52,
+    "rank": 77,
+    "name": "The University of Western Australia",
+    "location": "Perth, Australia",
+    "overall": 73.7,
+    "employability": 82.6,
+    "intlSRatio":100,
+    "studentDiversity": 100,
+    "sustainability": 83.7,
+    "country": "Australia",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 53,
+    "rank": 79,
+    "name": "University of Glasgow",
+    "location": "Glasgow, United Kingdom",
+    "overall": 73.4,
+    "employability": 44.5,
+    "intlSRatio":99.1,
+    "studentDiversity": 99.1,
+    "sustainability": 95.4,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 54,
+    "rank": 80,
+    "name": "Universität Heidelberg",
+    "location": "Heidelberg, Germany",
+    "overall": 73,
+    "employability": 34.6,
+    "intlSRatio": 71.4,
+    "studentDiversity": 74.1,
+    "sustainability": 85.5,
+    "country": "Germany",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 55,
+    "rank": 81,
+    "name": "University of Washington",
+    "location": "Seattle, United States",
+    "overall": 72.7,
+    "employability": 79.9,
+    "intlSRatio": 45.8,
+    "studentDiversity": 34.2,
+    "sustainability": 74.9,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 56,
+    "rank": 82,
+    "name": "Adelaide University",
+    "location": "Adelaide, Australia",
+    "overall": 72.6,
+    "employability": 70.4,
+    "intlSRatio": 97.5,
+    "studentDiversity": 72.5,
+    "sustainability": 86.1,
+    "country": "Australia",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 57,
+    "rank": 82,
+    "name": "Pennsylvania State University",
+    "location": "University Park, United States",
+    "overall": 72.6,
+    "employability": 79.2,
+    "intlSRatio": 38.2,
+    "studentDiversity": 43.8,
+    "sustainability": 95.4,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 58,
+    "rank": 86,
+    "name": "University of Leeds",
+    "location": "Leeds, United Kingdom",
+    "overall": 72,
+    "employability": 62.9,
+    "intlSRatio":96.3,
+    "studentDiversity": 96.5,
+    "sustainability": 76.4,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 59,
+    "rank": 87,
+    "name": "University of Southampton",
+    "location": "Southampton, United Kingdom",
+    "overall": 71.2,
+    "employability": 58.6,
+    "intlSRatio":98.6,
+    "studentDiversity": 98.6,
+    "sustainability": 95.1,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 60,
+    "rank": 88,
+    "name": "Boston University",
+    "location": "Boston, United States",
+    "overall": 71.1,
+    "employability": 86.9,
+    "intlSRatio":92.8,
+    "studentDiversity": 93.3,
+    "sustainability": 73.7,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 61,
+    "rank": 88,
+    "name": "Freie Universitaet Berlin",
+    "location": "Berlin, Germany",
+    "overall": 71.1,
+    "employability": 46.9,
+    "intlSRatio": 56,
+    "studentDiversity": 60.2,
+    "sustainability":  65.4,
+    "country": "Germany",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 62,
+    "rank": 88,
+    "name": "Purdue University",
+    "location": "West Lafayette, United States",
+    "overall": 71.1,
+    "employability": 81,
+    "intlSRatio": 55.3,
+    "studentDiversity": 59.6,
+    "sustainability":  88.4,
+    "country": "USA",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
+    "id": 63,
+    "rank": 92,
+    "name": "The University of Sheffield",
+    "location": "Sheffield,, United Kingdom",
+    "overall": 70.9,
+    "employability": 47.9,
+    "intlSRatio": 98,
+    "studentDiversity": 98.1,
+    "sustainability":  94.3,
+    "country": "UK",
+    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+   {
+  "id": 64,
+  "rank": 94,
+  "name": "Durham University",
+  "location": "Durham, United Kingdom",
+  "overall": 70.1,
+  "employability": 53.6,
+  "intlSRatio": 94.5,
+  "studentDiversity": 94.9,
+  "sustainability": 95.2,
+  "country": "UK",
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 65,
+  "rank": 94,
+  "name": "University of Alberta",
+  "location": "Edmonton,, Canada",
+  "country": "Canada",
+  "overall": 70.1,
+  "employability": 77.1,
+  "intlSRatio": 78.6,
+  "studentDiversity": 80.6,
+  "sustainability": 90.7,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+  {
+  "id": 66,
+  "rank": 96,
+  "name": "University of Technology Sydney",
+  "location": "Sydney, Australia",
+  "country": "Australia",
+  "overall": 69.9,
+  "employability": 52.3,
+  "intlSRatio": 91.7,
+  "studentDiversity": 92.3,
+  "sustainability": 92,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 67,
+  "rank": 97,
+  "name": "The University of Nottingham",
+  "location": "Nottingham, United Kingdom",
+  "country": "UK",
+  "overall": 69.4,
+  "employability": 53.7,
+  "intlSRatio": 78.5,
+  "studentDiversity": 80.6,
+  "sustainability": 92.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 68,
+  "rank": 98,
+  "name": "Karlsruhe Institute of Technology (KIT)",
+  "location": "Karlsruhe, Germany",
+  "country": "Germany",
+  "overall": 69.1,
+  "employability": 61.5,
+  "intlSRatio": 56.9,
+  "studentDiversity": 61.1,
+  "sustainability": 79.5,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+  {
+  "id": 69,
+  "rank": 105,
+  "name": "Rheinisch-Westfälische Technische Hochschule Aachen",
+  "location": "Aachen, Germany",
+  "country": "Germany",
+  "overall": 67.6,
+  "employability": 55.9,
+  "intlSRatio": 93,
+  "studentDiversity": 93.5,
+  "sustainability": 82.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 70,
+  "rank": 110,
+  "name": "Queen Mary University of London (QMUL)",
+  "location": "London, United Kingdom",
+  "country": "UK",
+  "overall": 66.6,
+  "employability": 40.1,
+  "intlSRatio": 99.9,
+  "studentDiversity": 99.9,
+  "sustainability": 82.4,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ 
+ {
+  "id": 71,
+  "rank": 110,
+  "name": "University of Wisconsin-Madison",
+  "location": "Madison, United States",
+  "country": "USA",
+  "overall": 66.6,
+  "employability": 91,
+  "intlSRatio": 37,
+  "studentDiversity": 42.6,
+  "sustainability": 72.5,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 72,
+  "rank": 113,
+  "name": "University of St Andrews",
+  "location": "St. Andrews, United Kingdom",
+  "country": "UK",
+  "overall": 66.4,
+  "employability": 28.9,
+  "intlSRatio": 99.7,
+  "studentDiversity": 99.7,
+  "sustainability": 86.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 73,
+  "rank": 114,
+  "name": "University of California, Davis",
+  "location": " Davis, United States",
+  "country": "USA",
+  "overall": 66.3,
+  "employability": 38,
+  "intlSRatio": 61.9,
+  "studentDiversity": 65.6,
+  "sustainability": 79.8,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+  {
+  "id": 74,
+  "rank": 118,
+  "name": "University College Dublin",
+  "location": "Dublin, Ireland",
+  "country": "Ireland",
+  "overall": 66,
+  "employability": 92.2,
+  "intlSRatio": 89.6,
+  "studentDiversity": 90.5,
+  "sustainability": 91.7,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+  {
+  "id": 75,
+  "rank": 119,
+  "name": "Rice University",
+  "location": "Houston, United States",
+  "country": "USA",
+  "overall": 65.7,
+  "employability": 45.7,
+  "intlSRatio": 96.6,
+  "studentDiversity": 96.8,
+  "sustainability": 81.5,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 76,
+  "rank": 119,
+  "name": "University of Waterloo",
+  "location": "Waterloo, Canada",
+  "country": "Canada",
+  "overall": 65.7,
+  "employability": 72,
+  "intlSRatio": 76.6,
+  "studentDiversity": 78.9,
+  "sustainability": 90.5,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 77,
+  "rank": 123,
+  "name": "Georgia Institute of Technology",
+  "location": " Atlanta, United States",
+  "country": "USA",
+  "overall": 65.5,
+  "employability": 67.5,
+  "intlSRatio": 60.4,
+  "studentDiversity": 64.2,
+  "sustainability": 66.1,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+  {
+  "id": 78,
+  "rank": 125,
+  "name": "RMIT University",
+  "location": "Melbourne, Australia",
+  "country": "Australia",
+  "overall": 65.3,
+  "employability": 49.9,
+  "intlSRatio": 95.2,
+  "studentDiversity": 95.5,
+  "sustainability": 87.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 79,
+  "rank": 130,
+  "name": "Humboldt-Universität zu Berlin",
+  "location": "Berlin, Germany",
+  "country": "Germany",
+  "overall": 64.5,
+  "employability": 27.5,
+  "intlSRatio": 47.6,
+  "studentDiversity": 35.5,
+  "sustainability": 58.4,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+  {
+  "id": 80,
+  "rank": 132,
+  "name": "University of Bath",
+  "location": " Bath, United Kingdom",
+  "country": "UK",
+  "overall": 64.2,
+  "employability": 50.7,
+  "intlSRatio": 86.8,
+  "studentDiversity": 88,
+  "sustainability": 83.8,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 81,
+  "rank": 137,
+  "name": "Newcastle University",
+  "location": "Newcastle upon Tyne, United Kingdom",
+  "country": "UK",
+  "overall": 63.9,
+  "employability": 40.5,
+  "intlSRatio": 81,
+  "studentDiversity": 82.8,
+  "sustainability": 90.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+  {
+  "id": 82,
+  "rank": 138,
+  "name": "Macquarie University",
+  "location": "Sydney, Australia",
+  "country": "Australia",
+  "overall": 63.3,
+  "employability": 62.2,
+  "intlSRatio": 97.3,
+  "studentDiversity": 97.5,
+  "sustainability": 90.6,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+  {
+  "id": 83,
+  "rank": 145,
+  "name": "Technische Universität Berlin",
+  "location": "Berlin, Germany",
+  "country": "Germany",
+  "overall": 62.8,
+  "employability": 47.6,
+  "intlSRatio": 84.5,
+  "studentDiversity": 85.9,
+  "sustainability": 68.3,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+  {
+  "id": 84,
+  "rank": 147,
+  "name": "University of Liverpool",
+  "location": "Liverpool, United Kingdom",
+  "country": "UK",
+  "overall": 62.5,
+  "employability": 47.8,
+  "intlSRatio": 91.1,
+  "studentDiversity": 91.8,
+  "sustainability": 92.4,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 85,
+  "rank": 151,
+  "name": "Western University",
+  "location": "London, Canada",
+  "country": "Canada",
+  "overall": 62,
+  "employability": 98,
+  "intlSRatio": 68.7,
+  "studentDiversity": 71.7,
+  "sustainability": 94,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 86,
+  "rank": 155,
+  "name": "University of Exeter",
+  "location": "Exeter, United Kingdom",
+  "country": "UK",
+  "overall": 61.5,
+  "employability": 40.9,
+  "intlSRatio": 77.8,
+  "studentDiversity": 79.9,
+  "sustainability": 93.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 87,
+  "rank": 157,
+  "name": "Lancaster University",
+  "location": "Lancaster,, United Kingdom",
+  "country": "UK",
+  "overall": 61.4,
+  "employability": 38.2,
+  "intlSRatio": 93.3,
+  "studentDiversity": 93.8,
+  "sustainability": 89.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 88,
+  "rank": 168,
+  "name": "University of Montreal",
+  "location": " Montreal, Canada",
+  "country": "Canada",
+  "overall": 59.5,
+  "employability": 65.4,
+  "intlSRatio": 66.4,
+  "studentDiversity": 69.6,
+  "sustainability": 89.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 89,
+  "rank": 169,
+  "name": "University of York",
+  "location": "York, United Kingdom",
+  "country": "UK",
+  "overall": 59.4,
+  "employability": 41,
+  "intlSRatio": 75.4,
+  "studentDiversity": 77.8,
+  "sustainability": 93.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 90,
+  "rank": 173,
+  "name": "McMaster University",
+  "location": "Hamilton, Canada",
+  "country": "Canada",
+  "overall": 59.1,
+  "employability": 60,
+  "intlSRatio": 66.3,
+  "studentDiversity": 69.6,
+  "sustainability": 86.6,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 91,
+  "rank": 181,
+  "name": "Cardiff University",
+  "location": "Cardiff, United Kingdom",
+  "country": "UK",
+  "overall": 57.8,
+  "employability": 33.5,
+  "intlSRatio": 70.1,
+  "studentDiversity": 73,
+  "sustainability": 88.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 92,
+  "rank": 183,
+  "name": "Curtin University",
+  "location": "Perth, Australia",
+  "country": "Australia",
+  "overall": 57.6,
+  "employability": 37.9,
+  "intlSRatio": 54.3,
+  "studentDiversity": 58.7,
+  "sustainability": 82,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 93,
+  "rank": 184,
+  "name": "University of Wollongong",
+  "location": "Wollongong, Australia",
+  "country": "Australia",
+  "overall": 57.5,
+  "employability": 25.8,
+  "intlSRatio": 82.2,
+  "studentDiversity": 83.8,
+  "sustainability": 86.1,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 94,
+  "rank": 191,
+  "name": "Queen's University, Ontario",
+  "location": "Kingston, Canada",
+  "country": "Canada",
+  "overall": 56.8,
+  "employability": 92.3,
+  "intlSRatio": 35.5,
+  "studentDiversity": 41.2,
+  "sustainability": 86.6,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 95,
+  "rank": 193,
+  "name": "Universität Hamburg",
+  "location": "Hamburg, Germany",
+  "country": "Germany",
+  "overall": 56.5,
+  "employability": 49.9,
+  "intlSRatio": 31.3,
+  "studentDiversity": 37.1,
+  "sustainability": 94.1,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 96,
+  "rank": 194,
+  "name": "University of Reading",
+  "location": "Reading, United Kingdom",
+  "country": "UK",
+  "overall": 56.2,
+  "employability": 57.6,
+  "intlSRatio": 85.8,
+  "studentDiversity": 87,
+  "sustainability": 92.4,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 97,
+  "rank": 197,
+  "name": "University of Otago",
+  "location": "Dunedin, New Zealand",
+  "country": "NEWZEALAND",
+  "overall": 55.8,
+  "employability": 68.7,
+  "intlSRatio": 39.6,
+  "studentDiversity": 45,
+  "sustainability": 88.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 98,
+  "rank": 199,
+  "name": "Queen's University Belfast",
+  "location": " Belfast, United Kingdom",
+  "country": "UK",
+  "overall": 55.7,
+  "employability": 19.5,
+  "intlSRatio": 98.8,
+  "studentDiversity": 98.9,
+  "sustainability": 89.5,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 99,
+  "rank": 201,
+  "name": "Universität Freiburg",
+  "location": "Freiburg im Breisgau, Germany",
+  "country": "Germany",
+  "overall": 55.6,
+  "employability": 47.2,
+  "intlSRatio": 44.2,
+  "studentDiversity": 49.4,
+  "sustainability": 85.6,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+  {
+  "id": 100,
+  "rank": 205,
+  "name": "Ecole Normale Supérieure de Lyon",
+  "location": "Lyon, France",
+  "country": "France",
+  "overall": 55.1,
+  "employability": 17.9,
+  "intlSRatio": 23.9,
+  "studentDiversity": 26.7,
+  "sustainability": 50.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+  {
+  "id": 101,
+  "rank": 207,
+  "name": "Deakin University",
+  "location": "Melbourne, Australia",
+  "country": "Australia",
+  "overall": 54.9,
+  "employability": 43.6,
+  "intlSRatio": 83.3,
+  "studentDiversity": 84.8,
+  "sustainability": 86.7,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 102,
+  "rank": 207,
+  "name": "Rheinische Friedrich-Wilhelms-Universität Bonn",
+  "location": "Bonn, Germany",
+  "country": "Germany",
+  "overall": 54.9,
+  "employability": 50,
+  "intlSRatio": 56.4,
+  "studentDiversity": 60.6,
+  "sustainability": 86.4,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+  {
+  "id": 103,
+  "rank": 211,
+  "name": "University of Calgary",
+  "location": "Calgary, Canada",
+  "country": "Canada",
+  "overall": 54.7,
+  "employability": 61.5,
+  "intlSRatio": 76.9,
+  "studentDiversity": 79.1,
+  "sustainability": 86,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 104,
+  "rank": 215,
+  "name": "Eberhard Karls Universität Tübingen",
+  "location": "Tübingen, Germany",
+  "country": "Germany",
+  "overall": 54.5,
+  "employability": 36.5,
+  "intlSRatio": 40.5,
+  "studentDiversity": 30.3,
+  "sustainability": 64.5,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+ 
+ {
+  "id": 105,
+  "rank": 218,
+  "name": "Technische Universität Dresden",
+  "location": "Dresden, Germany",
+  "country": "Germany",
+  "overall": 54.3,
+  "employability": 12.5,
+  "intlSRatio": 42,
+  "studentDiversity": 47.3,
+  "sustainability": 87.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 106,
+  "rank": 219,
+  "name": "University of Ottawa",
+  "location": "Ottawa, Canada",
+  "country": "Canada",
+  "overall": 54.2,
+  "employability": 50,
+  "intlSRatio": 85.5,
+  "studentDiversity": 86.8,
+  "sustainability": 86.8,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 107,
+  "rank": 225,
+  "name": "Loughborough University",
+  "location": "Loughborough, United Kingdom",
+  "country": "UK",
+  "overall": 53.3,
+  "employability": 33.2,
+  "intlSRatio": 71.1,
+  "studentDiversity": 73.9,
+  "sustainability": 87.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 108,
+  "rank": 226,
+  "name": "Queensland University of Technology",
+  "location": "",
+  "country": "Australia",
+  "overall": 53.2,
+  "employability": 25.6,
+  "intlSRatio": 44.8,
+  "studentDiversity": 49.9,
+  "sustainability": 88.5,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 109,
+  "rank": 227,
+  "name": "The University of Newcastle",
+  "location": "Callaghan, Australia",
+  "country": "Australia",
+  "overall": 53.1,
+  "employability": 20.8,
+  "intlSRatio": 36.2,
+  "studentDiversity": 41.8,
+  "sustainability": 84.8,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 110,
+  "rank": 230,
+  "name": "Massey University",
+  "location": "Palmerston North, New Zealand",
+  "country": "NEWZEALAND",
+  "overall": 52.9,
+  "employability": 60.7,
+  "intlSRatio": 98.9,
+  "studentDiversity": 98.9,
+  "sustainability": 83.7,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 111,
+  "rank": 232,
+  "name": "Universität Erlangen-Nürnberg",
+  "location": "Erlangen, Germany",
+  "country": "Germany",
+  "overall": 52.2,
+  "employability": 27.1,
+  "intlSRatio": 60.6,
+  "studentDiversity": 64.4,
+  "sustainability": 75.4,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 112,
+  "rank": 233,
+  "name": "La Trobe University",
+  "location": "Melbourne, Australia",
+  "country": "Australia",
+  "overall": 52.1,
+  "employability": 28,
+  "intlSRatio": 97.4,
+  "studentDiversity": 97.5,
+  "sustainability": 82.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 113,
+  "rank": 240,
+  "name": "Victoria University of Wellington",
+  "location": "Kelburn, Wellington, New Zealand",
+  "country": "NEWZEALAND",
+  "overall": 51.3,
+  "employability": 77.6,
+  "intlSRatio": 56.7,
+  "studentDiversity": 60.9,
+  "sustainability": 83.3,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 114,
+  "rank": 243,
+  "name": "Georg-August-Universität Göttingen",
+  "location": "Göttingen, Germany",
+  "country": "Germany",
+  "overall": 51.1,
+  "employability": 51.2,
+  "intlSRatio": 37.9,
+  "studentDiversity": 43.4,
+  "sustainability": 61,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 115,
+  "rank": 246,
+  "name": "University College Cork",
+  "location": "Cork, Ireland",
+  "country": "Ireland",
+  "overall": 50.7,
+  "employability": 49.5,
+  "intlSRatio": 75,
+  "studentDiversity": 77.4,
+  "sustainability": 83.8,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 116,
+  "rank": 251,
+  "name": "University of Strathclyde",
+  "location": "Glasgow, United Kingdom",
+  "country": "UK",
+  "overall": 50.2,
+  "employability": 46,
+  "intlSRatio": 89,
+  "studentDiversity": 90,
+  "sustainability": 84.6,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 117,
+  "rank": 253,
+  "name": "Technische Universität Darmstadt",
+  "location": "Darmstadt, Germany",
+  "country": "Germany",
+  "overall": 50,
+  "employability": 53.5,
+  "intlSRatio": 92.8,
+  "studentDiversity": 93.4,
+  "sustainability": 78.6,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 118,
+  "rank": 257,
+  "name": "Université Paris 1 Panthéon-Sorbonne",
+  "location": " Paris, France",
+  "country": "France",
+  "overall": 49.7,
+  "employability": 84.3,
+  "intlSRatio": 61.2,
+  "studentDiversity": 65,
+  "sustainability": 61.8,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 119,
+  "rank": 261,
+  "name": "University of Canterbury",
+  "location": "Christchurch, New Zealand",
+  "country": "NEWZEALAND",
+  "overall": 49.4,
+  "employability": 87.4,
+  "intlSRatio": 48.1,
+  "studentDiversity": 53,
+  "sustainability": 88.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 120,
+  "rank": 268,
+  "name": "Griffith University",
+  "location": "Nathan, Australia",
+  "country": "Australia",
+  "overall": 48.7,
+  "employability": 26.6,
+  "intlSRatio": 70.7,
+  "studentDiversity": 73.5,
+  "sustainability": 91.7,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 121,
+  "rank": 272,
+  "name": "University of Cologne",
+  "location": "Cologne, Germany",
+  "country": "Germany",
+  "overall": 48.2,
+  "employability": 64.5,
+  "intlSRatio": 47.1,
+  "studentDiversity": 52,
+  "sustainability": 88.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 122,
+  "rank": 281,
+  "name": "University of Waikato",
+  "location": "Hamilton , New Zealand",
+  "country": "NEWZEALAND",
+  "overall": 47.3,
+  "employability": 58.4,
+  "intlSRatio": 79.7,
+  "studentDiversity": 81.6,
+  "sustainability": 84.8,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 123,
+  "rank": 283,
+  "name": "Dalhousie University",
+  "location": "Nova Scotia, Canada",
+  "country": "Canada",
+  "overall": 47.2,
+  "employability": 39.8,
+  "intlSRatio": 79.4,
+  "studentDiversity": 81.3,
+  "sustainability": 85.3,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 124,
+  "rank": 284,
+  "name": "University of Galway \/ Ollscoil na Gaillimhe",
+  "location": "Galway, Ireland",
+  "country": "Ireland",
+  "overall": 47.1,
+  "employability": 61.2,
+  "intlSRatio": 62.7,
+  "studentDiversity": 66.4,
+  "sustainability": 82.5,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 125,
+  "rank": 294,
+  "name": "Swinburne University of Technology",
+  "location": "Melbourne, Australia",
+  "country": "Australia",
+  "overall": 46,
+  "employability": 22.8,
+  "intlSRatio": 94.7,
+  "studentDiversity": 70.5,
+  "sustainability": 73.4,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 126,
+  "rank": 300,
+  "name": "Université Paris Cité",
+  "location": "Paris, France",
+  "country": "France",
+  "overall": 45.5,
+  "employability": 22.8,
+  "intlSRatio": 61,
+  "studentDiversity": 45.5,
+  "sustainability": 55.7,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 127,
+  "rank": 308,
+  "name": "Simon Fraser University",
+  "location": "Burnaby, Canada",
+  "country": "Canada",
+  "overall": 44.7,
+  "employability": 34,
+  "intlSRatio": 86.1,
+  "studentDiversity": 87.3,
+  "sustainability": 85.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 128,
+  "rank": 310,
+  "name": "Universität Stuttgart",
+  "location": "Stuttgart, Germany",
+  "country": "Germany",
+  "overall": 44.5,
+  "employability": 35.8,
+  "intlSRatio": 60.9,
+  "studentDiversity": 64.7,
+  "sustainability": 74.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 129,
+  "rank": 314,
+  "name": "University of Tasmania",
+  "location": "Hobart, Australia",
+  "country": "Australia",
+  "overall": 44.3,
+  "employability": 25,
+  "intlSRatio": 91.7,
+  "studentDiversity": 92.3,
+  "sustainability": 84,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 130,
+  "rank": 316,
+  "name": "Goethe Universität Frankfurt am Main",
+  "location": "Frankfurt am Main, Germany",
+  "country": "Germany",
+  "overall": 44,
+  "employability": 28.7,
+  "intlSRatio": 30,
+  "studentDiversity": 36,
+  "sustainability": 82.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 131,
+  "rank": 321,
+  "name": "Université Grenoble Alpes",
+  "location": "Grenoble, France",
+  "country": "France",
+  "overall": 43.4,
+  "employability": 31.8,
+  "intlSRatio": 47.9,
+  "studentDiversity": 52.7,
+  "sustainability": 60,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 132,
+  "rank": 333,
+  "name": "York University",
+  "location": "Toronto, Canada",
+  "country": "Canada",
+  "overall": 42.4,
+  "employability": 82.2,
+  "intlSRatio": 78.9,
+  "studentDiversity": 80.9,
+  "sustainability": 84.5,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 133,
+  "rank": 350,
+  "name": "University of Münster",
+  "location": "Munster, Germany",
+  "country": "Germany",
+  "overall": 41.5,
+  "employability": 45.3,
+  "intlSRatio": 8.4,
+  "studentDiversity": 14.1,
+  "sustainability": 74.6,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 134,
+  "rank": 358,
+  "name": "University of Victoria",
+  "location": "Victoria, Canada",
+  "country": "Canada",
+  "overall": 41.1,
+  "employability": 21.2,
+  "intlSRatio": 46,
+  "studentDiversity": 51,
+  "sustainability": 79.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 135,
+  "rank": 367,
+  "name": "Sciences Po Paris",
+  "location": "Paris, France",
+  "country": "France",
+  "overall": 40.5,
+  "employability": 98,
+  "intlSRatio": 98.2,
+  "studentDiversity": 98.3,
+  "sustainability": 54.5,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 136,
+  "rank": 378,
+  "name": "University of Saskatchewan",
+  "location": "Saskatoon, Canada",
+  "country": "Canada",
+  "overall": 39.6,
+  "employability": 44.3,
+  "intlSRatio": 65.4,
+  "studentDiversity": 68.7,
+  "sustainability": 83.6,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 137,
+  "rank": 387,
+  "name": "Flinders University",
+  "location": "Adelaide, Australia",
+  "country": "Australia",
+  "overall": 39,
+  "employability": 15.5,
+  "intlSRatio": 97.3,
+  "studentDiversity": 97.4,
+  "sustainability": 81.6,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 138,
+  "rank": 395,
+  "name": "Ruhr-Universität Bochum",
+  "location": "Bochum, Germany",
+  "country": "Germany",
+  "overall": 38.1,
+  "employability": 21.4,
+  "intlSRatio": 55.6,
+  "studentDiversity": 59.9,
+  "sustainability": 72.5,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 139,
+  "rank": 400,
+  "name": "Western Sydney University",
+  "location": "Milperra, Australia",
+  "country": "Australia",
+  "overall": 37.5,
+  "employability": 11.8,
+  "intlSRatio": 67.7,
+  "studentDiversity": 70.9,
+  "sustainability": 82.6,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 140,
+  "rank": 401,
+  "name": "University of Limerick",
+  "location": "Limerick, Ireland",
+  "country": "Ireland",
+  "overall": 37.4,
+  "employability": 14.7,
+  "intlSRatio": 48.4,
+  "studentDiversity": 53.3,
+  "sustainability": 75.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 141,
+  "rank": 406,
+  "name": "Institut National des Sciences Appliquées de Lyon (INSA)",
+  "location": "Lyon, France",
+  "country": "France",
+  "overall": 37.1,
+  "employability": 17.8,
+  "intlSRatio": 77.5,
+  "studentDiversity": 79.7,
+  "sustainability": 39.1,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 142,
+  "rank": 407,
+  "name": "Lincoln University",
+  "location": "Lincoln, New Zealand",
+  "country": "NEWZEALAND",
+  "overall": 37,
+  "employability": 45.1,
+  "intlSRatio": 99.6,
+  "studentDiversity": 99.1,
+  "sustainability": 62,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 143,
+  "rank": 410,
+  "name": "Auckland University of Technology",
+  "location": "Auckland, New Zealand",
+  "country": "NEWZEALAND",
+  "overall": 36.7,
+  "employability": 23.4,
+  "intlSRatio": 100,
+  "studentDiversity": 100,
+  "sustainability": 74,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 144,
+  "rank": 410,
+  "name": "Dublin City University",
+  "location": "Dublin, Ireland",
+  "country": "Ireland",
+  "overall": 36.7,
+  "employability": 40.2,
+  "intlSRatio": 43.2,
+  "studentDiversity": 48.4,
+  "sustainability": 79.7,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 145,
+  "rank": 410,
+  "name": "University of Southern Queensland",
+  "location": "Toowoomba, Australia",
+  "country": "Australia",
+  "overall": 36.7,
+  "employability": 11,
+  "intlSRatio": 48.7,
+  "studentDiversity": 52,
+  "sustainability": 65.5,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 146,
+  "rank": 416,
+  "name": "Julius-Maximilians-Universität Würzburg",
+  "location": "Würzburg, Germany",
+  "country": "Germany",
+  "overall": 36.5,
+  "employability": 17,
+  "intlSRatio": 19.7,
+  "studentDiversity": 14.9,
+  "sustainability": 50.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 147,
+  "rank": 416,
+  "name": "Universität Mannheim",
+  "location": "Mannheim, Germany",
+  "country": "Germany",
+  "overall": 36.5,
+  "employability": 45,
+  "intlSRatio": 41.2,
+  "studentDiversity": 46.6,
+  "sustainability": 51.3,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 148,
+  "rank": 420,
+  "name": "Université de Strasbourg",
+  "location": "Strasbourg, France",
+  "country": "France",
+  "overall": 36.3,
+  "employability": 29.8,
+  "intlSRatio": 45.4,
+  "studentDiversity": 33.9,
+  "sustainability": 47.3,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 149,
+  "rank": 423,
+  "name": "Murdoch University",
+  "location": "Murdoch, Australia",
+  "country": "Australia",
+  "overall": 36.1,
+  "employability": 24.9,
+  "intlSRatio": 82.5,
+  "studentDiversity": 61.4,
+  "sustainability": 53.4,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 150,
+  "rank": 428,
+  "name": "Aix-Marseille University",
+  "location": "Marseille, France",
+  "country": "France",
+  "overall": 35.9,
+  "employability": 29,
+  "intlSRatio": 29,
+  "studentDiversity": 21.7,
+  "sustainability": 63.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 151,
+  "rank": 430,
+  "name": "Université de Montpellier",
+  "location": "Montpellier, France",
+  "country": "France",
+  "overall": 35.7,
+  "employability": 18.8,
+  "intlSRatio": 42.8,
+  "studentDiversity": 48,
+  "sustainability": 55.3,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 152,
+  "rank": 433,
+  "name": "Leibniz Universität Hannover",
+  "location": "Hanover, Germany",
+  "country": "Germany",
+  "overall": 35.6,
+  "employability": 20.3,
+  "intlSRatio": 33.3,
+  "studentDiversity": 39.1,
+  "sustainability": 78.7,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 153,
+  "rank": 440,
+  "name": "James Cook University",
+  "location": "Townsville, Australia",
+  "country": "Australia",
+  "overall": 34.9,
+  "employability": 11.2,
+  "intlSRatio": 37.6,
+  "studentDiversity": 43.2,
+  "sustainability": 81.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 154,
+  "rank": 440,
+  "name": "Universität Konstanz",
+  "location": " Konstanz, Germany",
+  "country": "Germany",
+  "overall": 34.9,
+  "employability": 23,
+  "intlSRatio": 26.8,
+  "studentDiversity": 32.8,
+  "sustainability": 69.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 155,
+  "rank": 448,
+  "name": "Universität Bayreuth",
+  "location": "Bayreuth, Germany",
+  "country": "Germany",
+  "overall": 34.5,
+  "employability": 16.2,
+  "intlSRatio": 39.7,
+  "studentDiversity": 45.1,
+  "sustainability": 69.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 156,
+  "rank": 452,
+  "name": "Johannes Gutenberg Universität Mainz",
+  "location": "Mainz, Germany",
+  "country": "Germany",
+  "overall": 34.2,
+  "employability": 18.1,
+  "intlSRatio": 26.4,
+  "studentDiversity": 32.4,
+  "sustainability": 52.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 157,
+  "rank": 465,
+  "name": "Concordia University",
+  "location": "Montreal, Canada",
+  "country": "Canada",
+  "overall": 33.8,
+  "employability": 58.4,
+  "intlSRatio": 94.4,
+  "studentDiversity": 94.8,
+  "sustainability": 81.8,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 158,
+  "rank": 469,
+  "name": "Laval University",
+  "location": "Québec, Canada",
+  "country": "Canada",
+  "overall": 33.7,
+  "employability": 49.9,
+  "intlSRatio": 54.9,
+  "studentDiversity": 59.2,
+  "sustainability": 81.6,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 159,
+  "rank": 477,
+  "name": "Universität Potsdam",
+  "location": " Potsdam, Germany",
+  "country": "Germany",
+  "overall": 33.4,
+  "employability": 4.2,
+  "intlSRatio": 34.9,
+  "studentDiversity": 40.6,
+  "sustainability": 75.3,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 160,
+  "rank": 487,
+  "name": "Edith Cowan University",
+  "location": "Joondalup, Australia",
+  "country": "Australia",
+  "overall": 32.8,
+  "employability": 7.4,
+  "intlSRatio": 82.4,
+  "studentDiversity": 84,
+  "sustainability": 51,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 161,
+  "rank": 487,
+  "name": "Technische Universität Bergakademie Freiberg",
+  "location": "Freiberg, Germany",
+  "country": "Germany",
+  "overall": 32.8,
+  "employability": 1.4,
+  "intlSRatio": 100,
+  "studentDiversity": 100,
+  "sustainability": 32.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 162,
+  "rank": 494,
+  "name": "Université de Bordeaux",
+  "location": "Talence, France",
+  "country": "France",
+  "overall": 32.5,
+  "employability": 25.3,
+  "intlSRatio": 35.2,
+  "studentDiversity": 40.9,
+  "sustainability": 56.5,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 163,
+  "rank": 494,
+  "name": "University of Canberra",
+  "location": "Bruce, Australia",
+  "country": "Australia",
+  "overall": 32.5,
+  "employability": 10.9,
+  "intlSRatio": 83.1,
+  "studentDiversity": 84.6,
+  "sustainability": 73.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 164,
+  "rank": 496,
+  "name": "Justus-Liebig-Universität Gießen",
+  "location": "Giessen, Germany",
+  "country": "Germany",
+  "overall": 32.4,
+  "employability": 17,
+  "intlSRatio": 28.9,
+  "studentDiversity": 21.7,
+  "sustainability": 53.4,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 165,
+  "rank": 499,
+  "name": "Central Queensland University Australia (CQUniversity)",
+  "location": "Norman Gardens, Australia",
+  "country": "Australia",
+  "overall": 32.2,
+  "employability": 5,
+  "intlSRatio": 99.9,
+  "studentDiversity": 99.4,
+  "sustainability": 64.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 166,
+  "rank": 504,
+  "name": "University of Guelph",
+  "location": "Guelph, Canada",
+  "country": "Canada",
+  "overall": 32,
+  "employability": 18.2,
+  "intlSRatio": 24,
+  "studentDiversity": 30.1,
+  "sustainability": 80.7,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 167,
+  "rank": 511,
+  "name": "Singapore Management University",
+  "location": "Singapore, Singapore",
+  "country": "Singapore",
+  "overall": 31.6,
+  "employability": 38.1,
+  "intlSRatio": 83.2,
+  "studentDiversity": 80.4,
+  "sustainability": 58.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 168,
+  "rank": 519,
+  "name": "Singapore University of Technology and Design",
+  "location": "Singapore, Singapore",
+  "country": "Singapore",
+  "overall": 31.3,
+  "employability": 5.3,
+  "sustainability": 25,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 169,
+  "rank": 530,
+  "name": "Universität Bremen",
+  "location": "Bremen, Germany",
+  "country": "Germany",
+  "overall": 30.8,
+  "employability": 7.6,
+  "intlSRatio": 41.9,
+  "studentDiversity": 47.2,
+  "sustainability": 54.9,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 170,
+  "rank": 546,
+  "name": "University of Windsor",
+  "location": "Windsor, Canada",
+  "country": "Canada",
+  "overall": 30.2,
+  "employability": 34.4,
+  "intlSRatio": 94.6,
+  "studentDiversity": 95,
+  "sustainability": 68.7,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 171,
+  "rank": 584,
+  "name": "Charles Darwin University",
+  "location": "Casuarina, Australia",
+  "country": "Australia",
+  "overall": 28.7,
+  "employability": 4.8,
+  "intlSRatio": 88.9,
+  "studentDiversity": 88.5,
+  "sustainability": 70.7,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 172,
+  "rank": 587,
+  "name": "Université Claude Bernard Lyon 1",
+  "location": "Villeurbanne, France",
+  "country": "France",
+  "overall": 28.6,
+  "employability": 16,
+  "intlSRatio": 20.5,
+  "studentDiversity": 15.5,
+  "sustainability": 51,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 173,
+  "rank": 587,
+  "name": "Université Paul Sabatier Toulouse III",
+  "location": "Toulouse, France",
+  "country": "France",
+  "overall": 28.6,
+  "employability": 9.3,
+  "intlSRatio": 33.2,
+  "studentDiversity": 24.8,
+  "sustainability": 50.4,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 174,
+  "rank": 591,
+  "name": "Bond University",
+  "location": "Gold Coast, Australia",
+  "country": "Australia",
+  "overall": 28.5,
+  "employability": 11.6,
+  "intlSRatio": 90.4,
+  "studentDiversity": 91.2,
+  "sustainability": 23.5,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 175,
+  "rank": 622,
+  "name": "University of New Brunswick",
+  "location": "Fredericton, Canada",
+  "country": "Canada",
+  "overall": 27.6,
+  "employability": 24.7,
+  "intlSRatio": 65.1,
+  "studentDiversity": 68.5,
+  "sustainability": 62.7,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 176,
+  "rank": 643,
+  "name": "University of Manitoba",
+  "location": "Winnipeg, Canada",
+  "country": "Canada",
+  "overall": 26.9,
+  "employability": 39.5,
+  "intlSRatio": 68.4,
+  "studentDiversity": 71.5,
+  "sustainability": 55.7,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 177,
+  "rank": 654,
+  "name": "Université de Lille",
+  "location": " Lille, France",
+  "country": "France",
+  "overall": 26.6,
+  "employability": 6.9,
+  "intlSRatio": 25.4,
+  "studentDiversity": 19.1,
+  "sustainability": 54.3,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 178,
+  "rank": 660,
+  "name": "Memorial University of Newfoundland",
+  "location": " St. John's, Canada",
+  "country": "Canada",
+  "overall": 26.5,
+  "employability": 17.4,
+  "intlSRatio": 78.5,
+  "studentDiversity": 80.6,
+  "sustainability": 53.3,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ },
+
+ {
+  "id": 179,
+  "rank": 688,
+  "name": "Université Côte d’Azur",
+  "location": "Nice, France",
+  "country": "France",
+  "overall": 25.6,
+  "employability": 13.6,
+  "intlSRatio": 51,
+  "studentDiversity": 55.6,
+  "sustainability": 69.2,
+  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["1400-1600", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth": ["February", "July"]
+ }
+]
+
+
+

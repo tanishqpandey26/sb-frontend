@@ -754,7 +754,7 @@ body {
 
 .serviceHeader {
   font-size: 34px;
-  font-weight: 600;
+  font-weight: 700;
   color: #424242;
   margin-bottom: 10px;
   text-align: center;
@@ -818,20 +818,24 @@ body {
 
 
 @media (max-width: 768px) {
+
+    .serviceHeader {
+    font-size: 24px;
+  }
+
+.serviceSubHeader {
+  font-size: 12px;
+}
   .serviceCardContainer {
     grid-template-columns: 1fr;
   }
 
-  .serviceHeader {
+  .serviceCardHeader {
     font-size: 24px;
   }
 
-  .serviceCardHeader {
-    font-size: 16px;
-  }
-
   .serviceCardDesc {
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 

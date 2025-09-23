@@ -162,19 +162,13 @@ body {
 /* hero  */
 
 .hero {
-  background-image: url('../images/bankdetails/herosection/hero-avail-banks.jpg');
-  background-size: cover;
-  background-position: center;
   position: relative;
-  min-height: 100vh;
   color: white;
   display: flex;
-  height: 766px;
 }
 
 .hero-left-half {
   width: 50%;
-  height: 766px;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
  background: linear-gradient(89.07deg, rgba(0, 0, 0, 0.71) 36.56%, rgba(102, 102, 102, 0) 99.23%);
@@ -191,18 +185,16 @@ body {
   height: 100%;
 }
 
-
 .hero-box {
-  width: 578px;
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .hero-route {
-  font-size: 14px;
-  margin-bottom: 1rem;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
   color: #ccc;
 }
 
@@ -211,11 +203,16 @@ body {
   display: flex;
   align-items: center;
   font-size: 16px;
-  font-weight: 600;
-  color: #FAFAFA;
+  font-weight: 500;
+  color: #fff;
+border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, #666666 100%);
   background-color: #FFFFFF1A;
-  border-radius: 6px;
-  width: 385px;
+  border-radius: 10px;
+  padding: 10px;
+  height: 44px;
+  width: 400px;
+  text-wrap: nowrap;
+  margin-top: 20px;
 }
 
 .hero-mini-heading img {
@@ -229,8 +226,8 @@ body {
   font-size: 55px;
   font-weight: 700;
   font-weight: bold;
-  margin-bottom: 10%;
-  margin-top: 10%;
+  margin-bottom: 20px;
+  margin-top: 60px;
 }
 
 
@@ -238,7 +235,7 @@ body {
   font-size: 24px;
   line-height: 1.5;
   color: #FAFAFA;
-  margin-bottom: 10%;
+  margin-bottom: 40px;
   font-weight: 400;
 }
 
@@ -255,6 +252,9 @@ body {
   font-weight: 700;
   font-size: 12px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-btn img{
@@ -268,8 +268,8 @@ body {
   display: flex;
   gap: 2rem;
   flex-wrap: nowrap; 
-  margin-top: 2rem;
-  margin-bottom: 5%;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 .fact-item {
@@ -279,7 +279,6 @@ body {
 
 .fact-top {
   font-size: 24px;
-  font-weight: bold;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -307,7 +306,7 @@ body {
 @media (max-width: 768px) {
    .hero {
     position: relative; 
-     background-image: url('/Palak/images/bankdetails/herosection/hero-avail-banks.jpg');
+    background-image: url('/Palak/images/bankdetails/herosection/hero-avail-banks.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -332,7 +331,7 @@ body {
      background: linear-gradient(89.07deg, rgba(0, 0, 0, 0.71) 36.56%, rgba(102, 102, 102, 0) 99.23%);
   }
 
-  .hero-content {
+ .hero-content {
     flex: 1; 
     display: flex;
     flex-direction: column;
@@ -360,7 +359,7 @@ body {
     color: #fafafa;
     background-color: #ffffff1a;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px;
     width: fit-content;
     font-size: 10px;
     font-weight: 500;
@@ -372,10 +371,12 @@ body {
   }
 
   .hero-heading {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-size: 24px;
     font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .hero-heading span {
@@ -396,14 +397,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     gap: 8px;
-    padding: 10px 15px;
+    padding: 5px ;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
     cursor: pointer;
     font-size: 10px;
     font-weight: 500;
+    height: 30px;
+    width: 50%;
+    margin-bottom: 20px;
   }
 
   .hero-btn img {
@@ -412,10 +417,11 @@ body {
   }
 
    .hero-facts {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 9px;
+    gap: 5px;
     margin-top: 1px;
     padding: 5px;
     border-radius: 6px;

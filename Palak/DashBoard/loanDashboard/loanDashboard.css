@@ -666,6 +666,7 @@ height: 84px;
   width: 450px;
   height: 320px;
   gap: 30px;
+  border-radius: 1px solid black;
 }
 
 .exploreNbfcImg,
@@ -783,6 +784,7 @@ height: 84px;
   .explorePvtBankCard {
     flex: 0 0 400px;
     padding: 12px;
+  
   }
 
   .exploreNbfcImg,

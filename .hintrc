@@ -3,18 +3,15 @@
     "development"
   ],
   "hints": {
-    "compat-api/css": [
+    "compat-api/css": "off",
+    "no-inline-styles": "off",
+    "axe/language": "off",
+    "axe/keyboard": [
       "default",
       {
-        "ignore": [
-          "-webkit-overflow-scrolling",
-          "scrollbar-width",
-          "scrollbar-width: none",
-          "scrollbar-width: auto",
-          "scrollbar-color"
-        ]
+        "nested-interactive": "off"
       }
     ],
-    "no-inline-styles": "off"
+    "disown-opener": "off"
   }
 }

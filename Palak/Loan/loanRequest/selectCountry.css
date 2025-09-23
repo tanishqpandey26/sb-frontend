@@ -219,7 +219,7 @@ body {
   position: relative;              
   background-color: #287781;
   color: #fff;
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 700;
   border: none;
   width: 100%;
@@ -236,7 +236,7 @@ body {
   position: absolute;              
   right: 20px;                    
   width: 33px;
-  height: 65px;
+  height: 60px;
 }
 
 .countrySelectBtn:hover {
