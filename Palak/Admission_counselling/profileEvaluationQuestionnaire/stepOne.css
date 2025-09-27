@@ -21,9 +21,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 32px;
-  /* Increased height */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  /* subtle shadow */
   z-index: 1000;
 }
 
@@ -86,9 +84,7 @@ body {
 
 .dropdown-content li a:hover {
   background-color: #59898E33;
-  /* 20% transparent highlight on hover */
   color: #287781;
-  /* Optional: highlight text color on hover */
 }
 
 .contact-btn {
@@ -103,22 +99,6 @@ body {
 
 .contact-btn:hover {
   background-color: #1d5e65;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-
-  .navbar-right {
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-  }
 }
 
 .mobile-menu-btn {
@@ -137,26 +117,40 @@ body {
 
   .mobile-menu-btn {
     display: block;
+    cursor: pointer;
     color: #424242;
   }
 
   .navbar-right {
     flex-direction: column;
-    gap: 16px;
+    gap: 40px;
     width: 100%;
-    margin-top: 10px;
+    margin: 10px auto;
     display: none;
     background: #fff;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 70px;
+    top: 90px;
     left: 0;
     z-index: 999;
+    max-height: calc(100vh - 120px); 
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .navbar-right.active {
     display: flex;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    display: none;
+  }
+
+  .dropdown.open .dropdown-content {
+    display: block;
   }
 }
 
@@ -168,6 +162,7 @@ body {
 .stepOneSection {
   padding: 2rem;
   background: #fff;
+  margin: 100px auto 0;
 }
 
 .stepOneHeader {
