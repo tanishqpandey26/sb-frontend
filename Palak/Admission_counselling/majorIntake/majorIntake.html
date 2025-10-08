@@ -23,7 +23,7 @@
         <nav class="navbar">
           <div class="navbar-left">
             <a href="/Palak/Home/home.html">
-            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo" class="logo">
+            <img src="/Palak/images/Home/study-befikar1.png" alt="Logo" class="logo">
             </a>
         
           </div>
@@ -39,7 +39,7 @@
                 <li><a href="/Palak/USA/uk.html">UK</a></li>
                 <li><a href="/Palak/USA/germany.html">Germany</a></li>
                 <li><a href="#">New Zealand</a></li>
-                <li><a href="#">Australia</a></li>
+                <li><a href="/Palak/USA/australia.html">Australia</a></li>
                 <li><a href="#">Singapore</a></li>
                 <li><a href="#">Japan</a></li>
                 <li><a href="#">France</a></li>
@@ -54,7 +54,8 @@
                 <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
                 <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
                 <li><a href="/Palak/Loan/EmiCalc.html">EMI Calculator</a></li>
-                <li><a href="#">Loan Refinancing</a></li>
+                <li><a href="/Palak/Loan/InterestCalc.html">Interest Calculator</a></li>
+                <li><a href="/Palak/Loan/refinancing.html">Loan Refinancing</a></li>
               </ul>
             </li>
         
@@ -421,7 +422,12 @@ document.addEventListener("DOMContentLoaded", function () {
         <!-- pagination -->
         <div class="pagination"></div>
         
-        <!-- scholarship section -->
+
+    </div>
+    
+
+    <div class="tab-pane" id="ausscholarships">
+      <!-- scholarship section -->
         <section class="scholarshipSection">
           <h2 class="scholarshipHeader">Scholarships in the USA</h2>
           <p class="scholarshipSubHeader">
@@ -495,18 +501,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         </section>
 
+    </div>
+
+    <div class="tab-pane" id="ausabout">
+
+      <!-- aus-about-btn -->
       <div class="learnMoreCountryContainer">
           <a href="/Palak/USA/usa.html">Learn more about studying in Australia
           </a>
       </div>
 
-    </div>
-    
-
-    <div class="tab-pane" id="ausscholarships">
-    </div>
-
-    <div class="tab-pane" id="ausabout">
     </div>
 
 
@@ -646,7 +650,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!-- pagination -->
         <div class="pagination"></div>
-        
+
+
+      </div>
+
+      
+      <div class="tab-pane" id="usascholarships">
         <!-- scholarship section -->
         <section class="scholarshipSection">
           <h2 class="scholarshipHeader">Scholarships in the USA</h2>
@@ -720,21 +729,13 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
 
         </section>
-
+      </div>
+      
+      <div class="tab-pane" id="usaabout">
         <!-- learn more btn -->
         <div class="learnMoreCountryContainer">
             <a href="/Palak/USA/usa.html">Learn more about studying in the United States</a>
         </div>
-
-
-      </div>
-
-      
-      <div class="tab-pane" id="usascholarships">
-      </div>
-      
-      <div class="tab-pane" id="usaabout">
-
       </div>
 
 
@@ -745,6 +746,231 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </div>
 <!-- usa tab -->
+
+
+<!-- uk tab -->
+
+<div class="tabContent" id="UK">
+    
+    <section class="countryTabSideBarContentContainer">
+  
+    <aside class="countryTabSideBar">
+      <button class="countryTabSideBarTab active" data-tab="ukdeadline">Application Deadline</button>
+      <button class="countryTabSideBarTab" data-tab="ukscholarships">Scholarships</button>
+      <button class="countryTabSideBarTab" data-tab="ukabout">About the Country</button>
+    </aside>
+
+  
+    <div class="countryTabSideBarTabContent">
+
+      <div class="tab-pane active" id="ukdeadline">
+
+        <!-- intake table -->
+        <section class="deadlineSection">
+          <h2 class="deadlineHeader">Understanding the Major Intakes</h2>
+          <p class="deadlineSubHeader">Choose the perfect time to start your uk education journey with our comprehensive intake guide</p>
+
+          <div class="intakes-table-section">
+
+            <table class="intakes-table">
+              <thead>
+                <tr>
+                  <th>Intakes</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td class="intakeLabel" data-label="Intakes">February</td>
+
+                  <td class="detailBox" data-label="Details">
+                    Most popular and largest intake with maximum course options
+                    <br/><br/>
+                    Best to apply September to December.
+                    <br/><br/>
+                    Ideal for students seeking more options, networking, and campus activities
+                    <br/><br/>
+                    Best processing time, may be longer due to high application volume
+                    <br/><br/>
+                    Maximum scholarship opportunities, and largest selection of courses and programs
+                  </td>
+
+                </tr>
+
+                <tr>
+                  <td class="intakeLabel" data-label="Intakes">July</td>
+
+                  <td class="detailBox" data-label="Details">
+                    Secondary Intake, smaller courses than February but still significant
+                    <br/><br/>
+                    Best to apply March to May
+                    <br/><br/>
+                    Visa processing time usually shorter due to fewer application volume
+                    <br/><br/>
+                    More scholarship opportunities available
+                    <br/><br/>
+                    Ideal for students who missed the February intake
+                  </td>
+
+                </tr>
+
+                <tr>
+                  <td class="intakeLabel" data-label="Intakes">November</td>
+
+                  <td class="detailBox" data-label="Details">
+                    Smallest Intake, limited short-term programs and PG options
+                    <br/><br/>
+                    Best to apply September to December
+                    <br/><br/>
+                    Very limited scholarship available
+                    <br/><br/>
+                    Ideal for students looking for short-term courses or internships
+                    <br/><br/>
+                    Visa processing time generally quicker due to fewer applications
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </section>
+        
+        <!-- university header + intakeMonthFilter -->
+        <div class="universityTopContainer">
+          
+            <div class="universityFarLeft">
+              <h2 class="universityHeader">Popular Universities for Each Intake</h2>
+              <p class="universitySubHeader">
+                Discover top-ranked uk universities and their available programs for different intake periods
+              </p>
+            </div>
+
+            <div class="universityFarRight">
+
+              <div class="monthActions">
+                <button class="monthBtn">Select Month</button>            
+                <div class="monthDropdown">
+                  <button class="viewAllMonthBtn">Month ▾</button>
+                  <div class="viewAllMonth">
+                    <a href="#" data-month="February">February</a>
+                    <a href="#" data-month="July">July</a>
+                    <a href="#" data-month="November">November</a>
+                  </div>
+                </div>
+              </div>  
+
+            </div>
+
+        </div>
+
+        <!-- university box cards -->
+        <div class="universityBoxCardContainer"></div>
+
+        <!-- pagination -->
+        <div class="pagination"></div>
+
+
+      </div>
+
+      
+      <div class="tab-pane" id="ukscholarships">
+        <!-- scholarship section -->
+        <section class="scholarshipSection">
+          <h2 class="scholarshipHeader">Scholarships in the uk</h2>
+          <p class="scholarshipSubHeader">
+            Discover top-ranked uk universities and their available programs for different intake periods
+          </p>
+
+          <div class="scholarshipCardContainer">
+            <!-- card 1 -->
+            <div class="scholarshipCard" style="background-color: #FFF6E1;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 14 14"><path fill="none" stroke="#917B1A" stroke-linecap="round" stroke-linejoin="round" d="M12.91 5.5H1.09c-.56 0-.8-.61-.36-.9L6.64.73a.71.71 0 0 1 .72 0l5.91 3.87c.44.29.2.9-.36.9M13 11H1a.5.5 0 0 0-.5.5V13a.5.5 0 0 0 .5.5h12a.5.5 0 0 0 .5-.5v-1.5a.5.5 0 0 0-.5-.5M2 5.5V11m3.333-5.5V11m3.334-5.5V11M12 5.5V11" stroke-width="1"/></svg>
+              <h3 class="scholarshipCardHeader">University-Specific</h3>
+              <p class="scholarshipCardDesc">
+                Provided directly by universities to attract talented international students.
+              </p>
+              <a class="scholarshipCardLearnMoreBtn">
+                Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#fff" d="m15.06 5.283l5.657 5.657a1.5 1.5 0 0 1 0 2.12l-5.656 5.658a1.5 1.5 0 0 1-2.122-2.122l3.096-3.096H4.5a1.5 1.5 0 0 1 0-3h11.535L12.94 7.404a1.5 1.5 0 0 1 2.122-2.121Z"/></g></svg>
+              </a>
+            </div>
+
+            <!-- card 2 -->
+            <div class="scholarshipCard" style="background-color: #FDF0F4;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><g fill="none"><path stroke="#A12456" stroke-width="1.5" d="M4.318 20.536C5.636 22 7.758 22 12 22s6.364 0 7.682-1.465C21 19.072 21 16.714 21 12s0-7.071-1.318-8.536S16.242 2 12 2S5.636 2 4.318 3.464C3 4.93 3 7.286 3 12s0 7.071 1.318 8.535Z"/><path stroke="#A12456" stroke-width="1.5" d="M7 8c0-.465 0-.697.051-.888a1.5 1.5 0 0 1 1.06-1.06C8.304 6 8.536 6 9 6h6c.465 0 .697 0 .888.051a1.5 1.5 0 0 1 1.06 1.06C17 7.304 17 7.536 17 8s0 .697-.051.888a1.5 1.5 0 0 1-1.06 1.06C15.697 10 15.464 10 15 10H9c-.465 0-.697 0-.888-.051a1.5 1.5 0 0 1-1.06-1.06C7 8.696 7 8.464 7 8Z"/><circle cx="8" cy="13" r="1" fill="#A12456"/><circle cx="8" cy="17" r="1" fill="#A12456"/><circle cx="12" cy="13" r="1" fill="#A12456"/><circle cx="12" cy="17" r="1" fill="#A12456"/><circle cx="16" cy="13" r="1" fill="#A12456"/><circle cx="16" cy="17" r="1" fill="#A12456"/></g></svg>
+              <h3 class="scholarshipCardHeader">Need-Based </h3>
+              <p class="scholarshipCardDesc">
+                Offered to students who demonstrate financial need due to their family economic conditions.
+              </p>
+              <a class="scholarshipCardLearnMoreBtn">Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#fff" d="m15.06 5.283l5.657 5.657a1.5 1.5 0 0 1 0 2.12l-5.656 5.658a1.5 1.5 0 0 1-2.122-2.122l3.096-3.096H4.5a1.5 1.5 0 0 1 0-3h11.535L12.94 7.404a1.5 1.5 0 0 1 2.122-2.121Z"/></g></svg>
+              </a>
+            </div>
+
+            <!-- card 3 -->
+            <div class="scholarshipCard" style="background-color: #E4F7FA;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><g fill="none" stroke="#287781" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0-14 0m18 11l-6-6"/><path d="m7 10l2 2l4-4"/></g></svg>
+              <h3 class="scholarshipCardHeader">Merit-Based  </h3>
+              <p class="scholarshipCardDesc">
+                Awarded for academic excellence, leadership skills, or special talents
+              </p>
+              <a class="scholarshipCardLearnMoreBtn">Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#fff" d="m15.06 5.283l5.657 5.657a1.5 1.5 0 0 1 0 2.12l-5.656 5.658a1.5 1.5 0 0 1-2.122-2.122l3.096-3.096H4.5a1.5 1.5 0 0 1 0-3h11.535L12.94 7.404a1.5 1.5 0 0 1 2.122-2.121Z"/></g></svg>
+              </a>
+            </div>
+
+            <!-- card 4 -->
+            <div class="scholarshipCard" style="background-color: #E9F3FF;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><g fill="none" stroke="#0055B2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0-14 0m18 11l-6-6"/><path d="m7 10l2 2l4-4"/></g></svg>
+              <h3 class="scholarshipCardHeader">Government-Funded</h3>
+              <p class="scholarshipCardDesc">
+                Programs like Fulbright or Humphrey Fellowships are designed for international students.
+              </p>
+              <a class="scholarshipCardLearnMoreBtn">Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#fff" d="m15.06 5.283l5.657 5.657a1.5 1.5 0 0 1 0 2.12l-5.656 5.658a1.5 1.5 0 0 1-2.122-2.122l3.096-3.096H4.5a1.5 1.5 0 0 1 0-3h11.535L12.94 7.404a1.5 1.5 0 0 1 2.122-2.121Z"/></g></svg>
+              </a>
+            </div>
+
+            <!-- card 5 -->
+            <div class="scholarshipCard" style="background-color: #EBDBFF;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><g fill="none"><path stroke="#8A38F5" stroke-width="1.5" d="M4.318 20.536C5.636 22 7.758 22 12 22s6.364 0 7.682-1.465C21 19.072 21 16.714 21 12s0-7.071-1.318-8.536S16.242 2 12 2S5.636 2 4.318 3.464C3 4.93 3 7.286 3 12s0 7.071 1.318 8.535Z"/><path stroke="#8A38F5" stroke-width="1.5" d="M7 8c0-.465 0-.697.051-.888a1.5 1.5 0 0 1 1.06-1.06C8.304 6 8.536 6 9 6h6c.465 0 .697 0 .888.051a1.5 1.5 0 0 1 1.06 1.06C17 7.304 17 7.536 17 8s0 .697-.051.888a1.5 1.5 0 0 1-1.06 1.06C15.697 10 15.464 10 15 10H9c-.465 0-.697 0-.888-.051a1.5 1.5 0 0 1-1.06-1.06C7 8.696 7 8.464 7 8Z"/><circle cx="8" cy="13" r="1" fill="#8A38F5"/><circle cx="8" cy="17" r="1" fill="#A12456"/><circle cx="12" cy="13" r="1" fill="#8A38F5"/><circle cx="12" cy="17" r="1" fill="#8A38F5"/><circle cx="16" cy="13" r="1" fill="#8A38F5"/><circle cx="16" cy="17" r="1" fill="#8A38F5"/></g></svg>
+              <h3 class="scholarshipCardHeader">Private Organization</h3>
+              <p class="scholarshipCardDesc">
+                Sponsored by companies, NGOs, or charitable organizations.
+              </p>
+              <a class="scholarshipCardLearnMoreBtn">Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#fff" d="m15.06 5.283l5.657 5.657a1.5 1.5 0 0 1 0 2.12l-5.656 5.658a1.5 1.5 0 0 1-2.122-2.122l3.096-3.096H4.5a1.5 1.5 0 0 1 0-3h11.535L12.94 7.404a1.5 1.5 0 0 1 2.122-2.121Z"/></g></svg>
+              </a>
+            </div>
+
+
+          </div>
+
+        </section>
+      </div>
+      
+      <div class="tab-pane" id="ukabout">
+        <!-- learn more btn -->
+        <div class="learnMoreCountryContainer">
+            <a href="/Palak/USA/uk.html">Learn more about studying in the United Kingdom</a>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    </section>
+
+</div>
+
+<!-- uk tab -->
 
 
 <script>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Befikar</title>
+    <link rel="stylesheet" href="/Palak/Admission_counselling/majorIntake/scholarships/scholarship.css">
+    <link rel="stylesheet" href="/Palak/commonCSS/navbar.css">
+    <link rel="stylesheet" href="/Palak/commonCSS/footer.css">
+    <link rel="stylesheet" href="/Palak/commonCSS/chatbot.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+
+</head> 
+<body>
+
+
+  
+        <!--NavBar Section-->
+        <nav class="navbar">
+          <div class="navbar-left">
+            <a href="/Palak/Home/home.html">
+            <img src="/Palak/images/Home/study-befikar1.png" alt="Logo" class="logo">
+            </a>
+        
+          </div>
+          <ul class="navbar-right" id="mobileNav">
+
+            <li><a href="/Palak/AboutUs/aboutUs.html" class="dropdown">About</a></li>
+
+            <li class="dropdown">
+              <a href="/Palak/USA/usa.html">Countries</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/USA/usa.html">USA</a></li>
+                <li><a href="/Palak/USA/canada.html">Canada</a></li>
+                <li><a href="/Palak/USA/uk.html">UK</a></li>
+                <li><a href="/Palak/USA/germany.html">Germany</a></li>
+                <li><a href="#">New Zealand</a></li>
+                <li><a href="#">Australia</a></li>
+                <li><a href="#">Singapore</a></li>
+                <li><a href="#">Japan</a></li>
+                <li><a href="#">France</a></li>
+                <li><a href="#">Ireland</a></li>
+                <li><a href="#">Dubai</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Loan/loanHome.html">Loan</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
+                <li><a href="/Palak/Loan/EmiCalc.html">EMI Calculator</a></li>
+                <li><a href="#">Loan Refinancing</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+                <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
+                <li><a href="/Palak/Admission_counselling/confirmation.html">Application Deadline</a></li>
+                <li><a href="/Palak/Admission_counselling/universityFinder/universityFinder.html">University Finder</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                <li><a href="#">Prepare for Exam</a></li>
+                <li><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></li>
+                <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">All Exams</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
+                <li><a href="/Palak/All_Exams/GMAT.html">GMAT</a></li>
+                <li><a href="/Palak/All_Exams/GRE.html">GRE</a></li>
+                <li><a href="/Palak/All_Exams/IELTS.html">IELTS</a></li>
+                <li><a href="/Palak/All_Exams/PTE.html">PTE</a></li>
+                <li><a href="/Palak/All_Exams/ACT.html">ACT</a></li>
+                <li><a href="/Palak/All_Exams/TOEFL.html">TOEFL</a></li>
+                <li><a href="/Palak/All_Exams/Duolingo.html">Duolingo</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Services</a>
+              <ul class="dropdown-content">
+                <li><a href="#">All Services</a></li>
+                <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
+                <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
+                <li><a href="#">Apply to University</a></li>
+              </ul>
+            </li>
+        
+            <li><a href="/Palak/NoticeBoard/noticeBoard.html" class="dropdown">Notice Board</a></li>
+        
+            <li><a href="/Palak/Login Pages/signin.html" class="contact-btn">Contact Us</a></li>
+
+          </ul>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </nav>
+
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            /*  mobile hamburger toggle */
+            const btn = document.getElementById("mobileMenuBtn");
+            const nav = document.getElementById("mobileNav");
+
+            btn.addEventListener("click", () => {
+              nav.classList.toggle("active");
+            });
+
+            /* dropdown logic  */
+            const dropdownLis = document.querySelectorAll(".navbar-right li.dropdown");
+
+            dropdownLis.forEach(li => {
+              let closeTimer;
+
+              const openDropdown = () => {
+                dropdownLis.forEach(d => d.classList.remove("open"));
+                li.classList.add("open");
+              };
+
+              const scheduleClose = () => {
+                closeTimer = setTimeout(() => li.classList.remove("open"), 3000);
+              };
+
+              const cancelClose = () => clearTimeout(closeTimer);
+
+              // desktop hover
+              li.addEventListener("mouseenter", () => {
+                if (window.innerWidth >= 1024) {
+                  cancelClose();
+                  openDropdown();
+                }
+              });
+              li.addEventListener("mouseleave", () => {
+                if (window.innerWidth >= 1024) scheduleClose();
+              });
+
+              // mobile tap to toggle
+              li.querySelector(":scope > a").addEventListener("click", e => {
+                if (window.innerWidth < 1024) {
+                  e.preventDefault();
+                  li.classList.toggle("open");
+                }
+              });
+            });
+
+            // close dropdowns on outside click
+            document.addEventListener("click", e => {
+              if (![...dropdownLis].some(d => d.contains(e.target))) {
+                dropdownLis.forEach(d => d.classList.remove("open"));
+              }
+            });
+
+            /* highlight active link */
+            const currentPath = window.location.pathname.split("/").pop();
+            document.querySelectorAll(".navbar-right a").forEach(link => {
+              const linkPath = link.getAttribute("href").split("/").pop();
+              if (linkPath === currentPath) {
+                link.classList.add("active");
+                const parentDropdown = link.closest(".dropdown");
+                if (parentDropdown) {
+                  const parentLink = parentDropdown.querySelector(":scope > a");
+                  if (parentLink) parentLink.classList.add("active");
+                }
+              }
+            });
+          });
+        </script>
+        
+
+<!-- hero section -->
+
+<section class="scholarship-hero">
+
+  <div class="scholarship-container" style="background-color: #59898E33;">
+    <h2 class="scholarship-header">
+      Merit-Based Scholarships
+    </h2>
+    <p class="scholarship-subheader">
+      Discover how top universities are offering direct funding to attract the world's brightest international students. From Harvard to Stanford, learn the insider secrets to securing institutional aid.
+    </p>
+  </div>
+
+  <div class="scholarshipHeroImg">
+  <img class="heroImg" src="/Palak/images/majorIntake/scholarship/hero.jpg" alt="Logo" class="logo">
+  </div>
+
+  <div class="bottomHeroDesc">
+    <p class="bottomDesc">
+      When it comes to funding your American education, university-specific scholarships represent one of the most direct and generous pathways available to international students.
+    </p>
+  </div>
+
+</section>
+
+
+<!-- scholarship-desc-section -->
+
+<section class="scholar-desc-section">
+ 
+  <div class="scholar-desc-header">
+    <h2 class="scholar-desc-header-h2">
+        What Are Merit-Based Scholarships?
+    </h2>
+    <p class="scholar-desc-header-p" style="background-color: #59898E33; 
+           border-left: 5px solid var(--Teal-05, #287781)">
+      Merit-based scholarships are awarded to students who demonstrate exceptional achievement in academics, leadership, athletics, arts, or other special talents. Unlike need-based aid, these scholarships focus purely on accomplishments and potential, regardless of financial circumstances.
+    </p>
+  </div>
+
+
+  <!-- scholarship description  -->
+  <div class="scholar-desc-list">
+    <h3 class="scholar-desc-list-header">
+      Types of Merit Recognition
+    </h3>
+    <ul class="scholar-desc-list-elements">
+
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 16 16"><path fill="none" stroke="#59898E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.75 9.75 2.5 2.5m3.5-4 2.5-2.5m-4.5 4 2.5 2.5 6-6.5"/></svg>
+        Academic Excellence: High GPA, test scores, and academic achievements.
+      </li>
+
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 16 16"><path fill="none" stroke="#59898E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.75 9.75 2.5 2.5m3.5-4 2.5-2.5m-4.5 4 2.5 2.5 6-6.5"/></svg>
+        Leadership: Demonstrated leadership in school and community.
+      </li>
+
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 16 16"><path fill="none" stroke="#59898E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.75 9.75 2.5 2.5m3.5-4 2.5-2.5m-4.5 4 2.5 2.5 6-6.5"/></svg>
+        Special Talents: Exceptional abilities in arts, sports, or other areas.
+      </li>
+
+
+    </ul>
+  </div>
+
+
+  <!-- scholarship application  -->
+  <div class="scholar-application"> 
+  <h3 class="scholar-application-header">
+    The Application Journey
+  </h3>
+  
+  <ol class="scholar-application-list">
+
+    <li>
+      <div class="scholar-application-grid">
+        <div class="scholar-application-number" style="background-color: #59898E33; color: #287781;">1</div>
+        <div>
+          <div class="scholar-application-main">
+            Build a Strong Academic Record
+          </div>
+          <div class="scholar-application-sub">
+            Maintain high GPA, take challenging courses (AP, IB), and excel in standardized tests.
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="scholar-application-grid">
+        <div class="scholar-application-number" style="background-color: #59898E33; color: #287781;">2</div>
+        <div>
+          <div class="scholar-application-main">
+            Develop Leadership Experience
+          </div>
+          <div class="scholar-application-sub">
+            Take on leadership roles in clubs, sports teams, community organizations, or start your own initiatives.
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="scholar-application-grid">
+        <div class="scholar-application-number" style="background-color: #59898E33; color: #287781;">3</div>
+        <div>
+          <div class="scholar-application-main">
+            Showcase Special Talents
+          </div>
+          <div class="scholar-application-sub">
+            Excel in areas like athletics, arts, research, entrepreneurship, or community service.
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="scholar-application-grid">
+        <div class="scholar-application-number" style="background-color: #59898E33; color: #287781;">4</div>
+        <div>
+          <div class="scholar-application-main">
+            Craft Compelling Applications
+          </div>
+          <div class="scholar-application-sub">
+            Write powerful essays, secure strong recommendations, and present achievements effectively.
+          </div>
+        </div>
+      </div>
+    </li>
+
+
+  </ol>
+</div>
+
+
+
+  <!-- scholarship description  -->
+  <div class="scholar-desc-list">
+    <h3 class="scholar-desc-list-header">
+      Major Merit Scholarships
+    </h3>
+    <ul class="scholar-desc-list-elements">
+
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 16 16"><path fill="none" stroke="#59898E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.75 9.75 2.5 2.5m3.5-4 2.5-2.5m-4.5 4 2.5 2.5 6-6.5"/></svg>
+        <span>National Merit Scholarship</span> : Based on PSAT/NMSQT scores; awards range from $2,500 to full ride; 1.6M+ applicants, about 7,600 winners.
+      </li>
+
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 16 16"><path fill="none" stroke="#59898E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.75 9.75 2.5 2.5m3.5-4 2.5-2.5m-4.5 4 2.5 2.5 6-6.5"/></svg>
+        <span>National Merit Scholarship</span> : Based on PSAT/NMSQT scores; awards range from $2,500 to full ride; 1.6M+ applicants, about 7,600 winners.
+      </li>
+
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 16 16"><path fill="none" stroke="#59898E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.75 9.75 2.5 2.5m3.5-4 2.5-2.5m-4.5 4 2.5 2.5 6-6.5"/></svg>
+        <span>National Merit Scholarship</span> : Based on PSAT/NMSQT scores; awards range from $2,500 to full ride; 1.6M+ applicants, about 7,600 winners.
+      </li>
+
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 16 16"><path fill="none" stroke="#59898E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.75 9.75 2.5 2.5m3.5-4 2.5-2.5m-4.5 4 2.5 2.5 6-6.5"/></svg>
+        <span>National Merit Scholarship</span> : Based on PSAT/NMSQT scores; awards range from $2,500 to full ride; 1.6M+ applicants, about 7,600 winners.
+      </li>
+
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 16 16"><path fill="none" stroke="#59898E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.75 9.75 2.5 2.5m3.5-4 2.5-2.5m-4.5 4 2.5 2.5 6-6.5"/></svg>
+        <span>National Merit Scholarship</span> : Based on PSAT/NMSQT scores; awards range from $2,500 to full ride; 1.6M+ applicants, about 7,600 winners.
+      </li>
+
+
+    </ul>
+  </div>
+
+
+  <!-- personalisation -->  
+ 
+  <section class="personaliseSection">
+    <div class="personaliseContainer">
+      <div class="personaliseHeader">Need Personalized Guidance?</div>
+      <div class="personaliseSubHeader">Our expert counselors are here to help you navigate through all deadlines and requirements.</div>
+      <a class="personaliseBtn">Schedule Free Consultation</a>
+    </div>
+  </section>                      
+
+
+
+</section>
+
+
+
+
+<!-- footer-section -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- column 1: logo + about + social  -->
+            <div class="footer-col footer-about">
+                <img src="/Palak/images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="/Palak/images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- column 2: services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="/Palak/Loan/loanHome.html">Education Loans</a></li>
+                    <li><a href="/Palak/Test_Prep/testPreparationQuestionnaire/step1.html">Test Preparation</a></li>
+                    <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
+                    <li><a href="#">Application Assistance</a></li>
+                    <li><a href="#">University Shortlisting</a></li>
+                </ul>
+            </div>
+    
+            <!-- column 3-->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="/Palak/USA/usa.html">USA</a></li>
+                    <li><a href="/Palak/USA/canada.html">Canada</a></li>
+                    <li><a href="/Palak/USA/uk.html">UK</a></li>
+                    <li><a href="/Palak/USA/germany.html">Germany</a></li>
+                    <li><a href="#">New Zealand</a></li>
+                    <li><a href="/Palak/USA/australia.html">Australia</a></li>
+                    <li><a href="#">Singapore</a></li>
+                    <li><a href="#">Japan</a></li>
+                    <li><a href="#">France</a></li>
+                    <li><a href="#">Ireland</a></li>
+                    <li><a href="#">Dubai</a></li>
+                </ul>
+            </div>
+    
+            <!-- column 4: contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>Dropbox@studybefikar.com</p>
+                <p>+91 74259 34504</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+
+                <h4>More Details</h4>
+                <p>Vendor Login</p>
+                <p>T&C</p>
+            </div>
+            
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+
+
+<!-- chatbot-section -->
+
+  <button class="chatbot-toggler">
+    <span class="material-symbols-outlined">smart_toy</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <div class="chatbot">
+    <header>
+      <div class="farLeftChatbotHeader">
+        <div class="chatbotHeaderImg">
+          <img src="/Palak/images/chatbot/logo.png" alt="StudyBefikar Logo" class="chatbot-logo">
+        </div>
+      <h2>Study Befikar</h2>
+      </div>
+      <span class="close-btn material-symbols-outlined">close</span>
+    </header>
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Hi there! I'm StudyBefikar assistant. I'm here to help you pick the right service and guide you through your study abroad journey. <br />Can i get your Name and Email?</p>
+      </li>
+    </ul>
+    <div class="chat-input">
+      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+      <span id="send-btn" class="material-symbols-rounded">send</span>
+    </div>
+  </div>
+
+<div id="chatbot-container"></div>
+
+<script>
+   
+    document.addEventListener('DOMContentLoaded', function() {
+    
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', toggleDropdown);
+      });
+    });
+  
+    //chatbot
+const chatbotToggler = document.querySelector(".chatbot-toggler");
+const closeBtn = document.querySelector(".close-btn");
+const chatbox = document.querySelector(".chatbox");
+const chatInput = document.querySelector(".chat-input textarea");
+const sendChatBtn = document.querySelector(".chat-input span");
+
+let userMessage = null; // Variable to store user's message
+const inputInitHeight = chatInput.scrollHeight;
+
+// Define the question flow structure
+const questionFlow = {
+  start: "What service can we assist you with today? \n 1) Loan \n 2) Test Prepration \n 3) Visa \n 4) Admission Counselling \n4) Profile Evaluation",
+  options: {
+    Loan: {
+      question: "Which Currency do you want to take Loan in?\n 1) Dollar \n 2) Rupees ",
+      responses: {
+        Dollar: "We can assist with Dollar loans. Lets get more Details?\n Which Degree do you want to pursue?",
+        Rupees: "We can assist with personal loans. What is the loan amount you're looking for?"},
+        "nextQuestion": {
+        "question": "Do you have a co-signer?",
+        "options": {
+          "1": "Business",
+          "2": "Education",
+          "3": "Other"
+        },
+        "responses": {
+          "Business": "Great! Let's discuss terms for a business loan in Dollar.",
+          "Education": "Sure! Let's explore education loan options in Dollar.",
+          "Other": "Got it! We'll help you find a suitable Dollar loan for your needs."
+        }
+      }
+    },
+    "Rupees": {
+      "message": "We can assist with personal loans. What is the loan amount you're looking for?",
+      "nextQuestion": {
+        "question": "What is the tenure of the loan?",
+        "options": {
+          "1": "1-3 years",
+         "2": "3-5 years",
+          "3": "More than 5 years"
+        },
+        "responses": {
+          "1-3 years": "Short-term loans are a great choice for flexibility.",
+          "3-5 years": "Mid-term loans offer a balance between affordability and tenure.",
+          "More than 5 years": "Long-term loans provide lower monthly payments over time."
+        }
+      }
+    }
+  
+},
+    "Test Prep": {
+      question: "Which test are you preparing for? (GRE/GMAT/SAT)",
+      responses: {
+        GRE: "We offer GRE coaching. Would you like to know about our courses?",
+        GMAT: "We offer GMAT coaching. Would you like to know about our courses?",
+        SAT: "We offer SAT coaching. Would you like to know about our courses?",
+      },
+    },
+    Admission: {
+      question: "Which level of admission are you seeking? (Undergraduate/Postgraduate)",
+      responses: {
+        Undergraduate: "We assist with undergraduate admissions. Do you have a target country in mind?",
+        Postgraduate: "We assist with postgraduate admissions. Do you have a target program in mind?",
+      },
+    },
+    "Profile Evaluation": {
+      question: "Are you looking for a detailed profile evaluation for admissions or career guidance?",
+      responses: {
+        Admissions: "Please share your academic and extracurricular details for evaluation.",
+        Career: "Please share your work experience and career aspirations for evaluation.",
+      },
+    },
+    Visa: {
+      question: "Which type of visa are you applying for? (Student/Work/Tourist)",
+      responses: {
+        Student: "We assist with student visas. Have you received your admission letter?",
+        Work: "We assist with work visas. Do you have an employer's sponsorship?",
+        Tourist: "We assist with tourist visas. Do you have travel dates planned?",
+      },
+    },
+  };
+
+let currentStep = "start";
+let currentSection = null;
+
+const createChatLi = (message, className) => {
+  const chatLi = document.createElement("li");
+  chatLi.classList.add("chat", className);
+  const chatContent =
+    className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+  chatLi.innerHTML = chatContent;
+  chatLi.querySelector("p").textContent = message;
+  return chatLi;
+};
+
+const generateResponse = (chatElement) => {
+  const messageElement = chatElement.querySelector("p");
+
+  if (currentStep === "start") {
+    // Initial question
+    messageElement.textContent = questionFlow.start;
+    currentStep = "options";
+  } else if (currentStep === "options") {
+    // Options for services
+    const optionKeys = Object.keys(questionFlow.options);
+    if (optionKeys.includes(userMessage)) {
+      currentSection = userMessage;
+      messageElement.textContent = questionFlow.options[currentSection].question;
+      currentStep = "responses";
+    } else {
+      messageElement.textContent = "Please select a valid option: Loan, Test Prep, Admission, Profile Evaluation, Visa.";
+    }
+  } else if (currentStep === "responses") {
+    const responses = questionFlow.options[currentSection].responses;
+    if (responses[userMessage]) {
+      messageElement.textContent = responses[userMessage];
+      currentStep = "completed";
+    } else {
+      messageElement.textContent = `Please select a valid option for ${currentSection}.`;
+    }
+  } else {
+    // End of conversation
+    messageElement.textContent = "Thank you for chatting with us!";
+  }
+
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+};
+
+const handleChat = () => {
+  userMessage = chatInput.value.trim(); // Get user entered message
+  if (!userMessage) return;
+
+  // Clear the input textarea and set its height to default
+  chatInput.value = "";
+  chatInput.style.height = `${inputInitHeight}px`;
+
+  // Append the user's message to the chatbox
+  chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+
+  setTimeout(() => {
+    // Generate response based on current step and user message
+    const incomingChatLi = createChatLi("Thinking...", "incoming");
+    chatbox.appendChild(incomingChatLi);
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+    generateResponse(incomingChatLi);
+  }, 600);
+};
+
+chatInput.addEventListener("input", () => {
+  chatInput.style.height = `${inputInitHeight}px`;
+  chatInput.style.height = `${chatInput.scrollHeight}px`;
+});
+
+chatInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+    e.preventDefault();
+    handleChat();
+  }
+});
+
+sendChatBtn.addEventListener("click", handleChat);
+closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+    function toggleNavbar() {
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+
+    function toggleDropdown(event) {
+      const dropdown = event.currentTarget;
+      dropdown.classList.toggle('active');
+    }
+    const buttons = document.querySelectorAll(".button-container button");
+    const contents = document.querySelectorAll(".content-container");
+  
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Remove 'active' class from all buttons and contents
+        buttons.forEach(btn => btn.classList.remove("active"));
+        contents.forEach(content => content.classList.remove("active"));
+  
+        // Add 'active' class to clicked button and corresponding content
+        button.classList.add("active");
+        const contentId = button.id.replace("btn-", "content-");
+        document.getElementById(contentId).classList.add("active");
+      });
+    });
+    function switchContent(sectionId) {
+      // Remove active class from all buttons
+      document.querySelectorAll('.button').forEach(button => button.classList.remove('active'));
+
+      // Add active class to clicked button
+      document.querySelector(`.button[onclick="switchContent('${sectionId}')"]`).classList.add('active');
+
+      // Hide all content sections
+      document.querySelectorAll('.content').forEach(content => content.classList.remove('active'));
+
+      // Show the selected content section
+      document.getElementById(sectionId).classList.add('active');
+    }
+
+</script>
+
+
+</body>
+</html>

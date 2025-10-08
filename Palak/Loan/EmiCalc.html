@@ -44,7 +44,6 @@
                 <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
                 <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
                 <li><a href="/Palak/Loan/EmiCalc.html">EMI Calculator</a></li>
-                <li><a href="#">Loan Refinancing</a></li>
               </ul>
             </li>
         
@@ -169,65 +168,118 @@
           });
         </script>
 
+
+    <section class="hero book-consultation-hero">
+        <div class="breadcrumb"><a href="#">Home</a> &gt;
+            <a href="/Palak/Loan/loanHome.html">Loan</a> &gt;
+            <span>Education Loan EMI Calculator</span>
+        </div>
+
+        <div class="hero-overlay">
+            <div class="hero-left">
+                <div class="glass-card">★ Trusted by 10,000+ Students</div>
+
+                <h1 class="consultation-heading">
+                    <span>Education Loan EMI Calculator</span>
+                </h1>
+
+                <p class="consultation-subtext">
+                    Plan your education financing with precision. Calculate your monthly EMI and understand your repayment journey with our advanced calculator.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
 <!-- Education Loan EMI Calculator Section -->
- 
 <section id="emi-calculator" class="hero">
   <h2 class="cost-heading">Education Loan EMI Calculator</h2>
   <p class="cost-desc">Check Your Education Loan EMI in Seconds with StudyBefikar</p>
 
-  <div class="emi-card">
-    <!-- Sliders Section -->
-    <div class="sliders-section">
-      <div class="field">
-        <label>Loan Amount: <span id="loanAmountLabel"></span></label>
-        <input type="range" id="loanAmount" min="100000" max="10000000" step="10000" value="1600000">
-      </div>
+  <!-- Toggle -->
+  <div class="toggle-container">
+    <button id="rupeeToggle" class="toggle-btn active">₹ Rupees</button>
+    <button id="dollarToggle" class="toggle-btn">$ Dollars</button>
+  </div>
 
-      <div class="field">
-        <label>Interest (p.a): <span id="interestLabel"></span></label>
-        <input type="range" id="interest" min="1" max="18" step="0.1" value="15">
-      </div>
+  <!-- RUPEE CARD (keeps original rupee layout) -->
+  <div class="emi-card" id="rupeeCard">
+    <!-- SLIDERS (initially inside rupee card) -->
+    <div id="controls" class="controls">
+      <div class="sliders-section" id="slidersSection">
+        <div class="field">
+          <label>Loan Amount: <span id="loanAmountLabel"></span></label>
+          <input type="range" id="loanAmount" min="100000" max="10000000" step="10000" value="1600000">
+        </div>
 
-      <div class="field">
-        <label>Loan Duration (Years): <span id="loanDurationLabel"></span></label>
-        <input type="range" id="loanDuration" min="1" max="15" step="1" value="10">
-      </div>
+        <div class="field">
+          <label>Interest (p.a): <span id="interestLabel"></span></label>
+          <input type="range" id="interest" min="1" max="18" step="0.1" value="15">
+        </div>
 
-      <div class="field">
-        <label>Course Duration (Months): <span id="courseDurationLabel"></span></label>
-        <input type="range" id="courseDuration" min="1" max="48" step="1" value="24">
-      </div>
+        <div class="field">
+          <label>Loan Duration (Years): <span id="loanDurationLabel"></span></label>
+          <input type="range" id="loanDuration" min="1" max="15" step="1" value="10">
+        </div>
 
-      <div class="field">
-        <label>Grace Period (Months): <span id="gracePeriodLabel"></span></label>
-        <input type="range" id="gracePeriod" min="0" max="12" step="1" value="6">
+        <div class="field">
+          <label>Course Duration (Months): <span id="courseDurationLabel"></span></label>
+          <input type="range" id="courseDuration" min="1" max="48" step="1" value="24">
+        </div>
+
+        <div class="field">
+          <label>Grace Period (Months): <span id="gracePeriodLabel"></span></label>
+          <input type="range" id="gracePeriod" min="0" max="12" step="1" value="6">
+        </div>
       </div>
     </div>
 
-    <!-- Donut Chart Section -->
-    <div class="chart-section">
+    <!-- Rupee Mode Chart -->
+    <div class="chart-section" id="rupeeChartSection">
       <canvas id="emiChart" width="260" height="260"></canvas>
-      <div class="chart-center">
+      <div class="chart-center" id="chartCenter">
         <h3>Total Payable</h3>
         <p id="totalPayable">₹0</p>
       </div>
     </div>
 
-    <!-- Results Section -->
-    <div class="results-section">
+    <!-- Rupee Mode Results -->
+    <div class="results-section" id="resultsSection">
       <div class="result-box">
         <h3>Your Monthly EMI</h3>
         <p id="emi">₹0</p>
       </div>
-
       <div class="legend">
         <span class="legend-color principal"></span>
         <p>Principal Amount: <span id="principal">₹0</span></p>
       </div>
-
       <div class="legend">
         <span class="legend-color interest"></span>
         <p>Interest: <span id="interestAmount">₹0</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOLLAR SECTION (separate layout; sliders are moved here dynamically) -->
+  <div id="dollarSection" style="display:none;">
+    <div class="dollar-top">
+      <!-- Bank List -->
+      <div class="bank-list" id="bankListWrapper">
+        <h3>Select Bank</h3>
+        <ul id="bankOptions"></ul>
+      </div>
+
+      <!-- Controls placeholder: we'll move the actual #controls node here when in dollar mode -->
+      <div class="controls-placeholder" id="controlsPlaceholder"></div>
+    </div>
+
+    <!-- Charts row -->
+    <div class="dollar-charts">
+      <div class="chart-box">
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <canvas id="lineChart"></canvas>
       </div>
     </div>
   </div>
@@ -237,8 +289,40 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-let emiChart;
+/* -------------------------
+   Data + chart control
+   ------------------------- */
+let emiChart, barChart, lineChart;
+let currentMode = "rupee";
+let activeBankIdx = null;
 
+const banks = [
+  { name: "Earnest" },
+  { name: "College Ave" },
+  { name: "Ascent" },
+  { name: "LendKey" },
+  { name: "Prodigy Finance" }
+];
+
+/* ---- helper to sync slider labels ---- */
+function updateSliderLabels() {
+  const P = parseInt(document.getElementById("loanAmount").value);
+  const annualRate = parseFloat(document.getElementById("interest").value);
+  const years = parseInt(document.getElementById("loanDuration").value);
+  const course = parseInt(document.getElementById("courseDuration").value);
+  const grace = parseInt(document.getElementById("gracePeriod").value);
+
+  // choose prefix based on mode
+  const currency = currentMode === "rupee" ? "₹" : "$";
+
+  document.getElementById("loanAmountLabel").textContent = `${currency}${P.toLocaleString()}`;
+  document.getElementById("interestLabel").textContent = `${annualRate.toFixed(1)}%`;
+  document.getElementById("loanDurationLabel").textContent = `${years} Years`;
+  document.getElementById("courseDurationLabel").textContent = `${course} Months`;
+  document.getElementById("gracePeriodLabel").textContent = `${grace} Months`;
+}
+
+// ----- RUPEE FUNCTIONS -----
 function calculateEMI() {
   const P = parseInt(document.getElementById("loanAmount").value);
   const annualRate = parseFloat(document.getElementById("interest").value);
@@ -249,99 +333,190 @@ function calculateEMI() {
   const grace = parseInt(document.getElementById("gracePeriod").value);
   const moratorium = course + grace;
 
-  // Accrued amount during moratorium (simple interest)
   const accrued = P + (P * r * moratorium);
-
-  // EMI calculation (standard formula)
-  const emiValue =
-    (accrued * r * Math.pow(1 + r, repayMonths)) /
-    (Math.pow(1 + r, repayMonths) - 1);
+  const emiValue = (accrued * r * Math.pow(1 + r, repayMonths)) /
+                   (Math.pow(1 + r, repayMonths) - 1);
 
   const totalPayable = emiValue * repayMonths;
   const interestAmount = totalPayable - P;
 
-  // Update UI values
-  document.getElementById("loanAmountLabel").textContent = `₹${P.toLocaleString()}`;
-  document.getElementById("interestLabel").textContent = `${annualRate.toFixed(1)}%`;
-  document.getElementById("loanDurationLabel").textContent = `${years} Years`;
-  document.getElementById("courseDurationLabel").textContent = `${course} Months`;
-  document.getElementById("gracePeriodLabel").textContent = `${grace} Months`;
+  updateSliderLabels();
 
   document.getElementById("totalPayable").textContent = `₹${(totalPayable/100000).toFixed(2)}L`;
-  document.getElementById("emi").textContent = `₹${emiValue.toFixed(0)}`;
+  document.getElementById("emi").textContent = `₹${Math.round(emiValue).toLocaleString()}`;
   document.getElementById("principal").textContent = `₹${(P/100000).toFixed(2)}L`;
   document.getElementById("interestAmount").textContent = `₹${(interestAmount/100000).toFixed(2)}L`;
 
-  // Update Chart
-  updateChart(P, interestAmount);
-  
+  updateRupeeChart(P, interestAmount);
 }
 
-function updateChart(principal, interest) {
+function updateRupeeChart(principal, interest) {
   const ctx = document.getElementById("emiChart").getContext("2d");
-
   if (emiChart) emiChart.destroy();
-
-  const backgroundRingPlugin = {
-  id: 'backgroundRing',
-  beforeDraw(chart) {
-    const { ctx, chartArea: { left, top, width, height } } = chart;
-    const centerX = left + width / 2;
-    const centerY = top + height / 2;
-
-    const outerRadius = Math.min(width, height) / 2;   // full radius
-    const innerRadius = outerRadius * 0.8;             // hollow inside
-
-    ctx.save();
-    ctx.beginPath();
-    ctx.arc(centerX, centerY, outerRadius, 0, 2 * Math.PI);
-    ctx.arc(centerX, centerY, innerRadius, 0, 2 * Math.PI, true); // hollow cut
-    ctx.fillStyle = "#ffe5eb";
-    ctx.fill("evenodd");
-    ctx.restore();
-  }
-};
-
-
-
   emiChart = new Chart(ctx, {
     type: "doughnut",
     data: {
       labels: ["Principal", "Interest"],
-      datasets: [
-        {
-          data: [principal, interest],
-          backgroundColor: ["#287781", "#f373a8"],
-          borderRadius: 50,
-          borderWidth: 0,
-          spacing: 2,
-        }
-      ]
+      datasets: [{
+        data: [principal, interest],
+        backgroundColor: ["#287781", "#f373a8"],
+        borderWidth: 0,
+        spacing: 2
+      }]
     },
     options: {
-  cutout: "80%",
-  responsive: true,
-  maintainAspectRatio: false,
-  plugins: {
-    legend: { display: false },
-    tooltip: {
-      callbacks: {
-        label: (ctx) => `${ctx.label}: ₹${ctx.raw.toLocaleString()}`
-      }
+      cutout: "80%",
+      responsive: true,
+      plugins: { legend: { display: false } }
     }
-  },
-  animation: { animateScale: true, animateRotate: true }
-}
-
   });
 }
 
-// Attach events
-document.querySelectorAll("input[type=range]").forEach(slider => {
-  slider.addEventListener("input", calculateEMI);
+// ----- DOLLAR FUNCTIONS -----
+function calculateSchedule(P, annualRate, years) {
+  const r = annualRate / 12 / 100;
+  const n = years * 12;
+  const emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+
+  let balance = P;
+  const schedule = [];
+  for (let month = 1; month <= n; month++) {
+    const interest = balance * r;
+    const principal = emi - interest;
+    balance -= principal;
+    if (balance < 0) balance = 0;
+    schedule.push({ month, balance });
+  }
+  return { emi, schedule, total: emi * n };
+}
+
+function updateDollar() {
+  const P = parseInt(document.getElementById("loanAmount").value);
+  const annualRate = parseFloat(document.getElementById("interest").value);
+  const years = parseInt(document.getElementById("loanDuration").value);
+
+  updateSliderLabels();
+
+  // Build bank list
+  const bankList = document.getElementById("bankOptions");
+  bankList.innerHTML = "";
+  banks.forEach((b, idx) => {
+    const li = document.createElement("li");
+    li.textContent = b.name;
+    li.classList.toggle("active", idx === activeBankIdx);
+    li.onclick = () => highlightBank(idx);
+    bankList.appendChild(li);
+  });
+
+  // Prepare results (vary duration a little per bank for demo)
+  const results = banks.map((b, idx) => {
+    const duration = years + idx * 2;
+    return { ...b, ...calculateSchedule(P, annualRate, duration) };
+  });
+
+  if (barChart) barChart.destroy();
+  if (lineChart) lineChart.destroy();
+
+  // Bar chart
+  barChart = new Chart(document.getElementById("barChart"), {
+    type: "bar",
+    data: {
+      labels: results.map(r => r.name),
+      datasets: [{
+        label: "Total Loan Cost ($)",
+        data: results.map(r => Math.round(r.total)),
+        backgroundColor: results.map((_, i) => i === activeBankIdx ? "red" : "#287781")
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } }
+    }
+  });
+
+  // Line chart
+  const maxBalance = Math.max(...results.flatMap(r => r.schedule.map(s => s.balance)));
+  lineChart = new Chart(document.getElementById("lineChart"), {
+    type: "line",
+    data: {
+      labels: results[0].schedule.map(s => s.month),
+      datasets: results.map((r, idx) => ({
+        label: r.name,
+        data: r.schedule.map(s => Math.round(s.balance)),
+        borderColor: idx === activeBankIdx ? "red" :
+                     ["#FF8A65","#287781","#8E44AD","#2980B9","#D35400"][idx],
+        borderWidth: idx === activeBankIdx ? 3 : 1,
+        tension: 0.25,
+        fill: false,
+        pointRadius: 0
+      }))
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { position: "bottom" } },
+      scales: {
+        y: {
+          beginAtZero: true,
+          suggestedMax: Math.ceil(maxBalance * 1.15),
+          title: { display: true, text: "Remaining Balance ($)" }
+        },
+        x: { title: { display: true, text: "Months" } }
+      }
+    }
+  });
+}
+
+function highlightBank(idx) {
+  activeBankIdx = idx;
+  updateDollar();
+}
+
+/* ----- Move controls between rupeeCard and dollarSection ----- */
+const controls = document.getElementById("controls");
+const controlsPlaceholder = document.getElementById("controlsPlaceholder");
+const rupeeCard = document.getElementById("rupeeCard");
+const dollarSection = document.getElementById("dollarSection");
+
+document.getElementById("rupeeToggle").addEventListener("click", () => {
+  currentMode = "rupee";
+  document.getElementById("rupeeToggle").classList.add("active");
+  document.getElementById("dollarToggle").classList.remove("active");
+
+  if (!rupeeCard.contains(controls)) {
+    rupeeCard.insertBefore(controls, rupeeCard.firstChild);
+  }
+
+  rupeeCard.style.display = "grid";
+  dollarSection.style.display = "none";
+
+  calculateEMI();
 });
 
-// Initial call
+document.getElementById("dollarToggle").addEventListener("click", () => {
+  currentMode = "dollar";
+  document.getElementById("dollarToggle").classList.add("active");
+  document.getElementById("rupeeToggle").classList.remove("active");
+
+  if (!controlsPlaceholder.contains(controls)) {
+    controlsPlaceholder.appendChild(controls);
+  }
+
+  rupeeCard.style.display = "none";
+  dollarSection.style.display = "block";
+
+  updateDollar();
+});
+
+/* ----- bind sliders once (works whether controls moved or not) ----- */
+document.querySelectorAll("#controls input[type=range]").forEach(slider => {
+  slider.addEventListener("input", () => {
+    if (currentMode === "rupee") calculateEMI();
+    else updateDollar();
+  });
+});
+
+/* ----- init ----- */
 calculateEMI();
 </script>
 
@@ -368,8 +543,14 @@ calculateEMI();
 </section>
 
 <script>
-function generateAmortizationSchedule(accrued, r, repayMonths, emiValue, P) {
-  let balance = accrued;
+function generateAmortizationSchedule(P, annualRate, repayYears) {
+  let repayMonths = repayYears * 12;
+  let r = annualRate / 12 / 100; // monthly rate
+  let emiValue = (P * r * Math.pow(1 + r, repayMonths)) / (Math.pow(1 + r, repayMonths) - 1);
+
+  let balance = P;
+  let currency = document.getElementById("rupeeSection")?.style.display !== "none" ? "₹" : "$";
+
   let scheduleHTML = `
     <div class="table-header">
       <div class="table-cell">Month</div>
@@ -391,10 +572,10 @@ function generateAmortizationSchedule(accrued, r, repayMonths, emiValue, P) {
     scheduleHTML += `
       <div class="table-row amort-row" style="display:${m > 3 ? 'none' : 'grid'}">
         <div class="table-cell">${m}</div>
-        <div class="table-cell">₹${balance.toFixed(0)}</div>
-        <div class="table-cell">₹${interestPaid.toFixed(0)}</div>
-        <div class="table-cell">₹${principalPaid.toFixed(0)}</div>
-        <div class="table-cell">₹${closingBalance.toFixed(0)}</div>
+        <div class="table-cell">${currency}${balance.toFixed(0)}</div>
+        <div class="table-cell">${currency}${interestPaid.toFixed(0)}</div>
+        <div class="table-cell">${currency}${principalPaid.toFixed(0)}</div>
+        <div class="table-cell">${currency}${closingBalance.toFixed(0)}</div>
       </div>
     `;
 
@@ -407,6 +588,31 @@ function generateAmortizationSchedule(accrued, r, repayMonths, emiValue, P) {
   // Reset buttons
   document.getElementById("readMoreBtn").style.display = "inline-block";
   document.getElementById("readLessBtn").style.display = "none";
+}
+
+// 🔹 Sync with sliders
+function attachAmortizationSync() {
+  const amountSlider = document.getElementById("loanAmount");
+  const rateSlider = document.getElementById("interest");
+  const durationSlider = document.getElementById("loanDuration");
+
+  function updateSchedule() {
+    const P = parseFloat(amountSlider.value);
+    const annualRate = parseFloat(rateSlider.value);
+    const repayYears = parseInt(durationSlider.value);
+
+    if (!isNaN(P) && !isNaN(annualRate) && !isNaN(repayYears)) {
+      generateAmortizationSchedule(P, annualRate, repayYears);
+    }
+  }
+
+  // Attach events
+  amountSlider.addEventListener("input", updateSchedule);
+  rateSlider.addEventListener("input", updateSchedule);
+  durationSlider.addEventListener("input", updateSchedule);
+
+  // Initial run
+  updateSchedule();
 }
 
 // Toggle Read More / Less
@@ -426,15 +632,45 @@ document.getElementById("readLessBtn").addEventListener("click", () => {
   document.getElementById("readLessBtn").style.display = "none";
 });
 
-// 🔹 Call function once with demo values so table appears
-// Example: P=16,00,000 | r=15% annual (0.0125 monthly) | 10 years
-let P = 1600000;
-let r = 0.15 / 12;
-let repayMonths = 120;
-let emiValue = (P * r * Math.pow(1 + r, repayMonths)) / (Math.pow(1 + r, repayMonths) - 1);
-generateAmortizationSchedule(P, r, repayMonths, emiValue, P);
+// Run once DOM is ready
+document.addEventListener("DOMContentLoaded", attachAmortizationSync);
 </script>
 
+        <section class="scholarship-section" id="scholarships">
+            <h2 class="scholarship-title">
+                Why Use Our EMI Calculator?</h2>
+            <p class="scholarship-subtitle">
+                Make informed decisions about your education loan with our comprehensive calculator
+            </p>
+
+            <div class="cards-container">
+                <!-- Card 1 -->
+                <div class="scholarship-card" style="background-color: #E4F7FA;">
+                    <img src="/Palak/USA/USA_Images/27.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Accurate Calculations</h3>
+                    <p class="card-description">
+                        Get precise EMI calculations based on current interest rates and loan terms.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="scholarship-card" style="background-color: #FDF0F4;">
+                    <img src="/Palak/USA/USA_Images/28.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Visual Insights</h3>
+                    <p class="card-description">
+                        Understand your loan structure with interactive charts and detailed breakdowns.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="scholarship-card" style="background-color: #FFF6E1;">
+                    <img src="/Palak/USA/USA_Images/29.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Compare Options</h3>
+                    <p class="card-description">
+                        Compare different loan scenarios to find the best option for your needs.</p>
+                </div>
+            </div>
+        </section>
 
   <div class="admission-card">
                     <div class="card-content">
@@ -473,68 +709,6 @@ You may end up paying far more than expected because you didn’t check the EMI 
 
                         </div>
                         </div>
-
-<style>
-.admission-card {
-    flex: 1;
-    border-radius: 20px;
-    padding: 30px 50px 50px 50px;
-    height: auto;
-    display: flex;
-    align-items: center;
-}
-.card-content {
-    flex: 1;
-    text-align: left;
-}
-
-.card-content h3 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    color: #424242;
-    margin-bottom: 15px;
-    align-items: center;
-    text-align: center;
-}
-
-.card-content p {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #424242;
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-.card-content h4 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    color: #424242;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-/* Equal two-column layout */
-.columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-.card-content ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin: 0;
-}
-ol{
-    padding-left: 20px;
-    margin: 0;
-}
-li {
-    margin-bottom: 8px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #424242;
-}
-</style>
 
 <footer class="footer">
         <div class="footer-container">

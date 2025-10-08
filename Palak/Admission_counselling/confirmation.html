@@ -33,7 +33,7 @@ body {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 60px 20px;
   margin-top: 30px;
 }
@@ -45,9 +45,7 @@ body {
   border-radius: 16.8px;
   border: 0.7px solid rgba(26, 26, 26, 0.1);
   background: #ffffff;
-  transition: width 0.3s ease, height 0.3s ease;
   margin-top: 20px;
-
   width: 1000px;
   max-width: 100%;
   min-height: 600px;
@@ -59,7 +57,7 @@ body {
   height: auto;
 }
 
-/* Panels inside confirmation box */
+/* Left Panel */
 .left-panel {
   flex: 1;
   min-width: 280px;
@@ -69,12 +67,20 @@ body {
   flex-direction: column;
   gap: 30px;
   border-right: 1px solid #ddd;
+  text-align: center;
+}
+
+.left-panel img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 .counselling-text {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 22px;
   color: #1A1A1A;
+  text-align: left;
 }
 
 .session-info {
@@ -82,30 +88,26 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  text-align: left;
 }
 
 .icon-text {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   color: #1A1A1A99;
 }
 
-.left-panel .icon-text img {
+.icon-text img {
   width: 16px;
   height: 16px;
 }
 
-.left-panel img {
-  width: 70px;
-  height: auto;
-}
-
-/* Center Panel - Calendar */
+/* Center Panel (Calendar) */
 .center-panel {
-  flex: 1;
+  flex: 1.5;
   min-width: 280px;
   padding: 28px;
   display: flex;
@@ -117,6 +119,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   color: #1A1A1A;
+  text-align: center;
 }
 
 .calendar {
@@ -133,7 +136,7 @@ body {
 
 .month-year {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   color: #1A1A1A;
 }
 
@@ -169,7 +172,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 15px;
   border-radius: 6px;
 }
 
@@ -183,10 +186,11 @@ body {
   color: #59898E;
   background: #59898E33;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .calendar-days .selectable:hover {
-  background: #59898E33;
+  background: #cce9ff;
 }
 
 .calendar-days .selectable.active {
@@ -233,8 +237,7 @@ body {
   height: 30px;
   border-radius: 3px;
   font-weight: 700;
-  font-size: 16px;
-  color: black;
+  font-size: 14px;
   text-align: center;
   line-height: 30px;
   cursor: pointer;
@@ -255,25 +258,25 @@ body {
 
 /* Time slots */
 .time-options {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
   margin-top: 10px;
 }
 
 .time-slot {
-  width: 100%;
-  max-width: 236px;
-  height: 40px;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
-  color: #287781;
-  background: #fff;
-  border: 1px solid #59898E;
-  border-radius: 8px;
-  cursor: pointer;
+  width: 100%; 
+  max-width: 236px; 
+  height: 40px; 
+  padding: 12px 24px; 
+  font-size: 16px; 
+  font-weight: 700; 
+  text-align: center; 
+  color: #287781; 
+  background: #fff; 
+  border: 1px solid #59898E; 
+  border-radius: 8px; 
+  cursor: pointer; 
   transition: 0.2s;
 }
 
@@ -282,52 +285,79 @@ body {
   color: white;
 }
 
-.hidden {
-  display: none;
+.time-slot.active {
+  background: #287781;
+  color: white;
+  font-weight: bold;
 }
 
-/* Counsellor Dropdown */
-#counsellor {
-  width: 100%;
-  padding: 10px 14px;
+.hidden { display: none; }
+
+/* Counsellor Dropdown */ 
+#counsellor 
+{ 
+  width: 100%; 
+  padding: 10px 14px; 
+  font-size: 16px; 
+  font-family: "Plus Jakarta Sans", sans-serif; 
+  border: 2px solid #287781; 
+  border-radius: 12px; 
+  background-color: #ffffff; 
+  color: #333; 
+  outline: none; 
+  cursor: pointer; 
+  transition: all 0.3s ease; 
+} 
+
+#counsellor:hover 
+{ 
+  border-color: #1d5b5b; 
+  background-color: #f9f9f9; 
+} 
+
+#counsellor:focus { 
+  box-shadow: 0 0 0 3px rgba(40, 119, 129, 0.3); 
+  border-color: #287781; 
+} 
+  
+#counsellor option { 
+  font-size: 15px; 
+  padding: 8px; 
+  background-color: #fff; 
+  color: #333; 
+} 
+  
+#counsellor option:hover { 
+  background-color: #287781; 
+  color: #fff; 
+}
+.counsellor-select{
+  text-align: left;
+}
+
+/* === Submit Button === */
+.submit-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #287781;
+  color: white;
   font-size: 16px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  border: 2px solid #287781;
-  border-radius: 12px;
-  background-color: #ffffff;
-  color: #333;
-  outline: none;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
+  margin-top: auto;
 }
 
-#counsellor:hover {
-  border-color: #1d5b5b;
-  background-color: #f9f9f9;
-}
-
-#counsellor:focus {
-  box-shadow: 0 0 0 3px rgba(40, 119, 129, 0.3);
-  border-color: #287781;
-}
-
-#counsellor option {
-  font-size: 15px;
-  padding: 8px;
-  background-color: #fff;
-  color: #333;
-}
-
-#counsellor option:hover {
-  background-color: #287781;
-  color: #fff;
+.submit-btn:hover {
+  background: #1f5c63;
 }
 
 /* =====================
    Responsive Layout
 ===================== */
 
-/* Medium screens - stack panels vertically */
+/* Tablets */
 @media (max-width: 992px) {
   .confirmation-box {
     flex-direction: column;
@@ -340,20 +370,15 @@ body {
     border: none;
     border-bottom: 1px solid #ddd;
   }
-  .right-time-panel {
-    border: none;
-  }
   .time-options {
-    flex-wrap: wrap;
     flex-direction: row;
   }
   .time-slot {
     flex: 1 1 45%;
-    max-width: none;
   }
 }
 
-/* Small screens - tighter grid */
+/* Mobiles */
 @media (max-width: 600px) {
   .calendar-days {
     grid-template-columns: repeat(4, 1fr);
@@ -361,16 +386,167 @@ body {
   .time-slot {
     flex: 1 1 100%;
   }
-  .format-toggle {
-    width: 90px;
-  }
   .counselling-text {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .format-toggle {
+    width: 80px;
   }
 }
 
 
-    </style>
+
+/* ===== Modal Overlay (Confirm Schedule) ===== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px); /* blur effect */
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  animation: fadeInScale 0.3s ease;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #287781;
+}
+
+.modal-content p {
+  font-size: 15px;
+  color: #444;
+  margin: 15px 0 25px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.cancel-btn,
+.confirm-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cancel-btn {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background: #d6d6d6;
+}
+
+.confirm-btn {
+  background: #287781;
+  color: #fff;
+}
+
+.confirm-btn:hover {
+  background: #1f5c63;
+}
+
+/* Modal animation */
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ===== Success Card ===== */
+.success-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+  z-index: 1100;
+  animation: fadeInUp 0.4s ease;
+}
+
+.success-card.hidden {
+  display: none;
+}
+
+.success-card img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.success-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #287781;
+  margin: 0 0 10px;
+}
+
+.success-card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.home-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #287781;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home-btn:hover {
+  background: #1f5c63;
+}
+
+/* Success card animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate(-50%, -40%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.calendly-integration{
+  margin: 80px auto 20px;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -410,6 +586,7 @@ body {
               <ul class="dropdown-content">
                 <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
                 <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
+                <li><a href="/Palak/Loan/EmiCalc.html">EMI Calculator</a></li>
               </ul>
             </li>
         
@@ -464,8 +641,6 @@ body {
           </ul>
           <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </nav>
-
-
         <script>
           document.addEventListener("DOMContentLoaded", () => {
             /*  mobile hamburger toggle */
@@ -536,84 +711,14 @@ body {
           });
         </script>
 
-        <!-- ✅ Main Confirmation Layout -->
-        <div class="main-content">
-            <div class="confirmation-box" id="confirmationBox">
+<div class="calendly-integration"></div>  
 
-                <!-- Left Panel -->
-                <div class="left-panel">
-                    <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo" />
-                    <div class="counselling-text">Admission Counselling</div>
-                    <div class="counsellor-select">
-                        <label for="counsellor">Select Your Counsellor:</label><br><br>
-                        <select id="counsellor">
-                          <option value="">--Choose--</option>
-                          <option value="john">John Smith</option>
-                          <option value="sara">Sara Khan</option>
-                          <option value="rahul">Rahul Mehta</option>
-                        </select>
-                    </div>
-                    <div class="session-info">
-                        <div class="icon-text"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/TIMER-ICON.jpg" alt="Timer" />30 min</div>
-                        <div class="icon-text"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/EARTH.jpg" alt="Meet" />Google Meet</div>
-                        <div class="icon-text"><img src="/Palak/Admission_counselling/Admission_Counselling_Images/EARTH.jpg" alt="Time" />Central European Time
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Center Panel (Calendar) -->
-                <div class="center-panel">
-                    <h2 class="calendar-heading">Select a Date & Time</h2>
-                    <div class="calendar">
-                        <div class="calendar-header">
-                            <button class="month-arrow" id="prevMonth">&#8249;</button>
-                            <div class="month-year" id="monthYear">July 2025</div>
-                            <button class="month-arrow" id="nextMonth">&#8250;</button>
-                        </div>
-
-                        <div class="calendar-weekdays">
-                            <div>MON</div>
-                            <div>TUE</div>
-                            <div>WED</div>
-                            <div>THU</div>
-                            <div>FRI</div>
-                            <div>SAT</div>
-                            <div>SUN</div>
-                        </div>
-
-                        <div class="calendar-days" id="calendarDays"></div>
-                    </div>
-                </div>
-
-                <!-- Right Time Panel (Initially hidden) -->
-                <div class="right-time-panel hidden" id="timePanel">
-                    <div class="time-header">
-                        <div class="selected-date" id="selectedDate">Wed, July 23</div>
-                        <div class="time-format">
-                            <div class="format-toggle">
-                                <label>
-                                    <input type="radio" name="format" value="12" checked />
-                                    12h
-                                </label>
-                                <label>
-                                    <input type="radio" name="format" value="24" />
-                                    24h
-                                </label>
-                            </div>
-                        </div>
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/studykar?hide_gdpr_banner=1&text_color=424242&primary_color=287781" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
 
 
-                    </div>
-
-                    <div class="time-options">
-                        <button class="time-slot">12:00</button>
-                        <button class="time-slot">12:30</button>
-                        <button class="time-slot">1:00</button>
-                        <!-- Add more as needed -->
-                    </div>
-                </div>
-            </div>
-        </div>
 <footer class="footer">
         <div class="footer-container">
             <!-- column 1: logo + about + social  -->
@@ -717,166 +822,6 @@ body {
       daysContainer.appendChild(day);
     }
   </script> -->
-
-    <script>
-        const calendarDays = document.getElementById("calendarDays");
-        const monthYearDisplay = document.getElementById("monthYear");
-        const timePanel = document.getElementById("timePanel");
-        const confirmationBox = document.getElementById("confirmationBox");
-        const selectedDateText = document.getElementById("selectedDate");
-        const timeSlotsContainer = document.querySelector(".time-options");
-        const formatRadios = document.querySelectorAll('input[name="format"]');
-        const counsellorSelect = document.getElementById("counsellor");
-
-        let currentMonth = 6; // July (0-indexed)
-        let currentYear = 2025;
-        let selectedDay = null;
-        let selectedCounsellor = null;
-        let selectedTime = null;
-
-        // Counsellor availability data
-        const counsellorAvailability = {
-            john: {
-                dates: [5, 12, 18, 23],
-                time12h: ['12:00 PM', '1:00 PM', '3:00 PM'],
-                time24h: ['12:00 PM', '13:00 PM', '15:00 PM']
-            },
-            sara: {
-                dates: [6, 14, 20, 28],
-                time12h: ['2:00 PM', '4:00 PM', '6:00 PM'],
-                time24h: ['14:00 PM', '16:00 PM', '18:00 PM']
-            },
-            rahul: {
-                dates: [3, 10, 17, 24],
-                time12h: ['11:00 AM', '1:30 PM', '5:00 PM'],
-                time24h: ['11:00 PM', '13:30 PM', '17:00 PM']
-            }
-        };
-
-        // Counsellor selection
-        counsellorSelect.addEventListener("change", () => {
-            selectedCounsellor = counsellorSelect.value;
-            selectedDay = null;
-            selectedTime = null;
-            timePanel.classList.add("hidden");
-            renderCalendar(currentMonth, currentYear);
-        });
-
-        // Render calendar
-        function renderCalendar(month, year) {
-            calendarDays.innerHTML = '';
-            const daysInMonth = new Date(year, month + 1, 0).getDate();
-            const firstDay = new Date(year, month, 1).getDay();
-
-            monthYearDisplay.textContent = new Date(year, month).toLocaleString('default', { month: 'long', year: 'numeric' });
-
-            const offset = (firstDay === 0 ? 6 : firstDay - 1);
-            for (let i = 0; i < offset; i++) {
-                calendarDays.appendChild(document.createElement("div"));
-            }
-
-            const availableDates = selectedCounsellor ? counsellorAvailability[selectedCounsellor].dates : [];
-
-            for (let i = 1; i <= daysInMonth; i++) {
-                const day = document.createElement("div");
-                day.textContent = i;
-
-                if (availableDates.includes(i)) {
-                    day.classList.add("selectable");
-                    day.addEventListener("click", () => {
-                        document.querySelectorAll('.calendar-days .selectable').forEach(d => d.classList.remove("active"));
-                        day.classList.add("active");
-
-                        selectedDay = i;
-                        selectedDateText.textContent = new Date(year, month, i).toLocaleDateString('en-US', { weekday: 'short', month: 'long', day: 'numeric' });
-                        confirmationBox.classList.add("expanded");
-                        timePanel.classList.remove("hidden");
-                        renderTimeSlots();
-                    });
-                } else {
-                    // Show the date but make it disabled (not clickable)
-                    day.classList.add("disabled");
-                }
-
-                calendarDays.appendChild(day);
-            }
-        }
-
-        // Render time slots
-        function renderTimeSlots() {
-            if (!selectedCounsellor) return;
-
-            const use24h = document.querySelector('input[name="format"]:checked').value === "24";
-            const availability = counsellorAvailability[selectedCounsellor];
-            const timeList = use24h ? availability.time24h : availability.time12h;
-
-            timeSlotsContainer.innerHTML = "";
-            timeList.forEach(t => {
-                const btn = document.createElement("button");
-                btn.textContent = t;
-                btn.classList.add("time-slot");
-
-                btn.addEventListener("click", () => {
-                    document.querySelectorAll(".time-slot").forEach(b => b.classList.remove("active"));
-                    btn.classList.add("active");
-                    selectedTime = t;
-
-                    // Send booking info to backend
-                    const bookingData = {
-                        counsellor: selectedCounsellor,
-                        date: new Date(currentYear, currentMonth, selectedDay).toISOString().split("T")[0],
-                        time: selectedTime
-                    };
-
-                    fetch("/your-backend-endpoint", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(bookingData)
-                    })
-                        .then(res => res.json())
-                        .then(data => {
-                            console.log("Booking confirmed:", data);
-                            alert("Booking confirmed with " + selectedCounsellor + " on " + bookingData.date + " at " + bookingData.time);
-                        })
-                        .catch(err => {
-                            console.error("Booking error:", err);
-                            alert("Failed to confirm booking. Try again.");
-                        });
-                });
-
-                timeSlotsContainer.appendChild(btn);
-            });
-        }
-
-        // Toggle time format
-        formatRadios.forEach(r => r.addEventListener("change", renderTimeSlots));
-
-        // Month navigation
-        document.getElementById("prevMonth").addEventListener("click", () => {
-            currentMonth--;
-            if (currentMonth < 0) {
-                currentMonth = 11;
-                currentYear--;
-            }
-            renderCalendar(currentMonth, currentYear);
-        });
-
-        document.getElementById("nextMonth").addEventListener("click", () => {
-            currentMonth++;
-            if (currentMonth > 11) {
-                currentMonth = 0;
-                currentYear++;
-            }
-            renderCalendar(currentMonth, currentYear);
-        });
-
-        // Initial render (full calendar but all disabled since no counsellor selected)
-        renderCalendar(currentMonth, currentYear);
-    </script>
-
-
-
-
 </body>
 
 </html>

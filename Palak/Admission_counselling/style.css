@@ -259,10 +259,10 @@ body {
 /* Paragraph inside card */
 .info-card p {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 28px;
-    color: #7C7C7C;
+    color: #424242;
     flex-grow: 1;
 }
 
@@ -1189,4 +1189,199 @@ select {
         width: 100%;
         padding: 12px 16px;
     }
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Large Tablets (≤ 1200px) */
+@media (max-width: 1200px) {
+  .consultation-section {
+    width: 95%;
+    gap: 60px;
+  }
+
+  .consultation-heading h2 {
+    font-size: 30px;
+  }
+
+  .consultation-heading p {
+    font-size: 20px;
+  }
+
+  .step-loader .line {
+    width: 100px;
+  }
+}
+
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+  .book-consultation-hero {
+    padding: 150px 5% 40px;
+    height: auto;
+  }
+
+  .hero-overlay {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .book-consultation-hero .hero-left {
+    max-width: 100%;
+  }
+
+  .consultation-heading {
+    font-size: 42px;
+    line-height: 54px;
+  }
+
+  .consultation-subtext {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .stats-row {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .consultation-form {
+    padding: 25px;
+  }
+
+  .custom-dropdown,
+  .additional-dropdown {
+    width: 100%;
+  }
+
+  .book-btn {
+    width: 100%;
+  }
+}
+
+/* Small Tablets & Large Mobiles (≤ 768px) */
+@media (max-width: 768px) {
+  .breadcrumb {
+    top: 70px;
+    font-size: 11px;
+  }
+
+  .consultation-heading {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .consultation-subtext {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .stats-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .degree-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .degree-card {
+    width: 160px;
+    height: auto;
+    padding: 15px;
+  }
+
+  .custom-dropdown,
+  .additional-dropdown {
+    width: 100%;
+  }
+
+  .book-btn {
+    width: 100%;
+    font-size: 14px;
+    height: 50px;
+  }
+}
+
+/* Mobiles (≤ 576px) */
+@media (max-width: 576px) {
+  .book-consultation-hero {
+    padding: 120px 20px 40px;
+  }
+
+  .consultation-heading {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .consultation-subtext {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+
+  .glass-card {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .form-header {
+    font-size: 20px;
+    height: auto;
+    padding: 18px;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+    padding: 14px 16px;
+  }
+
+  .gender-group .gender-options {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .gender-group .gender-pill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .book-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+/* Extra Small Mobiles (≤ 400px) */
+@media (max-width: 400px) {
+  .consultation-heading {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .consultation-subtext {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .degree-card {
+    width: 140px;
+    height: auto;
+    padding: 12px;
+  }
+
+  .book-btn {
+    font-size: 13px;
+    height: 45px;
+  }
 }

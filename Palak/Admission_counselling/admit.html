@@ -170,34 +170,35 @@ body {
 
 
 
-/* Section container */
 .why-section {
-    background-color: #fff;
-    padding: 50px 0;
-    text-align: center;
-    max-width: 1320px;
-    /* fits 3 cards + gaps perfectly */
-    margin: 0 auto;
+  background-color: #fff;
+  padding: 50px 0;
+  max-width: 1320px;
+  margin: 0 auto;
+  text-align: center; /* centers the .why-heading container */
 }
 
-/* Main heading */
-.why-section h2 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-    color: #424242;
-    line-height: 100%;
-    margin-bottom: 20px;
+.why-heading {
+  display: inline-block;  /* shrink-wrap around h2 width */
+  text-align: left;       /* keep text inside aligned left */
 }
 
-/* Subtitle */
-.why-section p {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 300;
-    font-size: 22px;
-    color: #424242;
-    line-height: 100%;
-    margin-bottom: 50px;
+.why-heading h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #424242;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.why-heading p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  color: #424242;
+  margin-bottom: 50px;
+  line-height: 1.4;
 }
 
 .card-grid {
@@ -275,7 +276,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
-    color: #7C7C7C;
+    color: #424242;
     flex-grow: 1;
 }
 
@@ -339,7 +340,7 @@ body {
 
 .process-step .process-image {
     width: 55%;
-    padding: 20px;
+    padding: 0px 60px;
 }
 
 .process-step .process-image img {
@@ -563,8 +564,6 @@ textarea::placeholder {
     }
 }
 
-
-
     </style>
 </head>
 
@@ -603,6 +602,7 @@ textarea::placeholder {
               <ul class="dropdown-content">
                 <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
                 <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
+                <li><a href="/Palak/Loan/EmiCalc.html">EMI Calculator</a></li>
               </ul>
             </li>
         
@@ -765,7 +765,7 @@ textarea::placeholder {
 
   <section class="why-section">
     <div class="why-heading">
-      <h2>"Why Studybefikar Is Your Perfect Counselling Partner?"</h2>
+      <h2>Why Studybefikar Is Your Perfect Counselling Partner?</h2>
       <p>Because your future deserves the best!</p>
     </div>
 

@@ -19,7 +19,7 @@ body {
   background-size: cover;
   background-position: center;
   padding: 4rem 2rem;
-  margin: 60px auto;
+  margin: 80px auto 20px;
   height: auto;
 }
 
@@ -344,6 +344,10 @@ font-size: 24px;
 }
 
 .service-card:nth-child(4) {
+  border-color: #C7A926; 
+}
+
+.service-card:nth-child(5) {
   border-color: #287781; 
 }
 

@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans';
+}
+
+
+/* navbar */
+
+
+/* hero  */
+
+.scholarship-hero {
+  margin: 80px auto 20px;
+  padding: 39px;
+}
+
+.scholarship-container {
+  padding: 39px;
+  margin: 0 auto;
+  border-radius: 30px;
+  height: fit-content;
+}
+
+.scholarship-header {
+  font-size: 34px;
+  font-weight: 700;
+  color: #424242;               
+  margin-bottom: 30px;
+}
+
+.scholarship-subheader {
+  font-size: 16px;
+  font-weight: 400;
+  color: #424242;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.scholarshipHeroImg{
+  margin-top: 36px;
+  width: 100%;
+}
+
+.heroImg{
+  width: 100%;
+  border-radius: 30px;
+  height: 645px;
+}
+
+.bottomHeroDesc{
+  margin: 36px auto 10px;
+}
+
+.bottomDesc{
+  font-weight: 600;
+  font-size: 16px;
+  color: #424242;
+}
+
+
+
+@media (max-width: 768px) {
+  
+  .scholarship-header {
+  font-size: 24px;
+}
+
+.scholarship-subheader {
+  font-size: 12px;
+}
+
+.heroImg{
+  height: 220px;
+}
+
+.bottomDesc{
+  font-size: 12px;
+}
+}
+
+
+
+/* scholar-desc */
+
+.scholar-desc-section {
+  margin: 10px auto 20px;
+  padding: 10px 39px 39px;
+}
+
+
+.scholar-desc-header-h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #424242;
+  margin-bottom: 40px;
+}
+
+.scholar-desc-header-p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #424242;
+  padding: 39px;
+  border-radius: 30px;
+}
+
+
+.scholar-desc-list {
+  margin: 60px auto 40px;
+}
+
+.scholar-desc-list-header {
+  font-size: 34px;
+  font-weight: 700;
+  color: #424242;
+  margin-bottom: 40px;
+}
+
+.scholar-desc-list-elements {
+  list-style: none;              
+  padding-left: 0;              
+  margin: 0; 
+}
+
+.scholar-desc-list-elements li {
+  display: flex;                 
+  align-items: center;           
+  gap: 14px;                    
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #424242;
+}
+
+.scholar-desc-list-elements li span {
+  color: #0055B2;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .scholar-desc-header h2 {
+    font-size: 24px;
+  }
+
+  .scholar-desc-header p {
+    font-size: 12px;
+  }
+
+  .scholar-desc-list-header {
+    font-size: 24px;
+  }
+
+  .scholar-desc-list-elements li {
+  font-size: 12px;
+  line-height: 17px;
+  }
+
+  .scholar-desc-list-elements li svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+
+/* application  */
+.scholar-application-header {
+  font-size: 34px;
+  font-weight: 700;
+  color: #424242;
+  margin-bottom: 50px;
+}
+
+
+.scholar-application-list {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.scholar-application-list li {
+  border-radius: 12px;
+  padding: 10px;
+  transition: transform 0.2s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.scholar-application-grid {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scholar-application-number {
+  min-width: 59px;
+  min-height: 59px;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.scholar-application-main {
+  font-size: 16px;
+  font-weight: 700;
+  color: #424242;
+  margin-bottom: 16px;
+}
+
+.scholar-application-sub {
+  font-size: 16px;
+  font-weight: 400;
+  color: #424242;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+  .scholar-application {
+    padding: 10px;
+  }
+
+  .scholar-application-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .scholar-application-list {
+  gap: 15px;
+}
+
+  .scholar-application-list li {
+    padding: 10px;
+  }
+
+  .scholar-application-grid {
+    gap: 12px;
+  }
+
+  .scholar-application-number {
+    min-width: 38px;
+    min-height: 38px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .scholar-application-main {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .scholar-application-sub {
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+
+/* personalise */
+
+.personaliseSection{
+  padding: 20px;
+}
+
+.personaliseContainer{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid var(--Teal-05, #287781);
+  padding: 53px 83px;
+  border-radius: 30px;
+  height: 299px;
+}
+
+.personaliseHeader{
+  font-weight: 700;
+  font-size: 34px;
+  color: #424242;
+}
+
+.personaliseSubHeader{
+  font-weight: 400;
+  font-size: 24px;
+  color: #424242;
+  margin-top:20px;
+}
+
+.personaliseBtn{
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
+  border-radius: 10px;
+  padding: 10px;
+  gap: 10px;
+  height: 54px;
+  width: 334px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:43px auto;
+}
+
+@media (max-width: 768px) {
+
+.personaliseContainer{
+  height: 310px;
+}
+
+.personaliseHeader{
+  font-weight: 700;
+  font-size: 24px;
+  color: #424242;
+}
+
+.personaliseSubHeader{
+  font-weight: 400;
+  font-size: 16px;
+  color: #424242;
+  margin-top:20px;
+}
+
+.personaliseBtn{
+  font-weight: 600;
+  font-size: 12px;
+  margin: 20px auto;
+  width: 284px;
+}
+}
+
+
+
+
+/* footer         */
+
+
+
+/* Chatbot toggle button */
+
+
+

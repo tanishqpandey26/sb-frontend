@@ -45,6 +45,7 @@
               <ul class="dropdown-content">
                 <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
                 <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
+                <li><a href="/Palak/Loan/EmiCalc.html">EMI Calculator</a></li>
               </ul>
             </li>
         
@@ -99,8 +100,6 @@
           </ul>
           <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </nav>
-
-
         <script>
           document.addEventListener("DOMContentLoaded", () => {
             /*  mobile hamburger toggle */
@@ -574,7 +573,6 @@
                 inp.addEventListener("change", revealNextSteps);
             });
 
-
         // Visa toggle
         visaRadios.forEach(r => r.addEventListener("change", () => {
             visaCountryGroup.classList.toggle("hidden", r.value !== "yes");
@@ -619,14 +617,12 @@
                         const customExamInput = customExamField.querySelector("#customExam");
 
                         if (text === "Not applicable") {
-                            // Hide both
                             customExamField.classList.add("hidden");
                             scoreField.classList.add("hidden");
                             customExamInput.value = "";
                         } else if (text === "OTHER") {
-                            // Allow user to type their own exam name
                             customExamField.classList.remove("hidden");
-                            customExamInput.removeAttribute("readonly");  // ✅ make editable
+                            customExamInput.removeAttribute("readonly");
                             customExamInput.value = "";
                             scoreField.classList.add("hidden");
 
@@ -637,16 +633,13 @@
                                     scoreField.classList.add("hidden");
                                 }
                             });
-                        }
- else {
-                            // Predefined exams → auto-fill exam name and show score
+                        } else {
                             customExamField.classList.remove("hidden");
                             customExamInput.value = text;
                             customExamInput.setAttribute("readonly", true);
                             scoreField.classList.remove("hidden");
                         }
                     }
-
 
                     revealNextSteps();
                 });
@@ -659,13 +652,34 @@
             });
         });
 
-        // Final form submit
+        // Final form submit → Save to localStorage + redirect
         form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
             if (!validateStep1(true) || !validateStep2()) {
-                e.preventDefault();
                 revealNextSteps();
                 alert("Please complete all required fields before submitting.");
+                return;
             }
+
+            const formData = {
+                fullName: fullName.value,
+                phone: phone.value,
+                email: email.value,
+                gender: document.querySelector('input[name="gender"]:checked')?.value,
+                degree: document.querySelector('input[name="degree"]:checked')?.value,
+                intake: document.querySelector('input[name="intake"]').value,
+                country: document.querySelector('input[name="country"]').value,
+                course: course.value,
+                visa: document.querySelector('input[name="visa"]:checked')?.value,
+                visaCountry: document.getElementById("visaCountry")?.value,
+                exam: document.getElementById("customExam")?.value,
+                examScore: document.getElementById("examScore")?.value,
+                interest: document.querySelector('input[name="interest"]:checked')?.value
+            };
+
+            localStorage.setItem("consultationData", JSON.stringify(formData));
+            window.location.href = "/Palak/Admission_counselling/confirmation.html";
         });
 
         revealNextSteps();

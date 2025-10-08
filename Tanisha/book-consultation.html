@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book-consultation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+    rel="stylesheet">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <!--NavBar Section-->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="images/Logo.jpg" alt="Logo" class="logo">
+    </div>
+    <ul class="navbar-right" id="mobileNav">
+
+      <li class="dropdown">
+        <a href="#">Countries</a>
+        <ul class="dropdown-content">
+          <li><a href="usa.html">USA</a></li>
+          <li><a href="#">UK</a></li>
+          <li><a href="#">Canada</a></li>
+          <li><a href="#">Germany</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Loan</a>
+        <ul class="dropdown-content">
+          <li><a href="check-eligibility.html">Check Eligibility</a></li>
+          <li><a href="available-banks.html">Available Banks</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Admission Counselling</a>
+        <ul class="dropdown-content">
+          <li><a href="index.html">Admission Process</a></li>
+          <li><a href="book-consultation.html">Book Consultation</a></li>
+          <li><a href="#">Application Deadline</a></li>
+          <li><a href="#">University Finder</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Test Preparation</a>
+        <ul class="dropdown-content">
+          <li><a href="#">Test Prep Services</a></li>
+          <li><a href="#">Prepare for Exam</a></li>
+          <li><a href="#">Take a Mock Test</a></li>
+          <li><a href="#">Exam Deadlines</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">All Exams</a>
+        <ul class="dropdown-content">
+          <li><a href="#">SAT</a></li>
+          <li><a href="#">GMAT</a></li>
+          <li><a href="#">GRE</a></li>
+          <li><a href="#">IELTS</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Services</a>
+        <ul class="dropdown-content">
+          <li><a href="#">All Services</a></li>
+          <li><a href="#">Visa Assistance</a></li>
+          <li><a href="#">Profile Evaluation</a></li>
+          <li><a href="#">Apply to University</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#" class="dropdown">Notice Board</a></li>
+      <li><a href="#" class="dropdown">About Us</a></li>
+      <li><a href="#" class="dropdown">Contact Us</a></li>
+
+      <li><a href="signup.html" class="contact-btn">Login</a></li>
+    </ul>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+  </nav>
+
+  <script>
+    const btn = document.getElementById('mobileMenuBtn');
+    const nav = document.getElementById('mobileNav');
+
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+
+  <script>
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+      let wasClicked = false;
+      const link = dropdown.querySelector('a');
+
+      // Toggle on click
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const isOpen = dropdown.classList.contains('open');
+
+        // Close all dropdowns
+        dropdowns.forEach(d => {
+          d.classList.remove('open');
+          d.dataset.clicked = "false";
+        });
+
+        if (!isOpen) {
+          dropdown.classList.add('open');
+          dropdown.dataset.clicked = "true";
+        }
+      });
+
+      // Hover to open (desktop only)
+      dropdown.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+          dropdown.classList.add('open');
+        }
+      });
+
+      dropdown.addEventListener('mouseleave', () => {
+        if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
+          dropdown.classList.remove('open');
+        }
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      dropdowns.forEach(dropdown => {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('open');
+          dropdown.dataset.clicked = "false";
+        }
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+      const links = document.querySelectorAll(".navbar-right a");
+
+      links.forEach(link => {
+        const linkPath = link.getAttribute("href").split("/").pop();
+
+        if (linkPath === currentPath) {
+          // Highlight the clicked link
+          link.classList.add("active");
+
+          // Also highlight parent if inside dropdown
+          const parentDropdown = link.closest(".dropdown");
+          if (parentDropdown) {
+            const parentLink = parentDropdown.querySelector(":scope > a");
+            if (parentLink) parentLink.classList.add("active");
+          }
+        }
+      });
+    });
+  </script>
+
+
+
+  <section class="hero book-consultation-hero">
+    <div class="breadcrumb"><a href="#">Home</a> &gt;
+      <a href="/">Admission Counselling</a> &gt;
+      <span>Book Consultation</span>
+    </div>
+
+    <div class="hero-overlay">
+      <div class="hero-left">
+        <div class="glass-card">★ Trusted by 10,000+ Students</div>
+
+        <h1 class="consultation-heading">
+          <span>Your Dream</span><br>
+          <span class="highlighted">University Awaits</span>
+        </h1>
+
+        <p class="consultation-subtext">
+          Get personalized guidance from our expert counselors and secure admission to top universities worldwide.
+        </p>
+
+        <div class="stats-row">
+          <div class="stat-box">
+            <div class="stat-number">10,000+</div>
+            <div class="stat-label">Students</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Countries</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="consultation-section">
+    <div class="consultation-heading">
+      <h2>Book Your Free Consultation</h2>
+      <p>
+        Take the first step towards your international education journey. Fill out the form below to <br />
+        book a consultation with our experts.
+      </p>
+    </div>
+
+    <!-- Step Loader -->
+    <div class="step-loader">
+      <div class="step active" id="step1">
+        <div class="circle">1</div>
+        <span class="step-label">Personal Information</span>
+      </div>
+      <div class="line"></div>
+      <div class="step" id="step2">
+        <div class="circle">2</div>
+        <span class="step-label">Academic Information</span>
+      </div>
+      <div class="line"></div>
+      <div class="step" id="step3">
+        <div class="circle">3</div>
+        <span class="step-label">Additional Information</span>
+      </div>
+    </div>
+
+    <!-- Form Card -->
+    <div class="consultation-form-card" id="formCard">
+      <!-- Step 1: Personal Info -->
+      <div class="form-header">Personal Information</div>
+      <form class="consultation-form" id="consultationForm">
+        <div class="row">
+          <div class="form-group">
+            <label for="fullName">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullName" placeholder="Enter your full name" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" />
+          </div>
+        </div>
+        <div class="form-group full">
+          <label for="email">Email Address <span class="required">*</span></label>
+          <input type="email" id="email" placeholder="Enter your email address" />
+        </div>
+
+        <!-- Step 2: Academic Info -->
+        <div class="form-header academic-header hidden">Academic Information</div>
+
+        <!-- ✅ Added class: academic-field -->
+        <div class="degree-options hidden academic-field">
+          <label class="degree-label">Which degree do you want to pursue? <span class="required">*</span></label>
+          <div class="degree-cards" id="degreeCardGroup">
+            <label class="degree-card">
+              <input type="radio" name="degree" value="Bachelor" />
+              <img src="images/degree.png" alt="Bachelor">
+              <p>Bachelor’s</p>
+            </label>
+            <label class="degree-card">
+              <input type="radio" name="degree" value="Master" />
+              <img src="images/degree.png" alt="Master">
+              <p>Master’s</p>
+            </label>
+            <label class="degree-card">
+              <input type="radio" name="degree" value="MBA" />
+              <img src="images/degree.png" alt="MBA">
+              <p>MBA</p>
+            </label>
+            <label class="degree-card">
+              <input type="radio" name="degree" value="PhD" />
+              <img src="images/degree.png" alt="PhD">
+              <p>PhD</p>
+            </label>
+            <label class="degree-card">
+              <input type="radio" name="degree" value="Others" />
+              <img src="images/degree.png" alt="Others">
+              <p>Others</p>
+            </label>
+          </div>
+        </div>
+
+
+
+        <!-- ✅ Added class: academic-field -->
+        <div class="row hidden academic-field">
+          <!-- Planning Intake -->
+          <div class="form-group">
+            <label for="intake">Planning Intake <span class="required">*</span></label>
+            <div class="custom-dropdown" id="intakeDropdown">
+              <div class="dropdown-trigger">Select intake period ▾</div>
+              <div class="dropdown-options">
+                <div class="dropdown-option">Fall 2025</div>
+                <div class="dropdown-option">Spring 2026</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preferred Country -->
+          <div class="form-group">
+            <label for="country">Preferred Country <span class="required">*</span></label>
+            <div class="custom-dropdown" id="countryDropdown">
+              <div class="dropdown-trigger">Select country ▾</div>
+              <div class="dropdown-options">
+                <div class="dropdown-option">USA</div>
+                <div class="dropdown-option">Canada</div>
+                <div class="dropdown-option">UK</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ✅ Added class: academic-field -->
+        <div class="form-group full hidden academic-field">
+          <label for="course">Course/Subject <span class="required">*</span></label>
+          <input type="text" id="course" placeholder="e.g Computer Science, Engineering, Business administration" />
+        </div>
+
+
+        <!-- STEP 3: Additional Information -->
+        <div class="form-header additional-header hidden">Additional Information</div>
+
+        <div class="additional-field hidden additional-info">
+
+          <!-- Visa Rejection -->
+          <div class="form-group full">
+            <label for="visa">Any Visa Rejection in Past? <span class="required">*</span></label>
+            <div class="radio-group">
+              <label><input type="radio" name="visa" value="no"> No</label>
+              <label><input type="radio" name="visa" value="yes"> Yes</label>
+            </div>
+          </div>
+
+          <!-- Conditional Country Textbox -->
+          <div class="form-group full hidden" id="visaCountryGroup">
+            <input type="text" id="visaCountry" placeholder="Please enter the country" />
+          </div>
+
+          <!-- Exam Scores -->
+          <label for="examDropdown">Exam Scores (if any) <span class="required">*</span></label>
+          <div class="additional-dropdown" id="examDropdown">
+            <div class="dropdown-trigger">Select exam ▾</div>
+            <div class="dropdown-options">
+              <div class="dropdown-option">IELTS</div>
+              <div class="dropdown-option">TOEFL</div>
+              <div class="dropdown-option">GMAT</div>
+              <div class="dropdown-option">GRE</div>
+            </div>
+          </div>
+          <input type="hidden" id="exam" name="exam" />
+
+
+          <!-- Score Textbox -->
+          <div class="form-group full hidden" id="scoreField">
+            <input type="text" id="examScore" placeholder="Enter exam score" />
+          </div>
+
+          <!-- Interested In -->
+          <div class="form-group full">
+            <label>Interested In <span class="required">*</span></label>
+            <div class="radio-group interest-options">
+              <label><input type="radio" name="interest" value="Study Abroad Consultation"> Study Abroad
+                Consultation</label>
+              <label><input type="radio" name="interest" value="Education Loan Guidance"> Education Loan
+                Guidance</label>
+              <label><input type="radio" name="interest" value="Test Preparation"> Test Preparation</label>
+              <label><input type="radio" name="interest" value="All of the Above"> All of the Above</label>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="button-wrapper">
+            <div class="form-group full">
+              <button type="button" class="submit-btn book-btn" onclick="window.location.href='confirmation.html'">
+                Book Consultation <span class="arrow">→</span>
+              </button>
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+  </section>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const examDropdown = document.getElementById("examDropdown");
+      const examTrigger = examDropdown.querySelector(".dropdown-trigger");
+      const examOptions = examDropdown.querySelectorAll(".dropdown-option");
+      const examHiddenInput = document.getElementById("exam");
+      const scoreField = document.getElementById("scoreField");
+
+      examTrigger.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent closing immediately
+        document.querySelectorAll('.additional-dropdown').forEach(d => {
+          if (d !== examDropdown) d.classList.remove('active');
+        });
+        examDropdown.classList.toggle("active");
+      });
+
+      examOptions.forEach(option => {
+        option.addEventListener("click", () => {
+          examTrigger.textContent = option.textContent + " ▾";
+          examHiddenInput.value = option.textContent;
+          examDropdown.classList.remove("active");
+
+          if (option.textContent !== "") {
+            scoreField.classList.remove("hidden");
+          } else {
+            scoreField.classList.add("hidden");
+          }
+        });
+      });
+
+      // Close exam dropdown if clicked outside
+      document.addEventListener("click", function (e) {
+        if (!examDropdown.contains(e.target)) {
+          examDropdown.classList.remove("active");
+        }
+      });
+    });
+  </script>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.custom-dropdown').forEach(dropdown => {
+        const trigger = dropdown.querySelector('.dropdown-trigger');
+        const options = dropdown.querySelectorAll('.dropdown-option');
+
+        trigger.addEventListener('click', (e) => {
+          e.stopPropagation(); // prevent global click handler from firing
+          document.querySelectorAll('.custom-dropdown').forEach(d => {
+            if (d !== dropdown) d.classList.remove('active');
+          });
+          dropdown.classList.toggle('active');
+        });
+
+        options.forEach(option => {
+          option.addEventListener('click', () => {
+            trigger.textContent = option.textContent + ' ▾';
+            dropdown.classList.remove('active');
+          });
+        });
+      });
+
+      // Close dropdown if clicked outside
+      document.addEventListener('click', function (e) {
+        document.querySelectorAll('.custom-dropdown').forEach(dropdown => {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('active');
+          }
+        });
+      });
+    });
+  </script>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fullName = document.getElementById("fullName");
+      const phone = document.getElementById("phone");
+      const email = document.getElementById("email");
+      const course = document.getElementById("course");
+
+      const academicFields = document.querySelectorAll(".academic-field, .academic-header");
+      const additionalFields = document.querySelectorAll(".additional-field, .additional-header");
+
+      const step2 = document.getElementById("step2");
+      const step3 = document.getElementById("step3");
+
+      const visaRadios = document.getElementsByName("visa");
+      const visaCountryGroup = document.getElementById("visaCountryGroup");
+
+      const examSelect = document.getElementById("exam");
+      const scoreField = document.getElementById("scoreField");
+
+      // STEP 1 VALIDATION
+      function validateStep1() {
+        return fullName.value.trim() && phone.value.trim() && email.value.trim();
+      }
+
+      // STEP 2 VALIDATION
+      function validateStep2() {
+        const selectedDegree = document.querySelector('input[name="degree"]:checked');
+        const intake = document.querySelector('#intakeDropdown .dropdown-trigger').textContent.includes('Select') ? '' : 'chosen';
+        const country = document.querySelector('#countryDropdown .dropdown-trigger').textContent.includes('Select') ? '' : 'chosen';
+        const courseValue = course.value.trim();
+        return selectedDegree && intake && country && courseValue;
+      }
+
+      // STEP DISPLAY LOGIC
+      function revealNextSteps() {
+        if (validateStep1()) {
+          academicFields.forEach(el => el.classList.remove("hidden"));
+          step2.classList.add("active");
+
+          if (validateStep2()) {
+            step3.classList.add("active");
+            additionalFields.forEach(el => el.classList.remove("hidden"));
+          } else {
+            step3.classList.remove("active");
+            additionalFields.forEach(el => el.classList.add("hidden"));
+          }
+
+        } else {
+          academicFields.forEach(el => el.classList.add("hidden"));
+          additionalFields.forEach(el => el.classList.add("hidden"));
+          step2.classList.remove("active");
+          step3.classList.remove("active");
+        }
+      }
+
+      // 👇 INPUT EVENT LISTENERS
+      [fullName, phone, email, course].forEach(input => {
+        input.addEventListener("input", revealNextSteps);
+      });
+
+      document.querySelectorAll(".custom-dropdown .dropdown-option").forEach(option => {
+        option.addEventListener("click", revealNextSteps);
+      });
+
+      // Visa logic
+      visaRadios.forEach(radio => {
+        radio.addEventListener("change", () => {
+          visaCountryGroup.classList.toggle("hidden", radio.value !== "yes");
+        });
+      });
+
+      examSelect.addEventListener("change", () => {
+        scoreField.classList.toggle("hidden", examSelect.value === "");
+      });
+
+      // DEGREE CARD LOGIC (← ✅ moved inside DOMContentLoaded)
+      const degreeCards = document.querySelectorAll('.degree-card');
+
+      degreeCards.forEach(card => {
+        card.addEventListener('click', () => {
+          // Deselect all
+          degreeCards.forEach(c => {
+            c.classList.remove('active');
+            c.querySelector('input').checked = false;
+          });
+
+          // Select clicked one
+          const input = card.querySelector('input');
+          input.checked = true;
+          card.classList.add('active');
+
+          // Recheck step logic
+          revealNextSteps();
+        });
+      });
+
+    });
+  </script>
+
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Column 1: Logo + About + Social Icons -->
+      <div class="footer-col footer-about">
+        <img src="images/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+        <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+          achieve their academic dreams abroad.</p>
+        <div class="footer-socials">
+          <a href="#"><img src="images/9.png" alt="Instagram"></a>
+          <a href="#"><img src="images/10.png" alt="Facebook"></a>
+          <a href="#"><img src="images/11.png" alt="LinkedIn"></a>
+          <a href="#"><img src="images/12.png" alt="X"></a>
+        </div>
+      </div>
+      <div class="footer-right-columns">
+
+        <!-- Column 2: Services -->
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Admission Counselling</a></li>
+            <li><a href="#">University Selection</a></li>
+            <li><a href="#">Visa Processing</a></li>
+            <li><a href="#">Scholarship Assistance</a></li>
+            <li><a href="#">Education Loans</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Study Destinations -->
+        <div class="footer-col">
+          <h4>Study Destinations</h4>
+          <ul>
+            <li><a href="#">USA</a></li>
+            <li><a href="#">Canada</a></li>
+            <li><a href="#">UK</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="footer-col contact-col">
+          <h4>Contact Us</h4>
+          <p>info@studybefikar.com</p>
+          <p>+1 (555) 123-4567</p>
+
+          <h4>Office Hours</h4>
+          <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+          <p>Sat: 10:00 AM - 4:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-line" />
+    <p class="footer-bottom">
+      © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+    </p>
+  </footer>
+</body>
+
+</html>

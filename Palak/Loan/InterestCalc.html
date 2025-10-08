@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Loan EMI Calculator</title>
+   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/Palak/Admission_counselling/fixed.css" />
+  <link rel="stylesheet" href="/Palak/Loan/Interestcalc.css" />
+</head>
+<body>
+     <nav class="navbar">
+          <div class="navbar-left">
+            <a href="/Palak/Home/home.html">
+            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo" class="logo">
+            </a>
+        
+          </div>
+          <ul class="navbar-right" id="mobileNav">
+
+            <li><a href="/Palak/AboutUs/aboutUs.html" class="dropdown">About</a></li>
+
+            <li class="dropdown">
+              <a href="/Palak/USA/usa.html">Countries</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/USA/usa.html">USA</a></li>
+                <li><a href="/Palak/USA/canada.html">Canada</a></li>
+                <li><a href="/Palak/USA/uk.html">UK</a></li>
+                <li><a href="/Palak/USA/germany.html">Germany</a></li>
+                <li><a href="#">New Zealand</a></li>
+                <li><a href="/Palak/USA/australia.html">Australia</a></li>
+                <li><a href="#">Singapore</a></li>
+                <li><a href="#">Japan</a></li>
+                <li><a href="#">France</a></li>
+                <li><a href="#">Ireland</a></li>
+                <li><a href="#">Dubai</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Loan/loanHome.html">Loan</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
+                <li><a href="/Palak/Loan/EmiCalc.html">EMI Calculator</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+                <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
+                <li><a href="/Palak/Admission_counselling/confirmation.html">Application Deadline</a></li>
+                <li><a href="/Palak/Admission_counselling/universityFinder/universityFinder.html">University Finder</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                <li><a href="#">Prepare for Exam</a></li>
+                <li><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></li>
+                <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#/Palak/All_Exams/sat.html">All Exams</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
+                <li><a href="/Palak/All_Exams/GMAT.html">GMAT</a></li>
+                <li><a href="/Palak/All_Exams/GRE.html">GRE</a></li>
+                <li><a href="/Palak/All_Exams/IELTS.html">IELTS</a></li>
+                <li><a href="/Palak/All_Exams/PTE.html">PTE</a></li>
+                <li><a href="/Palak/All_Exams/ACT.html">ACT</a></li>
+                <li><a href="/Palak/All_Exams/TOEFL.html">TOEFL</a></li>
+                <li><a href="/Palak/All_Exams/Duolingo.html">Duolingo</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#">Services</a>
+              <ul class="dropdown-content">
+                <li><a href="#">All Services</a></li>
+                <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
+                <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
+                <li><a href="#">Apply to University</a></li>
+              </ul>
+            </li>
+        
+            <li><a href="/Palak/NoticeBoard/noticeBoard.html" class="dropdown">Notice Board</a></li>
+        
+            <li><a href="/Palak/Login Pages/signin.html" class="contact-btn">Contact Us</a></li>
+
+          </ul>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+     </nav>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            /*  mobile hamburger toggle */
+            const btn = document.getElementById("mobileMenuBtn");
+            const nav = document.getElementById("mobileNav");
+
+            btn.addEventListener("click", () => {
+              nav.classList.toggle("active");
+            });
+
+            /* dropdown logic  */
+            const dropdownLis = document.querySelectorAll(".navbar-right li.dropdown");
+
+            dropdownLis.forEach(li => {
+              let closeTimer;
+
+              const openDropdown = () => {
+                dropdownLis.forEach(d => d.classList.remove("open"));
+                li.classList.add("open");
+              };
+
+              const scheduleClose = () => {
+                closeTimer = setTimeout(() => li.classList.remove("open"), 3000);
+              };
+
+              const cancelClose = () => clearTimeout(closeTimer);
+
+              // desktop hover
+              li.addEventListener("mouseenter", () => {
+                if (window.innerWidth >= 1024) {
+                  cancelClose();
+                  openDropdown();
+                }
+              });
+              li.addEventListener("mouseleave", () => {
+                if (window.innerWidth >= 1024) scheduleClose();
+              });
+
+              // mobile tap to toggle
+              li.querySelector(":scope > a").addEventListener("click", e => {
+                if (window.innerWidth < 1024) {
+                  e.preventDefault();
+                  li.classList.toggle("open");
+                }
+              });
+            });
+
+            // close dropdowns on outside click
+            document.addEventListener("click", e => {
+              if (![...dropdownLis].some(d => d.contains(e.target))) {
+                dropdownLis.forEach(d => d.classList.remove("open"));
+              }
+            });
+
+            /* highlight active link */
+            const currentPath = window.location.pathname.split("/").pop();
+            document.querySelectorAll(".navbar-right a").forEach(link => {
+              const linkPath = link.getAttribute("href").split("/").pop();
+              if (linkPath === currentPath) {
+                link.classList.add("active");
+                const parentDropdown = link.closest(".dropdown");
+                if (parentDropdown) {
+                  const parentLink = parentDropdown.querySelector(":scope > a");
+                  if (parentLink) parentLink.classList.add("active");
+                }
+              }
+            });
+          });
+        </script>
+
+
+    <section class="hero book-consultation-hero">
+        <div class="breadcrumb"><a href="#">Home</a> &gt;
+            <a href="/Palak/Loan/loanHome.html">Loan</a> &gt;
+            <span>Education Loan Interest Calculator</span>
+        </div>
+
+        <div class="hero-overlay">
+            <div class="hero-left">
+                <div class="glass-card">★ Trusted by 10,000+ Students</div>
+
+                <h1 class="consultation-heading">
+                    <span>Education Loan Interest Calculator</span>
+                </h1>
+
+                <p class="consultation-subtext">
+                    Plan your education financing with precision. Calculate your monthly interest and understand your repayment journey with our advanced calculator.
+                </p>
+            </div>
+        </div>
+    </section>
+
+<!-- Simple Interest Calculator Section -->
+<section id="interest-calculator" class="hero">
+  <h2 class="cost-heading">Simple Interest Calculator</h2>
+  <p class="cost-desc">Calculate Total Interest, Principal & Total Amount</p>
+
+  <!-- Controls -->
+  <div class="controls" id="interestControls">
+    <div class="field">
+      <label>Loan Amount: <span id="iLoanAmountLabel"></span></label>
+      <input type="range" id="iLoanAmount" min="10000" max="1000000" step="10000" value="200000">
+    </div>
+
+    <div class="field">
+      <label>Interest (p.a): <span id="iInterestLabel"></span></label>
+      <input type="range" id="iInterest" min="1" max="20" step="0.1" value="10">
+    </div>
+
+    <div class="field">
+      <label>Loan Duration (Years): <span id="iLoanDurationLabel"></span></label>
+      <input type="range" id="iLoanDuration" min="1" max="30" step="1" value="5">
+    </div>
+  </div>
+
+  <!-- Chart Section -->
+  <div class="chart-section">
+    <canvas id="interestChart" width="260" height="260"></canvas>
+    <div class="chart-center">
+      <h3>Total Amount</h3>
+      <p id="iTotalAmount">₹0</p>
+    </div>
+  </div>
+
+  <!-- Results Section -->
+  <div class="results-section">
+    <div class="result-box">
+      <h3>Total Interest</h3>
+      <p id="iTotalInterest">₹0</p>
+    </div>
+
+    <div class="legend">
+      <span class="legend-color principal"></span>
+      <p>Principal Amount: <span id="iPrincipal">₹0</span></p>
+    </div>
+
+    <div class="legend">
+      <span class="legend-color interest"></span>
+      <p>Interest: <span id="iInterestAmount">₹0</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+let interestChart;
+
+/* --- Update slider labels --- */
+function updateInterestLabels() {
+  const P = parseInt(document.getElementById("iLoanAmount").value);
+  const annualRate = parseFloat(document.getElementById("iInterest").value);
+  const years = parseInt(document.getElementById("iLoanDuration").value);
+
+  document.getElementById("iLoanAmountLabel").textContent = `₹${P.toLocaleString()}`;
+  document.getElementById("iInterestLabel").textContent = `${annualRate.toFixed(1)}%`;
+  document.getElementById("iLoanDurationLabel").textContent = `${years} Years`;
+}
+
+/* --- Calculate Interest --- */
+function calculateInterest() {
+  const P = parseInt(document.getElementById("iLoanAmount").value);
+  const rate = parseFloat(document.getElementById("iInterest").value);
+  const years = parseInt(document.getElementById("iLoanDuration").value);
+
+  const totalInterest = (P * rate * years) / 100; // Simple Interest
+  const totalAmount = P + totalInterest;
+
+  updateInterestLabels();
+
+  // Update results
+  document.getElementById("iTotalInterest").textContent = `₹${totalInterest.toLocaleString()}`;
+  document.getElementById("iPrincipal").textContent = `₹${P.toLocaleString()}`;
+  document.getElementById("iInterestAmount").textContent = `₹${totalInterest.toLocaleString()}`;
+  document.getElementById("iTotalAmount").textContent = `₹${totalAmount.toLocaleString()}`;
+
+  updateInterestChart(P, totalInterest);
+}
+
+/* --- Update Pie Chart --- */
+function updateInterestChart(principal, interest) {
+  const ctx = document.getElementById("interestChart").getContext("2d");
+  if (interestChart) interestChart.destroy();
+
+  interestChart = new Chart(ctx, {
+    type: "doughnut",
+    data: {
+      labels: ["Principal", "Interest"],
+      datasets: [{
+        data: [principal, interest],
+        backgroundColor: ["#287781", "#f373a8"],
+        borderWidth: 0,
+        spacing: 2
+      }]
+    },
+    options: {
+      cutout: "80%",
+      responsive: true,
+      plugins: { legend: { display: false } }
+    }
+  });
+}
+
+/* --- Bind sliders --- */
+document.querySelectorAll("#interestControls input[type=range]").forEach(slider => {
+  slider.addEventListener("input", calculateInterest);
+});
+
+/* --- Init --- */
+calculateInterest();
+</script>
+
+
+<footer class="footer">
+        <div class="footer-container">
+            <!-- column 1: logo + about + social  -->
+            <div class="footer-col footer-about">
+                <img src="/Palak/images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="/Palak/images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- column 2: services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="/Palak/Loan/loanHome.html">Education Loans</a></li>
+                    <li><a href="/Palak/Test_Prep/testPreparationQuestionnaire/step1.html">Test Preparation</a></li>
+                    <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
+                    <li><a href="#">Application Assistance</a></li>
+                    <li><a href="#">University Shortlisting</a></li>
+                </ul>
+            </div>
+    
+            <!-- column 3-->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="/Palak/USA/usa.html">USA</a></li>
+                    <li><a href="/Palak/USA/canada.html">Canada</a></li>
+                    <li><a href="/Palak/USA/uk.html">UK</a></li>
+                    <li><a href="/Palak/USA/germany.html">Germany</a></li>
+                    <li><a href="#">New Zealand</a></li>
+                    <li><a href="/Palak/USA/australia.html">Australia</a></li>
+                    <li><a href="#">Singapore</a></li>
+                    <li><a href="#">Japan</a></li>
+                    <li><a href="#">France</a></li>
+                    <li><a href="#">Ireland</a></li>
+                    <li><a href="#">Dubai</a></li>
+                </ul>
+            </div>
+    
+            <!-- column 4: contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>Dropbox@studybefikar.com</p>
+                <p>+91 74259 34504</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+
+                <h4>More Details</h4>
+                <p>Vendor Login</p>
+                <p>T&C</p>
+            </div>
+            
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+</body>
+</html>

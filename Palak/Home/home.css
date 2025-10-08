@@ -1457,9 +1457,8 @@ body {
 /* testimonial */
 
  .testimonialSection {
-            max-width: 1440px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 20px;
             font-family: 'Plus Jakarta Sans', sans-serif;
             background: #fff;
         }
@@ -1495,7 +1494,7 @@ body {
             display: flex;
             transition: transform 0.4s ease-in-out;
             gap: 30px;
-            padding: 20px 0;
+            padding: 20px;
         }
 
         .testimonialCard {
