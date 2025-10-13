@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign In | Study Befikar</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <style>
         /* Same base styles as signup page */
@@ -127,7 +127,7 @@
             align-items: center;
             margin: 30px 0;
             width: 60%;
-            margin-left: 60px;
+            margin-left: 40px;
         }
 
         .or-divider span {
@@ -155,7 +155,7 @@
             justify-content: center;
             gap: 8px;
             cursor: pointer;
-            margin-left: 60px;
+            margin-left: 40px;
         }
 
         .google-btn img {
@@ -279,30 +279,32 @@
             .signin-left::before {
                 content: "";
                 display: block;
-                background: url('/Palak/Login Pages/Login_Images/tansparent.png') no-repeat left center / 80px auto;
+                background: url('/Palak/Login Pages/Login_Images/Untitled design.png') no-repeat left center / 80px auto;
                 height: 72px;
                 width: 100%;
                 margin-bottom: 20px;
             }
 
-            .signin-left input,
+            .signin-left input{
+                width: 80%;
+            }
             .signup-btn,
             .google-btn,
             .or-divider {
                 width: 80%;
-                margin-left: 0;
-                max-width: 80%;
+                margin: 10px auto;
             }
 
             .button-container {
                 justify-content: center;
+                margin: 10px;
             }
 
             .signin-btn,
             .forgot-password-btn {
                 flex: 1;
                 /* evenly divide space */
-                min-width: 140px;
+                
             }
 
             /* Show login text only on mobile */
@@ -336,8 +338,8 @@
             <h1>Sign In</h1>
             <p class="subtitle">Log in to continue planning your study abroad journey</p>
 
-            <label>Email Address</label>
-            <input type="email" placeholder="Enter your email address" />
+            <label for="email">Email Address</label>
+<input id="email" type="email" placeholder="Enter your email address" />
 
             <label>Password</label>
             <input type="password" placeholder="Enter your password" />
@@ -362,7 +364,7 @@
 
         <!-- RIGHT: Image & welcome -->
         <div class="signin-right">
-            <img src="/Palak/Login Pages/Login_Images/tansparent.png" alt="Logo" class="left-logo">
+            <img src="/Palak/Login Pages/Login_Images/study-befikar 2.png" alt="Logo" class="left-logo">
             <div class="left-card">
                 <h2>Start Your Study Abroad<br>
                     Journey with Study Befikar</h2>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyBefikar</title>
+    <link rel="stylesheet" href="/Palak/USA/courses.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="/Palak/Admission_counselling/fixed.css" />  
+</head>
+
+<body>
+
+  <!--NavBar Section-->
+ <nav class="navbar">
+          <div class="navbar-left">
+            <a href="/Palak/Home/home.html">
+            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo" class="logo">
+            </a>
+        
+          </div>
+          <ul class="navbar-right" id="mobileNav">
+
+            <li><a href="/Palak/AboutUs/aboutUs.html" class="dropdown">About</a></li>
+
+            <li class="dropdown">
+              <a href="/Palak/USA/usa.html">Countries</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/USA/usa.html">USA</a></li>
+                <li><a href="/Palak/USA/canada.html">Canada</a></li>
+                <li><a href="/Palak/USA/uk.html">UK</a></li>
+                <li><a href="/Palak/USA/germany.html">Germany</a></li>
+                <li><a href="#">New Zealand</a></li>
+                <li><a href="/Palak/USA/australia.html">Australia</a></li>
+                <li><a href="#">Singapore</a></li>
+                <li><a href="#">Japan</a></li>
+                <li><a href="#">France</a></li>
+                <li><a href="#">Ireland</a></li>
+                <li><a href="#">Dubai</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Loan/loanHome.html">Loan</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
+                <li><a href="/Palak/Loan/EmiCalc.html">EMI Calculator</a></li>
+                 <li><a href="/Palak/Loan/InterestCalc.html">Interest Calculator</a></li>
+                <li><a href="/Palak/Loan/refinancing.html">Loan Refinancing</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+                <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
+                <li><a href="/Palak/Admission_counselling/Application_Deadline.html">Application Deadline</a></li>
+                <li><a href="/Palak/Admission_counselling/universityFinder/universityFinder.html">University Finder</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                <li><a href="#">Prepare for Exam</a></li>
+                <li><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></li>
+                <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#/Palak/All_Exams/sat.html">All Exams</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
+                <li><a href="/Palak/All_Exams/GMAT.html">GMAT</a></li>
+                <li><a href="/Palak/All_Exams/GRE.html">GRE</a></li>
+                <li><a href="/Palak/All_Exams/IELTS.html">IELTS</a></li>
+                <li><a href="/Palak/All_Exams/PTE.html">PTE</a></li>
+                <li><a href="/Palak/All_Exams/ACT.html">ACT</a></li>
+                <li><a href="/Palak/All_Exams/TOEFL.html">TOEFL</a></li>
+                <li><a href="/Palak/All_Exams/Duolingo.html">Duolingo</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Services/Services.html">Services</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Services/Services.html">All Services</a></li>
+                <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
+                <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
+                <li><a href="#">Apply to University</a></li>
+              </ul>
+            </li>
+        
+            <li><a href="/Palak/NoticeBoard/noticeBoard.html" class="dropdown">Notice Board</a></li>
+        
+            <li><a href="/Palak/ContactUs/ContactUs.html" class="contact-btn">Contact Us</a></li>
+
+          </ul>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </nav>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            /*  mobile hamburger toggle */
+            const btn = document.getElementById("mobileMenuBtn");
+            const nav = document.getElementById("mobileNav");
+
+            btn.addEventListener("click", () => {
+              nav.classList.toggle("active");
+            });
+
+            /* dropdown logic  */
+            const dropdownLis = document.querySelectorAll(".navbar-right li.dropdown");
+
+            dropdownLis.forEach(li => {
+              let closeTimer;
+
+              const openDropdown = () => {
+                dropdownLis.forEach(d => d.classList.remove("open"));
+                li.classList.add("open");
+              };
+
+              const scheduleClose = () => {
+                closeTimer = setTimeout(() => li.classList.remove("open"), 3000);
+              };
+
+              const cancelClose = () => clearTimeout(closeTimer);
+
+              // desktop hover
+              li.addEventListener("mouseenter", () => {
+                if (window.innerWidth >= 1024) {
+                  cancelClose();
+                  openDropdown();
+                }
+              });
+              li.addEventListener("mouseleave", () => {
+                if (window.innerWidth >= 1024) scheduleClose();
+              });
+
+              // mobile tap to toggle
+              li.querySelector(":scope > a").addEventListener("click", e => {
+                if (window.innerWidth < 1024) {
+                  e.preventDefault();
+                  li.classList.toggle("open");
+                }
+              });
+            });
+
+            // close dropdowns on outside click
+            document.addEventListener("click", e => {
+              if (![...dropdownLis].some(d => d.contains(e.target))) {
+                dropdownLis.forEach(d => d.classList.remove("open"));
+              }
+            });
+
+            /* highlight active link */
+            const currentPath = window.location.pathname.split("/").pop();
+            document.querySelectorAll(".navbar-right a").forEach(link => {
+              const linkPath = link.getAttribute("href").split("/").pop();
+              if (linkPath === currentPath) {
+                link.classList.add("active");
+                const parentDropdown = link.closest(".dropdown");
+                if (parentDropdown) {
+                  const parentLink = parentDropdown.querySelector(":scope > a");
+                  if (parentLink) parentLink.classList.add("active");
+                }
+              }
+            });
+          });
+        </script>
+<section class="hero">
+        <div class="hero-left">
+            <div class="bread"><a href="#">Home</a> &gt;
+                <a href="/">Countries</a> &gt;
+                <a href="/Palak/USA/usa.html">USA</a> &gt;
+                <span>All Courses</span>
+            </div>
+        </div>
+</section>
+
+<!-- ===================== ALL COURSES SECTION ===================== -->
+<section class="courses-section">
+  <!-- All Courses Heading Box -->
+  <div class="courses-heading-box">
+    <h2>All Courses</h2>
+  </div>
+
+  <!-- Banner Image -->
+  <div class="courses-image-box">
+    <img src="/Palak/USA/USA_Images/all-courses-banner.jpg" alt="All Courses Banner" class="courses-image">
+  </div>
+
+  <!-- STEM Courses -->
+  <div class="stem-heading-box">
+    <h3>STEM Courses</h3>
+  </div>
+
+  <!-- Course List -->
+  <div class="course-list">
+    <div class="course">
+      <h4>Computer Science</h4>
+      <p>
+        Computer Science is the study of how computers work and how we can use them to solve problems.
+        This course covers everything from writing code in different programming languages to designing powerful algorithms
+        that process information quickly. You’ll explore areas like artificial intelligence, cybersecurity, and cloud computing
+        while also learning how to build software and applications used in everyday life.
+        By the end, you’ll understand not just how to use technology, but also how to create and improve it.
+      </p>
+    </div>
+
+    <div class="course">
+      <h4>Technology</h4>
+      <p>
+        Technology focuses on the tools and systems shaping the modern world.
+        In this course, you’ll study innovations like artificial intelligence, blockchain, robotics, and the Internet of Things.
+        You’ll also see how these technologies are applied across industries — from smart healthcare devices that save lives
+        to financial technologies that make global transactions faster and safer.
+        The goal is to give you both technical knowledge and the ability to think critically about how new technologies affect society and business.
+      </p>
+    </div>
+
+    <div class="course">
+      <h4>Engineering</h4>
+      <p>
+        Engineering is about applying science and math to design and build solutions that improve our lives.
+        This course introduces you to major fields such as mechanical engineering (machines and engines),
+        civil engineering (bridges and infrastructure), and electrical engineering (circuits and power systems).
+        You’ll learn how engineers design safe, efficient, and sustainable systems,
+        and you’ll practice problem-solving through real-world projects.
+        Engineering is the foundation of innovation, from renewable energy to advanced robotics.
+      </p>
+    </div>
+
+    <div class="course">
+      <h4>Data Science</h4>
+      <p>
+        Data Science teaches you how to work with the enormous amounts of data created every day.
+        In this course, you’ll learn to collect and clean data, analyze it with statistical methods,
+        and use computer tools to find patterns and insights. Topics include data visualization,
+        machine learning, and predictive analytics. By mastering these skills,
+        you’ll be able to turn numbers into meaningful stories and help businesses, scientists, and governments make smarter decisions.
+      </p>
+    </div>
+
+    <div class="non-stem">
+      <h3>Non-STEM Courses</h3>
+    </div>
+
+    <div class="course">
+      <h4>Accounting</h4>
+      <p>
+        Accounting is the language of business. This course introduces you to the principles of financial management
+        and how organizations keep track of their money. You’ll learn how to prepare and analyze financial statements,
+        manage budgets, handle taxes, and make sure companies follow financial laws.
+        Whether you want to become an accountant, auditor, or business manager,
+        these skills are essential for making sound financial decisions.
+      </p>
+    </div>
+
+    <div class="course">
+      <h4>Finance</h4>
+      <p>
+        Finance is about understanding how money works in businesses, markets, and economies.
+        In this course, you’ll study investment strategies, banking systems, risk management, and corporate finance.
+        You’ll explore how companies raise money, how individuals invest their savings, and how governments influence financial systems.
+        The course prepares you for careers in banking, investment management, corporate finance, and more,
+        by giving you a strong foundation in both theory and practice.
+      </p>
+    </div>
+
+    <div class="course">
+      <h4>Marketing</h4>
+      <p>
+        Marketing is the study of how businesses attract and keep customers.
+        This course dives into consumer psychology, branding, digital marketing, advertising, and market research.
+        You’ll learn how to create strategies that connect products and services with the right audience,
+        whether through traditional media or online platforms.
+        Marketing is both creative and analytical, helping you understand customer needs while also measuring success with data.
+      </p>
+    </div>
+
+    <div class="course">
+      <h4>Management</h4>
+      <p>
+        Management is about leading people and organizations to achieve goals effectively.
+        In this course, you’ll learn about leadership styles, organizational behavior, decision-making, and strategic planning.
+        You’ll also explore how managers handle challenges like motivating teams, managing operations, and adapting to change.
+        The course prepares you to take on leadership roles by giving you practical tools for guiding people
+        and resources toward long-term success.
+      </p>
+    </div>
+
+    <div class="non-stem">
+      <h3>Career Opportunities</h3>
+    </div>
+        Graduates of this program can pursue careers as software developers, data scientists, systems analysts,
+        cybersecurity specialists, machine learning engineers, and IT consultants.
+        The skills acquired are versatile and open doors to opportunities worldwide.
+      </p>
+    </div>
+
+    <div class="consultation-box">
+  <h3>Need Personalized Guidance?</h3>
+  <p>
+    Our expert counselors are here to help you navigate through all deadlines and requirements.
+  </p>
+  <button class="consult-btn" onclick="window.location.href='/Palak/Admission_counselling/book-consultation.html'">Schedule Free Consultation</button>
+</div>
+
+    
+  </div>
+</section>
+
+<footer class="footer">
+        <div class="footer-container">
+            <!-- column 1: logo + about + social  -->
+            <div class="footer-col footer-about">
+                <img src="/Palak/images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="/Palak/images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- column 2: services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="/Palak/Loan/loanHome.html">Education Loans</a></li>
+                    <li><a href="/Palak/Test_Prep/testPreparationQuestionnaire/step1.html">Test Preparation</a></li>
+                    <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
+                    <li><a href="#">Application Assistance</a></li>
+                    <li><a href="#">University Shortlisting</a></li>
+                </ul>
+            </div>
+    
+            <!-- column 3-->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="/Palak/USA/usa.html">USA</a></li>
+                    <li><a href="/Palak/USA/canada.html">Canada</a></li>
+                    <li><a href="/Palak/USA/uk.html">UK</a></li>
+                    <li><a href="/Palak/USA/germany.html">Germany</a></li>
+                    <li><a href="#">New Zealand</a></li>
+                    <li><a href="/Palak/USA/australia.html">Australia</a></li>
+                    <li><a href="#">Singapore</a></li>
+                    <li><a href="#">Japan</a></li>
+                    <li><a href="#">France</a></li>
+                    <li><a href="#">Ireland</a></li>
+                    <li><a href="#">Dubai</a></li>
+                </ul>
+            </div>
+    
+            <!-- column 4: contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>Dropbox@studybefikar.com</p>
+                <p>+91 74259 34504</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+
+                <h4>More Details</h4>
+                <p>Vendor Login</p>
+                <p>T&C</p>
+            </div>
+            
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+
+    
+
+</body>
+
+</html>

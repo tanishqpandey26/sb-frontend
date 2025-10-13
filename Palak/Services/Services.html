@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link rel="stylesheet" href="/Palak/Services/Services.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="/Palak/Admission_counselling/fixed.css" />  
+</head>
+
+<body>
+
+  <!--NavBar Section-->
+ <nav class="navbar">
+          <div class="navbar-left">
+            <a href="/Palak/Home/home.html">
+            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo" class="logo">
+            </a>
+        
+          </div>
+          <ul class="navbar-right" id="mobileNav">
+
+            <li><a href="/Palak/AboutUs/aboutUs.html" class="dropdown">About</a></li>
+
+            <li class="dropdown">
+              <a href="/Palak/USA/usa.html">Countries</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/USA/usa.html">USA</a></li>
+                <li><a href="/Palak/USA/canada.html">Canada</a></li>
+                <li><a href="/Palak/USA/uk.html">UK</a></li>
+                <li><a href="/Palak/USA/germany.html">Germany</a></li>
+                <li><a href="#">New Zealand</a></li>
+                <li><a href="/Palak/USA/australia.html">Australia</a></li>
+                <li><a href="#">Singapore</a></li>
+                <li><a href="#">Japan</a></li>
+                <li><a href="#">France</a></li>
+                <li><a href="#">Ireland</a></li>
+                <li><a href="#">Dubai</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Loan/loanHome.html">Loan</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
+                <li><a href="/Palak/Loan/EmiCalc.html">EMI Calculator</a></li>
+                 <li><a href="/Palak/Loan/InterestCalc.html">Interest Calculator</a></li>
+                <li><a href="/Palak/Loan/refinancing.html">Loan Refinancing</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+                <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
+                <li><a href="/Palak/Admission_counselling/Application_Deadline.html">Application Deadline</a></li>
+                <li><a href="/Palak/Admission_counselling/universityFinder/universityFinder.html">University Finder</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                <li><a href="#">Prepare for Exam</a></li>
+                <li><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></li>
+                <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#/Palak/All_Exams/sat.html">All Exams</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
+                <li><a href="/Palak/All_Exams/GMAT.html">GMAT</a></li>
+                <li><a href="/Palak/All_Exams/GRE.html">GRE</a></li>
+                <li><a href="/Palak/All_Exams/IELTS.html">IELTS</a></li>
+                <li><a href="/Palak/All_Exams/PTE.html">PTE</a></li>
+                <li><a href="/Palak/All_Exams/ACT.html">ACT</a></li>
+                <li><a href="/Palak/All_Exams/TOEFL.html">TOEFL</a></li>
+                <li><a href="/Palak/All_Exams/Duolingo.html">Duolingo</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Services/Services.html">Services</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Services/Services.html">All Services</a></li>
+                <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
+                <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
+                <li><a href="#">Apply to University</a></li>
+              </ul>
+            </li>
+        
+            <li><a href="/Palak/NoticeBoard/noticeBoard.html" class="dropdown">Notice Board</a></li>
+        
+            <li><a href="/Palak/ContactUs/ContactUs.html" class="contact-btn">Contact Us</a></li>
+
+          </ul>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </nav>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            /*  mobile hamburger toggle */
+            const btn = document.getElementById("mobileMenuBtn");
+            const nav = document.getElementById("mobileNav");
+
+            btn.addEventListener("click", () => {
+              nav.classList.toggle("active");
+            });
+
+            /* dropdown logic  */
+            const dropdownLis = document.querySelectorAll(".navbar-right li.dropdown");
+
+            dropdownLis.forEach(li => {
+              let closeTimer;
+
+              const openDropdown = () => {
+                dropdownLis.forEach(d => d.classList.remove("open"));
+                li.classList.add("open");
+              };
+
+              const scheduleClose = () => {
+                closeTimer = setTimeout(() => li.classList.remove("open"), 3000);
+              };
+
+              const cancelClose = () => clearTimeout(closeTimer);
+
+              // desktop hover
+              li.addEventListener("mouseenter", () => {
+                if (window.innerWidth >= 1024) {
+                  cancelClose();
+                  openDropdown();
+                }
+              });
+              li.addEventListener("mouseleave", () => {
+                if (window.innerWidth >= 1024) scheduleClose();
+              });
+
+              // mobile tap to toggle
+              li.querySelector(":scope > a").addEventListener("click", e => {
+                if (window.innerWidth < 1024) {
+                  e.preventDefault();
+                  li.classList.toggle("open");
+                }
+              });
+            });
+
+            // close dropdowns on outside click
+            document.addEventListener("click", e => {
+              if (![...dropdownLis].some(d => d.contains(e.target))) {
+                dropdownLis.forEach(d => d.classList.remove("open"));
+              }
+            });
+
+            /* highlight active link */
+            const currentPath = window.location.pathname.split("/").pop();
+            document.querySelectorAll(".navbar-right a").forEach(link => {
+              const linkPath = link.getAttribute("href").split("/").pop();
+              if (linkPath === currentPath) {
+                link.classList.add("active");
+                const parentDropdown = link.closest(".dropdown");
+                if (parentDropdown) {
+                  const parentLink = parentDropdown.querySelector(":scope > a");
+                  if (parentLink) parentLink.classList.add("active");
+                }
+              }
+            });
+          });
+        </script>
+
+  <section class="hero">
+    <div class="hero-left">
+         <div class="breadcrumb"><a href="/Palak/Home/home.html">Home</a> &gt;
+            <span>Services</span>
+        </div>
+      <div class="trusted-card">
+        <span class="star">★</span>
+        <span class="trusted-text">All Services</span>
+      </div>
+
+      <h1 class="hero-heading">
+        <span class="heading-line1">Your Trusted Partner for </span>
+        <span class="heading-line2">Studying Abroad </span>
+      </h1>
+
+      <p class="hero-subtext">Start your study abroad journey with confidence. From guidance to visa approval, Study Befikar is with you at every step.
+
+      </p>
+
+      <div class="stats-row">
+                    <div class="stat-box">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Students</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                </div>
+
+    </div>
+
+    <div class="hero-right">
+      <img src="/Palak/Services/hero.png" alt="Hero Image" class="hero-img" />
+    </div>
+  </section>
+
+
+<section class="sat-section">
+    <!-- Heading -->
+    <h2 class="sat-heading">Our Comprehensive Services</h2>
+    <p class="sat-subheading">
+        From initial consultation to successful placement, we provide end-to-end support for your international education journey.
+
+    </p>
+    <div class="admission-container">
+        <div class="admission-image">
+            <img src="/Palak/Services/Walking.jpg" alt="Admission Guide">
+        </div>
+        <div class="admission-cards">
+            <!-- Card 1 -->
+            <div class="admission-wrapper">
+                <div class="card-number">1</div>
+                <div class="admission-card" style="background:#E4F7FA;">
+                    <div class="card-content">
+                        <img src="/Palak/All_Exams/Exams_Images/45.png" alt="Icon" class="card-icon">
+                        <!-- <div class="columns"> -->
+                        <div>
+                            <h4>Consultation
+                            </h4>
+                            <p>We start with an initial consultation to discuss your academic background, and any specific requirements or queries you may have.
+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="admission-wrapper">
+                <div class="card-number">2</div>
+                <div class="admission-card" style="background:#FFF6E1;">
+                    <div class="card-content">
+                        <img src="/Palak/All_Exams/Exams_Images/46.png" alt="Icon" class="card-icon">
+                        <!-- <div class="columns"> -->
+                        <div>
+                            <h4>Application Assistance
+</h4>
+                            <p>We tailor application assistance to align with your profile evaluation, optimizing your chances of success.
+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="admission-wrapper">
+                <div class="card-number">3</div>
+                <div class="admission-card" style="background:#FDF0F4;">
+                    <div class="card-content">
+                        <img src="/Palak/All_Exams/Exams_Images/47.png" alt="Icon" class="card-icon">
+                        <!-- <div class="columns"> -->
+                        <div>
+                            <h4>Profile Evaluation
+</h4>
+                            <p>We assess your academic and extracurricular background, and recommending fitting programs and universities.
+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 (Bullet Points) -->
+            <div class="admission-wrapper">
+                <div class="card-number">4</div>
+                <div class="admission-card" style="background:#E4F7FA;">
+                    <div class="card-content">
+                        <img src="/Palak/All_Exams/Exams_Images/48.png" alt="Icon" class="card-icon">
+                        <!-- <div class="columns"> -->
+                        <div>
+                            <h4>Visa Assistance
+</h4>
+                            <p>We assist you in preparing for your student visa interview by providing information on the tips for effective communication.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="admission-wrapper">
+                <div class="card-number">5</div>
+                <div class="admission-card" style="background:#FFF6E1;">
+                    <div class="card-content">
+                        <img src="/Palak/All_Exams/Exams_Images/49.png" alt="Icon" class="card-icon">
+                        <!-- <div class="columns"> -->
+                        <div>
+                            <h4>University Shortlisting
+</h4>
+                            <p>We assist in shortlisting universities or colleges that match your preferences, location, affordability, and scholarships available.
+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admission-wrapper">
+                <div class="card-number">6</div>
+                <div class="admission-card" style="background:#FDF0F4;">
+                    <div class="card-content">
+                        <img src="/Palak/All_Exams/Exams_Images/50.png" alt="Icon" class="card-icon">
+                        <!-- <div class="columns"> -->
+                        <div>
+                            <h4>Finance and Loan Options</h4>
+                            <p>We offer general information on diverse study abroad loan options and maintain partnerships with various lenders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<section class="trusted-section">
+  <div class="trusted-heading">
+    <h2>Trusted by Thousands</h2>
+    <p>Our track record speaks for itself.</p>
+  </div>
+
+  <div class="trusted-stats">
+    <div class="stat">
+      <h3>10,000+</h3>
+      <p>Students</p>
+    </div>
+    <div class="stat">
+      <h3>500+</h3>
+      <p>Partner Universities</p>
+    </div>
+    <div class="stat">
+      <h3>50+</h3>
+      <p>Countries</p>
+    </div>
+    <div class="stat">
+      <h3>98%</h3>
+      <p>Success Rate</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- testimonial-section -->
+
+
+    <section class="testimonialSection">
+        <h2 class="testimonialHeading">Our Happy Stories!</h2>
+        <p class="testimonialSubtext">
+            Success stories from students who achieved their dreams of studying abroad.
+        </p>
+
+        <div class="testimonial-carousel-container">
+            <div class="testimonialCarousel" id="testimonialCarousel">
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "Study Befikar made my dream of studying in Canada a reality. Their loan guidance was clear, transparent, and stress-free. I never thought financing my education could be this smooth!"
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Avirush Kr</p>
+                            <p class="userTitle">University of Toronto</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "The team guided me through every step — from comparing loan options to preparing my SOP. I secured funding within two weeks and felt fully confident throughout the process."
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer2.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Siddhesh C Borhade</p>
+                            <p class="userTitle">New York University</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "I had no idea how to apply for a study abroad loan, but Study Befikar explained everything patiently. Their support during the moratorium period questions was outstanding."
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer3.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Tirth Shah</p>
+                            <p class="userTitle">University of Melbourne</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "What I loved most was their honesty. They didn’t just push me towards one lender, but helped me choose the best loan for my profile. Highly recommend their services!"
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer4.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Karan Singh</p>
+                            <p class="userTitle">London School of Economics</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "Thanks to Study Befikar, I didn’t have to worry about the financial side of my higher education. I could focus entirely on my admission process while they handled the loan hassle."
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer5.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Ananya Patel</p>
+                            <p class="userTitle">University of British Columbia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonialCard">
+                    <div class="topRow">
+                       <img src="../images/Home/testimonial/quote.png" alt="Quote" class="quoteImg" />
+                       <img src="../images/Home/testimonial/fivestar.png" alt="Rating" class="starImg" />
+                    </div>
+                    <p class="feedback">
+                        "This platform transformed the way I approach web development. The guidance was exceptional and helped me secure admission to my dream university."
+                    </p>
+                    <div class="userInfo">
+                        <img src="../images/Home/testimonial/customer6.png" alt="Customer" class="customerImg" />
+                        <div class="userDetails">
+                            <p class="userName">Avirush Kr</p>
+                            <p class="userTitle">Co-Founder at XYZ</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="testimonial-indicators">
+            <div class="testimonial-indicator active-indicator" onclick="goToTestimonial(0)"></div>
+            <div class="testimonial-indicator ellipse" onclick="goToTestimonial(1)"></div>
+            <div class="testimonial-indicator" onclick="goToTestimonial(2)"></div>
+        </div>
+
+    </section>
+
+    <script>
+        let currentTestimonialSlide = 0;
+        const totalTestimonials = 5;
+
+        function getCardsPerView() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth <= 768) return 1; // mobile
+            if (screenWidth <= 1024) return 2; // tablet
+            return 3; // desktop
+        }
+
+        function getMaxSlides() {
+            const cardsPerView = getCardsPerView();
+            return Math.max(1, totalTestimonials - cardsPerView + 1);
+        }
+
+        function nextTestimonial() {
+            const maxSlides = getMaxSlides();
+            currentTestimonialSlide = (currentTestimonialSlide + 1) % maxSlides;
+            updateTestimonialCarousel();
+        }
+
+        function prevTestimonial() {
+            const maxSlides = getMaxSlides();
+            currentTestimonialSlide = (currentTestimonialSlide - 1 + maxSlides) % maxSlides;
+            updateTestimonialCarousel();
+        }
+
+        function goToTestimonial(index) {
+            const maxSlides = getMaxSlides();
+            currentTestimonialSlide = Math.min(index, maxSlides - 1);
+            updateTestimonialCarousel();
+        }
+
+        function updateTestimonialCarousel() {
+            const carousel = document.getElementById('testimonialCarousel');
+            const indicators = document.querySelectorAll('.testimonial-indicator');
+            const cardsPerView = getCardsPerView();
+            
+            let translateX;
+            if (cardsPerView === 1) {
+                // mobile
+                translateX = currentTestimonialSlide * 100;
+            } else if (cardsPerView === 2) {
+                // tablet
+                translateX = currentTestimonialSlide * 100;
+            } else {
+                // desktop
+                translateX = currentTestimonialSlide * (100 / 3);
+            }
+            
+            carousel.style.transform = `translateX(-${translateX}%)`;
+            
+            // update indicators 
+            const maxSlides = getMaxSlides();
+            indicators.forEach((indicator, index) => {
+                const isActive = index === Math.min(currentTestimonialSlide, maxSlides - 1);
+                indicator.classList.toggle('active-indicator', isActive);
+            });
+        }
+
+        function updateIndicators() {
+            const indicatorContainer = document.querySelector('.testimonial-indicators');
+            const maxSlides = getMaxSlides();
+            
+            // clear existing indicators
+            indicatorContainer.innerHTML = '';
+            
+            // create new indicators based on max slides
+            for (let i = 0; i < Math.min(maxSlides, 3); i++) {
+                const indicator = document.createElement('div');
+                indicator.className = `testimonial-indicator ${i === 0 ? 'active-indicator' : ''} ${i === 1 ? 'ellipse' : ''}`;
+                indicator.onclick = () => goToTestimonial(i);
+                indicatorContainer.appendChild(indicator);
+            }
+        }
+
+        // auto slide
+        let autoSlideInterval;
+        function startAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(() => {
+                nextTestimonial();
+            }, 10000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        // handle window resize
+        window.addEventListener('resize', () => {
+            currentTestimonialSlide = 0;
+            updateIndicators();
+            updateTestimonialCarousel();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+
+        // stop auto-slide on hover
+        document.querySelector('.testimonial-carousel-container').addEventListener('mouseenter', stopAutoSlide);
+        document.querySelector('.testimonial-carousel-container').addEventListener('mouseleave', startAutoSlide);
+
+        // initialize on page load
+        window.addEventListener('load', () => {
+            updateIndicators();
+            updateTestimonialCarousel();
+            startAutoSlide();
+        });
+    </script>
+
+
+<section class="faqSection">
+  <h2 class="faqHeader">Frequently Asked Questions</h2>
+  <p class="faqSubHeader">Find answers to the most common questions about our loan services.</p>
+
+  <div class="faqCollapsibleContainer">
+
+  <div class="faqCollapsible">
+    <div class="faqCollapsibleHeading">
+      <span>How long does the application process typically take?</span>
+      <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+    </div>
+    <div class="faqCollapsibleDropdownDesc">
+      Yes, you can apply for a loan with a cosigner. A cosigner with a strong credit history can improve your chances of approval, especially if you have limited or no credit.
+    </div>
+  </div>
+
+  <!-- FAQ 2 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>Do you guarantee admission to my preferred university?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Yes, unsecured education loans are available up to ₹7.5–40 lakhs (depending on lender and student profile).<br/>
+    However, interest rates may be higher compared to secured loans.
+  </div>
+</div>
+
+<!-- FAQ 3 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>What documents do I need to prepare?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    Required documents typically include academic transcripts, standardized test scores, letters of recommendation, personal statement, and passport. We provide a comprehensive checklist tailored to your specific applications.
+  </div>
+</div>
+
+<!-- FAQ 4 -->
+<div class="faqCollapsible">
+  <div class="faqCollapsibleHeading">
+    <span>How much do your services cost?</span>
+    <img src="../images/loanHome/faq/arrow-drop-down.png" alt="Toggle" class="faqToggleIcon">
+  </div>
+  <div class="faqCollapsibleDropdownDesc">
+    • Banks: Lower interest rates, government subsidy schemes, but stricter rules and longer processing.<br/>
+    • NBFCs: Faster approval, flexible repayment, higher sanction amounts, but higher interest.
+  </div>
+</div>
+
+
+
+  </div>
+
+</section>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const faqs = document.querySelectorAll(".faqCollapsible");
+
+  faqs.forEach(faq => {
+    const heading = faq.querySelector(".faqCollapsibleHeading");
+
+    heading.addEventListener("click", () => {
+      faq.classList.toggle("active");
+
+      const desc = faq.querySelector(".faqCollapsibleDropdownDesc");
+      if (faq.classList.contains("active")) {
+        desc.style.display = "block";
+      } else {
+        desc.style.display = "none";
+      }
+    });
+  });
+});
+
+</script>
+
+
+
+
+<footer class="footer">
+        <div class="footer-container">
+            <!-- column 1: logo + about + social  -->
+            <div class="footer-col footer-about">
+                <img src="/Palak/images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="/Palak/images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- column 2: services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="/Palak/Loan/loanHome.html">Education Loans</a></li>
+                    <li><a href="/Palak/Test_Prep/testPreparationQuestionnaire/step1.html">Test Preparation</a></li>
+                    <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
+                    <li><a href="#">Application Assistance</a></li>
+                    <li><a href="#">University Shortlisting</a></li>
+                </ul>
+            </div>
+    
+            <!-- column 3-->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="/Palak/USA/usa.html">USA</a></li>
+                    <li><a href="/Palak/USA/canada.html">Canada</a></li>
+                    <li><a href="/Palak/USA/uk.html">UK</a></li>
+                    <li><a href="/Palak/USA/germany.html">Germany</a></li>
+                    <li><a href="#">New Zealand</a></li>
+                    <li><a href="/Palak/USA/australia.html">Australia</a></li>
+                    <li><a href="#">Singapore</a></li>
+                    <li><a href="#">Japan</a></li>
+                    <li><a href="#">France</a></li>
+                    <li><a href="#">Ireland</a></li>
+                    <li><a href="#">Dubai</a></li>
+                </ul>
+            </div>
+    
+            <!-- column 4: contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>Dropbox@studybefikar.com</p>
+                <p>+91 74259 34504</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+
+                <h4>More Details</h4>
+                <p>Vendor Login</p>
+                <p>T&C</p>
+            </div>
+            
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+
+    
+
+</body>
+
+</html>

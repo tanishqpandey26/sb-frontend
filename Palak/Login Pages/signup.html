@@ -144,9 +144,9 @@
         .signup-right {
             flex: 1;
             max-width: calc(50% - 120px);
-            /* adjust so total stays within screen */
             padding: 70px;
             box-sizing: border-box;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             background: #fff;
@@ -169,7 +169,7 @@
         }
 
         .signup-right h1 {
-            font-size: 34px;
+             font-size: 34px;
             font-weight: 700;
             background: linear-gradient(90deg, #195057, #4ED0E1);
             -webkit-background-clip: text;
@@ -285,7 +285,7 @@
                 padding: 20px;
                 border-radius: 0;
                 box-shadow: none;
-                align-items: center;
+                
                 /* center everything */
             }
 
@@ -293,20 +293,25 @@
             .signup-right::before {
                 content: "";
                 display: block;
-                background: url('/Palak/Login Pages/Login_Images/tansparent.png') no-repeat left center / 80px auto;
+                background: url('/Palak/Login Pages/Login_Images/Untitled design.png') no-repeat left center / 80px auto;
                 height: 72px;
                 width: 100%;
                 margin-bottom: 20px;
             }
 
             /* Form inputs & buttons centered at 80% width */
-            .signup-right input,
+            .signup-right input{
+                margin-left: 0;
+                width: 80%;
+                max-width: 80%;
+                margin-bottom: 20px;
+            }
             .signup-btn,
             .google-btn,
             .or-divider {
                 width: 80%;
                 max-width: 80%;
-                margin-left: 0;
+                margin: 8px auto;
             }
 
             /* Show login text only on mobile */
@@ -338,7 +343,7 @@
         <!-- LEFT COLUMN -->
         <div class="signup-left">
 
-            <img src="/Palak/Login Pages/Login_Images/tansparent.png" alt="Logo" class="left-logo">
+            <img src="/Palak/Login Pages/Login_Images/study-befikar 2.png" alt="Logo" class="left-logo">
 
             <div class="left-card">
                 <h2>Welcome Back to Study Befikar</h2>
@@ -364,11 +369,11 @@
             <h1>Sign Up</h1>
             <p class="subtitle">Start your study abroad journey with Study Befikar</p>
 
-            <label>Email Address</label>
-            <input type="email" placeholder="Enter your email address" />
+            <label for="email">Email Address</label>
+<input id="email" type="email" placeholder="Enter your email address" />
 
-            <label>Phone Number</label>
-            <input type="tel" placeholder="Enter your phone number" />
+<label for="phone">Phone Number</label>
+<input id="phone" type="tel" placeholder="Enter your phone number" />
 
             <button class="signup-btn">Sign Up</button>
 

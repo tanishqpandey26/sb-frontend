@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Education Loan EMI Calculator</title>
-   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="/Palak/Admission_counselling/fixed.css" />
   <link rel="stylesheet" href="/Palak/Loan/Interestcalc.css" />
 </head>
 <body>
-     <nav class="navbar">
+ <nav class="navbar">
           <div class="navbar-left">
             <a href="/Palak/Home/home.html">
             <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo" class="logo">
@@ -44,6 +44,8 @@
                 <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
                 <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
                 <li><a href="/Palak/Loan/EmiCalc.html">EMI Calculator</a></li>
+                 <li><a href="/Palak/Loan/InterestCalc.html">Interest Calculator</a></li>
+                <li><a href="/Palak/Loan/refinancing.html">Loan Refinancing</a></li>
               </ul>
             </li>
         
@@ -52,7 +54,7 @@
               <ul class="dropdown-content">
                 <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
                 <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
-                <li><a href="/Palak/Admission_counselling/confirmation.html">Application Deadline</a></li>
+                <li><a href="/Palak/Admission_counselling/Application_Deadline.html">Application Deadline</a></li>
                 <li><a href="/Palak/Admission_counselling/universityFinder/universityFinder.html">University Finder</a></li>
               </ul>
             </li>
@@ -82,9 +84,9 @@
             </li>
         
             <li class="dropdown">
-              <a href="#">Services</a>
+              <a href="/Palak/Services/Services.html">Services</a>
               <ul class="dropdown-content">
-                <li><a href="#">All Services</a></li>
+                <li><a href="/Palak/Services/Services.html">All Services</a></li>
                 <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
                 <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
                 <li><a href="#">Apply to University</a></li>
@@ -93,11 +95,12 @@
         
             <li><a href="/Palak/NoticeBoard/noticeBoard.html" class="dropdown">Notice Board</a></li>
         
-            <li><a href="/Palak/Login Pages/signin.html" class="contact-btn">Contact Us</a></li>
+            <li><a href="/Palak/ContactUs/ContactUs.html" class="contact-btn">Contact Us</a></li>
 
           </ul>
           <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-     </nav>
+        </nav>
+
         <script>
           document.addEventListener("DOMContentLoaded", () => {
             /*  mobile hamburger toggle */
@@ -190,127 +193,293 @@
         </div>
     </section>
 
-<!-- Simple Interest Calculator Section -->
+<!-- ===================== SIMPLE INTEREST CALCULATOR (UPDATED) ===================== -->
 <section id="interest-calculator" class="hero">
-  <h2 class="cost-heading">Simple Interest Calculator</h2>
-  <p class="cost-desc">Calculate Total Interest, Principal & Total Amount</p>
+  <div class="calculator-wrapper">
 
-  <!-- Controls -->
-  <div class="controls" id="interestControls">
-    <div class="field">
-      <label>Loan Amount: <span id="iLoanAmountLabel"></span></label>
-      <input type="range" id="iLoanAmount" min="10000" max="1000000" step="10000" value="200000">
-    </div>
-
-    <div class="field">
-      <label>Interest (p.a): <span id="iInterestLabel"></span></label>
-      <input type="range" id="iInterest" min="1" max="20" step="0.1" value="10">
-    </div>
-
-    <div class="field">
-      <label>Loan Duration (Years): <span id="iLoanDurationLabel"></span></label>
-      <input type="range" id="iLoanDuration" min="1" max="30" step="1" value="5">
-    </div>
+   <!-- Currency Row -->
+<div class="currency-row">
+  <div class="currency-label">Select Currency</div>
+  <div class="dropdown-wrapper">
+    <select id="currencySelect" class="currency-select" aria-label="Select currency">
+      <option value="INR">Rupees (₹)</option>
+      <option value="USD">Dollar ($)</option>
+    </select>
   </div>
+</div>
 
-  <!-- Chart Section -->
-  <div class="chart-section">
-    <canvas id="interestChart" width="260" height="260"></canvas>
-    <div class="chart-center">
-      <h3>Total Amount</h3>
-      <p id="iTotalAmount">₹0</p>
-    </div>
-  </div>
+    <div class="cards-row">
+      <!-- LEFT CARD: Sliders -->
+      <div class="card card-left">
+        <h2 class="card-title">Simple Interest Calculator</h2>
 
-  <!-- Results Section -->
-  <div class="results-section">
-    <div class="result-box">
-      <h3>Total Interest</h3>
-      <p id="iTotalInterest">₹0</p>
-    </div>
+        <!-- Loan Amount -->
+        <div class="slider-block">
+          <div class="slider-top">
+            <div class="slider-label">Loan Amount</div>
+            <div class="slider-value" id="loanAmountDisplay">₹0</div>
+          </div>
+          <input type="range" id="iLoanAmount" min="10000" max="1000000" step="10000" value="200000" class="styled-range">
+          <div class="range-ends">
+            <span id="loanMin">₹10,000</span>
+            <span id="loanMax">₹1,000,000</span>
+          </div>
+        </div>
 
-    <div class="legend">
-      <span class="legend-color principal"></span>
-      <p>Principal Amount: <span id="iPrincipal">₹0</span></p>
-    </div>
+        <!-- Interest Rate -->
+        <div class="slider-block">
+          <div class="slider-top">
+            <div class="slider-label">Interest Rate (p.a.)</div>
+            <div class="slider-value" id="interestRateDisplay">10%</div>
+          </div>
+          <input type="range" id="iInterest" min="1" max="20" step="0.1" value="10" class="styled-range">
+          <div class="range-ends">
+            <span>1%</span>
+            <span>20%</span>
+          </div>
+        </div>
 
-    <div class="legend">
-      <span class="legend-color interest"></span>
-      <p>Interest: <span id="iInterestAmount">₹0</span></p>
-    </div>
-  </div>
+        <!-- Loan Duration -->
+        <div class="slider-block">
+          <div class="slider-top">
+            <div class="slider-label">Loan Duration (Years)</div>
+            <div class="slider-value" id="loanDurationDisplay">5 Years</div>
+          </div>
+          <input type="range" id="iLoanDuration" min="1" max="30" step="1" value="5" class="styled-range">
+          <div class="range-ends">
+            <span>1 Yr</span>
+            <span>30 Yr</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT CARD: Chart & Result -->
+      <div class="card card-right">
+        <div class="chart-box">
+          <canvas id="interestChart" width="260" height="260"></canvas>
+          <div class="chart-center">
+            <h3>Total Amount</h3>
+            <p id="iTotalAmount">₹0</p>
+          </div>
+        </div>
+
+        <div class="results-row">
+          <div class="result-card">
+            <h4>Total Interest</h4>
+            <p id="iTotalInterest">₹0</p>
+          </div>
+
+          <div class="legend-row">
+            <div class="legend">
+              <span class="legend-color principal"></span>
+              <div>Principal Amount: <strong id="iPrincipal">₹0</strong></div>
+            </div>
+
+            <div class="legend">
+              <span class="legend-color interest"></span>
+              <div>Interest: <strong id="iInterestAmount">₹0</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- .cards-row -->
+  </div> <!-- .calculator-wrapper -->
 </section>
 
-<!-- Chart.js -->
+<!-- Chart.js (keep the same CDN used previously) -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
+/* ========= Currency handling =========
+   NOTE: conversionRates can be adjusted later.
+   Using 1 USD = 82.5 INR as default (approx). Change if you want real-time rates.
+*/
+const conversionRates = { INR: 1, USD: 1 / 82.5 }; // multiply INR value by conversionRates[currency] to get displayed value
+const currencySymbols = { INR: "₹", USD: "$" };
+
+const currencySelect = document.getElementById("currencySelect");
+const iLoanAmount = document.getElementById("iLoanAmount");
+const iInterest = document.getElementById("iInterest");
+const iLoanDuration = document.getElementById("iLoanDuration");
+
+const loanAmountDisplay = document.getElementById("loanAmountDisplay");
+const interestRateDisplay = document.getElementById("interestRateDisplay");
+const loanDurationDisplay = document.getElementById("loanDurationDisplay");
+
+const iTotalInterest = document.getElementById("iTotalInterest");
+const iPrincipal = document.getElementById("iPrincipal");
+const iInterestAmount = document.getElementById("iInterestAmount");
+const iTotalAmount = document.getElementById("iTotalAmount");
+
 let interestChart;
 
-/* --- Update slider labels --- */
-function updateInterestLabels() {
-  const P = parseInt(document.getElementById("iLoanAmount").value);
-  const annualRate = parseFloat(document.getElementById("iInterest").value);
-  const years = parseInt(document.getElementById("iLoanDuration").value);
-
-  document.getElementById("iLoanAmountLabel").textContent = `₹${P.toLocaleString()}`;
-  document.getElementById("iInterestLabel").textContent = `${annualRate.toFixed(1)}%`;
-  document.getElementById("iLoanDurationLabel").textContent = `${years} Years`;
+/* helper formatting */
+function formatCurrency(valueInINR, currency) {
+  const multiplier = conversionRates[currency] ?? 1;
+  const val = valueInINR * multiplier;
+  // For USD, show two decimals; for INR show integer with thousands separator
+  if (currency === "USD") return `${currencySymbols[currency]}${val.toFixed(2).toLocaleString()}`;
+  return `${currencySymbols[currency]}${Math.round(val).toLocaleString()}`;
 }
 
-/* --- Calculate Interest --- */
-function calculateInterest() {
-  const P = parseInt(document.getElementById("iLoanAmount").value);
-  const rate = parseFloat(document.getElementById("iInterest").value);
-  const years = parseInt(document.getElementById("iLoanDuration").value);
+function formatNumberForDisplay(valueInINR, currency) {
+  const multiplier = conversionRates[currency] ?? 1;
+  const val = valueInINR * multiplier;
+  if (currency === "USD") return `${currencySymbols[currency]}${val.toFixed(2)}`;
+  return `${currencySymbols[currency]}${Math.round(val).toLocaleString()}`;
+}
 
-  const totalInterest = (P * rate * years) / 100; // Simple Interest
-  const totalAmount = P + totalInterest;
+/* --- Update slider visual fill and labels --- */
+function updateRangeFill(el) {
+  const min = Number(el.min);
+  const max = Number(el.max);
+  const val = Number(el.value);
+  const percent = ((val - min) / (max - min)) * 100;
+  // filled color as requested: #28778199
+  el.style.background = `linear-gradient(90deg, #28778199 ${percent}%, #ddd ${percent}%)`;
+}
+
+/* --- Update slider labels (text) --- */
+function updateInterestLabels() {
+  const currency = currencySelect.value;
+  const P = parseInt(iLoanAmount.value, 10);
+  const annualRate = parseFloat(iInterest.value);
+  const years = parseInt(iLoanDuration.value, 10);
+
+  // displays on the right side of each slider
+  loanAmountDisplay.textContent = formatNumberForDisplay(P, currency);
+  interestRateDisplay.textContent = `${annualRate.toFixed(1)}%`;
+  loanDurationDisplay.textContent = `${years} Years`;
+
+  // min/max labels for loan - convert min/max to currency display
+  document.getElementById("loanMin").textContent = formatNumberForDisplay(Number(iLoanAmount.min), currency);
+  document.getElementById("loanMax").textContent = formatNumberForDisplay(Number(iLoanAmount.max), currency);
+}
+
+/* --- Calculate Interest (formula untouched) --- */
+function calculateInterest() {
+  // Use internal numeric values in INR for calculation to keep formula stable.
+  // If you want internal storage in USD instead, convert appropriately.
+  const P_inINR = parseInt(iLoanAmount.value, 10); // internal base (INR)
+  const rate = parseFloat(iInterest.value);
+  const years = parseInt(iLoanDuration.value, 10);
+
+  const totalInterest = (P_inINR * rate * years) / 100; // Simple interest (INR)
+  const totalAmount = P_inINR + totalInterest;
 
   updateInterestLabels();
 
-  // Update results
-  document.getElementById("iTotalInterest").textContent = `₹${totalInterest.toLocaleString()}`;
-  document.getElementById("iPrincipal").textContent = `₹${P.toLocaleString()}`;
-  document.getElementById("iInterestAmount").textContent = `₹${totalInterest.toLocaleString()}`;
-  document.getElementById("iTotalAmount").textContent = `₹${totalAmount.toLocaleString()}`;
+  // display formatted to selected currency
+  const currency = currencySelect.value;
+  iTotalInterest.textContent = formatCurrency(totalInterest, currency);
+  iPrincipal.textContent = formatCurrency(P_inINR, currency);
+  iInterestAmount.textContent = formatCurrency(totalInterest, currency);
+  iTotalAmount.textContent = formatCurrency(totalAmount, currency);
 
-  updateInterestChart(P, totalInterest);
+  updateInterestChart(P_inINR, totalInterest);
 }
 
 /* --- Update Pie Chart --- */
-function updateInterestChart(principal, interest) {
+function updateInterestChart(principalINR, interestINR) {
   const ctx = document.getElementById("interestChart").getContext("2d");
   if (interestChart) interestChart.destroy();
 
+  // Colors: principal #287781, interest #C7A926 (as requested)
   interestChart = new Chart(ctx, {
     type: "doughnut",
     data: {
       labels: ["Principal", "Interest"],
       datasets: [{
-        data: [principal, interest],
-        backgroundColor: ["#287781", "#f373a8"],
-        borderWidth: 0,
-        spacing: 2
+        data: [principalINR, interestINR],
+        backgroundColor: ["#287781", "#C7A926"],
+        borderWidth: 0
       }]
     },
     options: {
-      cutout: "80%",
+      cutout: "75%",
       responsive: true,
       plugins: { legend: { display: false } }
     }
   });
 }
 
-/* --- Bind sliders --- */
-document.querySelectorAll("#interestControls input[type=range]").forEach(slider => {
-  slider.addEventListener("input", calculateInterest);
-});
+/* --- Wire up events --- */
+function bindEvents() {
+  // initialize fills
+  document.querySelectorAll(".styled-range").forEach(r => updateRangeFill(r));
 
-/* --- Init --- */
-calculateInterest();
+  document.querySelectorAll("#interestControls input[type=range], .styled-range").forEach(slider => {
+    slider.addEventListener("input", () => {
+      updateRangeFill(slider);
+      calculateInterest();
+    });
+  });
+
+  // currency change
+  currencySelect.addEventListener("change", () => {
+    // on switching currency we only change displayed formatting (and convert values using conversionRates)
+    updateInterestLabels();
+    calculateInterest();
+  });
+
+  // ensure when user drags we update the right-hand small displays too
+  iLoanAmount.addEventListener("input", () => {
+    updateRangeFill(iLoanAmount);
+  });
+  iInterest.addEventListener("input", () => updateRangeFill(iInterest));
+  iLoanDuration.addEventListener("input", () => updateRangeFill(iLoanDuration));
+}
+
+/* --- INIT on DOM ready --- */
+document.addEventListener("DOMContentLoaded", () => {
+  // If your page already loads this script later, this event ensures proper init.
+  bindEvents();
+
+  // If you have an old #interestControls container (from your original code),
+  // the new styled-range elements duplicate functionality; we've preserved IDs to keep your logic intact.
+
+  // Also keep compatibility: if your original script used the same element IDs, everything continues to work.
+
+  // initial calculate
+  calculateInterest();
+});
 </script>
 
+ <section class="scholarship-section" id="scholarships">
+            <h2 class="scholarship-title">
+                Why Use Our Simple Interest Calculator?</h2>
+            <p class="scholarship-subtitle">
+                Make informed decisions about your education loan with our comprehensive calculator
+            </p>
+
+            <div class="cards-container">
+                <!-- Card 1 -->
+                <div class="scholarship-card" style="background-color: #E4F7FA;">
+                    <img src="/Palak/USA/USA_Images/27.png" alt="Icon" class="card-icon">
+                    <h3 class="scholarshipcard-title">Accurate Calculations</h3>
+                    <p class="scholarshipcard-description">
+                        Get precise EMI calculations based on current interest rates and loan terms.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="scholarship-card" style="background-color: #FDF0F4;">
+                    <img src="/Palak/USA/USA_Images/28.png" alt="Icon" class="card-icon">
+                    <h3 class="scholarshipcard-title">Visual Insights</h3>
+                    <p class="scholarshipcard-description">
+                        Understand your loan structure with interactive charts and detailed breakdowns.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="scholarship-card" style="background-color: #FFF6E1;">
+                    <img src="/Palak/USA/USA_Images/29.png" alt="Icon" class="card-icon">
+                    <h3 class="scholarshipcard-title">Compare Options</h3>
+                    <p class="scholarshipcard-description">
+                        Compare different loan scenarios to find the best option for your needs.</p>
+                </div>
+            </div>
+        </section>
 
 <footer class="footer">
         <div class="footer-container">

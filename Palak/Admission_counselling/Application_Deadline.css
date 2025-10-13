@@ -1,0 +1,623 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 110px 0% 0px 4%;
+    gap: 40px;
+    background-color: #EFFCFE;
+    flex-wrap: wrap;
+}
+
+.book-consultation-hero {
+    position: relative;
+    height: 100vh;
+    background:
+        linear-gradient(89.07deg, rgba(0, 0, 0, 0.66) 36.56%, rgba(102, 102, 102, 0) 99.23%),
+        url('/Palak/Admission_counselling/Admission_Counselling_Images/ApplicationDeadline.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: flex-start;
+    padding: 200px 4% 60px;
+    color: #FAFAFA;
+}
+
+.breadcrumb {
+    position: absolute;
+    top: 100px;
+    left: 7%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    opacity: 0.9;
+}
+
+.breadcrumb {
+    margin-bottom: 20px;
+    padding-top: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #FAFAFA;
+}
+
+.breadcrumb a {
+    color: #FAFAFA;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+    color: #ddd;
+}
+
+
+.hero-overlay {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.book-consultation-hero .hero-left {
+    max-width: 50%;
+}
+
+.glass-card {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.consultation-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 68px;
+    margin-bottom: 20px;
+}
+
+.consultation-heading .highlighted {
+    color: #FAFAFA;
+}
+
+.consultation-subtext {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.stats-row {
+    display: flex;
+    gap: 40px;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.stat-number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+}
+
+.stat-label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+/* ===================== RESPONSIVE HERO SECTION ===================== */
+
+/* --- Large screens / default --- */
+.book-consultation-hero {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 200px 6% 60px;
+  color: #fafafa;
+  background:
+    linear-gradient(89.07deg, rgba(0, 0, 0, 0.66) 36.56%, rgba(102, 102, 102, 0) 99.23%),
+    url('/Palak/Admission_counselling/Admission_Counselling_Images/ApplicationDeadline.jpg')
+      no-repeat center center / cover;
+}
+
+.hero-overlay {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.book-consultation-hero .hero-left {
+  max-width: 50%;
+}
+
+/* ===================== LAPTOP & TABLET ===================== */
+@media (max-width: 1024px) {
+  .book-consultation-hero {
+    height: auto;
+    padding: 160px 5% 80px;
+    background-position: center;
+  }
+
+  .hero-overlay {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .book-consultation-hero .hero-left {
+    max-width: 100%;
+  }
+
+  .consultation-heading {
+    font-size: 44px;
+    line-height: 56px;
+    margin-bottom: 18px;
+  }
+
+  .consultation-subtext {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 32px;
+    max-width: 90%;
+  }
+
+  .glass-card {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .stats-row {
+    gap: 30px;
+  }
+
+  .stat-number {
+    font-size: 22px;
+  }
+
+  .stat-label {
+    font-size: 15px;
+  }
+}
+
+/* ===================== MOBILE LANDSCAPE / SMALL TABLETS ===================== */
+@media (max-width: 768px) {
+  .book-consultation-hero {
+    height: auto;
+    padding: 180px 6% 60px;
+    text-align: left;
+    background:
+      linear-gradient(89.07deg, rgba(0, 0, 0, 0.75) 36.56%, rgba(102, 102, 102, 0) 99.23%),
+      url('/Palak/Admission_counselling/Admission_Counselling_Images/ApplicationDeadline.jpg')
+        no-repeat center center / cover;
+  }
+
+  .breadcrumb {
+    top: 100px;
+    left: 6%;
+    font-size: 11px;
+  }
+
+  .glass-card {
+    font-size: 13px;
+    padding: 6px 12px;
+    margin-bottom: 18px;
+  }
+
+  .consultation-heading {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .consultation-subtext {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 28px;
+  }
+
+  .stats-row {
+    gap: 25px;
+  }
+
+  .stat-box {
+    align-items: flex-start;
+  }
+
+  .stat-number {
+    font-size: 20px;
+  }
+
+  .stat-label {
+    font-size: 14px;
+  }
+}
+
+/* ===================== SMALL MOBILE (up to 480px) ===================== */
+@media (max-width: 480px) {
+  .book-consultation-hero {
+    padding: 120px 7% 60px;
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0.4) 80%),
+      url('/Palak/Admission_counselling/Admission_Counselling_Images/ApplicationDeadline.jpg')
+        no-repeat center center / cover;
+  }
+
+  .breadcrumb {
+    top: 60px;
+    left: 7%;
+    font-size: 10px;
+  }
+
+  .glass-card {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
+
+  .consultation-heading {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .consultation-subtext {
+    font-size: 16px;
+    line-height: 25px;
+    max-width: 100%;
+  }
+
+  .stats-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .stat-number {
+    font-size: 18px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+  }
+}
+
+
+/* ===== DEADLINE SECTION ===== */
+.deadline-section {
+  width: 90%;
+  margin: 80px auto;
+  text-align: center;
+  color: #424242;
+}
+
+/* Headings */
+.deadline-heading {
+  font-weight: 600;
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.deadline-subheading {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  margin-bottom: 35px;
+}
+
+/* Country Box */
+.country-box {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border: 0.5px solid rgba(66, 66, 66, 0.3); /* thin + lighter charcoal border */
+  border-radius: 20px;
+  padding: 8px 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 50px;
+  width: auto;
+}
+
+
+/* Country Buttons */
+.country-btn {
+  background: #fff;
+  border: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #424242;
+  padding: 10px 48px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.country-btn.active {
+  background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(25, 80, 87, 0.3); /* subtle pop */
+}
+
+/* Optional hover effect for inactive buttons */
+.country-btn:hover:not(.active) {
+  background: #f5f5f5;
+}
+.country-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #fff;
+  box-shadow: 0px 4px 25.4px rgba(89, 137, 142, 0.48);
+  border-radius: 30px;
+  padding: 37px 55px;
+  gap: 20px; /* reduced from 30px */
+  margin-bottom: 60px;
+  min-height: auto;
+  box-sizing: border-box;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+/* Top area */
+.card-top {
+  display: flex;
+  gap: 35px; /* slightly reduced */
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 15px; /* ensures small consistent gap before required-section */
+}
+
+.card-left, .card-right {
+  flex: 1 1 0;
+  min-width: 320px;
+}
+
+.divider {
+  width: 1px;
+  background: rgba(66,66,66,0.25);
+  align-self: stretch;
+  border-radius: 1px;
+  margin: 0 15px;
+  min-height: 320px;
+}
+
+/* Deadline cards */
+.deadline-card {
+  background: #fff;
+  box-shadow: 0 4px 19.5px rgba(0,0,0,0.08);
+  border-radius: 20px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px; /* tighter */
+}
+.deadline-content h4 { font-weight: 600; font-size: 16px; margin-bottom: 4px; color: #424242; } .deadline-content p { font-size: 12px; color: #666; } .deadline-content { flex: 1; text-align: left; }
+.left-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.left-block img{
+  width: 40px;
+  height: 40px;
+}
+
+/* Required Section */
+.required-section {
+  text-align: left;
+  margin-top: 0px; /* remove big spacing */
+  padding-top: 10px; /* small breathing room */
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+.docs-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 24px; /* consistent spacing */
+  margin: 30px 0 30px;
+}
+
+.doc-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: #424242;
+}
+
+.doc-item img {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* Info list */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.info-list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #424242;
+}
+
+.info-list img {
+  width: 24px;
+  height: 24px;
+  margin-top: 4px;
+}
+
+/* Buttons */
+.view-guide-btn {
+  display: block;
+  width: 280px;
+  height: 59px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 5px; /* reduced spacing */
+}
+.view-guide-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* status boxes */ .status-box { border-radius: 10px; padding: 6px 14px; font-weight: 600; font-size: 11px; white-space: nowrap; } .upcoming { background: #FFF6E1; color: #917B1A; } .open { background: #E1FFF1; color: #1A9154; } .late { background: #FFE1E1; color: #911A1A; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .card-top { flex-direction: column; margin-bottom: 10px; }
+  .divider { display: none; }
+  .country-card { padding: 25px; min-height: auto; gap: 15px; }
+}
+
+@media (max-width: 768px) {
+  .deadline-heading { font-size: 28px; }
+  .deadline-subheading { font-size: 18px; }
+  .country-box { gap: 10px; padding: 8px 12px; }
+  .country-btn { padding: 8px 20px; font-size: 14px; }
+  .card-left, .card-right { min-width: 100%; }
+  .view-guide-btn { width: 100%; max-width: 320px; }
+}
+@media (max-width: 1024px) {
+  .docs-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .docs-list {
+    grid-template-columns: 1fr; /* 1 per row on phones */
+  }
+}
+
+.hidden { display: none; }
+
+
+.consultation-box {
+  margin: 60px  auto 60px;
+  width: 90%;
+  height: auto;
+  border: 1px solid #287781;
+  border-radius: 30px;
+  padding: 53px 83px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.consultation-box h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: #424242;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.consultation-box p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #424242;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.consult-btn {
+  width: 400px;
+  height: 54px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #195057, #4ED0E1);
+  background-size: 200% 100%; /* allows movement */
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-position 0.5s ease;
+  background-position: 0% 0%;
+}
+
+.consult-btn:hover {
+  background-position: 100% 0%; /* shifts the gradient smoothly */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .consultation-box {
+    padding: 30px 25px;
+    height: auto;
+  }
+
+  .consultation-box h3 {
+    font-size: 26px;
+  }
+
+  .consultation-box p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .consult-btn {
+    width: 80%;
+    max-width: 280px;
+    height: 50px;
+    font-size: 12px;
+  }
+}
