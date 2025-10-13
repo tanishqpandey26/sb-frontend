@@ -180,7 +180,7 @@ body {
 
 .why-heading {
   display: inline-block;  /* shrink-wrap around h2 width */
-  text-align: left;       /* keep text inside aligned left */
+  text-align: center;       /* keep text inside aligned left */
 }
 
 .why-heading h2 {
@@ -411,26 +411,193 @@ body {
     color: #287781;
     text-decoration: none;
 }
+/* -------------------- Default (Desktop) -------------------- */
+.process-section {
+  padding: 80px 6%;
+  background-color: #fff;
+}
 
-/* Responsive */
+.process-heading h2 {
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: #424242;
+  margin-bottom: 12px;
+}
+
+.process-heading p {
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #424242;
+  margin-bottom: 80px;
+}
+
+.process-step {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.process-step .process-text {
+  width: 45%;
+  padding: 20px;
+}
+
+.process-step .process-image {
+  width: 50%;
+  padding: 0 60px;
+}
+
+.process-step .process-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 32px;
+}
+
+/* Zigzag pattern */
+.process-step:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+/* -------------------- Large Tablets (max-width: 1200px) -------------------- */
+@media (max-width: 1200px) {
+  .process-section {
+    padding: 60px 4%;
+  }
+
+  .process-heading h2 {
+    font-size: 30px;
+  }
+
+  .process-heading p {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+
+  .process-step {
+    margin-bottom: 80px;
+  }
+
+  .process-step .process-text {
+    width: 48%;
+  }
+
+  .process-step .process-image {
+    width: 48%;
+    padding: 0 40px;
+  }
+
+  .process-text h3 {
+    font-size: 22px;
+  }
+
+  .process-text p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+/* -------------------- Tablets (max-width: 992px) -------------------- */
+@media (max-width: 992px) {
+  .process-step {
+    flex-direction: column;
+    margin-bottom: 70px;
+  }
+
+  .process-step:nth-of-type(even) {
+    flex-direction: column; /* cancel zigzag on tablets */
+  }
+
+  .process-text,
+  .process-image {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .process-text h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .process-text p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .process-heading h2 {
+    font-size: 28px;
+  }
+
+  .process-heading p {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  .process-step .process-image {
+    padding: 0;
+  }
+
+  .step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+}
+
+/* -------------------- Mobiles (max-width: 768px) -------------------- */
 @media (max-width: 768px) {
-    .process-step {
-        flex-direction: column !important;
-    }
+  .process-section {
+    padding: 50px 2%;
+  }
 
-    .process-text,
-    .process-image {
-        width: 100%;
-        padding: 10px 0;
-    }
+  .process-heading h2 {
+    font-size: 24px;
+  }
 
-    .process-heading h2 {
-        font-size: 24px;
-    }
+  .process-heading p {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
 
-    .process-heading p {
-        font-size: 18px;
-    }
+  .process-step {
+    margin-bottom: 60px;
+  }
+
+  .process-text,
+  .process-image {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .process-text h3 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .process-text p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .step-number {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .process-step .process-image img {
+    border-radius: 20px;
+  }
+
+  .learn-more {
+    font-size: 14px;
+  }
 }
 
 
@@ -569,10 +736,10 @@ textarea::placeholder {
 
 <body>
   <!--NavBar Section-->
- <nav class="navbar">
+<nav class="navbar">
           <div class="navbar-left">
             <a href="/Palak/Home/home.html">
-            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo" class="logo">
+            <img src="/Palak/images/Home/study-befikar1.png" alt="Logo" class="logo">
             </a>
         
           </div>
@@ -584,16 +751,17 @@ textarea::placeholder {
               <a href="/Palak/USA/usa.html">Countries</a>
               <ul class="dropdown-content">
                 <li><a href="/Palak/USA/usa.html">USA</a></li>
-                <li><a href="/Palak/USA/canada.html">Canada</a></li>
                 <li><a href="/Palak/USA/uk.html">UK</a></li>
-                <li><a href="/Palak/USA/germany.html">Germany</a></li>
-                <li><a href="#">New Zealand</a></li>
+                <li><a href="/Palak/USA/canada.html">Canada</a></li>
                 <li><a href="/Palak/USA/australia.html">Australia</a></li>
-                <li><a href="#">Singapore</a></li>
-                <li><a href="#">Japan</a></li>
-                <li><a href="#">France</a></li>
-                <li><a href="#">Ireland</a></li>
-                <li><a href="#">Dubai</a></li>
+                <li><a href="/Palak/USA/germany.html">Germany</a></li>
+                <li><a href="/Palak/USA/Ireland.html">Ireland</a></li>
+                <li><a href="/Palak/USA/France.html">France</a></li>
+                <li><a href="/Palak/USA/newzealand.html">New Zealand</a></li>
+                <li><a href="/Palak/USA/Singapore.html">Singapore</a></li>
+                <li><a href="/Palak/USA/Japan.html">Japan</a></li>
+                <li><a href="/Palak/USA/Dubai.html">Dubai</a></li>
+                <li><a href="/Palak/USA/China.html">China</a></li>
               </ul>
             </li>
         
@@ -615,6 +783,7 @@ textarea::placeholder {
                 <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
                 <li><a href="/Palak/Admission_counselling/Application_Deadline.html">Application Deadline</a></li>
                 <li><a href="/Palak/Admission_counselling/universityFinder/universityFinder.html">University Finder</a></li>
+                <li><a href="/Palak/Admission_counselling/majorIntake/majorIntake.html">Major Intake</a></li>
               </ul>
             </li>
         
@@ -622,7 +791,7 @@ textarea::placeholder {
               <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
               <ul class="dropdown-content">
                 <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
-                <li><a href="#">Prepare for Exam</a></li>
+                <li><a href="/Palak/Test_Prep/testPreparationQuestionnaire/step1.html">Prepare for Exam</a></li>
                 <li><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></li>
                 <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
               </ul>
@@ -659,7 +828,6 @@ textarea::placeholder {
           </ul>
           <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </nav>
-
 
         <script>
           document.addEventListener("DOMContentLoaded", () => {
@@ -780,7 +948,7 @@ textarea::placeholder {
           Access our network of expert counsellors specializing in different countries, universities, and courses. Get
           personalized guidance tailored to your academic goals.
         </p>
-        <a href="#" class="learn-btn">Learn more</a>
+        <a href="/Palak/Admission_counselling/book-consultation.html" class="learn-btn">Learn more</a>
       </div>
 
       <!-- Card 2 -->
@@ -791,7 +959,7 @@ textarea::placeholder {
           Our comprehensive database and expert analysis help you find the perfect match for your academic aspirations,
           career goals, and budget requirements.
         </p>
-        <a href="#" class="learn-btn">Learn more</a>
+        <a href="/Palak/Admission_counselling/book-consultation.html" class="learn-btn">Learn more</a>
       </div>
 
       <!-- Card 3 -->
@@ -1156,16 +1324,17 @@ textarea::placeholder {
                 <h4>Study Destinations</h4>
                 <ul>
                     <li><a href="/Palak/USA/usa.html">USA</a></li>
-                    <li><a href="/Palak/USA/canada.html">Canada</a></li>
-                    <li><a href="/Palak/USA/uk.html">UK</a></li>
-                    <li><a href="/Palak/USA/germany.html">Germany</a></li>
-                    <li><a href="#">New Zealand</a></li>
-                    <li><a href="/Palak/USA/australia.html">Australia</a></li>
-                    <li><a href="#">Singapore</a></li>
-                    <li><a href="#">Japan</a></li>
-                    <li><a href="#">France</a></li>
-                    <li><a href="#">Ireland</a></li>
-                    <li><a href="#">Dubai</a></li>
+                <li><a href="/Palak/USA/uk.html">UK</a></li>
+                <li><a href="/Palak/USA/canada.html">Canada</a></li>
+                <li><a href="/Palak/USA/australia.html">Australia</a></li>
+                <li><a href="/Palak/USA/germany.html">Germany</a></li>
+                <li><a href="/Palak/USA/Ireland.html">Ireland</a></li>
+                <li><a href="/Palak/USA/France.html">France</a></li>
+                <li><a href="/Palak/USA/newzealand.html">New Zealand</a></li>
+                <li><a href="/Palak/USA/Singapore.html">Singapore</a></li>
+                <li><a href="/Palak/USA/Japan.html">Japan</a></li>
+                <li><a href="/Palak/USA/Dubai.html">Dubai</a></li>
+                <li><a href="/Palak/USA/China.html">China</a></li>
                 </ul>
             </div>
     

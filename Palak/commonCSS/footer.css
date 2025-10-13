@@ -2,7 +2,7 @@
     background-color: #092A2E;
     padding: 60px 2% 30px;
     color: #ffffff;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
 }
 
 .footer-container {
@@ -137,7 +137,6 @@
     text-decoration: none;
     font-size: 16px;
     font-weight: 200;
-    font-family: 'Plus Jakarta Sans', sans-serif;
     line-height: 100%;
     transition: color 0.3s ease;
 }
