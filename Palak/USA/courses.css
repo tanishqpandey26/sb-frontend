@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
 }
 .hero {
     display: flex;
@@ -24,7 +24,7 @@ body {
 .bread {
     position: absolute;
     top: 110px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     opacity: 0.9;
 }
 
@@ -50,7 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     color: #424242;
   }
 
@@ -149,7 +149,7 @@ body {
 }
 
 .consultation-box h3 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: BuenosAires;
   font-weight: 700;
   font-size: 34px;
   color: #424242;
@@ -158,7 +158,7 @@ body {
 }
 
 .consultation-box p {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: BuenosAires;
   font-weight: 400;
   font-size: 24px;
   line-height: 35px;
@@ -175,7 +175,7 @@ body {
   background: linear-gradient(90deg, #195057, #4ED0E1);
   background-size: 200% 100%; /* allows movement */
   color: #fff;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: BuenosAires;
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;

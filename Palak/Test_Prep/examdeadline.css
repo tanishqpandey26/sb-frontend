@@ -1,0 +1,364 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: BuenosAires;
+        }
+
+/* Section container */
+.why-section {
+    background-color: #fff;
+    padding: 90px 0 0 0;
+    text-align: center;
+    max-width: 1320px;
+    /* fits 3 cards + gaps perfectly */
+    margin: 50px auto;
+}
+
+/* Main heading */
+.why-section h2 {
+    font-family: BuenosAires;
+    font-weight: 700;
+    font-size: 30px;
+    color: #424242;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+
+/* Subtitle */
+.why-section p {
+    font-family: BuenosAires;
+    font-weight: 300;
+    font-size: 22px;
+    color: #424242;
+    line-height: 100%;
+    margin-bottom: 50px;
+}
+
+    /* Section styling */
+    .exam-section {
+        width: 1320px;
+        padding: 50px 25px;
+        border-radius: 20px;
+        background: #FAFAFA;
+        margin: 50px auto;
+        text-align: center;
+    }
+
+    .exam-title {
+        font-family: BuenosAires;
+        font-weight: 700;
+        font-size: 24px;
+        color: #424242;
+        margin-bottom: 30px;
+    }
+
+/* Container for the buttons */
+.exam-button-container {
+    width: 500px;
+    height: 56px;
+    border-radius: 20px;
+    padding: 8px 12px;
+    display: flex;
+    gap: 10px;
+    background: #FFFFFF; /* var(--White) */
+    border: 0.2px solid var(--Charcoalgrey);
+    box-shadow: 0px 4px 4px 0px #0000001A;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Buttons inside container */
+.exam-btn {
+    width: 110px;
+    height: 40px;
+    border-radius: 14px;
+    background: #FFFFFF;
+    border: none; /* remove visible border */
+    cursor: pointer;
+    font-family: BuenosAires;
+    font-weight: 600;
+    font-size: 14px;
+    color: #424242;
+    transition: all 0.3s ease;
+    padding: 10px 48px;
+    
+    /* Center text */
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    text-align: center;
+
+}
+
+/* Selected button */
+.exam-btn.active {
+    width: 110px;
+    height: 40px;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
+    color: white;
+    box-shadow: 0px 4px 4px 0px #0000001A;
+    padding: 10px 48px;
+    
+    /* Center text */
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    text-align: center;
+}
+
+
+    /* Search Box */
+    .search-container {
+        position: relative;
+        margin: 80px auto 40px auto;
+        width: 70%;
+        margin-bottom: 90px;
+    }
+
+    .search-container input {
+    width: 100%;
+    height: 40px;
+    padding: 12px 16px 12px 40px; /* space for icon on the left */
+    border-radius: 8px;
+    border: 1px solid #287781; /* slightly thicker border */
+    font-family: BuenosAires;
+    font-weight: 600;
+    font-size: 12px;
+    color: #333333; /* darker text */
+    outline: none;
+}
+
+   /* Search icon on the left */
+.search-container .search-icon {
+    position: absolute;
+    left: 12px; /* place icon inside input on left */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* so clicks go to input */
+}
+    /* Table Section */
+    .table-section {
+        width: 1270px;
+        border-radius: 20px;
+        background: #FAFAFA;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .exam-heading {
+        font-family: BuenosAires;
+        font-weight: 700;
+        font-size: 34px;
+        color: #424242;
+        margin: 20px 0 10px 0;
+    }
+
+    .exam-subheading {
+        font-family: BuenosAires;
+        font-weight: 400;
+        font-size: 16px;
+        color: #424242;
+        margin-bottom: 20px;
+    }
+    .exam-heading,
+.exam-subheading {
+    display: none; /* hide headings at first */
+}
+
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 40px;
+    }
+
+    thead tr {
+        background: #287781;
+        color: white;
+        font-family: BuenosAires;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+th, td {
+    padding: 15px;
+    text-align: center;     /* horizontal center */
+    vertical-align: middle; /* vertical center */
+    font-family: BuenosAires;
+}
+
+    tbody tr {
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    tbody tr:hover {
+        background: #59898E33;
+        color: #287781;
+    }
+
+/* Exam dates boxes centered in their column */
+.exam-dates-box {
+    display: inline-block;
+    width: 25px;
+    height: 24px;
+    background: #0000001A;
+    border-radius: 5px;
+    margin: 2px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    transition: 0.3s;
+}
+
+    tbody tr:hover .exam-dates-box {
+    background: #FFFFFF;
+}
+
+    .no-data {
+        text-align: center;
+        font-family: BuenosAires;
+        font-weight: 400;
+        font-size: 16px;
+        color: #424242;
+    }
+
+    
+/* Make month badges centered inside their column */
+.month-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: #59898E33;
+    color: #287781;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .exam-section,
+    .table-section {
+        width: 95%; /* full width with small margin */
+        padding: 20px 10px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .exam-button-container {
+        width: 100%;
+    }
+
+    .exam-btn {
+        flex: 1 1 40%; /* buttons take ~40% width */
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    .exam-btn.active {
+        padding: 10px 0;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .search-container {
+        width: 95%;
+        margin: 40px auto 40px auto;
+    }
+}
+
+
+/* Mobile responsive table */
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block; /* Stack everything */
+        width: 100%;
+    }
+
+    thead tr {
+        display: none; /* Hide the table header */
+    }
+
+    tbody tr {
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 15px;
+        background: #fff;
+        box-sizing: border-box;
+    }
+
+    tbody td {
+        text-align: left;
+        padding: 10px;
+        position: relative;
+    }
+
+    /* Add the column name before each cell content */
+    tbody td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        font-size: 14px;
+        color: #424242;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    /* Make badges horizontal */
+    td[data-label="MONTH"] .month-badge {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    td[data-label="EXAM DATES"] {
+        display: flex;        /* horizontal layout */
+        flex-wrap: wrap;      /* wrap if too many dates */
+        gap: 5px;             /* spacing between dates */
+    }
+
+    td[data-label="EXAM DATES"] .exam-dates-box {
+        margin: 0;            /* remove vertical margin */
+    }
+
+     .exam-heading {
+        font-family: BuenosAires;
+        font-weight: 700;
+        font-size: 24px;
+        color: #424242;
+        margin: 20px 0 10px 0;
+    }
+
+    .exam-subheading {
+        font-family: BuenosAires;
+        font-weight: 400;
+        font-size: 12px;
+        color: #424242;
+        margin-bottom: 20px;
+    }
+    .exam-heading,
+.exam-subheading {
+    display: none; /* hide headings at first */
+}
+
+/* Main heading */
+.why-section h2 {
+    font-size: 24px;
+}
+
+/* Subtitle */
+.why-section p {
+    font-size: 16px;
+}
+
+}

@@ -247,9 +247,24 @@
                         <input type="text" id="fullName" placeholder="Enter your full name" />
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number <span class="required">*</span></label>
-                        <input type="tel" id="phone" placeholder="Enter your phone number" />
-                    </div>
+  <label for="phone">Phone Number <span class="required">*</span></label>
+  <div class="phone-wrapper">
+    <div class="cust-dropdown" id="countryCodeDropdown">
+      <div class="dropdown-trigger">+91 ▾</div>
+      <div class="dropdown-options">
+        <div class="dropdown-option">+1 (USA)</div>
+        <div class="dropdown-option">+44 (UK)</div>
+        <div class="dropdown-option">+61 (Australia)</div>
+        <div class="dropdown-option">+49 (Germany)</div>
+        <div class="dropdown-option">+65 (Singapore)</div>
+        <div class="dropdown-option">+81 (Japan)</div>
+      </div>
+      <input type="hidden" name="countryCode" value="+91" />
+    </div>
+    <input type="tel" id="phone" placeholder="Enter your phone number" />
+  </div>
+</div>
+
                 </div>
                 <div class="form-group full">
                     <label for="email">Email Address <span class="required">*</span></label>
@@ -317,7 +332,7 @@
                     <!-- Planning Intake -->
                     <div class="form-group">
                         <label for="intake">Planning Intake <span class="required">*</span></label>
-                        <div class="custom-dropdown" id="intakeDropdown">
+                        <div class="custo-dropdown" id="intakeDropdown">
                             <div class="dropdown-trigger">Select intake period ▾</div>
                             <div class="dropdown-options">
                                 <div class="dropdown-option">Fall 2025</div>
@@ -415,15 +430,23 @@
                     <div class="form-group full">
                         <label>Interested In <span class="required">*</span></label>
                         <div class="radio-group interest-options">
-                            <label><input type="radio" name="interest" value="Study Abroad Consultation"> Study Abroad
-                                Consultation</label>
-                            <label><input type="radio" name="interest" value="Education Loan Guidance"> Education Loan
-                                Guidance</label>
-                            <label><input type="radio" name="interest" value="Test Preparation"> Test
-                                Preparation</label>
-                            <label><input type="radio" name="interest" value="All of the Above"> All of the
-                                Above</label>
-                        </div>
+    <label>
+        <input type="checkbox" name="interest" value="Study Abroad Consultation">
+        <span class="pill">Study Abroad Consultation</span>
+    </label>
+    <label>
+        <input type="checkbox" name="interest" value="Education Loan Guidance">
+        <span class="pill">Education Loan Guidance</span>
+    </label>
+    <label>
+        <input type="checkbox" name="interest" value="Test Preparation">
+        <span class="pill">Test Preparation</span>
+    </label>
+    <label>
+        <input type="checkbox" name="interest" value="All of the Above">
+        <span class="pill">All of the Above</span>
+    </label>
+</div>
                     </div>
 
                     <!-- Submit Button -->
@@ -439,255 +462,334 @@
 
                 </div>
     </section>
-
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const form = document.getElementById("consultationForm");
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("consultationForm");
 
-        // Inputs
-        const fullName = document.getElementById("fullName");
-        const phone = document.getElementById("phone");
-        const email = document.getElementById("email");
-        const course = document.getElementById("course");
+    // Inputs
+    const fullName = document.getElementById("fullName");
+    const phone = document.getElementById("phone");
+    const email = document.getElementById("email");
+    const course = document.getElementById("course");
 
-        // Sections
-        const academicFields = document.querySelectorAll(".academic-field, .academic-header");
-        const additionalFields = document.querySelectorAll(".additional-field, .additional-header");
+    // Sections
+    const academicFields = document.querySelectorAll(".academic-field, .academic-header");
+    const additionalFields = document.querySelectorAll(".additional-field, .additional-header");
 
-        const step2 = document.getElementById("step2");
-        const step3 = document.getElementById("step3");
+    const step2 = document.getElementById("step2");
+    const step3 = document.getElementById("step3");
 
-        const visaRadios = Array.from(document.getElementsByName("visa") || []);
-        const visaCountryGroup = document.getElementById("visaCountryGroup");
-        const examSelectHidden = document.getElementById("exam");
+    const visaRadios = Array.from(document.getElementsByName("visa") || []);
+    const visaCountryGroup = document.getElementById("visaCountryGroup");
 
-        // Create or get error span
-        function getErrorSpan(input) {
-            let el = input.parentNode.querySelector(".error-msg");
+    // COUNTRY CODE DROPDOWN
+    const countryCodeDropdown = document.getElementById("countryCodeDropdown");
+    const triggerCC = countryCodeDropdown.querySelector(".dropdown-trigger");
+    const optionsCC = countryCodeDropdown.querySelectorAll(".dropdown-option");
+    const hiddenCC = countryCodeDropdown.querySelector("input[type='hidden']");
+
+    triggerCC.addEventListener("click", e => {
+        e.stopPropagation();
+        countryCodeDropdown.classList.toggle("active");
+    });
+
+    optionsCC.forEach(option => {
+        option.addEventListener("click", () => {
+            const code = option.textContent.split(" ")[0];
+            triggerCC.textContent = code + " ▾";
+            hiddenCC.value = code;
+            countryCodeDropdown.classList.remove("active");
+        });
+    });
+
+    // CLOSE DROPDOWN ON CLICK OUTSIDE
+    document.addEventListener("click", () => {
+        document.querySelectorAll(".cust-dropdown, .custo-dropdown, .custom-dropdown, .additional-dropdown")
+            .forEach(drop => drop.classList.remove("active"));
+    });
+
+    // HELPER: Get or create error span
+    function getErrorSpan(input) {
+        let el = input.parentNode.querySelector(".error-msg");
+        if (!el) {
+            el = document.createElement("span");
+            el.className = "error-msg";
+            el.style.color = "red";
+            el.style.fontSize = "0.8em";
+            el.style.display = "block";
+            input.parentNode.appendChild(el);
+        }
+        return el;
+    }
+
+    // STEP 1 VALIDATIONS
+    function validateName(show = false) {
+        const v = fullName.value.trim();
+        const el = getErrorSpan(fullName);
+        if (!v) { if (show) el.textContent = "Full name is required"; return false; }
+        if (!/^[A-Za-z\s'-]+$/.test(v)) { if (show) el.textContent = "Name must contain only letters"; return false; }
+        el.textContent = ""; return true;
+    }
+
+    function validatePhone(show = false) {
+        const digits = phone.value.replace(/\D/g, "");
+        const el = getErrorSpan(phone);
+        if (digits.length !== 10) { if (show) el.textContent = "Enter a valid 10-digit phone number"; return false; }
+        el.textContent = ""; return true;
+    }
+
+    function validateEmail(show = false) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const el = getErrorSpan(email);
+        if (!re.test(email.value.trim())) { if (show) el.textContent = "Enter a valid email"; return false; }
+        el.textContent = ""; return true;
+    }
+
+    function validateGender(show = false) {
+        const checked = document.querySelector('input[name="gender"]:checked');
+        if (!checked && show) {
+            const group = document.querySelector(".gender-group");
+            let el = group.querySelector(".error-msg");
             if (!el) {
                 el = document.createElement("span");
                 el.className = "error-msg";
                 el.style.color = "red";
                 el.style.fontSize = "0.8em";
-                el.style.display = "block";
-                input.parentNode.appendChild(el);
+                group.appendChild(el);
             }
-            return el;
+            el.textContent = "Please select gender";
+        } else {
+            const el = document.querySelector(".gender-group .error-msg");
+            if (el) el.textContent = "";
         }
+        return !!checked;
+    }
 
-        // Validations with messages
-        function validateName(show = false) {
-            const v = fullName.value.trim();
-            const el = getErrorSpan(fullName);
-            if (!v) { if (show) el.textContent = "Full name is required"; return false; }
-            if (!/^[A-Za-z\s'-]+$/.test(v)) { if (show) el.textContent = "Name must contain only letters"; return false; }
-            el.textContent = ""; return true;
-        }
+    function validateStep1(show = false) {
+        return validateName(show) && validatePhone(show) && validateEmail(show) && validateGender(show);
+    }
 
-        function validatePhone(show = false) {
-            const digits = phone.value.replace(/\D/g, "");
-            const el = getErrorSpan(phone);
-            if (digits.length !== 10) { if (show) el.textContent = "Enter a valid 10-digit phone number"; return false; }
-            el.textContent = ""; return true;
-        }
+    // STEP 2 VALIDATION
+    function validateStep2() {
+        const degree = document.querySelector('input[name="degree"]:checked');
+        const intake = document.querySelector('input[name="intake"]').value.trim();
+        const country = document.querySelector('input[name="country"]').value.trim();
+        const courseVal = course.value.trim();
+        return degree && intake && country && courseVal;
+    }
 
-        function validateEmail(show = false) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            const el = getErrorSpan(email);
-            if (!re.test(email.value.trim())) { if (show) el.textContent = "Enter a valid email"; return false; }
-            el.textContent = ""; return true;
-        }
+    // STEP 3 VALIDATION
+    function validateStep3(show = false) {
+        let valid = true;
 
-        function validateGender(show = false) {
-            const checked = document.querySelector('input[name="gender"]:checked');
-            if (!checked && show) {
-                const group = document.querySelector(".gender-group");
-                let el = group.querySelector(".error-msg");
+        // Visa selection
+        const visaChecked = document.querySelector('input[name="visa"]:checked');
+        if (!visaChecked) {
+            valid = false;
+            if (show) {
+                const group = document.querySelector('.additional-field .radio-group');
+                let el = group.querySelector('.error-msg');
                 if (!el) {
-                    el = document.createElement("span");
-                    el.className = "error-msg";
-                    el.style.color = "red";
-                    el.style.fontSize = "0.8em";
+                    el = document.createElement('span');
+                    el.className = 'error-msg';
+                    el.style.color = 'red';
+                    el.style.fontSize = '0.8em';
                     group.appendChild(el);
                 }
-                el.textContent = "Please select gender";
+                el.textContent = 'Please select visa option';
+            }
+        } else {
+            const el = document.querySelector('.additional-field .radio-group .error-msg');
+            if (el) el.textContent = '';
+        }
+
+        if (visaChecked?.value === 'yes') {
+            const visaCountry = document.getElementById('visaCountry');
+            if (!visaCountry.value.trim()) {
+                valid = false;
+                if (show) getErrorSpan(visaCountry).textContent = 'Please enter country';
             } else {
-                const el = document.querySelector(".gender-group .error-msg");
-                if (el) el.textContent = "";
-            }
-            return !!checked;
-        }
-
-        function validateStep1(show = false) {
-            return validateName(show) && validatePhone(show) && validateEmail(show) && validateGender(show);
-        }
-
-        function validateStep2() {
-            const degree = document.querySelector('input[name="degree"]:checked');
-            const intake = document.querySelector('input[name="intake"]').value.trim();
-            const country = document.querySelector('input[name="country"]').value.trim();
-            const courseVal = course.value.trim();
-            return degree && intake && country && courseVal;
-        }
-
-        // Reveal steps
-        function revealNextSteps() {
-            if (validateStep1(true)) {
-                academicFields.forEach(el => el.classList.remove("hidden"));
-                step2.classList.add("active");
-            } else {
-                step2.classList.remove("active");
-                step3.classList.remove("active");
-                academicFields.forEach(el => el.classList.add("hidden"));
-                additionalFields.forEach(el => el.classList.add("hidden"));
-                return;
-            }
-            if (validateStep2()) {
-                additionalFields.forEach(el => el.classList.remove("hidden"));
-                step3.classList.add("active");
-            } else {
-                additionalFields.forEach(el => el.classList.add("hidden"));
-                step3.classList.remove("active");
+                getErrorSpan(visaCountry).textContent = '';
             }
         }
 
-        // Listeners for step 1
-        [fullName, phone, email].forEach(inp => {
-            inp.addEventListener("input", () => { validateStep1(true); revealNextSteps(); });
-            inp.addEventListener("blur", () => { validateStep1(true); revealNextSteps(); });
-        });
-        document.querySelectorAll('input[name="gender"]').forEach(radio => {
-            radio.addEventListener("change", () => { validateStep1(true); revealNextSteps(); });
-        });
-
-        // Degree selection
-        document.querySelectorAll(".degree-card").forEach(card => {
-            card.addEventListener("click", () => {
-                document.querySelectorAll(".degree-card").forEach(c => c.classList.remove("active"));
-                card.classList.add("active");
-                card.querySelector("input").checked = true;
-                revealNextSteps();
-            });
-        });
-
-        // Attach listeners for Step 2 fields
-        document.querySelectorAll('input[name="degree"], input[name="intake"], input[name="country"], #course')
-            .forEach(inp => {
-                inp.addEventListener("input", revealNextSteps);
-                inp.addEventListener("change", revealNextSteps);
-            });
-
-        // Visa toggle
-        visaRadios.forEach(r => r.addEventListener("change", () => {
-            visaCountryGroup.classList.toggle("hidden", r.value !== "yes");
-        }));
-        
-        // Dropdown handling
-        document.querySelectorAll(".custom-dropdown, .additional-dropdown").forEach(dropdown => {
-            const trigger = dropdown.querySelector(".dropdown-trigger");
-            const options = dropdown.querySelectorAll(".dropdown-option");
-            const hiddenInput = dropdown.nextElementSibling;
-
-            trigger.addEventListener("click", (e) => {
-                e.stopPropagation();
-                document.querySelectorAll(".custom-dropdown, .additional-dropdown").forEach(d => {
-                    if (d !== dropdown) d.classList.remove("active");
-                });
-                dropdown.classList.toggle("active");
-            });
-
-            options.forEach(option => {
-                option.addEventListener("click", () => {
-                    const text = option.textContent.trim();
-                    trigger.textContent = text + " ▾";
-                    dropdown.classList.remove("active");
-                    if (hiddenInput) hiddenInput.value = text;
-                    if (dropdown.id === "examDropdown" && examSelectHidden) examSelectHidden.value = text;
-
-                    // --- Exam specific handling ---
-                    if (dropdown.id === "examDropdown") {
-                        const scoreField = document.getElementById("scoreField");
-                        let customExamField = document.getElementById("customExamField");
-
-                        // Create exam name field if not exists
-                        if (!customExamField) {
-                            customExamField = document.createElement("div");
-                            customExamField.className = "form-group full hidden";
-                            customExamField.id = "customExamField";
-                            customExamField.innerHTML = `<input type="text" id="customExam" placeholder="Enter exam name" />`;
-                            scoreField.parentNode.insertBefore(customExamField, scoreField);
-                        }
-
-                        const customExamInput = customExamField.querySelector("#customExam");
-
-                        if (text === "Not applicable") {
-                            customExamField.classList.add("hidden");
-                            scoreField.classList.add("hidden");
-                            customExamInput.value = "";
-                        } else if (text === "OTHER") {
-                            customExamField.classList.remove("hidden");
-                            customExamInput.removeAttribute("readonly");
-                            customExamInput.value = "";
-                            scoreField.classList.add("hidden");
-
-                            customExamInput.addEventListener("input", () => {
-                                if (customExamInput.value.trim()) {
-                                    scoreField.classList.remove("hidden");
-                                } else {
-                                    scoreField.classList.add("hidden");
-                                }
-                            });
-                        } else {
-                            customExamField.classList.remove("hidden");
-                            customExamInput.value = text;
-                            customExamInput.setAttribute("readonly", true);
-                            scoreField.classList.remove("hidden");
-                        }
-                    }
-
-                    revealNextSteps();
-                });
-            });
-        });
-
-        document.addEventListener("click", (e) => {
-            document.querySelectorAll(".custom-dropdown, .additional-dropdown").forEach(dropdown => {
-                if (!dropdown.contains(e.target)) dropdown.classList.remove("active");
-            });
-        });
-
-        // Final form submit → Save to localStorage + redirect
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            if (!validateStep1(true) || !validateStep2()) {
-                revealNextSteps();
-                alert("Please complete all required fields before submitting.");
-                return;
+        // Interests
+        const interests = document.querySelectorAll('input[name="interest"]:checked');
+        if (!interests.length) {
+            valid = false;
+            if (show) {
+                const group = document.querySelector('.interest-options');
+                let el = group.querySelector('.error-msg');
+                if (!el) {
+                    el = document.createElement('span');
+                    el.className = 'error-msg';
+                    el.style.color = 'red';
+                    el.style.fontSize = '0.8em';
+                    group.appendChild(el);
+                }
+                el.textContent = 'Please select at least one interest';
             }
+        } else {
+            const el = document.querySelector('.interest-options .error-msg');
+            if (el) el.textContent = '';
+        }
 
-            const formData = {
-                fullName: fullName.value,
-                phone: phone.value,
-                email: email.value,
-                gender: document.querySelector('input[name="gender"]:checked')?.value,
-                degree: document.querySelector('input[name="degree"]:checked')?.value,
-                intake: document.querySelector('input[name="intake"]').value,
-                country: document.querySelector('input[name="country"]').value,
-                course: course.value,
-                visa: document.querySelector('input[name="visa"]:checked')?.value,
-                visaCountry: document.getElementById("visaCountry")?.value,
-                exam: document.getElementById("customExam")?.value,
-                examScore: document.getElementById("examScore")?.value,
-                interest: document.querySelector('input[name="interest"]:checked')?.value
-            };
+        return valid;
+    }
 
-            localStorage.setItem("consultationData", JSON.stringify(formData));
-            window.location.href = "/Palak/Admission_counselling/confirmation.html";
-        });
+    // REVEAL NEXT STEPS
+    function revealNextSteps() {
+        if (validateStep1(true)) {
+            academicFields.forEach(el => el.classList.remove("hidden"));
+            step2.classList.add("active");
+        } else {
+            step2.classList.remove("active");
+            step3.classList.remove("active");
+            academicFields.forEach(el => el.classList.add("hidden"));
+            additionalFields.forEach(el => el.classList.add("hidden"));
+            return;
+        }
+        if (validateStep2()) {
+            additionalFields.forEach(el => el.classList.remove("hidden"));
+            step3.classList.add("active");
+        } else {
+            additionalFields.forEach(el => el.classList.add("hidden"));
+            step3.classList.remove("active");
+        }
+    }
 
-        revealNextSteps();
+    // STEP 1 LISTENERS
+    [fullName, phone, email].forEach(inp => {
+        inp.addEventListener("input", () => { validateStep1(true); revealNextSteps(); });
+        inp.addEventListener("blur", () => { validateStep1(true); revealNextSteps(); });
     });
+
+    document.querySelectorAll('input[name="gender"]').forEach(radio => {
+        radio.addEventListener("change", () => { validateStep1(true); revealNextSteps(); });
+    });
+
+    // DEGREE SELECTION
+    document.querySelectorAll(".degree-card").forEach(card => {
+        card.addEventListener("click", () => {
+            document.querySelectorAll(".degree-card").forEach(c => c.classList.remove("active"));
+            card.classList.add("active");
+            card.querySelector("input").checked = true;
+            revealNextSteps();
+        });
+    });
+
+    // STEP 2 INPUT LISTENERS
+    document.querySelectorAll('input[name="degree"], input[name="intake"], input[name="country"], #course')
+        .forEach(inp => {
+            inp.addEventListener("input", revealNextSteps);
+            inp.addEventListener("change", revealNextSteps);
+        });
+
+    // VISA TOGGLE
+    visaRadios.forEach(r => r.addEventListener("change", () => {
+        visaCountryGroup.classList.toggle("hidden", r.value !== "yes");
+    }));
+
+    // GENERIC DROPDOWN FUNCTION
+    function setupDropdown(dropdown, hiddenInput = null, callback = null) {
+        const trigger = dropdown.querySelector(".dropdown-trigger");
+        const options = dropdown.querySelectorAll(".dropdown-options .dropdown-option");
+
+        trigger.addEventListener("click", e => {
+            e.stopPropagation();
+            document.querySelectorAll(".cust-dropdown, .custo-dropdown, .custom-dropdown, .additional-dropdown")
+                .forEach(d => { if (d !== dropdown) d.classList.remove("active"); });
+            dropdown.classList.toggle("active");
+        });
+
+        options.forEach(option => {
+            option.addEventListener("click", () => {
+                const text = option.textContent.trim();
+                trigger.textContent = text + " ▾";
+                dropdown.classList.remove("active");
+                if (hiddenInput) hiddenInput.value = text;
+                if (callback) callback(text);
+                revealNextSteps();
+            });
+        });
+    }
+
+    // SETUP STEP 2 DROPDOWNS
+    const intakeDropdown = document.getElementById("intakeDropdown");
+    setupDropdown(intakeDropdown, intakeDropdown.nextElementSibling);
+
+    const countryDropdown = document.getElementById("countryDropdown");
+    setupDropdown(countryDropdown, countryDropdown.nextElementSibling);
+
+    // SETUP EXAM DROPDOWN (STEP 3)
+    const examDropdown = document.getElementById("examDropdown");
+    const scoreField = document.getElementById("scoreField");
+
+    setupDropdown(examDropdown, null, (text) => {
+        let customExamField = document.getElementById("customExamField");
+        if (!customExamField) {
+            customExamField = document.createElement("div");
+            customExamField.className = "form-group full hidden";
+            customExamField.id = "customExamField";
+            customExamField.innerHTML = `<input type="text" id="customExam" placeholder="Enter exam name" />`;
+            scoreField.parentNode.insertBefore(customExamField, scoreField);
+        }
+
+        const customExamInput = customExamField.querySelector("#customExam");
+
+        if (text === "Not applicable") {
+            customExamField.classList.add("hidden");
+            scoreField.classList.add("hidden");
+            customExamInput.value = "";
+        } else if (text === "OTHER") {
+            customExamField.classList.remove("hidden");
+            customExamInput.removeAttribute("readonly");
+            customExamInput.value = "";
+            scoreField.classList.add("hidden");
+            customExamInput.addEventListener("input", () => {
+                scoreField.classList.toggle("hidden", !customExamInput.value.trim());
+            });
+        } else {
+            customExamField.classList.remove("hidden");
+            customExamInput.value = text;
+            customExamInput.setAttribute("readonly", true);
+            scoreField.classList.remove("hidden");
+        }
+    });
+
+    // FORM SUBMIT
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        if (!validateStep1(true) || !validateStep2() || !validateStep3(true)) {
+            revealNextSteps();
+            alert("Please complete all required fields before submitting.");
+            return;
+        }
+
+        const selectedInterests = Array.from(document.querySelectorAll('input[name="interest"]:checked')).map(el => el.value);
+
+        const formData = {
+            fullName: fullName.value,
+            phone: phone.value,
+            email: email.value,
+            gender: document.querySelector('input[name="gender"]:checked')?.value,
+            degree: document.querySelector('input[name="degree"]:checked')?.value,
+            intake: document.querySelector('input[name="intake"]').value,
+            country: document.querySelector('input[name="country"]').value,
+            course: course.value,
+            visa: document.querySelector('input[name="visa"]:checked')?.value,
+            visaCountry: document.getElementById("visaCountry")?.value,
+            exam: document.getElementById("customExam")?.value,
+            examScore: document.getElementById("examScore")?.value,
+            interest: selectedInterests.join(", ")
+        };
+
+        localStorage.setItem("consultationData", JSON.stringify(formData));
+        window.location.href = "/Palak/Admission_counselling/confirmation.html";
+    });
+
+    revealNextSteps();
+});
 </script>
 
 <footer class="footer">

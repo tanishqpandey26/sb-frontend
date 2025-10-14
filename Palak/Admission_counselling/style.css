@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
 }
 
 .hero {
@@ -59,7 +59,7 @@ body {
 }
 
 .trusted-card .trusted-text {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 500;
     font-size: 16px;
     color: #287781;
@@ -67,7 +67,7 @@ body {
 }
 
 .hero-heading {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 700;
     font-size: 78px;
     line-height: 100%;
@@ -84,7 +84,7 @@ body {
 }
 
 .hero-subtext {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 500;
     font-size: 24px;
     line-height: 35px;
@@ -104,7 +104,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 600;
     font-size: 16px;
     border-radius: 10px;
@@ -172,7 +172,7 @@ body {
 
 /* Main heading */
 .why-section h2 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 700;
     font-size: 30px;
     color: #424242;
@@ -182,7 +182,7 @@ body {
 
 /* Subtitle */
 .why-section p {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 300;
     font-size: 22px;
     color: #424242;
@@ -249,7 +249,7 @@ body {
 
 /* Heading inside card */
 .info-card h3 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 600;
     font-size: 24px;
     color: #424242;
@@ -258,7 +258,7 @@ body {
 
 /* Paragraph inside card */
 .info-card p {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 500;
     font-size: 16px;
     line-height: 28px;
@@ -276,7 +276,7 @@ body {
     text-align: center;
     padding: 10px;
     border-radius: 10px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 600;
     font-size: 16px;
     text-decoration: none;
@@ -296,7 +296,7 @@ body {
 
 .process-heading h2 {
     text-align: center;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 700;
     font-size: 30px;
     color: #424242;
@@ -305,7 +305,7 @@ body {
 
 .process-heading p {
     text-align: center;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 400;
     font-size: 24px;
     color: #424242;
@@ -374,7 +374,7 @@ body {
 }
 
 .process-text h3 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 600;
     font-size: 24px;
     color: #424242;
@@ -383,7 +383,7 @@ body {
 }
 
 .process-text p {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 400;
     font-size: 16px;
     line-height: 27px;
@@ -392,7 +392,7 @@ body {
 }
 
 .learn-more {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 600;
     font-size: 16px;
     color: #287781;
@@ -429,7 +429,7 @@ body {
 }
 
 .guidance-heading h2 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 700;
     font-size: 30px;
     color: #424242;
@@ -437,7 +437,7 @@ body {
 }
 
 .guidance-heading p {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 400;
     font-size: 24px;
     color: #424242;
@@ -477,7 +477,7 @@ body {
 }
 
 label {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 600;
     font-size: 24px;
     color: #424242;
@@ -493,7 +493,7 @@ input,
 select,
 textarea {
     width: 100%;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-size: 16px;
     padding: 22px 26px;
     border-radius: 15px;
@@ -516,7 +516,7 @@ textarea::placeholder {
     height: 60px;
     background-color: #287781;
     color: white;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 600;
     font-size: 18px;
     border: none;
@@ -570,7 +570,7 @@ textarea::placeholder {
     position: absolute;
     top: 100px;
     left: 7%;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     opacity: 0.9;
 }
 
@@ -609,7 +609,7 @@ textarea::placeholder {
     background-color: rgba(255, 255, 255, 0.15);
     padding: 10px 20px;
     border-radius: 10px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-size: 16px;
     font-weight: 500;
     display: inline-flex;
@@ -620,7 +620,7 @@ textarea::placeholder {
 }
 
 .consultation-heading {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 700;
     font-size: 55px;
     line-height: 68px;
@@ -632,7 +632,7 @@ textarea::placeholder {
 }
 
 .consultation-subtext {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 400;
     font-size: 24px;
     line-height: 35px;
@@ -653,14 +653,14 @@ textarea::placeholder {
 }
 
 .stat-number {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
 }
 
 .stat-label {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 600;
     font-size: 16px;
     line-height: 100%;
@@ -674,7 +674,7 @@ textarea::placeholder {
 }
 
 .consultation-heading h2 {
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'BuenosAires';
     font-size: 34px;
     font-weight: 700;
     color: #424242;
@@ -682,7 +682,7 @@ textarea::placeholder {
 }
 
 .consultation-heading p {
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'BuenosAires';
     font-size: 24px;
     font-weight: 400;
     color: #424242;
@@ -704,7 +704,7 @@ textarea::placeholder {
     flex-direction: column;
     align-items: center;
     color: #717A84;
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'BuenosAires';
     font-size: 16px;
     font-weight: 700;
 }
@@ -748,7 +748,7 @@ textarea::placeholder {
 .form-header {
     background: #287781;
     color: #fff;
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'BuenosAires';
     font-size: 24px;
     font-weight: 700;
     text-align: center;
@@ -791,7 +791,7 @@ textarea::placeholder {
 }
 
 label {
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'BuenosAires';
     font-size: 16px;
     font-weight: 600;
     color: #000;
@@ -802,7 +802,7 @@ input,
 select {
     width: 100%;
     padding: 18px 20px;
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'BuenosAires';
     font-size: 12px;
     border-radius: 10px;
     border: 1px solid #ccc;
@@ -816,7 +816,7 @@ select {
 }
 
 .degree-label {
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'BuenosAires';
     font-size: 16px;
     font-weight: 600;
     color: #000;
@@ -869,7 +869,7 @@ select {
 }
 
 .degree-card p {
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'BuenosAires';
     font-size: 16px;
     font-weight: 700;
     color: #424242;
@@ -878,10 +878,10 @@ select {
 
 
 
-.custom-dropdown {
+.custom-dropdown, .cust-dropdown, .custo-dropdown {
     width: 565px;
     position: relative;
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'BuenosAires';
     font-size: 12px;
     color: #000000;
     /* opacity: 0.8; */
@@ -890,7 +890,7 @@ select {
     margin-bottom: 15px;
 }
 
-.custom-dropdown .dropdown-trigger {
+.custom-dropdown .dropdown-trigger, .cust-dropdown .dropdown-trigger, .custo-dropdown .dropdown-trigger {
     background: #fff;
     border: 1px solid #ccc;
     padding: 18px 20px;
@@ -903,7 +903,7 @@ select {
     align-items: center;
 }
 
-.custom-dropdown .dropdown-options {
+.custom-dropdown .dropdown-options, .cust-dropdown .dropdown-options, .custo-dropdown .dropdown-options {
     position: absolute;
     top: 100%;
     left: 0;
@@ -920,7 +920,7 @@ select {
     flex-direction: column;
 }
 
-.custom-dropdown .dropdown-option {
+.custom-dropdown .dropdown-option , .cust-dropdown .dropdown-option, .custo-dropdown .dropdown-option{
     padding: 12px 15px;
     font-size: 16px;
     font-weight: 700;
@@ -929,12 +929,12 @@ select {
     transition: background 0.2s ease;
 }
 
-.custom-dropdown .dropdown-option:hover {
+.custom-dropdown .dropdown-option:hover , .cust-dropdown .dropdown-option:hover, .custo-dropdown .dropdown-option:hover {
     background: #59898E33;
     color: #287781;
 }
 
-.custom-dropdown.active .dropdown-options {
+.custom-dropdown.active .dropdown-options, .cust-dropdown.active .dropdown-options, .custo-dropdown.active .dropdown-options {
     display: flex;
 }
 
@@ -942,7 +942,7 @@ select {
 .additional-dropdown {
     width: 565px;
     position: relative;
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'BuenosAires';
     font-size: 12px;
     color: #000000;
     /* opacity: 0.8; */
@@ -1001,12 +1001,12 @@ select {
 
 
 .custom-dropdown .dropdown-options,
-.additional-dropdown .dropdown-options {
+.additional-dropdown .dropdown-options, .cust-dropdown .dropdown-options, .custo-dropdown .dropdown-options {
     display: none;
 }
 
 .custom-dropdown.active .dropdown-options,
-.additional-dropdown.active .dropdown-options {
+.additional-dropdown.active .dropdown-options , .cust-dropdown.active .dropdown-options, .custo-dropdown.active .dropdown-options {
     display: flex;
 }
 
@@ -1027,31 +1027,29 @@ select {
     margin-bottom: 12px;
     flex-wrap: wrap;
 }
-
 .radio-group label {
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'BuenosAires';
     font-weight: 400;
-    /* regular */
     font-size: 16px;
     line-height: 25px;
     color: #000;
-    opacity: 1;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 0;
-    /* reset padding */
+    position: relative; /* allow nudging the input */
 }
 
 .radio-group input[type="radio"] {
     width: 24px;
     height: 24px;
     border-radius: 1px;
-    /* slightly square corners */
     accent-color: #287781;
     appearance: auto;
-    /* Keep default look but allow color override */
+
+    /* fine-tune vertical alignment */
+    position: relative;
+    top: 8px; /* adjust this value slightly to center visually */
 }
 
 
@@ -1060,7 +1058,7 @@ select {
     width: 100%;
     height: 55px;
     padding: 18px 20px;
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'BuenosAires';
     font-size: 12px;
     border-radius: 10px;
     border: 1px solid #ccc;
@@ -1090,7 +1088,7 @@ select {
     height: 59px;
     background: #287781;
     color: #fff;
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'BuenosAires';
     font-size: 16px;
     font-weight: 700;
     border: none;
@@ -1147,7 +1145,7 @@ select {
     border-radius: 999px;
     background: #fff;
     color: #424242;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 600;
     font-size: 16px;
     line-height: 1;
@@ -1249,7 +1247,7 @@ select {
   }
 
   .custom-dropdown,
-  .additional-dropdown {
+  .additional-dropdown, .cust-dropdown, .custo-dropdown {
     width: 100%;
   }
 
@@ -1261,7 +1259,7 @@ select {
 /* Small Tablets & Large Mobiles (≤ 768px) */
 @media (max-width: 768px) {
   .breadcrumb {
-    top: 70px;
+    top: 80px;
     font-size: 11px;
   }
 
@@ -1301,7 +1299,7 @@ select {
   }
 
   .custom-dropdown,
-  .additional-dropdown {
+  .additional-dropdown, .cust-dropdown,.custo-dropdown {
     width: 100%;
   }
 
@@ -1384,4 +1382,62 @@ select {
     font-size: 13px;
     height: 45px;
   }
+}
+
+.phone-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.phone-wrapper .cust-dropdown {
+    width: 120px; /* adjust as needed */
+    flex-shrink: 0;
+    height: 40px;
+    margin-top: -18px;
+}
+
+.phone-wrapper input[type="tel"] {
+    flex: 1;
+}
+
+/* ================== Interested In (Checkbox Pills) ================== */
+.interest-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.interest-options label {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.interest-options input[type="checkbox"] {
+    display: none; /* hide default checkbox */
+}
+
+.interest-options .pill {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.interest-options input[type="checkbox"]:checked + .pill {
+    background-color: #287781; /* primary color similar to form buttons */
+    color: #fff;
+    border-color: #287781;
+}
+
+/* Hover effect */
+.interest-options .pill:hover {
+    background-color: #d5faff;
+    border-color: #c7c7ff;
 }

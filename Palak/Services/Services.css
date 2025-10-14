@@ -5,7 +5,8 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+            font-family: BuenosAires;
 }
 
 
@@ -60,7 +61,8 @@ body {
 }
 
 .trusted-card .trusted-text {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+            font-family: BuenosAires;
     font-weight: 500;
     font-size: 16px;
     color: #287781;
@@ -68,7 +70,8 @@ body {
 }
 
 .hero-heading {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+            font-family: BuenosAires;
     font-weight: 700;
     font-size: 55px;
     line-height: 100%;
@@ -85,7 +88,8 @@ body {
 }
 
 .hero-subtext {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+            font-family: BuenosAires;
     font-weight: 400;
     font-size: 24px;
     line-height: 35px;
@@ -123,7 +127,8 @@ body {
 .breadcrumb {
     position: absolute;
     top: 100px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+            font-family: BuenosAires;
     opacity: 0.9;
 }
 
@@ -159,14 +164,16 @@ body {
 }
 
 .stat-number {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+            font-family: BuenosAires;
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
 }
 
 .stat-label {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+            font-family: BuenosAires;
     font-weight: 600;
     font-size: 16px;
     line-height: 100%;
@@ -185,7 +192,8 @@ body {
     height: 64px;
     background: #59898E;
     color: white;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+            font-family: BuenosAires;
     font-weight: 700;
     font-size: 34px;
     border-radius: 50%;
@@ -240,7 +248,8 @@ body {
 }
 
 h4 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+            font-family: BuenosAires;
     font-weight: 700;
     font-size: 24px;
     color: #424242;
@@ -474,7 +483,8 @@ h4 {
 }
 
 .sat-heading {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+            font-family: BuenosAires;
     font-weight: 700;
     font-size: 34px;
     line-height: 100%;
@@ -483,7 +493,8 @@ h4 {
     text-align: center;
 }
 .sat-subheading{
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+            font-family: BuenosAires;
     font-weight: 400;
     font-size: 24px;
     line-height: 150%;
@@ -517,7 +528,8 @@ h4 {
 
 /* Heading & subheading */
 .trusted-heading h2 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  
+            font-family: BuenosAires;
   font-weight: 700;
   font-size: 34px;
   line-height: 100%;
@@ -526,7 +538,8 @@ h4 {
 }
 
 .trusted-heading p {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  
+            font-family: BuenosAires;
   font-weight: 400;
   font-size: 16px;
   line-height: 25px;
@@ -553,7 +566,8 @@ h4 {
 }
 
 .stat h3 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  
+            font-family: BuenosAires;
   font-weight: 700;
   font-size: 48px;
   line-height: 100%;
@@ -561,7 +575,8 @@ h4 {
 }
 
 .stat p {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  
+            font-family: BuenosAires;
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
@@ -629,7 +644,8 @@ h4 {
 .testimonialSection {
             margin: 0 auto;
             padding: 20px;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            
+            font-family: BuenosAires;
             background: #fff;
         }
 

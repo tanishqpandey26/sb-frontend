@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
 }
 
 .hero {
@@ -59,7 +59,7 @@ body {
 }
 
 .trusted-card .trusted-text {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 500;
     font-size: 16px;
     color: #287781;
@@ -67,7 +67,7 @@ body {
 }
 
 .hero-heading {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 78px;
     line-height: 100%;
@@ -84,7 +84,7 @@ body {
 }
 
 .hero-subtext {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 500;
     font-size: 24px;
     line-height: 35px;
@@ -104,7 +104,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 600;
     font-size: 16px;
     border-radius: 10px;
@@ -159,7 +159,7 @@ body {
 }
 
 .heading {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 50px;
     line-height: 100%;
@@ -184,7 +184,7 @@ body {
     width: fit-content;         /* shrink to content */
     padding: 6px 14px;
     border-radius: 6px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 600;
     font-size: 20px;
     color: #287781;
@@ -208,7 +208,7 @@ body {
 .bread {
     position: absolute;
     top: 160px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     opacity: 0.9;
 }
 
@@ -352,7 +352,7 @@ body {
 
 
 .usa-tabs {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     padding: 40px 0;
 }
 
@@ -558,7 +558,7 @@ html {
 
 
 .top-universities-section {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     padding: 0;
 }
 
@@ -726,7 +726,7 @@ html {
 
 /* Heading text */
 .stats .stat-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 600;
     font-size: 12px;
     line-height: 100%;
@@ -736,7 +736,7 @@ html {
 }
 
 .stats .stat-value {
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-family: BuenosAires !important;
     font-weight: 700 !important;
     font-size: 24px !important;
     line-height: 100% !important;
@@ -862,7 +862,7 @@ html {
 
 
 .cost-section {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     padding: 60px 0;
 }
 
@@ -951,7 +951,7 @@ html {
 }
 
 .eligibility-btn span {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 12px;
     line-height: 100%;
@@ -1049,14 +1049,14 @@ html {
 }
 
 .admission-heading {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 34px;
     color: #424242;
 }
 
 .admission-subtext {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 400;
     font-size: 24px;
     line-height: 35px;
@@ -1078,7 +1078,7 @@ html {
     height: 64px;
     background: #59898E;
     color: white;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 34px;
     border-radius: 50%;
@@ -1124,7 +1124,7 @@ html {
 }
 
 .card-content h3 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 24px;
     color: #424242;
@@ -1147,7 +1147,7 @@ html {
 }
 
 .columns h4 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 16px;
     color: #424242;
@@ -1156,7 +1156,7 @@ html {
 }
 
 h4 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 16px;
     color: #424242;
@@ -1165,7 +1165,7 @@ h4 {
 }
 
 .columns p {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 400;
     font-size: 16px;
     line-height: 25px;
@@ -1187,7 +1187,7 @@ h4 {
     background: #287781;
     border-radius: 10px;
     padding: 10px 20px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 16px;
     line-height: 100%;
@@ -1212,7 +1212,7 @@ h4 {
     background: transparent;
     border-radius: 10px;
     padding: 10px 20px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 16px;
     line-height: 100%;
@@ -1349,7 +1349,7 @@ h4 {
 
 /* Section Heading */
 .section-heading {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 34px;
     color: #424242;
@@ -1359,7 +1359,7 @@ h4 {
 }
 
 .section-desc {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 400;
     font-size: 24px;
     line-height: 35px;
@@ -1379,7 +1379,7 @@ h4 {
 }
 
 .course-header h3 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 24px;
     color: #424242;
@@ -1438,14 +1438,14 @@ h4 {
 }
 
 .course-content h4 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 24px;
     color: #424242;
 }
 
 .course-content p {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 400;
     font-size: 16px;
     line-height: 25px;
@@ -1460,7 +1460,7 @@ h4 {
     border: none;
     border-radius: 10px;
     color: white;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 12px;
     cursor: pointer;
@@ -1603,7 +1603,7 @@ h4 {
 }
 
 .doc-intro {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 16px;
     line-height: 25px;
@@ -1618,7 +1618,7 @@ h4 {
 }
 
 .doc-list li {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 400;
     font-size: 16px;
     line-height: 32px;
@@ -1641,7 +1641,7 @@ h4 {
     padding: 10px 20px;
     border: 1px solid #287781;
     background: transparent;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 16px;
     color: #287781;
@@ -1664,7 +1664,7 @@ h4 {
 }
 
 .form-heading {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 20px;
     color: #424242;
@@ -1682,7 +1682,7 @@ h4 {
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-size: 14px;
     width: 100%;
 }
@@ -1694,7 +1694,7 @@ h4 {
 
 
 .checkbox-label {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-size: 12px;
     line-height: 16px;
     color: #424242;
@@ -1717,7 +1717,7 @@ h4 {
     color: #fff;
     border: none;
     border-radius: 8px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     cursor: pointer;
 }
@@ -1823,7 +1823,7 @@ h4 {
     opacity: 1;
 
     /* Text styles */
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-style: normal;
     /* "Bold" is handled by font-weight */
@@ -1882,7 +1882,7 @@ h4 {
 
 /* Section Heading */
 .scholarship-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 34px;
     line-height: 100%;
@@ -1892,7 +1892,7 @@ h4 {
 }
 
 .scholarship-subtitle {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 400;
     font-size: 24px;
     line-height: 35px;
@@ -1935,7 +1935,7 @@ h4 {
 
 /* Card Title */
 .card-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
@@ -1945,7 +1945,7 @@ h4 {
 
 /* Card Description */
 .card-description {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 400;
     font-size: 16px;
     line-height: 25px;
@@ -1967,7 +1967,7 @@ h4 {
     border: none;
     cursor: pointer;
     opacity: 1;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 12px;
     line-height: 100%;

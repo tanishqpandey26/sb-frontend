@@ -5,10 +5,10 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
 }
 .hero{
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     background: #EFFCFE;
     padding: 50px 0 60px 0;
 }
@@ -269,7 +269,7 @@ input[type="range"]::-moz-range-thumb:hover {
 
     
 .cost-section {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     padding: 60px 0;
 }
 
@@ -553,7 +553,7 @@ input[type="range"]::-moz-range-thumb { width:18px; height:18px; border-radius:5
 
 /* Section Heading */
 .scholarship-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 34px;
     line-height: 100%;
@@ -563,7 +563,7 @@ input[type="range"]::-moz-range-thumb { width:18px; height:18px; border-radius:5
 }
 
 .scholarship-subtitle {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 400;
     font-size: 24px;
     line-height: 35px;
@@ -606,7 +606,7 @@ input[type="range"]::-moz-range-thumb { width:18px; height:18px; border-radius:5
 
 /* Card Title */
 .card-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
@@ -616,7 +616,7 @@ input[type="range"]::-moz-range-thumb { width:18px; height:18px; border-radius:5
 
 /* Card Description */
 .card-description {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 400;
     font-size: 16px;
     line-height: 25px;
@@ -638,7 +638,7 @@ input[type="range"]::-moz-range-thumb { width:18px; height:18px; border-radius:5
 }
 
 .card-content h3 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 26px;
     color: #424242;
@@ -648,14 +648,14 @@ input[type="range"]::-moz-range-thumb { width:18px; height:18px; border-radius:5
 }
 
 .card-content p {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     color: #424242;
     margin-bottom: 15px;
     line-height: 1.6;
 }
 
 .card-content h4 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 20px;
     color: #424242;
@@ -680,7 +680,7 @@ ol{
 }
 li {
     margin-bottom: 8px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     color: #424242;
 }
     
@@ -702,7 +702,7 @@ li {
     position: absolute;
     top: 150px;
     left: 7%;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     opacity: 0.9;
 }
 
@@ -741,7 +741,7 @@ li {
     background-color: rgba(255, 255, 255, 0.15);
     padding: 10px 20px;
     border-radius: 10px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-size: 16px;
     font-weight: 500;
     display: inline-flex;
@@ -752,7 +752,7 @@ li {
 }
 
 .consultation-heading {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 55px;
     line-height: 68px;
@@ -764,7 +764,7 @@ li {
 }
 
 .consultation-subtext {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 400;
     font-size: 24px;
     line-height: 35px;
@@ -785,14 +785,14 @@ li {
 }
 
 .stat-number {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
 }
 
 .stat-label {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: BuenosAires;
     font-weight: 600;
     font-size: 16px;
     line-height: 100%;
@@ -806,7 +806,7 @@ li {
 }
 
 .consultation-heading h2 {
-    font-family: 'Plus Jakarta Sans';
+    font-family: BuenosAires;
     font-size: 34px;
     font-weight: 700;
     color: #424242;
@@ -814,7 +814,7 @@ li {
 }
 
 .consultation-heading p {
-    font-family: 'Plus Jakarta Sans';
+    font-family: BuenosAires;
     font-size: 24px;
     font-weight: 400;
     color: #424242;

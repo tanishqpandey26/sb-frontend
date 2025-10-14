@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
 }
 
 .hero {
@@ -34,7 +34,7 @@ body {
     position: absolute;
     top: 100px;
     left: 7%;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     opacity: 0.9;
 }
 
@@ -73,7 +73,7 @@ body {
     background-color: rgba(255, 255, 255, 0.15);
     padding: 10px 20px;
     border-radius: 10px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-size: 16px;
     font-weight: 500;
     display: inline-flex;
@@ -84,7 +84,7 @@ body {
 }
 
 .consultation-heading {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 700;
     font-size: 55px;
     line-height: 68px;
@@ -96,7 +96,7 @@ body {
 }
 
 .consultation-subtext {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 400;
     font-size: 24px;
     line-height: 35px;
@@ -117,14 +117,14 @@ body {
 }
 
 .stat-number {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
 }
 
 .stat-label {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'BuenosAires';
     font-weight: 600;
     font-size: 16px;
     line-height: 100%;
@@ -351,7 +351,7 @@ body {
 .country-btn {
   background: #fff;
   border: none;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'BuenosAires';
   font-weight: 600;
   font-size: 16px;
   color: #424242;
@@ -559,7 +559,7 @@ body {
 }
 
 .consultation-box h3 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'BuenosAires';
   font-weight: 700;
   font-size: 34px;
   color: #424242;
@@ -568,7 +568,7 @@ body {
 }
 
 .consultation-box p {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'BuenosAires';
   font-weight: 400;
   font-size: 24px;
   line-height: 35px;
@@ -585,7 +585,7 @@ body {
   background: linear-gradient(90deg, #195057, #4ED0E1);
   background-size: 200% 100%; /* allows movement */
   color: #fff;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'BuenosAires';
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;

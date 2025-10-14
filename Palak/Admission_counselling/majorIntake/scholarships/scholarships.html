@@ -4,555 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Confirmation</title>
-    <link rel="stylesheet" href="/Palak/Admission_counselling/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+    <title>Application Deadline</title>
+    <link rel="stylesheet" href="/Palak/USA/usastyle.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="/Palak/Admission_counselling/fixed.css" />
-    <style>
-/* Global resets */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'BuenosAires';
-  background: linear-gradient(89.07deg, rgba(0, 0, 0, 0.66) 36.56%, rgba(102, 102, 102, 0) 99.23%),
-    url('/Palak/Admission_counselling/Admission_Counselling_Images/consultation.jpg') no-repeat center center/cover;
-  background-attachment: fixed;
-}
-
-.page-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.main-content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 60px 20px;
-  margin-top: 30px;
-}
-
-/* Confirmation box wrapper */
-.confirmation-box {
-  display: flex;
-  overflow: hidden;
-  border-radius: 16.8px;
-  border: 0.7px solid rgba(26, 26, 26, 0.1);
-  background: #ffffff;
-  margin-top: 20px;
-  width: 1000px;
-  max-width: 100%;
-  min-height: 600px;
-}
-
-.confirmation-box.expanded {
-  width: 1100px;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Left Panel */
-.left-panel {
-  flex: 1;
-  min-width: 280px;
-  padding: 28px;
-  background-color: #F8F8F8;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  border-right: 1px solid #ddd;
-  text-align: center;
-}
-
-.left-panel img {
-  width: 70px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.counselling-text {
-  font-weight: 700;
-  font-size: 22px;
-  color: #1A1A1A;
-  text-align: left;
-}
-
-.session-info {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: left;
-}
-
-.icon-text {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 15px;
-  font-weight: 700;
-  color: #1A1A1A99;
-}
-
-.icon-text img {
-  width: 16px;
-  height: 16px;
-}
-
-/* Center Panel (Calendar) */
-.center-panel {
-  flex: 1.5;
-  min-width: 280px;
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.calendar-heading {
-  font-size: 20px;
-  font-weight: 700;
-  color: #1A1A1A;
-  text-align: center;
-}
-
-.calendar {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.month-year {
-  font-size: 16px;
-  font-weight: 600;
-  color: #1A1A1A;
-}
-
-.month-arrow {
-  background: transparent;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.month-arrow:hover {
-  background: #59898E33;
-}
-
-.calendar-weekdays {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  text-align: center;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.calendar-days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
-}
-
-.calendar-days div {
-  height: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-  border-radius: 6px;
-}
-
-.calendar-days .disabled {
-  color: #1A1A1A9C;
-  cursor: not-allowed;
-}
-
-.calendar-days .selectable {
-  font-weight: 700;
-  color: #59898E;
-  background: #59898E33;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.calendar-days .selectable:hover {
-  background: #cce9ff;
-}
-
-.calendar-days .selectable.active {
-  background: #287781 !important;
-  color: white !important;
-}
-
-/* Right Panel - Time */
-.right-time-panel {
-  flex: 1;
-  min-width: 280px;
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  border-left: 1px solid #ddd;
-  background: #fff;
-}
-
-.time-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.selected-date {
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.format-toggle {
-  display: flex;
-  width: 100px;
-  height: 34px;
-  background: #59898E33;
-  border-radius: 5px;
-  padding: 2px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.format-toggle label {
-  width: 50px;
-  height: 30px;
-  border-radius: 3px;
-  font-weight: 700;
-  font-size: 14px;
-  text-align: center;
-  line-height: 30px;
-  cursor: pointer;
-  transition: background 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.format-toggle input[type="radio"] {
-  display: none;
-}
-
-.format-toggle input[type="radio"]:checked+span,
-.format-toggle label:has(input:checked) {
-  background: white;
-}
-
-/* Time slots */
-.time-options {
-  display: flex; 
-  flex-direction: column; 
-  gap: 10px; 
-  margin-top: 10px;
-}
-
-.time-slot {
-  width: 100%; 
-  max-width: 236px; 
-  height: 40px; 
-  padding: 12px 24px; 
-  font-size: 16px; 
-  font-weight: 700; 
-  text-align: center; 
-  color: #287781; 
-  background: #fff; 
-  border: 1px solid #59898E; 
-  border-radius: 8px; 
-  cursor: pointer; 
-  transition: 0.2s;
-}
-
-.time-slot:hover {
-  background: #287781;
-  color: white;
-}
-
-.time-slot.active {
-  background: #287781;
-  color: white;
-  font-weight: bold;
-}
-
-.hidden { display: none; }
-
-/* Counsellor Dropdown */ 
-#counsellor 
-{ 
-  width: 100%; 
-  padding: 10px 14px; 
-  font-size: 16px; 
-  font-family: 'BuenosAires'; 
-  border: 2px solid #287781; 
-  border-radius: 12px; 
-  background-color: #ffffff; 
-  color: #333; 
-  outline: none; 
-  cursor: pointer; 
-  transition: all 0.3s ease; 
-} 
-
-#counsellor:hover 
-{ 
-  border-color: #1d5b5b; 
-  background-color: #f9f9f9; 
-} 
-
-#counsellor:focus { 
-  box-shadow: 0 0 0 3px rgba(40, 119, 129, 0.3); 
-  border-color: #287781; 
-} 
-  
-#counsellor option { 
-  font-size: 15px; 
-  padding: 8px; 
-  background-color: #fff; 
-  color: #333; 
-} 
-  
-#counsellor option:hover { 
-  background-color: #287781; 
-  color: #fff; 
-}
-.counsellor-select{
-  text-align: left;
-}
-
-/* === Submit Button === */
-.submit-btn {
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background: #287781;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-  margin-top: auto;
-}
-
-.submit-btn:hover {
-  background: #1f5c63;
-}
-
-/* =====================
-   Responsive Layout
-===================== */
-
-/* Tablets */
-@media (max-width: 992px) {
-  .confirmation-box {
-    flex-direction: column;
-    height: auto;
-  }
-  .left-panel,
-  .center-panel,
-  .right-time-panel {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #ddd;
-  }
-  .time-options {
-    flex-direction: row;
-  }
-  .time-slot {
-    flex: 1 1 45%;
-  }
-}
-
-/* Mobiles */
-@media (max-width: 600px) {
-  .calendar-days {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .time-slot {
-    flex: 1 1 100%;
-  }
-  .counselling-text {
-    font-size: 18px;
-  }
-  .format-toggle {
-    width: 80px;
-  }
-}
-
-
-
-/* ===== Modal Overlay (Confirm Schedule) ===== */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(6px); /* blur effect */
-  background: rgba(0, 0, 0, 0.4); /* semi-transparent dark overlay */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.modal.hidden {
-  display: none;
-}
-
-.modal-content {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 400px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  animation: fadeInScale 0.3s ease;
-}
-
-.modal-content h3 {
-  margin-top: 0;
-  font-size: 20px;
-  font-weight: 700;
-  color: #287781;
-}
-
-.modal-content p {
-  font-size: 15px;
-  color: #444;
-  margin: 15px 0 25px;
-}
-
-.modal-actions {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-}
-
-.cancel-btn,
-.confirm-btn {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.cancel-btn {
-  background: #e0e0e0;
-  color: #333;
-}
-
-.cancel-btn:hover {
-  background: #d6d6d6;
-}
-
-.confirm-btn {
-  background: #287781;
-  color: #fff;
-}
-
-.confirm-btn:hover {
-  background: #1f5c63;
-}
-
-/* Modal animation */
-@keyframes fadeInScale {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-/* ===== Success Card ===== */
-.success-card {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  padding: 40px 30px;
-  border-radius: 16px;
-  width: 90%;
-  max-width: 450px;
-  text-align: center;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
-  z-index: 1100;
-  animation: fadeInUp 0.4s ease;
-}
-
-.success-card.hidden {
-  display: none;
-}
-
-.success-card img {
-  width: 60px;
-  margin-bottom: 20px;
-}
-
-.success-card h2 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #287781;
-  margin: 0 0 10px;
-}
-
-.success-card p {
-  font-size: 15px;
-  color: #555;
-  margin-bottom: 25px;
-}
-
-.home-btn {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  background: #287781;
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.home-btn:hover {
-  background: #1f5c63;
-}
-
-/* Success card animation */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translate(-50%, -40%); }
-  to { opacity: 1; transform: translate(-50%, -50%); }
-}
-
-.calendly-integration{
-  margin: 80px auto 20px;
-}
-
-</style>
-
+        <link rel="stylesheet" href="/Palak/Admission_counselling/fixed.css" />  
+        <style>
+            .scholarship-section {
+    padding: 90px 20px 60px;}
+        </style>
 </head>
+
 
 <body>
 
-    <div class="page-wrapper">
-
+  <!--NavBar Section-->
 <nav class="navbar">
           <div class="navbar-left">
             <a href="/Palak/Home/home.html">
@@ -715,13 +181,77 @@ body {
           });
         </script>
 
-<div class="calendly-integration"></div>  
+ <section class="scholarship-section" id="scholarships">
+            <h2 class="scholarship-title">
+                Scholarship Opportunities for International Students
+            </h2>
+            <p class="scholarship-subtitle">
+                Studying in foreign countries can be expensive, but there are numerous scholarships available to help
+                international students achieve their academic goals.
+            </p>
 
-<!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/studykar?hide_gdpr_banner=1&text_color=424242&primary_color=287781" style="min-width:320px;height:700px;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<!-- Calendly inline widget end -->
+            <div class="cards-container">
+                <!-- Card 1 -->
+                <div class="scholarship-card" style="background-color: #E4F7FA;">
+                    <img src="/Palak/USA/USA_Images/27.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Merit-Based</h3>
+                    <p class="card-description">
+                        Awarded for academic excellence, leadership skills, or special talents
+                    </p>
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/meritBased.html'">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
 
+                <!-- Card 2 -->
+                <div class="scholarship-card" style="background-color: #FDF0F4;">
+                    <img src="/Palak/USA/USA_Images/28.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Need-Based</h3>
+                    <p class="card-description">
+                        Scholarships for students demonstrating financial need
+                    </p>
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/needBased.html'">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="scholarship-card" style="background-color: #FFF6E1;">
+                    <img src="/Palak/USA/USA_Images/29.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">University Specific</h3>
+                    <p class="card-description">
+                        Recognizing outstanding academic performance and potential
+                    </p>
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/universitySpecific.html'">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="scholarship-card" style="background-color: #E9F3FF;">
+                    <img src="/Palak/USA/USA_Images/30.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Private organization Based</h3>
+                    <p class="card-description">
+                        Scholarships offered by private companies, foundations, or NGOs for various achievements or backgrounds
+                    </p>
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/privateOrganisation.html'">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="scholarship-card" style="background-color: #EBDBFF;">
+                    <img src="/Palak/USA/USA_Images/31.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Government Funded</h3>
+                    <p class="card-description">
+                        Scholarships provided by government agencies to support international students in their studies abroad
+                    </p>
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/govtFunded.html'">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
+            </div>
+        </section>
 
 <footer class="footer">
         <div class="footer-container">
@@ -798,35 +328,9 @@ body {
             © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
         </p>
     </footer>
-    </div>
 
-    <!-- ✅ JS to generate calendar -->
-    <!-- <script>
-    const daysContainer = document.getElementById("calendarDays");
-    const selectedDateText = document.getElementById("selectedDate");
-    const timePanel = document.getElementById("timePanel");
-    const confirmationBox = document.getElementById("confirmationBox");
+    
 
-    const selectableDates = [5, 12, 18, 23, 27];
-
-    for (let i = 1; i <= 31; i++) {
-      const day = document.createElement("div");
-      day.textContent = i;
-
-      if (selectableDates.includes(i)) {
-        day.classList.add("selectable");
-        day.addEventListener("click", () => {
-          selectedDateText.textContent = `Wed, July ${i}`;
-          timePanel.classList.remove("hidden");
-          confirmationBox.classList.add("expanded");
-        });
-      } else {
-        day.classList.add("disabled");
-      }
-
-      daysContainer.appendChild(day);
-    }
-  </script> -->
 </body>
 
 </html>
