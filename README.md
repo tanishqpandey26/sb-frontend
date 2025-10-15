@@ -26,9 +26,9 @@ This is the frontend for **StudyBefikar**, a responsive website for internationa
 
 ## 👥 Contributors
 
-- [Tanisha Gupta](https://github.com/tanisha26g) – Frontend Development
+
 - [Tanishq Pandey](https://github.com/tanishqpandey26) - Frontend Development  
-- [palak1022-sb](https://github.com/palak1022-sb) – Repository Owner
+- [Tanisha Gupta](https://github.com/tanisha26g) – Frontend Development
 
 ---
 
