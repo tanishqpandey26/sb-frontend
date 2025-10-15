@@ -15,95 +15,6 @@
 <body>
 
   <!--NavBar Section-->
- <nav class="navbar">
-          <div class="navbar-left">
-            <a href="/Palak/Home/home.html">
-            <img src="/Palak/Admission_counselling/Admission_Counselling_Images/Untitled design.png" alt="Logo" class="logo">
-            </a>
-        
-          </div>
-          <ul class="navbar-right" id="mobileNav">
-
-            <li><a href="/Palak/AboutUs/aboutUs.html" class="dropdown">About</a></li>
-
-            <li class="dropdown">
-              <a href="/Palak/USA/usa.html">Countries</a>
-              <ul class="dropdown-content">
-                <li><a href="/Palak/USA/usa.html">USA</a></li>
-                <li><a href="/Palak/USA/canada.html">Canada</a></li>
-                <li><a href="/Palak/USA/uk.html">UK</a></li>
-                <li><a href="/Palak/USA/germany.html">Germany</a></li>
-                <li><a href="#">New Zealand</a></li>
-                <li><a href="/Palak/USA/australia.html">Australia</a></li>
-                <li><a href="#">Singapore</a></li>
-                <li><a href="#">Japan</a></li>
-                <li><a href="#">France</a></li>
-                <li><a href="#">Ireland</a></li>
-                <li><a href="#">Dubai</a></li>
-              </ul>
-            </li>
-        
-            <li class="dropdown">
-              <a href="/Palak/Loan/loanHome.html">Loan</a>
-              <ul class="dropdown-content">
-                <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
-                <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
-                <li><a href="/Palak/Loan/EmiCalc.html">EMI Calculator</a></li>
-                 <li><a href="/Palak/Loan/InterestCalc.html">Interest Calculator</a></li>
-                <li><a href="/Palak/Loan/refinancing.html">Loan Refinancing</a></li>
-              </ul>
-            </li>
-        
-            <li class="dropdown">
-              <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
-              <ul class="dropdown-content">
-                <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
-                <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
-                <li><a href="/Palak/Admission_counselling/Application_Deadline.html">Application Deadline</a></li>
-                <li><a href="/Palak/Admission_counselling/universityFinder/universityFinder.html">University Finder</a></li>
-              </ul>
-            </li>
-        
-            <li class="dropdown">
-              <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
-              <ul class="dropdown-content">
-                <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
-                <li><a href="#">Prepare for Exam</a></li>
-                <li><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></li>
-                <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
-              </ul>
-            </li>
-        
-            <li class="dropdown">
-              <a href="#/Palak/All_Exams/sat.html">All Exams</a>
-              <ul class="dropdown-content">
-                <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
-                <li><a href="/Palak/All_Exams/GMAT.html">GMAT</a></li>
-                <li><a href="/Palak/All_Exams/GRE.html">GRE</a></li>
-                <li><a href="/Palak/All_Exams/IELTS.html">IELTS</a></li>
-                <li><a href="/Palak/All_Exams/PTE.html">PTE</a></li>
-                <li><a href="/Palak/All_Exams/ACT.html">ACT</a></li>
-                <li><a href="/Palak/All_Exams/TOEFL.html">TOEFL</a></li>
-                <li><a href="/Palak/All_Exams/Duolingo.html">Duolingo</a></li>
-              </ul>
-            </li>
-        
-            <li class="dropdown">
-              <a href="/Palak/Services/Services.html">Services</a>
-              <ul class="dropdown-content">
-                <li><a href="/Palak/Services/Services.html">All Services</a></li>
-                <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
-                <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
-                <li><a href="#">Apply to University</a></li>
-              </ul>
-            </li>
-        
-            <li><a href="/Palak/NoticeBoard/noticeBoard.html" class="dropdown">Notice Board</a></li>
-        
-            <li><a href="/Palak/ContactUs/ContactUs.html" class="contact-btn">Contact Us</a></li>
-
-          </ul>
-          <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
 <nav class="navbar">
           <div class="navbar-left">
             <a href="/Palak/Home/home.html">
@@ -697,9 +608,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             <div class="eligibility-btn">
-                <span>Check Eligibility Now</span>
-                <img src="/Palak/USA/USA_Images/vector.png" alt="Right Arrow">
-            </div>
+            <span><a href="/Palak/Loan/loanHome.html"> Check Eligibility Now</a></span>
+            <img src="/Palak/USA/USA_Images/vector.png" alt="Right Arrow">
+        </div>
 
 
         </section>
@@ -824,9 +735,9 @@ document.addEventListener("DOMContentLoaded", () => {
         </section>
 
         <div class="admission-buttons">
-            <button class="btn-mock-test"><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></button>
-            <button class="btn-counsellor">Get help with expert counsellors</button>
-        </div>
+        <button class="btn-mock-test"><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></button>
+        <button class="btn-counsellor" onclick="window.location.href='/Palak/Admission_counselling/book-consultation.html'">Get help with expert counsellors</button>
+    </div>
 
 
         <section class="courses-section" id="courses">
@@ -985,7 +896,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Passport</li>
 
                     </ul>
-                    <button class="btn-consult"><a href="/Palak/Admission_counselling/book-consultation.html">Free Expert Consultation</a></button>
+                    <button class="btn-consult"  onclick="window.location.href='/Palak/Admission_counselling/book-consultation.html'">Free Expert Consultation</button>
                 </div>
 
                 <!-- Right Card (Form) -->
@@ -1075,12 +986,12 @@ document.addEventListener("DOMContentLoaded", () => {
         </section>
 
 
-        <section class="scholarship-section" id="scholarships">
+       <section class="scholarship-section" id="scholarships">
             <h2 class="scholarship-title">
                 Scholarship Opportunities for International Students
             </h2>
             <p class="scholarship-subtitle">
-                Studying in Germany can be expensive, but there are numerous scholarships available to help
+                Studying in foreign countries can be expensive, but there are numerous scholarships available to help
                 international students achieve their academic goals.
             </p>
 
@@ -1092,7 +1003,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p class="card-description">
                         Awarded for academic excellence, leadership skills, or special talents
                     </p>
-                    <button class="learn-more-btn">
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/meritBased.html'">
                         Learn More <span class="arrow">→</span>
                     </button>
                 </div>
@@ -1104,7 +1015,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p class="card-description">
                         Scholarships for students demonstrating financial need
                     </p>
-                    <button class="learn-more-btn">
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/needBased.html'">
                         Learn More <span class="arrow">→</span>
                     </button>
                 </div>
@@ -1112,11 +1023,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <!-- Card 3 -->
                 <div class="scholarship-card" style="background-color: #FFF6E1;">
                     <img src="/Palak/USA/USA_Images/29.png" alt="Icon" class="card-icon">
-                    <h3 class="card-title">University-Specific Scholarships</h3>
+                    <h3 class="card-title">University Specific</h3>
                     <p class="card-description">
-                        Provided directly by universities to attract talented international students.
+                        Recognizing outstanding academic performance and potential
                     </p>
-                    <button class="learn-more-btn">
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/universitySpecific.html'">
                         Learn More <span class="arrow">→</span>
                     </button>
                 </div>
@@ -1124,11 +1035,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <!-- Card 4 -->
                 <div class="scholarship-card" style="background-color: #E9F3FF;">
                     <img src="/Palak/USA/USA_Images/30.png" alt="Icon" class="card-icon">
-                    <h3 class="card-title">Government-Funded Scholarships</h3>
+                    <h3 class="card-title">Private organization Based</h3>
                     <p class="card-description">
-                        Programs like Fulbright or Humphrey Fellowships are designed for international students.
+                        Scholarships offered by private companies, foundations, or NGOs for various achievements or backgrounds
                     </p>
-                    <button class="learn-more-btn">
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/privateOrganisation.html'">
                         Learn More <span class="arrow">→</span>
                     </button>
                 </div>
@@ -1136,11 +1047,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <!-- Card 5 -->
                 <div class="scholarship-card" style="background-color: #EBDBFF;">
                     <img src="/Palak/USA/USA_Images/31.png" alt="Icon" class="card-icon">
-                    <h3 class="card-title">Private Organization Scholarships</h3>
+                    <h3 class="card-title">Government Funded</h3>
                     <p class="card-description">
-                        Sponsored by companies, NGOs, or charitable organizations.
+                        Scholarships provided by government agencies to support international students in their studies abroad
                     </p>
-                    <button class="learn-more-btn">
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/govtFunded.html'">
                         Learn More <span class="arrow">→</span>
                     </button>
                 </div>
