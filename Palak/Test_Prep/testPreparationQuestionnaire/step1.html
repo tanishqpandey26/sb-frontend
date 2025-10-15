@@ -11,13 +11,14 @@
      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="/Palak/Admission_counselling/fixed.css" /> 
 </head>
 
 <body>
 
 <!-- navbar -->
 
-       <nav class="navbar">
+<nav class="navbar">
           <div class="navbar-left">
             <a href="/Palak/Home/home.html">
             <img src="/Palak/images/Home/study-befikar1.png" alt="Logo" class="logo">
@@ -109,82 +110,66 @@
           </ul>
           <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </nav>
-        
-        <br/><br/><br/><br/>
-
-        <script>
-          const btn = document.getElementById('mobileMenuBtn');
-          const nav = document.getElementById('mobileNav');
-
-          btn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-          });
-        </script>
-        
-        <script>
-          const dropdowns = document.querySelectorAll('.dropdown');
-
-          dropdowns.forEach(dropdown => {
-            let wasClicked = false;
-            const link = dropdown.querySelector('a');
-
-            // Toggle on click
-            link.addEventListener('click', (e) => {
-              e.preventDefault();
-              e.stopPropagation();
-
-              const isOpen = dropdown.classList.contains('open');
-
-              // Close all dropdowns
-              dropdowns.forEach(d => {
-                d.classList.remove('open');
-                d.dataset.clicked = "false";
-              });
-
-              if (!isOpen) {
-                dropdown.classList.add('open');
-                dropdown.dataset.clicked = "true";
-              }
-            });
-
-            // Hover to open (desktop only)
-            dropdown.addEventListener('mouseenter', () => {
-              if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
-                dropdown.classList.add('open');
-              }
-            });
-
-            dropdown.addEventListener('mouseleave', () => {
-              if (window.innerWidth >= 1024 && dropdown.dataset.clicked !== "true") {
-                dropdown.classList.remove('open');
-              }
-            });
-          });
-
-          // Close on outside click
-          document.addEventListener('click', (e) => {
-            dropdowns.forEach(dropdown => {
-              if (!dropdown.contains(e.target)) {
-                dropdown.classList.remove('open');
-                dropdown.dataset.clicked = "false";
-              }
-            });
-          });
-        </script>
-        
         <script>
           document.addEventListener("DOMContentLoaded", () => {
-            const currentPath = window.location.pathname.split("/").pop(); // Get current file name
-            const links = document.querySelectorAll(".navbar-right a");
+            /*  mobile hamburger toggle */
+            const btn = document.getElementById("mobileMenuBtn");
+            const nav = document.getElementById("mobileNav");
 
-            links.forEach(link => {
+            btn.addEventListener("click", () => {
+              nav.classList.toggle("active");
+            });
+
+            /* dropdown logic  */
+            const dropdownLis = document.querySelectorAll(".navbar-right li.dropdown");
+
+            dropdownLis.forEach(li => {
+              let closeTimer;
+
+              const openDropdown = () => {
+                dropdownLis.forEach(d => d.classList.remove("open"));
+                li.classList.add("open");
+              };
+
+              const scheduleClose = () => {
+                closeTimer = setTimeout(() => li.classList.remove("open"), 3000);
+              };
+
+              const cancelClose = () => clearTimeout(closeTimer);
+
+              // desktop hover
+              li.addEventListener("mouseenter", () => {
+                if (window.innerWidth >= 1024) {
+                  cancelClose();
+                  openDropdown();
+                }
+              });
+              li.addEventListener("mouseleave", () => {
+                if (window.innerWidth >= 1024) scheduleClose();
+              });
+
+              // mobile tap to toggle
+              li.querySelector(":scope > a").addEventListener("click", e => {
+                if (window.innerWidth < 1024) {
+                  e.preventDefault();
+                  li.classList.toggle("open");
+                }
+              });
+            });
+
+            // close dropdowns on outside click
+            document.addEventListener("click", e => {
+              if (![...dropdownLis].some(d => d.contains(e.target))) {
+                dropdownLis.forEach(d => d.classList.remove("open"));
+              }
+            });
+
+            /* highlight active link */
+            const currentPath = window.location.pathname.split("/").pop();
+            document.querySelectorAll(".navbar-right a").forEach(link => {
               const linkPath = link.getAttribute("href").split("/").pop();
-
               if (linkPath === currentPath) {
-                // Highlight the clicked link
                 link.classList.add("active");
-
-                // Also highlight parent if inside dropdown
                 const parentDropdown = link.closest(".dropdown");
                 if (parentDropdown) {
                   const parentLink = parentDropdown.querySelector(":scope > a");
@@ -195,8 +180,7 @@
           });
         </script>
 
-
-
+<br><br><br><br>
 
 
 <!-- step-1-section -->
