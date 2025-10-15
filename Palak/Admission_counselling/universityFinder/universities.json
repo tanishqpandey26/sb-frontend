@@ -421,6 +421,31 @@
   },
 
   {
+    "id": 180,
+    "rank": 22,
+    "name": "Technical University of Munich",
+    "location": "Munich, Germany",
+    "overall": 90.2,
+    "employability": 57.3,
+    "intlSRatio": 98.9,
+    "studentDiversity": 98.9,
+    "sustainability": 87.8,
+    "country": "Germany",
+    "image": "/Palak/images/universityFinder/universityBox/germany/munich.webp",
+    "exams": [
+      {
+        "exam": "GMAT",
+        "scoreRanges": ["800-1000", "1000-1200"]  
+      },
+      {
+        "exam": "GRE",
+        "scoreRanges": ["300-320", "320-340"]
+      }
+    ],
+    "intakeMonth":["February","July"]
+  },
+
+  {
     "id": 18,
     "rank": 24,
     "name": "Johns Hopkins University",
@@ -756,7 +781,7 @@
     "studentDiversity":99.2,
     "sustainability": 77.9,
     "country": "France",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -781,7 +806,7 @@
     "studentDiversity":50,
     "sustainability": 74.4,
     "country": "USA",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/usa/nwu.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -806,7 +831,7 @@
     "studentDiversity":100,
     "sustainability": 92.5,
     "country": "Australia",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/aus/queensland.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -831,7 +856,7 @@
     "studentDiversity":60.3,
     "sustainability": 77.2,
     "country": "USA",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/usa/michigan.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -856,7 +881,7 @@
     "studentDiversity":37.7,
     "sustainability": 78,
     "country": "USA",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/usa/ucla.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -881,7 +906,7 @@
     "studentDiversity":96,
     "sustainability": 97,
     "country": "UK",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/uk/bristol.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -906,7 +931,7 @@
     "studentDiversity":73.4,
     "sustainability": 66.2,
     "country": "USA",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/usa/carnegie.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -931,7 +956,7 @@
     "studentDiversity":99.7,
     "sustainability": 91.3,
     "country": "USA",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/usa/nyu.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -956,7 +981,7 @@
     "studentDiversity":100,
     "sustainability": 92.7,
     "country": "UK",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/uk/lse.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -981,7 +1006,7 @@
     "studentDiversity": 57.6,
     "sustainability": 87,
     "country": "Germany",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/germany/ludwig.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1006,7 +1031,7 @@
     "studentDiversity": 46.2,
     "sustainability": 77.6,
     "country": "USA",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/usa/duke.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1031,7 +1056,7 @@
     "studentDiversity": 95.8,
     "sustainability": 95.7,
     "country": "NEWZEALAND",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1056,7 +1081,7 @@
     "studentDiversity": 52,
     "sustainability": 72.3,
     "country": "USA",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/usa/ucsd.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1081,7 +1106,7 @@
     "studentDiversity": 52,
     "sustainability": 70.6,
     "country": "USA",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/usa/texas.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1106,7 +1131,7 @@
     "studentDiversity": 52,
     "sustainability": 72.6,
     "country": "USA",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/usa/brown.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1131,7 +1156,7 @@
     "studentDiversity": 52.2,
     "sustainability": 75.9,
     "country": "USA",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/usa/illinois.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1156,7 +1181,7 @@
     "studentDiversity": 75.4,
     "sustainability": 92.7,
     "country": "France",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1181,7 +1206,7 @@
     "studentDiversity": 70,
     "sustainability": 89.2,
     "country": "France",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1206,7 +1231,7 @@
     "studentDiversity": 99.3,
     "sustainability": 84.6,
     "country": "UK",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/uk/warwick.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1231,7 +1256,7 @@
     "studentDiversity": 95.2,
     "sustainability": 73.8,
     "country": "Ireland",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1256,7 +1281,7 @@
     "studentDiversity": 93.9,
     "sustainability": 92.8,
     "country": "UK",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/uk/birmingham.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1281,7 +1306,7 @@
     "studentDiversity": 100,
     "sustainability": 83.7,
     "country": "Australia",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/aus/qwa.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1306,7 +1331,7 @@
     "studentDiversity": 99.1,
     "sustainability": 95.4,
     "country": "UK",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/uk/glasgow.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1331,7 +1356,7 @@
     "studentDiversity": 74.1,
     "sustainability": 85.5,
     "country": "Germany",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/germany/uh.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1356,7 +1381,7 @@
     "studentDiversity": 34.2,
     "sustainability": 74.9,
     "country": "USA",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/usa/washington.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1381,7 +1406,7 @@
     "studentDiversity": 72.5,
     "sustainability": 86.1,
     "country": "Australia",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/aus/adelaide.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1406,7 +1431,7 @@
     "studentDiversity": 43.8,
     "sustainability": 95.4,
     "country": "USA",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/usa/psu.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1431,7 +1456,7 @@
     "studentDiversity": 96.5,
     "sustainability": 76.4,
     "country": "UK",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/uk/leeds.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1456,7 +1481,7 @@
     "studentDiversity": 98.6,
     "sustainability": 95.1,
     "country": "UK",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/uk/usouth.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1481,7 +1506,7 @@
     "studentDiversity": 93.3,
     "sustainability": 73.7,
     "country": "USA",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/usa/boston.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1506,7 +1531,7 @@
     "studentDiversity": 60.2,
     "sustainability":  65.4,
     "country": "Germany",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/germany/berlin.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1531,7 +1556,7 @@
     "studentDiversity": 59.6,
     "sustainability":  88.4,
     "country": "USA",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/usa/purdue.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1556,7 +1581,7 @@
     "studentDiversity": 98.1,
     "sustainability":  94.3,
     "country": "UK",
-    "image": "/Palak/images/universityFinder/universityBox/uk/cambridge.jfif",
+    "image": "/Palak/images/universityFinder/universityBox/uk/sheffield.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1581,7 +1606,7 @@
   "studentDiversity": 94.9,
   "sustainability": 95.2,
   "country": "UK",
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/durham.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1606,7 +1631,7 @@
   "intlSRatio": 78.6,
   "studentDiversity": 80.6,
   "sustainability": 90.7,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1631,7 +1656,7 @@
   "intlSRatio": 91.7,
   "studentDiversity": 92.3,
   "sustainability": 92,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/uts.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1656,7 +1681,7 @@
   "intlSRatio": 78.5,
   "studentDiversity": 80.6,
   "sustainability": 92.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/nottingham.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1681,7 +1706,7 @@
   "intlSRatio": 56.9,
   "studentDiversity": 61.1,
   "sustainability": 79.5,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/kit.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1706,7 +1731,7 @@
   "intlSRatio": 93,
   "studentDiversity": 93.5,
   "sustainability": 82.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/rwth.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1731,7 +1756,7 @@
   "intlSRatio": 99.9,
   "studentDiversity": 99.9,
   "sustainability": 82.4,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/queen.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1757,7 +1782,7 @@
   "intlSRatio": 37,
   "studentDiversity": 42.6,
   "sustainability": 72.5,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/usa/wisconsin.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1782,7 +1807,7 @@
   "intlSRatio": 99.7,
   "studentDiversity": 99.7,
   "sustainability": 86.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/andrews.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1807,7 +1832,7 @@
   "intlSRatio": 61.9,
   "studentDiversity": 65.6,
   "sustainability": 79.8,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/usa/california.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1832,7 +1857,7 @@
   "intlSRatio": 89.6,
   "studentDiversity": 90.5,
   "sustainability": 91.7,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1857,7 +1882,7 @@
   "intlSRatio": 96.6,
   "studentDiversity": 96.8,
   "sustainability": 81.5,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/usa/rice.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1882,7 +1907,7 @@
   "intlSRatio": 76.6,
   "studentDiversity": 78.9,
   "sustainability": 90.5,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1907,7 +1932,7 @@
   "intlSRatio": 60.4,
   "studentDiversity": 64.2,
   "sustainability": 66.1,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/usa/georgia.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1932,7 +1957,7 @@
   "intlSRatio": 95.2,
   "studentDiversity": 95.5,
   "sustainability": 87.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/rmit.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1957,7 +1982,7 @@
   "intlSRatio": 47.6,
   "studentDiversity": 35.5,
   "sustainability": 58.4,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/hub.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -1982,7 +2007,7 @@
   "intlSRatio": 86.8,
   "studentDiversity": 88,
   "sustainability": 83.8,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/bath.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2007,7 +2032,7 @@
   "intlSRatio": 81,
   "studentDiversity": 82.8,
   "sustainability": 90.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/newcastle.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2032,7 +2057,7 @@
   "intlSRatio": 97.3,
   "studentDiversity": 97.5,
   "sustainability": 90.6,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/mus.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2057,7 +2082,7 @@
   "intlSRatio": 84.5,
   "studentDiversity": 85.9,
   "sustainability": 68.3,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/tub.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2082,7 +2107,7 @@
   "intlSRatio": 91.1,
   "studentDiversity": 91.8,
   "sustainability": 92.4,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/liverpool.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2107,7 +2132,7 @@
   "intlSRatio": 68.7,
   "studentDiversity": 71.7,
   "sustainability": 94,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2132,7 +2157,7 @@
   "intlSRatio": 77.8,
   "studentDiversity": 79.9,
   "sustainability": 93.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/exeter.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2157,7 +2182,7 @@
   "intlSRatio": 93.3,
   "studentDiversity": 93.8,
   "sustainability": 89.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/lancaster.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2182,7 +2207,7 @@
   "intlSRatio": 66.4,
   "studentDiversity": 69.6,
   "sustainability": 89.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2207,7 +2232,7 @@
   "intlSRatio": 75.4,
   "studentDiversity": 77.8,
   "sustainability": 93.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/york.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2232,7 +2257,7 @@
   "intlSRatio": 66.3,
   "studentDiversity": 69.6,
   "sustainability": 86.6,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2257,7 +2282,7 @@
   "intlSRatio": 70.1,
   "studentDiversity": 73,
   "sustainability": 88.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/cardiff.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2282,7 +2307,7 @@
   "intlSRatio": 54.3,
   "studentDiversity": 58.7,
   "sustainability": 82,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/curtin.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2307,7 +2332,7 @@
   "intlSRatio": 82.2,
   "studentDiversity": 83.8,
   "sustainability": 86.1,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/uw.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2332,7 +2357,7 @@
   "intlSRatio": 35.5,
   "studentDiversity": 41.2,
   "sustainability": 86.6,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2357,7 +2382,7 @@
   "intlSRatio": 31.3,
   "studentDiversity": 37.1,
   "sustainability": 94.1,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/hamburg.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2382,7 +2407,7 @@
   "intlSRatio": 85.8,
   "studentDiversity": 87,
   "sustainability": 92.4,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/reading.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2407,7 +2432,7 @@
   "intlSRatio": 39.6,
   "studentDiversity": 45,
   "sustainability": 88.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2432,7 +2457,7 @@
   "intlSRatio": 98.8,
   "studentDiversity": 98.9,
   "sustainability": 89.5,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/belfast.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2457,7 +2482,7 @@
   "intlSRatio": 44.2,
   "studentDiversity": 49.4,
   "sustainability": 85.6,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/albert.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2482,7 +2507,7 @@
   "intlSRatio": 23.9,
   "studentDiversity": 26.7,
   "sustainability": 50.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2507,7 +2532,7 @@
   "intlSRatio": 83.3,
   "studentDiversity": 84.8,
   "sustainability": 86.7,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/deakin.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2532,7 +2557,7 @@
   "intlSRatio": 56.4,
   "studentDiversity": 60.6,
   "sustainability": 86.4,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/rfw.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2557,7 +2582,7 @@
   "intlSRatio": 76.9,
   "studentDiversity": 79.1,
   "sustainability": 86,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2582,7 +2607,7 @@
   "intlSRatio": 40.5,
   "studentDiversity": 30.3,
   "sustainability": 64.5,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/ekut.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2607,7 +2632,7 @@
   "intlSRatio": 42,
   "studentDiversity": 47.3,
   "sustainability": 87.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/tud.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2632,7 +2657,7 @@
   "intlSRatio": 85.5,
   "studentDiversity": 86.8,
   "sustainability": 86.8,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2657,7 +2682,7 @@
   "intlSRatio": 71.1,
   "studentDiversity": 73.9,
   "sustainability": 87.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/lu.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2675,14 +2700,14 @@
   "id": 108,
   "rank": 226,
   "name": "Queensland University of Technology",
-  "location": "",
+  "location": "Brisbane, Australia",
   "country": "Australia",
   "overall": 53.2,
   "employability": 25.6,
   "intlSRatio": 44.8,
   "studentDiversity": 49.9,
   "sustainability": 88.5,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/qut.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2707,7 +2732,7 @@
   "intlSRatio": 36.2,
   "studentDiversity": 41.8,
   "sustainability": 84.8,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/newcastle.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2732,7 +2757,7 @@
   "intlSRatio": 98.9,
   "studentDiversity": 98.9,
   "sustainability": 83.7,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2749,7 +2774,7 @@
  {
   "id": 111,
   "rank": 232,
-  "name": "Universität Erlangen-Nürnberg",
+  "name": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
   "location": "Erlangen, Germany",
   "country": "Germany",
   "overall": 52.2,
@@ -2757,7 +2782,7 @@
   "intlSRatio": 60.6,
   "studentDiversity": 64.4,
   "sustainability": 75.4,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/fau.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2782,7 +2807,7 @@
   "intlSRatio": 97.4,
   "studentDiversity": 97.5,
   "sustainability": 82.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/latrobe.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2807,7 +2832,7 @@
   "intlSRatio": 56.7,
   "studentDiversity": 60.9,
   "sustainability": 83.3,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2832,7 +2857,7 @@
   "intlSRatio": 37.9,
   "studentDiversity": 43.4,
   "sustainability": 61,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/ug.jpg",
     "exams": [
       {
         "exam": "GMAT",
@@ -2857,7 +2882,7 @@
   "intlSRatio": 75,
   "studentDiversity": 77.4,
   "sustainability": 83.8,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2882,7 +2907,7 @@
   "intlSRatio": 89,
   "studentDiversity": 90,
   "sustainability": 84.6,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/uk/ust.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2907,7 +2932,7 @@
   "intlSRatio": 92.8,
   "studentDiversity": 93.4,
   "sustainability": 78.6,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/tuda.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2932,7 +2957,7 @@
   "intlSRatio": 61.2,
   "studentDiversity": 65,
   "sustainability": 61.8,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2957,7 +2982,7 @@
   "intlSRatio": 48.1,
   "studentDiversity": 53,
   "sustainability": 88.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -2982,7 +3007,7 @@
   "intlSRatio": 70.7,
   "studentDiversity": 73.5,
   "sustainability": 91.7,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/griffith.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3007,7 +3032,7 @@
   "intlSRatio": 47.1,
   "studentDiversity": 52,
   "sustainability": 88.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/uc.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3032,7 +3057,7 @@
   "intlSRatio": 79.7,
   "studentDiversity": 81.6,
   "sustainability": 84.8,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3057,7 +3082,7 @@
   "intlSRatio": 79.4,
   "studentDiversity": 81.3,
   "sustainability": 85.3,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3074,7 +3099,7 @@
  {
   "id": 124,
   "rank": 284,
-  "name": "University of Galway \/ Ollscoil na Gaillimhe",
+  "name": "University of Galway,Ollscoil na Gaillimhe",
   "location": "Galway, Ireland",
   "country": "Ireland",
   "overall": 47.1,
@@ -3082,7 +3107,7 @@
   "intlSRatio": 62.7,
   "studentDiversity": 66.4,
   "sustainability": 82.5,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3107,7 +3132,7 @@
   "intlSRatio": 94.7,
   "studentDiversity": 70.5,
   "sustainability": 73.4,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/sut.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3132,7 +3157,7 @@
   "intlSRatio": 61,
   "studentDiversity": 45.5,
   "sustainability": 55.7,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3157,7 +3182,7 @@
   "intlSRatio": 86.1,
   "studentDiversity": 87.3,
   "sustainability": 85.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3182,7 +3207,7 @@
   "intlSRatio": 60.9,
   "studentDiversity": 64.7,
   "sustainability": 74.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/us.jpg",
     "exams": [
       {
         "exam": "GMAT",
@@ -3207,7 +3232,7 @@
   "intlSRatio": 91.7,
   "studentDiversity": 92.3,
   "sustainability": 84,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/ut.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3232,7 +3257,7 @@
   "intlSRatio": 30,
   "studentDiversity": 36,
   "sustainability": 82.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/guf.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3257,7 +3282,7 @@
   "intlSRatio": 47.9,
   "studentDiversity": 52.7,
   "sustainability": 60,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3282,7 +3307,7 @@
   "intlSRatio": 78.9,
   "studentDiversity": 80.9,
   "sustainability": 84.5,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3307,7 +3332,7 @@
   "intlSRatio": 8.4,
   "studentDiversity": 14.1,
   "sustainability": 74.6,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/um.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3332,7 +3357,7 @@
   "intlSRatio": 46,
   "studentDiversity": 51,
   "sustainability": 79.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3357,7 +3382,7 @@
   "intlSRatio": 98.2,
   "studentDiversity": 98.3,
   "sustainability": 54.5,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3382,7 +3407,7 @@
   "intlSRatio": 65.4,
   "studentDiversity": 68.7,
   "sustainability": 83.6,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3407,7 +3432,7 @@
   "intlSRatio": 97.3,
   "studentDiversity": 97.4,
   "sustainability": 81.6,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/flinders.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3432,7 +3457,7 @@
   "intlSRatio": 55.6,
   "studentDiversity": 59.9,
   "sustainability": 72.5,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/rub.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3457,7 +3482,7 @@
   "intlSRatio": 67.7,
   "studentDiversity": 70.9,
   "sustainability": 82.6,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/wsu.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3482,7 +3507,7 @@
   "intlSRatio": 48.4,
   "studentDiversity": 53.3,
   "sustainability": 75.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3507,7 +3532,7 @@
   "intlSRatio": 77.5,
   "studentDiversity": 79.7,
   "sustainability": 39.1,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3532,7 +3557,7 @@
   "intlSRatio": 99.6,
   "studentDiversity": 99.1,
   "sustainability": 62,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3557,7 +3582,7 @@
   "intlSRatio": 100,
   "studentDiversity": 100,
   "sustainability": 74,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3582,7 +3607,7 @@
   "intlSRatio": 43.2,
   "studentDiversity": 48.4,
   "sustainability": 79.7,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3607,7 +3632,7 @@
   "intlSRatio": 48.7,
   "studentDiversity": 52,
   "sustainability": 65.5,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/usq.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3632,7 +3657,7 @@
   "intlSRatio": 19.7,
   "studentDiversity": 14.9,
   "sustainability": 50.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/jmu.jpg",
     "exams": [
       {
         "exam": "GMAT",
@@ -3657,7 +3682,7 @@
   "intlSRatio": 41.2,
   "studentDiversity": 46.6,
   "sustainability": 51.3,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/uma.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3682,7 +3707,7 @@
   "intlSRatio": 45.4,
   "studentDiversity": 33.9,
   "sustainability": 47.3,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3707,7 +3732,7 @@
   "intlSRatio": 82.5,
   "studentDiversity": 61.4,
   "sustainability": 53.4,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/murdoch.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3732,7 +3757,7 @@
   "intlSRatio": 29,
   "studentDiversity": 21.7,
   "sustainability": 63.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3757,7 +3782,7 @@
   "intlSRatio": 42.8,
   "studentDiversity": 48,
   "sustainability": 55.3,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3782,7 +3807,7 @@
   "intlSRatio": 33.3,
   "studentDiversity": 39.1,
   "sustainability": 78.7,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/luh.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3807,7 +3832,7 @@
   "intlSRatio": 37.6,
   "studentDiversity": 43.2,
   "sustainability": 81.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/james.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3832,7 +3857,7 @@
   "intlSRatio": 26.8,
   "studentDiversity": 32.8,
   "sustainability": 69.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/uk.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3857,7 +3882,7 @@
   "intlSRatio": 39.7,
   "studentDiversity": 45.1,
   "sustainability": 69.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/ub.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3882,7 +3907,7 @@
   "intlSRatio": 26.4,
   "studentDiversity": 32.4,
   "sustainability": 52.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/jgu.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3907,7 +3932,7 @@
   "intlSRatio": 94.4,
   "studentDiversity": 94.8,
   "sustainability": 81.8,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3932,7 +3957,7 @@
   "intlSRatio": 54.9,
   "studentDiversity": 59.2,
   "sustainability": 81.6,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3957,7 +3982,7 @@
   "intlSRatio": 34.9,
   "studentDiversity": 40.6,
   "sustainability": 75.3,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/up.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -3982,7 +4007,7 @@
   "intlSRatio": 82.4,
   "studentDiversity": 84,
   "sustainability": 51,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/edith.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4007,7 +4032,7 @@
   "intlSRatio": 100,
   "studentDiversity": 100,
   "sustainability": 32.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/tubf.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4032,7 +4057,7 @@
   "intlSRatio": 35.2,
   "studentDiversity": 40.9,
   "sustainability": 56.5,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4057,7 +4082,7 @@
   "intlSRatio": 83.1,
   "studentDiversity": 84.6,
   "sustainability": 73.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/uc.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4082,7 +4107,7 @@
   "intlSRatio": 28.9,
   "studentDiversity": 21.7,
   "sustainability": 53.4,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/jlu.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4107,7 +4132,7 @@
   "intlSRatio": 99.9,
   "studentDiversity": 99.4,
   "sustainability": 64.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/cqu.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4132,7 +4157,7 @@
   "intlSRatio": 24,
   "studentDiversity": 30.1,
   "sustainability": 80.7,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4157,7 +4182,7 @@
   "intlSRatio": 83.2,
   "studentDiversity": 80.4,
   "sustainability": 58.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/singapore/smu.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4180,7 +4205,7 @@
   "overall": 31.3,
   "employability": 5.3,
   "sustainability": 25,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/singapore/sut.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4205,7 +4230,7 @@
   "intlSRatio": 41.9,
   "studentDiversity": 47.2,
   "sustainability": 54.9,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4230,7 +4255,7 @@
   "intlSRatio": 94.6,
   "studentDiversity": 95,
   "sustainability": 68.7,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4255,7 +4280,7 @@
   "intlSRatio": 88.9,
   "studentDiversity": 88.5,
   "sustainability": 70.7,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/cdu.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4280,7 +4305,7 @@
   "intlSRatio": 20.5,
   "studentDiversity": 15.5,
   "sustainability": 51,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4305,7 +4330,7 @@
   "intlSRatio": 33.2,
   "studentDiversity": 24.8,
   "sustainability": 50.4,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4330,7 +4355,7 @@
   "intlSRatio": 90.4,
   "studentDiversity": 91.2,
   "sustainability": 23.5,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/aus/bond.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4355,7 +4380,7 @@
   "intlSRatio": 65.1,
   "studentDiversity": 68.5,
   "sustainability": 62.7,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4380,7 +4405,7 @@
   "intlSRatio": 68.4,
   "studentDiversity": 71.5,
   "sustainability": 55.7,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4405,7 +4430,7 @@
   "intlSRatio": 25.4,
   "studentDiversity": 19.1,
   "sustainability": 54.3,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4430,7 +4455,7 @@
   "intlSRatio": 78.5,
   "studentDiversity": 80.6,
   "sustainability": 53.3,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
@@ -4455,7 +4480,7 @@
   "intlSRatio": 51,
   "studentDiversity": 55.6,
   "sustainability": 69.2,
-  "image": "/Palak/images/universityFinder/universityBox/usa/mit.png",
+  "image": "/Palak/images/universityFinder/universityBox/germany/.webp",
     "exams": [
       {
         "exam": "GMAT",
