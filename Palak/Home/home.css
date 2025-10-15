@@ -524,11 +524,11 @@ body {
   height: 80px;
   background: #195057;
   color: #fff;
-  padding: 10px 0;
+  padding: 0px 0 10px;
   overflow: hidden;
   display: flex;
   align-items: center;
-  position: relative; 
+  justify-content: center;
 }
 
 
@@ -559,14 +559,15 @@ body {
 @media (max-width: 768px) {
   .scrollingBanner {
     height: auto; 
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #195057;
-  color: #fff;
-  padding: 10px 0;
-  overflow: hidden;
-  align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #195057;
+    color: #fff;
+    padding: 10px 0 10px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
   }
 
   .scrollText {

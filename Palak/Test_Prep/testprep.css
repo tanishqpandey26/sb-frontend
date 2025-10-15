@@ -297,6 +297,52 @@ margin-bottom: 20px;
     100% { background-position: 100% 50%; }
 }
 
+/* ============================= */
+/* RESPONSIVE MEDIA QUERIES */
+/* ============================= */
+
+/* Large Screens (Desktops) */
+@media (min-width: 1200px) {
+  .extra-button {
+    width: 30%;
+    font-size: 24px;
+    height: 68px;
+    padding: 19px 65px;
+  }
+}
+
+/* Medium Screens (Laptops/Tablets) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .extra-button {
+    width: 45%;
+    font-size: 20px;
+    height: 60px;
+    padding: 16px 50px;
+  }
+}
+
+/* Small Tablets / Large Mobiles */
+@media (max-width: 767px) and (min-width: 480px) {
+  .extra-button {
+    width: 60%;
+    font-size: 18px;
+    height: 55px;
+    padding: 14px 40px;
+  }
+}
+
+/* Small Mobiles */
+@media (max-width: 479px) {
+  .extra-button {
+    width: 80%;
+    font-size: 16px;
+    height: 50px;
+    padding: 12px 30px;
+    border-radius: 8px;
+  }
+}
+
+
 .univ-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 624px)); /* flexible but max 624px */
@@ -459,7 +505,7 @@ margin-bottom: 20px;
   }
 
   .admission-wrapper {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
 
   .admission-card {
@@ -468,9 +514,7 @@ margin-bottom: 20px;
   }
 
   .card-number {
-    width: 48px;
-    height: 48px;
-    font-size: 20px;
+    display: none;
   }
 
   .card-content h3 {
@@ -728,6 +772,10 @@ margin-bottom: 20px;
   object-fit: cover !important;
   margin-bottom: 20px !important;
 }
+.team-img {
+    filter: blur(6px);
+}
+
 
 /* Text Styles */
 .team-name {

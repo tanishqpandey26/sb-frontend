@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyBefikar</title>
+    <link rel="stylesheet" href="/Palak/USA/usastyle.css" />
+    <link rel="stylesheet" href="/Palak/Admission_counselling/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="/Palak/Admission_counselling/fixed.css" />  
+</head>
+<body>
+  <!--NavBar Section-->
+<nav class="navbar">
+          <div class="navbar-left">
+            <a href="/Palak/Home/home.html">
+            <img src="/Palak/images/Home/study-befikar1.png" alt="Logo" class="logo">
+            </a>
+        
+          </div>
+          <ul class="navbar-right" id="mobileNav">
+
+            <li><a href="/Palak/AboutUs/aboutUs.html" class="dropdown">About</a></li>
+
+            <li class="dropdown">
+              <a href="/Palak/USA/usa.html">Countries</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/USA/usa.html">USA</a></li>
+                <li><a href="/Palak/USA/uk.html">UK</a></li>
+                <li><a href="/Palak/USA/canada.html">Canada</a></li>
+                <li><a href="/Palak/USA/australia.html">Australia</a></li>
+                <li><a href="/Palak/USA/germany.html">Germany</a></li>
+                <li><a href="/Palak/USA/Ireland.html">Ireland</a></li>
+                <li><a href="/Palak/USA/France.html">France</a></li>
+                <li><a href="/Palak/USA/newzealand.html">New Zealand</a></li>
+                <li><a href="/Palak/USA/Singapore.html">Singapore</a></li>
+                <li><a href="/Palak/USA/Japan.html">Japan</a></li>
+                <li><a href="/Palak/USA/Dubai.html">Dubai</a></li>
+                <li><a href="/Palak/USA/China.html">China</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Loan/loanHome.html">Loan</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
+                <li><a href="/Palak/Loan/EmiCalc.html">EMI Calculator</a></li>
+                 <li><a href="/Palak/Loan/InterestCalc.html">Interest Calculator</a></li>
+                <li><a href="/Palak/Loan/refinancing.html">Loan Refinancing</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+                <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
+                <li><a href="/Palak/Admission_counselling/Application_Deadline.html">Application Deadline</a></li>
+                <li><a href="/Palak/Admission_counselling/universityFinder/universityFinder.html">University Finder</a></li>
+                <li><a href="/Palak/Admission_counselling/majorIntake/majorIntake.html">Major Intake</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                <li><a href="/Palak/Test_Prep/testPreparationQuestionnaire/step1.html">Prepare for Exam</a></li>
+                <li><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></li>
+                <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#/Palak/All_Exams/sat.html">All Exams</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
+                <li><a href="/Palak/All_Exams/GMAT.html">GMAT</a></li>
+                <li><a href="/Palak/All_Exams/GRE.html">GRE</a></li>
+                <li><a href="/Palak/All_Exams/IELTS.html">IELTS</a></li>
+                <li><a href="/Palak/All_Exams/PTE.html">PTE</a></li>
+                <li><a href="/Palak/All_Exams/ACT.html">ACT</a></li>
+                <li><a href="/Palak/All_Exams/TOEFL.html">TOEFL</a></li>
+                <li><a href="/Palak/All_Exams/Duolingo.html">Duolingo</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Services/Services.html">Services</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Services/Services.html">All Services</a></li>
+                <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
+                <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
+                <li><a href="#">Apply to University</a></li>
+              </ul>
+            </li>
+        
+            <li><a href="/Palak/NoticeBoard/noticeBoard.html" class="dropdown">Notice Board</a></li>
+        
+            <li><a href="/Palak/ContactUs/ContactUs.html" class="contact-btn">Contact Us</a></li>
+
+          </ul>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </nav>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            /*  mobile hamburger toggle */
+            const btn = document.getElementById("mobileMenuBtn");
+            const nav = document.getElementById("mobileNav");
+
+            btn.addEventListener("click", () => {
+              nav.classList.toggle("active");
+            });
+
+            /* dropdown logic  */
+            const dropdownLis = document.querySelectorAll(".navbar-right li.dropdown");
+
+            dropdownLis.forEach(li => {
+              let closeTimer;
+
+              const openDropdown = () => {
+                dropdownLis.forEach(d => d.classList.remove("open"));
+                li.classList.add("open");
+              };
+
+              const scheduleClose = () => {
+                closeTimer = setTimeout(() => li.classList.remove("open"), 3000);
+              };
+
+              const cancelClose = () => clearTimeout(closeTimer);
+
+              // desktop hover
+              li.addEventListener("mouseenter", () => {
+                if (window.innerWidth >= 1024) {
+                  cancelClose();
+                  openDropdown();
+                }
+              });
+              li.addEventListener("mouseleave", () => {
+                if (window.innerWidth >= 1024) scheduleClose();
+              });
+
+              // mobile tap to toggle
+              li.querySelector(":scope > a").addEventListener("click", e => {
+                if (window.innerWidth < 1024) {
+                  e.preventDefault();
+                  li.classList.toggle("open");
+                }
+              });
+            });
+
+            // close dropdowns on outside click
+            document.addEventListener("click", e => {
+              if (![...dropdownLis].some(d => d.contains(e.target))) {
+                dropdownLis.forEach(d => d.classList.remove("open"));
+              }
+            });
+
+            /* highlight active link */
+            const currentPath = window.location.pathname.split("/").pop();
+            document.querySelectorAll(".navbar-right a").forEach(link => {
+              const linkPath = link.getAttribute("href").split("/").pop();
+              if (linkPath === currentPath) {
+                link.classList.add("active");
+                const parentDropdown = link.closest(".dropdown");
+                if (parentDropdown) {
+                  const parentLink = parentDropdown.querySelector(":scope > a");
+                  if (parentLink) parentLink.classList.add("active");
+                }
+              }
+            });
+          });
+        </script>
+
+    <!--Hero Section-->
+
+    <section class="hero">
+        <div class="hero-left">
+            <div class="bread"><a href="/Palak/Home/home.html">Home</a> &gt;
+                <a href="/Palak/USA/usa.html">Countries</a> &gt;
+                <span>China</span>
+            </div>
+            <div class="trusted-card">
+                <span class="star">★</span>
+                <span class="trusted-text">Study in China</span>
+            </div>
+
+            <h1 class="heading">
+                <span class="heading1">All about Studying in</span><br>
+                <span class="heading2">China</span>
+            </h1>
+
+            <p class="hero-subtext">
+                Learn the basics of studying in China, from choosing a university to getting your visa.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="/Palak/Admission_counselling/book-consultation.html" class="btn btn-bordered">
+                    <img class="video-icon" src="/Palak/USA/USA_Images/cam-recorder.png" width="24" height="24" viewBox="0 0 24 24">
+                    Book Consultation
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+            <img src="/Palak/USA/USA_Images/Canada.png" alt="Hero Image" class="hero-img" />
+        </div>
+    </section>
+
+
+<section class="usa-tabs">
+    <div class="tab-nav-container">
+        <div class="tab-nav">
+            <a href="#why-usa" class="tab-btn active">Why Study in China?</a>
+            <a href="#top-universities" class="tab-btn">Top Universities</a>
+            <a href="#cost-usa" class="tab-btn">Finances</a>
+            <a href="#admission" class="tab-btn">College Application</a>
+            <a href="#courses" class="tab-btn">Courses</a>
+            <a href="#documents" class="tab-btn">Documents</a>
+            <a href="#visa" class="tab-btn">Visa Requirements</a>
+            <a href="#scholarships" class="tab-btn">Scholarships</a>
+        </div>
+        <div class="tab-line"></div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.tab-btn').forEach(tab => {
+            tab.addEventListener('click', function () {
+                document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+
+    <section id="why-usa" class="usa-tabs">
+        <div class="tab-content active">
+            <h2 class="tab-heading">Why Study in China?</h2>
+            <p class="tab-desc">
+                China is fast becoming a top destination for international students. With hundreds of thousands of students from around the world choosing China annually, the country offers high-quality education, globally recognised degrees, and unique cultural exposure. Studying in China prepares you for a future that blends modern innovation with rich historical heritage.  
+            </p>
+
+            <div class="usa-container">
+                <!-- Card 1 -->
+                <div class="i-card">
+                    <img src="/Palak/USA/USA_Images/T15.png" alt="Scholarships" />
+                    <h3>Generous Scholarships & Funding</h3>
+                    <p>
+                        Many Chinese universities and the Chinese government provide scholarships for international students.
+                    </p>
+                </div>
+                <div class="i-card">
+                    <img src="/Palak/USA/USA_Images/T16.png" alt="Rising Universities" />
+                    <h3>Universities on the Rise</h3>
+                    <p>
+                        Chinese universities are increasingly appearing in global rankings and gaining international reputation.
+                </div>
+
+                <div class="i-card">
+                    <img src="/Palak/USA/USA_Images/T17.png" alt="Learn Mandarin" />
+                    <h3>Learn Mandarin & Global Networking</h3>
+                    <p>
+                        Studying in China gives you the chance to learn Mandarin—one of the world’s most spoken languages—and build cross-cultural connections.
+                    </p>
+                </div>
+
+                <div class="i-card">
+                    <img src="/Palak/USA/USA_Images/T18.png" alt="Innovative Education" />
+                    <h3>Innovative & Work-Relevant Education</h3>
+                    <p>
+                        China invests heavily in STEM, research, and global collaboration — offering courses aligned with modern industrial demand.
+                    </p>
+                </div>
+
+                <div class="i-card">
+                    <img src="/Palak/USA/USA_Images/T19.png" alt="Cultural Experience" />
+                    <h3>Rich Cultural Experience</h3>
+                    <p>
+                        Living in China gives you access to ancient heritage, bustling cities, and diverse regions — a unique backdrop for your global education.
+                    </p>
+                </div>
+
+                <div class="i-card">
+                    <img src="/Palak/USA/USA_Images/T20.png" alt="Affordability" />
+                    <h3>Affordability & Value</h3>
+                    <p>
+                        Tuition and living costs in many Chinese cities can be more affordable than many Western destinations. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="more-content">
+                <button class="read-more-btn">Read More</button>
+                <div class="extra-content" style="display: none;">
+
+                    <h2 class="tab-heading">Types of Institutions</h2>
+
+                    <div class="usa-container">
+                        <div class="i-card">
+                            <img src="/Palak/USA/USA_Images/T15.png" alt="Public Universities" />
+                            <h3>Public Universities</h3>
+                            <p>
+                                Government-funded universities offering a wide range of undergraduate and postgraduate programs in English or Chinese.
+                            </p>
+                        </div>
+                        <div class="i-card">
+                            <img src="/Palak/USA/USA_Images/T16.png" alt="Private Universities" />
+                            <h3>Private & Specialised Institutions</h3>
+                            <p>
+                                Privately funded or specialised schools focusing on business, arts, design or language studies.
+                            </p>
+                        </div>
+                        <div class="i-card">
+                            <img src="/Palak/USA/USA_Images/T17.png" alt="Vocational Colleges" />
+                            <h3>Vocational Colleges & Diploma Programs</h3>
+                            <p>
+                                Institutions offering diploma or certificate programs, often shorter in duration and more skills-focused.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2 class="tab-heading">Additional Benefits of Studying in China</h2>
+
+                    <div class="usa-container">
+                        <div class="i-card">
+                            <img src="/Palak/USA/USA_Images/T18.png" alt="International Student Support" />
+                            <h3>Strong Student Support Services</h3>
+                            <p>
+                                Universities often provide dedicated international student offices, orientation programs, language support and accommodation assistance.
+                            </p>
+                        </div>
+                        <div class="i-card">
+                            <img src="/Palak/USA/USA_Images/T19.png" alt="Internships" />
+                            <h3>Internships & Career Experience</h3>
+                            <p>
+                                Many international students can access internships and part-time work opportunities in China, enhancing employability.
+                            </p>
+                        </div>
+                        <div class="i-card">
+                            <img src="/Palak/USA/USA_Images/T20.png" alt="Vibrant Campus Life" />
+                            <h3>Vibrant Campus & City Life</h3>
+                            <p>
+                                Student life in Chinese cities includes rich cultural activities, travel possibilities, and exposure to new ideas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="read-less-btn" style="display: none;">Read Less</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const readMoreBtn = document.querySelector(".read-more-btn");
+    const extraContent = document.querySelector(".extra-content");
+    const readLessBtn = document.querySelector(".read-less-btn");
+
+    // Initially hide the additional content and "Read Less" button
+    extraContent.style.display = "none";
+    readLessBtn.style.display = "none";
+
+    // Toggle between showing or hiding extra content
+    function toggleContent() {
+        if (extraContent.style.display === "none") {
+            extraContent.style.display = "block";
+            readMoreBtn.style.display = "none"; 
+            readLessBtn.style.display = "block";   // ✅ was "inline-block"
+        } else {
+            extraContent.style.display = "none";
+            readMoreBtn.style.display = "block";   // ✅ was "inline-block"
+            readLessBtn.style.display = "none"; 
+        }
+    }
+
+    // Event listener for the "Read More" / "Read Less" button
+    readMoreBtn.addEventListener("click", toggleContent);
+    readLessBtn.addEventListener("click", toggleContent);
+});
+</script>
+
+    <section id="top-universities" class="top-universities-section">
+
+        <h2 class="section-heading">Top Universities in China</h2>
+
+        <div class="marquee">
+            <div class="marquee-inner">
+                <span style="color:#FDD835;">Apply Now To The Universities</span>
+                <span style="color:#F373A8;">Apply Now To The Universities</span>
+                <span style="color:#287781;">Apply Now To The Universities</span>
+                <span style="color:#B50505;">Apply Now To The Universities</span>
+                <span style="color:#FDD835;">Apply Now To The Universities</span>
+                <span style="color:#F373A8;">Apply Now To The Universities</span>
+                <span style="color:#287781;">Apply Now To The Universities</span>
+                <span style="color:#B50505;">Apply Now To The Universities</span>
+            </div>
+        </div>
+
+        <div class="university-cards">
+
+            <!-- Example University 1 -->
+            <div class="university-card">
+                <div class="card-img">
+                    <img src="/Palak/USA/USA_Images/peking university.jpg" alt="Peking University">
+                    <span class="qs-rank">QS Rank: ~30</span>
+                </div>
+                <div class="card-content">
+                    <h3>Peking University</h3>
+                    <p class="location"><img src="/Palak//USA/USA_Images/location.png" alt=""> Beijing, China</p>
+                    <p><strong>Popular For: </strong> <span class="highlight">Computer Science, Economics</span></p>
+                    <p><strong>Founded: </strong> <span class="highlight">1898</span></p>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <p class="stat-title">Students</p>
+                            <p class="stat-value">~44,000+</p>
+                        </div>
+                        <div class="stat-box">
+                            <p class="stat-title">Estimated Tuition per year</p>
+                            <p class="stat-value">CNY 120,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example University 2 -->
+            <div class="university-card">
+                <div class="card-img">
+                    <img src="/Palak/USA/USA_Images/Tsinghua University.JPG" alt="Tsinghua University">
+                    <span class="qs-rank">QS Rank: ~20</span>
+                </div>
+                <div class="card-content">
+                    <h3>Tsinghua University</h3>
+                    <p class="location"><img src="/Palak/USA/USA_Images/location.png" alt=""> Beijing, China</p>
+                    <p><strong>Popular For: </strong> <span class="highlight">Engineering, Applied Sciences</span></p>
+                    <p><strong>Founded: </strong> <span class="highlight">1911</span></p>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <p class="stat-title">Students</p>
+                            <p class="stat-value">~48,000+</p>
+                        </div>
+                        <div class="stat-box">
+                            <p class="stat-title">Estimated Tuition per year</p>
+                            <p class="stat-value">CNY 130,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example University 3 -->
+            <div class="university-card">
+                <div class="card-img">
+                    <img src="/Palak/USA/USA_Images/Fudan University.jpg" alt="Fudan University">
+                    <span class="qs-rank">QS Rank: ~40</span>
+                </div>
+                <div class="card-content">
+                    <h3>Fudan University</h3>
+                    <p class="location"><img src="/Palak/USA/USA_Images/location.png" alt=""> Shanghai, China</p>
+                    <p><strong>Popular For: </strong> <span class="highlight">Business, Social Sciences</span></p>
+                    <p><strong>Founded: </strong> <span class="highlight">1905</span></p>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <p class="stat-title">Students</p>
+                            <p class="stat-value">~31,000+</p>
+                        </div>
+                        <div class="stat-box">
+                            <p class="stat-title">Estimated Tuition per year</p>
+                            <p class="stat-value">CNY 110,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- You can replicate similarly for other universities -->
+
+        </div>
+
+        <div class="trust-card">
+            <span class="trusted-text">Rankings reflect universities recognised globally and include China’s growing presence in global higher education.</span>
+        </div>
+
+    </section>
+
+    <section id="cost-china" class="cost-section">
+        <h2 class="cost-heading">Cost of Studying in China</h2>
+        <p class="cost-desc">
+            The cost of studying in China for international students varies depending on the institution, program, city, and your living style. Below is a broad overview of typical ranges.
+        </p>
+
+        <div class="cost-table">
+            <div class="table-header">
+                <div class="table-cell">Category</div>
+                <div class="table-cell">Details</div>
+                <div class="table-cell">Cost Range (in CNY)</div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-cell">Undergraduate Tuition</div>
+                <div class="table-cell">General Arts / Social Sciences Programs</div>
+                <div class="table-cell">60,000 - 100,000</div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-cell">Undergraduate Tuition</div>
+                <div class="table-cell">Engineering / STEM / High Demand Fields</div>
+                <div class="table-cell">100,000 - 200,000+</div>
+            </div>
+
+            <div class="table-row">
+                <div in="table-cell">Master’s / Graduate Programs</div>
+                <div class="table-cell">Business / Humanities / Social Sciences</div>
+                <div class="table-cell">80,000 - 150,000</div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-cell">Master’s / Graduate — Top Schools</div>
+                <div class="table-cell">Highly ranked universities / specialised fields</div>
+                <div class="table-cell">150,000 - 250,000+</div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-cell">Diploma / Vocational Programs</div>
+                <div class="table-cell">Short-term or community college style</div>
+                <div class="table-cell">40,000 - 80,000</div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-cell">Living Costs</div>
+                <div class="table-cell">Accommodation + Food + Miscellaneous</div>
+                <div class="table-cell">40,000 - 70,000</div>
+            </div>
+
+        </div>
+
+        <div class="eligibility-btn">
+            <span>Check Eligibility Now</span>
+            <img src="/Palak/USA/USA_Images/vector.png" alt="Right Arrow">
+        </div>
+
+    </section>
+
+    <section class="admission-section" id="admission">
+        <h2 class="admission-heading">Studying in China: Admission Guide</h2>
+        <p class="admission-subtext">
+            Choosing to study in China is an exciting step. Here’s an overview of the key admission requirements and steps to get started as an international student.
+        </p>
+
+        <div class="admission-wrapper">
+            <div class="card-number">1</div>
+            <div class="admission-card" style="background:#FDF0F4;">
+                <div class="card-content">
+                    <h3>Academic Qualifications</h3>
+                    <div class="columns">
+                        <div>
+                            <h4>Undergraduate Programs</h4>
+                            <p>Completion of secondary education (high school diploma or equivalent).</p>
+                        </div>
+                        <div>
+                            <h4>Graduate Programs</h4>
+                            <p>A bachelor’s degree or equivalent from a recognised institution.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="admission-wrapper">
+            <div class="card-number">2</div>
+            <div class="admission-card" style="background:#FFF6E1;">
+                <div class="card-content">
+                    <h3>Standardised Tests</h3>
+                    <div class="columns">
+                        <div>
+                            <h4>Undergraduate</h4>
+                            <p>Some programmes may require SAT, A-levels or local equivalents depending on university.</p>
+                        </div>
+                        <div>
+                            <h4>Graduate</h4>
+                            <p>Some programmes may require GRE/GMAT or university specific entrance exams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="admission-wrapper">
+            <div class="card-number">3</div>
+            <div class="admission-card" style="background:#F2FBFC;">
+                <div class="card-content">
+                    <h3>Language Proficiency</h3>
+                    <div>
+                        <h4>Exam Score</h4>
+                        <p>Some programmes taught in English may not require Mandarin proficiency; others may ask for HSK Chinese test or proof of English proficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="admission-wrapper">
+            <div class="card-number">4</div>
+            <div class="admission-card" style="background:#E9F3FF;">
+                <div class="card-content">
+                    <h3>Application Materials</h3>
+                    <div class="columns">
+                        <ul>
+                            <li>Academic transcripts</li>
+                            <li>Letters of recommendation (1-2)</li>
+                        </ul>
+                        <ul>
+                            <li>Statement of purpose / personal statement</li>
+                            <li>Resume or CV</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="admission-wrapper">
+            <div class="card-number">5</div>
+            <div class="admission-card" style="background:#EBDBFF;">
+                <div class="card-content">
+                    <h3>Financial Documentation</h3>
+                    <div>
+                        <h4>Documents Needed</h4>
+                        <p>Proof of funds to cover tuition and living expenses, and other university/visa related financial requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="admission-wrapper">
+            <div class="card-number">6</div>
+            <div class="admission-card" style="background:#F2FBFC;">
+                <div class="card-content">
+                    <h3>Application Fee</h3>
+                    <div class="columns">
+                        <div>
+                            <h4>Costs Range</h4>
+                            <p>Non-refundable fees vary by university; check specific institution website for exact amount.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="admission-buttons">
+        <button class="btn-mock-test"><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></button>
+        <button class="btn-counsellor">Get help with expert counsellors</button>
+    </div>
+
+    <section class="courses-section" id="courses">
+        <h2 class="section-heading">Available Courses to Study</h2>
+        <p class="section-desc">
+            China offers a wide range of courses across STEM and non-STEM fields, many taught in English, and a chance to gain an education that blends global perspectives with local expertise.
+        </p>
+
+        <!-- STEM COURSES -->
+        <div class="course-category">
+            <div class="course-header">
+                <button class="arrow-btn" id="stem-prev">&#10094;</button>
+                <h3>STEM Courses</h3>
+                <button class="arrow-btn" id="stem-next">&#10095;</button>
+            </div>
+
+            <div class="course-slider" id="stem-slider">
+                <div class="course-card">
+                    <img src="/Palak/USA/USA_Images/T9.jpg" alt="Computer Science">
+                    <div class="course-content">
+                        <h4>Computer Science</h4>
+                        <p>Explore software development, AI, data science and more in a country investing heavily in technology.</p>
+                        <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="/Palak/USA/USA_Images/T10.jpg" alt="Engineering">
+                    <div class="course-content">
+                        <h4>Engineering</h4>
+                        <p>Study mechanical, civil, electrical, aerospace and other engineering fields at modern Chinese institutions.</p>
+                        <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="/Palak/USA/USA_Images/T11.jpg" alt="Data Science">
+                    <div class="course-content">
+                        <h4>Data Science</h4>
+                        <p>Analyse large datasets, learn machine learning and analytics in an innovation-driving environment.</p>
+                        <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="/Palak/USA/USA_Images/biotechnology.jpg" alt="Biotechnology">
+                    <div class="course-content">
+                        <h4>Biotechnology</h4>
+                        <p>Engage in life sciences, biotech research and global health topics in China’s rapidly advancing research institutions.</p>
+                        <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+             <!-- NON-STEM COURSES -->
+            <div class="course-category">
+                <div class="course-header">
+                    <button class="arrow-btn" id="nonstem-prev">&#10094;</button>
+                    <h3>Non-STEM Courses</h3>
+                    <button class="arrow-btn" id="nonstem-next">&#10095;</button>
+                </div>
+
+                <div class="course-slider" id="nonstem-slider">
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/T14.jpg" alt="Business Administration">
+                        <div class="course-content">
+                            <h4>Accounting</h4>
+                            <p>Learn financial management and accounting principles to excel in the business world.</p>
+                            <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/T12.jpg" alt="Law">
+                        <div class="course-content">
+                            <h4>Finance
+                            </h4>
+                            <p>Study financial markets, investment strategies, and corporate finance management.</p>
+                            <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/T13.jpg" alt="Media Studies">
+                        <div class="course-content">
+                            <h4>Marketing</h4>
+                            <p>Learn the principles of marketing, consumer behavior, and strategic marketing techniques.</p>
+                            <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/psychology.jpg" alt="Psychology">
+                        <div class="course-content">
+                            <h4>Management</h4>
+                            <p>Study the principles of management and how to effectively lead teams and organizations.</p>
+                            <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function initSlider(prevId, nextId, sliderId) {
+            const slider = document.getElementById(sliderId);
+            const prev = document.getElementById(prevId);
+            const next = document.getElementById(nextId);
+
+            const card = slider.querySelector('.course-card');
+            const cardWidth = card.offsetWidth;
+            const gap = parseInt(getComputedStyle(slider).gap) || 0;
+            const scrollAmount = cardWidth + gap;
+
+            next.addEventListener('click', () => {
+                slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+
+            prev.addEventListener('click', () => {
+                slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        initSlider('stem-prev', 'stem-next', 'stem-slider');
+        initSlider('nonstem-prev', 'nonstem-next', 'nonstem-slider');
+    </script>
+
+    <section class="documents-section" id="documents">
+        <h2 class="section-heading">Documents required to study in China</h2>
+        <p class="section-desc">
+            When applying as an international student in China, you typically need a set of documents to complete your application and visa process.
+        </p>
+
+        <div class="documents-container">
+            <div class="doc-card left-card">
+                <p class="doc-intro">
+                    The documents may vary by institution and programme, but common items include:
+                </p>
+                <ul class="doc-list">
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Application Form</li>
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Application Fees</li>
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Statement of Purpose / Essays</li>
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Resume or CV</li>
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Letters of Recommendation</li>
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Academic Transcripts</li>
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Marksheets & Certificates</li>
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Bank Certificate / Proof of Funds</li>
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Passport Copy</li>
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Language Test Scores (if required)</li>
+                </ul>
+                <button class="btn-consult"><a href="/Palak/Admission_counselling/book-consultation.html">Free Expert Consultation</a></button>
+            </div>
+
+            <div class="doc-card right-card">
+                <h3 class="form-heading">Book your Free Consultation with Trusted Counsellors</h3>
+                <form class="consult-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Mobile Number" required>
+                    <input type="text" placeholder="Preferred Course" required>
+
+                    <div class="form-row">
+                        <select required>
+                            <option value="">Select Month</option>
+                            <option>January</option>
+                            <option>February</option>
+                            <option>March</option>
+                            <option>April</option>
+                            <option>May</option>
+                            <option>June</option>
+                            <option>July</option>
+                            <option>August</option>
+                            <option>September</option>
+                            <option>October</option>
+                            <option>November</option>
+                            <option>December</option>
+                        </select>
+                        <select required>
+                            <option value="">Select Year</option>
+                            <option>2025</option>
+                            <option>2026</option>
+                            <option>2027</option>
+                            <option>2028</option>
+                            <option>2029</option>
+                        </select>
+                    </div>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        I consent to receiving Calls, WhatsApp, Email and Google RCS from Study Befikar to assist with this enquiry.
+                    </label>
+
+                    <button type="submit" class="btn-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+<section class="documents-section" id="visa">
+            <h2 class="section-heading">Visa Requirement</h2>
+            <p class="section-desc">
+                To study in China, international students must obtain the appropriate student visa/permit. Here’s what you need to know.
+            </p>
+
+            <div class="documents-container">
+                <!-- Left Card -->
+                <div class="visa-card">
+                    <ul class="doc-list">
+                        <li>International students planning to study in Canada must obtain a visa. The most
+                            common type is the Study Permit, designed for students enrolling in accredited colleges or universities
+                            in Canada.
+                        </li>
+                    </ul>
+
+                    <p class="doc-intro">Before you apply, you need:</p>
+                    <ul class="doc-list">
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Be accepted and approved for your chosen course of study.</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Register with the Student and Exchange Visitor Information System (SEVIS) and pay a registration fee of $350 (£253).</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> You'll also need to schedule a visa interview at the
+                            Canadian embassy or consulate in your home country.</li>
+                    </ul>
+                    <p class="doc-intro">Required documents for visa interview:</p>
+                    <ul class="doc-list">
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Your passport</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Your visa application form</li>
+                        <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Financial documents demonstrating your ability to
+                            fund your education and living expenses.</li>
+                        <button class="learn-more-btn">
+                            <a href="/Palak/Services/visaassist.html">Learn More<span class="arrow">→</span></a>
+                        </button>
+
+                </div>
+            </div>
+        </section>
+     <section class="documents-section" id="visa">
+            <h2 class="section-heading">Visa & Permit Requirements</h2>
+        <p class="section-desc">
+            
+        </p>
+
+        <div class="documents-container">
+                <!-- Left Card -->
+                <div class="visa-card">
+                    <ul class="doc-list">
+                    <li>International students planning to study in China must obtain the relevant student visa (typically the X-category visa) through a Chinese consulate or embassy.</li>
+                </ul>
+
+                <p class="doc-intro">Before you apply, you should:</p>
+                <ul class="doc-list">
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Be accepted by a Chinese university and receive the official admission letter.</li>
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Meet the university’s language/academic requirements and pay any required confirmation fee.</li>
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Submit visa application through the Chinese consulate including passport, admission letter, health certificate and proof of funds.</li>
+                </ul>
+                <p class="doc-intro">Required documents for visa application:</p>
+                <ul class="doc-list">
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Valid passport</li>
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Visa application form and photo</li>
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Official admission letter from Chinese university</li>
+                    <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Proof of financial resources to cover your study and living costs</li>
+                </ul>
+                <button class="learn-more-btn">
+                    <a href="/Palak/Services/visaassist.html">Learn More<span class="arrow">→</span></a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="scholarship-section" id="scholarships">
+        <h2 class="scholarship-title">
+            Scholarship Opportunities for International Students in China
+        </h2>
+        <p class="scholarship-subtitle">
+            While studying in China, you’ll find a number of scholarships and financial aid programs to help reduce costs and support your goals.
+        </p>
+
+        <div class="cards-container">
+            <div class="scholarship-card" style="background-color: #E4F7FA;">
+                <img src="/Palak/USA/USA_Images/S1.png" alt="Icon" class="card-icon">
+                <h3 class="card-title">Merit-Based Scholarships</h3>
+                <p class="card-description">
+                    Awarded for academic excellence, leadership or special talents at Chinese universities.
+                </p>
+                <button class="learn-more-btn">
+                    Learn More <span class="arrow">→</span>
+                </button>
+            </div>
+
+            <div class="scholarship-card" style="background-color: #FDF0F4;">
+                <img src="/Palak/USA/USA_Images/S2.png" alt="Icon" class="card-icon">
+                <h3 class="card-title">Need-Based Scholarships</h3>
+                <p class="card-description">
+                    Available for students demonstrating financial need or from under-represented regions.
+                </p>
+                <button class="learn-more-btn">
+                    Learn More <span class="arrow">→</span>
+                </button>
+            </div>
+
+            <div class="scholarship-card" style="background-color: #FFF6E1;">
+                <img src="/Palak/USA/USA_Images/S3.png" alt="Icon" class="card-icon">
+                <h3 class="card-title">University-Specific Scholarships</h3>
+                <p class="card-description">
+                    Many Chinese universities offer their own funding schemes to attract international students.
+                </p>
+                <button class="learn-more-btn">
+                    Learn More <span class="arrow">→</span>
+                </button>
+            </div>
+
+            <div class="scholarship-card" style="background-color: #E9F3FF;">
+                <img src="/Palak/USA/USA_Images/S4.png" alt="Icon" class="card-icon">
+                <h3 class="card-title">Government-Funded Scholarships</h3>
+                <p class="card-description">
+                    The Chinese government and its agencies offer scholarships for international students to study in China
+                </p>
+                <button class="learn-more-btn">
+                    Learn More <span class="arrow">→</span>
+                </button>
+            </div>
+
+            <div class="scholarship-card" style="background-color: #EBDBFF;">
+                <img src="/Palak/USA/USA_Images/S5.png" alt="Icon" class="card-icon">
+                <h3 class="card-title">Private & Organisation Scholarships</h3>
+                <p class="card-description">
+                    Sponsored by companies, foundations or international organisations supporting study in China.
+                </p>
+                <button class="learn-more-btn">
+                    Learn More <span class="arrow">→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+<footer class="footer">
+        <div class="footer-container">
+            <!-- column 1: logo + about + social  -->
+            <div class="footer-col footer-about">
+                <img src="/Palak/images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="/Palak/images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- column 2: services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="/Palak/Loan/loanHome.html">Education Loans</a></li>
+                    <li><a href="/Palak/Test_Prep/testPreparationQuestionnaire/step1.html">Test Preparation</a></li>
+                    <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
+                    <li><a href="#">Application Assistance</a></li>
+                    <li><a href="#">University Shortlisting</a></li>
+                </ul>
+            </div>
+    
+            <!-- column 3-->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="/Palak/USA/usa.html">USA</a></li>
+                <li><a href="/Palak/USA/uk.html">UK</a></li>
+                <li><a href="/Palak/USA/canada.html">Canada</a></li>
+                <li><a href="/Palak/USA/australia.html">Australia</a></li>
+                <li><a href="/Palak/USA/germany.html">Germany</a></li>
+                <li><a href="/Palak/USA/Ireland.html">Ireland</a></li>
+                <li><a href="/Palak/USA/France.html">France</a></li>
+                <li><a href="/Palak/USA/newzealand.html">New Zealand</a></li>
+                <li><a href="/Palak/USA/Singapore.html">Singapore</a></li>
+                <li><a href="/Palak/USA/Japan.html">Japan</a></li>
+                <li><a href="/Palak/USA/Dubai.html">Dubai</a></li>
+                <li><a href="/Palak/USA/China.html">China</a></li>
+                </ul>
+            </div>
+    
+            <!-- column 4: contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>Dropbox@studybefikar.com</p>
+                <p>+91 74259 34504</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+
+                <h4>More Details</h4>
+                <p>Vendor Login</p>
+                <p>T&C</p>
+            </div>
+            
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+<!-- Sign In Popup -->
+<div id="popup-signin" class="popup">
+    <div class="popup-box">
+        <!-- Cross Button -->
+        <a class="cross-btn close-btn">&times;</a>
+
+        <div class="container">
+            <!-- Left: Form Section -->
+            <div class="form-section">
+                <div class="welcome-logo">
+                    <h1>Sign In</h1>
+                    <p class="subtitle">Log in to continue planning your study abroad journey</p>
+                </div>
+
+                <form action="/login" method="POST">
+                    <!-- Email -->
+                    <div class="input-group">
+                        <input type="text" name="email" placeholder="Email Address" required>
+                    </div>
+                    <!-- Password -->
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <!-- Mobile Number -->
+                    <div class="input-group mobile-input">
+                        <input type="text" name="countryCode" value="+91" readonly>
+                        <input type="text" name="mobileNumber" placeholder="Mobile Number" required>
+                    </div>
+
+                    <div class="actions">
+                        <button class="forgot-password-btn">Forgot Password</button>
+                        <button type="submit" class="login-btn">LOGIN</button>
+                    </div>
+
+                    <div class="links">
+                        <a href="#" id="open-register">Register now</a>
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <div class="divider">or</div>
+
+                    <div class="social-buttons">
+                        <button class="google-btn">
+                            <a href="/auth/google"><img src="/Palak/USA/USA_Images/google.png" alt="Google">
+                            Sign in with Google</a>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right: Image -->
+            <div class="image-section">
+                <img src="/Palak/USA/USA_Images/signin (1).jpg" alt="Study Befikar">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Register Popup -->
+<div id="popup-register" class="popup">
+    <div class="popup-box">
+        <!-- Cross Button -->
+        <a class="cross-btn close-btn">&times;</a>
+
+        <div class="container">
+            <!-- Left: Image (swapped) -->
+            <div class="image-section">
+                <img src="/Palak/USA/USA_Images/signin (1).jpg" alt="Study Befikar">
+            </div>
+
+            <!-- Right: Form -->
+            <div class="form-section">
+                <div class="welcome-logo">
+                    <h1>Register</h1>
+                    <p class="subtitle">Create your account to get started</p>
+                </div>
+
+                <form action="/register" method="POST">
+                    <!-- Name -->
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                    </div>
+                    <!-- Email -->
+                    <div class="input-group">
+                        <input type="text" name="email" placeholder="Email Address" required>
+                    </div>
+                    <!-- Password -->
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <!-- Mobile Number -->
+                    <div class="input-group mobile-input">
+                        <input type="text" name="countryCode" value="+91" readonly>
+                        <input type="text" name="mobileNumber" placeholder="Mobile Number" required>
+                    </div>
+
+                    <div class="actions">
+                        <button type="submit" class="login-btn">REGISTER</button>
+                    </div>
+
+                    <div class="links">
+                        <a href="#" id="open-signin">Already have an account? Sign in</a>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const signinPopup = document.getElementById("popup-signin");
+        const registerPopup = document.getElementById("popup-register");
+        const closeBtns = document.querySelectorAll(".close-btn");
+
+        const showPopup = (popup) => popup.style.display = "flex";
+        const hidePopup = (popup) => popup.style.display = "none";
+
+        // Auto show Sign-in popup every 10 seconds
+        const startPopupTimer = () => setTimeout(() => showPopup(signinPopup), 10000);
+        startPopupTimer();
+
+        // Close buttons
+        closeBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                hidePopup(signinPopup);
+                hidePopup(registerPopup);
+                startPopupTimer(); // restart timer when user closes
+            });
+        });
+
+        // Switch to Register popup
+        document.getElementById("open-register").addEventListener("click", (e) => {
+            e.preventDefault();
+            hidePopup(signinPopup);
+            showPopup(registerPopup);
+        });
+
+        // Switch back to Sign-in popup
+        document.getElementById("open-signin").addEventListener("click", (e) => {
+            e.preventDefault();
+            hidePopup(registerPopup);
+            showPopup(signinPopup);
+        });
+
+        // Click outside closes popup
+        window.addEventListener("click", (event) => {
+            if (event.target === signinPopup || event.target === registerPopup) {
+                hidePopup(signinPopup);
+                hidePopup(registerPopup);
+                startPopupTimer(); // restart auto timer
+            }
+        });
+    });
+</script>
+</body>
+
+</html>

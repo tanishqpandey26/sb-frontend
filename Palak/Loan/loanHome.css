@@ -740,17 +740,20 @@ font-size: 16px;
 .planfinance-btn {
   background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
   color: #fff;
-  padding: 10px 10px;
+  padding: 10px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   font-size: 12px;
-  font-weight: bold;
   font-weight: 700;
   transition: background 0.3s;
-  width: 143px;
+  width: fit-content;
+  min-width: 150px;
   height: 33px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .planfinance-btn:hover{
@@ -1190,43 +1193,64 @@ font-size: 16px;
 .countryTabContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 2rem;
-  overflow: hidden;
+  overflow-x: auto; 
+  overflow-y: hidden; 
   background: #F8F8FF88;
   box-shadow: 0px 4px 13.3px 0px #00000021;
-  width: 90%;
+  width: 95%;
   margin: 10px auto;
-  padding: 12px 21px 12px 21px;
+  padding: 12px 21px;
   border-radius: 20px;
+  scrollbar-width: thin; 
+  scrollbar-color: #195057 #f8f8ff; 
+}
+
+
+/* scrollbar*/
+.countryTabContainer::-webkit-scrollbar {
+  height: 8px;
+}
+
+.countryTabContainer::-webkit-scrollbar-track {
+  background: #f8f8ff;
+  border-radius: 10px;
+}
+
+.countryTabContainer::-webkit-scrollbar-thumb {
+  background: #195057;
+  border-radius: 10px;
 }
 
 .countryTabs {
   display: flex;
   gap: 1rem;
+  flex-wrap: nowrap; 
+  min-width: max-content; 
   background-color: #FAFAFA;
 }
 
 .countryTab {
-  padding: 10px;
+  padding: 10px 16px;
   border-radius: 9px;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
-  color:#424242;
+  color: #424242;
   font-weight: 700;
   font-size: 16px;
   box-shadow: 0px 4px 13.3px 0px #00000021;
-  width: fit-content;
+  white-space: nowrap; 
+  flex-shrink: 0; 
 }
 
 .countryTab.active {
-  color:#fff;
+  color: #fff;
   background: linear-gradient(90deg, #195057 0%, #4ED0E1 100%);
   border-radius: 10px;
   font-weight: 700;
-  font-weight: bold;
   font-size: 16px;
   box-shadow: 0px 4px 13.3px 0px #00000021;
 }
@@ -1338,7 +1362,7 @@ font-size: 16px;
   height: 35px;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
 
   .countrySpecLoanHeader {
@@ -1365,7 +1389,6 @@ font-size: 16px;
 
   .countryTabContainer::-webkit-scrollbar {
     display: block; 
-    /* display: none;  */
     height: 6px; 
   }
 
@@ -1462,7 +1485,8 @@ font-size: 16px;
 /* loan-option-section */
 
 .loanOptions {
-  padding: 2rem;
+  margin: 40px auto 20px;
+  padding: 20px;
   text-align: center;
 }
 

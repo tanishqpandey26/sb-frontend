@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'BuenosAires';
+    height: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+
+
+
+.confirmationLanding {
+  margin: 100px auto 0;
+  padding: 2rem;
+  text-align: center;
+  /* background-image: url('/Palak/Admission_counselling/Admission_Counselling_Images/consultation.jpg') ;background-size: cover; */
+  background-position: center;
+  color: white;
+}
+
+
+
+.confirmationLandingTop {
+  margin: 40px auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.confirmationLandingImg {
+  width: fit-content;
+  height: fit-content;
+  object-fit: cover;
+}
+
+.confirmationLandingName {
+  font-size: 2.125rem;
+  font-weight: 700;
+  color: #424242;
+}
+
+.confirmationLandingDesc {
+  margin: 1rem 0 2rem;
+  color: #424242;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* dropdown */
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 2rem;
+  text-align: left;
+}
+
+.dropdown-trigger {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #424242;
+}
+
+.dropdown-search {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 5px;
+  z-index: 10;
+  padding: 0;
+}
+
+.dropdown-option {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-option:hover {
+  background: #59898E33;
+  color: #287781;
+}
+
+
+/* btns*/
+.confirmationLandingBtns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.landing-btn-primary {
+  background: linear-gradient(90deg, #195057 0%, #4ed0e1 100%);
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px ;
+  padding: 10px 20px;
+  border: none;
+}
+
+.btn.secondary {
+  background: #fff;
+  color: #195057;
+  border: 0.1px solid #ccc;
+}
+
+
+#calendly-embed {
+  margin-top: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 10px;
+  overflow: hidden; 
+  min-height: 700px;
+  transition: all 0.3s ease;
+}
+
+#calendly-embed.hiddenCalendly {
+  display: none;
+}
+
+#calendly-embed iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+
+.hiddenCalendly {
+  display: none;
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .confirmationLanding {
+    padding: 1.2rem;
+  }
+
+
+  .confirmationLandingName {
+    font-size: 1.5rem;
+  }
+}

@@ -240,7 +240,7 @@
                 <img src="/Palak/USA/USA_Images/27.png" alt="Icon" class="card-icon">
                 <h3 class="card-title">Take a Free Mock Test Today</h3>
                 <p class="card-description">
-                    Experience our comprehensive assessment and get detailed performance analytics
+                    Experience comprehensive assessment and get detailed performance analytics
                 </p>
                 <button class="learn-button">
                     <a href="/Palak/Test_Prep/examprep.html">Start Mock Test </a><span class="arrow">→</span>
@@ -255,7 +255,7 @@
                     Access personalized study plans and expert-curated learning materials
                 </p>
                 <button class="learn-button">
-                    Begin Preparation <span class="arrow">→</span>
+                    <a href="/Palak/Test_Prep/testPreparationQuestionnaire/step1.html">Begin Preparation</a> <span class="arrow">→</span>
                 </button>
             </div>
     
@@ -272,7 +272,107 @@
             </div>
         </div>
     </section>
+<style>
+    .scholarship-section {
+    margin: 50px 20px;
+    overflow-x: hidden; /* prevent horizontal scroll */
+}
 
+/* Cards Container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%; /* fluid */
+    max-width: 1320px;
+    margin: 0 auto;
+    box-sizing: border-box; /* include padding in width */
+    padding: 10px 10px; /* optional side padding */
+}
+.scholar-card {
+    flex: 1 1 300px; /* grow, shrink, min width 300px */
+    max-width: 420px;
+    box-sizing: border-box;
+}
+
+/* Tablet (<= 992px) */
+@media (max-width: 992px) {
+    .scholarship-title {
+        font-size: 30px;
+    }
+
+    .scholarship-subtitle {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .cards-container {
+        gap: 15px;
+    }
+
+    .scholar-card {
+        padding: 25px 20px;
+        max-width: 360px;
+    }
+
+    .card-title {
+        font-size: 26px;
+    }
+
+    .card-description {
+        font-size: 15px;
+    }
+
+    .learn-button {
+        font-size: 13px;
+        padding: 10px 18px;
+    }
+}
+
+/* Mobile (<= 576px) */
+@media (max-width: 576px) {
+    .scholarship-title {
+        font-size: 22px;
+    }
+
+    .scholarship-subtitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .scholar-card {
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .card-title {
+        font-size: 22px;
+    }
+
+    .card-description {
+        font-size: 14px;
+    }
+
+    .learn-button {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .card-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+}</style>
 
 <section class="test-prep-section">
     <h2>Get the Best Test Prep with Study Befikar</h2>
@@ -525,7 +625,9 @@
 
 <button class="extra-button">English Proficiency</button>
 
+
 <!-- Auto Scrolling Cards Section -->
+
 <div class="autoCards-container">
     <div class="autoCards-wrapper">
 
@@ -572,28 +674,15 @@
 
         <!-- Card 4 -->
         <div class="autoCards-card">
-            <img src="/Palak/Test_Prep/Test_Prep_Images/IELTS.png" alt="Card Image" class="autoCards-img" />
-            <h3 class="autoCards-title">IELTS</h3>
-            <h4 class="autoCards-subtitle">International English Language Testing System</h4>
+            <img src="/Palak/Test_Prep/Test_Prep_Images/DET.png" alt="Card Image" class="autoCards-img" />
+            <h3 class="autoCards-title">DET</h3>
+            <h4 class="autoCards-subtitle">Duolingo English Test</h4>
             <ul class="autoCards-list">
                 <li><span>✔</span>Certified trainers</li>
                 <li><span>✔</span>Personalized assessments</li>
                 <li><span>✔</span>Online & offline batches</li>
             </ul>
-            <button class="learn-button"><a href="/Palak/All_Exams/IELTS.html">Learn More about IELTS</a></button>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="autoCards-card">
-            <img src="/Palak/Test_Prep/Test_Prep_Images/TOEFL.png" alt="Card Image" class="autoCards-img" />
-            <h3 class="autoCards-title">TOEFL</h3>
-            <h4 class="autoCards-subtitle">Test of English as a Foreign Language</h4>
-            <ul class="autoCards-list">
-                <li><span>✔</span>Expert-led coaching</li>
-                <li><span>✔</span> Realistic assessments</li>
-                <li><span>✔</span> Tailored study plans</li>
-            </ul>
-            <button class="learn-button"><a href="/Palak/All_Exams/TOEFL.html">Learn More about TOEFL</a></button>
+            <button class="learn-button"><a href="/Palak/All_Exams/Duolingo.html">Learn More about DET</a></button>
         </div>
     </div>
 
@@ -683,8 +772,36 @@
         startAuto();
     })();
 </script>
+<style>
+   @media (max-width: 768px) {
+  .autoCards-container {
+    overflow-x: auto; /* allow horizontal scroll */
+    padding-left: 10px; /* some padding for edges */
+    -webkit-overflow-scrolling: touch;
+  }
 
+  .autoCards-wrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap; /* keep in a row */
+    transition: none; /* disable transform for manual scroll */
+  }
 
+  .autoCards-card {
+    flex: 0 0 80%; /* almost full width */
+    max-width: 80%;
+    height: auto;
+    margin: 0; /* remove auto centering */
+  }
+  .autoCards-img{
+    width: 90%;
+  }
+  .autoCards-indicators{
+    display: none; /* hide indicators on small screens */
+  }
+}
+
+</style>
 
 </section>
 
