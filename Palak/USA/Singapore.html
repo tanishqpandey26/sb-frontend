@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyBefikar</title>
+    <link rel="stylesheet" href="/Palak/USA/usastyle.css" />
+    <link rel="stylesheet" href="/Palak/Admission_counselling/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="/Palak/Admission_counselling/fixed.css" />  
+</head>
+<body>
+  <!--NavBar Section-->
+<nav class="navbar">
+          <div class="navbar-left">
+            <a href="/Palak/Home/home.html">
+            <img src="/Palak/images/Home/study-befikar1.png" alt="Logo" class="logo">
+            </a>
+        
+          </div>
+          <ul class="navbar-right" id="mobileNav">
+
+            <li><a href="/Palak/AboutUs/aboutUs.html" class="dropdown">About</a></li>
+
+            <li class="dropdown">
+              <a href="/Palak/USA/usa.html">Countries</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/USA/usa.html">USA</a></li>
+                <li><a href="/Palak/USA/uk.html">UK</a></li>
+                <li><a href="/Palak/USA/canada.html">Canada</a></li>
+                <li><a href="/Palak/USA/australia.html">Australia</a></li>
+                <li><a href="/Palak/USA/germany.html">Germany</a></li>
+                <li><a href="/Palak/USA/Ireland.html">Ireland</a></li>
+                <li><a href="/Palak/USA/France.html">France</a></li>
+                <li><a href="/Palak/USA/newzealand.html">New Zealand</a></li>
+                <li><a href="/Palak/USA/Singapore.html">Singapore</a></li>
+                <li><a href="/Palak/USA/Japan.html">Japan</a></li>
+                <li><a href="/Palak/USA/Dubai.html">Dubai</a></li>
+                <li><a href="/Palak/USA/China.html">China</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Loan/loanHome.html">Loan</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Loan/loanHome.html">Check Eligibility</a></li>
+                <li><a href="/Palak/Loan/bankdetail.html">Available Banks</a></li>
+                <li><a href="/Palak/Loan/EmiCalc.html">EMI Calculator</a></li>
+                 <li><a href="/Palak/Loan/InterestCalc.html">Interest Calculator</a></li>
+                <li><a href="/Palak/Loan/refinancing.html">Loan Refinancing</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Admission_counselling/admit.html">Admission Process</a></li>
+                <li><a href="/Palak/Admission_counselling/book-consultation.html">Book Consultation</a></li>
+                <li><a href="/Palak/Admission_counselling/Application_Deadline.html">Application Deadline</a></li>
+                <li><a href="/Palak/Admission_counselling/universityFinder/universityFinder.html">University Finder</a></li>
+                <li><a href="/Palak/Admission_counselling/majorIntake/majorIntake.html">Major Intake</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Test_Prep/testprep.html">Test Preparation</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Test_Prep/testprep.html">Test Prep Services</a></li>
+                <li><a href="/Palak/Test_Prep/testPreparationQuestionnaire/step1.html">Prepare for Exam</a></li>
+                <li><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></li>
+                <li><a href="/Palak/Test_Prep/Exam_Deadline.html">Exam Deadlines</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="#/Palak/All_Exams/sat.html">All Exams</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/All_Exams/sat.html">SAT</a></li>
+                <li><a href="/Palak/All_Exams/GMAT.html">GMAT</a></li>
+                <li><a href="/Palak/All_Exams/GRE.html">GRE</a></li>
+                <li><a href="/Palak/All_Exams/IELTS.html">IELTS</a></li>
+                <li><a href="/Palak/All_Exams/PTE.html">PTE</a></li>
+                <li><a href="/Palak/All_Exams/ACT.html">ACT</a></li>
+                <li><a href="/Palak/All_Exams/TOEFL.html">TOEFL</a></li>
+                <li><a href="/Palak/All_Exams/Duolingo.html">Duolingo</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown">
+              <a href="/Palak/Services/Services.html">Services</a>
+              <ul class="dropdown-content">
+                <li><a href="/Palak/Services/Services.html">All Services</a></li>
+                <li><a href="/Palak/Services/visaassist.html">Visa Assistance</a></li>
+                <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
+                <li><a href="#">Apply to University</a></li>
+              </ul>
+            </li>
+        
+            <li><a href="/Palak/NoticeBoard/noticeBoard.html" class="dropdown">Notice Board</a></li>
+        
+            <li><a href="/Palak/ContactUs/ContactUs.html" class="contact-btn">Contact Us</a></li>
+
+          </ul>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </nav>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            /*  mobile hamburger toggle */
+            const btn = document.getElementById("mobileMenuBtn");
+            const nav = document.getElementById("mobileNav");
+
+            btn.addEventListener("click", () => {
+              nav.classList.toggle("active");
+            });
+
+            /* dropdown logic  */
+            const dropdownLis = document.querySelectorAll(".navbar-right li.dropdown");
+
+            dropdownLis.forEach(li => {
+              let closeTimer;
+
+              const openDropdown = () => {
+                dropdownLis.forEach(d => d.classList.remove("open"));
+                li.classList.add("open");
+              };
+
+              const scheduleClose = () => {
+                closeTimer = setTimeout(() => li.classList.remove("open"), 3000);
+              };
+
+              const cancelClose = () => clearTimeout(closeTimer);
+
+              // desktop hover
+              li.addEventListener("mouseenter", () => {
+                if (window.innerWidth >= 1024) {
+                  cancelClose();
+                  openDropdown();
+                }
+              });
+              li.addEventListener("mouseleave", () => {
+                if (window.innerWidth >= 1024) scheduleClose();
+              });
+
+              // mobile tap to toggle
+              li.querySelector(":scope > a").addEventListener("click", e => {
+                if (window.innerWidth < 1024) {
+                  e.preventDefault();
+                  li.classList.toggle("open");
+                }
+              });
+            });
+
+            // close dropdowns on outside click
+            document.addEventListener("click", e => {
+              if (![...dropdownLis].some(d => d.contains(e.target))) {
+                dropdownLis.forEach(d => d.classList.remove("open"));
+              }
+            });
+
+            /* highlight active link */
+            const currentPath = window.location.pathname.split("/").pop();
+            document.querySelectorAll(".navbar-right a").forEach(link => {
+              const linkPath = link.getAttribute("href").split("/").pop();
+              if (linkPath === currentPath) {
+                link.classList.add("active");
+                const parentDropdown = link.closest(".dropdown");
+                if (parentDropdown) {
+                  const parentLink = parentDropdown.querySelector(":scope > a");
+                  if (parentLink) parentLink.classList.add("active");
+                }
+              }
+            });
+          });
+        </script>
+
+    <!--Hero Section-->
+
+    <section class="hero">
+        <div class="hero-left">
+            <div class="bread"><a href="/Palak/Home/home.html">Home</a> &gt;
+                <a href="/Palak/USA/usa.html">Countries</a> &gt;
+                <span>Singapore</span>
+            </div>
+            <div class="trusted-card">
+                <span class="star">★</span>
+                <span class="trusted-text">Study in Singapore</span>
+            </div>
+
+            <h1 class="heading">
+                <span class="heading1">All about Studying in</span><br>
+                <span class="heading2">Singapore</span>
+            </h1>
+
+            <p class="hero-subtext">
+                Learn the basics of studying in Singapore, from choosing a university to getting your visa.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="/Palak/Admission_counselling/book-consultation.html" class="btn btn-bordered">
+                    <img class="video-icon" src="/Palak/USA/USA_Images/cam-recorder.png" width="24" height="24" viewBox="0 0 24 24">
+                    Book Consultation
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+            <img src="/Palak/USA/USA_Images/NewZealand.png" alt="Hero Image" class="hero-img" />
+        </div>
+    </section>
+
+
+<section class="usa-tabs">
+    <div class="tab-nav-container">
+        <div class="tab-nav">
+            <a href="#why-usa" class="tab-btn active">Why Study in New Zealand?</a>
+            <a href="#top-universities" class="tab-btn">Top Universities</a>
+            <a href="#cost-usa" class="tab-btn">Finances</a>
+            <a href="#admission" class="tab-btn">College Application</a>
+            <a href="#courses" class="tab-btn">Courses</a>
+            <a href="#documents" class="tab-btn">Documents</a>
+            <a href="#visa" class="tab-btn">Visa Requirements</a>
+            <a href="#scholarships" class="tab-btn">Scholarships</a>
+        </div>
+        <div class="tab-line"></div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.tab-btn').forEach(tab => {
+            tab.addEventListener('click', function () {
+                document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+
+   <section id="why-usa" class="usa-tabs">
+    <div class="tab-content active">
+        <h2 class="tab-heading">Why Study in New Zealand?</h2>
+        <p class="tab-desc">
+            New Zealand is one of the most popular destinations for international students, known for its world-class education system, affordable tuition fees, and rich cultural heritage. With globally ranked universities, diverse programs taught in English, and vibrant student life, studying in New Zealand offers an experience that blends academic excellence with lifestyle sophistication.
+        </p>
+
+        <div class="usa-container">
+    <!-- Card 1 -->
+    <div class="i-card">
+        <img src="/Palak/USA/USA_Images/T15.png" alt="Affordable Education" />
+        <h3>Affordable Education & Scholarships</h3>
+        <p>
+            New Zealand offers high-quality education at competitive tuition fees and provides several government and university scholarships for international students.
+        </p>
+    </div>
+
+    <div class="i-card">
+        <img src="/Palak/USA/USA_Images/T16.png" alt="Top Universities" />
+        <h3>Globally Recognized Universities</h3>
+        <p>
+            All eight of New Zealand’s universities rank among the world’s best, known for academic excellence, modern facilities, and global research collaborations.
+        </p>
+    </div>
+
+    <div class="i-card">
+        <img src="/Palak/USA/USA_Images/T17.png" alt="Safe Environment" />
+        <h3>Safe, Peaceful & Welcoming Environment</h3>
+        <p>
+            New Zealand is one of the safest countries in the world, known for its friendly people, cultural diversity, and inclusive communities.
+        </p>
+    </div>
+
+    <div class="i-card">
+        <img src="/Palak/USA/USA_Images/T18.png" alt="Research Opportunities" />
+        <h3>Innovative Learning & Research</h3>
+        <p>
+            Universities emphasize practical, research-driven learning with strong industry connections across science, technology, and environmental studies.
+        </p>
+    </div>
+
+    <div class="i-card">
+        <img src="/Palak/USA/USA_Images/T19.png" alt="Lifestyle" />
+        <h3>Incredible Lifestyle & Natural Beauty</h3>
+        <p>
+            From stunning mountains to serene beaches, New Zealand offers students an unmatched balance between academic life and outdoor adventure.
+        </p>
+    </div>
+
+    <div class="i-card">
+        <img src="/Palak/USA/USA_Images/T20.png" alt="Career Opportunities" />
+        <h3>Global Career & Work Opportunities</h3>
+        <p>
+            New Zealand degrees are internationally recognized, and graduates can work post-study through flexible visa policies that support career growth.
+        </p>
+    </div>
+</div>
+
+<div class="more-content">
+    <button class="read-more-btn">Read More</button>
+    <div class="extra-content" style="display: none;">
+
+        <h2 class="tab-heading">Types of Institutions</h2>
+
+        <div class="usa-container">
+            <div class="i-card">
+                <img src="/Palak/USA/USA_Images/T15.png" alt="Public Universities" />
+                <h3>Public Universities</h3>
+                <p>
+                    Government-funded universities offering world-class programs in science, business, arts, and engineering with a focus on innovation and global relevance.
+                </p>
+            </div>
+
+            <div class="i-card">
+                <img src="/Palak/USA/USA_Images/T16.png" alt="Institutes of Technology" />
+                <h3>Institutes of Technology & Polytechnics (ITPs)</h3>
+                <p>
+                    Practical and skills-based institutions providing hands-on training, vocational programs, and strong connections with industries across New Zealand.
+                </p>
+            </div>
+
+            <div class="i-card">
+                <img src="/Palak/USA/USA_Images/T17.png" alt="Private Colleges" />
+                <h3>Private Training Establishments (PTEs)</h3>
+                <p>
+                    Specialized colleges offering niche courses in design, hospitality, aviation, IT, and creative arts to prepare students for targeted career paths.
+                </p>
+            </div>
+
+            <div class="i-card">
+                <img src="/Palak/USA/USA_Images/T18.png" alt="English Language Schools" />
+                <h3>English Language Schools</h3>
+                <p>
+                    Accredited language centers helping students improve English proficiency before pursuing higher studies or professional careers in New Zealand.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="tab-heading">Additional Benefits of Studying in New Zealand</h2>
+
+        <div class="usa-container">
+            <div class="i-card">
+                <img src="/Palak/USA/USA_Images/T19.png" alt="Support Services" />
+                <h3>Comprehensive Student Support</h3>
+                <p>
+                    Universities provide excellent student services—covering accommodation, orientation, visa guidance, and well-being support for international learners.
+                </p>
+            </div>
+
+            <div class="i-card">
+                <img src="/Palak/USA/USA_Images/T20.png" alt="Internships" />
+                <h3>Work-Integrated Learning</h3>
+                <p>
+                    Many programs include internships or industry projects, enabling students to gain real-world experience and professional networks before graduation.
+                </p>
+            </div>
+
+            <div class="i-card">
+                <img src="/Palak/USA/USA_Images/T15.png" alt="Post-Study Work" />
+                <h3>Post-Study Work Rights</h3>
+                <p>
+                    Graduates can stay and work in New Zealand for up to three years, gaining valuable international experience and career exposure.
+                </p>
+            </div>
+
+            <div class="i-card">
+                <img src="/Palak/USA/USA_Images/T16.png" alt="Quality of Life" />
+                <h3>High Quality of Life</h3>
+                <p>
+                    With its clean environment, low crime rate, and relaxed pace of life, New Zealand offers one of the best living standards in the world for students.
+                </p>
+            </div>
+        </div>
+
+        <button class="read-less-btn" style="display: none;">Read Less</button>
+    </div>
+</div>
+
+    </div>
+</section>
+
+
+            <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const readMoreBtn = document.querySelector(".read-more-btn");
+    const extraContent = document.querySelector(".extra-content");
+    const readLessBtn = document.querySelector(".read-less-btn");
+
+    // Initially hide the additional content and "Read Less" button
+    extraContent.style.display = "none";
+    readLessBtn.style.display = "none";
+
+    // Toggle between showing or hiding extra content
+    function toggleContent() {
+        if (extraContent.style.display === "none") {
+            extraContent.style.display = "block";
+            readMoreBtn.style.display = "none"; 
+            readLessBtn.style.display = "block";   // ✅ was "inline-block"
+        } else {
+            extraContent.style.display = "none";
+            readMoreBtn.style.display = "block";   // ✅ was "inline-block"
+            readLessBtn.style.display = "none"; 
+        }
+    }
+
+    // Event listener for the "Read More" / "Read Less" button
+    readMoreBtn.addEventListener("click", toggleContent);
+    readLessBtn.addEventListener("click", toggleContent);
+});
+</script>
+
+    <section id="top-universities" class="top-universities-section">
+
+        <h2 class="section-heading">Top Universities in New Zealand</h2>
+
+        <div class="marquee">
+            <div class="marquee-inner">
+                <span style="color:#FDD835;">Apply Now To The Universities</span>
+                <span style="color:#F373A8;">Apply Now To The Universities</span>
+                <span style="color:#287781;">Apply Now To The Universities</span>
+                <span style="color:#B50505;">Apply Now To The Universities</span>
+                <span style="color:#FDD835;">Apply Now To The Universities</span>
+                <span style="color:#F373A8;">Apply Now To The Universities</span>
+                <span style="color:#287781;">Apply Now To The Universities</span>
+                <span style="color:#B50505;">Apply Now To The Universities</span>
+            </div>
+        </div>
+
+      <div class="university-cards">
+
+    <!-- Example University 1 -->
+    <div class="university-card">
+        <div class="card-img">
+            <img src="/Palak/USA/USA_Images/Auckland.jpg" alt="University of Auckland">
+            <span class="qs-rank">QS Rank: ~68</span>
+        </div>
+        <div class="card-content">
+            <h3>University of Auckland</h3>
+            <p class="location"><img src="/Palak/USA/USA_Images/location.png" alt=""> Auckland, New Zealand</p>
+            <p><strong>Popular For: </strong> <span class="highlight">Engineering, Business, Medicine</span></p>
+            <p><strong>Founded: </strong> <span class="highlight">1883</span></p>
+            <div class="stats">
+                <div class="stat-box">
+                    <p class="stat-title">Students</p>
+                    <p class="stat-value">~44,000+</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-title">Estimated Tuition per year</p>
+                    <p class="stat-value">$35,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Example University 2 -->
+    <div class="university-card">
+        <div class="card-img">
+            <img src="/Palak/USA/USA_Images/otago.jpeg" alt="University of Otago">
+            <span class="qs-rank">QS Rank: ~206</span>
+        </div>
+        <div class="card-content">
+            <h3>University of Otago</h3>
+            <p class="location"><img src="/Palak/USA/USA_Images/location.png" alt=""> Dunedin, New Zealand</p>
+            <p><strong>Popular For: </strong> <span class="highlight">Health Sciences, Dentistry, Humanities</span></p>
+            <p><strong>Founded: </strong> <span class="highlight">1869</span></p>
+            <div class="stats">
+                <div class="stat-box">
+                    <p class="stat-title">Students</p>
+                    <p class="stat-value">~21,000+</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-title">Estimated Tuition per year</p>
+                    <p class="stat-value">$32,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Example University 3 -->
+    <div class="university-card">
+        <div class="card-img">
+            <img src="/Palak/USA/USA_Images/wellington.jpg" alt="Victoria University of Wellington">
+            <span class="qs-rank">QS Rank: ~241</span>
+        </div>
+        <div class="card-content">
+            <h3>Victoria University of Wellington</h3>
+            <p class="location"><img src="/Palak/USA/USA_Images/location.png" alt=""> Wellington, New Zealand</p>
+            <p><strong>Popular For: </strong> <span class="highlight">Law, Humanities, Environmental Studies</span></p>
+            <p><strong>Founded: </strong> <span class="highlight">1897</span></p>
+            <div class="stats">
+                <div class="stat-box">
+                    <p class="stat-title">Students</p>
+                    <p class="stat-value">~22,000+</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-title">Estimated Tuition per year</p>
+                    <p class="stat-value">$31,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Example University 4 -->
+    <div class="university-card">
+        <div class="card-img">
+            <img src="/Palak/USA/USA_Images/canterbury.jpg" alt="University of Canterbury">
+            <span class="qs-rank">QS Rank: ~256</span>
+        </div>
+        <div class="card-content">
+            <h3>University of Canterbury</h3>
+            <p class="location"><img src="/Palak/USA/USA_Images/location.png" alt=""> Christchurch, New Zealand</p>
+            <p><strong>Popular For: </strong> <span class="highlight">Engineering, Geology, Education</span></p>
+            <p><strong>Founded: </strong> <span class="highlight">1873</span></p>
+            <div class="stats">
+                <div class="stat-box">
+                    <p class="stat-title">Students</p>
+                    <p class="stat-value">~18,000+</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-title">Estimated Tuition per year</p>
+                    <p class="stat-value">$33,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="trust-card">
+    <span class="trusted-text">
+        Rankings reflect universities recognized globally for quality education and New Zealand’s growing reputation in international higher education.
+    </span>
+</div>
+
+    </section>
+
+<section id="cost-usa" class="cost-section">
+    <h2 class="cost-heading">Cost of Studying in New Zealand</h2>
+    <p class="cost-desc">
+        The cost of studying in New Zealand depends on the institution (university, polytechnic, private), the field of study, level (undergraduate, postgraduate), and which city you live in. International student fees are higher than for domestic students, and living costs vary by region.
+    </p>
+
+    <div class="cost-table">
+        <div class="table-header">
+            <div class="table-cell">Category</div>
+            <div class="table-cell">Details</div>
+            <div class="table-cell">Cost Range (in D per year)</div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell">Undergraduate Tuition</div>
+            <div class="table-cell">General courses (arts, business, science)</div>
+            <div class="table-cell">$22,000 – $32,000</div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell">Undergraduate Tuition</div>
+            <div class="table-cell">Professional / specialized programs</div>
+            <div class="table-cell">$28,000 – $38,000+</div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell">Postgraduate / Master’s</div>
+            <div class="table-cell">Taught master’s (business, sciences, humanities)</div>
+            <div class="table-cell">$26,000 – $37,000</div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell">Postgraduate / Master’s — Specialized / Professional</div>
+            <div class="table-cell">High-cost programs (e.g. MBA, health disciplines)</div>
+            <div class="table-cell">$40,000 – $70,000+</div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell">Diploma / Certificate / Vocational</div>
+            <div class="table-cell">Short-term or practical professional courses</div>
+            <div class="table-cell">$10,000 – $25,000</div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell">Living Costs</div>
+            <div class="table-cell">Accommodation, food, transport, personal expenses</div>
+            <div class="table-cell">$20,000 – $25,000 per year</div>
+        </div>
+    </div>
+
+    <div class="eligibility-btn">
+        <span><a href="/Palak/Loan/loanHome.html"> Check Eligibility Now</a></span>
+        <img src="/Palak/USA/USA_Images/vector.png" alt="Right Arrow">
+    </div>
+</section>
+
+<section class="admission-section" id="admission">
+    <h2 class="admission-heading">Studying in New Zealand: Admission Guide</h2>
+    <p class="admission-subtext">
+        Here is an overview of the key admission requirements and steps for international students applying to study in New Zealand in 2025.
+    </p>
+
+    <div class="admission-wrapper">
+        <div class="card-number">1</div>
+        <div class="admission-card" style="background:#FDF0F4;">
+            <div class="card-content">
+                <h3>Academic Qualifications</h3>
+                <div class="columns">
+                    <div>
+                        <h4>Undergraduate Programs</h4>
+                        <p>Completion of 12 years of schooling (equivalent to  secondary school / Year 13 or equivalent qualification recognized by  institutions).</p>
+                    </div>
+                    <div>
+                        <h4>Postgraduate / Master’s Programs</h4>
+                        <p>A recognized bachelor’s degree (or equivalent) with satisfactory academic performance (often ≥ B grade or equivalent).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="admission-wrapper">
+        <div class="card-number">2</div>
+        <div class="admission-card" style="background:#FFF6E1;">
+            <div class="card-content">
+                <h3>English Language Proficiency</h3>
+                <div>
+                    <h4>Required Tests</h4>
+                    <p>If English is not your first language, you must submit test scores. Typical minimums: IELTS 6.0 (undergraduate), IELTS 6.5 (postgraduate); or equivalent TOEFL / PTE scores.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="admission-wrapper">
+        <div class="card-number">3</div>
+        <div class="admission-card" style="background:#F2FBFC;">
+            <div class="card-content">
+                <h3>Application Materials</h3>
+                <div class="columns">
+                    <ul>
+                        <li>Academic transcripts & certificates (from previous institutions)</li>
+                        <li>Proof of meeting equivalency and grading scale documentation</li>
+                    </ul>
+                    <ul>
+                        <li>Statement of Purpose (SOP) / personal statement</li>
+                        <li>Resume or CV (especially for postgraduate)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="admission-wrapper">
+        <div class="card-number">4</div>
+        <div class="admission-card" style="background:#E9F3FF;">
+            <div class="card-content">
+                <h3>Letters of Recommendation & Portfolio</h3>
+                <div class="columns">
+                    <ul>
+                        <li>1–2 academic or professional reference letters</li>
+                    </ul>
+                    <ul>
+                        <li>Portfolio (if applying in fields like arts, design, architecture)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="admission-wrapper">
+        <div class="card-number">5</div>
+        <div class="admission-card" style="background:#EBDBFF;">
+            <div class="card-content">
+                <h3>Financial Proof & Funding</h3>
+                <div>
+                    <h4>Minimum Funds Required</h4>
+                    <p>You must show proof of enough funds to cover both tuition and living costs. For student visa purposes, you generally need to show ~$20,000 for living expenses for one year.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="admission-wrapper">
+        <div class="card-number">6</div>
+        <div class="admission-card" style="background:#F2FBFC;">
+            <div class="card-content">
+                <h3>Application Fee & Submission</h3>
+                <div>
+                    <h4>Fees & Process</h4>
+                    <p>Most universities charge a non-refundable application fee (varies by institution). You will need to submit your complete application (documents, test scores, fee, etc.) by the deadlines.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <div class="admission-buttons">
+        <button class="btn-mock-test"><a href="/Palak/Test_Prep/examprep.html">Take a Mock Test</a></button>
+        <button class="btn-counsellor" onclick="window.location.href='/Palak/Admission_counselling/book-consultation.html'">Get help with expert counsellors</button>
+    </div>
+
+    <section class="courses-section" id="courses">
+        <h2 class="section-heading">Available Courses to Study</h2>
+        <p class="section-desc">
+            France offers a wide range of courses across STEM and non-STEM fields, many taught in English, and a chance to gain an education that blends global perspectives with local expertise.
+        </p>
+
+        <!-- STEM COURSES -->
+        <div class="course-category">
+            <div class="course-header">
+                <button class="arrow-btn" id="stem-prev">&#10094;</button>
+                <h3>STEM Courses</h3>
+                <button class="arrow-btn" id="stem-next">&#10095;</button>
+            </div>
+
+            <div class="course-slider" id="stem-slider">
+                <div class="course-card">
+                    <img src="/Palak/USA/USA_Images/T9.jpg" alt="Computer Science">
+                    <div class="course-content">
+                        <h4>Computer Science</h4>
+                        <p>Explore software development, AI, data science and more in a country investing heavily in technology.</p>
+                        <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="/Palak/USA/USA_Images/T10.jpg" alt="Engineering">
+                    <div class="course-content">
+                        <h4>Engineering</h4>
+                        <p>Study mechanical, civil, electrical, aerospace and other engineering fields at modern Chinese institutions.</p>
+                        <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="/Palak/USA/USA_Images/T11.jpg" alt="Data Science">
+                    <div class="course-content">
+                        <h4>Data Science</h4>
+                        <p>Analyse large datasets, learn machine learning and analytics in an innovation-driving environment.</p>
+                        <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="/Palak/USA/USA_Images/biotechnology.jpg" alt="Biotechnology">
+                    <div class="course-content">
+                        <h4>Biotechnology</h4>
+                        <p>Engage in life sciences, biotech research and global health topics in China’s rapidly advancing research institutions.</p>
+                        <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+             <!-- NON-STEM COURSES -->
+            <div class="course-category">
+                <div class="course-header">
+                    <button class="arrow-btn" id="nonstem-prev">&#10094;</button>
+                    <h3>Non-STEM Courses</h3>
+                    <button class="arrow-btn" id="nonstem-next">&#10095;</button>
+                </div>
+
+                <div class="course-slider" id="nonstem-slider">
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/T14.jpg" alt="Business Administration">
+                        <div class="course-content">
+                            <h4>Accounting</h4>
+                            <p>Learn financial management and accounting principles to excel in the business world.</p>
+                            <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/T12.jpg" alt="Law">
+                        <div class="course-content">
+                            <h4>Finance
+                            </h4>
+                            <p>Study financial markets, investment strategies, and corporate finance management.</p>
+                            <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/T13.jpg" alt="Media Studies">
+                        <div class="course-content">
+                            <h4>Marketing</h4>
+                            <p>Learn the principles of marketing, consumer behavior, and strategic marketing techniques.</p>
+                            <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="/Palak/USA/USA_Images/psychology.jpg" alt="Psychology">
+                        <div class="course-content">
+                            <h4>Management</h4>
+                            <p>Study the principles of management and how to effectively lead teams and organizations.</p>
+                            <button class="learn-btn" onclick="window.location.href='All_Courses.html'">Learn More</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function initSlider(prevId, nextId, sliderId) {
+            const slider = document.getElementById(sliderId);
+            const prev = document.getElementById(prevId);
+            const next = document.getElementById(nextId);
+
+            const card = slider.querySelector('.course-card');
+            const cardWidth = card.offsetWidth;
+            const gap = parseInt(getComputedStyle(slider).gap) || 0;
+            const scrollAmount = cardWidth + gap;
+
+            next.addEventListener('click', () => {
+                slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+
+            prev.addEventListener('click', () => {
+                slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        initSlider('stem-prev', 'stem-next', 'stem-slider');
+        initSlider('nonstem-prev', 'nonstem-next', 'nonstem-slider');
+    </script>
+
+<section class="documents-section" id="documents">
+    <h2 class="section-heading">Documents required to study in New Zealand</h2>
+    <p class="section-desc">
+        When applying as an international student in New Zealand, you typically need a set of documents to complete your application and visa process.
+    </p>
+
+    <div class="documents-container">
+        <div class="doc-card left-card">
+            <p class="doc-intro">
+                The documents may vary by institution and program, but common items include:
+            </p>
+            <ul class="doc-list">
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Application Form</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Application Fees</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Statement of Purpose / Essays</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Resume or CV</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Letters of Recommendation</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Academic Transcripts</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Marksheets & Certificates</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Proof of Funds / Bank Statement</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Passport Copy</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> English Language Test Scores (IELTS/TOEFL/PTE)</li>
+            </ul>
+            <button class="btn-consult" onclick="window.location.href='/Palak/Admission_counselling/book-consultation.html'">Free Expert Consultation</button>
+        </div>
+
+        <div class="doc-card right-card">
+            <h3 class="form-heading">Book your Free Consultation with Trusted Counsellors</h3>
+            <form class="consult-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Mobile Number" required>
+                <input type="text" placeholder="Preferred Course" required>
+
+                <div class="form-row">
+                    <select required>
+                        <option value="">Select Month</option>
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                    </select>
+                    <select required>
+                        <option value="">Select Year</option>
+                        <option>2025</option>
+                        <option>2026</option>
+                        <option>2027</option>
+                        <option>2028</option>
+                        <option>2029</option>
+                    </select>
+                </div>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" required>
+                    I consent to receiving Calls, WhatsApp, Email and Google RCS from Study Befikar to assist with this enquiry.
+                </label>
+
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="documents-section" id="visa">
+    <h2 class="section-heading">Visa Requirement</h2>
+    <p class="section-desc">
+        To study in New Zealand, international students need a student visa. Here’s what you need to know to get started.
+    </p>
+
+    <div class="documents-container">
+        <!-- Left Card -->
+        <div class="visa-card">
+            <ul class="doc-list">
+                <li>International students planning to study in New Zealand must obtain a student visa, typically the "Student Visa" for programs longer than 6 months. This visa allows you to study full-time, work part-time during term (up to 20 hours/week), and full-time during scheduled holidays. The application process requires proof of acceptance, financial means, and health insurance.</li>
+            </ul>
+
+            <p class="doc-intro">Before you apply, you need:</p>
+            <ul class="doc-list">
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Acceptance letter from your chosen New Zealand university.</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Proof of sufficient funds to cover tuition, living expenses, and health insurance (NZD 1,000/month minimum recommended).</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Completed visa application form and appointment with the New Zealand consulate or visa application center.</li>
+            </ul>
+
+            <p class="doc-intro">Required documents for visa interview:</p>
+            <ul class="doc-list">
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Valid passport</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Visa application form</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Acceptance letter from the university</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Proof of financial resources / bank statement</li>
+                <li><img src="/Palak/USA/USA_Images/tick-icon.png" alt=""> Health insurance coverage</li>
+            </ul>
+            <button class="learn-more-btn">
+                <a href="/Palak/Services/visaassist.html">Learn More<span class="arrow">→</span></a>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+     <section class="scholarship-section" id="scholarships">
+            <h2 class="scholarship-title">
+                Scholarship Opportunities for International Students
+            </h2>
+            <p class="scholarship-subtitle">
+                Studying in foreign countries can be expensive, but there are numerous scholarships available to help
+                international students achieve their academic goals.
+            </p>
+
+            <div class="cards-container">
+                <!-- Card 1 -->
+                <div class="scholarship-card" style="background-color: #E4F7FA;">
+                    <img src="/Palak/USA/USA_Images/27.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Merit-Based</h3>
+                    <p class="card-description">
+                        Awarded for academic excellence, leadership skills, or special talents
+                    </p>
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/meritBased.html'">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="scholarship-card" style="background-color: #FDF0F4;">
+                    <img src="/Palak/USA/USA_Images/28.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Need-Based</h3>
+                    <p class="card-description">
+                        Scholarships for students demonstrating financial need
+                    </p>
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/needBased.html'">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="scholarship-card" style="background-color: #FFF6E1;">
+                    <img src="/Palak/USA/USA_Images/29.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">University Specific</h3>
+                    <p class="card-description">
+                        Recognizing outstanding academic performance and potential
+                    </p>
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/universitySpecific.html'">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="scholarship-card" style="background-color: #E9F3FF;">
+                    <img src="/Palak/USA/USA_Images/30.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Private organization Based</h3>
+                    <p class="card-description">
+                        Scholarships offered by private companies, foundations, or NGOs for various achievements or backgrounds
+                    </p>
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/privateOrganisation.html'">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="scholarship-card" style="background-color: #EBDBFF;">
+                    <img src="/Palak/USA/USA_Images/31.png" alt="Icon" class="card-icon">
+                    <h3 class="card-title">Government Funded</h3>
+                    <p class="card-description">
+                        Scholarships provided by government agencies to support international students in their studies abroad
+                    </p>
+                    <button class="learn-more-btn" onclick="location.href='/Palak/Admission_Counselling/majorIntake/scholarships/govtFunded.html'">
+                        Learn More <span class="arrow">→</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+</section>
+
+<footer class="footer">
+        <div class="footer-container">
+            <!-- column 1: logo + about + social  -->
+            <div class="footer-col footer-about">
+                <img src="/Palak/images/Home/footer/logo2.png" alt="StudyBefikar Logo" class="footer-logo">
+                <p>Your trusted partner for international education counseling since 2010. We've helped over 10,000 students
+                    achieve their academic dreams abroad.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="/Palak/images/Home/footer/9.png" alt="Instagram"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/10.png" alt="Facebook"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/11.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="/Palak/images/Home/footer/12.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-right-columns">
+    
+            <!-- column 2: services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="/Palak/Admission_counselling/admit.html">Admission Counselling</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Visa Processing</a></li>
+                    <li><a href="#">Scholarship Assistance</a></li>
+                    <li><a href="/Palak/Loan/loanHome.html">Education Loans</a></li>
+                    <li><a href="/Palak/Test_Prep/testPreparationQuestionnaire/step1.html">Test Preparation</a></li>
+                    <li><a href="/Palak/Admission_counselling/profileEvaluationQuestionnaire/stepOne.html">Profile Evaluation</a></li>
+                    <li><a href="#">Application Assistance</a></li>
+                    <li><a href="#">University Shortlisting</a></li>
+                </ul>
+            </div>
+    
+            <!-- column 3-->
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="/Palak/USA/usa.html">USA</a></li>
+                <li><a href="/Palak/USA/uk.html">UK</a></li>
+                <li><a href="/Palak/USA/canada.html">Canada</a></li>
+                <li><a href="/Palak/USA/australia.html">Australia</a></li>
+                <li><a href="/Palak/USA/germany.html">Germany</a></li>
+                <li><a href="/Palak/USA/Ireland.html">Ireland</a></li>
+                <li><a href="/Palak/USA/France.html">France</a></li>
+                <li><a href="/Palak/USA/newzealand.html">New Zealand</a></li>
+                <li><a href="/Palak/USA/Singapore.html">Singapore</a></li>
+                <li><a href="/Palak/USA/Japan.html">Japan</a></li>
+                <li><a href="/Palak/USA/Dubai.html">Dubai</a></li>
+                <li><a href="/Palak/USA/China.html">China</a></li>
+                </ul>
+            </div>
+    
+            <!-- column 4: contact -->
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <p>Dropbox@studybefikar.com</p>
+                <p>+91 74259 34504</p>
+                <p>+1 (555) 123-4567</p>
+    
+                <h4>Office Hours</h4>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat: 10:00 AM - 4:00 PM</p>
+
+                <h4>More Details</h4>
+                <p>Vendor Login</p>
+                <p>T&C</p>
+            </div>
+            
+        </div>
+        </div>
+    
+        <hr class="footer-line" />
+        <p class="footer-bottom">
+            © 2025 StudyBefikar. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+    </footer>
+<!-- Sign In Popup -->
+<div id="popup-signin" class="popup">
+    <div class="popup-box">
+        <!-- Cross Button -->
+        <a class="cross-btn close-btn">&times;</a>
+
+        <div class="container">
+            <!-- Left: Form Section -->
+            <div class="form-section">
+                <div class="welcome-logo">
+                    <h1>Sign In</h1>
+                    <p class="subtitle">Log in to continue planning your study abroad journey</p>
+                </div>
+
+                <form action="/login" method="POST">
+                    <!-- Email -->
+                    <div class="input-group">
+                        <input type="text" name="email" placeholder="Email Address" required>
+                    </div>
+                    <!-- Password -->
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <!-- Mobile Number -->
+                    <div class="input-group mobile-input">
+                        <input type="text" name="countryCode" value="+91" readonly>
+                        <input type="text" name="mobileNumber" placeholder="Mobile Number" required>
+                    </div>
+
+                    <div class="actions">
+                        <button class="forgot-password-btn">Forgot Password</button>
+                        <button type="submit" class="login-btn">LOGIN</button>
+                    </div>
+
+                    <div class="links">
+                        <a href="#" id="open-register">Register now</a>
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <div class="divider">or</div>
+
+                    <div class="social-buttons">
+                        <button class="google-btn">
+                            <a href="/auth/google"><img src="/Palak/USA/USA_Images/google.png" alt="Google">
+                            Sign in with Google</a>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right: Image -->
+            <div class="image-section">
+                <img src="/Palak/USA/USA_Images/signin (1).jpg" alt="Study Befikar">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Register Popup -->
+<div id="popup-register" class="popup">
+    <div class="popup-box">
+        <!-- Cross Button -->
+        <a class="cross-btn close-btn">&times;</a>
+
+        <div class="container">
+            <!-- Left: Image (swapped) -->
+            <div class="image-section">
+                <img src="/Palak/USA/USA_Images/signin (1).jpg" alt="Study Befikar">
+            </div>
+
+            <!-- Right: Form -->
+            <div class="form-section">
+                <div class="welcome-logo">
+                    <h1>Register</h1>
+                    <p class="subtitle">Create your account to get started</p>
+                </div>
+
+                <form action="/register" method="POST">
+                    <!-- Name -->
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                    </div>
+                    <!-- Email -->
+                    <div class="input-group">
+                        <input type="text" name="email" placeholder="Email Address" required>
+                    </div>
+                    <!-- Password -->
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <!-- Mobile Number -->
+                    <div class="input-group mobile-input">
+                        <input type="text" name="countryCode" value="+91" readonly>
+                        <input type="text" name="mobileNumber" placeholder="Mobile Number" required>
+                    </div>
+
+                    <div class="actions">
+                        <button type="submit" class="login-btn">REGISTER</button>
+                    </div>
+
+                    <div class="links">
+                        <a href="#" id="open-signin">Already have an account? Sign in</a>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const signinPopup = document.getElementById("popup-signin");
+        const registerPopup = document.getElementById("popup-register");
+        const closeBtns = document.querySelectorAll(".close-btn");
+
+        const showPopup = (popup) => popup.style.display = "flex";
+        const hidePopup = (popup) => popup.style.display = "none";
+
+        // Auto show Sign-in popup every 10 seconds
+        const startPopupTimer = () => setTimeout(() => showPopup(signinPopup), 10000);
+        startPopupTimer();
+
+        // Close buttons
+        closeBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                hidePopup(signinPopup);
+                hidePopup(registerPopup);
+                startPopupTimer(); // restart timer when user closes
+            });
+        });
+
+        // Switch to Register popup
+        document.getElementById("open-register").addEventListener("click", (e) => {
+            e.preventDefault();
+            hidePopup(signinPopup);
+            showPopup(registerPopup);
+        });
+
+        // Switch back to Sign-in popup
+        document.getElementById("open-signin").addEventListener("click", (e) => {
+            e.preventDefault();
+            hidePopup(registerPopup);
+            showPopup(signinPopup);
+        });
+
+        // Click outside closes popup
+        window.addEventListener("click", (event) => {
+            if (event.target === signinPopup || event.target === registerPopup) {
+                hidePopup(signinPopup);
+                hidePopup(registerPopup);
+                startPopupTimer(); // restart auto timer
+            }
+        });
+    });
+</script>
+</body>
+
+</html>

@@ -427,6 +427,8 @@ html {
     line-height: 35px;
     color: #424242;
     text-align: center;
+    text-align: justify;
+    text-align-last: center;
     /* max-width: 900px; */
     margin: 0 auto 30px;
     padding: 0 120px;
